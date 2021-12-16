@@ -1,0 +1,1236 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/delaram/ontologies/2021/10/airo", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "author" : [ "Delaram Golpayegani" ],
+    "description" : {
+      "en" : "The ontolgy represents AI risk concepts and relations based on the AI Act draft."
+    },
+    "labels" : {
+      "en" : "AI Risk Ontology"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Delaram Golpayegani",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Welfare",
+      "en" : "Welfare"
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AreaOfInfluence",
+      "en" : "Area of Influence"
+    },
+    "union" : [ "18", "19", "20", "21", "6" ],
+    "attributes" : [ "union" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StatisticalApproach",
+      "en" : "Statistical Approach"
+    },
+    "id" : "22",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AiApproach",
+      "en" : "AI Approach"
+    },
+    "subClasses" : [ "33", "34", "35", "22" ],
+    "comment" : {
+      "en" : "Refers to the main approaches and techniques used for development of AI systems."
+    },
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskMaterialisation",
+      "en" : "Risk Materialisation"
+    },
+    "comment" : {
+      "en" : "Indicates an event that a risk source gives rise to a risk."
+    },
+    "id" : "9",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Security",
+      "en" : "Security"
+    },
+    "id" : "21"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataProtectionAndPrivacy",
+      "en" : "Data Protection And Privacy"
+    },
+    "comment" : {
+      "en" : "Refers to EU Charter of Fundamental Rights, Art. 8 (protection of personal data)"
+    },
+    "id" : "38",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskSource",
+      "en" : "Risk Source"
+    },
+    "subClasses" : [ "53", "50" ],
+    "comment" : {
+      "en" : "Indicates an element that has the potential give rise to a risk."
+    },
+    "id" : "10",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonDiscrimination",
+      "en" : "Non-Discrimination"
+    },
+    "comment" : {
+      "en" : "Refers to EU Charter of Fundamental Rights, Art. 21"
+    },
+    "id" : "42",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attack",
+      "en" : "Attack"
+    },
+    "id" : "53",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Impact",
+      "en" : "Risk Impact"
+    },
+    "id" : "2",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeneralPublic",
+      "en" : "General Public"
+    },
+    "id" : "64"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConsequenceMaterialisation",
+      "en" : "Consequence Materialisation"
+    },
+    "id" : "40",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Safety",
+      "en" : "Safety"
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LowLikelihood",
+      "en" : "Low Likelihood"
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Health",
+      "en" : "Health"
+    },
+    "subClasses" : [ "25", "32" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LikelihoodRate",
+      "en" : "Likelihood"
+    },
+    "union" : [ "30", "16", "13" ],
+    "subClasses" : [ "30", "16", "13" ],
+    "comment" : {
+      "en" : "Chance of an event happening. [Source: ISO 31000, 3.7]"
+    },
+    "attributes" : [ "union" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AiRisk",
+      "en" : "AI Risk"
+    },
+    "comment" : {
+      "en" : "Indicates a risk (of harm) associated with an AI system."
+    },
+    "id" : "47",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhysicalHealth",
+      "en" : "Physical Health"
+    },
+    "id" : "32",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighLikelihood",
+      "en" : "High Likelihood"
+    },
+    "id" : "30",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "subClasses" : [ "78" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Child",
+      "en" : "Child"
+    },
+    "id" : "78",
+    "superClasses" : [ "77" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KnowledgeBasedApproach",
+      "en" : "Knowledge-Based Approach"
+    },
+    "id" : "33",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PsychologicalHealth",
+      "en" : "Psychological Health"
+    },
+    "id" : "25",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MachineLearningApproach",
+      "en" : "Machine Learning Approach"
+    },
+    "id" : "35",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Measure",
+      "en" : "Control"
+    },
+    "subClasses" : [ "80", "81", "82" ],
+    "comment" : {
+      "en" : "Measure that maintains and/or modifies risk/impact materialisation. [Source: ISO 31000, 3.8 with modifications]"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LogicBasedApproach",
+      "en" : "Logic-Based Approach"
+    },
+    "id" : "34",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MediumLikelihood",
+      "en" : "Medium Likelihood"
+    },
+    "id" : "16",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "vulnerability",
+      "en" : "Vulnerability"
+    },
+    "comment" : {
+      "en" : "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"
+    },
+    "id" : "56"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "subClasses" : [ "10", "9", "45", "2", "4", "47", "40" ],
+    "comment" : {
+      "en" : "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"
+    },
+    "id" : "36"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AvoidanceMeasure",
+      "en" : "Avoidance Measure"
+    },
+    "id" : "80",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EUFundamentalRight",
+      "en" : "Eu Fundamental Right"
+    },
+    "subClasses" : [ "38", "42", "27" ],
+    "comment" : {
+      "en" : "Indicates  a right, freedom, or principle set out in the EU Charter of Fundamental Rights."
+    },
+    "id" : "28"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntendedPurpose",
+      "en" : "Intended Purpose"
+    },
+    "comment" : {
+      "en" : "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"
+    },
+    "id" : "62"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Threat",
+      "en" : "Threat"
+    },
+    "comment" : {
+      "en" : "Potential cause of an unwanted incident, which may result in harm to systems, organizations or individuals. [Source: ISO/IEC TR 24028, 3.39]"
+    },
+    "id" : "50",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FreedomsOfNaturalPersons",
+      "en" : "Freedoms Of Natural Persons"
+    },
+    "id" : "27",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskConsequence",
+      "en" : "Risk Consequence"
+    },
+    "comment" : {
+      "en" : "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"
+    },
+    "id" : "45",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "79",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactMaterialisation",
+      "en" : "Impact Materialisation"
+    },
+    "comment" : {
+      "en" : "Indicates an event that materialises impact of a risk."
+    },
+    "id" : "4",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AiSystem",
+      "en" : "AI System"
+    },
+    "comment" : {
+      "en" : "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"
+    },
+    "id" : "55"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HumanBehaviour",
+      "en" : "Human Behaviour"
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MitigationMeasure",
+      "en" : "Mitigation Measure"
+    },
+    "id" : "81",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Stakeholder",
+      "en" : "Stakeholder"
+    },
+    "union" : [ "77", "64" ],
+    "comment" : {
+      "en" : "Any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity[Source: ISO/IEC TR 24028, 3.37]"
+    },
+    "attributes" : [ "union" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SharingMeasure",
+      "en" : "Sharing Measure"
+    },
+    "id" : "82",
+    "superClasses" : [ "5" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "stakeholderIsImpactedBy"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "impactMaterialisationIsControlledBy"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "materialisesImpact"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource",
+    "inverse" : "11",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasRiskSource"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "14",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "20",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "14",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "20",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "28",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "36",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "28",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "36",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "36",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "36",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "36",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "range" : "10",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "36",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "36",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability",
+    "inverse" : "57",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "hasVulnerability"
+    },
+    "domain" : "55",
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation",
+    "inverse" : "59",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "controlsRiskMaterialisation"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "materialisesConsequence"
+    },
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose",
+    "inverse" : "63",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasIntendedPurpose"
+    },
+    "domain" : "55",
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "riskMaterialisationIsControlledBy"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood",
+    "inverse" : "66",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasLikelihood"
+    },
+    "domain" : "36",
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "isRiskSource"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk",
+    "inverse" : "68",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "materialisesRisk"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy",
+    "inverse" : "70",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "areaOfInfluenceIsImpactedBy"
+    },
+    "domain" : "17",
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk",
+    "inverse" : "72",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasRisk"
+    },
+    "domain" : "55",
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "leadsToConsequenceMaterialisation"
+    },
+    "domain" : "47",
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy",
+    "inverse" : "75",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "consequenceMaterialisationIsControlledBy"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder",
+    "inverse" : "0",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasImpactOnStakeholder"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "isVulnerabilityOfSystem"
+    },
+    "domain" : "56",
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "isIntendedPurposeOf"
+    },
+    "domain" : "62",
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceIsMaterialisedBy",
+    "inverse" : "60",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "consequenceIsMaterialisedBy"
+    },
+    "domain" : "45",
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "leadsToImpactMaterialisation"
+    },
+    "domain" : "45",
+    "attributes" : [ "object" ],
+    "id" : "84"
+  }, {
+    "range" : "23",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "range" : "23",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "23",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "isLikehoodOf"
+    },
+    "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "range" : "23",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "5",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "5",
+    "domain" : "81",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "5",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "riskIsMaterialisedBy"
+    },
+    "domain" : "47",
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "isAssociatedWithAISystem"
+    },
+    "domain" : "47",
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "range" : "10",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "77",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy",
+    "inverse" : "7",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "impactisMaterialisedBy"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasImpactOnAreaOfInfluence"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "controlsConsequenceMaterialisation"
+    },
+    "domain" : "40",
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsImpactMaterialisation",
+    "inverse" : "3",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "controlsImpactMaterialisation"
+    },
+    "domain" : "5",
+    "attributes" : [ "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing",
+    "inverse" : "97",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "isDevelopedUsing"
+    },
+    "domain" : "55",
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping",
+    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "isUsedInDeveloping"
+    },
+    "domain" : "23",
+    "attributes" : [ "object" ],
+    "id" : "97"
+  } ]
+}

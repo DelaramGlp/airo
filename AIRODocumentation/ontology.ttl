@@ -1,0 +1,494 @@
+@prefix : <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/delaram/ontologies/2021/10/airo> .
+
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo> rdf:type owl:Ontology ;
+                                                              <http://purl.org/dc/terms/creator> "Delaram Golpayegani" ;
+                                                              <http://purl.org/dc/terms/description> "The ontolgy represents AI risk concepts and relations based on the AI Act draft."@en ;
+                                                              rdfs:label "AI Risk Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy
+:areaOfInfluenceIsImpactedBy rdf:type owl:ObjectProperty ;
+                             owl:inverseOf :hasImpactOnAreaOfInfluence ;
+                             rdfs:domain :AreaOfInfluence ;
+                             rdfs:range :Impact .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceIsMaterialisedBy
+:consequenceIsMaterialisedBy rdf:type owl:ObjectProperty ;
+                             owl:inverseOf :materialisesConsequence .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy
+:consequenceMaterialisationIsControlledBy rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf :controlsConsequenceMaterialisation ;
+                                          rdfs:domain :Measure ;
+                                          rdfs:range :ConsequenceMaterialisation .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation
+:controlsConsequenceMaterialisation rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :ConsequenceMaterialisation ;
+                                    rdfs:range :Measure .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsImpactMaterialisation
+:controlsImpactMaterialisation rdf:type owl:ObjectProperty ;
+                               owl:inverseOf :impactMaterialisationIsControlledBy .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation
+:controlsRiskMaterialisation rdf:type owl:ObjectProperty ;
+                             owl:inverseOf :riskMaterialisationIsControlledBy ;
+                             rdfs:domain :Measure ;
+                             rdfs:range :RiskMaterialisation .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence
+:hasImpactOnAreaOfInfluence rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Impact ;
+                            rdfs:range :AreaOfInfluence .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder
+:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :stakeholderIsImpactedBy ;
+                        rdfs:domain :Impact ;
+                        rdfs:range :Stakeholder .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose
+:hasIntendedPurpose rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :isIntendedPurposeOf ;
+                    rdfs:domain :AiSystem ;
+                    rdfs:range :IntendedPurpose .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood
+:hasLikelihood rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isLikehoodOf ;
+               rdfs:domain :Event ;
+               rdfs:range :LikelihoodRate .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk
+:hasRisk rdf:type owl:ObjectProperty ;
+         owl:inverseOf :isAssociatedWithAISystem ;
+         rdfs:domain :AiSystem ;
+         rdfs:range :AiRisk .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource
+:hasRiskSource rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isRiskSource ;
+               rdfs:domain :RiskMaterialisation ;
+               rdfs:range :RiskSource .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability
+:hasVulnerability rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :isVulnerabilityOfSystem ;
+                  rdfs:domain :AiSystem ;
+                  rdfs:range :vulnerability .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy
+:impactMaterialisationIsControlledBy rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :ImpactMaterialisation ;
+                                     rdfs:range :Measure .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy
+:impactisMaterialisedBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :materialisesImpact ;
+                        rdfs:domain :Impact ;
+                        rdfs:range :ImpactMaterialisation .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem
+:isAssociatedWithAISystem rdf:type owl:ObjectProperty ;
+                          rdfs:domain :AiRisk ;
+                          rdfs:range :AiSystem .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing
+:isDevelopedUsing rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :isUsedInDeveloping ;
+                  rdfs:domain :AiSystem ;
+                  rdfs:range :AiApproach .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf
+:isIntendedPurposeOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain :IntendedPurpose .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf
+:isLikehoodOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :LikelihoodRate ;
+              rdfs:range :Event .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource
+:isRiskSource rdf:type owl:ObjectProperty ;
+              rdfs:domain :RiskMaterialisation ;
+              rdfs:range :RiskSource .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping
+:isUsedInDeveloping rdf:type owl:ObjectProperty ;
+                    rdfs:domain :AiApproach ;
+                    rdfs:range :AiSystem .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem
+:isVulnerabilityOfSystem rdf:type owl:ObjectProperty ;
+                         rdfs:domain :vulnerability ;
+                         rdfs:range :AiSystem .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation
+:leadsToConsequenceMaterialisation rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :AiRisk ;
+                                   rdfs:range :ConsequenceMaterialisation .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation
+:leadsToImpactMaterialisation rdf:type owl:ObjectProperty ;
+                              rdfs:domain :RiskConsequence ;
+                              rdfs:range :ImpactMaterialisation .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence
+:materialisesConsequence rdf:type owl:ObjectProperty ;
+                         rdfs:domain :ConsequenceMaterialisation ;
+                         rdfs:range :RiskConsequence .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact
+:materialisesImpact rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ImpactMaterialisation ;
+                    rdfs:range :Impact .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk
+:materialisesRisk rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :riskIsMaterialisedBy ;
+                  rdfs:domain :RiskMaterialisation ;
+                  rdfs:range :AiRisk .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy
+:riskIsMaterialisedBy rdf:type owl:ObjectProperty ;
+                      rdfs:domain :AiRisk ;
+                      rdfs:range :RiskMaterialisation .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy
+:riskMaterialisationIsControlledBy rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :RiskMaterialisation ;
+                                   rdfs:range :Measure .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy
+:stakeholderIsImpactedBy rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Stakeholder ;
+                         rdfs:range :Impact .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach
+:AiApproach rdf:type owl:Class ;
+            rdfs:comment "Refers to the main approaches and techniques used for development of AI systems."@en ;
+            rdfs:label "AI Approach"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk
+:AiRisk rdf:type owl:Class ;
+        rdfs:subClassOf :Event ;
+        rdfs:comment "Indicates a risk (of harm) associated with an AI system."@en ;
+        rdfs:label "AI Risk"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem
+:AiSystem rdf:type owl:Class ;
+          rdfs:comment "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"@en ;
+          rdfs:label "AI System"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence
+:AreaOfInfluence rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Health
+                                                     :HumanBehaviour
+                                                     :Safety
+                                                     :Security
+                                                     :Welfare
+                                                   )
+                                     ] ;
+                 rdfs:label "Area of Influence"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack
+:Attack rdf:type owl:Class ;
+        rdfs:subClassOf :RiskSource ;
+        rdfs:label "Attack"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure
+:AvoidanceMeasure rdf:type owl:Class ;
+                  rdfs:subClassOf :Measure ;
+                  rdfs:label "Avoidance Measure"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child
+:Child rdf:type owl:Class ;
+       rdfs:subClassOf :Person ;
+       rdfs:label "Child"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation
+:ConsequenceMaterialisation rdf:type owl:Class ;
+                            rdfs:subClassOf :Event ;
+                            rdfs:label "Consequence Materialisation"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy
+:DataProtectionAndPrivacy rdf:type owl:Class ;
+                          rdfs:subClassOf :EUFundamentalRight ;
+                          rdfs:comment "Refers to EU Charter of Fundamental Rights, Art. 8 (protection of personal data)"@en ;
+                          rdfs:label "Data Protection And Privacy"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight
+:EUFundamentalRight rdf:type owl:Class ;
+                    rdfs:comment "Indicates  a right, freedom, or principle set out in the EU Charter of Fundamental Rights."@en ;
+                    rdfs:label "Eu Fundamental Right"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event
+:Event rdf:type owl:Class ;
+       rdfs:comment "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"@en ;
+       rdfs:label "Event"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons
+:FreedomsOfNaturalPersons rdf:type owl:Class ;
+                          rdfs:subClassOf :EUFundamentalRight ;
+                          rdfs:label "Freedoms Of Natural Persons"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic
+:GeneralPublic rdf:type owl:Class ;
+               rdfs:label "General Public"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health
+:Health rdf:type owl:Class ;
+        rdfs:label "Health"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood
+:HighLikelihood rdf:type owl:Class ;
+                rdfs:subClassOf :LikelihoodRate ;
+                rdfs:label "High Likelihood"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour
+:HumanBehaviour rdf:type owl:Class ;
+                rdfs:label "Human Behaviour"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact
+:Impact rdf:type owl:Class ;
+        rdfs:subClassOf :Event ;
+        rdfs:label "Risk Impact"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation
+:ImpactMaterialisation rdf:type owl:Class ;
+                       rdfs:subClassOf :Event ;
+                       rdfs:comment "Indicates an event that materialises impact of a risk."@en ;
+                       rdfs:label "Impact Materialisation"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose
+:IntendedPurpose rdf:type owl:Class ;
+                 rdfs:comment "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"@en ;
+                 rdfs:label "Intended Purpose"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach
+:KnowledgeBasedApproach rdf:type owl:Class ;
+                        rdfs:subClassOf :AiApproach ;
+                        rdfs:label "Knowledge-Based Approach"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate
+:LikelihoodRate rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:unionOf ( :HighLikelihood
+                                                    :LowLikelihood
+                                                    :MediumLikelihood
+                                                  )
+                                    ] ;
+                rdfs:comment "Chance of an event happening. [Source: ISO 31000, 3.7]"@en ;
+                rdfs:label "Likelihood"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach
+:LogicBasedApproach rdf:type owl:Class ;
+                    rdfs:subClassOf :AiApproach ;
+                    rdfs:label "Logic-Based Approach"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood
+:LowLikelihood rdf:type owl:Class ;
+               rdfs:subClassOf :LikelihoodRate ;
+               rdfs:label "Low Likelihood"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach
+:MachineLearningApproach rdf:type owl:Class ;
+                         rdfs:subClassOf :AiApproach ;
+                         rdfs:label "Machine Learning Approach"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure
+:Measure rdf:type owl:Class ;
+         rdfs:comment "Measure that maintains and/or modifies risk/impact materialisation. [Source: ISO 31000, 3.8 with modifications]"@en ;
+         rdfs:label "Control"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood
+:MediumLikelihood rdf:type owl:Class ;
+                  rdfs:subClassOf :LikelihoodRate ;
+                  rdfs:label "Medium Likelihood"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure
+:MitigationMeasure rdf:type owl:Class ;
+                   rdfs:subClassOf :Measure ;
+                   rdfs:label "Mitigation Measure"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination
+:NonDiscrimination rdf:type owl:Class ;
+                   rdfs:subClassOf :EUFundamentalRight ;
+                   rdfs:comment "Refers to EU Charter of Fundamental Rights, Art. 21"@en ;
+                   rdfs:label "Non-Discrimination"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person
+:Person rdf:type owl:Class ;
+        rdfs:label "Person"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth
+:PhysicalHealth rdf:type owl:Class ;
+                rdfs:subClassOf :Health ;
+                rdfs:label "Physical Health"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth
+:PsychologicalHealth rdf:type owl:Class ;
+                     rdfs:subClassOf :Health ;
+                     rdfs:label "Psychological Health"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence
+:RiskConsequence rdf:type owl:Class ;
+                 rdfs:subClassOf :Event ;
+                 rdfs:comment "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"@en ;
+                 rdfs:label "Risk Consequence"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation
+:RiskMaterialisation rdf:type owl:Class ;
+                     rdfs:subClassOf :Event ;
+                     rdfs:comment "Indicates an event that a risk source gives rise to a risk."@en ;
+                     rdfs:label "Risk Materialisation"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource
+:RiskSource rdf:type owl:Class ;
+            rdfs:subClassOf :Event ;
+            rdfs:comment "Indicates an element that has the potential give rise to a risk."@en ;
+            rdfs:label "Risk Source"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety
+:Safety rdf:type owl:Class ;
+        rdfs:label "Safety"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security
+:Security rdf:type owl:Class ;
+          rdfs:label "Security"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure
+:SharingMeasure rdf:type owl:Class ;
+                rdfs:subClassOf :Measure ;
+                rdfs:label "Sharing Measure"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder
+:Stakeholder rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( :GeneralPublic
+                                                 :Person
+                                               )
+                                 ] ;
+             rdfs:comment "Any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity[Source: ISO/IEC TR 24028, 3.37]"@en ;
+             rdfs:label "Stakeholder"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach
+:StatisticalApproach rdf:type owl:Class ;
+                     rdfs:subClassOf :AiApproach ;
+                     rdfs:label "Statistical Approach"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat
+:Threat rdf:type owl:Class ;
+        rdfs:subClassOf :RiskSource ;
+        rdfs:comment "Potential cause of an unwanted incident, which may result in harm to systems, organizations or individuals. [Source: ISO/IEC TR 24028, 3.39]"@en ;
+        rdfs:label "Threat"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare
+:Welfare rdf:type owl:Class ;
+         rdfs:label "Welfare"@en .
+
+
+###  http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability
+:vulnerability rdf:type owl:Class ;
+               rdfs:comment "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"@en ;
+               rdfs:label "Vulnerability"@en .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

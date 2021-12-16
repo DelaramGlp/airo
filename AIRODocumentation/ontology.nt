@@ -1,0 +1,446 @@
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo> <http://purl.org/dc/terms/creator> "Delaram Golpayegani" .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo> <http://purl.org/dc/terms/description> "The ontolgy represents AI risk concepts and relations based on the AI Act draft."@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo> <http://www.w3.org/2000/01/rdf-schema#label> "AI Risk Ontology"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceIsMaterialisedBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceIsMaterialisedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceIsMaterialisedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsImpactMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsImpactMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsImpactMaterialisation> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the main approaches and techniques used for development of AI systems."@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> <http://www.w3.org/2000/01/rdf-schema#label> "AI Approach"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a risk (of harm) associated with an AI system."@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk> <http://www.w3.org/2000/01/rdf-schema#label> "AI Risk"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem> <http://www.w3.org/2000/01/rdf-schema#label> "AI System"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Area of Influence"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack> <http://www.w3.org/2000/01/rdf-schema#label> "Attack"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Avoidance Measure"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child> <http://www.w3.org/2000/01/rdf-schema#label> "Child"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation> <http://www.w3.org/2000/01/rdf-schema#label> "Consequence Materialisation"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to EU Charter of Fundamental Rights, Art. 8 (protection of personal data)"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy> <http://www.w3.org/2000/01/rdf-schema#label> "Data Protection And Privacy"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates  a right, freedom, or principle set out in the EU Charter of Fundamental Rights."@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight> <http://www.w3.org/2000/01/rdf-schema#label> "Eu Fundamental Right"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons> <http://www.w3.org/2000/01/rdf-schema#label> "Freedoms Of Natural Persons"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic> <http://www.w3.org/2000/01/rdf-schema#label> "General Public"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health> <http://www.w3.org/2000/01/rdf-schema#label> "Health"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood> <http://www.w3.org/2000/01/rdf-schema#label> "High Likelihood"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "Human Behaviour"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Impact"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an event that materialises impact of a risk."@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation> <http://www.w3.org/2000/01/rdf-schema#label> "Impact Materialisation"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "Intended Purpose"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge-Based Approach"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Chance of an event happening. [Source: ISO 31000, 3.7]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> <http://www.w3.org/2000/01/rdf-schema#label> "Likelihood"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Logic-Based Approach"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood> <http://www.w3.org/2000/01/rdf-schema#label> "Low Likelihood"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Learning Approach"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure that maintains and/or modifies risk/impact materialisation. [Source: ISO 31000, 3.8 with modifications]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> <http://www.w3.org/2000/01/rdf-schema#label> "Control"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Likelihood"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Mitigation Measure"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to EU Charter of Fundamental Rights, Art. 21"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Discrimination"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Health"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth> <http://www.w3.org/2000/01/rdf-schema#label> "Psychological Health"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Consequence"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an event that a risk source gives rise to a risk."@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Materialisation"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an element that has the potential give rise to a risk."@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Source"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety> <http://www.w3.org/2000/01/rdf-schema#label> "Safety"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security> <http://www.w3.org/2000/01/rdf-schema#label> "Security"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Sharing Measure"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "Any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity[Source: ISO/IEC TR 24028, 3.37]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "Stakeholder"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Statistical Approach"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat> <http://www.w3.org/2000/01/rdf-schema#comment> "Potential cause of an unwanted incident, which may result in harm to systems, organizations or individuals. [Source: ISO/IEC TR 24028, 3.39]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat> <http://www.w3.org/2000/01/rdf-schema#label> "Threat"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare> <http://www.w3.org/2000/01/rdf-schema#label> "Welfare"@en .
+# 
+# http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"@en .
+<http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability> <http://www.w3.org/2000/01/rdf-schema#label> "Vulnerability"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
