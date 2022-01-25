@@ -2,223 +2,864 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/delaram/ontologies/2021/10/airo", "http://www.w3.org/2001/XMLSchema" ],
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/airo", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "https://w3id.org/airo",
     "author" : [ "Delaram Golpayegani" ],
     "description" : {
-      "en" : "The ontolgy represents AI risk concepts and relations based on the AI Act draft."
+      "en" : "The ontolgy represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series."
     },
     "labels" : {
       "en" : "AI Risk Ontology"
     },
     "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "Delaram Golpayegani",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "ADAPT Centre, Trinity College Dublin",
         "type" : "label"
       } ]
     }
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "17",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "42",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "64",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "77",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "56",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
-    "type" : "owl:Class"
-  }, {
-    "id" : "80",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "owl:Class"
-  }, {
-    "id" : "62",
-    "type" : "owl:Class"
-  }, {
-    "id" : "50",
-    "type" : "owl:Class"
-  }, {
     "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "45",
     "type" : "owl:Class"
   }, {
-    "id" : "79",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "4",
+    "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "131",
+    "type" : "owl:Class"
+  }, {
+    "id" : "136",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "156",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "owl:Class"
+  }, {
+    "id" : "176",
+    "type" : "owl:Class"
+  }, {
+    "id" : "150",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
+    "type" : "owl:Class"
+  }, {
+    "id" : "126",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
+    "type" : "owl:Class"
+  }, {
+    "id" : "186",
+    "type" : "owl:Class"
+  }, {
+    "id" : "187",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "199",
+    "type" : "owl:Class"
+  }, {
+    "id" : "181",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "210",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "193",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "134",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "217",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "173",
+    "type" : "owl:Class"
+  }, {
+    "id" : "175",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "158",
+    "type" : "owl:Class"
+  }, {
+    "id" : "160",
+    "type" : "owl:Class"
+  }, {
+    "id" : "243",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "214",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "189",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "170",
+    "type" : "owl:Class"
+  }, {
+    "id" : "221",
+    "type" : "owl:Class"
+  }, {
+    "id" : "120",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "168",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "215",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "188",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "190",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "152",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
     "type" : "owl:Class"
   }, {
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
-    "type" : "owl:unionOf"
+    "id" : "36",
+    "type" : "owl:Class"
   }, {
-    "id" : "82",
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "167",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "191",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#ManagementOfCriticalInfrastructure",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Welfare",
-      "en" : "Welfare"
-    },
-    "id" : "6"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AreaOfInfluence",
-      "en" : "Area of Influence"
-    },
-    "union" : [ "18", "19", "20", "21", "6" ],
-    "attributes" : [ "union" ],
-    "id" : "17"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "StatisticalApproach",
-      "en" : "Statistical Approach"
-    },
-    "id" : "22",
-    "superClasses" : [ "23" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AiApproach",
-      "en" : "AI Approach"
-    },
-    "subClasses" : [ "33", "34", "35", "22" ],
-    "comment" : {
-      "en" : "Refers to the main approaches and techniques used for development of AI systems."
-    },
-    "id" : "23"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "RiskMaterialisation",
-      "en" : "Risk Materialisation"
+      "IRI-based" : "ManagementOfCriticalInfrastructure",
+      "en" : "Management Of Critical Infrastructure"
     },
     "comment" : {
-      "en" : "Indicates an event that a risk source gives rise to a risk."
+      "en" : "Refers to management and operation of critical infrastructure"
     },
-    "id" : "9",
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/airo#UnrepresentativeTestingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnrepresentativeTestingDataSet"
+    },
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LawEnforcement",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LawEnforcement",
+      "en" : "Law Enforcement"
+    },
+    "comment" : {
+      "en" : "activities carried out by law enforcement authorities for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security [Source: AI Act, Article 3(41)]"
+    },
+    "id" : "24",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/airo#OverrideTheOutcome",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OverrideTheOutcome"
+    },
+    "id" : "25",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiasDetection",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiasDetection"
+    },
+    "id" : "27",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ConditionOfUse",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConditionOfUse",
+      "en" : "Condition Of Use"
+    },
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/airo#IrrelevantTestingData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IrrelevantTestingData"
+    },
+    "id" : "30",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#RiskSource",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskSource",
+      "en" : "Risk Source"
+    },
+    "subClasses" : [ "33", "34", "35", "36", "37", "38", "39", "40", "41", "21", "42", "43", "44" ],
+    "comment" : {
+      "en" : "Indicates an element that has the potential give rise to a risk."
+    },
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiasedValidationDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiasedValidationDataSet"
+    },
+    "id" : "45",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Health",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Health",
+      "en" : "Health"
+    },
+    "subClasses" : [ "48", "49" ],
+    "id" : "46",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "https://w3id.org/airo#InterveneOperationOfSystem",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterveneOperationOfSystem"
+    },
+    "id" : "50",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/airo#EnvironmentalDamage",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnvironmentalDamage",
+      "en" : "Environmental Damage"
+    },
+    "id" : "66",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/airo#PerformaceOfAISystem",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PerformaceOfAISystem",
+      "en" : "Performance Of AI System"
+    },
+    "comment" : {
+      "en" : "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"
+    },
+    "id" : "74",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/airo#MachineLearningApproach",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MachineLearningApproach",
+      "en" : "Machine Learning Approach"
+    },
+    "id" : "10",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiometricCategorisation",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiometricCategorisation"
+    },
+    "id" : "77",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiasedTestingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiasedTestingDataSet"
+    },
+    "id" : "84",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#IncompetenceOfHumanOversightActors",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IncompetenceOfHumanOversightActors"
+    },
+    "comment" : {
+      "en" : "Refers to incompentece of individuals to whom human oversight is assigned."
+    },
+    "id" : "44",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#UnrepresentativeTrainingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnrepresentativeTrainingDataSet"
+    },
+    "id" : "91",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Military",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Military"
+    },
+    "id" : "56",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/airo#PrivacyPreservingMeasure",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrivacyPreservingMeasure"
+    },
+    "id" : "92",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DecreasedLevelOfAccuracy",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DecreasedLevelOfAccuracy"
+    },
+    "id" : "93",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LackOfAppropriateInstructionForUse",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LackOfAppropriateInstructionForUse",
+      "en" : "Lack Of Appropriate Instruction For Use"
+    },
+    "id" : "38",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LackOfHumanOversightMeasure",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LackOfHumanOversightMeasure"
+    },
+    "id" : "40",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Output",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Output",
+      "en" : "Output"
+    },
+    "subClasses" : [ "96", "97", "98", "99" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/airo#DeepFakeDetection",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeepFakeDetection",
+      "en" : "Deep Fake Detection"
+    },
+    "id" : "100",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#IrrelevantValidationData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IrrelevantValidationData"
+    },
+    "id" : "101",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DistortHumanBehaviour",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistortHumanBehaviour",
+      "en" : "Distort Human Behaviour"
+    },
+    "id" : "102",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DeterminingAccessToEducation",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeterminingAccessToEducation"
+    },
+    "comment" : {
+      "en" : "Refers to the purpose of determining access or assigning natural persons to educational and vocational training institutions."
+    },
+    "id" : "103",
+    "superClasses" : [ "104" ]
+  }, {
+    "iri" : "https://w3id.org/airo#IrrelevantTrainingData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IrrelevantTrainingData"
+    },
+    "id" : "105",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#KnowledgeBasedApproach",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KnowledgeBasedApproach",
+      "en" : "Knowledge-Based Approach"
+    },
+    "id" : "14",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/airo#PartialControl",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PartialControl",
+      "en" : "Partial Control"
+    },
+    "intersection" : [ "28" ],
+    "attributes" : [ "intersection" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/airo#HumanBehaviour",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HumanBehaviour",
+      "en" : "Human Behaviour"
+    },
+    "id" : "107",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Measure",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Measure",
+      "en" : "Control"
+    },
+    "subClasses" : [ "108", "27", "26", "109", "110", "111", "92" ],
+    "comment" : {
+      "en" : "Measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"
+    },
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/airo#IncompletenessOfTestingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IncompletenessOfTestingDataSet"
+    },
+    "id" : "112",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Group",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Group",
+      "en" : "Group"
+    },
+    "comment" : {
+      "en" : "Refers to a group of persons such as citizens, marginsalised groups, etc."
+    },
+    "id" : "113",
+    "superClasses" : [ "114" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ModelEvasion",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModelEvasion",
+      "en" : "Model Evasion"
+    },
+    "id" : "115",
     "superClasses" : [ "36" ]
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#IncompletenessOfValidationDataSet",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Security",
-      "en" : "Security"
+      "IRI-based" : "IncompletenessOfValidationDataSet"
     },
-    "id" : "21"
+    "id" : "116",
+    "superClasses" : [ "21" ]
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataGovernanceRelatedRiskSource"
+    },
+    "subClasses" : [ "101", "117", "20", "91", "105", "118", "119", "120", "121", "122", "123", "112", "124", "125", "126", "45", "30", "116", "84", "127" ],
+    "id" : "21",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ValidationData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ValidationData",
+      "en" : "Validation Data"
+    },
+    "comment" : {
+      "en" : "data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process, among other things, in order to prevent overfitting; whereas the validation dataset can be a separate dataset or part of the training dataset, either as a fixed or variable split [Source: AI Act, Article 3(30)]"
+    },
+    "id" : "128",
+    "superClasses" : [ "129" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DataProtectionAndPrivacy",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
       "IRI-based" : "DataProtectionAndPrivacy",
@@ -227,353 +868,117 @@
     "comment" : {
       "en" : "Refers to EU Charter of Fundamental Rights, Art. 8 (protection of personal data)"
     },
-    "id" : "38",
-    "superClasses" : [ "28" ]
+    "id" : "130",
+    "superClasses" : [ "54" ]
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#Content",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "RiskSource",
-      "en" : "Risk Source"
+      "IRI-based" : "Content"
     },
-    "subClasses" : [ "53", "50" ],
+    "id" : "99",
+    "superClasses" : [ "95" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Education",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Education"
+    },
+    "id" : "58",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/airo#PredictingRecidivism",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PredictingRecidivism"
+    },
     "comment" : {
-      "en" : "Indicates an element that has the potential give rise to a risk."
+      "en" : "predicting the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons or assessing personality traits and characteristics or past criminal behaviour of natural persons or groups"
     },
-    "id" : "10",
+    "id" : "131",
+    "superClasses" : [ "132" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Profiling",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Profiling"
+    },
+    "comment" : {
+      "en" : "Refers to profiling of natural persons in the course of detection, investigation or prosecution of criminal offences."
+    },
+    "id" : "136",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Decision",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Decision"
+    },
+    "id" : "98",
+    "superClasses" : [ "95" ]
+  }, {
+    "iri" : "https://w3id.org/airo#GeneratingAudioContent",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeneratingAudioContent"
+    },
+    "comment" : {
+      "en" : "Refers to manipulating or generating audio content."
+    },
+    "id" : "23",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DisruptionOfOperationOfCriticalInfrastructure",
+      "en" : "Disruption Of Operation Of Critical Infrastructure"
+    },
+    "id" : "71",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/airo#AdversarialAttack",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AdversarialAttack",
+      "en" : "Adversarial Attack"
+    },
+    "comment" : {
+      "en" : "inputs designed to cause the model to make a mistake"
+    },
+    "id" : "138",
     "superClasses" : [ "36" ]
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#Death",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "NonDiscrimination",
-      "en" : "Non-Discrimination"
+      "IRI-based" : "Death"
     },
-    "comment" : {
-      "en" : "Refers to EU Charter of Fundamental Rights, Art. 21"
-    },
-    "id" : "42",
-    "superClasses" : [ "28" ]
+    "id" : "65",
+    "superClasses" : [ "63" ]
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Attack",
-      "en" : "Attack"
-    },
-    "id" : "53",
-    "superClasses" : [ "10" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#Impact",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Impact",
       "en" : "Risk Impact"
     },
-    "id" : "2",
-    "superClasses" : [ "36" ]
+    "subClasses" : [ "62", "65", "68", "66", "71", "73" ],
+    "id" : "63",
+    "superClasses" : [ "90" ]
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "GeneralPublic",
-      "en" : "General Public"
-    },
-    "id" : "64"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ConsequenceMaterialisation",
-      "en" : "Consequence Materialisation"
-    },
-    "id" : "40",
-    "superClasses" : [ "36" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Safety",
-      "en" : "Safety"
-    },
-    "id" : "19"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LowLikelihood",
-      "en" : "Low Likelihood"
-    },
-    "id" : "13",
-    "superClasses" : [ "14" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Health",
-      "en" : "Health"
-    },
-    "subClasses" : [ "25", "32" ],
-    "id" : "20"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LikelihoodRate",
-      "en" : "Likelihood"
-    },
-    "union" : [ "30", "16", "13" ],
-    "subClasses" : [ "30", "16", "13" ],
-    "comment" : {
-      "en" : "Chance of an event happening. [Source: ISO 31000, 3.7]"
-    },
-    "attributes" : [ "union" ],
-    "id" : "14"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AiRisk",
-      "en" : "AI Risk"
-    },
-    "comment" : {
-      "en" : "Indicates a risk (of harm) associated with an AI system."
-    },
-    "id" : "47",
-    "superClasses" : [ "36" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PhysicalHealth",
-      "en" : "Physical Health"
-    },
-    "id" : "32",
-    "superClasses" : [ "20" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "HighLikelihood",
-      "en" : "High Likelihood"
-    },
-    "id" : "30",
-    "superClasses" : [ "14" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Person",
-      "en" : "Person"
-    },
-    "subClasses" : [ "78" ],
-    "id" : "77"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Child",
-      "en" : "Child"
-    },
-    "id" : "78",
-    "superClasses" : [ "77" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "KnowledgeBasedApproach",
-      "en" : "Knowledge-Based Approach"
-    },
-    "id" : "33",
-    "superClasses" : [ "23" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PsychologicalHealth",
-      "en" : "Psychological Health"
-    },
-    "id" : "25",
-    "superClasses" : [ "20" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MachineLearningApproach",
-      "en" : "Machine Learning Approach"
-    },
-    "id" : "35",
-    "superClasses" : [ "23" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Measure",
-      "en" : "Control"
-    },
-    "subClasses" : [ "80", "81", "82" ],
-    "comment" : {
-      "en" : "Measure that maintains and/or modifies risk/impact materialisation. [Source: ISO 31000, 3.8 with modifications]"
-    },
-    "id" : "5"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LogicBasedApproach",
-      "en" : "Logic-Based Approach"
-    },
-    "id" : "34",
-    "superClasses" : [ "23" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MediumLikelihood",
-      "en" : "Medium Likelihood"
-    },
-    "id" : "16",
-    "superClasses" : [ "14" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "vulnerability",
-      "en" : "Vulnerability"
-    },
-    "comment" : {
-      "en" : "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"
-    },
-    "id" : "56"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Event",
-      "en" : "Event"
-    },
-    "subClasses" : [ "10", "9", "45", "2", "4", "47", "40" ],
-    "comment" : {
-      "en" : "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"
-    },
-    "id" : "36"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AvoidanceMeasure",
-      "en" : "Avoidance Measure"
-    },
-    "id" : "80",
-    "superClasses" : [ "5" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "EUFundamentalRight",
-      "en" : "Eu Fundamental Right"
-    },
-    "subClasses" : [ "38", "42", "27" ],
-    "comment" : {
-      "en" : "Indicates  a right, freedom, or principle set out in the EU Charter of Fundamental Rights."
-    },
-    "id" : "28"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IntendedPurpose",
-      "en" : "Intended Purpose"
-    },
-    "comment" : {
-      "en" : "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"
-    },
-    "id" : "62"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Threat",
-      "en" : "Threat"
-    },
-    "comment" : {
-      "en" : "Potential cause of an unwanted incident, which may result in harm to systems, organizations or individuals. [Source: ISO/IEC TR 24028, 3.39]"
-    },
-    "id" : "50",
-    "superClasses" : [ "10" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "FreedomsOfNaturalPersons",
-      "en" : "Freedoms Of Natural Persons"
-    },
-    "id" : "27",
-    "superClasses" : [ "28" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "RiskConsequence",
-      "en" : "Risk Consequence"
-    },
-    "comment" : {
-      "en" : "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"
-    },
-    "id" : "45",
-    "superClasses" : [ "36" ]
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "79",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ImpactMaterialisation",
-      "en" : "Impact Materialisation"
-    },
-    "comment" : {
-      "en" : "Indicates an event that materialises impact of a risk."
-    },
-    "id" : "4",
-    "superClasses" : [ "36" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#AiSystem",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
       "IRI-based" : "AiSystem",
@@ -582,655 +987,2445 @@
     "comment" : {
       "en" : "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"
     },
-    "id" : "55"
+    "id" : "143"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#AreaOfInfluence",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "HumanBehaviour",
-      "en" : "Human Behaviour"
+      "IRI-based" : "AreaOfInfluence",
+      "en" : "Area of Influence"
     },
-    "id" : "18"
+    "subClasses" : [ "47", "54" ],
+    "id" : "52"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#PsychologicalHarm",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MitigationMeasure",
-      "en" : "Mitigation Measure"
+      "IRI-based" : "PsychologicalHarm",
+      "en" : "Psychological Harm"
     },
-    "id" : "81",
-    "superClasses" : [ "5" ]
+    "id" : "73",
+    "superClasses" : [ "63" ]
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#Person",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "en" : "Person"
+    },
+    "subClasses" : [ "4" ],
+    "id" : "5",
+    "superClasses" : [ "114" ]
+  }, {
+    "iri" : "https://w3id.org/airo#WrongDataSetDesignChoice",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WrongDataSetDesignChoice"
+    },
+    "id" : "118",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#AiTechnique",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AiTechnique",
+      "en" : "AI Technique"
+    },
+    "subClasses" : [ "7", "10", "14", "16" ],
+    "comment" : {
+      "en" : "Refers to the main approaches and techniques used for development of AI systems."
+    },
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/airo#Safety",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Safety",
+      "en" : "Safety"
+    },
+    "id" : "156",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "https://w3id.org/airo#HumanOversightMeasure",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HumanOversightMeasure"
+    },
+    "subClasses" : [ "167", "168", "25", "50" ],
+    "id" : "26",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/airo#UserTraining",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserTraining"
+    },
+    "id" : "110",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LikelihoodRate",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LikelihoodRate",
+      "en" : "Likelihood"
+    },
+    "comment" : {
+      "en" : "Chance of an event happening. [Source: ISO 31000, 3.7]"
+    },
+    "id" : "148",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/airo#IndividualRiskAssessment",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IndividualRiskAssessment",
+      "en" : "Individual Risk Assessment"
+    },
+    "comment" : {
+      "en" : "Refers to use of AI systems for making individual risk assessments of natural persons in order to assess the risk of a natural person for offending or reoffending or the risk for potential victims of criminal offences."
+    },
+    "id" : "176",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Accuracy",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Accuracy"
+    },
+    "id" : "150",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/airo#EaseOfReversiblity",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EaseOfReversiblity",
+      "en" : "Ease Of Reversibility"
+    },
+    "comment" : {
+      "en" : "Specifies the extent to which the outcome produced with an AI system is easily reversible."
+    },
+    "id" : "163",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/airo#IncompletenessOfTrainingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IncompletenessOfTrainingDataSet"
+    },
+    "id" : "126",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#FundamentalRight",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FundamentalRight",
+      "en" : "Fundamental Right"
+    },
+    "subClasses" : [ "154", "130", "142" ],
+    "comment" : {
+      "en" : "Indicates a right, freedom, or principle set out in the EU Charter of Fundamental Rights."
+    },
+    "id" : "54",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "https://w3id.org/airo#NonDiscrimination",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonDiscrimination",
+      "en" : "Non-Discrimination"
+    },
+    "comment" : {
+      "en" : "Refers to EU Charter of Fundamental Rights, Art. 21"
+    },
+    "id" : "154",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiasedOutput",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiasedOutput"
+    },
+    "id" : "186",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Security",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Security",
+      "en" : "Security"
+    },
+    "id" : "187",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "https://w3id.org/airo#HealthAndSafety",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HealthAndSafety",
+      "en" : "Health And Safety"
+    },
+    "subClasses" : [ "156", "187", "46", "107", "188" ],
+    "id" : "47",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "https://w3id.org/airo#UnavailabilityOfDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnavailabilityOfDataSet"
+    },
+    "id" : "121",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#IntendedPurpose",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntendedPurpose",
+      "en" : "Intended Purpose"
+    },
+    "subClasses" : [ "104", "132", "189", "2", "136", "77", "19", "176", "190", "191", "100" ],
+    "comment" : {
+      "en" : "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"
+    },
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/airo#FreedomsOfNaturalPersons",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FreedomsOfNaturalPersons",
+      "en" : "Freedoms Of Natural Persons"
+    },
+    "id" : "142",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/airo#SubliminalTechnique",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SubliminalTechnique",
+      "en" : "Subliminal Technique"
+    },
+    "comment" : {
+      "en" : "deploying subliminal techniques beyond a person’s consciousness in order to materially distort a person’s behaviour in a manner that causes or is likely to cause that person or another person physical or psychological harm"
+    },
+    "id" : "35",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Recommendation",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recommendation"
+    },
+    "id" : "97",
+    "superClasses" : [ "95" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DecreasedLevelOfSecurity",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DecreasedLevelOfSecurity"
+    },
+    "id" : "199",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/airo#GeneratingImageContent",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeneratingImageContent"
+    },
+    "comment" : {
+      "en" : "Refers to manipulating or generating image content."
+    },
+    "id" : "181",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiasedTrainingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiasedTrainingDataSet"
+    },
+    "id" : "127",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiasMonitoring",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiasMonitoring"
+    },
+    "id" : "108",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ErrorInTrainingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ErrorInTrainingDataSet"
+    },
+    "id" : "119",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DegradedPerformance",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DegradedPerformance"
+    },
+    "id" : "210",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ErrorInDataCollection",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ErrorInDataCollection"
+    },
+    "id" : "123",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#VulnerablePosition",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VulnerablePosition",
+      "en" : "Vulnerable Position"
+    },
+    "id" : "135"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "193",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/airo#RiskConsequence",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskConsequence",
+      "en" : "Risk Consequence"
+    },
+    "subClasses" : [ "186", "102", "199", "214", "63", "215", "210", "93" ],
+    "comment" : {
+      "en" : "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"
+    },
+    "id" : "90",
+    "superClasses" : [ "32" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "113", "5" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "134"
+  }, {
+    "instances" : 0,
+    "union" : [ "63", "90" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "217"
+  }, {
+    "iri" : "https://w3id.org/airo#MakingDecision",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MakingDecision",
+      "en" : "Making Decision"
+    },
+    "subClasses" : [ "103", "221" ],
+    "id" : "104",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ExtentOfUse",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExtentOfUse",
+      "en" : "Extent Of Use"
+    },
+    "comment" : {
+      "en" : "the extent to which an AI system has been used or is likely to be used"
+    },
+    "id" : "146",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LackOfAppropriateSecurity",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LackOfAppropriateSecurity"
+    },
+    "id" : "33",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ModelInversion",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModelInversion",
+      "en" : "Model Inversion"
+    },
+    "id" : "173",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/airo#InputData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InputData",
+      "en" : "Input Data"
+    },
+    "comment" : {
+      "en" : "data provided to or directly acquired by an AI system on the basis of which the system produces an output [Source: AI Act, Article 3(32)]"
+    },
+    "id" : "175",
+    "superClasses" : [ "129" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ErrorInInputData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ErrorInInputData"
+    },
+    "id" : "125",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LackOfTransparency",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LackOfTransparency"
+    },
+    "id" : "42",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#StatisticalApproach",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StatisticalApproach",
+      "en" : "Statistical Approach"
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DamageToProperty",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DamageToProperty",
+      "en" : "Damage To Property"
+    },
+    "id" : "62",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Injury",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Injury",
+      "en" : "Physical Injury"
+    },
+    "id" : "68",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ProvidingInstructionForUse",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProvidingInstructionForUse"
+    },
+    "id" : "109",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/airo#TrainingData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrainingData",
+      "en" : "Training Data"
+    },
+    "comment" : {
+      "en" : "data used for training an AI system through fitting its learnable parameters, including the weights of a neural network [Source: AI Act, Article 3(29)]"
+    },
+    "id" : "158",
+    "superClasses" : [ "129" ]
+  }, {
+    "iri" : "https://w3id.org/airo#TestingData",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestingData",
+      "en" : "Testing Data"
+    },
+    "comment" : {
+      "en" : "data used for providing an independent evaluation of the trained and validated AI system in order to confirm the expected performance of that system before its placing on the market or putting into service [Source: AI Act, Article 3(31)]"
+    },
+    "id" : "160",
+    "superClasses" : [ "129" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ReasonablyForseeableMisue",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReasonablyForseeableMisue",
+      "en" : "Reasonably Forseeable Misuse"
+    },
+    "comment" : {
+      "en" : "use of an AI system in a way that is not in accordance with its intended purpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems [Source: AI Act, Article 3(13)]"
+    },
+    "id" : "243",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ErrorInValidationDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ErrorInValidationDataSet"
+    },
+    "id" : "117",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Stakeholder",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Stakeholder",
       "en" : "Stakeholder"
     },
-    "union" : [ "77", "64" ],
+    "subClasses" : [ "113", "5" ],
     "comment" : {
       "en" : "Any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity[Source: ISO/IEC TR 24028, 3.37]"
     },
-    "attributes" : [ "union" ],
-    "id" : "1"
+    "id" : "114"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+    "iri" : "https://w3id.org/airo#Event",
+    "baseIri" : "https://w3id.org/airo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "SharingMeasure",
-      "en" : "Sharing Measure"
+      "IRI-based" : "Event",
+      "en" : "Event"
     },
-    "id" : "82",
+    "subClasses" : [ "90", "31", "80" ],
+    "comment" : {
+      "en" : "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"
+    },
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/airo#AutomationBias",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AutomationBias"
+    },
+    "comment" : {
+      "en" : "tendency of automatically relying or over-relying on the output produced by an AI system."
+    },
+    "id" : "214",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiasCorrection",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiasCorrection"
+    },
+    "id" : "111",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/airo#UnrepresentativeValidationDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnrepresentativeValidationDataSet"
+    },
+    "id" : "122",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#MakingPrediction",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MakingPrediction",
+      "en" : "Making Prediction"
+    },
+    "subClasses" : [ "131" ],
+    "id" : "132",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#EmotionRecognition",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmotionRecognition",
+      "en" : "Emotion Recognition"
+    },
+    "id" : "189",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Misuse",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Misuse",
+      "en" : "Misuse"
+    },
+    "subClasses" : [ "243" ],
+    "comment" : {
+      "en" : "The use of an AI system in a way that is not in accordance with its intended purpose."
+    },
+    "id" : "39",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LogicBasedApproach",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LogicBasedApproach",
+      "en" : "Logic-Based Approach"
+    },
+    "id" : "16",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/airo#RemoteBiometricIdentification",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RemoteBiometricIdentification",
+      "en" : "Remote Biometric Identification Of Natural Persons"
+    },
+    "subClasses" : [ "86", "83" ],
+    "comment" : {
+      "en" : "the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LowLevelOfRobustness",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LowLevelOfRobustness"
+    },
+    "id" : "43",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#PsychologicalHealth",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PsychologicalHealth",
+      "en" : "Psychological Health"
+    },
+    "id" : "48",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DataPoisoning",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataPoisoning",
+      "en" : "Data Poisoning"
+    },
+    "comment" : {
+      "en" : "Attack trying to manipulate the training dataset"
+    },
+    "id" : "170",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/airo#StudentAssessment",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StudentAssessment",
+      "en" : "Student Assessment"
+    },
+    "comment" : {
+      "en" : "Refers to the purpose of assessing students in educational and vocational training institutions and for assessing participants in tests commonly required for admission to educational institutions."
+    },
+    "id" : "221",
+    "superClasses" : [ "104" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ErrorInDataPrepration",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ErrorInDataPrepration"
+    },
+    "id" : "120",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Prediction",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Prediction"
+    },
+    "id" : "96",
+    "superClasses" : [ "95" ]
+  }, {
+    "iri" : "https://w3id.org/airo#IntendedContextOfUse",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntendedContextOfUse",
+      "en" : "Intended Context Of Use"
+    },
+    "subClasses" : [ "11", "24", "56", "58", "60" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/airo#InterruptOperationOfSystem",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterruptOperationOfSystem"
+    },
+    "id" : "168",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/airo#BiometricIdnetification",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BiometricIdnetification"
+    },
+    "subClasses" : [ "1" ],
+    "id" : "2",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#DecreasedLevelOfRobustness",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DecreasedLevelOfRobustness"
+    },
+    "id" : "215",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Employment",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Employment"
+    },
+    "comment" : {
+      "en" : "Employment, workers management and access to self-employment"
+    },
+    "id" : "60",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Welfare",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Welfare",
+      "en" : "Welfare"
+    },
+    "id" : "188",
+    "superClasses" : [ "47" ]
+  }, {
+    "iri" : "https://w3id.org/airo#vulnerability",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "vulnerability",
+      "en" : "Vulnerability"
+    },
+    "comment" : {
+      "en" : "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"
+    },
+    "id" : "34",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#LowLevelOfAccuracy",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LowLevelOfAccuracy"
+    },
+    "comment" : {
+      "en" : "inacurracy of the predictions, recommondations, or decisions produced by the system."
+    },
+    "id" : "37",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#GeneratingContent",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeneratingContent",
+      "en" : "Generating Content"
+    },
+    "subClasses" : [ "18", "23", "181" ],
+    "id" : "19",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ProducingRecommendation",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProducingRecommendation",
+      "en" : "Producing Recommendation"
+    },
+    "id" : "190",
+    "superClasses" : [ "78" ]
+  }, {
+    "iri" : "https://w3id.org/airo#SeriousIncident",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "en" : "Serious Incident"
+    },
+    "comment" : {
+      "en" : "any incident that directly or indirectly leads, might have led or might lead to : (a) the death of a person or serious damage to a person’s health, to property or the environment, (b) a serious and irreversible disruption of the management and operation of critical infrastructure [Source: AI Act, Articl3 3(44)]"
+    },
+    "id" : "41",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Risk",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Risk",
+      "en" : "Risk"
+    },
+    "comment" : {
+      "en" : "Indicates a risk (of harm) associated with an AI system."
+    },
+    "id" : "80",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://w3id.org/airo#PhysicalHealth",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhysicalHealth",
+      "en" : "Physical Health"
+    },
+    "id" : "49",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Severity",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Severity",
+      "en" : "Severity"
+    },
+    "comment" : { },
+    "id" : "152",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/airo#RealTimeRemoteBiometricIdentification",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RealTimeRemoteBiometricIdentification"
+    },
+    "id" : "86",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/airo#GeneratingVideoContent",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeneratingVideoContent"
+    },
+    "comment" : {
+      "en" : "Refers to manipulating or generating video content."
+    },
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Child",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Child",
+      "en" : "Child"
+    },
+    "id" : "4",
     "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/airo#Cyberattack",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cyberattack",
+      "en" : "Cyberattack"
+    },
+    "subClasses" : [ "138", "170", "115", "173" ],
+    "id" : "36",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ErrorInTestingDataSet",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ErrorInTestingDataSet"
+    },
+    "id" : "124",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/airo#ReverseTheOutcome",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReverseTheOutcome"
+    },
+    "id" : "167",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/airo#PostRemoteBiometricIdentification",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostRemoteBiometricIdentification"
+    },
+    "id" : "83",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/airo#AiSystemComponent",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AiSystemComponent",
+      "en" : "AI System Component"
+    },
+    "subClasses" : [ "175", "158", "160", "128" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/airo#Indicator",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Indicator",
+      "en" : "Indicator"
+    },
+    "subClasses" : [ "163", "74", "146", "148", "150", "152" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/airo#CrimeAnalytics",
+    "baseIri" : "https://w3id.org/airo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrimeAnalytics"
+    },
+    "id" : "191",
+    "superClasses" : [ "78" ]
   } ],
   "property" : [ {
     "id" : "0",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "3",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "7",
-    "type" : "owl:objectProperty"
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "8",
-    "type" : "owl:objectProperty"
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "12",
+    "id" : "13",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "15",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "24",
+    "id" : "17",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "26",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "29",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "31",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "37",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "39",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "41",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "43",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "44",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "46",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "48",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "49",
+    "id" : "22",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "51",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "52",
+    "id" : "53",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "54",
-    "type" : "owl:objectProperty"
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "58",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "60",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "61",
-    "type" : "owl:objectProperty"
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "59",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "65",
-    "type" : "owl:objectProperty"
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "11",
-    "type" : "owl:objectProperty"
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "67",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "69",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "71",
-    "type" : "owl:objectProperty"
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "73",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "74",
-    "type" : "owl:objectProperty"
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "76",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "57",
+    "id" : "79",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "63",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "83",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "84",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "85",
+    "id" : "82",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "86",
+    "id" : "85",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "87",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "66",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "88",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "89",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "90",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "91",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "68",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "72",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "92",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "93",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "94",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "70",
+    "id" : "133",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "75",
+    "id" : "137",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "95",
+    "id" : "139",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "96",
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "155",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "97",
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "169",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "178",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "182",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "184",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "192",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "194",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "195",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "196",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "204",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "206",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "209",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "197",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "213",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "216",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "218",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "219",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "220",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "225",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "226",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "228",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "229",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "231",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "239",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "240",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "241",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "242",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "244",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "246",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "247",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "248",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "249",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "251",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "253",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "254",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "255",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "256",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "257",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "258",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "259",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "260",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "262",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "263",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "264",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "265",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "266",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "267",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "268",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "269",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "270",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "271",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "272",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "273",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "274",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "275",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "276",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "277",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "278",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "279",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "280",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "281",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "282",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "283",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "284",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "285",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "286",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "287",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "288",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "289",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "290",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "291",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "292",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "293",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "294",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "295",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "296",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "297",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "298",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "299",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "300",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "301",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "302",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "303",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "304",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "179",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "305",
+    "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
     "range" : "2",
-    "label" : {
-      "IRI-based" : "stakeholderIsImpactedBy"
-    },
     "domain" : "1",
-    "attributes" : [ "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "0"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
     "range" : "5",
-    "label" : {
-      "IRI-based" : "impactMaterialisationIsControlledBy"
-    },
     "domain" : "4",
-    "attributes" : [ "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "3"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "2",
-    "label" : {
-      "IRI-based" : "materialisesImpact"
-    },
-    "domain" : "4",
-    "attributes" : [ "object" ],
-    "id" : "7"
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "6"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource",
-    "inverse" : "11",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "10",
-    "label" : {
-      "IRI-based" : "hasRiskSource"
-    },
-    "domain" : "9",
-    "attributes" : [ "object" ],
-    "id" : "8"
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
   }, {
-    "range" : "14",
-    "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "12"
+    "range" : "8",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
   }, {
-    "range" : "14",
+    "range" : "8",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "15"
   }, {
-    "range" : "20",
-    "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "24"
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
   }, {
-    "range" : "28",
-    "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "26"
+    "range" : "19",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
   }, {
-    "range" : "14",
-    "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "29"
-  }, {
-    "range" : "20",
-    "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "31"
-  }, {
-    "range" : "28",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "37"
-  }, {
-    "range" : "36",
-    "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "39"
-  }, {
-    "range" : "28",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "41"
-  }, {
-    "range" : "36",
-    "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "43"
-  }, {
-    "range" : "36",
-    "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "44"
-  }, {
-    "range" : "36",
+    "range" : "52",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "46"
-  }, {
-    "range" : "36",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "48"
-  }, {
-    "range" : "10",
-    "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "49"
-  }, {
-    "range" : "36",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
-    "range" : "36",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "52"
+    "range" : "52",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability",
-    "inverse" : "57",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "56",
-    "label" : {
-      "IRI-based" : "hasVulnerability"
-    },
-    "domain" : "55",
-    "attributes" : [ "object" ],
-    "id" : "54"
+    "range" : "12",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation",
-    "inverse" : "59",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "controlsRiskMaterialisation"
-    },
-    "domain" : "5",
-    "attributes" : [ "object" ],
-    "id" : "58"
+    "range" : "12",
+    "domain" : "58",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "45",
-    "label" : {
-      "IRI-based" : "materialisesConsequence"
-    },
-    "domain" : "40",
-    "attributes" : [ "object" ],
-    "id" : "60"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose",
-    "inverse" : "63",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "62",
-    "label" : {
-      "IRI-based" : "hasIntendedPurpose"
-    },
-    "domain" : "55",
-    "attributes" : [ "object" ],
-    "id" : "61"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "5",
-    "label" : {
-      "IRI-based" : "riskMaterialisationIsControlledBy"
-    },
-    "domain" : "9",
-    "attributes" : [ "object" ],
+    "range" : "12",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "59"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood",
-    "inverse" : "66",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "14",
-    "label" : {
-      "IRI-based" : "hasLikelihood"
-    },
-    "domain" : "36",
-    "attributes" : [ "object" ],
-    "id" : "65"
+    "range" : "63",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "10",
-    "label" : {
-      "IRI-based" : "isRiskSource"
-    },
-    "domain" : "9",
-    "attributes" : [ "object" ],
-    "id" : "11"
+    "range" : "63",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk",
-    "inverse" : "68",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "47",
-    "label" : {
-      "IRI-based" : "materialisesRisk"
-    },
-    "domain" : "9",
-    "attributes" : [ "object" ],
+    "range" : "63",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "67"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy",
-    "inverse" : "70",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "2",
-    "label" : {
-      "IRI-based" : "areaOfInfluenceIsImpactedBy"
-    },
-    "domain" : "17",
-    "attributes" : [ "object" ],
+    "range" : "63",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "69"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk",
-    "inverse" : "72",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "47",
-    "label" : {
-      "IRI-based" : "hasRisk"
-    },
-    "domain" : "55",
-    "attributes" : [ "object" ],
-    "id" : "71"
+    "range" : "63",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "70"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "40",
-    "label" : {
-      "IRI-based" : "leadsToConsequenceMaterialisation"
-    },
-    "domain" : "47",
-    "attributes" : [ "object" ],
-    "id" : "73"
+    "range" : "63",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy",
-    "inverse" : "75",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "40",
+    "iri" : "https://w3id.org/airo#hasImpactOnArea",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "52",
     "label" : {
-      "IRI-based" : "consequenceMaterialisationIsControlledBy"
+      "IRI-based" : "hasImpactOnArea",
+      "en" : "has impact on area"
     },
-    "domain" : "5",
-    "attributes" : [ "object" ],
-    "id" : "74"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder",
-    "inverse" : "0",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "hasImpactOnStakeholder"
-    },
-    "domain" : "2",
+    "domain" : "63",
     "attributes" : [ "object" ],
     "id" : "76"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "55",
+    "iri" : "https://w3id.org/airo#hasRiskSource",
+    "inverse" : "81",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "31",
     "label" : {
-      "IRI-based" : "isVulnerabilityOfSystem"
+      "IRI-based" : "hasRiskSource",
+      "en" : "has risk source"
     },
-    "domain" : "56",
+    "domain" : "80",
     "attributes" : [ "object" ],
-    "id" : "57"
+    "id" : "79"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "79",
-    "label" : {
-      "IRI-based" : "isIntendedPurposeOf"
-    },
-    "domain" : "62",
-    "attributes" : [ "object" ],
-    "id" : "63"
+    "range" : "1",
+    "domain" : "83",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceIsMaterialisedBy",
-    "inverse" : "60",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "40",
-    "label" : {
-      "IRI-based" : "consequenceIsMaterialisedBy"
-    },
-    "domain" : "45",
-    "attributes" : [ "object" ],
-    "id" : "83"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "leadsToImpactMaterialisation"
-    },
-    "domain" : "45",
-    "attributes" : [ "object" ],
-    "id" : "84"
-  }, {
-    "range" : "23",
-    "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "1",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "85"
   }, {
-    "range" : "23",
-    "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "86"
-  }, {
-    "range" : "23",
-    "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "87"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "36",
-    "label" : {
-      "IRI-based" : "isLikehoodOf"
-    },
-    "domain" : "14",
-    "attributes" : [ "object" ],
-    "id" : "66"
-  }, {
-    "range" : "23",
-    "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "12",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
-    "range" : "5",
+    "iri" : "https://w3id.org/airo#hasConsequence",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "hasConsequence",
+      "en" : "has consequence"
+    },
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object" ],
     "id" : "89"
   }, {
-    "range" : "5",
-    "domain" : "81",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "90"
-  }, {
-    "range" : "5",
-    "domain" : "82",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "91"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "9",
+    "iri" : "https://w3id.org/airo#modifiesEvent",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "32",
     "label" : {
-      "IRI-based" : "riskIsMaterialisedBy"
+      "IRI-based" : "modifiesEvent",
+      "en" : "modifies event"
     },
-    "domain" : "47",
-    "attributes" : [ "object" ],
-    "id" : "68"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "55",
-    "label" : {
-      "IRI-based" : "isAssociatedWithAISystem"
-    },
-    "domain" : "47",
-    "attributes" : [ "object" ],
-    "id" : "72"
-  }, {
-    "range" : "10",
-    "domain" : "53",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "92"
-  }, {
-    "range" : "77",
-    "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "93"
-  }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy",
-    "inverse" : "7",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "impactisMaterialisedBy"
-    },
-    "domain" : "2",
+    "domain" : "28",
     "attributes" : [ "object" ],
     "id" : "94"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "17",
+    "iri" : "https://w3id.org/airo#isInVulnerablePosition",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "135",
     "label" : {
-      "IRI-based" : "hasImpactOnAreaOfInfluence"
+      "IRI-based" : "isInVulnerablePosition",
+      "en" : "is in vulnerable position"
     },
+    "domain" : "134",
+    "attributes" : [ "object" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/airo#isRiskAssociatedWith",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "129",
+    "label" : {
+      "IRI-based" : "isRiskAssociatedWith",
+      "en" : "is risk associated with"
+    },
+    "domain" : "80",
+    "attributes" : [ "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://w3id.org/airo#isImpactOf",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "isImpactOf",
+      "en" : "is impact of"
+    },
+    "domain" : "63",
+    "attributes" : [ "object" ],
+    "id" : "139"
+  }, {
+    "range" : "54",
+    "domain" : "130",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "range" : "54",
+    "domain" : "142",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
+  }, {
+    "range" : "75",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "range" : "75",
+    "domain" : "146",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "145"
+  }, {
+    "range" : "75",
+    "domain" : "148",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "147"
+  }, {
+    "range" : "75",
+    "domain" : "150",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "149"
+  }, {
+    "range" : "75",
+    "domain" : "152",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "range" : "54",
+    "domain" : "154",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://w3id.org/airo#hasImpactOnStakeholder",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "hasImpactOnStakeholder",
+      "en" : "has impact on stakeholder"
+    },
+    "domain" : "63",
+    "attributes" : [ "object" ],
+    "id" : "155"
+  }, {
+    "range" : "129",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
+    "range" : "129",
+    "domain" : "160",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "range" : "129",
+    "domain" : "128",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "75",
+    "domain" : "163",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "range" : "26",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
+    "range" : "26",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "36",
+    "domain" : "138",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  }, {
+    "range" : "36",
+    "domain" : "170",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "169"
+  }, {
+    "range" : "36",
+    "domain" : "115",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "171"
+  }, {
+    "range" : "36",
+    "domain" : "173",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "172"
+  }, {
+    "range" : "129",
+    "domain" : "175",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
+  }, {
+    "iri" : "https://w3id.org/airo#hasVulnerability",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasVulnerability",
+      "en" : "has vulnerability"
+    },
+    "domain" : "143",
+    "comment" : {
+      "en" : "Indicates vulnerabilities of an AI system."
+    },
+    "attributes" : [ "object" ],
+    "id" : "177"
+  }, {
+    "iri" : "https://w3id.org/airo#hasIntendedPurpose",
+    "inverse" : "179",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "hasIntendedPurpose",
+      "en" : "Indicates the intended purpose of an AI system."
+    },
+    "domain" : "143",
+    "attributes" : [ "object" ],
+    "id" : "178"
+  }, {
+    "range" : "19",
+    "domain" : "181",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "180"
+  }, {
+    "range" : "26",
+    "domain" : "167",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "182"
+  }, {
+    "range" : "26",
+    "domain" : "168",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "183"
+  }, {
+    "iri" : "https://w3id.org/airo#producesOutput",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "producesOutput",
+      "en" : "produces output"
+    },
+    "domain" : "143",
+    "attributes" : [ "object" ],
+    "id" : "184"
+  }, {
+    "range" : "78",
+    "domain" : "176",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "185"
+  }, {
+    "iri" : "https://w3id.org/airo#isPartOfControl",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "193",
+    "label" : {
+      "IRI-based" : "isPartOfControl",
+      "en" : "is part of control"
+    },
+    "domain" : "193",
+    "attributes" : [ "object" ],
+    "id" : "192"
+  }, {
+    "iri" : "https://w3id.org/airo#isConsequenceOf",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "isConsequenceOf",
+      "en" : "is consequence of"
+    },
+    "domain" : "90",
+    "attributes" : [ "object" ],
+    "id" : "194"
+  }, {
+    "range" : "78",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://w3id.org/airo#hasStakeholder",
+    "inverse" : "197",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "hasStakeholder",
+      "en" : "has stakeholder"
+    },
+    "domain" : "143",
+    "comment" : {
+      "en" : "Indicates stakeholders of an AI system"
+    },
+    "attributes" : [ "object" ],
+    "id" : "196"
+  }, {
+    "range" : "78",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
+  }, {
+    "range" : "78",
+    "domain" : "189",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "200"
+  }, {
+    "range" : "78",
+    "domain" : "132",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "201"
+  }, {
+    "range" : "78",
+    "domain" : "136",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "202"
+  }, {
+    "range" : "78",
     "domain" : "2",
-    "attributes" : [ "object" ],
-    "id" : "70"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "203"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "5",
+    "iri" : "https://w3id.org/airo#usesTechnique",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "8",
     "label" : {
-      "IRI-based" : "controlsConsequenceMaterialisation"
+      "IRI-based" : "usesTechnique",
+      "en" : "uses technique"
     },
+    "domain" : "143",
+    "comment" : {
+      "en" : "Indicates the AI techniques used in an AI system."
+    },
+    "attributes" : [ "object" ],
+    "id" : "204"
+  }, {
+    "range" : "47",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "205"
+  }, {
+    "iri" : "https://w3id.org/airo#hasRisk",
+    "inverse" : "137",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "hasRisk",
+      "en" : "has risk"
+    },
+    "domain" : "129",
+    "attributes" : [ "object" ],
+    "id" : "206"
+  }, {
+    "range" : "47",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "207"
+  }, {
+    "range" : "78",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "208"
+  }, {
+    "range" : "47",
+    "domain" : "188",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "209"
+  }, {
+    "iri" : "https://w3id.org/airo#isStakeholderOfSystem",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "143",
+    "label" : {
+      "IRI-based" : "isStakeholderOfSystem",
+      "en" : "is stakeholder of system"
+    },
+    "domain" : "114",
+    "attributes" : [ "object" ],
+    "id" : "197"
+  }, {
+    "range" : "47",
+    "domain" : "156",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "211"
+  }, {
+    "range" : "47",
+    "domain" : "187",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "212"
+  }, {
+    "range" : "128",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "213"
+  }, {
+    "range" : "128",
+    "domain" : "160",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "216"
+  }, {
+    "range" : "190",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "218"
+  }, {
+    "range" : "158",
+    "domain" : "160",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "219"
+  }, {
+    "range" : "190",
+    "domain" : "132",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "220"
+  }, {
+    "range" : "90",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "222"
+  }, {
+    "range" : "90",
+    "domain" : "214",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "223"
+  }, {
+    "range" : "90",
+    "domain" : "199",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
+  }, {
+    "iri" : "https://w3id.org/airo#hasPerformanceIndicator",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "hasPerformanceIndicator"
+    },
+    "domain" : "143",
+    "attributes" : [ "object" ],
+    "id" : "225"
+  }, {
+    "iri" : "https://w3id.org/airo#isFollowedByControl",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "isFollowedByControl",
+      "en" : "is followed by control"
+    },
+    "domain" : "28",
+    "attributes" : [ "object" ],
+    "id" : "226"
+  }, {
+    "range" : "46",
+    "domain" : "48",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "227"
+  }, {
+    "range" : "31",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "228"
+  }, {
+    "range" : "90",
+    "domain" : "186",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "229"
+  }, {
+    "range" : "46",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "range" : "31",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "31",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "31",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "range" : "31",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
+    "range" : "31",
     "domain" : "40",
-    "attributes" : [ "object" ],
-    "id" : "75"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "235"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsImpactMaterialisation",
-    "inverse" : "3",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "4",
+    "range" : "31",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "236"
+  }, {
+    "range" : "31",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "31",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "range" : "31",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "239"
+  }, {
+    "range" : "31",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "240"
+  }, {
+    "range" : "31",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "241"
+  }, {
+    "range" : "78",
+    "domain" : "191",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "242"
+  }, {
+    "range" : "78",
+    "domain" : "190",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "244"
+  }, {
+    "range" : "31",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "245"
+  }, {
+    "range" : "78",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "246"
+  }, {
+    "range" : "21",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "247"
+  }, {
+    "range" : "21",
+    "domain" : "117",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "21",
+    "domain" : "105",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "range" : "21",
+    "domain" : "91",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "250"
+  }, {
+    "range" : "21",
+    "domain" : "101",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "251"
+  }, {
+    "range" : "28",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "252"
+  }, {
+    "range" : "28",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
+  }, {
+    "range" : "28",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "254"
+  }, {
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "255"
+  }, {
+    "range" : "28",
+    "domain" : "110",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
+  }, {
+    "range" : "28",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "257"
+  }, {
+    "range" : "95",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "258"
+  }, {
+    "range" : "95",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "259"
+  }, {
+    "range" : "28",
+    "domain" : "108",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "260"
+  }, {
+    "range" : "95",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "iri" : "https://w3id.org/airo#hasSeverity",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "152",
     "label" : {
-      "IRI-based" : "controlsImpactMaterialisation"
+      "IRI-based" : "hasSeverity",
+      "en" : "has severity"
     },
+    "domain" : "217",
+    "attributes" : [ "object" ],
+    "id" : "262"
+  }, {
+    "iri" : "https://w3id.org/airo#isPartOfAiSystem",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "143",
+    "label" : {
+      "IRI-based" : "isPartOfAiSystem",
+      "en" : "is part of ai system"
+    },
+    "domain" : "129",
+    "comment" : {
+      "en" : "Indicates that a component is part of an AI system."
+    },
+    "attributes" : [ "object" ],
+    "id" : "263"
+  }, {
+    "range" : "104",
+    "domain" : "221",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "264"
+  }, {
+    "iri" : "https://w3id.org/airo#isRiskSourceFor",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "isRiskSourceFor",
+      "en" : "is risk source for"
+    },
+    "domain" : "31",
+    "attributes" : [ "object" ],
+    "id" : "81"
+  }, {
+    "range" : "104",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
+  }, {
+    "range" : "95",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "266"
+  }, {
+    "range" : "90",
+    "domain" : "215",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "267"
+  }, {
+    "range" : "90",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
+  }, {
+    "range" : "90",
+    "domain" : "93",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "269"
+  }, {
+    "range" : "90",
+    "domain" : "210",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "270"
+  }, {
+    "range" : "32",
+    "domain" : "80",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "271"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
+  }, {
+    "range" : "39",
+    "domain" : "243",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "273"
+  }, {
+    "range" : "132",
+    "domain" : "131",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "274"
+  }, {
+    "range" : "114",
+    "domain" : "113",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "275"
+  }, {
+    "range" : "32",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "276"
+  }, {
+    "range" : "114",
     "domain" : "5",
-    "attributes" : [ "object" ],
-    "id" : "95"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "277"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing",
-    "inverse" : "97",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "23",
-    "label" : {
-      "IRI-based" : "isDevelopedUsing"
-    },
-    "domain" : "55",
-    "attributes" : [ "object" ],
-    "id" : "96"
+    "range" : "97",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "278"
   }, {
-    "iri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping",
-    "baseIri" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
-    "range" : "55",
+    "range" : "96",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "279"
+  }, {
+    "range" : "97",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "280"
+  }, {
+    "range" : "97",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "281"
+  }, {
+    "range" : "104",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "282"
+  }, {
+    "range" : "132",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "283"
+  }, {
+    "range" : "190",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "284"
+  }, {
+    "range" : "132",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "285"
+  }, {
+    "range" : "98",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "286"
+  }, {
+    "range" : "96",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "287"
+  }, {
+    "iri" : "https://w3id.org/airo#hasExtentOfUseIndicator",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "146",
     "label" : {
-      "IRI-based" : "isUsedInDeveloping"
+      "IRI-based" : "hasExtentOfUseIndicator"
     },
-    "domain" : "23",
+    "domain" : "143",
     "attributes" : [ "object" ],
-    "id" : "97"
+    "id" : "288"
+  }, {
+    "iri" : "https://w3id.org/airo#hasImpact",
+    "inverse" : "139",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "hasImpact",
+      "en" : "has impact"
+    },
+    "domain" : "90",
+    "attributes" : [ "object" ],
+    "id" : "289"
+  }, {
+    "range" : "21",
+    "domain" : "116",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "290"
+  }, {
+    "range" : "21",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "291"
+  }, {
+    "range" : "21",
+    "domain" : "127",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "292"
+  }, {
+    "range" : "21",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "293"
+  }, {
+    "range" : "21",
+    "domain" : "125",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "294"
+  }, {
+    "range" : "21",
+    "domain" : "124",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "295"
+  }, {
+    "range" : "21",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "296"
+  }, {
+    "range" : "21",
+    "domain" : "126",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "297"
+  }, {
+    "range" : "21",
+    "domain" : "112",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "298"
+  }, {
+    "range" : "21",
+    "domain" : "123",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "299"
+  }, {
+    "iri" : "https://w3id.org/airo#hasLikelihood",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "148",
+    "label" : {
+      "IRI-based" : "hasLikelihood",
+      "en" : "Indicates the probability of occurrence of an event."
+    },
+    "domain" : "32",
+    "attributes" : [ "object" ],
+    "id" : "300"
+  }, {
+    "range" : "21",
+    "domain" : "122",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "301"
+  }, {
+    "range" : "21",
+    "domain" : "119",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "302"
+  }, {
+    "range" : "21",
+    "domain" : "118",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "303"
+  }, {
+    "range" : "21",
+    "domain" : "121",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "304"
+  }, {
+    "iri" : "https://w3id.org/airo#isIntendedPurposeOf",
+    "baseIri" : "https://w3id.org/airo",
+    "range" : "143",
+    "label" : {
+      "IRI-based" : "isIntendedPurposeOf",
+      "en" : "is intended purpose of"
+    },
+    "domain" : "78",
+    "attributes" : [ "object" ],
+    "id" : "179"
+  }, {
+    "range" : "21",
+    "domain" : "120",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "305"
   } ]
 }

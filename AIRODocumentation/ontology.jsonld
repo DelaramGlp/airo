@@ -3,38 +3,79 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health"
+      "@id" : "https://w3id.org/airo#Impact"
     }, {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour"
-    }, {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety"
-    }, {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security"
-    }, {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare"
+      "@id" : "https://w3id.org/airo#RiskConsequence"
     } ]
   } ]
 }, {
   "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/airo#Content"
+    }, {
+      "@id" : "https://w3id.org/airo#Decision"
+    }, {
+      "@id" : "https://w3id.org/airo#Prediction"
+    }, {
+      "@id" : "https://w3id.org/airo#Recommendation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/airo#GeneratingContent"
+    }, {
+      "@id" : "https://w3id.org/airo#MakingDecision"
+    }, {
+      "@id" : "https://w3id.org/airo#MakingPrediction"
+    }, {
+      "@id" : "https://w3id.org/airo#ProducingRecommendation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/airo#TestingData"
+    }, {
+      "@id" : "https://w3id.org/airo#TrainingData"
+    }, {
+      "@id" : "https://w3id.org/airo#ValidationData"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic"
+      "@id" : "https://w3id.org/airo#Group"
     }, {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person"
+      "@id" : "https://w3id.org/airo#Person"
     } ]
   } ]
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood"
+      "@id" : "https://w3id.org/airo#Measure"
     }, {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood"
-    }, {
-      "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood"
+      "@id" : "_:genid9"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/airo#isPartOfControl"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/airo#Measure"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/creator",
@@ -43,46 +84,53 @@
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo",
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/airo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Delaram Golpayegani"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "The ontolgy represents AI risk concepts and relations based on the AI Act draft."
+    "@value" : "The ontolgy represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "ADAPT Centre, Trinity College Dublin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AI Risk Ontology"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach",
+  "@id" : "https://w3id.org/airo#Accuracy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Refers to the main approaches and techniques used for development of AI systems."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "AI Approach"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Indicator"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk",
+  "@id" : "https://w3id.org/airo#AdversarialAttack",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates a risk (of harm) associated with an AI system."
+    "@value" : "inputs designed to cause the model to make a mistake"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "AI Risk"
+    "@value" : "Adversarial Attack"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@id" : "https://w3id.org/airo#Cyberattack"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem",
+  "@id" : "https://w3id.org/airo#AiSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -93,57 +141,165 @@
     "@value" : "AI System"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence",
+  "@id" : "https://w3id.org/airo#AiSystemComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AI System Component"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#AiTechnique",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the main approaches and techniques used for development of AI systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AI Technique"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#AreaOfInfluence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Area of Influence"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Attack",
+  "@id" : "https://w3id.org/airo#AutomationBias",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Attack"
+    "@value" : "tendency of automatically relying or over-relying on the output produced by an AI system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource"
+    "@id" : "https://w3id.org/airo#RiskConsequence"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AvoidanceMeasure",
+  "@id" : "https://w3id.org/airo#BiasCorrection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Avoidance Measure"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
+    "@id" : "https://w3id.org/airo#Measure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Child",
+  "@id" : "https://w3id.org/airo#BiasDetection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Measure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#BiasMonitoring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Measure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#BiasedOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#BiasedTestingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#BiasedTrainingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#BiasedValidationDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#BiometricCategorisation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#BiometricIdnetification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Child",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Child"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person"
+    "@id" : "https://w3id.org/airo#Person"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation",
+  "@id" : "https://w3id.org/airo#ConditionOfUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Consequence Materialisation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@value" : "Condition Of Use"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#DataProtectionAndPrivacy",
+  "@id" : "https://w3id.org/airo#Content",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Output"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#CrimeAnalytics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Cyberattack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cyberattack"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DamageToProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Damage To Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Impact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DataPoisoning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Attack trying to manipulate the training dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Poisoning"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Cyberattack"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DataProtectionAndPrivacy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -154,21 +310,172 @@
     "@value" : "Data Protection And Privacy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight"
+    "@id" : "https://w3id.org/airo#FundamentalRight"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight",
+  "@id" : "https://w3id.org/airo#Death",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Impact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Decision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Output"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DecreasedLevelOfAccuracy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DecreasedLevelOfRobustness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DecreasedLevelOfSecurity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DeepFakeDetection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Deep Fake Detection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DegradedPerformance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DeterminingAccessToEducation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates  a right, freedom, or principle set out in the EU Charter of Fundamental Rights."
+    "@value" : "Refers to the purpose of determining access or assigning natural persons to educational and vocational training institutions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#MakingDecision"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Disruption Of Operation Of Critical Infrastructure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Impact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#DistortHumanBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distort Human Behaviour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#EaseOfReversiblity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the extent to which the outcome produced with an AI system is easily reversible."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Eu Fundamental Right"
+    "@value" : "Ease Of Reversibility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Indicator"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event",
+  "@id" : "https://w3id.org/airo#Education",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedContextOfUse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#EmotionRecognition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Emotion Recognition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Employment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Employment, workers management and access to self-employment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedContextOfUse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#EnvironmentalDamage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental Damage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Impact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ErrorInDataCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ErrorInDataPrepration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ErrorInInputData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ErrorInTestingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ErrorInTrainingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ErrorInValidationDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -179,72 +486,225 @@
     "@value" : "Event"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#FreedomsOfNaturalPersons",
+  "@id" : "https://w3id.org/airo#ExtentOfUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the extent to which an AI system has been used or is likely to be used"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Extent Of Use"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Indicator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#FreedomsOfNaturalPersons",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Freedoms Of Natural Persons"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight"
+    "@id" : "https://w3id.org/airo#FundamentalRight"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#GeneralPublic",
+  "@id" : "https://w3id.org/airo#FundamentalRight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates a right, freedom, or principle set out in the EU Charter of Fundamental Rights."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fundamental Right"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#AreaOfInfluence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#GeneratingAudioContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to manipulating or generating audio content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#GeneratingContent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#GeneratingContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "General Public"
+    "@value" : "Generating Content"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health",
+  "@id" : "https://w3id.org/airo#GeneratingImageContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to manipulating or generating image content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#GeneratingContent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#GeneratingVideoContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to manipulating or generating video content."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#GeneratingContent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to a group of persons such as citizens, marginsalised groups, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Stakeholder"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Health",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Health"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HealthAndSafety"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HighLikelihood",
+  "@id" : "https://w3id.org/airo#HealthAndSafety",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "High Likelihood"
+    "@value" : "Health And Safety"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate"
+    "@id" : "https://w3id.org/airo#AreaOfInfluence"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#HumanBehaviour",
+  "@id" : "https://w3id.org/airo#HumanBehaviour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Human Behaviour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HealthAndSafety"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact",
+  "@id" : "https://w3id.org/airo#HumanOversightMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Measure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Impact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Risk Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConsequence"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation",
+  "@id" : "https://w3id.org/airo#IncompetenceOfHumanOversightActors",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates an event that materialises impact of a risk."
+    "@value" : "Refers to incompentece of individuals to whom human oversight is assigned."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IncompletenessOfTestingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IncompletenessOfTrainingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IncompletenessOfValidationDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Indicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Indicator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IndividualRiskAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to use of AI systems for making individual risk assessments of natural persons in order to assess the risk of a natural person for offending or reoffending or the risk for potential victims of criminal offences."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Impact Materialisation"
+    "@value" : "Individual Risk Assessment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose",
+  "@id" : "https://w3id.org/airo#Injury",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Physical Injury"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Impact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#InputData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "data provided to or directly acquired by an AI system on the basis of which the system produces an output [Source: AI Act, Article 3(32)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Input Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#AiSystemComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IntendedContextOfUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intended Context Of Use"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IntendedPurpose",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -255,17 +715,89 @@
     "@value" : "Intended Purpose"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#KnowledgeBasedApproach",
+  "@id" : "https://w3id.org/airo#InterruptOperationOfSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HumanOversightMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#InterveneOperationOfSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HumanOversightMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IrrelevantTestingData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IrrelevantTrainingData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#IrrelevantValidationData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#KnowledgeBasedApproach",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Knowledge-Based Approach"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach"
+    "@id" : "https://w3id.org/airo#AiTechnique"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate",
+  "@id" : "https://w3id.org/airo#LackOfAppropriateInstructionForUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lack Of Appropriate Instruction For Use"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#LackOfAppropriateSecurity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#LackOfHumanOversightMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#LackOfTransparency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#LawEnforcement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "activities carried out by law enforcement authorities for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security [Source: AI Act, Article 3(41)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Law Enforcement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedContextOfUse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#LikelihoodRate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -275,72 +807,132 @@
     "@language" : "en",
     "@value" : "Likelihood"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid7"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Indicator"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LogicBasedApproach",
+  "@id" : "https://w3id.org/airo#LogicBasedApproach",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Logic-Based Approach"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach"
+    "@id" : "https://w3id.org/airo#AiTechnique"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LowLikelihood",
+  "@id" : "https://w3id.org/airo#LowLevelOfAccuracy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Low Likelihood"
+    "@value" : "inacurracy of the predictions, recommondations, or decisions produced by the system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate"
+    "@id" : "https://w3id.org/airo#RiskSource"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MachineLearningApproach",
+  "@id" : "https://w3id.org/airo#LowLevelOfRobustness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#MachineLearningApproach",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Machine Learning Approach"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach"
+    "@id" : "https://w3id.org/airo#AiTechnique"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure",
+  "@id" : "https://w3id.org/airo#MakingDecision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Making Decision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#MakingPrediction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Making Prediction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ManagementOfCriticalInfrastructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Measure that maintains and/or modifies risk/impact materialisation. [Source: ISO 31000, 3.8 with modifications]"
+    "@value" : "Refers to management and operation of critical infrastructure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Management Of Critical Infrastructure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedContextOfUse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Measure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Control"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MediumLikelihood",
+  "@id" : "https://w3id.org/airo#Military",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedContextOfUse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Misuse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The use of an AI system in a way that is not in accordance with its intended purpose."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Misuse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ModelEvasion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Medium Likelihood"
+    "@value" : "Model Evasion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate"
+    "@id" : "https://w3id.org/airo#Cyberattack"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#MitigationMeasure",
+  "@id" : "https://w3id.org/airo#ModelInversion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Mitigation Measure"
+    "@value" : "Model Inversion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
+    "@id" : "https://w3id.org/airo#Cyberattack"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#NonDiscrimination",
+  "@id" : "https://w3id.org/airo#NonDiscrimination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -351,37 +943,201 @@
     "@value" : "Non-Discrimination"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#EUFundamentalRight"
+    "@id" : "https://w3id.org/airo#FundamentalRight"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Person",
+  "@id" : "https://w3id.org/airo#Output",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Output"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#OverrideTheOutcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HumanOversightMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#PartialControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Partial Control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid7"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#PerformaceOfAISystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Performance Of AI System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Indicator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Stakeholder"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PhysicalHealth",
+  "@id" : "https://w3id.org/airo#PhysicalHealth",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Physical Health"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health"
+    "@id" : "https://w3id.org/airo#Health"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#PsychologicalHealth",
+  "@id" : "https://w3id.org/airo#PostRemoteBiometricIdentification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RemoteBiometricIdentification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#PredictingRecidivism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "predicting the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons or assessing personality traits and characteristics or past criminal behaviour of natural persons or groups"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#MakingPrediction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Prediction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Output"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#PrivacyPreservingMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Measure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ProducingRecommendation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Producing Recommendation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Profiling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to profiling of natural persons in the course of detection, investigation or prosecution of criminal offences."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ProvidingInstructionForUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Measure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#PsychologicalHarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Psychological Harm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Impact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#PsychologicalHealth",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Psychological Health"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Health"
+    "@id" : "https://w3id.org/airo#Health"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence",
+  "@id" : "https://w3id.org/airo#RealTimeRemoteBiometricIdentification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RemoteBiometricIdentification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ReasonablyForseeableMisue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "use of an AI system in a way that is not in accordance with its intended purpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems [Source: AI Act, Article 3(13)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reasonably Forseeable Misuse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Misuse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Recommendation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Output"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#RemoteBiometricIdentification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Remote Biometric Identification Of Natural Persons"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#BiometricIdnetification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ReverseTheOutcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HumanOversightMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Risk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates a risk (of harm) associated with an AI system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Event"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#RiskConsequence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -392,24 +1148,10 @@
     "@value" : "Risk Consequence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@id" : "https://w3id.org/airo#Event"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Indicates an event that a risk source gives rise to a risk."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Risk Materialisation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource",
+  "@id" : "https://w3id.org/airo#RiskSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -420,34 +1162,58 @@
     "@value" : "Risk Source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@id" : "https://w3id.org/airo#Event"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Safety",
+  "@id" : "https://w3id.org/airo#Safety",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Safety"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HealthAndSafety"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Security",
+  "@id" : "https://w3id.org/airo#Security",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Security"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#SharingMeasure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Sharing Measure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
+    "@id" : "https://w3id.org/airo#HealthAndSafety"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder",
+  "@id" : "https://w3id.org/airo#SeriousIncident",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "any incident that directly or indirectly leads, might have led or might lead to : (a) the death of a person or serious damage to a person’s health, to property or the environment, (b) a serious and irreversible disruption of the management and operation of critical infrastructure [Source: AI Act, Articl3 3(44)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Serious Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Severity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Severity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Indicator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Stakeholder",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -456,340 +1222,503 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Stakeholder"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid11"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#StatisticalApproach",
+  "@id" : "https://w3id.org/airo#StatisticalApproach",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Statistical Approach"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach"
+    "@id" : "https://w3id.org/airo#AiTechnique"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Threat",
+  "@id" : "https://w3id.org/airo#StudentAssessment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Potential cause of an unwanted incident, which may result in harm to systems, organizations or individuals. [Source: ISO/IEC TR 24028, 3.39]"
+    "@value" : "Refers to the purpose of assessing students in educational and vocational training institutions and for assessing participants in tests commonly required for admission to educational institutions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Threat"
+    "@value" : "Student Assessment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource"
+    "@id" : "https://w3id.org/airo#MakingDecision"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Welfare",
+  "@id" : "https://w3id.org/airo#SubliminalTechnique",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "deploying subliminal techniques beyond a person’s consciousness in order to materially distort a person’s behaviour in a manner that causes or is likely to cause that person or another person physical or psychological harm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Subliminal Technique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#TestingData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "data used for providing an independent evaluation of the trained and validated AI system in order to confirm the expected performance of that system before its placing on the market or putting into service [Source: AI Act, Article 3(31)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Testing Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#AiSystemComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#TrainingData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "data used for training an AI system through fitting its learnable parameters, including the weights of a neural network [Source: AI Act, Article 3(29)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Training Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#AiSystemComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#UnavailabilityOfDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#UnrepresentativeTestingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#UnrepresentativeTrainingDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#UnrepresentativeValidationDataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#UserTraining",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#Measure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#ValidationData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process, among other things, in order to prevent overfitting; whereas the validation dataset can be a separate dataset or part of the training dataset, either as a fixed or variable split [Source: AI Act, Article 3(30)]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Validation Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#AiSystemComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#VulnerablePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vulnerable Position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#Welfare",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Welfare"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#HealthAndSafety"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#areaOfInfluenceIsImpactedBy",
+  "@id" : "https://w3id.org/airo#WrongDataSetDesignChoice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#DataGovernanceRelatedRiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasConsequence",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence"
+    "@id" : "https://w3id.org/airo#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has consequence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact"
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasExtentOfUseIndicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#ExtentOfUse"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasImpact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has impact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#Impact"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence"
+    "@id" : "https://w3id.org/airo#isImpactOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceIsMaterialisedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#consequenceMaterialisationIsControlledBy",
+  "@id" : "https://w3id.org/airo#hasImpactOnArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
+    "@id" : "https://w3id.org/airo#Impact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has impact on area"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation"
+    "@id" : "https://w3id.org/airo#AreaOfInfluence"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsConsequenceMaterialisation",
+  "@id" : "https://w3id.org/airo#hasImpactOnStakeholder",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation"
+    "@id" : "https://w3id.org/airo#Impact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has impact on stakeholder"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
+    "@id" : "https://w3id.org/airo#Stakeholder"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsImpactMaterialisation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#controlsRiskMaterialisation",
+  "@id" : "https://w3id.org/airo#hasIntendedPurpose",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the intended purpose of an AI system."
+  }, {
+    "@language" : "en",
+    "@value" : "has intended purpose"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnAreaOfInfluence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AreaOfInfluence"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasImpactOnStakeholder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder"
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy"
+    "@id" : "https://w3id.org/airo#isIntendedPurposeOf"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasIntendedPurpose",
+  "@id" : "https://w3id.org/airo#hasLikelihood",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem"
+    "@id" : "https://w3id.org/airo#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the probability of occurrence of an event."
+  }, {
+    "@language" : "en",
+    "@value" : "has likelihood"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose"
+    "@id" : "https://w3id.org/airo#LikelihoodRate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasPerformanceIndicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#PerformaceOfAISystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#AiSystemComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#Risk"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf"
+    "@id" : "https://w3id.org/airo#isRiskAssociatedWith"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasLikelihood",
+  "@id" : "https://w3id.org/airo#hasRiskSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@id" : "https://w3id.org/airo#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has risk source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate"
+    "@id" : "https://w3id.org/airo#RiskSource"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf"
+    "@id" : "https://w3id.org/airo#isRiskSourceFor"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRisk",
+  "@id" : "https://w3id.org/airo#hasSeverity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem"
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has severity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk"
+    "@id" : "https://w3id.org/airo#Severity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasStakeholder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates stakeholders of an AI system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has stakeholder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#Stakeholder"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem"
+    "@id" : "https://w3id.org/airo#isStakeholderOfSystem"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasRiskSource",
+  "@id" : "https://w3id.org/airo#hasVulnerability",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates vulnerabilities of an AI system."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation"
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has vulnerability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource"
+    "@id" : "https://w3id.org/airo#vulnerability"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#hasVulnerability",
+  "@id" : "https://w3id.org/airo#isConsequenceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem"
+    "@id" : "https://w3id.org/airo#RiskConsequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is consequence of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem"
+    "@id" : "https://w3id.org/airo#Risk"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactMaterialisationIsControlledBy",
+  "@id" : "https://w3id.org/airo#isFollowedByControl",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation"
+    "@id" : "https://w3id.org/airo#Measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is followed by control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
+    "@id" : "https://w3id.org/airo#Measure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#impactisMaterialisedBy",
+  "@id" : "https://w3id.org/airo#isImpactOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact"
+    "@id" : "https://w3id.org/airo#Impact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is impact of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact"
+    "@id" : "https://w3id.org/airo#RiskConsequence"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isAssociatedWithAISystem",
+  "@id" : "https://w3id.org/airo#isInVulnerablePosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk"
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is in vulnerable position"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem"
+    "@id" : "https://w3id.org/airo#VulnerablePosition"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isDevelopedUsing",
+  "@id" : "https://w3id.org/airo#isIntendedPurposeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem"
+    "@id" : "https://w3id.org/airo#IntendedPurpose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is intended purpose of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach"
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#isPartOfAiSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that a component is part of an AI system."
   } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isIntendedPurposeOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#IntendedPurpose"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isLikehoodOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#LikelihoodRate"
+    "@id" : "https://w3id.org/airo#AiSystemComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is part of ai system"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Event"
+    "@id" : "https://w3id.org/airo#AiSystem"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isRiskSource",
+  "@id" : "https://w3id.org/airo#isPartOfControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is part of control"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#isRiskAssociatedWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation"
+    "@id" : "https://w3id.org/airo#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is risk associated with"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskSource"
+    "@id" : "https://w3id.org/airo#AiSystemComponent"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isUsedInDeveloping",
+  "@id" : "https://w3id.org/airo#isRiskSourceFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiApproach"
+    "@id" : "https://w3id.org/airo#RiskSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is risk source for"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem"
+    "@id" : "https://w3id.org/airo#Risk"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#isVulnerabilityOfSystem",
+  "@id" : "https://w3id.org/airo#isStakeholderOfSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability"
+    "@id" : "https://w3id.org/airo#Stakeholder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is stakeholder of system"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiSystem"
+    "@id" : "https://w3id.org/airo#AiSystem"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToConsequenceMaterialisation",
+  "@id" : "https://w3id.org/airo#modifiesEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk"
+    "@id" : "https://w3id.org/airo#Measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "modifies event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation"
+    "@id" : "https://w3id.org/airo#Event"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#leadsToImpactMaterialisation",
+  "@id" : "https://w3id.org/airo#producesOutput",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence"
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "produces output"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation"
+    "@id" : "https://w3id.org/airo#Output"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesConsequence",
+  "@id" : "https://w3id.org/airo#usesTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the AI techniques used in an AI system."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ConsequenceMaterialisation"
+    "@id" : "https://w3id.org/airo#AiSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses technique"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskConsequence"
+    "@id" : "https://w3id.org/airo#AiTechnique"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesImpact",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#ImpactMaterialisation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#materialisesRisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskIsMaterialisedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#AiRisk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#riskMaterialisationIsControlledBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#RiskMaterialisation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Measure"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#stakeholderIsImpactedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Stakeholder"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#Impact"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/delaram/ontologies/2021/10/airo#vulnerability",
+  "@id" : "https://w3id.org/airo#vulnerability",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -798,5 +1727,8 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#RiskSource"
   } ]
 } ]
