@@ -58,7 +58,7 @@ airo:eliminatesEvent rdf:type owl:ObjectProperty ;
 airo:hasComponent rdf:type owl:ObjectProperty ;
                   owl:inverseOf airo:isPartOfAiSystem ;
                   rdfs:domain airo:AISystem ;
-                  rdfs:range airo:SystemComponent ;
+                  rdfs:range airo:AIComponent ;
                   rdfs:label "has component"@en .
 
 
@@ -93,7 +93,7 @@ airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasImpactOnStakeholder
 airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
                             rdfs:domain airo:Impact ;
-                            rdfs:range airo:Stakeholder ;
+                            rdfs:range airo:AISubject ;
                             rdfs:label "has impact on stakeholder"@en .
 
 
@@ -173,7 +173,7 @@ airo:isConsequenceOf rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#isContextOfUseFor
 airo:isContextOfUseFor rdf:type owl:ObjectProperty ;
                        owl:inverseOf airo:isUsedInContext ;
-                       rdfs:domain airo:Domain ;
+                       rdfs:domain airo:Industry ;
                        rdfs:range airo:AISystem ;
                        rdfs:label "is context of use for"@en .
 
@@ -205,7 +205,7 @@ airo:isInVulnerablePosition rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#isPartOfAiSystem
 airo:isPartOfAiSystem rdf:type owl:ObjectProperty ;
-                      rdfs:domain airo:SystemComponent ;
+                      rdfs:domain airo:AIComponent ;
                       rdfs:range airo:AISystem ;
                       rdfs:comment "Indicates that a component is part of an AI system."@en ;
                       rdfs:label "is part of ai system"@en .
@@ -289,16 +289,113 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 #    Classes
 #################################################################
 
+###  https://w3id.org/airo#AIAuditor
+airo:AIAuditor rdf:type owl:Class ;
+               rdfs:subClassOf airo:AIPartner ;
+               rdfs:comment "An AI auditor is an organization or entity that is concerned with the audit of organizations producing, providing or using AI systems, to assess conformance to standards, policies or legal requirements. [ISO 22989]"@en ;
+               rdfs:label "AI Auditor"@en .
+
+
+###  https://w3id.org/airo#AIComponent
+airo:AIComponent rdf:type owl:Class ;
+                 rdfs:comment "Represents a functional element that constructs an AI system. [Source: ISO 22989]"@en ;
+                 rdfs:label "AI Component"@en .
+
+
+###  https://w3id.org/airo#AICustomer
+airo:AICustomer rdf:type owl:Class ;
+                rdfs:subClassOf airo:Stakeholder ;
+                rdfs:comment "An AI customer is an organization or entity that uses an AI product or service either directly or by its  provision to AI users. [Source: ISO 22989]"@en ;
+                rdfs:label "AI Customer"@en .
+
+
+###  https://w3id.org/airo#AIDeveloper
+airo:AIDeveloper rdf:type owl:Class ;
+                 rdfs:subClassOf airo:AIProducer ;
+                 rdfs:comment "An AI developer is an organization or entity that is concerned with the development of AI services and products. [Source: ISO 22989]"@en ;
+                 rdfs:label "AI Developer"@en .
+
+
+###  https://w3id.org/airo#AIEvaluator
+airo:AIEvaluator rdf:type owl:Class ;
+                 rdfs:subClassOf airo:AIPartner ;
+                 rdfs:comment "An AI evaluator is an organization or entity that evaluates the performance of one or more AI systems. [Source: ISO 22989]"@en ;
+                 rdfs:label "AI Evaluator"@en .
+
+
+###  https://w3id.org/airo#AIPartner
+airo:AIPartner rdf:type owl:Class ;
+               rdfs:subClassOf airo:Stakeholder ;
+               rdfs:comment "An AI partner is an organization or entity that provides services in the context of AI. AI partners can  perform technical development of AI products or services, conduct testing and validation of AI products and services, audit AI usage, evaluate AI products or services and perform other tasks. Examples of AI partner types are discussed in the following subclauses. [Source: ISO 22989]"@en ;
+               rdfs:label "AI Partner"@en .
+
+
+###  https://w3id.org/airo#AIPlatformProvider
+airo:AIPlatformProvider rdf:type owl:Class ;
+                        rdfs:subClassOf airo:AIProvider ;
+                        rdfs:comment "An AI platform provider is an organization or entity that provides services that enable other stakeholders to produce AI services or products. [Source: ISO 22989]"@en ;
+                        rdfs:label "AI Platform Provider"@en .
+
+
+###  https://w3id.org/airo#AIProducer
+airo:AIProducer rdf:type owl:Class ;
+                rdfs:subClassOf airo:Stakeholder ;
+                rdfs:comment "An AI producer is an organization or entity that designs, develops, tests and deploys products or services that use one or more AI system. [Source: ISO 22989]"@en ;
+                rdfs:label "AI Producer"@en .
+
+
+###  https://w3id.org/airo#AIProductProvider
+airo:AIProductProvider rdf:type owl:Class ;
+                       rdfs:subClassOf airo:AIProvider ;
+                       rdfs:comment "An AI product provider is an organization or entity that provides AI products either directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]"@en ;
+                       rdfs:label "AI Product Provider"@en .
+
+
+###  https://w3id.org/airo#AIProvider
+airo:AIProvider rdf:type owl:Class ;
+                rdfs:subClassOf airo:Stakeholder ;
+                rdfs:comment "An AI provider is an organization or entity that provides products or services that uses one or more AI systems. AI providers encompass AI platform providers and AI product or service providers. [Source: ISO 22989]"@en ;
+                rdfs:label "AI Provider"@en .
+
+
+###  https://w3id.org/airo#AIServiceProvider
+airo:AIServiceProvider rdf:type owl:Class ;
+                       rdfs:subClassOf airo:AIProvider ;
+                       rdfs:label "AI Service Provider"@en ,
+                                  "An AI service provider is an organization or entity that provides AI services  either  directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]"@en .
+
+
+###  https://w3id.org/airo#AISubject
+airo:AISubject rdf:type owl:Class ;
+               rdfs:subClassOf airo:Stakeholder ;
+               rdfs:comment "An AI subject is an organization or entity that is impacted by an AI system, service or product."@en ;
+               rdfs:label "AI Subject"@en .
+
+
 ###  https://w3id.org/airo#AISystem
 airo:AISystem rdf:type owl:Class ;
               rdfs:comment "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"@en ;
               rdfs:label "AI System"@en .
 
 
+###  https://w3id.org/airo#AISystemIntegrator
+airo:AISystemIntegrator rdf:type owl:Class ;
+                        rdfs:subClassOf airo:AIPartner ;
+                        rdfs:label "AI System Integrator"@en ,
+                                   "An AI system integrator is an organization or entity that is concerned with the integration of AI components into larger systems, potentially also including non-AI components. [Source: ISO 22989]"@en .
+
+
 ###  https://w3id.org/airo#AITechnique
 airo:AITechnique rdf:type owl:Class ;
                  rdfs:comment "Represents the main approaches and techniques used for development of AI systems."@en ;
                  rdfs:label "AI Technique"@en .
+
+
+###  https://w3id.org/airo#AIUser
+airo:AIUser rdf:type owl:Class ;
+            rdfs:subClassOf airo:AICustomer ;
+            rdfs:comment "An AI user is an organization or entity that uses AI products or services. [Source: ISO 22989]"@en ;
+            rdfs:label "AI User"@en .
 
 
 ###  https://w3id.org/airo#Accuracy
@@ -362,6 +459,13 @@ airo:Attack rdf:type owl:Class ;
             rdfs:label "Attack"@en .
 
 
+###  https://w3id.org/airo#Authority
+airo:Authority rdf:type owl:Class ;
+               rdfs:subClassOf airo:Stakeholder ;
+               rdfs:comment "Authorities are organizations or entities that can have an impact on an AI system, service or product."@en ;
+               rdfs:label "Authority"@en .
+
+
 ###  https://w3id.org/airo#AutomatedControl
 airo:AutomatedControl rdf:type owl:Class ;
                       rdfs:subClassOf airo:Measure ;
@@ -370,13 +474,13 @@ airo:AutomatedControl rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Automotive
 airo:Automotive rdf:type owl:Class ;
-                rdfs:subClassOf airo:Domain ;
+                rdfs:subClassOf airo:RegulatedIndustry ;
                 rdfs:label "Automotive"@en .
 
 
 ###  https://w3id.org/airo#Aviation
 airo:Aviation rdf:type owl:Class ;
-              rdfs:subClassOf airo:Domain ;
+              rdfs:subClassOf airo:RegulatedIndustry ;
               rdfs:label "Aviation"@en .
 
 
@@ -395,7 +499,7 @@ airo:BiasMonitoring rdf:type owl:Class ;
 ###  https://w3id.org/airo#BiasRelatedConsequence
 airo:BiasRelatedConsequence rdf:type owl:Class ;
                             rdfs:subClassOf airo:Consequence ;
-                            rdfs:comment "systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989, 3.4.6]"@en ;
+                            rdfs:comment "systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989]"@en ;
                             rdfs:label "Bias Related Consequence"@en .
 
 
@@ -426,6 +530,20 @@ airo:Child rdf:type owl:Class ;
            rdfs:label "Child"@en .
 
 
+###  https://w3id.org/airo#CognitiveComputing
+airo:CognitiveComputing rdf:type owl:Class ;
+                        rdfs:subClassOf airo:AISystem ;
+                        rdfs:comment "Represents a category of AI systems that enables people and machines to interact more naturally. [Source: ISO 22989]"@en ;
+                        rdfs:label "Cognitive Computing"@en .
+
+
+###  https://w3id.org/airo#ComputationVerifier
+airo:ComputationVerifier rdf:type owl:Class ;
+                         rdfs:subClassOf airo:AIDeveloper ;
+                         rdfs:comment "The entity that verifies that a computation is being executed as designed. [Source: ISO 22989]"@en ;
+                         rdfs:label "Computation Verifier"@en .
+
+
 ###  https://w3id.org/airo#Consequence
 airo:Consequence rdf:type owl:Class ;
                  rdfs:subClassOf airo:Event ;
@@ -435,7 +553,15 @@ airo:Consequence rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Content
 airo:Content rdf:type owl:Class ;
-             rdfs:subClassOf airo:Output .
+             rdfs:subClassOf airo:Output ;
+             rdfs:label "Content"@en .
+
+
+###  https://w3id.org/airo#Controllability
+airo:Controllability rdf:type owl:Class ;
+                     rdfs:subClassOf airo:AiIndicator ;
+                     rdfs:comment "Property of an AI system that allows a human or another external agent to intervene in the system’s functioning. [Source: ISO 22989]"@en ;
+                     rdfs:label "Controllability"@en .
 
 
 ###  https://w3id.org/airo#CorrectionControl
@@ -481,9 +607,24 @@ airo:DataPoisoning rdf:type owl:Class ;
                    rdfs:label "Data Poisoning"@en .
 
 
+###  https://w3id.org/airo#DataProvider
+airo:DataProvider rdf:type owl:Class ;
+                  rdfs:subClassOf airo:AIPartner ;
+                  rdfs:comment "A data provider is an organization or entity that is concerned providing data used by AI products or services."@en ;
+                  rdfs:label "Data Provider"@en .
+
+
 ###  https://w3id.org/airo#DataSetRelatedSource
 airo:DataSetRelatedSource rdf:type owl:Class ;
                           rdfs:subClassOf airo:Source .
+
+
+###  https://w3id.org/airo#DataSubject
+airo:DataSubject rdf:type owl:Class ;
+                 rdfs:subClassOf airo:AISubject ;
+                 rdfs:comment """A data subject is an organization or entity that is affected by AI systems with following aspects: 
+— Subject of training data: where data pertaining to an organization or human is used in training an  AI system, there can be implications for security and privacy, for the latter particularly where that subject is an individual human. [Source: ISO 22989]"""@en ;
+                 rdfs:label "Data Subject"@en .
 
 
 ###  https://w3id.org/airo#Death
@@ -493,7 +634,8 @@ airo:Death rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Decision
 airo:Decision rdf:type owl:Class ;
-              rdfs:subClassOf airo:Output .
+              rdfs:subClassOf airo:Output ;
+              rdfs:label "Decision"@en .
 
 
 ###  https://w3id.org/airo#DecreasedLevelOfAccuracy
@@ -553,15 +695,9 @@ airo:DistortionInHumanBehaviour rdf:type owl:Class ;
                                 rdfs:label "Distortion In Human Behaviour"@en .
 
 
-###  https://w3id.org/airo#Domain
-airo:Domain rdf:type owl:Class ;
-            rdfs:comment "Indicates the sector/domain the AI system is intended to be used in."@en ;
-            rdfs:label "Domain"@en .
-
-
 ###  https://w3id.org/airo#Education
 airo:Education rdf:type owl:Class ;
-               rdfs:subClassOf airo:Domain ;
+               rdfs:subClassOf airo:NonRegulatedIndustry ;
                rdfs:comment "Refers to education and vocational training"@en ;
                rdfs:label "Education"@en .
 
@@ -574,7 +710,7 @@ airo:EliminationControl rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#EmergencyService
 airo:EmergencyService rdf:type owl:Class ;
-                      rdfs:subClassOf airo:Domain .
+                      rdfs:subClassOf airo:NonRegulatedIndustry .
 
 
 ###  https://w3id.org/airo#EmotionRecognition
@@ -597,14 +733,15 @@ airo:EmployeeMonitoring rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Employment
 airo:Employment rdf:type owl:Class ;
-                rdfs:subClassOf airo:Domain ;
+                rdfs:subClassOf airo:NonRegulatedIndustry ;
                 rdfs:comment "Refers to employment, workers management and access to self-employment"@en ;
                 rdfs:label "Employment"@en .
 
 
 ###  https://w3id.org/airo#Energy
 airo:Energy rdf:type owl:Class ;
-            rdfs:subClassOf airo:Domain .
+            rdfs:subClassOf airo:RegulatedIndustry ;
+            rdfs:label "Energy"@en .
 
 
 ###  https://w3id.org/airo#EnvironmentalDamage
@@ -655,6 +792,20 @@ airo:Event rdf:type owl:Class ;
            rdfs:label "Event"@en .
 
 
+###  https://w3id.org/airo#ExpertSystem
+airo:ExpertSystem rdf:type owl:Class ;
+                  rdfs:subClassOf airo:AISystem ;
+                  rdfs:comment "Represents an AI system that accumulates, combines and encapsulates knowledge provided by a human expert or experts in a specific domain to infer solutions to problems. [Source: ISO 22989]"@en ;
+                  rdfs:label "Expert System"@en .
+
+
+###  https://w3id.org/airo#Explainability
+airo:Explainability rdf:type owl:Class ;
+                    rdfs:subClassOf airo:AiIndicator ;
+                    rdfs:comment "Property of an AI system to express important factors influencing the AI system results in a  way that humans can understand. [Source ISO 22989]"@en ;
+                    rdfs:label "Explainability"@en .
+
+
 ###  https://w3id.org/airo#ExtentOfUse
 airo:ExtentOfUse rdf:type owl:Class ;
                  rdfs:subClassOf airo:AiIndicator ;
@@ -664,7 +815,7 @@ airo:ExtentOfUse rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#FinancialService
 airo:FinancialService rdf:type owl:Class ;
-                      rdfs:subClassOf airo:Domain .
+                      rdfs:subClassOf airo:NonRegulatedIndustry .
 
 
 ###  https://w3id.org/airo#FundamentalRight
@@ -672,6 +823,14 @@ airo:FundamentalRight rdf:type owl:Class ;
                       rdfs:subClassOf airo:Area ;
                       rdfs:comment "Indicates a right, freedom, or principle set out in the EU Charter of Fundamental Rights."@en ;
                       rdfs:label "Fundamental Right"@en .
+
+
+###  https://w3id.org/airo#GeneralAI
+airo:GeneralAI rdf:type owl:Class ;
+               rdfs:subClassOf airo:AISystem ;
+               owl:disjointWith airo:NarrowAI ;
+               rdfs:comment "Represents a type of AI system that addresses a broad range of tasks with a satisfactory level of  performance"@en ;
+               rdfs:label "General AI"@en .
 
 
 ###  https://w3id.org/airo#GeneratingAudioContent
@@ -700,7 +859,7 @@ airo:GeneratingVideoContent rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Group
 airo:Group rdf:type owl:Class ;
-           rdfs:subClassOf airo:Stakeholder ;
+           rdfs:subClassOf airo:OtherSubject ;
            rdfs:comment "Refers to a group of persons such as citizens, marginsalised groups, etc."@en ;
            rdfs:label "Group"@en .
 
@@ -719,7 +878,7 @@ airo:HealthAndSafety rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Healthcare
 airo:Healthcare rdf:type owl:Class ;
-                rdfs:subClassOf airo:Domain .
+                rdfs:subClassOf airo:NonRegulatedIndustry .
 
 
 ###  https://w3id.org/airo#HumanBehaviour
@@ -810,6 +969,12 @@ airo:IndividualRiskAssessment rdf:type owl:Class ;
                               rdfs:label "Individual Risk Assessment"@en .
 
 
+###  https://w3id.org/airo#Industry
+airo:Industry rdf:type owl:Class ;
+              rdfs:comment "Indicates the sector/domain the AI system is intended to be used in."@en ;
+              rdfs:label "Industry"@en .
+
+
 ###  https://w3id.org/airo#Injury
 airo:Injury rdf:type owl:Class ;
             rdfs:subClassOf airo:ImpactOnHuman ;
@@ -859,7 +1024,7 @@ airo:IrrelevantValidationData rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Justice
 airo:Justice rdf:type owl:Class ;
-             rdfs:subClassOf airo:Domain ;
+             rdfs:subClassOf airo:NonRegulatedIndustry ;
              rdfs:label "Justice"@en .
 
 
@@ -892,7 +1057,7 @@ airo:LackOfTransparency rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#LawEnforcement
 airo:LawEnforcement rdf:type owl:Class ;
-                    rdfs:subClassOf airo:Domain ;
+                    rdfs:subClassOf airo:NonRegulatedIndustry ;
                     rdfs:label "Law Enforcement"@en .
 
 
@@ -964,7 +1129,7 @@ airo:ManualControl rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Maritime
 airo:Maritime rdf:type owl:Class ;
-              rdfs:subClassOf airo:Domain .
+              rdfs:subClassOf airo:RegulatedIndustry .
 
 
 ###  https://w3id.org/airo#Measure
@@ -975,12 +1140,13 @@ airo:Measure rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#MedicalTechnology
 airo:MedicalTechnology rdf:type owl:Class ;
-                       rdfs:subClassOf airo:Domain .
+                       rdfs:subClassOf airo:RegulatedIndustry ;
+                       rdfs:label "Medical Technology"@en .
 
 
 ###  https://w3id.org/airo#Migration
 airo:Migration rdf:type owl:Class ;
-               rdfs:subClassOf airo:Domain ;
+               rdfs:subClassOf airo:NonRegulatedIndustry ;
                rdfs:comment "Refers to migration, asylum and border control management"@en ;
                rdfs:label "Migration"@en .
 
@@ -992,10 +1158,24 @@ airo:Misuse rdf:type owl:Class ;
             rdfs:label "Misuse"@en .
 
 
+###  https://w3id.org/airo#ModelDesigner
+airo:ModelDesigner rdf:type owl:Class ;
+                   rdfs:subClassOf airo:AIDeveloper ;
+                   rdfs:comment "The entity that receives data and a problem specification and creates an AI model. [Source: ISO 22989]"@en ;
+                   rdfs:label "Model Designer"@en .
+
+
 ###  https://w3id.org/airo#ModelEvasion
 airo:ModelEvasion rdf:type owl:Class ;
                   rdfs:subClassOf airo:Attack ;
                   rdfs:label "Model Evasion"@en .
+
+
+###  https://w3id.org/airo#ModelImplementer
+airo:ModelImplementer rdf:type owl:Class ;
+                      rdfs:subClassOf airo:AIDeveloper ;
+                      rdfs:comment "the entity that receives an AI model and specifies what computation to  execute (the implementation to use and on what compute resources, for example CPU, GPU, ASIC, FPGA). [Source ISO 22989]"@en ;
+                      rdfs:label "Model Implementer"@en .
 
 
 ###  https://w3id.org/airo#ModelInversion
@@ -1004,10 +1184,30 @@ airo:ModelInversion rdf:type owl:Class ;
                     rdfs:label "Model Inversion"@en .
 
 
+###  https://w3id.org/airo#ModelVerifier
+airo:ModelVerifier rdf:type owl:Class ;
+                   rdfs:subClassOf airo:AIDeveloper ;
+                   rdfs:comment "the entity that verifies that the AI model is performing as designed. [Source ISO 22989]"@en ;
+                   rdfs:label "Model Verifier"@en .
+
+
 ###  https://w3id.org/airo#MonitoringControl
 airo:MonitoringControl rdf:type owl:Class ;
                        rdfs:subClassOf airo:Measure ;
                        rdfs:label "Monitoring Control"@en .
+
+
+###  https://w3id.org/airo#NarrowAI
+airo:NarrowAI rdf:type owl:Class ;
+              rdfs:subClassOf airo:AISystem ;
+              rdfs:comment "type of AI system that is focused on defined tasks to address a specific problem. [Source: ISO 22989]"@en ;
+              rdfs:label "Narrow AI"@en .
+
+
+###  https://w3id.org/airo#NonRegulatedIndustry
+airo:NonRegulatedIndustry rdf:type owl:Class ;
+                          rdfs:subClassOf airo:Industry ;
+                          rdfs:label "Non Regulated Industry"@en .
 
 
 ###  https://w3id.org/airo#OperationalControl
@@ -1031,6 +1231,13 @@ airo:OrganisationalSource rdf:type owl:Class ;
 airo:Other rdf:type owl:Class ;
            rdfs:subClassOf airo:Purpose ;
            rdfs:label "Other"@en .
+
+
+###  https://w3id.org/airo#OtherSubject
+airo:OtherSubject rdf:type owl:Class ;
+                  rdfs:subClassOf airo:AISubject ;
+                  rdfs:label "Other Subject"@en ,
+                             "Other organizations or entities impacted by an AI system, service or product can be for example in the  form of an individual or a community. For example, consumers who interacts with a social network that provides recommendations based on AI, drivers of vehicles with AI-based automation. [Source: ISO 22989]"@en .
 
 
 ###  https://w3id.org/airo#Output
@@ -1072,7 +1279,7 @@ airo:Performace rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Person
 airo:Person rdf:type owl:Class ;
-            rdfs:subClassOf airo:Stakeholder ;
+            rdfs:subClassOf airo:OtherSubject ;
             rdfs:label "Person"@en .
 
 
@@ -1082,9 +1289,23 @@ airo:PhysicalHealth rdf:type owl:Class ;
                     rdfs:label "Physical Health"@en .
 
 
+###  https://w3id.org/airo#PolicyMaker
+airo:PolicyMaker rdf:type owl:Class ;
+                 rdfs:subClassOf airo:Authority ;
+                 rdfs:comment "Policy makers are organizations and entities that have the authorities to set policies within an international, regional, national or industrial domain that can have an impact on an AI system, service or product. [Source: ISO 22989]"@en ;
+                 rdfs:label "Policy Maker"@en .
+
+
 ###  https://w3id.org/airo#PostRemoteBiometricIdentification
 airo:PostRemoteBiometricIdentification rdf:type owl:Class ;
                                        rdfs:subClassOf airo:RemoteBiometricIdentification .
+
+
+###  https://w3id.org/airo#Predictability
+airo:Predictability rdf:type owl:Class ;
+                    rdfs:subClassOf airo:AiIndicator ;
+                    rdfs:comment "Property of an AI system that enables reliable assumptions by stakeholders  about the output. [Source: ISO 22989]"@en ;
+                    rdfs:label "Predictability"@en .
 
 
 ###  https://w3id.org/airo#PredictingRecidivism
@@ -1096,7 +1317,9 @@ airo:PredictingRecidivism rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Prediction
 airo:Prediction rdf:type owl:Class ;
-                rdfs:subClassOf airo:Output .
+                rdfs:subClassOf airo:Output ;
+                rdfs:comment "Represents primary output of an AI system when provided with input data or information. [Source: ISO 22989]"@en ;
+                rdfs:label "Prediction"@en .
 
 
 ###  https://w3id.org/airo#PreventionControl
@@ -1180,7 +1403,28 @@ airo:ReasonablyForseeableMisue rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Recommendation
 airo:Recommendation rdf:type owl:Class ;
-                    rdfs:subClassOf airo:Output .
+                    rdfs:subClassOf airo:Output ;
+                    rdfs:label "Recommendation"@en .
+
+
+###  https://w3id.org/airo#RegulatedIndustry
+airo:RegulatedIndustry rdf:type owl:Class ;
+                       rdfs:subClassOf airo:Industry ;
+                       rdfs:label "Regulated Industry"@en .
+
+
+###  https://w3id.org/airo#Regulator
+airo:Regulator rdf:type owl:Class ;
+               rdfs:subClassOf airo:Authority ;
+               rdfs:comment "Regulators are organizations and entities that have the authorities to set, implement and enforce the legal requirements as intended in policies set forth by policy makers. [Source: ISO 22989]"@en ;
+               rdfs:label "Regulator"@en .
+
+
+###  https://w3id.org/airo#Reliability
+airo:Reliability rdf:type owl:Class ;
+                 rdfs:subClassOf airo:AiIndicator ;
+                 rdfs:comment "Property of consistent intended behaviour and results. [Source: ISO 22989]"@en ;
+                 rdfs:label "Reliability"@en .
 
 
 ###  https://w3id.org/airo#RemoteBiometricIdentification
@@ -1188,6 +1432,13 @@ airo:RemoteBiometricIdentification rdf:type owl:Class ;
                                    rdfs:subClassOf airo:BiometricIdnetification ;
                                    rdfs:comment "the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database"@en ;
                                    rdfs:label "Remote Biometric Identification"@en .
+
+
+###  https://w3id.org/airo#Resilience
+airo:Resilience rdf:type owl:Class ;
+                rdfs:subClassOf airo:AiIndicator ;
+                rdfs:comment "Ability of a system to recover operational condition quickly following an incident. [Source: ISO 22989]"@en ;
+                rdfs:label "Resilience"@en .
 
 
 ###  https://w3id.org/airo#ReverseTheOutcome
@@ -1213,6 +1464,13 @@ airo:Risk rdf:type owl:Class ;
 airo:RiskIndicator rdf:type owl:Class ;
                    rdfs:subClassOf airo:Indicator ;
                    rdfs:label "Risk Indicator"@en .
+
+
+###  https://w3id.org/airo#Robustness
+airo:Robustness rdf:type owl:Class ;
+                rdfs:subClassOf airo:AiIndicator ;
+                rdfs:comment "Ability of a system to maintain its level of performance under any circumstances. [Source: ISO 22989]"@en ;
+                rdfs:label "Robustness"@en .
 
 
 ###  https://w3id.org/airo#Safety
@@ -1280,12 +1538,6 @@ airo:SubliminalTechnique rdf:type owl:Class ;
                          rdfs:label "Subliminal Technique"@en .
 
 
-###  https://w3id.org/airo#SystemComponent
-airo:SystemComponent rdf:type owl:Class ;
-                     rdfs:comment "Represents components of a system"@en ;
-                     rdfs:label "System Component"@en .
-
-
 ###  https://w3id.org/airo#SystemSource
 airo:SystemSource rdf:type owl:Class ;
                   rdfs:subClassOf airo:Source .
@@ -1314,14 +1566,28 @@ airo:TrainingDataRelatedSource rdf:type owl:Class ;
                                rdfs:subClassOf airo:DataSetRelatedSource .
 
 
+###  https://w3id.org/airo#Transparency
+airo:Transparency rdf:type owl:Class ;
+                  rdfs:subClassOf airo:AiIndicator ;
+                  rdfs:comment "Property of a system that appropriate information about the system is made available to  relevant stakeholders. [Source: ISO 22989]"@en ;
+                  rdfs:label "Transparency"@en .
+
+
 ###  https://w3id.org/airo#Transportation
 airo:Transportation rdf:type owl:Class ;
-                    rdfs:subClassOf airo:Domain .
+                    rdfs:subClassOf airo:RegulatedIndustry .
 
 
 ###  https://w3id.org/airo#Travel
 airo:Travel rdf:type owl:Class ;
-            rdfs:subClassOf airo:Domain .
+            rdfs:subClassOf airo:NonRegulatedIndustry .
+
+
+###  https://w3id.org/airo#Trustworthiness
+airo:Trustworthiness rdf:type owl:Class ;
+                     rdfs:subClassOf airo:AiIndicator ;
+                     rdfs:label "Ability to meet stakeholder expectations in a verifiable way. [Source: ISO 22989]"@en ,
+                                "Trustworthiness"@en .
 
 
 ###  https://w3id.org/airo#UnavailabilityOfDataSet
@@ -1374,7 +1640,7 @@ airo:VulnerablePosition rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#WaterSupply
 airo:WaterSupply rdf:type owl:Class ;
-                 rdfs:subClassOf airo:Domain ;
+                 rdfs:subClassOf airo:RegulatedIndustry ;
                  rdfs:label "Water Supply"@en .
 
 
