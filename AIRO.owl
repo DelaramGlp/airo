@@ -56,7 +56,7 @@ airo:eliminatesEvent rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasComponent
 airo:hasComponent rdf:type owl:ObjectProperty ;
-                  owl:inverseOf airo:isPartOfAiSystem ;
+                  owl:inverseOf airo:isPartOfAISystem ;
                   rdfs:domain airo:AISystem ;
                   rdfs:range airo:AIComponent ;
                   rdfs:label "has component"@en .
@@ -170,14 +170,6 @@ airo:isConsequenceOf rdf:type owl:ObjectProperty ;
                      rdfs:label "is consequence of"@en .
 
 
-###  https://w3id.org/airo#isContextOfUseFor
-airo:isContextOfUseFor rdf:type owl:ObjectProperty ;
-                       owl:inverseOf airo:isUsedInContext ;
-                       rdfs:domain airo:Industry ;
-                       rdfs:range airo:AISystem ;
-                       rdfs:label "is context of use for"@en .
-
-
 ###  https://w3id.org/airo#isFollowedByControl
 airo:isFollowedByControl rdf:type owl:ObjectProperty ;
                          rdfs:domain airo:Measure ;
@@ -203,12 +195,12 @@ airo:isInVulnerablePosition rdf:type owl:ObjectProperty ;
                             rdfs:label "is in vulnerable position"@en .
 
 
-###  https://w3id.org/airo#isPartOfAiSystem
-airo:isPartOfAiSystem rdf:type owl:ObjectProperty ;
+###  https://w3id.org/airo#isPartOfAISystem
+airo:isPartOfAISystem rdf:type owl:ObjectProperty ;
                       rdfs:domain airo:AIComponent ;
                       rdfs:range airo:AISystem ;
                       rdfs:comment "Indicates that a component is part of an AI system."@en ;
-                      rdfs:label "is part of ai system"@en .
+                      rdfs:label "is part of AI system"@en .
 
 
 ###  https://w3id.org/airo#isPartOfControl
@@ -245,10 +237,10 @@ airo:isStakeholderOfSystem rdf:type owl:ObjectProperty ;
                            rdfs:label "is stakeholder of system"@en .
 
 
-###  https://w3id.org/airo#isUsedInContext
-airo:isUsedInContext rdf:type owl:ObjectProperty ;
-                     rdfs:comment "Indicates the context the AI system is intended to be used in."@en ;
-                     rdfs:label "is used in context"@en .
+###  https://w3id.org/airo#isUsedInIndustry
+airo:isUsedInIndustry rdf:type owl:ObjectProperty ;
+                      rdfs:comment "Indicates the industry (context) the AI system is intended to be used in."@en ;
+                      rdfs:label "is used in industry"@en .
 
 
 ###  https://w3id.org/airo#mitigatesEvent
@@ -378,6 +370,13 @@ airo:AISystem rdf:type owl:Class ;
               rdfs:label "AI System"@en .
 
 
+###  https://w3id.org/airo#AISystemAccuracy
+airo:AISystemAccuracy rdf:type owl:Class ;
+                      rdfs:subClassOf airo:Accuracy ;
+                      rdfs:comment "degree to which a product or system provides the correct results with the needed degree of precision. [ISO 22989, 3.4.4]"@en ;
+                      rdfs:label "AI System Accuracy"@en .
+
+
 ###  https://w3id.org/airo#AISystemIntegrator
 airo:AISystemIntegrator rdf:type owl:Class ;
                         rdfs:subClassOf airo:AIPartner ;
@@ -403,23 +402,9 @@ airo:Accuracy rdf:type owl:Class ;
               rdfs:subClassOf airo:AiIndicator .
 
 
-###  https://w3id.org/airo#AccuracyOFData
-airo:AccuracyOFData rdf:type owl:Class ;
-                    rdfs:subClassOf airo:Accuracy ;
-                    rdfs:comment "Refers to degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use. [ISO 22989, 3.4.3]"@en ;
-                    rdfs:label "Accuracy Of Data"@en .
-
-
-###  https://w3id.org/airo#AccuracyOfAiSystem
-airo:AccuracyOfAiSystem rdf:type owl:Class ;
-                        rdfs:subClassOf airo:Accuracy ;
-                        rdfs:comment "degree to which a product or system provides the correct results with the needed degree of precision. [ISO 22989, 3.4.4]"@en ;
-                        rdfs:label "Accuracy Of AI System"@en .
-
-
 ###  https://w3id.org/airo#AdmissionTestAssessment
 airo:AdmissionTestAssessment rdf:type owl:Class ;
-                             rdfs:subClassOf airo:Assessment ;
+                             rdfs:subClassOf airo:EducationRelatedAssessment ;
                              rdfs:label "Admission Test Assessment"@en .
 
 
@@ -432,7 +417,7 @@ airo:AdversarialAttack rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AdvertisingVacancies
 airo:AdvertisingVacancies rdf:type owl:Class ;
-                          rdfs:subClassOf airo:Other ;
+                          rdfs:subClassOf airo:MakingDecision ;
                           rdfs:label "Advertising Vacancies"@en .
 
 
@@ -469,6 +454,8 @@ airo:Authority rdf:type owl:Class ;
 ###  https://w3id.org/airo#AutomatedControl
 airo:AutomatedControl rdf:type owl:Class ;
                       rdfs:subClassOf airo:Measure ;
+                      owl:disjointWith airo:ManualControl ;
+                      rdfs:comment "Represents controls that do not involve human intervention."@en ;
                       rdfs:label "Automated Control"@en .
 
 
@@ -482,6 +469,13 @@ airo:Automotive rdf:type owl:Class ;
 airo:Aviation rdf:type owl:Class ;
               rdfs:subClassOf airo:RegulatedIndustry ;
               rdfs:label "Aviation"@en .
+
+
+###  https://w3id.org/airo#Bias
+airo:Bias rdf:type owl:Class ;
+          rdfs:subClassOf airo:BiasRelatedConsequence ;
+          rdfs:comment "Systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989]"@en ;
+          rdfs:label "Bias"@en .
 
 
 ###  https://w3id.org/airo#BiasDetection
@@ -499,7 +493,7 @@ airo:BiasMonitoring rdf:type owl:Class ;
 ###  https://w3id.org/airo#BiasRelatedConsequence
 airo:BiasRelatedConsequence rdf:type owl:Class ;
                             rdfs:subClassOf airo:Consequence ;
-                            rdfs:comment "systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989]"@en ;
+                            rdfs:comment "Represents consequences related to bias."@en ;
                             rdfs:label "Bias Related Consequence"@en .
 
 
@@ -520,7 +514,7 @@ airo:BiasedValidationDataSet rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#BiometricIdnetification
 airo:BiometricIdnetification rdf:type owl:Class ;
-                             rdfs:subClassOf airo:Other ;
+                             rdfs:subClassOf airo:MakingDecision ;
                              rdfs:label "Biometric Identification"@en .
 
 
@@ -528,13 +522,6 @@ airo:BiometricIdnetification rdf:type owl:Class ;
 airo:Child rdf:type owl:Class ;
            rdfs:subClassOf airo:Person ;
            rdfs:label "Child"@en .
-
-
-###  https://w3id.org/airo#CognitiveComputing
-airo:CognitiveComputing rdf:type owl:Class ;
-                        rdfs:subClassOf airo:AISystem ;
-                        rdfs:comment "Represents a category of AI systems that enables people and machines to interact more naturally. [Source: ISO 22989]"@en ;
-                        rdfs:label "Cognitive Computing"@en .
 
 
 ###  https://w3id.org/airo#ComputationVerifier
@@ -578,19 +565,20 @@ airo:CreditworthinessAssessment rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#CrimeAnalytics
 airo:CrimeAnalytics rdf:type owl:Class ;
-                    rdfs:subClassOf airo:ProducingRecommendation ;
+                    rdfs:subClassOf airo:PatternRecognition ;
                     rdfs:label "Crime Analytics" .
 
 
 ###  https://w3id.org/airo#CvFiltering
 airo:CvFiltering rdf:type owl:Class ;
-                 rdfs:subClassOf airo:MakingDecision ;
+                 rdfs:subClassOf airo:Filtering ;
+                 rdfs:comment "Filtering applications for recruitment or selection of natural persons."@en ;
                  rdfs:label "CV Filtering"@en .
 
 
 ###  https://w3id.org/airo#CvScreening
 airo:CvScreening rdf:type owl:Class ;
-                 rdfs:subClassOf airo:MakingDecision ;
+                 rdfs:subClassOf airo:EmploymentRelatedAssessment ;
                  rdfs:label "CV Screening"@en .
 
 
@@ -598,6 +586,13 @@ airo:CvScreening rdf:type owl:Class ;
 airo:Cyberattack rdf:type owl:Class ;
                  rdfs:subClassOf airo:Attack ;
                  rdfs:label "Cyberattack"@en .
+
+
+###  https://w3id.org/airo#DataAccuracy
+airo:DataAccuracy rdf:type owl:Class ;
+                  rdfs:subClassOf airo:Accuracy ;
+                  rdfs:comment "Refers to degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use. [ISO 22989, 3.4.3]"@en ;
+                  rdfs:label "Data Accuracy"@en .
 
 
 ###  https://w3id.org/airo#DataPoisoning
@@ -655,13 +650,18 @@ airo:DecreasedLevelOfSecurity rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#DeepFakeDetection
 airo:DeepFakeDetection rdf:type owl:Class ;
-                       rdfs:subClassOf airo:MakingDecision ;
+                       rdfs:subClassOf airo:Detection ;
                        rdfs:label "Deep Fake Detection"@en .
 
 
 ###  https://w3id.org/airo#DegradedPerformance
 airo:DegradedPerformance rdf:type owl:Class ;
                          rdfs:subClassOf airo:IndicatorRelatedConsequence .
+
+
+###  https://w3id.org/airo#Detection
+airo:Detection rdf:type owl:Class ;
+               rdfs:subClassOf airo:MakingDecision .
 
 
 ###  https://w3id.org/airo#DetectionControl
@@ -672,14 +672,14 @@ airo:DetectionControl rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#DeterminingAccessToEducation
 airo:DeterminingAccessToEducation rdf:type owl:Class ;
-                                  rdfs:subClassOf airo:MakingDecision ;
+                                  rdfs:subClassOf airo:EducationRelatedAssessment ;
                                   rdfs:comment "Refers to the purpose of determining access or assigning natural persons to educational and vocational training institutions."@en ;
                                   rdfs:label "Determining Access To Education"@en .
 
 
 ###  https://w3id.org/airo#DispatchingEmergencyService
 airo:DispatchingEmergencyService rdf:type owl:Class ;
-                                 rdfs:subClassOf airo:Other ;
+                                 rdfs:subClassOf airo:Planning ;
                                  rdfs:label "Dispacthing Emergency Service"@en .
 
 
@@ -702,6 +702,11 @@ airo:Education rdf:type owl:Class ;
                rdfs:label "Education"@en .
 
 
+###  https://w3id.org/airo#EducationRelatedAssessment
+airo:EducationRelatedAssessment rdf:type owl:Class ;
+                                rdfs:subClassOf airo:Assessment .
+
+
 ###  https://w3id.org/airo#EliminationControl
 airo:EliminationControl rdf:type owl:Class ;
                         rdfs:subClassOf airo:Measure ;
@@ -715,19 +720,20 @@ airo:EmergencyService rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#EmotionRecognition
 airo:EmotionRecognition rdf:type owl:Class ;
-                        rdfs:subClassOf airo:MakingDecision ;
+                        rdfs:subClassOf airo:Recognition ;
                         rdfs:label "Emotion Recognition"@en .
 
 
 ###  https://w3id.org/airo#EmployeeEvaluation
 airo:EmployeeEvaluation rdf:type owl:Class ;
-                        rdfs:subClassOf airo:MakingDecision ;
+                        rdfs:subClassOf airo:EmploymentRelatedAssessment ;
                         rdfs:label "Employee Evaluation"@en .
 
 
 ###  https://w3id.org/airo#EmployeeMonitoring
 airo:EmployeeMonitoring rdf:type owl:Class ;
-                        rdfs:subClassOf airo:Other ;
+                        rdfs:subClassOf airo:Monitoring ;
+                        rdfs:comment "Represents purpose of monitoring and evaluating performance and behavior of employees in workplace."@en ;
                         rdfs:label "Employee Monitoring"@en .
 
 
@@ -736,6 +742,11 @@ airo:Employment rdf:type owl:Class ;
                 rdfs:subClassOf airo:NonRegulatedIndustry ;
                 rdfs:comment "Refers to employment, workers management and access to self-employment"@en ;
                 rdfs:label "Employment"@en .
+
+
+###  https://w3id.org/airo#EmploymentRelatedAssessment
+airo:EmploymentRelatedAssessment rdf:type owl:Class ;
+                                 rdfs:subClassOf airo:Assessment .
 
 
 ###  https://w3id.org/airo#Energy
@@ -782,7 +793,7 @@ airo:ErrorInValidationDataSet rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#EvaluatingReliabilityOfEvidence
 airo:EvaluatingReliabilityOfEvidence rdf:type owl:Class ;
-                                     rdfs:subClassOf airo:MakingDecision ;
+                                     rdfs:subClassOf airo:Assessment ;
                                      rdfs:label "Evaluating Reliability Of Evidence"@en .
 
 
@@ -790,13 +801,6 @@ airo:EvaluatingReliabilityOfEvidence rdf:type owl:Class ;
 airo:Event rdf:type owl:Class ;
            rdfs:comment "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"@en ;
            rdfs:label "Event"@en .
-
-
-###  https://w3id.org/airo#ExpertSystem
-airo:ExpertSystem rdf:type owl:Class ;
-                  rdfs:subClassOf airo:AISystem ;
-                  rdfs:comment "Represents an AI system that accumulates, combines and encapsulates knowledge provided by a human expert or experts in a specific domain to infer solutions to problems. [Source: ISO 22989]"@en ;
-                  rdfs:label "Expert System"@en .
 
 
 ###  https://w3id.org/airo#Explainability
@@ -813,6 +817,11 @@ airo:ExtentOfUse rdf:type owl:Class ;
                  rdfs:label "Extent Of Use"@en .
 
 
+###  https://w3id.org/airo#Filtering
+airo:Filtering rdf:type owl:Class ;
+               rdfs:subClassOf airo:MakingDecision .
+
+
 ###  https://w3id.org/airo#FinancialService
 airo:FinancialService rdf:type owl:Class ;
                       rdfs:subClassOf airo:NonRegulatedIndustry .
@@ -821,7 +830,7 @@ airo:FinancialService rdf:type owl:Class ;
 ###  https://w3id.org/airo#FundamentalRight
 airo:FundamentalRight rdf:type owl:Class ;
                       rdfs:subClassOf airo:Area ;
-                      rdfs:comment "Indicates a right, freedom, or principle set out in the EU Charter of Fundamental Rights."@en ;
+                      rdfs:comment "Represents a right, freedom, or principle set out in the EU Charter of Fundamental Rights."@en ;
                       rdfs:label "Fundamental Right"@en .
 
 
@@ -836,25 +845,29 @@ airo:GeneralAI rdf:type owl:Class ;
 ###  https://w3id.org/airo#GeneratingAudioContent
 airo:GeneratingAudioContent rdf:type owl:Class ;
                             rdfs:subClassOf airo:GeneratingContent ;
-                            rdfs:comment "Refers to manipulating or generating audio content."@en .
+                            rdfs:comment "Refers to manipulating or generating audio content."@en ;
+                            rdfs:label "Generating Audio Content"@en .
 
 
 ###  https://w3id.org/airo#GeneratingContent
 airo:GeneratingContent rdf:type owl:Class ;
                        rdfs:subClassOf airo:Purpose ;
-                       rdfs:label "Generating Content"@en .
+                       rdfs:label "Generating Content"@en ,
+                                  "Represents purpose of generating or manipulating content."@en .
 
 
 ###  https://w3id.org/airo#GeneratingImageContent
 airo:GeneratingImageContent rdf:type owl:Class ;
                             rdfs:subClassOf airo:GeneratingContent ;
-                            rdfs:comment "Refers to manipulating or generating image content."@en .
+                            rdfs:comment "Refers to manipulating or generating image content."@en ;
+                            rdfs:label "Generating Image Content"@en .
 
 
 ###  https://w3id.org/airo#GeneratingVideoContent
 airo:GeneratingVideoContent rdf:type owl:Class ;
                             rdfs:subClassOf airo:GeneratingContent ;
-                            rdfs:comment "Refers to manipulating or generating video content."@en .
+                            rdfs:comment "Refers to manipulating or generating video content."@en ;
+                            rdfs:label "Generating Video Content"@en .
 
 
 ###  https://w3id.org/airo#Group
@@ -895,7 +908,7 @@ airo:HumanOversight rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#ImmigrationEligibilityAssessment
 airo:ImmigrationEligibilityAssessment rdf:type owl:Class ;
-                                      rdfs:subClassOf airo:MakingDecision ;
+                                      rdfs:subClassOf airo:Assessment ;
                                       rdfs:comment "Examination of applications for asylum, visa and residence permits and associated complaints"@en ;
                                       rdfs:label "Immigration Eligibility Assessment"@en .
 
@@ -971,7 +984,7 @@ airo:IndividualRiskAssessment rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Industry
 airo:Industry rdf:type owl:Class ;
-              rdfs:comment "Indicates the sector/domain the AI system is intended to be used in."@en ;
+              rdfs:comment "Represents the sector/domain the AI system is intended to be used in."@en ;
               rdfs:label "Industry"@en .
 
 
@@ -1003,7 +1016,7 @@ airo:Intervention rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#InterviewEvaluation
 airo:InterviewEvaluation rdf:type owl:Class ;
-                         rdfs:subClassOf airo:MakingDecision ;
+                         rdfs:subClassOf airo:EmploymentRelatedAssessment ;
                          rdfs:label "Interview Evaluation"@en .
 
 
@@ -1032,6 +1045,12 @@ airo:Justice rdf:type owl:Class ;
 airo:KnowledgeBasedApproach rdf:type owl:Class ;
                             rdfs:subClassOf airo:AITechnique ;
                             rdfs:label "Knowledge Based Approach"@en .
+
+
+###  https://w3id.org/airo#KnowledgeReasoning
+airo:KnowledgeReasoning rdf:type owl:Class ;
+                        rdfs:subClassOf airo:Purpose ;
+                        rdfs:label "Knowledge Reasoning"@en .
 
 
 ###  https://w3id.org/airo#LackOfAppropriateInstructionForUse
@@ -1063,7 +1082,8 @@ airo:LawEnforcement rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#LegalInterpretation
 airo:LegalInterpretation rdf:type owl:Class ;
-                         rdfs:subClassOf airo:Other ;
+                         rdfs:subClassOf airo:KnowledgeReasoning ;
+                         rdfs:comment "Represents purpose of researching and interpreting facts and the law."@en ;
                          rdfs:label "Legal Interpretation"@en .
 
 
@@ -1111,20 +1131,22 @@ airo:MakingPrediction rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#MakingPromotionDecision
 airo:MakingPromotionDecision rdf:type owl:Class ;
-                             rdfs:subClassOf airo:MakingDecision ;
+                             rdfs:subClassOf airo:EmploymentRelatedAssessment ;
                              rdfs:label "Making Promotion Decision"@en .
 
 
 ###  https://w3id.org/airo#MakingTerminationDecision
 airo:MakingTerminationDecision rdf:type owl:Class ;
-                               rdfs:subClassOf airo:MakingDecision ;
+                               rdfs:subClassOf airo:EmploymentRelatedAssessment ;
                                rdfs:label "Making Termination Decision"@en .
 
 
 ###  https://w3id.org/airo#ManualControl
 airo:ManualControl rdf:type owl:Class ;
                    rdfs:subClassOf airo:Measure ;
-                   owl:disjointWith airo:SemiAutomatedControl .
+                   owl:disjointWith airo:SemiAutomatedControl ;
+                   rdfs:comment "Represents controls performed by humans without any use of technologies."@en ;
+                   rdfs:label "Manual Control"@en .
 
 
 ###  https://w3id.org/airo#Maritime
@@ -1191,6 +1213,11 @@ airo:ModelVerifier rdf:type owl:Class ;
                    rdfs:label "Model Verifier"@en .
 
 
+###  https://w3id.org/airo#Monitoring
+airo:Monitoring rdf:type owl:Class ;
+                rdfs:subClassOf airo:Purpose .
+
+
 ###  https://w3id.org/airo#MonitoringControl
 airo:MonitoringControl rdf:type owl:Class ;
                        rdfs:subClassOf airo:Measure ;
@@ -1225,12 +1252,6 @@ airo:OrganisationalControl rdf:type owl:Class ;
 ###  https://w3id.org/airo#OrganisationalSource
 airo:OrganisationalSource rdf:type owl:Class ;
                           rdfs:subClassOf airo:Source .
-
-
-###  https://w3id.org/airo#Other
-airo:Other rdf:type owl:Class ;
-           rdfs:subClassOf airo:Purpose ;
-           rdfs:label "Other"@en .
 
 
 ###  https://w3id.org/airo#OtherSubject
@@ -1270,6 +1291,12 @@ airo:PartialControl rdf:type owl:Class ;
                     rdfs:label "Partial Control"@en .
 
 
+###  https://w3id.org/airo#PatternRecognition
+airo:PatternRecognition rdf:type owl:Class ;
+                        rdfs:subClassOf airo:Recognition ;
+                        rdfs:label "Pattern Recognition"@en .
+
+
 ###  https://w3id.org/airo#Performace
 airo:Performace rdf:type owl:Class ;
                 rdfs:subClassOf airo:AiIndicator ;
@@ -1287,6 +1314,11 @@ airo:Person rdf:type owl:Class ;
 airo:PhysicalHealth rdf:type owl:Class ;
                     rdfs:subClassOf airo:Health ;
                     rdfs:label "Physical Health"@en .
+
+
+###  https://w3id.org/airo#Planning
+airo:Planning rdf:type owl:Class ;
+              rdfs:subClassOf airo:MakingDecision .
 
 
 ###  https://w3id.org/airo#PolicyMaker
@@ -1310,9 +1342,9 @@ airo:Predictability rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#PredictingRecidivism
 airo:PredictingRecidivism rdf:type owl:Class ;
-                          rdfs:subClassOf airo:MakingPrediction ;
+                          rdfs:subClassOf airo:IndividualRiskAssessment ;
                           rdfs:comment "predicting the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons or assessing personality traits and characteristics or past criminal behaviour of natural persons or groups"@en ;
-                          rdfs:seeAlso "Predicting Recidivism" .
+                          rdfs:label "Predicting Recidivism"@en .
 
 
 ###  https://w3id.org/airo#Prediction
@@ -1325,13 +1357,13 @@ airo:Prediction rdf:type owl:Class ;
 ###  https://w3id.org/airo#PreventionControl
 airo:PreventionControl rdf:type owl:Class ;
                        rdfs:subClassOf airo:Measure ;
-                       rdfs:label "Indicates controls with the purpose of eliminating an event from happening"@en ,
-                                  "Preventation Control"@en .
+                       rdfs:comment "Represents controls with the purpose of eliminating an event from happening."@en ;
+                       rdfs:label "Preventation Control"@en .
 
 
 ###  https://w3id.org/airo#PrioritisationOfEmergencyService
 airo:PrioritisationOfEmergencyService rdf:type owl:Class ;
-                                      rdfs:subClassOf airo:MakingDecision ;
+                                      rdfs:subClassOf airo:Planning ;
                                       rdfs:label "Prioritisation Of Emergency Service"@en .
 
 
@@ -1349,7 +1381,7 @@ airo:ProducingRecommendation rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Profiling
 airo:Profiling rdf:type owl:Class ;
-               rdfs:subClassOf airo:Other ;
+               rdfs:subClassOf airo:MakingDecision ;
                rdfs:comment "Refers to profiling of natural persons in the course of detection, investigation or prosecution of criminal offences."@en .
 
 
@@ -1379,7 +1411,7 @@ airo:PsychologicalHealth rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#PublicAssistanceEligibilityAssessment
 airo:PublicAssistanceEligibilityAssessment rdf:type owl:Class ;
-                                           rdfs:subClassOf airo:MakingDecision ;
+                                           rdfs:subClassOf airo:Assessment ;
                                            rdfs:label "Public Assistance Eligibility Assessment"@en .
 
 
@@ -1399,6 +1431,11 @@ airo:ReasonablyForseeableMisue rdf:type owl:Class ;
                                rdfs:subClassOf airo:Misuse ;
                                rdfs:comment "use of an AI system in a way that is not in accordance with its intended purpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems [Source: AI Act, Article 3(13)]"@en ;
                                rdfs:label "Reasonably Forseeable Misuse"@en .
+
+
+###  https://w3id.org/airo#Recognition
+airo:Recognition rdf:type owl:Class ;
+                 rdfs:subClassOf airo:MakingDecision .
 
 
 ###  https://w3id.org/airo#Recommendation
@@ -1488,7 +1525,7 @@ airo:Security rdf:type owl:Class ;
 ###  https://w3id.org/airo#SemiAutomatedControl
 airo:SemiAutomatedControl rdf:type owl:Class ;
                           rdfs:subClassOf airo:Measure ;
-                          rdfs:comment "Indicates controls with human involvement"@en ;
+                          rdfs:comment "Represnets controls that comprise a combination of automated and manual controls."@en ;
                           rdfs:label "Semi Automated Control"@en .
 
 
@@ -1526,7 +1563,7 @@ airo:StatisticalApproach rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#StudentAssessment
 airo:StudentAssessment rdf:type owl:Class ;
-                       rdfs:subClassOf airo:Assessment ;
+                       rdfs:subClassOf airo:EducationRelatedAssessment ;
                        rdfs:comment "Refers to the purpose of assessing students in educational and vocational training institutions and for assessing participants in tests commonly required for admission to educational institutions."@en ;
                        rdfs:label "Student Assessment"@en .
 
@@ -1545,14 +1582,14 @@ airo:SystemSource rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#TaskAllocation
 airo:TaskAllocation rdf:type owl:Class ;
-                    rdfs:subClassOf airo:MakingDecision ;
+                    rdfs:subClassOf airo:Planning ;
                     rdfs:label "Task Allocation"@en .
 
 
 ###  https://w3id.org/airo#TechnicalControl
 airo:TechnicalControl rdf:type owl:Class ;
                       rdfs:subClassOf airo:Measure ;
-                      rdfs:comment "Represent controls that are implemented using a technology."@en ;
+                      rdfs:comment "Represents controls that are implemented using a technology."@en ;
                       rdfs:label "Technical Control"@en .
 
 
@@ -1621,20 +1658,21 @@ airo:ValidationDataRelatedSource rdf:type owl:Class ;
                                  rdfs:subClassOf airo:DataSetRelatedSource .
 
 
-###  https://w3id.org/airo#VerifyingAuthenticityOfDocument
-airo:VerifyingAuthenticityOfDocument rdf:type owl:Class ;
-                                     rdfs:subClassOf airo:MakingDecision ;
-                                     rdfs:label "Verifying Authenticity Of Document"@en .
+###  https://w3id.org/airo#VerifyingAuthenticity
+airo:VerifyingAuthenticity rdf:type owl:Class ;
+                           rdfs:subClassOf airo:Assessment ;
+                           rdfs:label "Verifying Authenticity"@en .
 
 
 ###  https://w3id.org/airo#VerifyingAuthenticityOfTravelDocument
 airo:VerifyingAuthenticityOfTravelDocument rdf:type owl:Class ;
-                                           rdfs:subClassOf airo:VerifyingAuthenticityOfDocument ;
+                                           rdfs:subClassOf airo:VerifyingAuthenticity ;
                                            rdfs:label "Verifying Authenticity Of Travel Document"@en .
 
 
 ###  https://w3id.org/airo#VulnerablePosition
 airo:VulnerablePosition rdf:type owl:Class ;
+                        rdfs:comment "Represents the extent to which potentially harmed or adversely impacted persons are in a vulnerable position due to an imbalance of power, knowledge, economic or social circumstances, or age. [Source: AI Act]"@en ;
                         rdfs:label "Vulnerable Position"@en .
 
 
