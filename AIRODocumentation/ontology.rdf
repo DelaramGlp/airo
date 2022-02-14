@@ -9,7 +9,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/airo">
         <terms:creator>Delaram Golpayegani</terms:creator>
-        <terms:description xml:lang="en">The ontolgy represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series.</terms:description>
+        <terms:description xml:lang="en">The ontology represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <rdfs:label xml:lang="en">AI Risk Ontology</rdfs:label>
@@ -69,12 +69,46 @@
     
 
 
+    <!-- https://w3id.org/airo#detectsEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#detectsEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/airo#modifiesEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#DetectionControl"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Event"/>
+        <rdfs:label xml:lang="en">detects event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airo#eliminatesEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#eliminatesEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/airo#modifiesEvent"/>
+        <rdfs:label xml:lang="en">eliminates event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airo#hasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasComponent">
+        <owl:inverseOf rdf:resource="https://w3id.org/airo#isPartOfAISystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AIComponent"/>
+        <rdfs:label xml:lang="en">has component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/airo#hasConsequence -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasConsequence">
         <rdfs:domain rdf:resource="https://w3id.org/airo#Risk"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Consequence"/>
         <rdfs:label xml:lang="en">has consequence</rdfs:label>
     </owl:ObjectProperty>
     
@@ -84,7 +118,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasExtentOfUseIndicator">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#ExtentOfUse"/>
     </owl:ObjectProperty>
     
@@ -95,7 +129,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasImpact">
         <owl:inverseOf rdf:resource="https://w3id.org/airo#isImpactOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#Consequence"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#Impact"/>
         <rdfs:label xml:lang="en">has impact</rdfs:label>
     </owl:ObjectProperty>
@@ -107,7 +141,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasImpactOnArea">
         <rdfs:domain rdf:resource="https://w3id.org/airo#Impact"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#AreaOfInfluence"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Area"/>
         <rdfs:label xml:lang="en">has impact on area</rdfs:label>
     </owl:ObjectProperty>
     
@@ -118,21 +152,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasImpactOnStakeholder">
         <rdfs:domain rdf:resource="https://w3id.org/airo#Impact"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AISubject"/>
         <rdfs:label xml:lang="en">has impact on stakeholder</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/airo#hasIntendedPurpose -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasIntendedPurpose">
-        <owl:inverseOf rdf:resource="https://w3id.org/airo#isIntendedPurposeOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
-        <rdfs:label xml:lang="en">Indicates the intended purpose of an AI system.</rdfs:label>
-        <rdfs:label xml:lang="en">has intended purpose</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -153,8 +174,21 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasPerformanceIndicator">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#PerformaceOfAISystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Performace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airo#hasPurpose -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasPurpose">
+        <owl:inverseOf rdf:resource="https://w3id.org/airo#isPurposeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Purpose"/>
+        <rdfs:label xml:lang="en">Indicates the intended purpose of an AI system.</rdfs:label>
+        <rdfs:label xml:lang="en">has purpose</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -164,7 +198,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasRisk">
         <owl:inverseOf rdf:resource="https://w3id.org/airo#isRiskAssociatedWith"/>
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystemComponent"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#Risk"/>
         <rdfs:label xml:lang="en">has risk</rdfs:label>
     </owl:ObjectProperty>
@@ -177,7 +210,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasRiskSource">
         <owl:inverseOf rdf:resource="https://w3id.org/airo#isRiskSourceFor"/>
         <rdfs:domain rdf:resource="https://w3id.org/airo#Risk"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Source"/>
         <rdfs:label xml:lang="en">has risk source</rdfs:label>
     </owl:ObjectProperty>
     
@@ -190,8 +223,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/airo#Consequence"/>
                     <rdf:Description rdf:about="https://w3id.org/airo#Impact"/>
-                    <rdf:Description rdf:about="https://w3id.org/airo#RiskConsequence"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -206,7 +239,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasStakeholder">
         <owl:inverseOf rdf:resource="https://w3id.org/airo#isStakeholderOfSystem"/>
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#Stakeholder"/>
         <rdfs:comment xml:lang="en">Indicates stakeholders of an AI system</rdfs:comment>
         <rdfs:label xml:lang="en">has stakeholder</rdfs:label>
@@ -218,7 +251,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasVulnerability">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#vulnerability"/>
         <rdfs:comment xml:lang="en">Indicates vulnerabilities of an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">has vulnerability</rdfs:label>
@@ -230,7 +263,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isConsequenceOf">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#Consequence"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#Risk"/>
         <rdfs:label xml:lang="en">is consequence of</rdfs:label>
     </owl:ObjectProperty>
@@ -253,7 +286,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isImpactOf">
         <rdfs:domain rdf:resource="https://w3id.org/airo#Impact"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Consequence"/>
         <rdfs:label xml:lang="en">is impact of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -277,25 +310,14 @@
     
 
 
-    <!-- https://w3id.org/airo#isIntendedPurposeOf -->
+    <!-- https://w3id.org/airo#isPartOfAISystem -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/airo#isIntendedPurposeOf">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#AiSystem"/>
-        <rdfs:label xml:lang="en">is intended purpose of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/airo#isPartOfAiSystem -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/airo#isPartOfAiSystem">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystemComponent"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#AiSystem"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#isPartOfAISystem">
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AIComponent"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AISystem"/>
         <rdfs:comment xml:lang="en">Indicates that a component is part of an AI system.</rdfs:comment>
-        <rdfs:label xml:lang="en">is part of ai system</rdfs:label>
+        <rdfs:label xml:lang="en">is part of AI system</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -304,7 +326,20 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isPartOfControl">
+        <rdfs:domain rdf:resource="https://w3id.org/airo#PartialControl"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Measure"/>
         <rdfs:label xml:lang="en">is part of control</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airo#isPurposeOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#isPurposeOf">
+        <rdfs:domain rdf:resource="https://w3id.org/airo#Purpose"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AISystem"/>
+        <rdfs:label xml:lang="en">is purpose of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -314,7 +349,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isRiskAssociatedWith">
         <rdfs:domain rdf:resource="https://w3id.org/airo#Risk"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#AiSystemComponent"/>
         <rdfs:label xml:lang="en">is risk associated with</rdfs:label>
     </owl:ObjectProperty>
     
@@ -324,7 +358,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isRiskSourceFor">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#Source"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#Risk"/>
         <rdfs:label xml:lang="en">is risk source for</rdfs:label>
     </owl:ObjectProperty>
@@ -336,8 +370,28 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isStakeholderOfSystem">
         <rdfs:domain rdf:resource="https://w3id.org/airo#Stakeholder"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#AiSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AISystem"/>
         <rdfs:label xml:lang="en">is stakeholder of system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airo#isUsedInIndustry -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#isUsedInIndustry">
+        <rdfs:comment xml:lang="en">Indicates the industry (context) the AI system is intended to be used in.</rdfs:comment>
+        <rdfs:label xml:lang="en">is used in industry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/airo#mitigatesEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#mitigatesEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/airo#modifiesEvent"/>
+        <rdfs:label xml:lang="en">mitigates event</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -353,11 +407,21 @@
     
 
 
+    <!-- https://w3id.org/airo#monitorsEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/airo#monitorsEvent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/airo#modifiesEvent"/>
+        <rdfs:label xml:lang="en">monitors event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/airo#producesOutput -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#producesOutput">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystem"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
         <rdfs:range rdf:resource="https://w3id.org/airo#Output"/>
         <rdfs:label xml:lang="en">produces output</rdfs:label>
     </owl:ObjectProperty>
@@ -368,8 +432,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#usesTechnique">
-        <rdfs:domain rdf:resource="https://w3id.org/airo#AiSystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#AiTechnique"/>
+        <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AITechnique"/>
         <rdfs:comment xml:lang="en">Indicates the AI techniques used in an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">uses technique</rdfs:label>
     </owl:ObjectProperty>
@@ -388,11 +452,205 @@
     
 
 
+    <!-- https://w3id.org/airo#AIAuditor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIAuditor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIPartner"/>
+        <rdfs:comment xml:lang="en">An AI auditor is an organization or entity that is concerned with the audit of organizations producing, providing or using AI systems, to assess conformance to standards, policies or legal requirements. [ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Auditor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIComponent">
+        <rdfs:comment xml:lang="en">Represents a functional element that constructs an AI system. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AICustomer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AICustomer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:comment xml:lang="en">An AI customer is an organization or entity that uses an AI product or service either directly or by its  provision to AI users. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIDeveloper -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIDeveloper">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIProducer"/>
+        <rdfs:comment xml:lang="en">An AI developer is an organization or entity that is concerned with the development of AI services and products. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Developer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIEvaluator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIEvaluator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIPartner"/>
+        <rdfs:comment xml:lang="en">An AI evaluator is an organization or entity that evaluates the performance of one or more AI systems. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Evaluator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIPartner -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIPartner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:comment xml:lang="en">An AI partner is an organization or entity that provides services in the context of AI. AI partners can  perform technical development of AI products or services, conduct testing and validation of AI products and services, audit AI usage, evaluate AI products or services and perform other tasks. Examples of AI partner types are discussed in the following subclauses. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Partner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIPlatformProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIPlatformProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIProvider"/>
+        <rdfs:comment xml:lang="en">An AI platform provider is an organization or entity that provides services that enable other stakeholders to produce AI services or products. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Platform Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIProducer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIProducer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:comment xml:lang="en">An AI producer is an organization or entity that designs, develops, tests and deploys products or services that use one or more AI system. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Producer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIProductProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIProductProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIProvider"/>
+        <rdfs:comment xml:lang="en">An AI product provider is an organization or entity that provides AI products either directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Product Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:comment xml:lang="en">An AI provider is an organization or entity that provides products or services that uses one or more AI systems. AI providers encompass AI platform providers and AI product or service providers. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIServiceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIProvider"/>
+        <rdfs:label xml:lang="en">AI Service Provider</rdfs:label>
+        <rdfs:label xml:lang="en">An AI service provider is an organization or entity that provides AI services  either  directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AISubject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AISubject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:comment xml:lang="en">An AI subject is an organization or entity that is impacted by an AI system, service or product.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AISystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AISystem">
+        <rdfs:comment xml:lang="en">Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AISystemAccuracy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AISystemAccuracy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Accuracy"/>
+        <rdfs:comment xml:lang="en">degree to which a product or system provides the correct results with the needed degree of precision. [ISO 22989, 3.4.4]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI System Accuracy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AISystemIntegrator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AISystemIntegrator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIPartner"/>
+        <rdfs:label xml:lang="en">AI System Integrator</rdfs:label>
+        <rdfs:label xml:lang="en">An AI system integrator is an organization or entity that is concerned with the integration of AI components into larger systems, potentially also including non-AI components. [Source: ISO 22989]</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AITechnique -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AITechnique">
+        <rdfs:comment xml:lang="en">Represents the main approaches and techniques used for development of AI systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Technique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AIUser -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AIUser">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AICustomer"/>
+        <rdfs:comment xml:lang="en">An AI user is an organization or entity that uses AI products or services. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">AI User</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#Accuracy -->
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Accuracy">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AdmissionTestAssessment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AdmissionTestAssessment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EducationRelatedAssessment"/>
+        <rdfs:label xml:lang="en">Admission Test Assessment</rdfs:label>
     </owl:Class>
     
 
@@ -401,66 +659,112 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#AdversarialAttack">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Cyberattack"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Attack"/>
         <rdfs:comment xml:lang="en">inputs designed to cause the model to make a mistake</rdfs:comment>
         <rdfs:label xml:lang="en">Adversarial Attack</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#AiSystem -->
+    <!-- https://w3id.org/airo#AdvertisingVacancies -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#AiSystem">
-        <rdfs:comment xml:lang="en">Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]</rdfs:comment>
-        <rdfs:label xml:lang="en">AI System</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#AdvertisingVacancies">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+        <rdfs:label xml:lang="en">Advertising Vacancies</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#AiSystemComponent -->
+    <!-- https://w3id.org/airo#AiIndicator -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#AiSystemComponent">
-        <rdfs:label xml:lang="en">AI System Component</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#AiIndicator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
+        <rdfs:label xml:lang="en">AI Indicator</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#AiTechnique -->
+    <!-- https://w3id.org/airo#Area -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#AiTechnique">
-        <rdfs:comment xml:lang="en">Refers to the main approaches and techniques used for development of AI systems.</rdfs:comment>
-        <rdfs:label xml:lang="en">AI Technique</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#Area">
+        <rdfs:comment xml:lang="en">Represents areas that AI might have impact on.</rdfs:comment>
+        <rdfs:label xml:lang="en">Area</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#AreaOfInfluence -->
+    <!-- https://w3id.org/airo#Assessment -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#AreaOfInfluence">
-        <rdfs:label xml:lang="en">Area of Influence</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#Assessment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#AutomationBias -->
+    <!-- https://w3id.org/airo#Attack -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#AutomationBias">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
-        <rdfs:comment xml:lang="en">tendency of automatically relying or over-relying on the output produced by an AI system.</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/airo#Attack">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Source"/>
+        <rdfs:label xml:lang="en">Attack</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#BiasCorrection -->
+    <!-- https://w3id.org/airo#Authority -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#BiasCorrection">
+    <owl:Class rdf:about="https://w3id.org/airo#Authority">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:comment xml:lang="en">Authorities are organizations or entities that can have an impact on an AI system, service or product.</rdfs:comment>
+        <rdfs:label xml:lang="en">Authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#AutomatedControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#AutomatedControl">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/airo#ManualControl"/>
+        <rdfs:comment xml:lang="en">Represents controls that do not involve human intervention.</rdfs:comment>
+        <rdfs:label xml:lang="en">Automated Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Automotive -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Automotive">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RegulatedIndustry"/>
+        <rdfs:label xml:lang="en">Automotive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Aviation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Aviation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RegulatedIndustry"/>
+        <rdfs:label xml:lang="en">Aviation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Bias -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Bias">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#BiasRelatedConsequence"/>
+        <rdfs:comment xml:lang="en">Systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Bias</rdfs:label>
     </owl:Class>
     
 
@@ -469,7 +773,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#BiasDetection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DetectionControl"/>
+        <rdfs:label xml:lang="en">Bias Detection</rdfs:label>
     </owl:Class>
     
 
@@ -478,16 +783,19 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#BiasMonitoring">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MonitoringControl"/>
+        <rdfs:label xml:lang="en">Bias Monitoring</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#BiasedOutput -->
+    <!-- https://w3id.org/airo#BiasRelatedConsequence -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#BiasedOutput">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+    <owl:Class rdf:about="https://w3id.org/airo#BiasRelatedConsequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Consequence"/>
+        <rdfs:comment xml:lang="en">Represents consequences related to bias.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bias Related Consequence</rdfs:label>
     </owl:Class>
     
 
@@ -496,7 +804,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#BiasedTestingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TestingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -505,7 +813,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#BiasedTrainingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TrainingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -514,16 +822,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#BiasedValidationDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/airo#BiometricCategorisation -->
-
-
-    <owl:Class rdf:about="https://w3id.org/airo#BiometricCategorisation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ValidationDataRelatedSource"/>
     </owl:Class>
     
 
@@ -532,7 +831,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#BiometricIdnetification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+        <rdfs:label xml:lang="en">Biometric Identification</rdfs:label>
     </owl:Class>
     
 
@@ -547,11 +847,24 @@
     
 
 
-    <!-- https://w3id.org/airo#ConditionOfUse -->
+    <!-- https://w3id.org/airo#ComputationVerifier -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#ConditionOfUse">
-        <rdfs:label xml:lang="en">Condition Of Use</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#ComputationVerifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIDeveloper"/>
+        <rdfs:comment xml:lang="en">The entity that verifies that a computation is being executed as designed. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Computation Verifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Consequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Consequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Event"/>
+        <rdfs:comment xml:lang="en">Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]</rdfs:comment>
+        <rdfs:label xml:lang="en">Consequence</rdfs:label>
     </owl:Class>
     
 
@@ -561,6 +874,38 @@
 
     <owl:Class rdf:about="https://w3id.org/airo#Content">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Output"/>
+        <rdfs:label xml:lang="en">Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Controllability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Controllability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Property of an AI system that allows a human or another external agent to intervene in the system’s functioning. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Controllability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#CorrectionControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#CorrectionControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:label xml:lang="en">Correction Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#CreditworthinessAssessment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#CreditworthinessAssessment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Assessment"/>
+        <rdfs:label xml:lang="en">Creditworthiness Assessment</rdfs:label>
     </owl:Class>
     
 
@@ -569,7 +914,29 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#CrimeAnalytics">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#PatternRecognition"/>
+        <rdfs:label>Crime Analytics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#CvFiltering -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#CvFiltering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Filtering"/>
+        <rdfs:comment xml:lang="en">Filtering applications for recruitment or selection of natural persons.</rdfs:comment>
+        <rdfs:label xml:lang="en">CV Filtering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#CvScreening -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#CvScreening">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EmploymentRelatedAssessment"/>
+        <rdfs:label xml:lang="en">CV Screening</rdfs:label>
     </owl:Class>
     
 
@@ -578,27 +945,19 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Cyberattack">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Attack"/>
         <rdfs:label xml:lang="en">Cyberattack</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#DamageToProperty -->
+    <!-- https://w3id.org/airo#DataAccuracy -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#DamageToProperty">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
-        <rdfs:label xml:lang="en">Damage To Property</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/airo#DataGovernanceRelatedRiskSource -->
-
-
-    <owl:Class rdf:about="https://w3id.org/airo#DataGovernanceRelatedRiskSource">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+    <owl:Class rdf:about="https://w3id.org/airo#DataAccuracy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Accuracy"/>
+        <rdfs:comment xml:lang="en">Refers to degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use. [ISO 22989, 3.4.3]</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Accuracy</rdfs:label>
     </owl:Class>
     
 
@@ -607,20 +966,41 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DataPoisoning">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Cyberattack"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Attack"/>
         <rdfs:comment xml:lang="en">Attack trying to manipulate the training dataset</rdfs:comment>
         <rdfs:label xml:lang="en">Data Poisoning</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#DataProtectionAndPrivacy -->
+    <!-- https://w3id.org/airo#DataProvider -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#DataProtectionAndPrivacy">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#FundamentalRight"/>
-        <rdfs:comment xml:lang="en">Refers to EU Charter of Fundamental Rights, Art. 8 (protection of personal data)</rdfs:comment>
-        <rdfs:label xml:lang="en">Data Protection And Privacy</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#DataProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIPartner"/>
+        <rdfs:comment xml:lang="en">A data provider is an organization or entity that is concerned providing data used by AI products or services.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#DataSetRelatedSource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#DataSetRelatedSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#DataSubject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#DataSubject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AISubject"/>
+        <rdfs:comment xml:lang="en">A data subject is an organization or entity that is affected by AI systems with following aspects: 
+— Subject of training data: where data pertaining to an organization or human is used in training an  AI system, there can be implications for security and privacy, for the latter particularly where that subject is an individual human. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Subject</rdfs:label>
     </owl:Class>
     
 
@@ -629,7 +1009,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Death">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnHuman"/>
     </owl:Class>
     
 
@@ -639,6 +1019,7 @@
 
     <owl:Class rdf:about="https://w3id.org/airo#Decision">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Output"/>
+        <rdfs:label xml:lang="en">Decision</rdfs:label>
     </owl:Class>
     
 
@@ -647,7 +1028,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DecreasedLevelOfAccuracy">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndicatorRelatedConsequence"/>
     </owl:Class>
     
 
@@ -656,7 +1037,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DecreasedLevelOfRobustness">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndicatorRelatedConsequence"/>
     </owl:Class>
     
 
@@ -665,7 +1046,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DecreasedLevelOfSecurity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndicatorRelatedConsequence"/>
     </owl:Class>
     
 
@@ -674,7 +1055,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DeepFakeDetection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Detection"/>
         <rdfs:label xml:lang="en">Deep Fake Detection</rdfs:label>
     </owl:Class>
     
@@ -684,7 +1065,26 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DegradedPerformance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndicatorRelatedConsequence"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Detection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Detection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#DetectionControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#DetectionControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:label xml:lang="en">Detection Control</rdfs:label>
     </owl:Class>
     
 
@@ -693,8 +1093,19 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DeterminingAccessToEducation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EducationRelatedAssessment"/>
         <rdfs:comment xml:lang="en">Refers to the purpose of determining access or assigning natural persons to educational and vocational training institutions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Determining Access To Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#DispatchingEmergencyService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#DispatchingEmergencyService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Planning"/>
+        <rdfs:label xml:lang="en">Dispacthing Emergency Service</rdfs:label>
     </owl:Class>
     
 
@@ -703,29 +1114,18 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnFacility"/>
         <rdfs:label xml:lang="en">Disruption Of Operation Of Critical Infrastructure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#DistortHumanBehaviour -->
+    <!-- https://w3id.org/airo#DistortionInHumanBehaviour -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#DistortHumanBehaviour">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
-        <rdfs:label xml:lang="en">Distort Human Behaviour</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/airo#EaseOfReversiblity -->
-
-
-    <owl:Class rdf:about="https://w3id.org/airo#EaseOfReversiblity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
-        <rdfs:comment xml:lang="en">Specifies the extent to which the outcome produced with an AI system is easily reversible.</rdfs:comment>
-        <rdfs:label xml:lang="en">Ease Of Reversibility</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#DistortionInHumanBehaviour">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnHuman"/>
+        <rdfs:label xml:lang="en">Distortion In Human Behaviour</rdfs:label>
     </owl:Class>
     
 
@@ -734,7 +1134,37 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Education">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedContextOfUse"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
+        <rdfs:comment xml:lang="en">Refers to education and vocational training</rdfs:comment>
+        <rdfs:label xml:lang="en">Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#EducationRelatedAssessment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#EducationRelatedAssessment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#EliminationControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#EliminationControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:label xml:lang="en">Elimination Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#EmergencyService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#EmergencyService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
     </owl:Class>
     
 
@@ -743,8 +1173,29 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#EmotionRecognition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Recognition"/>
         <rdfs:label xml:lang="en">Emotion Recognition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#EmployeeEvaluation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#EmployeeEvaluation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EmploymentRelatedAssessment"/>
+        <rdfs:label xml:lang="en">Employee Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#EmployeeMonitoring -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#EmployeeMonitoring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Monitoring"/>
+        <rdfs:comment xml:lang="en">Represents purpose of monitoring and evaluating performance and behavior of employees in workplace.</rdfs:comment>
+        <rdfs:label xml:lang="en">Employee Monitoring</rdfs:label>
     </owl:Class>
     
 
@@ -753,8 +1204,28 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Employment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedContextOfUse"/>
-        <rdfs:comment xml:lang="en">Employment, workers management and access to self-employment</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
+        <rdfs:comment xml:lang="en">Refers to employment, workers management and access to self-employment</rdfs:comment>
+        <rdfs:label xml:lang="en">Employment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#EmploymentRelatedAssessment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#EmploymentRelatedAssessment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Energy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Energy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RegulatedIndustry"/>
+        <rdfs:label xml:lang="en">Energy</rdfs:label>
     </owl:Class>
     
 
@@ -763,7 +1234,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#EnvironmentalDamage">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnEnvironment"/>
         <rdfs:label xml:lang="en">Environmental Damage</rdfs:label>
     </owl:Class>
     
@@ -773,7 +1244,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ErrorInDataCollection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
     </owl:Class>
     
 
@@ -782,7 +1253,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ErrorInDataPrepration">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
     </owl:Class>
     
 
@@ -791,7 +1262,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ErrorInInputData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#InputDataRelatedSource"/>
     </owl:Class>
     
 
@@ -800,7 +1271,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ErrorInTestingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TestingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -809,7 +1280,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ErrorInTrainingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TrainingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -818,7 +1289,17 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ErrorInValidationDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ValidationDataRelatedSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#EvaluatingReliabilityOfEvidence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#EvaluatingReliabilityOfEvidence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Assessment"/>
+        <rdfs:label xml:lang="en">Evaluating Reliability Of Evidence</rdfs:label>
     </owl:Class>
     
 
@@ -833,23 +1314,42 @@
     
 
 
+    <!-- https://w3id.org/airo#Explainability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Explainability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Property of an AI system to express important factors influencing the AI system results in a  way that humans can understand. [Source ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Explainability</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#ExtentOfUse -->
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ExtentOfUse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
         <rdfs:comment xml:lang="en">the extent to which an AI system has been used or is likely to be used</rdfs:comment>
         <rdfs:label xml:lang="en">Extent Of Use</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#FreedomsOfNaturalPersons -->
+    <!-- https://w3id.org/airo#Filtering -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#FreedomsOfNaturalPersons">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#FundamentalRight"/>
-        <rdfs:label xml:lang="en">Freedoms Of Natural Persons</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#Filtering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#FinancialService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#FinancialService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
     </owl:Class>
     
 
@@ -858,9 +1358,21 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#FundamentalRight">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AreaOfInfluence"/>
-        <rdfs:comment xml:lang="en">Indicates a right, freedom, or principle set out in the EU Charter of Fundamental Rights.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Area"/>
+        <rdfs:comment xml:lang="en">Represents a right, freedom, or principle set out in the EU Charter of Fundamental Rights.</rdfs:comment>
         <rdfs:label xml:lang="en">Fundamental Right</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#GeneralAI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#GeneralAI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AISystem"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/airo#NarrowAI"/>
+        <rdfs:comment xml:lang="en">Represents a type of AI system that addresses a broad range of tasks with a satisfactory level of  performance</rdfs:comment>
+        <rdfs:label xml:lang="en">General AI</rdfs:label>
     </owl:Class>
     
 
@@ -871,6 +1383,7 @@
     <owl:Class rdf:about="https://w3id.org/airo#GeneratingAudioContent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#GeneratingContent"/>
         <rdfs:comment xml:lang="en">Refers to manipulating or generating audio content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Generating Audio Content</rdfs:label>
     </owl:Class>
     
 
@@ -879,8 +1392,9 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#GeneratingContent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Purpose"/>
         <rdfs:label xml:lang="en">Generating Content</rdfs:label>
+        <rdfs:label xml:lang="en">Represents purpose of generating or manipulating content.</rdfs:label>
     </owl:Class>
     
 
@@ -891,6 +1405,7 @@
     <owl:Class rdf:about="https://w3id.org/airo#GeneratingImageContent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#GeneratingContent"/>
         <rdfs:comment xml:lang="en">Refers to manipulating or generating image content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Generating Image Content</rdfs:label>
     </owl:Class>
     
 
@@ -901,6 +1416,7 @@
     <owl:Class rdf:about="https://w3id.org/airo#GeneratingVideoContent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#GeneratingContent"/>
         <rdfs:comment xml:lang="en">Refers to manipulating or generating video content.</rdfs:comment>
+        <rdfs:label xml:lang="en">Generating Video Content</rdfs:label>
     </owl:Class>
     
 
@@ -909,7 +1425,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Group">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OtherSubject"/>
         <rdfs:comment xml:lang="en">Refers to a group of persons such as citizens, marginsalised groups, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Group</rdfs:label>
     </owl:Class>
@@ -930,8 +1446,17 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#HealthAndSafety">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AreaOfInfluence"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Area"/>
         <rdfs:label xml:lang="en">Health And Safety</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Healthcare -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Healthcare">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
     </owl:Class>
     
 
@@ -946,11 +1471,23 @@
     
 
 
-    <!-- https://w3id.org/airo#HumanOversightMeasure -->
+    <!-- https://w3id.org/airo#HumanOversight -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#HumanOversightMeasure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+    <owl:Class rdf:about="https://w3id.org/airo#HumanOversight">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#SemiAutomatedControl"/>
+        <rdfs:label xml:lang="en">Human Oversight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ImmigrationEligibilityAssessment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ImmigrationEligibilityAssessment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Assessment"/>
+        <rdfs:comment xml:lang="en">Examination of applications for asylum, visa and residence permits and associated complaints</rdfs:comment>
+        <rdfs:label xml:lang="en">Immigration Eligibility Assessment</rdfs:label>
     </owl:Class>
     
 
@@ -959,8 +1496,39 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Impact">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskConsequence"/>
-        <rdfs:label xml:lang="en">Risk Impact</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Consequence"/>
+        <rdfs:label xml:lang="en">Impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ImpactOnEnvironment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ImpactOnEnvironment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:label xml:lang="en">Impact On Environment</rdfs:label>
+        <rdfs:label xml:lang="en">Represent impact on the enviroment humans lives in.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ImpactOnFacility -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ImpactOnFacility">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:label xml:lang="en">Impact On Facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ImpactOnHuman -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ImpactOnHuman">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:label xml:lang="en">Impact On Human</rdfs:label>
     </owl:Class>
     
 
@@ -969,8 +1537,9 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IncompetenceOfHumanOversightActors">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OrganisationalSource"/>
         <rdfs:comment xml:lang="en">Refers to incompentece of individuals to whom human oversight is assigned.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incompetence Of Human Oversight Actors</rdfs:label>
     </owl:Class>
     
 
@@ -979,7 +1548,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IncompletenessOfTestingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TestingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -988,7 +1557,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IncompletenessOfTrainingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TrainingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -997,7 +1566,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IncompletenessOfValidationDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ValidationDataRelatedSource"/>
     </owl:Class>
     
 
@@ -1011,13 +1580,41 @@
     
 
 
+    <!-- https://w3id.org/airo#IndicatorRelatedConsequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#IndicatorRelatedConsequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Consequence"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#IndicatorRelatedSource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#IndicatorRelatedSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Source"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#IndividualRiskAssessment -->
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IndividualRiskAssessment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingPrediction"/>
         <rdfs:comment xml:lang="en">Refers to use of AI systems for making individual risk assessments of natural persons in order to assess the risk of a natural person for offending or reoffending or the risk for potential victims of criminal offences.</rdfs:comment>
         <rdfs:label xml:lang="en">Individual Risk Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Industry -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Industry">
+        <rdfs:comment xml:lang="en">Represents the sector/domain the AI system is intended to be used in.</rdfs:comment>
+        <rdfs:label xml:lang="en">Industry</rdfs:label>
     </owl:Class>
     
 
@@ -1026,56 +1623,50 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Injury">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnHuman"/>
         <rdfs:label xml:lang="en">Physical Injury</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#InputData -->
+    <!-- https://w3id.org/airo#InputDataRelatedSource -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#InputData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiSystemComponent"/>
-        <rdfs:comment xml:lang="en">data provided to or directly acquired by an AI system on the basis of which the system produces an output [Source: AI Act, Article 3(32)]</rdfs:comment>
-        <rdfs:label xml:lang="en">Input Data</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#InputDataRelatedSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#IntendedContextOfUse -->
+    <!-- https://w3id.org/airo#Interruption -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#IntendedContextOfUse">
-        <rdfs:label xml:lang="en">Intended Context Of Use</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#Interruption">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OperationalControl"/>
+        <rdfs:comment xml:lang="en">Interruption of a system&apos;s operation</rdfs:comment>
+        <rdfs:label xml:lang="en">Interruption</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#IntendedPurpose -->
+    <!-- https://w3id.org/airo#Intervention -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#IntendedPurpose">
-        <rdfs:comment xml:lang="en">Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]</rdfs:comment>
-        <rdfs:label xml:lang="en">Intended Purpose</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#Intervention">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OperationalControl"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#SemiAutomatedControl"/>
+        <rdfs:comment xml:lang="en">Intervention of  a system&apos;s operation</rdfs:comment>
+        <rdfs:label xml:lang="en">Intervation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#InterruptOperationOfSystem -->
+    <!-- https://w3id.org/airo#InterviewEvaluation -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#InterruptOperationOfSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#HumanOversightMeasure"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/airo#InterveneOperationOfSystem -->
-
-
-    <owl:Class rdf:about="https://w3id.org/airo#InterveneOperationOfSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#HumanOversightMeasure"/>
+    <owl:Class rdf:about="https://w3id.org/airo#InterviewEvaluation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EmploymentRelatedAssessment"/>
+        <rdfs:label xml:lang="en">Interview Evaluation</rdfs:label>
     </owl:Class>
     
 
@@ -1084,7 +1675,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IrrelevantTestingData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TestingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -1093,7 +1684,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IrrelevantTrainingData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TrainingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -1102,7 +1693,17 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#IrrelevantValidationData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ValidationDataRelatedSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Justice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Justice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
+        <rdfs:label xml:lang="en">Justice</rdfs:label>
     </owl:Class>
     
 
@@ -1111,8 +1712,18 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#KnowledgeBasedApproach">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiTechnique"/>
-        <rdfs:label xml:lang="en">Knowledge-Based Approach</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AITechnique"/>
+        <rdfs:label xml:lang="en">Knowledge Based Approach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#KnowledgeReasoning -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#KnowledgeReasoning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Purpose"/>
+        <rdfs:label xml:lang="en">Knowledge Reasoning</rdfs:label>
     </owl:Class>
     
 
@@ -1121,7 +1732,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LackOfAppropriateInstructionForUse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OrganisationalSource"/>
         <rdfs:label xml:lang="en">Lack Of Appropriate Instruction For Use</rdfs:label>
     </owl:Class>
     
@@ -1131,7 +1742,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LackOfAppropriateSecurity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndicatorRelatedSource"/>
     </owl:Class>
     
 
@@ -1140,7 +1751,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LackOfHumanOversightMeasure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OrganisationalSource"/>
     </owl:Class>
     
 
@@ -1149,7 +1760,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LackOfTransparency">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OrganisationalSource"/>
     </owl:Class>
     
 
@@ -1158,9 +1769,19 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LawEnforcement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedContextOfUse"/>
-        <rdfs:comment xml:lang="en">activities carried out by law enforcement authorities for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security [Source: AI Act, Article 3(41)]</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
         <rdfs:label xml:lang="en">Law Enforcement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#LegalInterpretation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#LegalInterpretation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#KnowledgeReasoning"/>
+        <rdfs:comment xml:lang="en">Represents purpose of researching and interpreting facts and the law.</rdfs:comment>
+        <rdfs:label xml:lang="en">Legal Interpretation</rdfs:label>
     </owl:Class>
     
 
@@ -1169,7 +1790,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LikelihoodRate">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskIndicator"/>
         <rdfs:comment xml:lang="en">Chance of an event happening. [Source: ISO 31000, 3.7]</rdfs:comment>
         <rdfs:label xml:lang="en">Likelihood</rdfs:label>
     </owl:Class>
@@ -1180,8 +1801,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LogicBasedApproach">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiTechnique"/>
-        <rdfs:label xml:lang="en">Logic-Based Approach</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AITechnique"/>
+        <rdfs:label xml:lang="en">Logic Based Approach</rdfs:label>
     </owl:Class>
     
 
@@ -1190,7 +1811,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LowLevelOfAccuracy">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndicatorRelatedSource"/>
         <rdfs:comment xml:lang="en">inacurracy of the predictions, recommondations, or decisions produced by the system.</rdfs:comment>
     </owl:Class>
     
@@ -1200,7 +1821,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#LowLevelOfRobustness">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndicatorRelatedSource"/>
     </owl:Class>
     
 
@@ -1209,7 +1830,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#MachineLearningApproach">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiTechnique"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AITechnique"/>
         <rdfs:label xml:lang="en">Machine Learning Approach</rdfs:label>
     </owl:Class>
     
@@ -1219,7 +1840,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#MakingDecision">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Purpose"/>
         <rdfs:label xml:lang="en">Making Decision</rdfs:label>
     </owl:Class>
     
@@ -1229,19 +1850,49 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#MakingPrediction">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Purpose"/>
         <rdfs:label xml:lang="en">Making Prediction</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#ManagementOfCriticalInfrastructure -->
+    <!-- https://w3id.org/airo#MakingPromotionDecision -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#ManagementOfCriticalInfrastructure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedContextOfUse"/>
-        <rdfs:comment xml:lang="en">Refers to management and operation of critical infrastructure</rdfs:comment>
-        <rdfs:label xml:lang="en">Management Of Critical Infrastructure</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#MakingPromotionDecision">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EmploymentRelatedAssessment"/>
+        <rdfs:label xml:lang="en">Making Promotion Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#MakingTerminationDecision -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#MakingTerminationDecision">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EmploymentRelatedAssessment"/>
+        <rdfs:label xml:lang="en">Making Termination Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ManualControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ManualControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/airo#SemiAutomatedControl"/>
+        <rdfs:comment xml:lang="en">Represents controls performed by humans without any use of technologies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Manual Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Maritime -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Maritime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RegulatedIndustry"/>
     </owl:Class>
     
 
@@ -1250,17 +1901,29 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Measure">
-        <rdfs:comment xml:lang="en">Measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]</rdfs:comment>
         <rdfs:label xml:lang="en">Control</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#Military -->
+    <!-- https://w3id.org/airo#MedicalTechnology -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#Military">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedContextOfUse"/>
+    <owl:Class rdf:about="https://w3id.org/airo#MedicalTechnology">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RegulatedIndustry"/>
+        <rdfs:label xml:lang="en">Medical Technology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Migration -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Migration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
+        <rdfs:comment xml:lang="en">Refers to migration, asylum and border control management</rdfs:comment>
+        <rdfs:label xml:lang="en">Migration</rdfs:label>
     </owl:Class>
     
 
@@ -1269,9 +1932,20 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Misuse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Source"/>
         <rdfs:comment xml:lang="en">The use of an AI system in a way that is not in accordance with its intended purpose.</rdfs:comment>
         <rdfs:label xml:lang="en">Misuse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ModelDesigner -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ModelDesigner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIDeveloper"/>
+        <rdfs:comment xml:lang="en">The entity that receives data and a problem specification and creates an AI model. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Model Designer</rdfs:label>
     </owl:Class>
     
 
@@ -1280,8 +1954,19 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ModelEvasion">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Cyberattack"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Attack"/>
         <rdfs:label xml:lang="en">Model Evasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ModelImplementer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ModelImplementer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIDeveloper"/>
+        <rdfs:comment xml:lang="en">the entity that receives an AI model and specifies what computation to  execute (the implementation to use and on what compute resources, for example CPU, GPU, ASIC, FPGA). [Source ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Model Implementer</rdfs:label>
     </owl:Class>
     
 
@@ -1290,19 +1975,99 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ModelInversion">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Cyberattack"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Attack"/>
         <rdfs:label xml:lang="en">Model Inversion</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#NonDiscrimination -->
+    <!-- https://w3id.org/airo#ModelVerifier -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#NonDiscrimination">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#FundamentalRight"/>
-        <rdfs:comment xml:lang="en">Refers to EU Charter of Fundamental Rights, Art. 21</rdfs:comment>
-        <rdfs:label xml:lang="en">Non-Discrimination</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#ModelVerifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIDeveloper"/>
+        <rdfs:comment xml:lang="en">the entity that verifies that the AI model is performing as designed. [Source ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Model Verifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Monitoring -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Monitoring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Purpose"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#MonitoringControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#MonitoringControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:label xml:lang="en">Monitoring Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#NarrowAI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#NarrowAI">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AISystem"/>
+        <rdfs:comment xml:lang="en">type of AI system that is focused on defined tasks to address a specific problem. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Narrow AI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#NonRegulatedIndustry -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#NonRegulatedIndustry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Industry"/>
+        <rdfs:label xml:lang="en">Non Regulated Industry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#OperationalControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#OperationalControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:label xml:lang="en">Operational Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#OrganisationalControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#OrganisationalControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:label xml:lang="en">Organisational Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#OrganisationalSource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#OrganisationalSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Source"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#OtherSubject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#OtherSubject">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AISubject"/>
+        <rdfs:label xml:lang="en">Other Subject</rdfs:label>
+        <rdfs:label xml:lang="en">Other organizations or entities impacted by an AI system, service or product can be for example in the  form of an individual or a community. For example, consumers who interacts with a social network that provides recommendations based on AI, drivers of vehicles with AI-based automation. [Source: ISO 22989]</rdfs:label>
     </owl:Class>
     
 
@@ -1316,11 +2081,22 @@
     
 
 
+    <!-- https://w3id.org/airo#OverReliance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#OverReliance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnHuman"/>
+        <rdfs:comment xml:lang="en">Represents tendency of automatically relying or over-relying on the output produced by an AI system</rdfs:comment>
+        <rdfs:label xml:lang="en">Over Reliance</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#OverrideTheOutcome -->
 
 
     <owl:Class rdf:about="https://w3id.org/airo#OverrideTheOutcome">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#HumanOversightMeasure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#CorrectionControl"/>
     </owl:Class>
     
 
@@ -1345,13 +2121,23 @@
     
 
 
-    <!-- https://w3id.org/airo#PerformaceOfAISystem -->
+    <!-- https://w3id.org/airo#PatternRecognition -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#PerformaceOfAISystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
+    <owl:Class rdf:about="https://w3id.org/airo#PatternRecognition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Recognition"/>
+        <rdfs:label xml:lang="en">Pattern Recognition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Performace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Performace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
         <rdfs:comment xml:lang="en">the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]</rdfs:comment>
-        <rdfs:label xml:lang="en">Performance Of AI System</rdfs:label>
+        <rdfs:label xml:lang="en">Performance</rdfs:label>
     </owl:Class>
     
 
@@ -1360,7 +2146,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Person">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OtherSubject"/>
         <rdfs:label xml:lang="en">Person</rdfs:label>
     </owl:Class>
     
@@ -1376,6 +2162,26 @@
     
 
 
+    <!-- https://w3id.org/airo#Planning -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Planning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#PolicyMaker -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#PolicyMaker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Authority"/>
+        <rdfs:comment xml:lang="en">Policy makers are organizations and entities that have the authorities to set policies within an international, regional, national or industrial domain that can have an impact on an AI system, service or product. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Policy Maker</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#PostRemoteBiometricIdentification -->
 
 
@@ -1385,12 +2191,24 @@
     
 
 
+    <!-- https://w3id.org/airo#Predictability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Predictability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Property of an AI system that enables reliable assumptions by stakeholders  about the output. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Predictability</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#PredictingRecidivism -->
 
 
     <owl:Class rdf:about="https://w3id.org/airo#PredictingRecidivism">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingPrediction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IndividualRiskAssessment"/>
         <rdfs:comment xml:lang="en">predicting the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons or assessing personality traits and characteristics or past criminal behaviour of natural persons or groups</rdfs:comment>
+        <rdfs:label xml:lang="en">Predicting Recidivism</rdfs:label>
     </owl:Class>
     
 
@@ -1400,6 +2218,29 @@
 
     <owl:Class rdf:about="https://w3id.org/airo#Prediction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Output"/>
+        <rdfs:comment xml:lang="en">Represents primary output of an AI system when provided with input data or information. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Prediction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#PreventionControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#PreventionControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:comment xml:lang="en">Represents controls with the purpose of eliminating an event from happening.</rdfs:comment>
+        <rdfs:label xml:lang="en">Preventation Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#PrioritisationOfEmergencyService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#PrioritisationOfEmergencyService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Planning"/>
+        <rdfs:label xml:lang="en">Prioritisation Of Emergency Service</rdfs:label>
     </owl:Class>
     
 
@@ -1408,7 +2249,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#PrivacyPreservingMeasure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TechnicalControl"/>
+        <rdfs:label xml:lang="en">Privacy Preserving Measure</rdfs:label>
     </owl:Class>
     
 
@@ -1417,7 +2259,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ProducingRecommendation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Purpose"/>
         <rdfs:label xml:lang="en">Producing Recommendation</rdfs:label>
     </owl:Class>
     
@@ -1427,17 +2269,28 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Profiling">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#IntendedPurpose"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
         <rdfs:comment xml:lang="en">Refers to profiling of natural persons in the course of detection, investigation or prosecution of criminal offences.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#ProvidingInstructionForUse -->
+    <!-- https://w3id.org/airo#PropertyDamage -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#ProvidingInstructionForUse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+    <owl:Class rdf:about="https://w3id.org/airo#PropertyDamage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnFacility"/>
+        <rdfs:label xml:lang="en">Property Damage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#ProvidingInstructionOfUse -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#ProvidingInstructionOfUse">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#OrganisationalControl"/>
+        <rdfs:label xml:lang="en">Providing Instruction Of Use</rdfs:label>
     </owl:Class>
     
 
@@ -1446,7 +2299,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#PsychologicalHarm">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Impact"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ImpactOnHuman"/>
         <rdfs:label xml:lang="en">Psychological Harm</rdfs:label>
     </owl:Class>
     
@@ -1458,6 +2311,26 @@
     <owl:Class rdf:about="https://w3id.org/airo#PsychologicalHealth">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Health"/>
         <rdfs:label xml:lang="en">Psychological Health</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#PublicAssistanceEligibilityAssessment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#PublicAssistanceEligibilityAssessment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Assessment"/>
+        <rdfs:label xml:lang="en">Public Assistance Eligibility Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Purpose -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Purpose">
+        <rdfs:comment xml:lang="en">Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]</rdfs:comment>
+        <rdfs:label xml:lang="en">Purpose</rdfs:label>
     </owl:Class>
     
 
@@ -1482,11 +2355,53 @@
     
 
 
+    <!-- https://w3id.org/airo#Recognition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Recognition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#Recommendation -->
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Recommendation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Output"/>
+        <rdfs:label xml:lang="en">Recommendation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#RegulatedIndustry -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#RegulatedIndustry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Industry"/>
+        <rdfs:label xml:lang="en">Regulated Industry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Regulator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Regulator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Authority"/>
+        <rdfs:comment xml:lang="en">Regulators are organizations and entities that have the authorities to set, implement and enforce the legal requirements as intended in policies set forth by policy makers. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Regulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Reliability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Reliability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Property of consistent intended behaviour and results. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Reliability</rdfs:label>
     </owl:Class>
     
 
@@ -1497,7 +2412,18 @@
     <owl:Class rdf:about="https://w3id.org/airo#RemoteBiometricIdentification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/airo#BiometricIdnetification"/>
         <rdfs:comment xml:lang="en">the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database</rdfs:comment>
-        <rdfs:label xml:lang="en">Remote Biometric Identification Of Natural Persons</rdfs:label>
+        <rdfs:label xml:lang="en">Remote Biometric Identification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Resilience -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Resilience">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Ability of a system to recover operational condition quickly following an incident. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Resilience</rdfs:label>
     </owl:Class>
     
 
@@ -1506,7 +2432,18 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#ReverseTheOutcome">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#HumanOversightMeasure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#CorrectionControl"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Reversiblity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Reversiblity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Specifies the extent to which the outcome produced with an AI system is easily reversible.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reversibility</rdfs:label>
     </owl:Class>
     
 
@@ -1522,24 +2459,23 @@
     
 
 
-    <!-- https://w3id.org/airo#RiskConsequence -->
+    <!-- https://w3id.org/airo#RiskIndicator -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#RiskConsequence">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Event"/>
-        <rdfs:comment xml:lang="en">Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]</rdfs:comment>
-        <rdfs:label xml:lang="en">Risk Consequence</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#RiskIndicator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
+        <rdfs:label xml:lang="en">Risk Indicator</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#RiskSource -->
+    <!-- https://w3id.org/airo#Robustness -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#RiskSource">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Event"/>
-        <rdfs:comment xml:lang="en">Indicates an element that has the potential give rise to a risk.</rdfs:comment>
-        <rdfs:label xml:lang="en">Risk Source</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#Robustness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Ability of a system to maintain its level of performance under any circumstances. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Robustness</rdfs:label>
     </owl:Class>
     
 
@@ -1564,11 +2500,22 @@
     
 
 
+    <!-- https://w3id.org/airo#SemiAutomatedControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#SemiAutomatedControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:comment xml:lang="en">Represnets controls that comprise a combination of automated and manual controls.</rdfs:comment>
+        <rdfs:label xml:lang="en">Semi Automated Control</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/airo#SeriousIncident -->
 
 
     <owl:Class rdf:about="https://w3id.org/airo#SeriousIncident">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Source"/>
         <rdfs:comment xml:lang="en">any incident that directly or indirectly leads, might have led or might lead to : (a) the death of a person or serious damage to a person’s health, to property or the environment, (b) a serious and irreversible disruption of the management and operation of critical infrastructure [Source: AI Act, Articl3 3(44)]</rdfs:comment>
         <rdfs:label xml:lang="en">Serious Incident</rdfs:label>
     </owl:Class>
@@ -1579,9 +2526,19 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Severity">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Indicator"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskIndicator"/>
         <rdfs:label xml:lang="en">Severity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Source -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Source">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Event"/>
+        <rdfs:comment xml:lang="en">Indicates an element that has the potential give rise to a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
     </owl:Class>
     
 
@@ -1590,7 +2547,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#Stakeholder">
-        <rdfs:comment xml:lang="en">Any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity[Source: ISO/IEC TR 24028, 3.37]</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity [Source: ISO/IEC TR 24028, 3.37]</rdfs:comment>
         <rdfs:label xml:lang="en">Stakeholder</rdfs:label>
     </owl:Class>
     
@@ -1600,7 +2557,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#StatisticalApproach">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiTechnique"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AITechnique"/>
         <rdfs:label xml:lang="en">Statistical Approach</rdfs:label>
     </owl:Class>
     
@@ -1610,7 +2567,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#StudentAssessment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#MakingDecision"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#EducationRelatedAssessment"/>
         <rdfs:comment xml:lang="en">Refers to the purpose of assessing students in educational and vocational training institutions and for assessing participants in tests commonly required for admission to educational institutions.</rdfs:comment>
         <rdfs:label xml:lang="en">Student Assessment</rdfs:label>
     </owl:Class>
@@ -1621,31 +2578,97 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#SubliminalTechnique">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#SystemSource"/>
         <rdfs:comment xml:lang="en">deploying subliminal techniques beyond a person’s consciousness in order to materially distort a person’s behaviour in a manner that causes or is likely to cause that person or another person physical or psychological harm</rdfs:comment>
         <rdfs:label xml:lang="en">Subliminal Technique</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#TestingData -->
+    <!-- https://w3id.org/airo#SystemSource -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#TestingData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiSystemComponent"/>
-        <rdfs:comment xml:lang="en">data used for providing an independent evaluation of the trained and validated AI system in order to confirm the expected performance of that system before its placing on the market or putting into service [Source: AI Act, Article 3(31)]</rdfs:comment>
-        <rdfs:label xml:lang="en">Testing Data</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#SystemSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Source"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#TrainingData -->
+    <!-- https://w3id.org/airo#TaskAllocation -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#TrainingData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiSystemComponent"/>
-        <rdfs:comment xml:lang="en">data used for training an AI system through fitting its learnable parameters, including the weights of a neural network [Source: AI Act, Article 3(29)]</rdfs:comment>
-        <rdfs:label xml:lang="en">Training Data</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#TaskAllocation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Planning"/>
+        <rdfs:label xml:lang="en">Task Allocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#TechnicalControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#TechnicalControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:comment xml:lang="en">Represents controls that are implemented using a technology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technical Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#TestingDataRelatedSource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#TestingDataRelatedSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#TrainingDataRelatedSource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#TrainingDataRelatedSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Transparency -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Transparency">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:comment xml:lang="en">Property of a system that appropriate information about the system is made available to  relevant stakeholders. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:label xml:lang="en">Transparency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Transportation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Transportation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RegulatedIndustry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Travel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Travel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#NonRegulatedIndustry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#Trustworthiness -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#Trustworthiness">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiIndicator"/>
+        <rdfs:label xml:lang="en">Ability to meet stakeholder expectations in a verifiable way. [Source: ISO 22989]</rdfs:label>
+        <rdfs:label xml:lang="en">Trustworthiness</rdfs:label>
     </owl:Class>
     
 
@@ -1654,7 +2677,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#UnavailabilityOfDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
     </owl:Class>
     
 
@@ -1663,7 +2686,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#UnrepresentativeTestingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TestingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -1672,7 +2695,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#UnrepresentativeTrainingDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#TrainingDataRelatedSource"/>
     </owl:Class>
     
 
@@ -1681,7 +2704,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#UnrepresentativeValidationDataSet">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#ValidationDataRelatedSource"/>
     </owl:Class>
     
 
@@ -1690,18 +2713,37 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#UserTraining">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#PreventionControl"/>
+        <rdfs:label xml:lang="en">User Training</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/airo#ValidationData -->
+    <!-- https://w3id.org/airo#ValidationDataRelatedSource -->
 
 
-    <owl:Class rdf:about="https://w3id.org/airo#ValidationData">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AiSystemComponent"/>
-        <rdfs:comment xml:lang="en">data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process, among other things, in order to prevent overfitting; whereas the validation dataset can be a separate dataset or part of the training dataset, either as a fixed or variable split [Source: AI Act, Article 3(30)]</rdfs:comment>
-        <rdfs:label xml:lang="en">Validation Data</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/airo#ValidationDataRelatedSource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#VerifyingAuthenticity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#VerifyingAuthenticity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Assessment"/>
+        <rdfs:label xml:lang="en">Verifying Authenticity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#VerifyingAuthenticityOfTravelDocument -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#VerifyingAuthenticityOfTravelDocument">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#VerifyingAuthenticity"/>
+        <rdfs:label xml:lang="en">Verifying Authenticity Of Travel Document</rdfs:label>
     </owl:Class>
     
 
@@ -1710,7 +2752,18 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#VulnerablePosition">
+        <rdfs:comment xml:lang="en">Represents the extent to which potentially harmed or adversely impacted persons are in a vulnerable position due to an imbalance of power, knowledge, economic or social circumstances, or age. [Source: AI Act]</rdfs:comment>
         <rdfs:label xml:lang="en">Vulnerable Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/airo#WaterSupply -->
+
+
+    <owl:Class rdf:about="https://w3id.org/airo#WaterSupply">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RegulatedIndustry"/>
+        <rdfs:label xml:lang="en">Water Supply</rdfs:label>
     </owl:Class>
     
 
@@ -1729,7 +2782,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#WrongDataSetDesignChoice">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataGovernanceRelatedRiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#DataSetRelatedSource"/>
     </owl:Class>
     
 
@@ -1738,7 +2791,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/airo#vulnerability">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#RiskSource"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#SystemSource"/>
         <rdfs:comment xml:lang="en">Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]</rdfs:comment>
         <rdfs:label xml:lang="en">Vulnerability</rdfs:label>
     </owl:Class>
@@ -1761,23 +2814,6 @@
             <rdf:Description rdf:about="https://w3id.org/airo#Decision"/>
             <rdf:Description rdf:about="https://w3id.org/airo#Prediction"/>
             <rdf:Description rdf:about="https://w3id.org/airo#Recommendation"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/airo#GeneratingContent"/>
-            <rdf:Description rdf:about="https://w3id.org/airo#MakingDecision"/>
-            <rdf:Description rdf:about="https://w3id.org/airo#MakingPrediction"/>
-            <rdf:Description rdf:about="https://w3id.org/airo#ProducingRecommendation"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/airo#TestingData"/>
-            <rdf:Description rdf:about="https://w3id.org/airo#TrainingData"/>
-            <rdf:Description rdf:about="https://w3id.org/airo#ValidationData"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

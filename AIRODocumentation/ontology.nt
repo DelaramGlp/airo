@@ -1,6 +1,6 @@
 <https://w3id.org/airo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/airo> <http://purl.org/dc/terms/creator> "Delaram Golpayegani" .
-<https://w3id.org/airo> <http://purl.org/dc/terms/description> "The ontolgy represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series."@en .
+<https://w3id.org/airo> <http://purl.org/dc/terms/description> "The ontology represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series."@en .
 <https://w3id.org/airo> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/airo> <http://purl.org/dc/terms/publisher> "ADAPT Centre, Trinity College Dublin" .
 <https://w3id.org/airo> <http://www.w3.org/2000/01/rdf-schema#label> "AI Risk Ontology"@en .
@@ -34,43 +34,54 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/airo#detectsEvent
+<https://w3id.org/airo#detectsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/airo#modifiesEvent> .
+<https://w3id.org/airo#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#DetectionControl> .
+<https://w3id.org/airo#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Event> .
+<https://w3id.org/airo#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "detects event"@en .
+# 
+# https://w3id.org/airo#eliminatesEvent
+<https://w3id.org/airo#eliminatesEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#eliminatesEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/airo#modifiesEvent> .
+<https://w3id.org/airo#eliminatesEvent> <http://www.w3.org/2000/01/rdf-schema#label> "eliminates event"@en .
+# 
+# https://w3id.org/airo#hasComponent
+<https://w3id.org/airo#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#hasComponent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/airo#isPartOfAISystem> .
+<https://w3id.org/airo#hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AIComponent> .
+<https://w3id.org/airo#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component"@en .
+# 
 # https://w3id.org/airo#hasConsequence
 <https://w3id.org/airo#hasConsequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#hasConsequence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Risk> .
-<https://w3id.org/airo#hasConsequence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#hasConsequence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Consequence> .
 <https://w3id.org/airo#hasConsequence> <http://www.w3.org/2000/01/rdf-schema#label> "has consequence"@en .
 # 
 # https://w3id.org/airo#hasExtentOfUseIndicator
 <https://w3id.org/airo#hasExtentOfUseIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#hasExtentOfUseIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystem> .
+<https://w3id.org/airo#hasExtentOfUseIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
 <https://w3id.org/airo#hasExtentOfUseIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#ExtentOfUse> .
 # 
 # https://w3id.org/airo#hasImpact
 <https://w3id.org/airo#hasImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#hasImpact> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/airo#isImpactOf> .
-<https://w3id.org/airo#hasImpact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#hasImpact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Consequence> .
 <https://w3id.org/airo#hasImpact> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Impact> .
 <https://w3id.org/airo#hasImpact> <http://www.w3.org/2000/01/rdf-schema#label> "has impact"@en .
 # 
 # https://w3id.org/airo#hasImpactOnArea
 <https://w3id.org/airo#hasImpactOnArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#hasImpactOnArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Impact> .
-<https://w3id.org/airo#hasImpactOnArea> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AreaOfInfluence> .
+<https://w3id.org/airo#hasImpactOnArea> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Area> .
 <https://w3id.org/airo#hasImpactOnArea> <http://www.w3.org/2000/01/rdf-schema#label> "has impact on area"@en .
 # 
 # https://w3id.org/airo#hasImpactOnStakeholder
 <https://w3id.org/airo#hasImpactOnStakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#hasImpactOnStakeholder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Impact> .
-<https://w3id.org/airo#hasImpactOnStakeholder> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#hasImpactOnStakeholder> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AISubject> .
 <https://w3id.org/airo#hasImpactOnStakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "has impact on stakeholder"@en .
-# 
-# https://w3id.org/airo#hasIntendedPurpose
-<https://w3id.org/airo#hasIntendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#hasIntendedPurpose> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/airo#isIntendedPurposeOf> .
-<https://w3id.org/airo#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystem> .
-<https://w3id.org/airo#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#IntendedPurpose> .
-<https://w3id.org/airo#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "Indicates the intended purpose of an AI system."@en .
-<https://w3id.org/airo#hasIntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has intended purpose"@en .
 # 
 # https://w3id.org/airo#hasLikelihood
 <https://w3id.org/airo#hasLikelihood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -81,13 +92,20 @@
 # 
 # https://w3id.org/airo#hasPerformanceIndicator
 <https://w3id.org/airo#hasPerformanceIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#hasPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystem> .
-<https://w3id.org/airo#hasPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#PerformaceOfAISystem> .
+<https://w3id.org/airo#hasPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#hasPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Performace> .
+# 
+# https://w3id.org/airo#hasPurpose
+<https://w3id.org/airo#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#hasPurpose> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/airo#isPurposeOf> .
+<https://w3id.org/airo#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Purpose> .
+<https://w3id.org/airo#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "Indicates the intended purpose of an AI system."@en .
+<https://w3id.org/airo#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose"@en .
 # 
 # https://w3id.org/airo#hasRisk
 <https://w3id.org/airo#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#hasRisk> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/airo#isRiskAssociatedWith> .
-<https://w3id.org/airo#hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystemComponent> .
 <https://w3id.org/airo#hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Risk> .
 <https://w3id.org/airo#hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has risk"@en .
 # 
@@ -95,7 +113,7 @@
 <https://w3id.org/airo#hasRiskSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#hasRiskSource> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/airo#isRiskSourceFor> .
 <https://w3id.org/airo#hasRiskSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Risk> .
-<https://w3id.org/airo#hasRiskSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#hasRiskSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Source> .
 <https://w3id.org/airo#hasRiskSource> <http://www.w3.org/2000/01/rdf-schema#label> "has risk source"@en .
 # 
 # https://w3id.org/airo#hasSeverity
@@ -104,10 +122,10 @@
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#Impact> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#Consequence> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#RiskConsequence> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#Impact> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/airo#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Severity> .
 <https://w3id.org/airo#hasSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "has severity"@en .
@@ -115,21 +133,21 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # https://w3id.org/airo#hasStakeholder
 <https://w3id.org/airo#hasStakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#hasStakeholder> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/airo#isStakeholderOfSystem> .
-<https://w3id.org/airo#hasStakeholder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystem> .
+<https://w3id.org/airo#hasStakeholder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
 <https://w3id.org/airo#hasStakeholder> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Stakeholder> .
 <https://w3id.org/airo#hasStakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates stakeholders of an AI system"@en .
 <https://w3id.org/airo#hasStakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "has stakeholder"@en .
 # 
 # https://w3id.org/airo#hasVulnerability
 <https://w3id.org/airo#hasVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystem> .
+<https://w3id.org/airo#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
 <https://w3id.org/airo#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#vulnerability> .
 <https://w3id.org/airo#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates vulnerabilities of an AI system."@en .
 <https://w3id.org/airo#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#label> "has vulnerability"@en .
 # 
 # https://w3id.org/airo#isConsequenceOf
 <https://w3id.org/airo#isConsequenceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#isConsequenceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#isConsequenceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Consequence> .
 <https://w3id.org/airo#isConsequenceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Risk> .
 <https://w3id.org/airo#isConsequenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "is consequence of"@en .
 # 
@@ -142,7 +160,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # https://w3id.org/airo#isImpactOf
 <https://w3id.org/airo#isImpactOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#isImpactOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Impact> .
-<https://w3id.org/airo#isImpactOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#isImpactOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Consequence> .
 <https://w3id.org/airo#isImpactOf> <http://www.w3.org/2000/01/rdf-schema#label> "is impact of"@en .
 # 
 # https://w3id.org/airo#isInVulnerablePosition
@@ -159,40 +177,51 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/airo#isInVulnerablePosition> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#VulnerablePosition> .
 <https://w3id.org/airo#isInVulnerablePosition> <http://www.w3.org/2000/01/rdf-schema#label> "is in vulnerable position"@en .
 # 
-# https://w3id.org/airo#isIntendedPurposeOf
-<https://w3id.org/airo#isIntendedPurposeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#isIntendedPurposeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#IntendedPurpose> .
-<https://w3id.org/airo#isIntendedPurposeOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AiSystem> .
-<https://w3id.org/airo#isIntendedPurposeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is intended purpose of"@en .
-# 
-# https://w3id.org/airo#isPartOfAiSystem
-<https://w3id.org/airo#isPartOfAiSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#isPartOfAiSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystemComponent> .
-<https://w3id.org/airo#isPartOfAiSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AiSystem> .
-<https://w3id.org/airo#isPartOfAiSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a component is part of an AI system."@en .
-<https://w3id.org/airo#isPartOfAiSystem> <http://www.w3.org/2000/01/rdf-schema#label> "is part of ai system"@en .
+# https://w3id.org/airo#isPartOfAISystem
+<https://w3id.org/airo#isPartOfAISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#isPartOfAISystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AIComponent> .
+<https://w3id.org/airo#isPartOfAISystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#isPartOfAISystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a component is part of an AI system."@en .
+<https://w3id.org/airo#isPartOfAISystem> <http://www.w3.org/2000/01/rdf-schema#label> "is part of AI system"@en .
 # 
 # https://w3id.org/airo#isPartOfControl
 <https://w3id.org/airo#isPartOfControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#isPartOfControl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#PartialControl> .
+<https://w3id.org/airo#isPartOfControl> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Measure> .
 <https://w3id.org/airo#isPartOfControl> <http://www.w3.org/2000/01/rdf-schema#label> "is part of control"@en .
+# 
+# https://w3id.org/airo#isPurposeOf
+<https://w3id.org/airo#isPurposeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#isPurposeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Purpose> .
+<https://w3id.org/airo#isPurposeOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#isPurposeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is purpose of"@en .
 # 
 # https://w3id.org/airo#isRiskAssociatedWith
 <https://w3id.org/airo#isRiskAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#isRiskAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Risk> .
-<https://w3id.org/airo#isRiskAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AiSystemComponent> .
 <https://w3id.org/airo#isRiskAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "is risk associated with"@en .
 # 
 # https://w3id.org/airo#isRiskSourceFor
 <https://w3id.org/airo#isRiskSourceFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Source> .
 <https://w3id.org/airo#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Risk> .
 <https://w3id.org/airo#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#label> "is risk source for"@en .
 # 
 # https://w3id.org/airo#isStakeholderOfSystem
 <https://w3id.org/airo#isStakeholderOfSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/airo#isStakeholderOfSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#Stakeholder> .
-<https://w3id.org/airo#isStakeholderOfSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AiSystem> .
+<https://w3id.org/airo#isStakeholderOfSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AISystem> .
 <https://w3id.org/airo#isStakeholderOfSystem> <http://www.w3.org/2000/01/rdf-schema#label> "is stakeholder of system"@en .
+# 
+# https://w3id.org/airo#isUsedInIndustry
+<https://w3id.org/airo#isUsedInIndustry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#isUsedInIndustry> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the industry (context) the AI system is intended to be used in."@en .
+<https://w3id.org/airo#isUsedInIndustry> <http://www.w3.org/2000/01/rdf-schema#label> "is used in industry"@en .
+# 
+# https://w3id.org/airo#mitigatesEvent
+<https://w3id.org/airo#mitigatesEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#mitigatesEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/airo#modifiesEvent> .
+<https://w3id.org/airo#mitigatesEvent> <http://www.w3.org/2000/01/rdf-schema#label> "mitigates event"@en .
 # 
 # https://w3id.org/airo#modifiesEvent
 <https://w3id.org/airo#modifiesEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -200,16 +229,21 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/airo#modifiesEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Event> .
 <https://w3id.org/airo#modifiesEvent> <http://www.w3.org/2000/01/rdf-schema#label> "modifies event"@en .
 # 
+# https://w3id.org/airo#monitorsEvent
+<https://w3id.org/airo#monitorsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/airo#monitorsEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/airo#modifiesEvent> .
+<https://w3id.org/airo#monitorsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "monitors event"@en .
+# 
 # https://w3id.org/airo#producesOutput
 <https://w3id.org/airo#producesOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#producesOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystem> .
+<https://w3id.org/airo#producesOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
 <https://w3id.org/airo#producesOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#Output> .
 <https://w3id.org/airo#producesOutput> <http://www.w3.org/2000/01/rdf-schema#label> "produces output"@en .
 # 
 # https://w3id.org/airo#usesTechnique
 <https://w3id.org/airo#usesTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/airo#usesTechnique> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AiSystem> .
-<https://w3id.org/airo#usesTechnique> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AiTechnique> .
+<https://w3id.org/airo#usesTechnique> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#usesTechnique> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/airo#AITechnique> .
 <https://w3id.org/airo#usesTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the AI techniques used in an AI system."@en .
 <https://w3id.org/airo#usesTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "uses technique"@en .
 # 
@@ -222,256 +256,502 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
+# https://w3id.org/airo#AIAuditor
+<https://w3id.org/airo#AIAuditor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIAuditor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIPartner> .
+<https://w3id.org/airo#AIAuditor> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI auditor is an organization or entity that is concerned with the audit of organizations producing, providing or using AI systems, to assess conformance to standards, policies or legal requirements. [ISO 22989]"@en .
+<https://w3id.org/airo#AIAuditor> <http://www.w3.org/2000/01/rdf-schema#label> "AI Auditor"@en .
+# 
+# https://w3id.org/airo#AIComponent
+<https://w3id.org/airo#AIComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a functional element that constructs an AI system. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIComponent> <http://www.w3.org/2000/01/rdf-schema#label> "AI Component"@en .
+# 
+# https://w3id.org/airo#AICustomer
+<https://w3id.org/airo#AICustomer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AICustomer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#AICustomer> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI customer is an organization or entity that uses an AI product or service either directly or by its  provision to AI users. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AICustomer> <http://www.w3.org/2000/01/rdf-schema#label> "AI Customer"@en .
+# 
+# https://w3id.org/airo#AIDeveloper
+<https://w3id.org/airo#AIDeveloper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIDeveloper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIProducer> .
+<https://w3id.org/airo#AIDeveloper> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI developer is an organization or entity that is concerned with the development of AI services and products. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIDeveloper> <http://www.w3.org/2000/01/rdf-schema#label> "AI Developer"@en .
+# 
+# https://w3id.org/airo#AIEvaluator
+<https://w3id.org/airo#AIEvaluator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIEvaluator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIPartner> .
+<https://w3id.org/airo#AIEvaluator> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI evaluator is an organization or entity that evaluates the performance of one or more AI systems. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIEvaluator> <http://www.w3.org/2000/01/rdf-schema#label> "AI Evaluator"@en .
+# 
+# https://w3id.org/airo#AIPartner
+<https://w3id.org/airo#AIPartner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIPartner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#AIPartner> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI partner is an organization or entity that provides services in the context of AI. AI partners can  perform technical development of AI products or services, conduct testing and validation of AI products and services, audit AI usage, evaluate AI products or services and perform other tasks. Examples of AI partner types are discussed in the following subclauses. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIPartner> <http://www.w3.org/2000/01/rdf-schema#label> "AI Partner"@en .
+# 
+# https://w3id.org/airo#AIPlatformProvider
+<https://w3id.org/airo#AIPlatformProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIPlatformProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIProvider> .
+<https://w3id.org/airo#AIPlatformProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI platform provider is an organization or entity that provides services that enable other stakeholders to produce AI services or products. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIPlatformProvider> <http://www.w3.org/2000/01/rdf-schema#label> "AI Platform Provider"@en .
+# 
+# https://w3id.org/airo#AIProducer
+<https://w3id.org/airo#AIProducer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIProducer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#AIProducer> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI producer is an organization or entity that designs, develops, tests and deploys products or services that use one or more AI system. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIProducer> <http://www.w3.org/2000/01/rdf-schema#label> "AI Producer"@en .
+# 
+# https://w3id.org/airo#AIProductProvider
+<https://w3id.org/airo#AIProductProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIProductProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIProvider> .
+<https://w3id.org/airo#AIProductProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI product provider is an organization or entity that provides AI products either directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIProductProvider> <http://www.w3.org/2000/01/rdf-schema#label> "AI Product Provider"@en .
+# 
+# https://w3id.org/airo#AIProvider
+<https://w3id.org/airo#AIProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#AIProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI provider is an organization or entity that provides products or services that uses one or more AI systems. AI providers encompass AI platform providers and AI product or service providers. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIProvider> <http://www.w3.org/2000/01/rdf-schema#label> "AI Provider"@en .
+# 
+# https://w3id.org/airo#AIServiceProvider
+<https://w3id.org/airo#AIServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIProvider> .
+<https://w3id.org/airo#AIServiceProvider> <http://www.w3.org/2000/01/rdf-schema#label> "AI Service Provider"@en .
+<https://w3id.org/airo#AIServiceProvider> <http://www.w3.org/2000/01/rdf-schema#label> "An AI service provider is an organization or entity that provides AI services  either  directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]"@en .
+# 
+# https://w3id.org/airo#AISubject
+<https://w3id.org/airo#AISubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AISubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#AISubject> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI subject is an organization or entity that is impacted by an AI system, service or product."@en .
+<https://w3id.org/airo#AISubject> <http://www.w3.org/2000/01/rdf-schema#label> "AI Subject"@en .
+# 
+# https://w3id.org/airo#AISystem
+<https://w3id.org/airo#AISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AISystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"@en .
+<https://w3id.org/airo#AISystem> <http://www.w3.org/2000/01/rdf-schema#label> "AI System"@en .
+# 
+# https://w3id.org/airo#AISystemAccuracy
+<https://w3id.org/airo#AISystemAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AISystemAccuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Accuracy> .
+<https://w3id.org/airo#AISystemAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "degree to which a product or system provides the correct results with the needed degree of precision. [ISO 22989, 3.4.4]"@en .
+<https://w3id.org/airo#AISystemAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "AI System Accuracy"@en .
+# 
+# https://w3id.org/airo#AISystemIntegrator
+<https://w3id.org/airo#AISystemIntegrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AISystemIntegrator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIPartner> .
+<https://w3id.org/airo#AISystemIntegrator> <http://www.w3.org/2000/01/rdf-schema#label> "AI System Integrator"@en .
+<https://w3id.org/airo#AISystemIntegrator> <http://www.w3.org/2000/01/rdf-schema#label> "An AI system integrator is an organization or entity that is concerned with the integration of AI components into larger systems, potentially also including non-AI components. [Source: ISO 22989]"@en .
+# 
+# https://w3id.org/airo#AITechnique
+<https://w3id.org/airo#AITechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AITechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the main approaches and techniques used for development of AI systems."@en .
+<https://w3id.org/airo#AITechnique> <http://www.w3.org/2000/01/rdf-schema#label> "AI Technique"@en .
+# 
+# https://w3id.org/airo#AIUser
+<https://w3id.org/airo#AIUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AIUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AICustomer> .
+<https://w3id.org/airo#AIUser> <http://www.w3.org/2000/01/rdf-schema#comment> "An AI user is an organization or entity that uses AI products or services. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#AIUser> <http://www.w3.org/2000/01/rdf-schema#label> "AI User"@en .
+# 
 # https://w3id.org/airo#Accuracy
 <https://w3id.org/airo#Accuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Accuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
+<https://w3id.org/airo#Accuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+# 
+# https://w3id.org/airo#AdmissionTestAssessment
+<https://w3id.org/airo#AdmissionTestAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AdmissionTestAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EducationRelatedAssessment> .
+<https://w3id.org/airo#AdmissionTestAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Admission Test Assessment"@en .
 # 
 # https://w3id.org/airo#AdversarialAttack
 <https://w3id.org/airo#AdversarialAttack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#AdversarialAttack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Cyberattack> .
+<https://w3id.org/airo#AdversarialAttack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Attack> .
 <https://w3id.org/airo#AdversarialAttack> <http://www.w3.org/2000/01/rdf-schema#comment> "inputs designed to cause the model to make a mistake"@en .
 <https://w3id.org/airo#AdversarialAttack> <http://www.w3.org/2000/01/rdf-schema#label> "Adversarial Attack"@en .
 # 
-# https://w3id.org/airo#AiSystem
-<https://w3id.org/airo#AiSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#AiSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"@en .
-<https://w3id.org/airo#AiSystem> <http://www.w3.org/2000/01/rdf-schema#label> "AI System"@en .
+# https://w3id.org/airo#AdvertisingVacancies
+<https://w3id.org/airo#AdvertisingVacancies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AdvertisingVacancies> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+<https://w3id.org/airo#AdvertisingVacancies> <http://www.w3.org/2000/01/rdf-schema#label> "Advertising Vacancies"@en .
 # 
-# https://w3id.org/airo#AiSystemComponent
-<https://w3id.org/airo#AiSystemComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#AiSystemComponent> <http://www.w3.org/2000/01/rdf-schema#label> "AI System Component"@en .
+# https://w3id.org/airo#AiIndicator
+<https://w3id.org/airo#AiIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AiIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
+<https://w3id.org/airo#AiIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "AI Indicator"@en .
 # 
-# https://w3id.org/airo#AiTechnique
-<https://w3id.org/airo#AiTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#AiTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the main approaches and techniques used for development of AI systems."@en .
-<https://w3id.org/airo#AiTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "AI Technique"@en .
+# https://w3id.org/airo#Area
+<https://w3id.org/airo#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Area> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents areas that AI might have impact on."@en .
+<https://w3id.org/airo#Area> <http://www.w3.org/2000/01/rdf-schema#label> "Area"@en .
 # 
-# https://w3id.org/airo#AreaOfInfluence
-<https://w3id.org/airo#AreaOfInfluence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#AreaOfInfluence> <http://www.w3.org/2000/01/rdf-schema#label> "Area of Influence"@en .
+# https://w3id.org/airo#Assessment
+<https://w3id.org/airo#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Assessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
 # 
-# https://w3id.org/airo#AutomationBias
-<https://w3id.org/airo#AutomationBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#AutomationBias> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
-<https://w3id.org/airo#AutomationBias> <http://www.w3.org/2000/01/rdf-schema#comment> "tendency of automatically relying or over-relying on the output produced by an AI system."@en .
+# https://w3id.org/airo#Attack
+<https://w3id.org/airo#Attack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Attack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Source> .
+<https://w3id.org/airo#Attack> <http://www.w3.org/2000/01/rdf-schema#label> "Attack"@en .
 # 
-# https://w3id.org/airo#BiasCorrection
-<https://w3id.org/airo#BiasCorrection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiasCorrection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+# https://w3id.org/airo#Authority
+<https://w3id.org/airo#Authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Authority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#Authority> <http://www.w3.org/2000/01/rdf-schema#comment> "Authorities are organizations or entities that can have an impact on an AI system, service or product."@en .
+<https://w3id.org/airo#Authority> <http://www.w3.org/2000/01/rdf-schema#label> "Authority"@en .
+# 
+# https://w3id.org/airo#AutomatedControl
+<https://w3id.org/airo#AutomatedControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#AutomatedControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#AutomatedControl> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/airo#ManualControl> .
+<https://w3id.org/airo#AutomatedControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls that do not involve human intervention."@en .
+<https://w3id.org/airo#AutomatedControl> <http://www.w3.org/2000/01/rdf-schema#label> "Automated Control"@en .
+# 
+# https://w3id.org/airo#Automotive
+<https://w3id.org/airo#Automotive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Automotive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RegulatedIndustry> .
+<https://w3id.org/airo#Automotive> <http://www.w3.org/2000/01/rdf-schema#label> "Automotive"@en .
+# 
+# https://w3id.org/airo#Aviation
+<https://w3id.org/airo#Aviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Aviation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RegulatedIndustry> .
+<https://w3id.org/airo#Aviation> <http://www.w3.org/2000/01/rdf-schema#label> "Aviation"@en .
+# 
+# https://w3id.org/airo#Bias
+<https://w3id.org/airo#Bias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Bias> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#BiasRelatedConsequence> .
+<https://w3id.org/airo#Bias> <http://www.w3.org/2000/01/rdf-schema#comment> "Systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989]"@en .
+<https://w3id.org/airo#Bias> <http://www.w3.org/2000/01/rdf-schema#label> "Bias"@en .
 # 
 # https://w3id.org/airo#BiasDetection
 <https://w3id.org/airo#BiasDetection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiasDetection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#BiasDetection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DetectionControl> .
+<https://w3id.org/airo#BiasDetection> <http://www.w3.org/2000/01/rdf-schema#label> "Bias Detection"@en .
 # 
 # https://w3id.org/airo#BiasMonitoring
 <https://w3id.org/airo#BiasMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiasMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#BiasMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MonitoringControl> .
+<https://w3id.org/airo#BiasMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Bias Monitoring"@en .
 # 
-# https://w3id.org/airo#BiasedOutput
-<https://w3id.org/airo#BiasedOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiasedOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
+# https://w3id.org/airo#BiasRelatedConsequence
+<https://w3id.org/airo#BiasRelatedConsequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#BiasRelatedConsequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Consequence> .
+<https://w3id.org/airo#BiasRelatedConsequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents consequences related to bias."@en .
+<https://w3id.org/airo#BiasRelatedConsequence> <http://www.w3.org/2000/01/rdf-schema#label> "Bias Related Consequence"@en .
 # 
 # https://w3id.org/airo#BiasedTestingDataSet
 <https://w3id.org/airo#BiasedTestingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiasedTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#BiasedTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TestingDataRelatedSource> .
 # 
 # https://w3id.org/airo#BiasedTrainingDataSet
 <https://w3id.org/airo#BiasedTrainingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiasedTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#BiasedTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TrainingDataRelatedSource> .
 # 
 # https://w3id.org/airo#BiasedValidationDataSet
 <https://w3id.org/airo#BiasedValidationDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiasedValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
-# 
-# https://w3id.org/airo#BiometricCategorisation
-<https://w3id.org/airo#BiometricCategorisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiometricCategorisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#BiasedValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ValidationDataRelatedSource> .
 # 
 # https://w3id.org/airo#BiometricIdnetification
 <https://w3id.org/airo#BiometricIdnetification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#BiometricIdnetification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#BiometricIdnetification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+<https://w3id.org/airo#BiometricIdnetification> <http://www.w3.org/2000/01/rdf-schema#label> "Biometric Identification"@en .
 # 
 # https://w3id.org/airo#Child
 <https://w3id.org/airo#Child> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Child> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Person> .
 <https://w3id.org/airo#Child> <http://www.w3.org/2000/01/rdf-schema#label> "Child"@en .
 # 
-# https://w3id.org/airo#ConditionOfUse
-<https://w3id.org/airo#ConditionOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ConditionOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Condition Of Use"@en .
+# https://w3id.org/airo#ComputationVerifier
+<https://w3id.org/airo#ComputationVerifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ComputationVerifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIDeveloper> .
+<https://w3id.org/airo#ComputationVerifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity that verifies that a computation is being executed as designed. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#ComputationVerifier> <http://www.w3.org/2000/01/rdf-schema#label> "Computation Verifier"@en .
+# 
+# https://w3id.org/airo#Consequence
+<https://w3id.org/airo#Consequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Consequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Event> .
+<https://w3id.org/airo#Consequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"@en .
+<https://w3id.org/airo#Consequence> <http://www.w3.org/2000/01/rdf-schema#label> "Consequence"@en .
 # 
 # https://w3id.org/airo#Content
 <https://w3id.org/airo#Content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Content> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Output> .
+<https://w3id.org/airo#Content> <http://www.w3.org/2000/01/rdf-schema#label> "Content"@en .
+# 
+# https://w3id.org/airo#Controllability
+<https://w3id.org/airo#Controllability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Controllability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Controllability> <http://www.w3.org/2000/01/rdf-schema#comment> "Property of an AI system that allows a human or another external agent to intervene in the system’s functioning. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Controllability> <http://www.w3.org/2000/01/rdf-schema#label> "Controllability"@en .
+# 
+# https://w3id.org/airo#CorrectionControl
+<https://w3id.org/airo#CorrectionControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#CorrectionControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#CorrectionControl> <http://www.w3.org/2000/01/rdf-schema#label> "Correction Control"@en .
+# 
+# https://w3id.org/airo#CreditworthinessAssessment
+<https://w3id.org/airo#CreditworthinessAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#CreditworthinessAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Assessment> .
+<https://w3id.org/airo#CreditworthinessAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Creditworthiness Assessment"@en .
 # 
 # https://w3id.org/airo#CrimeAnalytics
 <https://w3id.org/airo#CrimeAnalytics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#CrimeAnalytics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#CrimeAnalytics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#PatternRecognition> .
+<https://w3id.org/airo#CrimeAnalytics> <http://www.w3.org/2000/01/rdf-schema#label> "Crime Analytics" .
+# 
+# https://w3id.org/airo#CvFiltering
+<https://w3id.org/airo#CvFiltering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#CvFiltering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Filtering> .
+<https://w3id.org/airo#CvFiltering> <http://www.w3.org/2000/01/rdf-schema#comment> "Filtering applications for recruitment or selection of natural persons."@en .
+<https://w3id.org/airo#CvFiltering> <http://www.w3.org/2000/01/rdf-schema#label> "CV Filtering"@en .
+# 
+# https://w3id.org/airo#CvScreening
+<https://w3id.org/airo#CvScreening> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#CvScreening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EmploymentRelatedAssessment> .
+<https://w3id.org/airo#CvScreening> <http://www.w3.org/2000/01/rdf-schema#label> "CV Screening"@en .
 # 
 # https://w3id.org/airo#Cyberattack
 <https://w3id.org/airo#Cyberattack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Cyberattack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#Cyberattack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Attack> .
 <https://w3id.org/airo#Cyberattack> <http://www.w3.org/2000/01/rdf-schema#label> "Cyberattack"@en .
 # 
-# https://w3id.org/airo#DamageToProperty
-<https://w3id.org/airo#DamageToProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DamageToProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
-<https://w3id.org/airo#DamageToProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Damage To Property"@en .
-# 
-# https://w3id.org/airo#DataGovernanceRelatedRiskSource
-<https://w3id.org/airo#DataGovernanceRelatedRiskSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DataGovernanceRelatedRiskSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+# https://w3id.org/airo#DataAccuracy
+<https://w3id.org/airo#DataAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#DataAccuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Accuracy> .
+<https://w3id.org/airo#DataAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use. [ISO 22989, 3.4.3]"@en .
+<https://w3id.org/airo#DataAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "Data Accuracy"@en .
 # 
 # https://w3id.org/airo#DataPoisoning
 <https://w3id.org/airo#DataPoisoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DataPoisoning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Cyberattack> .
+<https://w3id.org/airo#DataPoisoning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Attack> .
 <https://w3id.org/airo#DataPoisoning> <http://www.w3.org/2000/01/rdf-schema#comment> "Attack trying to manipulate the training dataset"@en .
 <https://w3id.org/airo#DataPoisoning> <http://www.w3.org/2000/01/rdf-schema#label> "Data Poisoning"@en .
 # 
-# https://w3id.org/airo#DataProtectionAndPrivacy
-<https://w3id.org/airo#DataProtectionAndPrivacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DataProtectionAndPrivacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#FundamentalRight> .
-<https://w3id.org/airo#DataProtectionAndPrivacy> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to EU Charter of Fundamental Rights, Art. 8 (protection of personal data)"@en .
-<https://w3id.org/airo#DataProtectionAndPrivacy> <http://www.w3.org/2000/01/rdf-schema#label> "Data Protection And Privacy"@en .
+# https://w3id.org/airo#DataProvider
+<https://w3id.org/airo#DataProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#DataProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIPartner> .
+<https://w3id.org/airo#DataProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "A data provider is an organization or entity that is concerned providing data used by AI products or services."@en .
+<https://w3id.org/airo#DataProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Data Provider"@en .
+# 
+# https://w3id.org/airo#DataSetRelatedSource
+<https://w3id.org/airo#DataSetRelatedSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#DataSetRelatedSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Source> .
+# 
+# https://w3id.org/airo#DataSubject
+<https://w3id.org/airo#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#DataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AISubject> .
+<https://w3id.org/airo#DataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "A data subject is an organization or entity that is affected by AI systems with following aspects: \n— Subject of training data: where data pertaining to an organization or human is used in training an  AI system, there can be implications for security and privacy, for the latter particularly where that subject is an individual human. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject"@en .
 # 
 # https://w3id.org/airo#Death
 <https://w3id.org/airo#Death> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Death> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#Death> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnHuman> .
 # 
 # https://w3id.org/airo#Decision
 <https://w3id.org/airo#Decision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Decision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Output> .
+<https://w3id.org/airo#Decision> <http://www.w3.org/2000/01/rdf-schema#label> "Decision"@en .
 # 
 # https://w3id.org/airo#DecreasedLevelOfAccuracy
 <https://w3id.org/airo#DecreasedLevelOfAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DecreasedLevelOfAccuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#DecreasedLevelOfAccuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndicatorRelatedConsequence> .
 # 
 # https://w3id.org/airo#DecreasedLevelOfRobustness
 <https://w3id.org/airo#DecreasedLevelOfRobustness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DecreasedLevelOfRobustness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#DecreasedLevelOfRobustness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndicatorRelatedConsequence> .
 # 
 # https://w3id.org/airo#DecreasedLevelOfSecurity
 <https://w3id.org/airo#DecreasedLevelOfSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DecreasedLevelOfSecurity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#DecreasedLevelOfSecurity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndicatorRelatedConsequence> .
 # 
 # https://w3id.org/airo#DeepFakeDetection
 <https://w3id.org/airo#DeepFakeDetection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DeepFakeDetection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#DeepFakeDetection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Detection> .
 <https://w3id.org/airo#DeepFakeDetection> <http://www.w3.org/2000/01/rdf-schema#label> "Deep Fake Detection"@en .
 # 
 # https://w3id.org/airo#DegradedPerformance
 <https://w3id.org/airo#DegradedPerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DegradedPerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
+<https://w3id.org/airo#DegradedPerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndicatorRelatedConsequence> .
+# 
+# https://w3id.org/airo#Detection
+<https://w3id.org/airo#Detection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Detection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+# 
+# https://w3id.org/airo#DetectionControl
+<https://w3id.org/airo#DetectionControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#DetectionControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#DetectionControl> <http://www.w3.org/2000/01/rdf-schema#label> "Detection Control"@en .
 # 
 # https://w3id.org/airo#DeterminingAccessToEducation
 <https://w3id.org/airo#DeterminingAccessToEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DeterminingAccessToEducation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+<https://w3id.org/airo#DeterminingAccessToEducation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EducationRelatedAssessment> .
 <https://w3id.org/airo#DeterminingAccessToEducation> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the purpose of determining access or assigning natural persons to educational and vocational training institutions."@en .
+<https://w3id.org/airo#DeterminingAccessToEducation> <http://www.w3.org/2000/01/rdf-schema#label> "Determining Access To Education"@en .
+# 
+# https://w3id.org/airo#DispatchingEmergencyService
+<https://w3id.org/airo#DispatchingEmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#DispatchingEmergencyService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Planning> .
+<https://w3id.org/airo#DispatchingEmergencyService> <http://www.w3.org/2000/01/rdf-schema#label> "Dispacthing Emergency Service"@en .
 # 
 # https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure
 <https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnFacility> .
 <https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure> <http://www.w3.org/2000/01/rdf-schema#label> "Disruption Of Operation Of Critical Infrastructure"@en .
 # 
-# https://w3id.org/airo#DistortHumanBehaviour
-<https://w3id.org/airo#DistortHumanBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#DistortHumanBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
-<https://w3id.org/airo#DistortHumanBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "Distort Human Behaviour"@en .
-# 
-# https://w3id.org/airo#EaseOfReversiblity
-<https://w3id.org/airo#EaseOfReversiblity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#EaseOfReversiblity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
-<https://w3id.org/airo#EaseOfReversiblity> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the extent to which the outcome produced with an AI system is easily reversible."@en .
-<https://w3id.org/airo#EaseOfReversiblity> <http://www.w3.org/2000/01/rdf-schema#label> "Ease Of Reversibility"@en .
+# https://w3id.org/airo#DistortionInHumanBehaviour
+<https://w3id.org/airo#DistortionInHumanBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#DistortionInHumanBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnHuman> .
+<https://w3id.org/airo#DistortionInHumanBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "Distortion In Human Behaviour"@en .
 # 
 # https://w3id.org/airo#Education
 <https://w3id.org/airo#Education> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Education> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedContextOfUse> .
+<https://w3id.org/airo#Education> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
+<https://w3id.org/airo#Education> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to education and vocational training"@en .
+<https://w3id.org/airo#Education> <http://www.w3.org/2000/01/rdf-schema#label> "Education"@en .
+# 
+# https://w3id.org/airo#EducationRelatedAssessment
+<https://w3id.org/airo#EducationRelatedAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#EducationRelatedAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Assessment> .
+# 
+# https://w3id.org/airo#EliminationControl
+<https://w3id.org/airo#EliminationControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#EliminationControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#EliminationControl> <http://www.w3.org/2000/01/rdf-schema#label> "Elimination Control"@en .
+# 
+# https://w3id.org/airo#EmergencyService
+<https://w3id.org/airo#EmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#EmergencyService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
 # 
 # https://w3id.org/airo#EmotionRecognition
 <https://w3id.org/airo#EmotionRecognition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#EmotionRecognition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#EmotionRecognition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Recognition> .
 <https://w3id.org/airo#EmotionRecognition> <http://www.w3.org/2000/01/rdf-schema#label> "Emotion Recognition"@en .
+# 
+# https://w3id.org/airo#EmployeeEvaluation
+<https://w3id.org/airo#EmployeeEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#EmployeeEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EmploymentRelatedAssessment> .
+<https://w3id.org/airo#EmployeeEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Employee Evaluation"@en .
+# 
+# https://w3id.org/airo#EmployeeMonitoring
+<https://w3id.org/airo#EmployeeMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#EmployeeMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Monitoring> .
+<https://w3id.org/airo#EmployeeMonitoring> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents purpose of monitoring and evaluating performance and behavior of employees in workplace."@en .
+<https://w3id.org/airo#EmployeeMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Employee Monitoring"@en .
 # 
 # https://w3id.org/airo#Employment
 <https://w3id.org/airo#Employment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Employment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedContextOfUse> .
-<https://w3id.org/airo#Employment> <http://www.w3.org/2000/01/rdf-schema#comment> "Employment, workers management and access to self-employment"@en .
+<https://w3id.org/airo#Employment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
+<https://w3id.org/airo#Employment> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to employment, workers management and access to self-employment"@en .
+<https://w3id.org/airo#Employment> <http://www.w3.org/2000/01/rdf-schema#label> "Employment"@en .
+# 
+# https://w3id.org/airo#EmploymentRelatedAssessment
+<https://w3id.org/airo#EmploymentRelatedAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#EmploymentRelatedAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Assessment> .
+# 
+# https://w3id.org/airo#Energy
+<https://w3id.org/airo#Energy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RegulatedIndustry> .
+<https://w3id.org/airo#Energy> <http://www.w3.org/2000/01/rdf-schema#label> "Energy"@en .
 # 
 # https://w3id.org/airo#EnvironmentalDamage
 <https://w3id.org/airo#EnvironmentalDamage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#EnvironmentalDamage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#EnvironmentalDamage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnEnvironment> .
 <https://w3id.org/airo#EnvironmentalDamage> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Damage"@en .
 # 
 # https://w3id.org/airo#ErrorInDataCollection
 <https://w3id.org/airo#ErrorInDataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ErrorInDataCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#ErrorInDataCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
 # 
 # https://w3id.org/airo#ErrorInDataPrepration
 <https://w3id.org/airo#ErrorInDataPrepration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ErrorInDataPrepration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#ErrorInDataPrepration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
 # 
 # https://w3id.org/airo#ErrorInInputData
 <https://w3id.org/airo#ErrorInInputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ErrorInInputData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#ErrorInInputData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#InputDataRelatedSource> .
 # 
 # https://w3id.org/airo#ErrorInTestingDataSet
 <https://w3id.org/airo#ErrorInTestingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ErrorInTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#ErrorInTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TestingDataRelatedSource> .
 # 
 # https://w3id.org/airo#ErrorInTrainingDataSet
 <https://w3id.org/airo#ErrorInTrainingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ErrorInTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#ErrorInTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TrainingDataRelatedSource> .
 # 
 # https://w3id.org/airo#ErrorInValidationDataSet
 <https://w3id.org/airo#ErrorInValidationDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ErrorInValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#ErrorInValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ValidationDataRelatedSource> .
+# 
+# https://w3id.org/airo#EvaluatingReliabilityOfEvidence
+<https://w3id.org/airo#EvaluatingReliabilityOfEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#EvaluatingReliabilityOfEvidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Assessment> .
+<https://w3id.org/airo#EvaluatingReliabilityOfEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluating Reliability Of Evidence"@en .
 # 
 # https://w3id.org/airo#Event
 <https://w3id.org/airo#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"@en .
 <https://w3id.org/airo#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
 # 
+# https://w3id.org/airo#Explainability
+<https://w3id.org/airo#Explainability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Explainability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Explainability> <http://www.w3.org/2000/01/rdf-schema#comment> "Property of an AI system to express important factors influencing the AI system results in a  way that humans can understand. [Source ISO 22989]"@en .
+<https://w3id.org/airo#Explainability> <http://www.w3.org/2000/01/rdf-schema#label> "Explainability"@en .
+# 
 # https://w3id.org/airo#ExtentOfUse
 <https://w3id.org/airo#ExtentOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ExtentOfUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
+<https://w3id.org/airo#ExtentOfUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
 <https://w3id.org/airo#ExtentOfUse> <http://www.w3.org/2000/01/rdf-schema#comment> "the extent to which an AI system has been used or is likely to be used"@en .
 <https://w3id.org/airo#ExtentOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Extent Of Use"@en .
 # 
-# https://w3id.org/airo#FreedomsOfNaturalPersons
-<https://w3id.org/airo#FreedomsOfNaturalPersons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#FreedomsOfNaturalPersons> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#FundamentalRight> .
-<https://w3id.org/airo#FreedomsOfNaturalPersons> <http://www.w3.org/2000/01/rdf-schema#label> "Freedoms Of Natural Persons"@en .
+# https://w3id.org/airo#Filtering
+<https://w3id.org/airo#Filtering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Filtering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+# 
+# https://w3id.org/airo#FinancialService
+<https://w3id.org/airo#FinancialService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#FinancialService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
 # 
 # https://w3id.org/airo#FundamentalRight
 <https://w3id.org/airo#FundamentalRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#FundamentalRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AreaOfInfluence> .
-<https://w3id.org/airo#FundamentalRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a right, freedom, or principle set out in the EU Charter of Fundamental Rights."@en .
+<https://w3id.org/airo#FundamentalRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Area> .
+<https://w3id.org/airo#FundamentalRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a right, freedom, or principle set out in the EU Charter of Fundamental Rights."@en .
 <https://w3id.org/airo#FundamentalRight> <http://www.w3.org/2000/01/rdf-schema#label> "Fundamental Right"@en .
+# 
+# https://w3id.org/airo#GeneralAI
+<https://w3id.org/airo#GeneralAI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#GeneralAI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#GeneralAI> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/airo#NarrowAI> .
+<https://w3id.org/airo#GeneralAI> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a type of AI system that addresses a broad range of tasks with a satisfactory level of  performance"@en .
+<https://w3id.org/airo#GeneralAI> <http://www.w3.org/2000/01/rdf-schema#label> "General AI"@en .
 # 
 # https://w3id.org/airo#GeneratingAudioContent
 <https://w3id.org/airo#GeneratingAudioContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#GeneratingAudioContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#GeneratingContent> .
 <https://w3id.org/airo#GeneratingAudioContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to manipulating or generating audio content."@en .
+<https://w3id.org/airo#GeneratingAudioContent> <http://www.w3.org/2000/01/rdf-schema#label> "Generating Audio Content"@en .
 # 
 # https://w3id.org/airo#GeneratingContent
 <https://w3id.org/airo#GeneratingContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#GeneratingContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#GeneratingContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Purpose> .
 <https://w3id.org/airo#GeneratingContent> <http://www.w3.org/2000/01/rdf-schema#label> "Generating Content"@en .
+<https://w3id.org/airo#GeneratingContent> <http://www.w3.org/2000/01/rdf-schema#label> "Represents purpose of generating or manipulating content."@en .
 # 
 # https://w3id.org/airo#GeneratingImageContent
 <https://w3id.org/airo#GeneratingImageContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#GeneratingImageContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#GeneratingContent> .
 <https://w3id.org/airo#GeneratingImageContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to manipulating or generating image content."@en .
+<https://w3id.org/airo#GeneratingImageContent> <http://www.w3.org/2000/01/rdf-schema#label> "Generating Image Content"@en .
 # 
 # https://w3id.org/airo#GeneratingVideoContent
 <https://w3id.org/airo#GeneratingVideoContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#GeneratingVideoContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#GeneratingContent> .
 <https://w3id.org/airo#GeneratingVideoContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to manipulating or generating video content."@en .
+<https://w3id.org/airo#GeneratingVideoContent> <http://www.w3.org/2000/01/rdf-schema#label> "Generating Video Content"@en .
 # 
 # https://w3id.org/airo#Group
 <https://w3id.org/airo#Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OtherSubject> .
 <https://w3id.org/airo#Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a group of persons such as citizens, marginsalised groups, etc."@en .
 <https://w3id.org/airo#Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group"@en .
 # 
@@ -482,197 +762,332 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/airo#HealthAndSafety
 <https://w3id.org/airo#HealthAndSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#HealthAndSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AreaOfInfluence> .
+<https://w3id.org/airo#HealthAndSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Area> .
 <https://w3id.org/airo#HealthAndSafety> <http://www.w3.org/2000/01/rdf-schema#label> "Health And Safety"@en .
+# 
+# https://w3id.org/airo#Healthcare
+<https://w3id.org/airo#Healthcare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Healthcare> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
 # 
 # https://w3id.org/airo#HumanBehaviour
 <https://w3id.org/airo#HumanBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#HumanBehaviour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#HealthAndSafety> .
 <https://w3id.org/airo#HumanBehaviour> <http://www.w3.org/2000/01/rdf-schema#label> "Human Behaviour"@en .
 # 
-# https://w3id.org/airo#HumanOversightMeasure
-<https://w3id.org/airo#HumanOversightMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#HumanOversightMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+# https://w3id.org/airo#HumanOversight
+<https://w3id.org/airo#HumanOversight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#HumanOversight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#SemiAutomatedControl> .
+<https://w3id.org/airo#HumanOversight> <http://www.w3.org/2000/01/rdf-schema#label> "Human Oversight"@en .
+# 
+# https://w3id.org/airo#ImmigrationEligibilityAssessment
+<https://w3id.org/airo#ImmigrationEligibilityAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ImmigrationEligibilityAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Assessment> .
+<https://w3id.org/airo#ImmigrationEligibilityAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Examination of applications for asylum, visa and residence permits and associated complaints"@en .
+<https://w3id.org/airo#ImmigrationEligibilityAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Immigration Eligibility Assessment"@en .
 # 
 # https://w3id.org/airo#Impact
 <https://w3id.org/airo#Impact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Impact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskConsequence> .
-<https://w3id.org/airo#Impact> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Impact"@en .
+<https://w3id.org/airo#Impact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Consequence> .
+<https://w3id.org/airo#Impact> <http://www.w3.org/2000/01/rdf-schema#label> "Impact"@en .
+# 
+# https://w3id.org/airo#ImpactOnEnvironment
+<https://w3id.org/airo#ImpactOnEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ImpactOnEnvironment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#ImpactOnEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Impact On Environment"@en .
+<https://w3id.org/airo#ImpactOnEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Represent impact on the enviroment humans lives in."@en .
+# 
+# https://w3id.org/airo#ImpactOnFacility
+<https://w3id.org/airo#ImpactOnFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ImpactOnFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#ImpactOnFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Impact On Facility"@en .
+# 
+# https://w3id.org/airo#ImpactOnHuman
+<https://w3id.org/airo#ImpactOnHuman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ImpactOnHuman> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#ImpactOnHuman> <http://www.w3.org/2000/01/rdf-schema#label> "Impact On Human"@en .
 # 
 # https://w3id.org/airo#IncompetenceOfHumanOversightActors
 <https://w3id.org/airo#IncompetenceOfHumanOversightActors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IncompetenceOfHumanOversightActors> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#IncompetenceOfHumanOversightActors> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OrganisationalSource> .
 <https://w3id.org/airo#IncompetenceOfHumanOversightActors> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to incompentece of individuals to whom human oversight is assigned."@en .
+<https://w3id.org/airo#IncompetenceOfHumanOversightActors> <http://www.w3.org/2000/01/rdf-schema#label> "Incompetence Of Human Oversight Actors"@en .
 # 
 # https://w3id.org/airo#IncompletenessOfTestingDataSet
 <https://w3id.org/airo#IncompletenessOfTestingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IncompletenessOfTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#IncompletenessOfTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TestingDataRelatedSource> .
 # 
 # https://w3id.org/airo#IncompletenessOfTrainingDataSet
 <https://w3id.org/airo#IncompletenessOfTrainingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IncompletenessOfTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#IncompletenessOfTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TrainingDataRelatedSource> .
 # 
 # https://w3id.org/airo#IncompletenessOfValidationDataSet
 <https://w3id.org/airo#IncompletenessOfValidationDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IncompletenessOfValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#IncompletenessOfValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ValidationDataRelatedSource> .
 # 
 # https://w3id.org/airo#Indicator
 <https://w3id.org/airo#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator"@en .
 # 
+# https://w3id.org/airo#IndicatorRelatedConsequence
+<https://w3id.org/airo#IndicatorRelatedConsequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#IndicatorRelatedConsequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Consequence> .
+# 
+# https://w3id.org/airo#IndicatorRelatedSource
+<https://w3id.org/airo#IndicatorRelatedSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#IndicatorRelatedSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Source> .
+# 
 # https://w3id.org/airo#IndividualRiskAssessment
 <https://w3id.org/airo#IndividualRiskAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IndividualRiskAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#IndividualRiskAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingPrediction> .
 <https://w3id.org/airo#IndividualRiskAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to use of AI systems for making individual risk assessments of natural persons in order to assess the risk of a natural person for offending or reoffending or the risk for potential victims of criminal offences."@en .
 <https://w3id.org/airo#IndividualRiskAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Individual Risk Assessment"@en .
 # 
+# https://w3id.org/airo#Industry
+<https://w3id.org/airo#Industry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Industry> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the sector/domain the AI system is intended to be used in."@en .
+<https://w3id.org/airo#Industry> <http://www.w3.org/2000/01/rdf-schema#label> "Industry"@en .
+# 
 # https://w3id.org/airo#Injury
 <https://w3id.org/airo#Injury> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Injury> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#Injury> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnHuman> .
 <https://w3id.org/airo#Injury> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Injury"@en .
 # 
-# https://w3id.org/airo#InputData
-<https://w3id.org/airo#InputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#InputData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiSystemComponent> .
-<https://w3id.org/airo#InputData> <http://www.w3.org/2000/01/rdf-schema#comment> "data provided to or directly acquired by an AI system on the basis of which the system produces an output [Source: AI Act, Article 3(32)]"@en .
-<https://w3id.org/airo#InputData> <http://www.w3.org/2000/01/rdf-schema#label> "Input Data"@en .
+# https://w3id.org/airo#InputDataRelatedSource
+<https://w3id.org/airo#InputDataRelatedSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#InputDataRelatedSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
 # 
-# https://w3id.org/airo#IntendedContextOfUse
-<https://w3id.org/airo#IntendedContextOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IntendedContextOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Intended Context Of Use"@en .
+# https://w3id.org/airo#Interruption
+<https://w3id.org/airo#Interruption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Interruption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OperationalControl> .
+<https://w3id.org/airo#Interruption> <http://www.w3.org/2000/01/rdf-schema#comment> "Interruption of a system's operation"@en .
+<https://w3id.org/airo#Interruption> <http://www.w3.org/2000/01/rdf-schema#label> "Interruption"@en .
 # 
-# https://w3id.org/airo#IntendedPurpose
-<https://w3id.org/airo#IntendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"@en .
-<https://w3id.org/airo#IntendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "Intended Purpose"@en .
+# https://w3id.org/airo#Intervention
+<https://w3id.org/airo#Intervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Intervention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OperationalControl> .
+<https://w3id.org/airo#Intervention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#SemiAutomatedControl> .
+<https://w3id.org/airo#Intervention> <http://www.w3.org/2000/01/rdf-schema#comment> "Intervention of  a system's operation"@en .
+<https://w3id.org/airo#Intervention> <http://www.w3.org/2000/01/rdf-schema#label> "Intervation"@en .
 # 
-# https://w3id.org/airo#InterruptOperationOfSystem
-<https://w3id.org/airo#InterruptOperationOfSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#InterruptOperationOfSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#HumanOversightMeasure> .
-# 
-# https://w3id.org/airo#InterveneOperationOfSystem
-<https://w3id.org/airo#InterveneOperationOfSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#InterveneOperationOfSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#HumanOversightMeasure> .
+# https://w3id.org/airo#InterviewEvaluation
+<https://w3id.org/airo#InterviewEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#InterviewEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EmploymentRelatedAssessment> .
+<https://w3id.org/airo#InterviewEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Interview Evaluation"@en .
 # 
 # https://w3id.org/airo#IrrelevantTestingData
 <https://w3id.org/airo#IrrelevantTestingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IrrelevantTestingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#IrrelevantTestingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TestingDataRelatedSource> .
 # 
 # https://w3id.org/airo#IrrelevantTrainingData
 <https://w3id.org/airo#IrrelevantTrainingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IrrelevantTrainingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#IrrelevantTrainingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TrainingDataRelatedSource> .
 # 
 # https://w3id.org/airo#IrrelevantValidationData
 <https://w3id.org/airo#IrrelevantValidationData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#IrrelevantValidationData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#IrrelevantValidationData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ValidationDataRelatedSource> .
+# 
+# https://w3id.org/airo#Justice
+<https://w3id.org/airo#Justice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Justice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
+<https://w3id.org/airo#Justice> <http://www.w3.org/2000/01/rdf-schema#label> "Justice"@en .
 # 
 # https://w3id.org/airo#KnowledgeBasedApproach
 <https://w3id.org/airo#KnowledgeBasedApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#KnowledgeBasedApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiTechnique> .
-<https://w3id.org/airo#KnowledgeBasedApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge-Based Approach"@en .
+<https://w3id.org/airo#KnowledgeBasedApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AITechnique> .
+<https://w3id.org/airo#KnowledgeBasedApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Based Approach"@en .
+# 
+# https://w3id.org/airo#KnowledgeReasoning
+<https://w3id.org/airo#KnowledgeReasoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#KnowledgeReasoning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Purpose> .
+<https://w3id.org/airo#KnowledgeReasoning> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Reasoning"@en .
 # 
 # https://w3id.org/airo#LackOfAppropriateInstructionForUse
 <https://w3id.org/airo#LackOfAppropriateInstructionForUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LackOfAppropriateInstructionForUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#LackOfAppropriateInstructionForUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OrganisationalSource> .
 <https://w3id.org/airo#LackOfAppropriateInstructionForUse> <http://www.w3.org/2000/01/rdf-schema#label> "Lack Of Appropriate Instruction For Use"@en .
 # 
 # https://w3id.org/airo#LackOfAppropriateSecurity
 <https://w3id.org/airo#LackOfAppropriateSecurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LackOfAppropriateSecurity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#LackOfAppropriateSecurity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndicatorRelatedSource> .
 # 
 # https://w3id.org/airo#LackOfHumanOversightMeasure
 <https://w3id.org/airo#LackOfHumanOversightMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LackOfHumanOversightMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#LackOfHumanOversightMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OrganisationalSource> .
 # 
 # https://w3id.org/airo#LackOfTransparency
 <https://w3id.org/airo#LackOfTransparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LackOfTransparency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#LackOfTransparency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OrganisationalSource> .
 # 
 # https://w3id.org/airo#LawEnforcement
 <https://w3id.org/airo#LawEnforcement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LawEnforcement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedContextOfUse> .
-<https://w3id.org/airo#LawEnforcement> <http://www.w3.org/2000/01/rdf-schema#comment> "activities carried out by law enforcement authorities for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security [Source: AI Act, Article 3(41)]"@en .
+<https://w3id.org/airo#LawEnforcement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
 <https://w3id.org/airo#LawEnforcement> <http://www.w3.org/2000/01/rdf-schema#label> "Law Enforcement"@en .
+# 
+# https://w3id.org/airo#LegalInterpretation
+<https://w3id.org/airo#LegalInterpretation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#LegalInterpretation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#KnowledgeReasoning> .
+<https://w3id.org/airo#LegalInterpretation> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents purpose of researching and interpreting facts and the law."@en .
+<https://w3id.org/airo#LegalInterpretation> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Interpretation"@en .
 # 
 # https://w3id.org/airo#LikelihoodRate
 <https://w3id.org/airo#LikelihoodRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LikelihoodRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
+<https://w3id.org/airo#LikelihoodRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskIndicator> .
 <https://w3id.org/airo#LikelihoodRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Chance of an event happening. [Source: ISO 31000, 3.7]"@en .
 <https://w3id.org/airo#LikelihoodRate> <http://www.w3.org/2000/01/rdf-schema#label> "Likelihood"@en .
 # 
 # https://w3id.org/airo#LogicBasedApproach
 <https://w3id.org/airo#LogicBasedApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LogicBasedApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiTechnique> .
-<https://w3id.org/airo#LogicBasedApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Logic-Based Approach"@en .
+<https://w3id.org/airo#LogicBasedApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AITechnique> .
+<https://w3id.org/airo#LogicBasedApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Logic Based Approach"@en .
 # 
 # https://w3id.org/airo#LowLevelOfAccuracy
 <https://w3id.org/airo#LowLevelOfAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LowLevelOfAccuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#LowLevelOfAccuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndicatorRelatedSource> .
 <https://w3id.org/airo#LowLevelOfAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "inacurracy of the predictions, recommondations, or decisions produced by the system."@en .
 # 
 # https://w3id.org/airo#LowLevelOfRobustness
 <https://w3id.org/airo#LowLevelOfRobustness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#LowLevelOfRobustness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#LowLevelOfRobustness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndicatorRelatedSource> .
 # 
 # https://w3id.org/airo#MachineLearningApproach
 <https://w3id.org/airo#MachineLearningApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#MachineLearningApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiTechnique> .
+<https://w3id.org/airo#MachineLearningApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AITechnique> .
 <https://w3id.org/airo#MachineLearningApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Learning Approach"@en .
 # 
 # https://w3id.org/airo#MakingDecision
 <https://w3id.org/airo#MakingDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#MakingDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#MakingDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Purpose> .
 <https://w3id.org/airo#MakingDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Making Decision"@en .
 # 
 # https://w3id.org/airo#MakingPrediction
 <https://w3id.org/airo#MakingPrediction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#MakingPrediction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#MakingPrediction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Purpose> .
 <https://w3id.org/airo#MakingPrediction> <http://www.w3.org/2000/01/rdf-schema#label> "Making Prediction"@en .
 # 
-# https://w3id.org/airo#ManagementOfCriticalInfrastructure
-<https://w3id.org/airo#ManagementOfCriticalInfrastructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ManagementOfCriticalInfrastructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedContextOfUse> .
-<https://w3id.org/airo#ManagementOfCriticalInfrastructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to management and operation of critical infrastructure"@en .
-<https://w3id.org/airo#ManagementOfCriticalInfrastructure> <http://www.w3.org/2000/01/rdf-schema#label> "Management Of Critical Infrastructure"@en .
+# https://w3id.org/airo#MakingPromotionDecision
+<https://w3id.org/airo#MakingPromotionDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#MakingPromotionDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EmploymentRelatedAssessment> .
+<https://w3id.org/airo#MakingPromotionDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Making Promotion Decision"@en .
+# 
+# https://w3id.org/airo#MakingTerminationDecision
+<https://w3id.org/airo#MakingTerminationDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#MakingTerminationDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EmploymentRelatedAssessment> .
+<https://w3id.org/airo#MakingTerminationDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Making Termination Decision"@en .
+# 
+# https://w3id.org/airo#ManualControl
+<https://w3id.org/airo#ManualControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ManualControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#ManualControl> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/airo#SemiAutomatedControl> .
+<https://w3id.org/airo#ManualControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls performed by humans without any use of technologies."@en .
+<https://w3id.org/airo#ManualControl> <http://www.w3.org/2000/01/rdf-schema#label> "Manual Control"@en .
+# 
+# https://w3id.org/airo#Maritime
+<https://w3id.org/airo#Maritime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Maritime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RegulatedIndustry> .
 # 
 # https://w3id.org/airo#Measure
 <https://w3id.org/airo#Measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Measure> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"@en .
+<https://w3id.org/airo#Measure> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"@en .
 <https://w3id.org/airo#Measure> <http://www.w3.org/2000/01/rdf-schema#label> "Control"@en .
 # 
-# https://w3id.org/airo#Military
-<https://w3id.org/airo#Military> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Military> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedContextOfUse> .
+# https://w3id.org/airo#MedicalTechnology
+<https://w3id.org/airo#MedicalTechnology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#MedicalTechnology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RegulatedIndustry> .
+<https://w3id.org/airo#MedicalTechnology> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Technology"@en .
+# 
+# https://w3id.org/airo#Migration
+<https://w3id.org/airo#Migration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Migration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
+<https://w3id.org/airo#Migration> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to migration, asylum and border control management"@en .
+<https://w3id.org/airo#Migration> <http://www.w3.org/2000/01/rdf-schema#label> "Migration"@en .
 # 
 # https://w3id.org/airo#Misuse
 <https://w3id.org/airo#Misuse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Misuse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#Misuse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Source> .
 <https://w3id.org/airo#Misuse> <http://www.w3.org/2000/01/rdf-schema#comment> "The use of an AI system in a way that is not in accordance with its intended purpose."@en .
 <https://w3id.org/airo#Misuse> <http://www.w3.org/2000/01/rdf-schema#label> "Misuse"@en .
 # 
+# https://w3id.org/airo#ModelDesigner
+<https://w3id.org/airo#ModelDesigner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ModelDesigner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIDeveloper> .
+<https://w3id.org/airo#ModelDesigner> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity that receives data and a problem specification and creates an AI model. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#ModelDesigner> <http://www.w3.org/2000/01/rdf-schema#label> "Model Designer"@en .
+# 
 # https://w3id.org/airo#ModelEvasion
 <https://w3id.org/airo#ModelEvasion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ModelEvasion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Cyberattack> .
+<https://w3id.org/airo#ModelEvasion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Attack> .
 <https://w3id.org/airo#ModelEvasion> <http://www.w3.org/2000/01/rdf-schema#label> "Model Evasion"@en .
+# 
+# https://w3id.org/airo#ModelImplementer
+<https://w3id.org/airo#ModelImplementer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ModelImplementer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIDeveloper> .
+<https://w3id.org/airo#ModelImplementer> <http://www.w3.org/2000/01/rdf-schema#comment> "the entity that receives an AI model and specifies what computation to  execute (the implementation to use and on what compute resources, for example CPU, GPU, ASIC, FPGA). [Source ISO 22989]"@en .
+<https://w3id.org/airo#ModelImplementer> <http://www.w3.org/2000/01/rdf-schema#label> "Model Implementer"@en .
 # 
 # https://w3id.org/airo#ModelInversion
 <https://w3id.org/airo#ModelInversion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ModelInversion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Cyberattack> .
+<https://w3id.org/airo#ModelInversion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Attack> .
 <https://w3id.org/airo#ModelInversion> <http://www.w3.org/2000/01/rdf-schema#label> "Model Inversion"@en .
 # 
-# https://w3id.org/airo#NonDiscrimination
-<https://w3id.org/airo#NonDiscrimination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#NonDiscrimination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#FundamentalRight> .
-<https://w3id.org/airo#NonDiscrimination> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to EU Charter of Fundamental Rights, Art. 21"@en .
-<https://w3id.org/airo#NonDiscrimination> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Discrimination"@en .
+# https://w3id.org/airo#ModelVerifier
+<https://w3id.org/airo#ModelVerifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ModelVerifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AIDeveloper> .
+<https://w3id.org/airo#ModelVerifier> <http://www.w3.org/2000/01/rdf-schema#comment> "the entity that verifies that the AI model is performing as designed. [Source ISO 22989]"@en .
+<https://w3id.org/airo#ModelVerifier> <http://www.w3.org/2000/01/rdf-schema#label> "Model Verifier"@en .
+# 
+# https://w3id.org/airo#Monitoring
+<https://w3id.org/airo#Monitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Monitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Purpose> .
+# 
+# https://w3id.org/airo#MonitoringControl
+<https://w3id.org/airo#MonitoringControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#MonitoringControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#MonitoringControl> <http://www.w3.org/2000/01/rdf-schema#label> "Monitoring Control"@en .
+# 
+# https://w3id.org/airo#NarrowAI
+<https://w3id.org/airo#NarrowAI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#NarrowAI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AISystem> .
+<https://w3id.org/airo#NarrowAI> <http://www.w3.org/2000/01/rdf-schema#comment> "type of AI system that is focused on defined tasks to address a specific problem. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#NarrowAI> <http://www.w3.org/2000/01/rdf-schema#label> "Narrow AI"@en .
+# 
+# https://w3id.org/airo#NonRegulatedIndustry
+<https://w3id.org/airo#NonRegulatedIndustry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#NonRegulatedIndustry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Industry> .
+<https://w3id.org/airo#NonRegulatedIndustry> <http://www.w3.org/2000/01/rdf-schema#label> "Non Regulated Industry"@en .
+# 
+# https://w3id.org/airo#OperationalControl
+<https://w3id.org/airo#OperationalControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#OperationalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#OperationalControl> <http://www.w3.org/2000/01/rdf-schema#label> "Operational Control"@en .
+# 
+# https://w3id.org/airo#OrganisationalControl
+<https://w3id.org/airo#OrganisationalControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#OrganisationalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#OrganisationalControl> <http://www.w3.org/2000/01/rdf-schema#label> "Organisational Control"@en .
+# 
+# https://w3id.org/airo#OrganisationalSource
+<https://w3id.org/airo#OrganisationalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#OrganisationalSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Source> .
+# 
+# https://w3id.org/airo#OtherSubject
+<https://w3id.org/airo#OtherSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#OtherSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AISubject> .
+<https://w3id.org/airo#OtherSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Other Subject"@en .
+<https://w3id.org/airo#OtherSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Other organizations or entities impacted by an AI system, service or product can be for example in the  form of an individual or a community. For example, consumers who interacts with a social network that provides recommendations based on AI, drivers of vehicles with AI-based automation. [Source: ISO 22989]"@en .
 # 
 # https://w3id.org/airo#Output
 <https://w3id.org/airo#Output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Output> <http://www.w3.org/2000/01/rdf-schema#label> "Output"@en .
 # 
+# https://w3id.org/airo#OverReliance
+<https://w3id.org/airo#OverReliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#OverReliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnHuman> .
+<https://w3id.org/airo#OverReliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents tendency of automatically relying or over-relying on the output produced by an AI system"@en .
+<https://w3id.org/airo#OverReliance> <http://www.w3.org/2000/01/rdf-schema#label> "Over Reliance"@en .
+# 
 # https://w3id.org/airo#OverrideTheOutcome
 <https://w3id.org/airo#OverrideTheOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#OverrideTheOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#HumanOversightMeasure> .
+<https://w3id.org/airo#OverrideTheOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#CorrectionControl> .
 # 
 # https://w3id.org/airo#PartialControl
 <https://w3id.org/airo#PartialControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -690,15 +1105,20 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#PartialControl> <http://www.w3.org/2000/01/rdf-schema#label> "Partial Control"@en .
 # 
-# https://w3id.org/airo#PerformaceOfAISystem
-<https://w3id.org/airo#PerformaceOfAISystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#PerformaceOfAISystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
-<https://w3id.org/airo#PerformaceOfAISystem> <http://www.w3.org/2000/01/rdf-schema#comment> "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"@en .
-<https://w3id.org/airo#PerformaceOfAISystem> <http://www.w3.org/2000/01/rdf-schema#label> "Performance Of AI System"@en .
+# https://w3id.org/airo#PatternRecognition
+<https://w3id.org/airo#PatternRecognition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#PatternRecognition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Recognition> .
+<https://w3id.org/airo#PatternRecognition> <http://www.w3.org/2000/01/rdf-schema#label> "Pattern Recognition"@en .
+# 
+# https://w3id.org/airo#Performace
+<https://w3id.org/airo#Performace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Performace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Performace> <http://www.w3.org/2000/01/rdf-schema#comment> "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"@en .
+<https://w3id.org/airo#Performace> <http://www.w3.org/2000/01/rdf-schema#label> "Performance"@en .
 # 
 # https://w3id.org/airo#Person
 <https://w3id.org/airo#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Stakeholder> .
+<https://w3id.org/airo#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OtherSubject> .
 <https://w3id.org/airo#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
 # 
 # https://w3id.org/airo#PhysicalHealth
@@ -706,46 +1126,93 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/airo#PhysicalHealth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Health> .
 <https://w3id.org/airo#PhysicalHealth> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Health"@en .
 # 
+# https://w3id.org/airo#Planning
+<https://w3id.org/airo#Planning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Planning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+# 
+# https://w3id.org/airo#PolicyMaker
+<https://w3id.org/airo#PolicyMaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#PolicyMaker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Authority> .
+<https://w3id.org/airo#PolicyMaker> <http://www.w3.org/2000/01/rdf-schema#comment> "Policy makers are organizations and entities that have the authorities to set policies within an international, regional, national or industrial domain that can have an impact on an AI system, service or product. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#PolicyMaker> <http://www.w3.org/2000/01/rdf-schema#label> "Policy Maker"@en .
+# 
 # https://w3id.org/airo#PostRemoteBiometricIdentification
 <https://w3id.org/airo#PostRemoteBiometricIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#PostRemoteBiometricIdentification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RemoteBiometricIdentification> .
 # 
+# https://w3id.org/airo#Predictability
+<https://w3id.org/airo#Predictability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Predictability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Predictability> <http://www.w3.org/2000/01/rdf-schema#comment> "Property of an AI system that enables reliable assumptions by stakeholders  about the output. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Predictability> <http://www.w3.org/2000/01/rdf-schema#label> "Predictability"@en .
+# 
 # https://w3id.org/airo#PredictingRecidivism
 <https://w3id.org/airo#PredictingRecidivism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#PredictingRecidivism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingPrediction> .
+<https://w3id.org/airo#PredictingRecidivism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IndividualRiskAssessment> .
 <https://w3id.org/airo#PredictingRecidivism> <http://www.w3.org/2000/01/rdf-schema#comment> "predicting the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons or assessing personality traits and characteristics or past criminal behaviour of natural persons or groups"@en .
+<https://w3id.org/airo#PredictingRecidivism> <http://www.w3.org/2000/01/rdf-schema#label> "Predicting Recidivism"@en .
 # 
 # https://w3id.org/airo#Prediction
 <https://w3id.org/airo#Prediction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Prediction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Output> .
+<https://w3id.org/airo#Prediction> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents primary output of an AI system when provided with input data or information. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Prediction> <http://www.w3.org/2000/01/rdf-schema#label> "Prediction"@en .
+# 
+# https://w3id.org/airo#PreventionControl
+<https://w3id.org/airo#PreventionControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#PreventionControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#PreventionControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls with the purpose of eliminating an event from happening."@en .
+<https://w3id.org/airo#PreventionControl> <http://www.w3.org/2000/01/rdf-schema#label> "Preventation Control"@en .
+# 
+# https://w3id.org/airo#PrioritisationOfEmergencyService
+<https://w3id.org/airo#PrioritisationOfEmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#PrioritisationOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Planning> .
+<https://w3id.org/airo#PrioritisationOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#label> "Prioritisation Of Emergency Service"@en .
 # 
 # https://w3id.org/airo#PrivacyPreservingMeasure
 <https://w3id.org/airo#PrivacyPreservingMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#PrivacyPreservingMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#PrivacyPreservingMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TechnicalControl> .
+<https://w3id.org/airo#PrivacyPreservingMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy Preserving Measure"@en .
 # 
 # https://w3id.org/airo#ProducingRecommendation
 <https://w3id.org/airo#ProducingRecommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ProducingRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#ProducingRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Purpose> .
 <https://w3id.org/airo#ProducingRecommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Producing Recommendation"@en .
 # 
 # https://w3id.org/airo#Profiling
 <https://w3id.org/airo#Profiling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Profiling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#IntendedPurpose> .
+<https://w3id.org/airo#Profiling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
 <https://w3id.org/airo#Profiling> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to profiling of natural persons in the course of detection, investigation or prosecution of criminal offences."@en .
 # 
-# https://w3id.org/airo#ProvidingInstructionForUse
-<https://w3id.org/airo#ProvidingInstructionForUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ProvidingInstructionForUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+# https://w3id.org/airo#PropertyDamage
+<https://w3id.org/airo#PropertyDamage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#PropertyDamage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnFacility> .
+<https://w3id.org/airo#PropertyDamage> <http://www.w3.org/2000/01/rdf-schema#label> "Property Damage"@en .
+# 
+# https://w3id.org/airo#ProvidingInstructionOfUse
+<https://w3id.org/airo#ProvidingInstructionOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ProvidingInstructionOfUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#OrganisationalControl> .
+<https://w3id.org/airo#ProvidingInstructionOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Providing Instruction Of Use"@en .
 # 
 # https://w3id.org/airo#PsychologicalHarm
 <https://w3id.org/airo#PsychologicalHarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#PsychologicalHarm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Impact> .
+<https://w3id.org/airo#PsychologicalHarm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ImpactOnHuman> .
 <https://w3id.org/airo#PsychologicalHarm> <http://www.w3.org/2000/01/rdf-schema#label> "Psychological Harm"@en .
 # 
 # https://w3id.org/airo#PsychologicalHealth
 <https://w3id.org/airo#PsychologicalHealth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#PsychologicalHealth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Health> .
 <https://w3id.org/airo#PsychologicalHealth> <http://www.w3.org/2000/01/rdf-schema#label> "Psychological Health"@en .
+# 
+# https://w3id.org/airo#PublicAssistanceEligibilityAssessment
+<https://w3id.org/airo#PublicAssistanceEligibilityAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#PublicAssistanceEligibilityAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Assessment> .
+<https://w3id.org/airo#PublicAssistanceEligibilityAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Public Assistance Eligibility Assessment"@en .
+# 
+# https://w3id.org/airo#Purpose
+<https://w3id.org/airo#Purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"@en .
+<https://w3id.org/airo#Purpose> <http://www.w3.org/2000/01/rdf-schema#label> "Purpose"@en .
 # 
 # https://w3id.org/airo#RealTimeRemoteBiometricIdentification
 <https://w3id.org/airo#RealTimeRemoteBiometricIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -757,19 +1224,53 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/airo#ReasonablyForseeableMisue> <http://www.w3.org/2000/01/rdf-schema#comment> "use of an AI system in a way that is not in accordance with its intended purpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems [Source: AI Act, Article 3(13)]"@en .
 <https://w3id.org/airo#ReasonablyForseeableMisue> <http://www.w3.org/2000/01/rdf-schema#label> "Reasonably Forseeable Misuse"@en .
 # 
+# https://w3id.org/airo#Recognition
+<https://w3id.org/airo#Recognition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Recognition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+# 
 # https://w3id.org/airo#Recommendation
 <https://w3id.org/airo#Recommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#Recommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Output> .
+<https://w3id.org/airo#Recommendation> <http://www.w3.org/2000/01/rdf-schema#label> "Recommendation"@en .
+# 
+# https://w3id.org/airo#RegulatedIndustry
+<https://w3id.org/airo#RegulatedIndustry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#RegulatedIndustry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Industry> .
+<https://w3id.org/airo#RegulatedIndustry> <http://www.w3.org/2000/01/rdf-schema#label> "Regulated Industry"@en .
+# 
+# https://w3id.org/airo#Regulator
+<https://w3id.org/airo#Regulator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Regulator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Authority> .
+<https://w3id.org/airo#Regulator> <http://www.w3.org/2000/01/rdf-schema#comment> "Regulators are organizations and entities that have the authorities to set, implement and enforce the legal requirements as intended in policies set forth by policy makers. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Regulator> <http://www.w3.org/2000/01/rdf-schema#label> "Regulator"@en .
+# 
+# https://w3id.org/airo#Reliability
+<https://w3id.org/airo#Reliability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Reliability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Reliability> <http://www.w3.org/2000/01/rdf-schema#comment> "Property of consistent intended behaviour and results. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Reliability> <http://www.w3.org/2000/01/rdf-schema#label> "Reliability"@en .
 # 
 # https://w3id.org/airo#RemoteBiometricIdentification
 <https://w3id.org/airo#RemoteBiometricIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/airo#RemoteBiometricIdentification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#BiometricIdnetification> .
 <https://w3id.org/airo#RemoteBiometricIdentification> <http://www.w3.org/2000/01/rdf-schema#comment> "the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database"@en .
-<https://w3id.org/airo#RemoteBiometricIdentification> <http://www.w3.org/2000/01/rdf-schema#label> "Remote Biometric Identification Of Natural Persons"@en .
+<https://w3id.org/airo#RemoteBiometricIdentification> <http://www.w3.org/2000/01/rdf-schema#label> "Remote Biometric Identification"@en .
+# 
+# https://w3id.org/airo#Resilience
+<https://w3id.org/airo#Resilience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Resilience> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Resilience> <http://www.w3.org/2000/01/rdf-schema#comment> "Ability of a system to recover operational condition quickly following an incident. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Resilience> <http://www.w3.org/2000/01/rdf-schema#label> "Resilience"@en .
 # 
 # https://w3id.org/airo#ReverseTheOutcome
 <https://w3id.org/airo#ReverseTheOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ReverseTheOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#HumanOversightMeasure> .
+<https://w3id.org/airo#ReverseTheOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#CorrectionControl> .
+# 
+# https://w3id.org/airo#Reversiblity
+<https://w3id.org/airo#Reversiblity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Reversiblity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Reversiblity> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the extent to which the outcome produced with an AI system is easily reversible."@en .
+<https://w3id.org/airo#Reversiblity> <http://www.w3.org/2000/01/rdf-schema#label> "Reversibility"@en .
 # 
 # https://w3id.org/airo#Risk
 <https://w3id.org/airo#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -777,17 +1278,16 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/airo#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a risk (of harm) associated with an AI system."@en .
 <https://w3id.org/airo#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk"@en .
 # 
-# https://w3id.org/airo#RiskConsequence
-<https://w3id.org/airo#RiskConsequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#RiskConsequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Event> .
-<https://w3id.org/airo#RiskConsequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"@en .
-<https://w3id.org/airo#RiskConsequence> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Consequence"@en .
+# https://w3id.org/airo#RiskIndicator
+<https://w3id.org/airo#RiskIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#RiskIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
+<https://w3id.org/airo#RiskIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Indicator"@en .
 # 
-# https://w3id.org/airo#RiskSource
-<https://w3id.org/airo#RiskSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#RiskSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Event> .
-<https://w3id.org/airo#RiskSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an element that has the potential give rise to a risk."@en .
-<https://w3id.org/airo#RiskSource> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Source"@en .
+# https://w3id.org/airo#Robustness
+<https://w3id.org/airo#Robustness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Robustness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Robustness> <http://www.w3.org/2000/01/rdf-schema#comment> "Ability of a system to maintain its level of performance under any circumstances. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Robustness> <http://www.w3.org/2000/01/rdf-schema#label> "Robustness"@en .
 # 
 # https://w3id.org/airo#Safety
 <https://w3id.org/airo#Safety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -799,81 +1299,138 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/airo#Security> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#HealthAndSafety> .
 <https://w3id.org/airo#Security> <http://www.w3.org/2000/01/rdf-schema#label> "Security"@en .
 # 
+# https://w3id.org/airo#SemiAutomatedControl
+<https://w3id.org/airo#SemiAutomatedControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#SemiAutomatedControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#SemiAutomatedControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represnets controls that comprise a combination of automated and manual controls."@en .
+<https://w3id.org/airo#SemiAutomatedControl> <http://www.w3.org/2000/01/rdf-schema#label> "Semi Automated Control"@en .
+# 
 # https://w3id.org/airo#SeriousIncident
 <https://w3id.org/airo#SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Source> .
 <https://w3id.org/airo#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "any incident that directly or indirectly leads, might have led or might lead to : (a) the death of a person or serious damage to a person’s health, to property or the environment, (b) a serious and irreversible disruption of the management and operation of critical infrastructure [Source: AI Act, Articl3 3(44)]"@en .
 <https://w3id.org/airo#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Serious Incident"@en .
 # 
 # https://w3id.org/airo#Severity
 <https://w3id.org/airo#Severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Severity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Indicator> .
-<https://w3id.org/airo#Severity> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/airo#Severity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskIndicator> .
 <https://w3id.org/airo#Severity> <http://www.w3.org/2000/01/rdf-schema#label> "Severity"@en .
+# 
+# https://w3id.org/airo#Source
+<https://w3id.org/airo#Source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Source> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Event> .
+<https://w3id.org/airo#Source> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an element that has the potential give rise to a risk."@en .
+<https://w3id.org/airo#Source> <http://www.w3.org/2000/01/rdf-schema#label> "Source"@en .
 # 
 # https://w3id.org/airo#Stakeholder
 <https://w3id.org/airo#Stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "Any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity[Source: ISO/IEC TR 24028, 3.37]"@en .
+<https://w3id.org/airo#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity [Source: ISO/IEC TR 24028, 3.37]"@en .
 <https://w3id.org/airo#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "Stakeholder"@en .
 # 
 # https://w3id.org/airo#StatisticalApproach
 <https://w3id.org/airo#StatisticalApproach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#StatisticalApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiTechnique> .
+<https://w3id.org/airo#StatisticalApproach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AITechnique> .
 <https://w3id.org/airo#StatisticalApproach> <http://www.w3.org/2000/01/rdf-schema#label> "Statistical Approach"@en .
 # 
 # https://w3id.org/airo#StudentAssessment
 <https://w3id.org/airo#StudentAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#StudentAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#MakingDecision> .
+<https://w3id.org/airo#StudentAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#EducationRelatedAssessment> .
 <https://w3id.org/airo#StudentAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the purpose of assessing students in educational and vocational training institutions and for assessing participants in tests commonly required for admission to educational institutions."@en .
 <https://w3id.org/airo#StudentAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Student Assessment"@en .
 # 
 # https://w3id.org/airo#SubliminalTechnique
 <https://w3id.org/airo#SubliminalTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#SubliminalTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#SubliminalTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#SystemSource> .
 <https://w3id.org/airo#SubliminalTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "deploying subliminal techniques beyond a person’s consciousness in order to materially distort a person’s behaviour in a manner that causes or is likely to cause that person or another person physical or psychological harm"@en .
 <https://w3id.org/airo#SubliminalTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Subliminal Technique"@en .
 # 
-# https://w3id.org/airo#TestingData
-<https://w3id.org/airo#TestingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#TestingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiSystemComponent> .
-<https://w3id.org/airo#TestingData> <http://www.w3.org/2000/01/rdf-schema#comment> "data used for providing an independent evaluation of the trained and validated AI system in order to confirm the expected performance of that system before its placing on the market or putting into service [Source: AI Act, Article 3(31)]"@en .
-<https://w3id.org/airo#TestingData> <http://www.w3.org/2000/01/rdf-schema#label> "Testing Data"@en .
+# https://w3id.org/airo#SystemSource
+<https://w3id.org/airo#SystemSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#SystemSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Source> .
 # 
-# https://w3id.org/airo#TrainingData
-<https://w3id.org/airo#TrainingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#TrainingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiSystemComponent> .
-<https://w3id.org/airo#TrainingData> <http://www.w3.org/2000/01/rdf-schema#comment> "data used for training an AI system through fitting its learnable parameters, including the weights of a neural network [Source: AI Act, Article 3(29)]"@en .
-<https://w3id.org/airo#TrainingData> <http://www.w3.org/2000/01/rdf-schema#label> "Training Data"@en .
+# https://w3id.org/airo#TaskAllocation
+<https://w3id.org/airo#TaskAllocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#TaskAllocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Planning> .
+<https://w3id.org/airo#TaskAllocation> <http://www.w3.org/2000/01/rdf-schema#label> "Task Allocation"@en .
+# 
+# https://w3id.org/airo#TechnicalControl
+<https://w3id.org/airo#TechnicalControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#TechnicalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#TechnicalControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls that are implemented using a technology."@en .
+<https://w3id.org/airo#TechnicalControl> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Control"@en .
+# 
+# https://w3id.org/airo#TestingDataRelatedSource
+<https://w3id.org/airo#TestingDataRelatedSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#TestingDataRelatedSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
+# 
+# https://w3id.org/airo#TrainingDataRelatedSource
+<https://w3id.org/airo#TrainingDataRelatedSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#TrainingDataRelatedSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
+# 
+# https://w3id.org/airo#Transparency
+<https://w3id.org/airo#Transparency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Transparency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Transparency> <http://www.w3.org/2000/01/rdf-schema#comment> "Property of a system that appropriate information about the system is made available to  relevant stakeholders. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Transparency> <http://www.w3.org/2000/01/rdf-schema#label> "Transparency"@en .
+# 
+# https://w3id.org/airo#Transportation
+<https://w3id.org/airo#Transportation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Transportation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RegulatedIndustry> .
+# 
+# https://w3id.org/airo#Travel
+<https://w3id.org/airo#Travel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Travel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#NonRegulatedIndustry> .
+# 
+# https://w3id.org/airo#Trustworthiness
+<https://w3id.org/airo#Trustworthiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#Trustworthiness> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiIndicator> .
+<https://w3id.org/airo#Trustworthiness> <http://www.w3.org/2000/01/rdf-schema#label> "Ability to meet stakeholder expectations in a verifiable way. [Source: ISO 22989]"@en .
+<https://w3id.org/airo#Trustworthiness> <http://www.w3.org/2000/01/rdf-schema#label> "Trustworthiness"@en .
 # 
 # https://w3id.org/airo#UnavailabilityOfDataSet
 <https://w3id.org/airo#UnavailabilityOfDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#UnavailabilityOfDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#UnavailabilityOfDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
 # 
 # https://w3id.org/airo#UnrepresentativeTestingDataSet
 <https://w3id.org/airo#UnrepresentativeTestingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#UnrepresentativeTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#UnrepresentativeTestingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TestingDataRelatedSource> .
 # 
 # https://w3id.org/airo#UnrepresentativeTrainingDataSet
 <https://w3id.org/airo#UnrepresentativeTrainingDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#UnrepresentativeTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#UnrepresentativeTrainingDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#TrainingDataRelatedSource> .
 # 
 # https://w3id.org/airo#UnrepresentativeValidationDataSet
 <https://w3id.org/airo#UnrepresentativeValidationDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#UnrepresentativeValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#UnrepresentativeValidationDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#ValidationDataRelatedSource> .
 # 
 # https://w3id.org/airo#UserTraining
 <https://w3id.org/airo#UserTraining> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#UserTraining> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Measure> .
+<https://w3id.org/airo#UserTraining> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#PreventionControl> .
+<https://w3id.org/airo#UserTraining> <http://www.w3.org/2000/01/rdf-schema#label> "User Training"@en .
 # 
-# https://w3id.org/airo#ValidationData
-<https://w3id.org/airo#ValidationData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#ValidationData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#AiSystemComponent> .
-<https://w3id.org/airo#ValidationData> <http://www.w3.org/2000/01/rdf-schema#comment> "data used for providing an evaluation of the trained AI system and for tuning its non-learnable parameters and its learning process, among other things, in order to prevent overfitting; whereas the validation dataset can be a separate dataset or part of the training dataset, either as a fixed or variable split [Source: AI Act, Article 3(30)]"@en .
-<https://w3id.org/airo#ValidationData> <http://www.w3.org/2000/01/rdf-schema#label> "Validation Data"@en .
+# https://w3id.org/airo#ValidationDataRelatedSource
+<https://w3id.org/airo#ValidationDataRelatedSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#ValidationDataRelatedSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
+# 
+# https://w3id.org/airo#VerifyingAuthenticity
+<https://w3id.org/airo#VerifyingAuthenticity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#VerifyingAuthenticity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#Assessment> .
+<https://w3id.org/airo#VerifyingAuthenticity> <http://www.w3.org/2000/01/rdf-schema#label> "Verifying Authenticity"@en .
+# 
+# https://w3id.org/airo#VerifyingAuthenticityOfTravelDocument
+<https://w3id.org/airo#VerifyingAuthenticityOfTravelDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#VerifyingAuthenticityOfTravelDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#VerifyingAuthenticity> .
+<https://w3id.org/airo#VerifyingAuthenticityOfTravelDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Verifying Authenticity Of Travel Document"@en .
 # 
 # https://w3id.org/airo#VulnerablePosition
 <https://w3id.org/airo#VulnerablePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#VulnerablePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the extent to which potentially harmed or adversely impacted persons are in a vulnerable position due to an imbalance of power, knowledge, economic or social circumstances, or age. [Source: AI Act]"@en .
 <https://w3id.org/airo#VulnerablePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Vulnerable Position"@en .
+# 
+# https://w3id.org/airo#WaterSupply
+<https://w3id.org/airo#WaterSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/airo#WaterSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RegulatedIndustry> .
+<https://w3id.org/airo#WaterSupply> <http://www.w3.org/2000/01/rdf-schema#label> "Water Supply"@en .
 # 
 # https://w3id.org/airo#Welfare
 <https://w3id.org/airo#Welfare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -882,11 +1439,11 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/airo#WrongDataSetDesignChoice
 <https://w3id.org/airo#WrongDataSetDesignChoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#WrongDataSetDesignChoice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataGovernanceRelatedRiskSource> .
+<https://w3id.org/airo#WrongDataSetDesignChoice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#DataSetRelatedSource> .
 # 
 # https://w3id.org/airo#vulnerability
 <https://w3id.org/airo#vulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/airo#vulnerability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#RiskSource> .
+<https://w3id.org/airo#vulnerability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/airo#SystemSource> .
 <https://w3id.org/airo#vulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"@en .
 <https://w3id.org/airo#vulnerability> <http://www.w3.org/2000/01/rdf-schema#label> "Vulnerability"@en .
 # 
@@ -913,32 +1470,5 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#Recommendation> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-# 
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid16 <http://www.w3.org/2002/07/owl#members> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#GeneratingContent> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#MakingDecision> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#MakingPrediction> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#ProducingRecommendation> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-# 
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid21 <http://www.w3.org/2002/07/owl#members> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#TestingData> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#TrainingData> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/airo#ValidationData> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
