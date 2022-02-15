@@ -54,6 +54,13 @@ airo:eliminatesEvent rdf:type owl:ObjectProperty ;
                      rdfs:label "eliminates event"@en .
 
 
+###  https://w3id.org/airo#hasAIIndicator
+airo:hasAIIndicator rdf:type owl:ObjectProperty ;
+                    rdfs:domain airo:AISystem ;
+                    rdfs:range airo:AiIndicator ;
+                    rdfs:label "has AI indicator"@en .
+
+
 ###  https://w3id.org/airo#hasComponent
 airo:hasComponent rdf:type owl:ObjectProperty ;
                   owl:inverseOf airo:isPartOfAISystem ;
@@ -69,18 +76,19 @@ airo:hasConsequence rdf:type owl:ObjectProperty ;
                     rdfs:label "has consequence"@en .
 
 
-###  https://w3id.org/airo#hasExtentOfUseIndicator
-airo:hasExtentOfUseIndicator rdf:type owl:ObjectProperty ;
-                             rdfs:domain airo:AISystem ;
-                             rdfs:range airo:ExtentOfUse .
-
-
 ###  https://w3id.org/airo#hasImpact
 airo:hasImpact rdf:type owl:ObjectProperty ;
                owl:inverseOf airo:isImpactOf ;
                rdfs:domain airo:Consequence ;
                rdfs:range airo:Impact ;
                rdfs:label "has impact"@en .
+
+
+###  https://w3id.org/airo#hasImpactOnAISubject
+airo:hasImpactOnAISubject rdf:type owl:ObjectProperty ;
+                          rdfs:domain airo:Impact ;
+                          rdfs:range airo:AISubject ;
+                          rdfs:label "has impact on AI subject"@en .
 
 
 ###  https://w3id.org/airo#hasImpactOnArea
@@ -90,25 +98,12 @@ airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
                      rdfs:label "has impact on area"@en .
 
 
-###  https://w3id.org/airo#hasImpactOnStakeholder
-airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
-                            rdfs:domain airo:Impact ;
-                            rdfs:range airo:AISubject ;
-                            rdfs:label "has impact on stakeholder"@en .
-
-
 ###  https://w3id.org/airo#hasLikelihood
 airo:hasLikelihood rdf:type owl:ObjectProperty ;
                    rdfs:domain airo:Event ;
                    rdfs:range airo:LikelihoodRate ;
                    rdfs:label "Indicates the probability of occurrence of an event."@en ,
                               "has likelihood"@en .
-
-
-###  https://w3id.org/airo#hasPerformanceIndicator
-airo:hasPerformanceIndicator rdf:type owl:ObjectProperty ;
-                             rdfs:domain airo:AISystem ;
-                             rdfs:range airo:Performace .
 
 
 ###  https://w3id.org/airo#hasPurpose
@@ -163,6 +158,13 @@ airo:hasVulnerability rdf:type owl:ObjectProperty ;
                       rdfs:label "has vulnerability"@en .
 
 
+###  https://w3id.org/airo#impactsAISystem
+airo:impactsAISystem rdf:type owl:ObjectProperty ;
+                     rdfs:domain airo:Authority ;
+                     rdfs:range airo:AISystem ;
+                     rdfs:label "impacts AI system"@en .
+
+
 ###  https://w3id.org/airo#isConsequenceOf
 airo:isConsequenceOf rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Consequence ;
@@ -170,11 +172,25 @@ airo:isConsequenceOf rdf:type owl:ObjectProperty ;
                      rdfs:label "is consequence of"@en .
 
 
+###  https://w3id.org/airo#isExtentOfUseOf
+airo:isExtentOfUseOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain airo:ExtentOfUse ;
+                     rdfs:range airo:AISystem ;
+                     rdfs:label "is extent of use of"@en .
+
+
 ###  https://w3id.org/airo#isFollowedByControl
 airo:isFollowedByControl rdf:type owl:ObjectProperty ;
                          rdfs:domain airo:Measure ;
                          rdfs:range airo:Measure ;
                          rdfs:label "is followed by control"@en .
+
+
+###  https://w3id.org/airo#isImpactByAISystem
+airo:isImpactByAISystem rdf:type owl:ObjectProperty ;
+                        rdfs:domain airo:AISubject ;
+                        rdfs:range airo:AISystem ;
+                        rdfs:label "is impacted by AI system"@en .
 
 
 ###  https://w3id.org/airo#isImpactOf
@@ -210,6 +226,13 @@ airo:isPartOfControl rdf:type owl:ObjectProperty ;
                      rdfs:label "is part of control"@en .
 
 
+###  https://w3id.org/airo#isPerformanceOf
+airo:isPerformanceOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain airo:Performace ;
+                     rdfs:range airo:AISystem ;
+                     rdfs:label "is performance of"@en .
+
+
 ###  https://w3id.org/airo#isPurposeOf
 airo:isPurposeOf rdf:type owl:ObjectProperty ;
                  rdfs:domain airo:Purpose ;
@@ -243,6 +266,11 @@ airo:isUsedInIndustry rdf:type owl:ObjectProperty ;
                       rdfs:label "is used in industry"@en .
 
 
+###  https://w3id.org/airo#isVulnerabilityOfStakeholder
+airo:isVulnerabilityOfStakeholder rdf:type owl:ObjectProperty ;
+                                  rdfs:label "is Vulnerability Of Stakeholder"@en .
+
+
 ###  https://w3id.org/airo#mitigatesEvent
 airo:mitigatesEvent rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf airo:modifiesEvent ;
@@ -262,11 +290,25 @@ airo:monitorsEvent rdf:type owl:ObjectProperty ;
                    rdfs:label "monitors event"@en .
 
 
+###  https://w3id.org/airo#producesAISystem
+airo:producesAISystem rdf:type owl:ObjectProperty ;
+                      rdfs:domain airo:AIProducer ;
+                      rdfs:range airo:AISystem ;
+                      rdfs:label "produces AI system"@en .
+
+
 ###  https://w3id.org/airo#producesOutput
 airo:producesOutput rdf:type owl:ObjectProperty ;
                     rdfs:domain airo:AISystem ;
                     rdfs:range airo:Output ;
                     rdfs:label "produces output"@en .
+
+
+###  https://w3id.org/airo#usesAISystem
+airo:usesAISystem rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AICustomer ;
+                  rdfs:range airo:AISystem ;
+                  rdfs:label "uses AI system"@en .
 
 
 ###  https://w3id.org/airo#usesTechnique
@@ -353,8 +395,8 @@ airo:AIProvider rdf:type owl:Class ;
 ###  https://w3id.org/airo#AIServiceProvider
 airo:AIServiceProvider rdf:type owl:Class ;
                        rdfs:subClassOf airo:AIProvider ;
-                       rdfs:label "AI Service Provider"@en ,
-                                  "An AI service provider is an organization or entity that provides AI services  either  directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]"@en .
+                       rdfs:comment "An AI service provider is an organization or entity that provides AI services  either  directly usable by an AI customer or user, or to be integrated into a system using AI along with non-AI components. [Source: ISO 22989]"@en ;
+                       rdfs:label "AI Service Provider"@en .
 
 
 ###  https://w3id.org/airo#AISubject
@@ -473,9 +515,16 @@ airo:Aviation rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Bias
 airo:Bias rdf:type owl:Class ;
-          rdfs:subClassOf airo:BiasRelatedConsequence ;
+          rdfs:subClassOf airo:BiasConsequence ;
           rdfs:comment "Systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989]"@en ;
           rdfs:label "Bias"@en .
+
+
+###  https://w3id.org/airo#BiasConsequence
+airo:BiasConsequence rdf:type owl:Class ;
+                     rdfs:subClassOf airo:Consequence ;
+                     rdfs:comment "Represents consequences related to bias."@en ;
+                     rdfs:label "Bias Consequence"@en .
 
 
 ###  https://w3id.org/airo#BiasDetection
@@ -488,13 +537,6 @@ airo:BiasDetection rdf:type owl:Class ;
 airo:BiasMonitoring rdf:type owl:Class ;
                     rdfs:subClassOf airo:MonitoringControl ;
                     rdfs:label "Bias Monitoring"@en .
-
-
-###  https://w3id.org/airo#BiasRelatedConsequence
-airo:BiasRelatedConsequence rdf:type owl:Class ;
-                            rdfs:subClassOf airo:Consequence ;
-                            rdfs:comment "Represents consequences related to bias."@en ;
-                            rdfs:label "Bias Related Consequence"@en .
 
 
 ###  https://w3id.org/airo#BiasedTestingDataSet
@@ -611,7 +653,8 @@ airo:DataProvider rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#DataSetRelatedSource
 airo:DataSetRelatedSource rdf:type owl:Class ;
-                          rdfs:subClassOf airo:Source .
+                          rdfs:subClassOf airo:Source ;
+                          rdfs:label "Data Set Related Source"@en .
 
 
 ###  https://w3id.org/airo#DataSubject
@@ -633,19 +676,9 @@ airo:Decision rdf:type owl:Class ;
               rdfs:label "Decision"@en .
 
 
-###  https://w3id.org/airo#DecreasedLevelOfAccuracy
-airo:DecreasedLevelOfAccuracy rdf:type owl:Class ;
-                              rdfs:subClassOf airo:IndicatorRelatedConsequence .
-
-
-###  https://w3id.org/airo#DecreasedLevelOfRobustness
-airo:DecreasedLevelOfRobustness rdf:type owl:Class ;
-                                rdfs:subClassOf airo:IndicatorRelatedConsequence .
-
-
 ###  https://w3id.org/airo#DecreasedLevelOfSecurity
 airo:DecreasedLevelOfSecurity rdf:type owl:Class ;
-                              rdfs:subClassOf airo:IndicatorRelatedConsequence .
+                              rdfs:subClassOf airo:PerformaceConsequence .
 
 
 ###  https://w3id.org/airo#DeepFakeDetection
@@ -656,7 +689,7 @@ airo:DeepFakeDetection rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#DegradedPerformance
 airo:DegradedPerformance rdf:type owl:Class ;
-                         rdfs:subClassOf airo:IndicatorRelatedConsequence .
+                         rdfs:subClassOf airo:PerformaceConsequence .
 
 
 ###  https://w3id.org/airo#Detection
@@ -685,7 +718,7 @@ airo:DispatchingEmergencyService rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#DisruptionOfOperationOfCriticalInfrastructure
 airo:DisruptionOfOperationOfCriticalInfrastructure rdf:type owl:Class ;
-                                                   rdfs:subClassOf airo:ImpactOnFacility ;
+                                                   rdfs:subClassOf airo:DistruptionOfOperation ;
                                                    rdfs:label "Disruption Of Operation Of Critical Infrastructure"@en .
 
 
@@ -693,6 +726,11 @@ airo:DisruptionOfOperationOfCriticalInfrastructure rdf:type owl:Class ;
 airo:DistortionInHumanBehaviour rdf:type owl:Class ;
                                 rdfs:subClassOf airo:ImpactOnHuman ;
                                 rdfs:label "Distortion In Human Behaviour"@en .
+
+
+###  https://w3id.org/airo#DistruptionOfOperation
+airo:DistruptionOfOperation rdf:type owl:Class ;
+                            rdfs:subClassOf airo:ImpactOnFacility .
 
 
 ###  https://w3id.org/airo#Education
@@ -710,6 +748,7 @@ airo:EducationRelatedAssessment rdf:type owl:Class ;
 ###  https://w3id.org/airo#EliminationControl
 airo:EliminationControl rdf:type owl:Class ;
                         rdfs:subClassOf airo:Measure ;
+                        rdfs:comment "Represents controls that applied to eliminate an event from happening."@en ;
                         rdfs:label "Elimination Control"@en .
 
 
@@ -965,14 +1004,10 @@ airo:Indicator rdf:type owl:Class ;
                rdfs:label "Indicator"@en .
 
 
-###  https://w3id.org/airo#IndicatorRelatedConsequence
-airo:IndicatorRelatedConsequence rdf:type owl:Class ;
-                                 rdfs:subClassOf airo:Consequence .
-
-
 ###  https://w3id.org/airo#IndicatorRelatedSource
 airo:IndicatorRelatedSource rdf:type owl:Class ;
-                            rdfs:subClassOf airo:Source .
+                            rdfs:subClassOf airo:Source ;
+                            rdfs:label "Indicator Related Source"@en .
 
 
 ###  https://w3id.org/airo#IndividualRiskAssessment
@@ -1100,6 +1135,12 @@ airo:LogicBasedApproach rdf:type owl:Class ;
                         rdfs:label "Logic Based Approach"@en .
 
 
+###  https://w3id.org/airo#LowAccuracy
+airo:LowAccuracy rdf:type owl:Class ;
+                 rdfs:subClassOf airo:PerformaceConsequence ;
+                 rdfs:label "Low Accuracy"@en .
+
+
 ###  https://w3id.org/airo#LowLevelOfAccuracy
 airo:LowLevelOfAccuracy rdf:type owl:Class ;
                         rdfs:subClassOf airo:IndicatorRelatedSource ;
@@ -1109,6 +1150,12 @@ airo:LowLevelOfAccuracy rdf:type owl:Class ;
 ###  https://w3id.org/airo#LowLevelOfRobustness
 airo:LowLevelOfRobustness rdf:type owl:Class ;
                           rdfs:subClassOf airo:IndicatorRelatedSource .
+
+
+###  https://w3id.org/airo#LowRobustness
+airo:LowRobustness rdf:type owl:Class ;
+                   rdfs:subClassOf airo:PerformaceConsequence ;
+                   rdfs:label "Low Robustness"@en .
 
 
 ###  https://w3id.org/airo#MachineLearningApproach
@@ -1227,7 +1274,7 @@ airo:MonitoringControl rdf:type owl:Class ;
 ###  https://w3id.org/airo#NarrowAI
 airo:NarrowAI rdf:type owl:Class ;
               rdfs:subClassOf airo:AISystem ;
-              rdfs:comment "type of AI system that is focused on defined tasks to address a specific problem. [Source: ISO 22989]"@en ;
+              rdfs:comment "Represents type of AI system that is focused on defined tasks to address a specific problem. [Source: ISO 22989]"@en ;
               rdfs:label "Narrow AI"@en .
 
 
@@ -1251,14 +1298,15 @@ airo:OrganisationalControl rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#OrganisationalSource
 airo:OrganisationalSource rdf:type owl:Class ;
-                          rdfs:subClassOf airo:Source .
+                          rdfs:subClassOf airo:Source ;
+                          rdfs:label "Organisational Source"@en .
 
 
 ###  https://w3id.org/airo#OtherSubject
 airo:OtherSubject rdf:type owl:Class ;
                   rdfs:subClassOf airo:AISubject ;
-                  rdfs:label "Other Subject"@en ,
-                             "Other organizations or entities impacted by an AI system, service or product can be for example in the  form of an individual or a community. For example, consumers who interacts with a social network that provides recommendations based on AI, drivers of vehicles with AI-based automation. [Source: ISO 22989]"@en .
+                  rdfs:label "Organizations or entities impacted by an AI system, service or product can be for example in the  form of an individual or a community. For example, consumers who interacts with a social network that provides recommendations based on AI, drivers of vehicles with AI-based automation. [Source: ISO 22989]"@en ,
+                             "Other Subject"@en .
 
 
 ###  https://w3id.org/airo#Output
@@ -1302,6 +1350,12 @@ airo:Performace rdf:type owl:Class ;
                 rdfs:subClassOf airo:AiIndicator ;
                 rdfs:comment "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"@en ;
                 rdfs:label "Performance"@en .
+
+
+###  https://w3id.org/airo#PerformaceConsequence
+airo:PerformaceConsequence rdf:type owl:Class ;
+                           rdfs:subClassOf airo:Consequence ;
+                           rdfs:label "Performance Consequence"@en .
 
 
 ###  https://w3id.org/airo#Person
@@ -1357,8 +1411,8 @@ airo:Prediction rdf:type owl:Class ;
 ###  https://w3id.org/airo#PreventionControl
 airo:PreventionControl rdf:type owl:Class ;
                        rdfs:subClassOf airo:Measure ;
-                       rdfs:comment "Represents controls with the purpose of eliminating an event from happening."@en ;
-                       rdfs:label "Preventation Control"@en .
+                       rdfs:comment "Control applied to reduce likelihood or severity of the risk, consequence or impact."@en ;
+                       rdfs:label "Mitigation Control"@en .
 
 
 ###  https://w3id.org/airo#PrioritisationOfEmergencyService
@@ -1570,14 +1624,15 @@ airo:StudentAssessment rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#SubliminalTechnique
 airo:SubliminalTechnique rdf:type owl:Class ;
-                         rdfs:subClassOf airo:SystemSource ;
+                         rdfs:subClassOf airo:SystemRelatedSource ;
                          rdfs:comment "deploying subliminal techniques beyond a person’s consciousness in order to materially distort a person’s behaviour in a manner that causes or is likely to cause that person or another person physical or psychological harm"@en ;
                          rdfs:label "Subliminal Technique"@en .
 
 
-###  https://w3id.org/airo#SystemSource
-airo:SystemSource rdf:type owl:Class ;
-                  rdfs:subClassOf airo:Source .
+###  https://w3id.org/airo#SystemRelatedSource
+airo:SystemRelatedSource rdf:type owl:Class ;
+                         rdfs:subClassOf airo:Source ;
+                         rdfs:label "System Related Source"@en .
 
 
 ###  https://w3id.org/airo#TaskAllocation
@@ -1596,6 +1651,12 @@ airo:TechnicalControl rdf:type owl:Class ;
 ###  https://w3id.org/airo#TestingDataRelatedSource
 airo:TestingDataRelatedSource rdf:type owl:Class ;
                               rdfs:subClassOf airo:DataSetRelatedSource .
+
+
+###  https://w3id.org/airo#Training
+airo:Training rdf:type owl:Class ;
+              rdfs:subClassOf airo:OrganisationalControl ;
+              rdfs:label "Training"@en .
 
 
 ###  https://w3id.org/airo#TrainingDataRelatedSource
@@ -1647,10 +1708,10 @@ airo:UnrepresentativeValidationDataSet rdf:type owl:Class ;
                                        rdfs:subClassOf airo:ValidationDataRelatedSource .
 
 
-###  https://w3id.org/airo#UserTraining
-airo:UserTraining rdf:type owl:Class ;
-                  rdfs:subClassOf airo:PreventionControl ;
-                  rdfs:label "User Training"@en .
+###  https://w3id.org/airo#UserIndicator
+airo:UserIndicator rdf:type owl:Class ;
+                   rdfs:subClassOf airo:Indicator ;
+                   rdfs:label "User Indicator"@en .
 
 
 ###  https://w3id.org/airo#ValidationDataRelatedSource
@@ -1672,7 +1733,8 @@ airo:VerifyingAuthenticityOfTravelDocument rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#VulnerablePosition
 airo:VulnerablePosition rdf:type owl:Class ;
-                        rdfs:comment "Represents the extent to which potentially harmed or adversely impacted persons are in a vulnerable position due to an imbalance of power, knowledge, economic or social circumstances, or age. [Source: AI Act]"@en ;
+                        rdfs:subClassOf airo:UserIndicator ;
+                        rdfs:comment "Represents whether potentially harmed or adversely impacted persons are in a vulnerable position due to an imbalance of power, knowledge, economic or social circumstances, or age. [Source: AI Act]"@en ;
                         rdfs:label "Vulnerable Position"@en .
 
 
@@ -1695,7 +1757,7 @@ airo:WrongDataSetDesignChoice rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#vulnerability
 airo:vulnerability rdf:type owl:Class ;
-                   rdfs:subClassOf airo:SystemSource ;
+                   rdfs:subClassOf airo:SystemRelatedSource ;
                    rdfs:comment "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"@en ;
                    rdfs:label "Vulnerability"@en .
 
