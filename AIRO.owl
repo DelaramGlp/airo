@@ -167,6 +167,14 @@ airo:impactsAISystem rdf:type owl:ObjectProperty ;
                      rdfs:label "impacts AI system"@en .
 
 
+###  https://w3id.org/airo#isAppliedWithinDomain
+airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
+                           rdfs:domain airo:AISystem ;
+                           rdfs:range airo:Domain ;
+                           rdfs:comment "Indicates the domain (context) the AI system is intended to be used in."@en ;
+                           rdfs:label "is applied within domain"@en .
+
+
 ###  https://w3id.org/airo#isConsequenceOf
 airo:isConsequenceOf rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Consequence ;
@@ -262,14 +270,6 @@ airo:isStakeholderOfSystem rdf:type owl:ObjectProperty ;
                            rdfs:label "is stakeholder of system"@en .
 
 
-###  https://w3id.org/airo#isUsedInIndustry
-airo:isUsedInIndustry rdf:type owl:ObjectProperty ;
-                      rdfs:domain airo:AISystem ;
-                      rdfs:range airo:Domain ;
-                      rdfs:comment "Indicates the domain (context) the AI system is intended to be used in."@en ;
-                      rdfs:label "is used in domain"@en .
-
-
 ###  https://w3id.org/airo#isVulnerabilityOfUser
 airo:isVulnerabilityOfUser rdf:type owl:ObjectProperty ;
                            rdfs:domain airo:VulnerablePosition ;
@@ -307,6 +307,7 @@ airo:producesOutput rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#usesAISystem
 airo:usesAISystem rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AIUser ;
                   rdfs:range airo:AISystem ;
                   rdfs:label "uses AI system"@en .
 
@@ -403,18 +404,6 @@ airo:AdversarialAttack rdf:type owl:Class ;
                        rdfs:label "Adversarial Attack"@en .
 
 
-###  https://w3id.org/airo#AnnexIIDomain
-airo:AnnexIIDomain rdf:type owl:Class ;
-                   rdfs:subClassOf airo:Domain ;
-                   rdfs:label "Annex II Domain"@en .
-
-
-###  https://w3id.org/airo#AnnexIIIDomain
-airo:AnnexIIIDomain rdf:type owl:Class ;
-                    rdfs:subClassOf airo:Domain ;
-                    rdfs:label "Annex III Domain"@en .
-
-
 ###  https://w3id.org/airo#Approval
 airo:Approval rdf:type owl:Class ;
               rdfs:subClassOf airo:ManualControl ;
@@ -461,18 +450,6 @@ airo:AutomatedControl rdf:type owl:Class ;
                       owl:disjointWith airo:ManualControl ;
                       rdfs:comment "Represents controls that do not involve human intervention."@en ;
                       rdfs:label "Automated Control"@en .
-
-
-###  https://w3id.org/airo#Automotive
-airo:Automotive rdf:type owl:Class ;
-                rdfs:subClassOf airo:AnnexIIDomain ;
-                rdfs:label "Automotive"@en .
-
-
-###  https://w3id.org/airo#Aviation
-airo:Aviation rdf:type owl:Class ;
-              rdfs:subClassOf airo:AnnexIIDomain ;
-              rdfs:label "Aviation"@en .
 
 
 ###  https://w3id.org/airo#Bias
@@ -588,10 +565,10 @@ airo:DataPoisoning rdf:type owl:Class ;
                    rdfs:label "Data Poisoning"@en .
 
 
-###  https://w3id.org/airo#DataSetRiskSource
-airo:DataSetRiskSource rdf:type owl:Class ;
-                       rdfs:subClassOf airo:RiskSource ;
-                       rdfs:label "Data Set Risk Source"@en .
+###  https://w3id.org/airo#DataSetRelatedRiskSource
+airo:DataSetRelatedRiskSource rdf:type owl:Class ;
+                              rdfs:subClassOf airo:RiskSource ;
+                              rdfs:label "Data Set Related Risk Source"@en .
 
 
 ###  https://w3id.org/airo#Death
@@ -684,24 +661,11 @@ airo:Domain rdf:type owl:Class ;
             rdfs:label "Domain"@en .
 
 
-###  https://w3id.org/airo#Education
-airo:Education rdf:type owl:Class ;
-               rdfs:subClassOf airo:AnnexIIIDomain ;
-               rdfs:comment "Refers to education and vocational training"@en ;
-               rdfs:label "Education"@en .
-
-
 ###  https://w3id.org/airo#EliminationControl
 airo:EliminationControl rdf:type owl:Class ;
                         rdfs:subClassOf airo:Measure ;
                         rdfs:comment "Represents controls that applied to prevent an event from happening."@en ;
                         rdfs:label "Elimination Control"@en .
-
-
-###  https://w3id.org/airo#EmergencyService
-airo:EmergencyService rdf:type owl:Class ;
-                      rdfs:subClassOf airo:AnnexIIIDomain ;
-                      rdfs:label "Emergency Service"@en .
 
 
 ###  https://w3id.org/airo#EmotionRecognition
@@ -724,19 +688,6 @@ airo:EmployeeMonitoring rdf:type owl:Class ;
                         rdfs:label "Employee Monitoring"@en .
 
 
-###  https://w3id.org/airo#Employment
-airo:Employment rdf:type owl:Class ;
-                rdfs:subClassOf airo:AnnexIIIDomain ;
-                rdfs:comment "Refers to employment, workers management and access to self-employment"@en ;
-                rdfs:label "Employment"@en .
-
-
-###  https://w3id.org/airo#Energy
-airo:Energy rdf:type owl:Class ;
-            rdfs:subClassOf airo:AnnexIIDomain ;
-            rdfs:label "Energy"@en .
-
-
 ###  https://w3id.org/airo#EnvironmentalDamage
 airo:EnvironmentalDamage rdf:type owl:Class ;
                          rdfs:subClassOf airo:EnvironmentalImpact ;
@@ -753,13 +704,13 @@ airo:EnvironmentalImpact rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#ErrorInDataCollection
 airo:ErrorInDataCollection rdf:type owl:Class ;
-                           rdfs:subClassOf airo:DataSetRiskSource ;
+                           rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                            rdfs:label "Error In Data Collection"@en .
 
 
 ###  https://w3id.org/airo#ErrorInDataPrepration
 airo:ErrorInDataPrepration rdf:type owl:Class ;
-                           rdfs:subClassOf airo:DataSetRiskSource ;
+                           rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                            rdfs:label "Error In Data Prepration"@en .
 
 
@@ -777,7 +728,8 @@ airo:ErrorInTestingDataSet rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#ErrorInTrainingDataSet
 airo:ErrorInTrainingDataSet rdf:type owl:Class ;
-                            rdfs:subClassOf airo:TrainingDataRiskSource .
+                            rdfs:subClassOf airo:TrainingDataRiskSource ;
+                            rdfs:label "Error In Training Data Set"@en .
 
 
 ###  https://w3id.org/airo#ErrorInValidationDataSet
@@ -811,12 +763,6 @@ airo:ExtentOfUse rdf:type owl:Class ;
                  rdfs:subClassOf airo:AISystemIndicator ;
                  rdfs:comment "Represents the extent to which an AI system has been used or is likely to be used."@en ;
                  rdfs:label "Extent Of Use"@en .
-
-
-###  https://w3id.org/airo#FinancialService
-airo:FinancialService rdf:type owl:Class ;
-                      rdfs:subClassOf airo:AnnexIIIDomain ;
-                      rdfs:label "Financial Service"@en .
 
 
 ###  https://w3id.org/airo#FundamentalRight
@@ -875,12 +821,6 @@ airo:HealthAndSafety rdf:type owl:Class ;
                      rdfs:label "Health And Safety"@en .
 
 
-###  https://w3id.org/airo#Healthcare
-airo:Healthcare rdf:type owl:Class ;
-                rdfs:subClassOf airo:AnnexIIIDomain ;
-                rdfs:label "Healthcare"@en .
-
-
 ###  https://w3id.org/airo#HumanBehaviour
 airo:HumanBehaviour rdf:type owl:Class ;
                     rdfs:subClassOf airo:HealthAndSafety ;
@@ -916,16 +856,9 @@ airo:ImpactOnFacility rdf:type owl:Class ;
                       rdfs:label "Impact On Facility"@en .
 
 
-###  https://w3id.org/airo#InVitroDiagnosticMedicalDevice
-airo:InVitroDiagnosticMedicalDevice rdf:type owl:Class ;
-                                    rdfs:subClassOf airo:MedicalDevice ;
-                                    rdfs:comment "Referred to in Annex II, section A, point 12."@en ;
-                                    rdfs:label "In Vitro Diagnostic Medical Device"@en .
-
-
 ###  https://w3id.org/airo#IncompetenceOfHumanOversightActors
 airo:IncompetenceOfHumanOversightActors rdf:type owl:Class ;
-                                        rdfs:subClassOf airo:OrganisationalSource ;
+                                        rdfs:subClassOf airo:OrganisationalRiskSource ;
                                         rdfs:comment "Refers to incompentece of individuals to whom human oversight is assigned."@en ;
                                         rdfs:label "Incompetence Of Human Oversight Actors"@en .
 
@@ -938,7 +871,8 @@ airo:IncompletenessOfTestingDataSet rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#IncompletenessOfTrainingDataSet
 airo:IncompletenessOfTrainingDataSet rdf:type owl:Class ;
-                                     rdfs:subClassOf airo:TrainingDataRiskSource .
+                                     rdfs:subClassOf airo:TrainingDataRiskSource ;
+                                     rdfs:label "Incompleteness Of Training Data Set"@en .
 
 
 ###  https://w3id.org/airo#IncompletenessOfValidationDataSet
@@ -968,7 +902,7 @@ airo:Injury rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#InputDataRiskSource
 airo:InputDataRiskSource rdf:type owl:Class ;
-                         rdfs:subClassOf airo:DataSetRiskSource ;
+                         rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                          rdfs:label "Input Data Risk Source"@en .
 
 
@@ -1000,19 +934,14 @@ airo:IrrelevantTestingData rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#IrrelevantTrainingData
 airo:IrrelevantTrainingData rdf:type owl:Class ;
-                            rdfs:subClassOf airo:TrainingDataRiskSource .
+                            rdfs:subClassOf airo:TrainingDataRiskSource ;
+                            rdfs:label "Irrelevant Training Data"@en .
 
 
 ###  https://w3id.org/airo#IrrelevantValidationData
 airo:IrrelevantValidationData rdf:type owl:Class ;
                               rdfs:subClassOf airo:ValidationDataRelatedSource ;
                               rdfs:label "Irrelevant Validation Data"@en .
-
-
-###  https://w3id.org/airo#Justice
-airo:Justice rdf:type owl:Class ;
-             rdfs:subClassOf airo:AnnexIIIDomain ;
-             rdfs:label "Justice"@en .
 
 
 ###  https://w3id.org/airo#KnowledgeBasedApproach
@@ -1031,32 +960,26 @@ airo:KnowledgeReasoning rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#LackOfAppropriateInstructionForUse
 airo:LackOfAppropriateInstructionForUse rdf:type owl:Class ;
-                                        rdfs:subClassOf airo:OrganisationalSource ;
+                                        rdfs:subClassOf airo:OrganisationalRiskSource ;
                                         rdfs:label "Lack Of Appropriate Instruction For Use"@en .
 
 
 ###  https://w3id.org/airo#LackOfAppropriateSecurity
 airo:LackOfAppropriateSecurity rdf:type owl:Class ;
-                               rdfs:subClassOf airo:PerformanceRelatedSource ;
+                               rdfs:subClassOf airo:PerformanceRelatedRiskSource ;
                                rdfs:label "Lack Of Appropriate Level Of Security"@en .
 
 
 ###  https://w3id.org/airo#LackOfHumanOversightMeasure
 airo:LackOfHumanOversightMeasure rdf:type owl:Class ;
-                                 rdfs:subClassOf airo:OrganisationalSource ;
+                                 rdfs:subClassOf airo:OrganisationalRiskSource ;
                                  rdfs:label "Lack Of Human Oversight Measure"@en .
 
 
 ###  https://w3id.org/airo#LackOfTransparency
 airo:LackOfTransparency rdf:type owl:Class ;
-                        rdfs:subClassOf airo:OrganisationalSource ;
+                        rdfs:subClassOf airo:OrganisationalRiskSource ;
                         rdfs:label "Lack Of Transparency"@en .
-
-
-###  https://w3id.org/airo#LawEnforcement
-airo:LawEnforcement rdf:type owl:Class ;
-                    rdfs:subClassOf airo:AnnexIIIDomain ;
-                    rdfs:label "Law Enforcement"@en .
 
 
 ###  https://w3id.org/airo#LegalInterpretation
@@ -1082,14 +1005,14 @@ airo:LogicBasedApproach rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#LowLevelOfAccuracy
 airo:LowLevelOfAccuracy rdf:type owl:Class ;
-                        rdfs:subClassOf airo:PerformanceRelatedSource ;
+                        rdfs:subClassOf airo:PerformanceRelatedRiskSource ;
                         rdfs:comment "Refers to inacurracy of the predictions, recommondations, or decisions produced by the system."@en ;
                         rdfs:label "Low Level Of Accuracy"@en .
 
 
 ###  https://w3id.org/airo#LowLevelOfRobustness
 airo:LowLevelOfRobustness rdf:type owl:Class ;
-                          rdfs:subClassOf airo:PerformanceRelatedSource ;
+                          rdfs:subClassOf airo:PerformanceRelatedRiskSource ;
                           rdfs:label "Low Level Of Robustness"@en .
 
 
@@ -1098,13 +1021,6 @@ airo:MachineLearningApproach rdf:type owl:Class ;
                              rdfs:subClassOf airo:AITechnique ;
                              rdfs:comment "Represenets machine learning approaches, including supervised, unsupervised and reinforcement learning, using a wide variety of methods including deep learning. [Source: AI Act, Annex I]"@en ;
                              rdfs:label "Machine Learning Approach"@en .
-
-
-###  https://w3id.org/airo#Machinery
-airo:Machinery rdf:type owl:Class ;
-               rdfs:subClassOf airo:AnnexIIDomain ;
-               rdfs:comment "Referred to in Annex II, section A, point 1."@en ;
-               rdfs:label "Machinery"@en .
 
 
 ###  https://w3id.org/airo#MakingDecision
@@ -1143,30 +1059,10 @@ airo:ManualControl rdf:type owl:Class ;
                    rdfs:label "Manual Control"@en .
 
 
-###  https://w3id.org/airo#Maritime
-airo:Maritime rdf:type owl:Class ;
-              rdfs:subClassOf airo:AnnexIIDomain ;
-              rdfs:label "Maritime"@en .
-
-
 ###  https://w3id.org/airo#Measure
 airo:Measure rdf:type owl:Class ;
              rdfs:comment "Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"@en ;
              rdfs:label "Control"@en .
-
-
-###  https://w3id.org/airo#MedicalDevice
-airo:MedicalDevice rdf:type owl:Class ;
-                   rdfs:subClassOf airo:AnnexIIDomain ;
-                   rdfs:comment "Referred to in Annex II, section A, point 11"@en ;
-                   rdfs:label "Medical Device"@en .
-
-
-###  https://w3id.org/airo#Migration
-airo:Migration rdf:type owl:Class ;
-               rdfs:subClassOf airo:AnnexIIIDomain ;
-               rdfs:comment "Refers to migration, asylum and border control management"@en ;
-               rdfs:label "Migration"@en .
 
 
 ###  https://w3id.org/airo#Misuse
@@ -1207,10 +1103,10 @@ airo:OrganisationalControl rdf:type owl:Class ;
                            rdfs:label "Organisational Control"@en .
 
 
-###  https://w3id.org/airo#OrganisationalSource
-airo:OrganisationalSource rdf:type owl:Class ;
-                          rdfs:subClassOf airo:RiskSource ;
-                          rdfs:label "Organisational Source"@en .
+###  https://w3id.org/airo#OrganisationalRiskSource
+airo:OrganisationalRiskSource rdf:type owl:Class ;
+                              rdfs:subClassOf airo:RiskSource ;
+                              rdfs:label "Organisational Risk Source"@en .
 
 
 ###  https://w3id.org/airo#Output
@@ -1267,10 +1163,10 @@ airo:PerformaceConsequence rdf:type owl:Class ;
                            rdfs:label "Performance Consequence"@en .
 
 
-###  https://w3id.org/airo#PerformanceRelatedSource
-airo:PerformanceRelatedSource rdf:type owl:Class ;
-                              rdfs:subClassOf airo:RiskSource ;
-                              rdfs:label "Perfomance Related Source"@en .
+###  https://w3id.org/airo#PerformanceRelatedRiskSource
+airo:PerformanceRelatedRiskSource rdf:type owl:Class ;
+                                  rdfs:subClassOf airo:RiskSource ;
+                                  rdfs:label "Perfomance Related Risk Source"@en .
 
 
 ###  https://w3id.org/airo#Person
@@ -1515,7 +1411,7 @@ airo:TechnicalControl rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#TestingDataRiskSource
 airo:TestingDataRiskSource rdf:type owl:Class ;
-                           rdfs:subClassOf airo:DataSetRiskSource ;
+                           rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                            rdfs:label "Testing Data Risk Source"@en .
 
 
@@ -1528,25 +1424,13 @@ airo:Training rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#TrainingDataRiskSource
 airo:TrainingDataRiskSource rdf:type owl:Class ;
-                            rdfs:subClassOf airo:DataSetRiskSource ;
+                            rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                             rdfs:label "Training Data Risk Source"@en .
-
-
-###  https://w3id.org/airo#Transportation
-airo:Transportation rdf:type owl:Class ;
-                    rdfs:subClassOf airo:AnnexIIDomain ;
-                    rdfs:label "Transportation"@en .
-
-
-###  https://w3id.org/airo#Travel
-airo:Travel rdf:type owl:Class ;
-            rdfs:subClassOf airo:AnnexIIIDomain ;
-            rdfs:label "Travel"@en .
 
 
 ###  https://w3id.org/airo#UnavailabilityOfDataSet
 airo:UnavailabilityOfDataSet rdf:type owl:Class ;
-                             rdfs:subClassOf airo:DataSetRiskSource ;
+                             rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                              rdfs:label "Unavailability Of Data Set"@en .
 
 
@@ -1558,7 +1442,8 @@ airo:UnrepresentativeTestingDataSet rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#UnrepresentativeTrainingDataSet
 airo:UnrepresentativeTrainingDataSet rdf:type owl:Class ;
-                                     rdfs:subClassOf airo:TrainingDataRiskSource .
+                                     rdfs:subClassOf airo:TrainingDataRiskSource ;
+                                     rdfs:label "Unrepresentative Training Data Set"@en .
 
 
 ###  https://w3id.org/airo#UnrepresentativeValidationDataSet
@@ -1576,7 +1461,7 @@ airo:UserIndicator rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#ValidationDataRelatedSource
 airo:ValidationDataRelatedSource rdf:type owl:Class ;
-                                 rdfs:subClassOf airo:DataSetRiskSource ;
+                                 rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                                  rdfs:label "Validation Data Risk Source"@en .
 
 
@@ -1601,12 +1486,6 @@ airo:VulnerablePosition rdf:type owl:Class ;
                         rdfs:label "Vulnerable Position"@en .
 
 
-###  https://w3id.org/airo#WaterSupply
-airo:WaterSupply rdf:type owl:Class ;
-                 rdfs:subClassOf airo:AnnexIIDomain ;
-                 rdfs:label "Water Supply"@en .
-
-
 ###  https://w3id.org/airo#WellbeingImpact
 airo:WellbeingImpact rdf:type owl:Class ;
                      rdfs:subClassOf airo:Impact ;
@@ -1616,7 +1495,7 @@ airo:WellbeingImpact rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#WrongDataSetDesignChoice
 airo:WrongDataSetDesignChoice rdf:type owl:Class ;
-                              rdfs:subClassOf airo:DataSetRiskSource ;
+                              rdfs:subClassOf airo:DataSetRelatedRiskSource ;
                               rdfs:label "Wrong Data Set Design Choice"@en .
 
 
