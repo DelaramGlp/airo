@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://delaramglp.github.io/viogencase#"
+     xml:base="https://delaramglp.github.io/viogencase#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:airo="https://w3id.org/AIRO#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://delaramglp.github.io/viogencase"/>
+    
+
+    
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Viogen_System">
+        <rdf:type xml:resource="https://w3id.org/AIRO#AISystem"/>
+        <airo:isAppliedWithinDomain rdf:resource="https://delaramglp.github.io/viogencase#Law_Enforcement"/>
+        <airo:isAppliedWithinDomain rdf:resource="https://delaramglp.github.io/viogencase#Acess_To_Public_Services"/>
+        <airo:usesTechnique rdf:resource="https://delaramglp.github.io/viogencase#Statistical_Models"/>
+        <airo:hasPurpose rdf:resource="https://delaramglp.github.io/viogencase#Predicting_Risk_Of_Gender_Violence_Recidivism"/>
+        <airo:producesOutput rdf:resource="https://delaramglp.github.io/viogencase#Algorithmic_Risk_Score"/>
+    </owl:NamedIndividual> 
+
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Law_Enforcement">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Domain"/>
+     </owl:NamedIndividual>   
+
+     <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Acess_To_Public_Services">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Domain"/>
+     </owl:NamedIndividual>  
+  
+  
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Algorithmic_Risk_Score">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Prediction"/>
+     </owl:NamedIndividual>  
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Predicting_Risk_Of_Gender_Violence_Recidivism">
+        <rdf:type xml:resource="https://w3id.org/AIRO#PredictingRecidivism"/>
+     </owl:NamedIndividual> 
+    
+
+     <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#The_Spanish_Ministry_Of_The_Interior">
+        <rdf:type xml:resource="https://w3id.org/AIRO#AIUser"/>
+        <airo:usesAISystem rdf:resource="https://delaramglp.github.io/viogencase#Viogen_System"/>
+     </owl:NamedIndividual> 
+
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Victims_Of_Gender_Violence">
+        <rdf:type xml:resource="https://w3id.org/AIRO#AISubject"/>
+        <airo:isImpactByAISystem rdf:resource="https://delaramglp.github.io/viogencase#Viogen_System"/>
+     </owl:NamedIndividual> 
+
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#The_Spanish_Secretary_Of_State_For_Security">
+        <rdf:type xml:resource="https://w3id.org/AIRO#AIProvider"/>
+        <airo:producesAISystem rdf:resource="https://delaramglp.github.io/viogencase#Viogen_System"/>
+     </owl:NamedIndividual> 
+
+
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Safety_Of_The_Victim">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Safety"/>
+     </owl:NamedIndividual> 
+
+
+
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Inaccurate_Predictions">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Risk"/>
+        <airo:isRiskAssociatedWith  rdf:resource="https://delaramglp.github.io/viogencase#Viogen_System"/>
+        <airo:hasConsequence rdf:resource="https://delaramglp.github.io/viogencase#Victim_At_Risk_Does_Not_Receive_The_Protection"/>
+        <airo:hasRiskSource rdf:resource="https://delaramglp.github.io/viogencase#Poor_Quality_Of_Data_Fed_Into_The_System"/>
+     </owl:NamedIndividual> 
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Victim_At_Risk_Does_Not_Receive_The_Protection">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Consequence"/>
+        <airo:hasImpact rdf:resource="https://delaramglp.github.io/viogencase#Victim_Being_Assaulted_Again"/>
+     </owl:NamedIndividual> 
+
+     <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Victim_Being_Assaulted_Again">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Impact"/>
+        <airo:hasImpactOnAISubject rdf:resource="https://delaramglp.github.io/viogencase#Victims_Of_Gender_Violence"/>
+        <airo:hasImpactOnArea rdf:resource="https://delaramglp.github.io/viogencase#Safety_Of_The_Victim"/>
+     </owl:NamedIndividual> 
+
+    
+     <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Poor_Quality_Of_Data_Fed_Into_The_System">
+        <rdf:type xml:resource="https://w3id.org/AIRO#RiskSource"/>
+     </owl:NamedIndividual> 
+
+    <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Police_Officers_Modify_The_Risk_Score">
+        <rdf:type xml:resource="https://w3id.org/AIRO#HumanOversightMeasure"/>
+        <airo:mitigatesEvent rdf:resource="https://delaramglp.github.io/viogencase#Inaccurate_Predictions"/>
+     </owl:NamedIndividual> 
+
+     <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#Automation_Bias">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Risk"/>
+        <airo:isRiskAssociatedWith  rdf:resource="https://delaramglp.github.io/viogencase#Viogen_System"/>
+        <airo:hasConsequence rdf:resource="https://delaramglp.github.io/viogencase#The_Risk_Score_Is_Not_Modified_When_The_Prediction_Is_Not_Accurate"/>
+     </owl:NamedIndividual> 
+
+     <owl:NamedIndividual rdf:about="https://delaramglp.github.io/viogencase#The_Risk_Score_Is_Not_Modified_When_The_Prediction_Is_Not_Accurate">
+        <rdf:type xml:resource="https://w3id.org/AIRO#Consequence"/>
+        <airo:hasImpact rdf:resource="https://delaramglp.github.io/viogencase#Victim_Being_Assaulted_Again"/>
+     </owl:NamedIndividual> 
+
+
+</rdf:RDF>
+
+
+
