@@ -1,0 +1,36 @@
+#Query for retrieving information required for determining whether the system is high-risk
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX airo: <https://w3id.org/AIRO>
+SELECT ?system ?technique ?purpose ?application ?domain ?user ?subject ?environment
+	WHERE {?system a airo:AISystem ;
+				   airo:usesTechnique ?technique ;
+				   airo:hasPurpose ?purpose ;
+				   airo:isAppliedWithinDomain ?domain ;
+				   airo:hasApplication ?application ;
+				   airo:hasAIUser ?user ;
+				   airo:isUsedInRegerdToSubject  ?subject;
+				   airo:isUsedinEvironment ?environment;
+
+	}
+
+
+#Query for retrieving information required to be provided according to Annex IV (1) 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX airo: <https://w3id.org/AIRO>
+SELECT ?purpose ?provider ?date ?version ?form ?hardware ?blueprint ?insofuse ?installationins
+	WHERE {?system a airo:AISystem ;
+				   airo:hasPurpose ?purpose ;
+				   
+
+	}
+
+
+#Query for retrieving information required to be provided according to Annex IV (2)
