@@ -42,9 +42,23 @@ terms:license rdf:type owl:AnnotationProperty .
 terms:publisher rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+rdf:type rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/AIRO#isVulnerabilityOf
+airo:isVulnerabilityOf rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:ObjectProperty ;
+                 rdfs:domain airo:AISystem ;
+                 rdfs:range airo:SystemVersion .
+
 
 ###  https://w3id.org/AIRO#detectsEvent
 airo:detectsEvent rdf:type owl:ObjectProperty ;
@@ -108,7 +122,7 @@ airo:hasDatasheet rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
-                      owl:inverseOf airo:isDocumentationFor ;
+                      owl:inverseOf airo:isDocumentationOf ;
                       rdfs:label "has documentation"@en .
 
 
@@ -199,13 +213,6 @@ airo:hasStakeholder rdf:type owl:ObjectProperty ;
                     rdfs:label "has stakeholder"@en .
 
 
-###  https://w3id.org/AIRO#hasVersion
-airo:hasVersion rdf:type owl:ObjectProperty ;
-                rdfs:domain airo:AISystem ;
-                rdfs:range airo:Version ;
-                rdfs:label "has version"@en .
-
-
 ###  https://w3id.org/AIRO#hasVulnerability
 airo:hasVulnerability rdf:type owl:ObjectProperty ;
                       rdfs:domain airo:AISystem ;
@@ -244,7 +251,7 @@ airo:isConsequenceOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isDatasheetFor
 airo:isDatasheetFor rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf airo:isDocumentationFor ;
+                    rdfs:subPropertyOf airo:isDocumentationOf ;
                     rdfs:domain airo:Datasheet ;
                     rdfs:range airo:Data ;
                     rdfs:label "is datasheet for"@en .
@@ -252,19 +259,19 @@ airo:isDatasheetFor rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isDeclarationOfConformiyOf
 airo:isDeclarationOfConformiyOf rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf airo:isDocumentationFor ;
+                                rdfs:subPropertyOf airo:isDocumentationOf ;
                                 rdfs:label "is declaration of conformity of"@en .
 
 
 ###  https://w3id.org/AIRO#isDesignSepicificationOf
 airo:isDesignSepicificationOf rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf airo:isDocumentationFor ;
+                              rdfs:subPropertyOf airo:isDocumentationOf ;
                               rdfs:label "is design specification of"@en .
 
 
-###  https://w3id.org/AIRO#isDocumentationFor
-airo:isDocumentationFor rdf:type owl:ObjectProperty ;
-                        rdfs:label "is documentation for"@en .
+###  https://w3id.org/AIRO#isDocumentationOf
+airo:isDocumentationOf rdf:type owl:ObjectProperty ;
+                       rdfs:label "is documentation of"@en .
 
 
 ###  https://w3id.org/AIRO#isDomainOf
@@ -276,8 +283,7 @@ airo:isDomainOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isEnvironmentOfUseOf
 airo:isEnvironmentOfUseOf rdf:type owl:ObjectProperty ;
-                          owl:inverseOf airo:isUsedInEnvironment ;
-                          rdfs:label "is environment of use of"@en .
+                          rdfs:label "is Environment Of Use Of"@en .
 
 
 ###  https://w3id.org/AIRO#isExpectedAccurayOf
@@ -328,7 +334,7 @@ airo:isInVulnerablePosition rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isInstallationInstructionOf
 airo:isInstallationInstructionOf rdf:type owl:ObjectProperty ;
-                                 rdfs:subPropertyOf airo:isDocumentationFor ;
+                                 rdfs:subPropertyOf airo:isDocumentationOf ;
                                  rdfs:domain airo:InstallationInstruction ;
                                  rdfs:range airo:AISystem ;
                                  rdfs:label "is installation Instruction Of" .
@@ -336,7 +342,7 @@ airo:isInstallationInstructionOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isInstructionOfUseFor
 airo:isInstructionOfUseFor rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf airo:isDocumentationFor ;
+                           rdfs:subPropertyOf airo:isDocumentationOf ;
                            rdfs:domain airo:InstructionOfUse ;
                            rdfs:range airo:AISystem ;
                            rdfs:label "is instruction of use for"@en .
@@ -362,11 +368,6 @@ airo:isPartOfControl rdf:type owl:ObjectProperty ;
                      rdfs:label "is part of control"@en .
 
 
-###  https://w3id.org/AIRO#isPartOfSystem
-airo:isPartOfSystem rdf:type owl:ObjectProperty ;
-                    rdfs:label "is part of system"@en .
-
-
 ###  https://w3id.org/AIRO#isPerformanceOf
 airo:isPerformanceOf rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Performace ;
@@ -376,12 +377,12 @@ airo:isPerformanceOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isPostmarketDescriptionOf
 airo:isPostmarketDescriptionOf rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf airo:isDocumentationFor .
+                               rdfs:subPropertyOf airo:isDocumentationOf .
 
 
 ###  https://w3id.org/AIRO#isPostmarketMonitoringPlanFor
 airo:isPostmarketMonitoringPlanFor rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf airo:isDocumentationFor ;
+                                   rdfs:subPropertyOf airo:isDocumentationOf ;
                                    rdfs:label "is post-market monitoring plan for"@en .
 
 
@@ -441,14 +442,20 @@ airo:isTechniqueUsedIn rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isTestLogOf
 airo:isTestLogOf rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf airo:isDocumentationFor ;
+                 rdfs:subPropertyOf airo:isDocumentationOf ;
                  rdfs:label "is test log of"@en .
 
 
 ###  https://w3id.org/AIRO#isTestReportFor
 airo:isTestReportFor rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf airo:isDocumentationFor ;
+                     rdfs:subPropertyOf airo:isDocumentationOf ;
                      rdfs:label "is test report for"@en .
+
+
+###  https://w3id.org/AIRO#isToolUsedInDevelopmentOf
+airo:isToolUsedInDevelopmentOf rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf owl:topObjectProperty ;
+                               rdfs:label "is tool used in development of"@en .
 
 
 ###  https://w3id.org/AIRO#isUsedForTesting
@@ -474,24 +481,18 @@ airo:isUsedForValidating rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isUsedInEnvironment
 airo:isUsedInEnvironment rdf:type owl:ObjectProperty ;
-                         rdfs:label "is used in environment"@en .
-
-
-###  https://w3id.org/AIRO#isUsedInFormOf
-airo:isUsedInFormOf rdf:type owl:ObjectProperty ;
-                    rdfs:comment "is used in form of"@en .
+                         rdfs:label "is Used In Environment"@en .
 
 
 ###  https://w3id.org/AIRO#isUsedInRegerdToSubject
 airo:isUsedInRegerdToSubject rdf:type owl:ObjectProperty ;
-                             rdfs:label "has subject"@en .
+                             rdfs:label "hasSubject"@en .
 
 
 ###  https://w3id.org/AIRO#isUsedToMeasure
 airo:isUsedToMeasure rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Metric ;
-                     rdfs:range airo:Indicator ;
-                     rdfs:label "is used to measure"@en .
+                     rdfs:range airo:Indicator .
 
 
 ###  https://w3id.org/AIRO#isVulnerabilityOfUser
@@ -561,20 +562,10 @@ terms:date rdf:type owl:DatatypeProperty .
 <http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
 
 
-###  https://w3id.org/AIRO#AIApplication
-airo:AIApplication rdf:type owl:Class ;
-                   rdfs:label "AI Application"@en .
-
-
 ###  https://w3id.org/AIRO#AIComponent
 airo:AIComponent rdf:type owl:Class ;
                  rdfs:comment "Represents a functional element that constructs an AI system. [Source: ISO 22989]"@en ;
                  rdfs:label "AI Component"@en .
-
-
-###  https://w3id.org/AIRO#AIHardware
-airo:AIHardware rdf:type owl:Class ;
-                rdfs:subClassOf airo:AIComponent .
 
 
 ###  https://w3id.org/AIRO#AILifecyclePhase
@@ -599,7 +590,6 @@ airo:AISubject rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AISystem
 airo:AISystem rdf:type owl:Class ;
-              rdfs:subClassOf airo:System ;
               rdfs:comment "Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]"@en ;
               rdfs:label "AI System"@en .
 
@@ -685,10 +675,14 @@ airo:Applicant rdf:type owl:Class ;
                rdfs:subClassOf airo:Person .
 
 
+###  https://w3id.org/AIRO#Application
+airo:Application rdf:type owl:Class ;
+                 rdfs:label "Application"@en .
+
+
 ###  https://w3id.org/AIRO#ApplicationExamination
 airo:ApplicationExamination rdf:type owl:Class ;
-                            rdfs:subClassOf airo:MakingDecision ;
-                            rdfs:label "Application Examination"@en .
+                            rdfs:subClassOf airo:Purpose .
 
 
 ###  https://w3id.org/AIRO#ApplicationFiltering
@@ -1173,8 +1167,7 @@ airo:EmployeePerformanceMonitoring rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#Employment
 airo:Employment rdf:type owl:Class ;
-                rdfs:subClassOf airo:Domain ;
-                rdfs:label "Employment"@en .
+                rdfs:subClassOf airo:Domain .
 
 
 ###  https://w3id.org/AIRO#EnvironmentOfUse
@@ -1285,7 +1278,7 @@ airo:ExtentOfUse rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#FacialRecognition
 airo:FacialRecognition rdf:type owl:Class ;
-                       rdfs:subClassOf airo:AIApplication ;
+                       rdfs:subClassOf airo:Application ;
                        rdfs:label "Facial Recognition"@en .
 
 
@@ -1329,10 +1322,9 @@ airo:GeneratingVideoContent rdf:type owl:Class ;
                             rdfs:label "Generating Video Content"@en .
 
 
-###  https://w3id.org/AIRO#GrantingPublicAssistanceServices
-airo:GrantingPublicAssistanceServices rdf:type owl:Class ;
-                                      rdfs:subClassOf airo:MakingDecision ;
-                                      rdfs:label "Granting Public Assistance Services"@en .
+###  https://w3id.org/AIRO#GrantingPublicAssisstanceServices
+airo:GrantingPublicAssisstanceServices rdf:type owl:Class ;
+                                       rdfs:subClassOf airo:MakingDecision .
 
 
 ###  https://w3id.org/AIRO#Group
@@ -1706,8 +1698,7 @@ airo:MedicalAid rdf:type owl:Class ;
 
 
 ###  https://w3id.org/AIRO#Metric
-airo:Metric rdf:type owl:Class ;
-            rdfs:label "Metric"@en .
+airo:Metric rdf:type owl:Class .
 
 
 ###  https://w3id.org/AIRO#Migration
@@ -2085,7 +2076,7 @@ airo:ReinforcementLearning rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#RemoteBiometricIdentification
 airo:RemoteBiometricIdentification rdf:type owl:Class ;
-                                   rdfs:subClassOf airo:AIApplication ;
+                                   rdfs:subClassOf airo:Application ;
                                    rdfs:comment "the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database"@en ;
                                    rdfs:label "Remote Biometric Identification"@en .
 
@@ -2276,11 +2267,6 @@ airo:SymbolicReasoning rdf:type owl:Class ;
                        rdfs:label "Symbolic Reasoning"@en .
 
 
-###  https://w3id.org/AIRO#System
-airo:System rdf:type owl:Class ;
-            rdfs:label "System"@en .
-
-
 ###  https://w3id.org/AIRO#SystemRelatedSource
 airo:SystemRelatedSource rdf:type owl:Class ;
                          rdfs:subClassOf airo:RiskSource ;
@@ -2348,7 +2334,6 @@ airo:TestingDataRiskSource rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#Tool
 airo:Tool rdf:type owl:Class ;
-          rdfs:subClassOf airo:AIComponent ;
           rdfs:label "Tool"@en .
 
 
@@ -2400,8 +2385,7 @@ airo:UnsupervisedLearning rdf:type owl:Class ;
 
 
 ###  https://w3id.org/AIRO#UpdateRequirement
-airo:UpdateRequirement rdf:type owl:Class ;
-                       rdfs:label "Update Requirement"@en .
+airo:UpdateRequirement rdf:type owl:Class .
 
 
 ###  https://w3id.org/AIRO#UserIndicator
@@ -2445,11 +2429,6 @@ airo:VerifyingAuthenticityOfTravelDocument rdf:type owl:Class ;
                                            rdfs:subClassOf airo:VerifyingAuthenticity ;
                                            rdfs:comment "Refers to the verification of the authenticity of travel documents and supporting documentation of natural persons and detection of non-authentic documents by checking their security features."@en ;
                                            rdfs:label "Verifying Authenticity Of Travel Document"@en .
-
-
-###  https://w3id.org/AIRO#Version
-airo:Version rdf:type owl:Class ;
-             rdfs:label "Version"@en .
 
 
 ###  https://w3id.org/AIRO#VisaApplicant
@@ -2500,6 +2479,150 @@ airo:vulnerability rdf:type owl:Class ;
                    rdfs:subClassOf airo:SystemRelatedSource ;
                    rdfs:comment "Weakness of a system can be exploited by one or more threats. [Source: ISO/IEC TR 24028, 3.48 with modifications]"@en ;
                    rdfs:label "Vulnerability"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://delaramglp.github.io/AIRO/ubercase#Bias_In_Algorithm_Training
+<https://delaramglp.github.io/AIRO/ubercase#Bias_In_Algorithm_Training> rdf:type owl:NamedIndividual ,
+                                                                                 airo:InputDataRiskSource ;
+                                                                        airo:isRiskSourceFor airo:Inaccurate_Risk_Predictions .
+
+
+###  https://delaramglp.github.io/AIRO/ubercase#Facial_Recognition
+<https://delaramglp.github.io/AIRO/ubercase#Facial_Recognition> rdf:type owl:NamedIndividual ,
+                                                                         airo:Application .
+
+
+###  https://delaramglp.github.io/AIRO/ubercase#Machine_Learning
+<https://delaramglp.github.io/AIRO/ubercase#Machine_Learning> rdf:type owl:NamedIndividual ,
+                                                                       airo:MachineLearningApproach ;
+                                                              airo:isTechniqueUsedIn airo:Viogen_System .
+
+
+###  https://delaramglp.github.io/AIRO/usecase#Acess_To_Police_Protection
+<https://delaramglp.github.io/AIRO/usecase#Acess_To_Police_Protection> rdf:type owl:NamedIndividual ,
+                                                                                airo:PublicService ,
+                                                                                "" .
+
+
+###  https://delaramglp.github.io/AIRO/usecase#Determining_Access_To_Police_Protection
+<https://delaramglp.github.io/AIRO/usecase#Determining_Access_To_Police_Protection> rdf:type owl:NamedIndividual ,
+                                                                                             airo:PublicAssistanceEligibilityAssessment ;
+                                                                                    airo:isPurposeOf airo:Viogen_System .
+
+
+###  https://delaramglp.github.io/AIRO/usecase#Spanish_Law_Enforcement
+<https://delaramglp.github.io/AIRO/usecase#Spanish_Law_Enforcement> rdf:type owl:NamedIndividual ,
+                                                                             airo:LawEnforcement ;
+                                                                    airo:isDomainOf airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#Algorithmic_Risk_Score
+airo:Algorithmic_Risk_Score rdf:type owl:NamedIndividual ,
+                                     airo:Prediction .
+
+
+###  https://w3id.org/AIRO#Automation_Bias
+airo:Automation_Bias rdf:type owl:NamedIndividual ,
+                              airo:Risk ;
+                     airo:hasConsequence airo:The_Risk_Score_Is_Not_Modified_When_The_Prediction_Is_Not_Accurate ;
+                     airo:isRiskAssociatedWith airo:Viogen_System ;
+                     rdf:type "" .
+
+
+###  https://w3id.org/AIRO#Inaccurate_Risk_Predictions
+airo:Inaccurate_Risk_Predictions rdf:type owl:NamedIndividual ,
+                                          airo:Risk ;
+                                 airo:hasConsequence airo:Victim_At_Risk_Does_Not_Receive_The_Protection ;
+                                 airo:hasRiskSource airo:Poor_Quality_Of_Data_Fed_Into_The_System ;
+                                 airo:isRiskAssociatedWith airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#Investigation_Of_Criminal_Offences_Related_To_Gender_Violence
+airo:Investigation_Of_Criminal_Offences_Related_To_Gender_Violence rdf:type owl:NamedIndividual ,
+                                                                            airo:InvestigationOfCriminalOffences ;
+                                                                   airo:isEnvironmentOfUseOf airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#Police_Officers_Modify_The_Risk_Score
+airo:Police_Officers_Modify_The_Risk_Score rdf:type owl:NamedIndividual ,
+                                                    airo:HumanOversightMeasure ;
+                                           airo:mitigatesEvent airo:Inaccurate_Risk_Predictions .
+
+
+###  https://w3id.org/AIRO#Poor_Quality_Of_Data_Fed_Into_The_System
+airo:Poor_Quality_Of_Data_Fed_Into_The_System rdf:type owl:NamedIndividual ,
+                                                       airo:InputDataRiskSource ;
+                                              airo:isRiskSourceFor airo:Inaccurate_Risk_Predictions .
+
+
+###  https://w3id.org/AIRO#Predicting_Risk_Of_Gender_Violence_Recidivism
+airo:Predicting_Risk_Of_Gender_Violence_Recidivism rdf:type owl:NamedIndividual ,
+                                                            airo:PredictingRecidivism ;
+                                                   airo:isPurposeOf airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#Safety_Of_The_Victim
+airo:Safety_Of_The_Victim rdf:type owl:NamedIndividual ,
+                                   airo:Safety .
+
+
+###  https://w3id.org/AIRO#Statistical_Models
+airo:Statistical_Models rdf:type owl:NamedIndividual ,
+                                 airo:StatisticalApproach ;
+                        airo:isTechniqueUsedIn airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#The_Risk_Score_Is_Not_Modified_When_The_Prediction_Is_Not_Accurate
+airo:The_Risk_Score_Is_Not_Modified_When_The_Prediction_Is_Not_Accurate rdf:type owl:NamedIndividual ,
+                                                                                 airo:Consequence ;
+                                                                        airo:hasImpact airo:Victim_Being_Assaulted_Again .
+
+
+###  https://w3id.org/AIRO#The_Spanish_Ministry_Of_The_Interior
+airo:The_Spanish_Ministry_Of_The_Interior rdf:type owl:NamedIndividual ,
+                                                   airo:LawEnforcementAuthority ;
+                                          airo:usesAISystem airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#The_Spanish_Secretary_Of_State_For_Security
+airo:The_Spanish_Secretary_Of_State_For_Security rdf:type owl:NamedIndividual ,
+                                                          airo:AIProvider ;
+                                                 airo:producesAISystem airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#Victim_At_Risk_Does_Not_Receive_The_Protection
+airo:Victim_At_Risk_Does_Not_Receive_The_Protection rdf:type owl:NamedIndividual ,
+                                                             airo:Consequence ;
+                                                    airo:hasImpact airo:Victim_Being_Assaulted_Again .
+
+
+###  https://w3id.org/AIRO#Victim_Being_Assaulted_Again
+airo:Victim_Being_Assaulted_Again rdf:type owl:NamedIndividual ,
+                                           airo:WellbeingImpact ;
+                                  airo:hasImpactOnAISubject airo:Victims_Of_Gender_Violence ;
+                                  airo:hasImpactOnArea airo:Safety_Of_The_Victim .
+
+
+###  https://w3id.org/AIRO#Victims_Of_Gender_Violence
+airo:Victims_Of_Gender_Violence rdf:type owl:NamedIndividual ,
+                                         airo:Person ;
+                                airo:isImpactByAISystem airo:Viogen_System .
+
+
+###  https://w3id.org/AIRO#Viogen_System
+airo:Viogen_System rdf:type owl:NamedIndividual ,
+                            airo:AISystem ;
+                   airo:hasPurpose <https://delaramglp.github.io/AIRO/usecase#Determining_Access_To_Police_Protection> ,
+                                   airo:Predicting_Risk_Of_Gender_Violence_Recidivism ;
+                   airo:isAppliedWithinDomain <https://delaramglp.github.io/AIRO/usecase#Acess_To_Police_Protection> ,
+                                              <https://delaramglp.github.io/AIRO/usecase#Spanish_Law_Enforcement> ;
+                   airo:isUsedInEnvironment airo:Investigation_Of_Criminal_Offences_Related_To_Gender_Violence ;
+                   airo:producesOutput airo:Algorithmic_Risk_Score ;
+                   airo:usesTechnique airo:Statistical_Models .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

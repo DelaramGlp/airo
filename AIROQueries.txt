@@ -18,19 +18,48 @@ SELECT ?system ?technique ?purpose ?application ?domain ?user ?subject ?environm
 	}
 
 
-#Query for retrieving information required to be provided according to Annex IV (1) 
+# Annex IV. 1(a). Intended pupose
 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX airo: <https://w3id.org/AIRO>
-SELECT ?purpose ?provider ?date ?version ?form ?hardware ?blueprint ?insofuse ?installationins
-	WHERE {?system a airo:AISystem ;
-				   airo:hasPurpose ?purpose ;
-				   
-
-	}
+SELECT ?purpose
+	WHERE { ?purpose airo:isPurposeOf "Viogen_system" . }
 
 
-#Query for retrieving information required to be provided according to Annex IV (2)
+# Annex IV. 1(a). developer
+SELECT ?developer
+	WHERE {
+	        ?developer airo:producesAISystem "Viogen_system".
+                                 }
+# Annex IV. 1(a). date
+SELECT ?date
+	WHERE {
+	        ?date dcterms:date "Viogen_system".
+                                 }
+
+
+
+# Annex IV. 1(a). Version
+
+SELECT ?version
+	WHERE {
+	        ?version airo:isVersionOf "Viogen_system".
+                                 }
+
+
+#1(b)
+
+SELECT ?
+
+
+#1(c)
+
+SELECT ?system
+	WHERE {
+	      
+                                 }
+
+#1(d)
+
+SELECT ?form
+	WHERE {
+	        ?form airo:isFormOfAISystem "Viogen_system".
+                                 }
