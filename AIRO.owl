@@ -122,6 +122,13 @@ airo:hasExecutionEnvironment rdf:type owl:ObjectProperty ;
                              rdfs:label "has execution environment"@en .
 
 
+###  https://w3id.org/AIRO#hasExpectedAccuray
+airo:hasExpectedAccuray rdf:type owl:ObjectProperty ;
+                        rdfs:domain airo:AISystem ;
+                        rdfs:range airo:AISystemAccuracy ;
+                        rdfs:label "has expected accuracy"@en .
+
+
 ###  https://w3id.org/AIRO#hasImpact
 airo:hasImpact rdf:type owl:ObjectProperty ;
                owl:inverseOf airo:isImpactOf ;
@@ -162,6 +169,13 @@ airo:hasLikelihood rdf:type owl:ObjectProperty ;
                    rdfs:range airo:LikelihoodRate ;
                    rdfs:comment "Indicates the probability of occurrence of an event."@en ;
                    rdfs:label "has likelihood"@en .
+
+
+###  https://w3id.org/AIRO#hasPostmarketMonitoringSystem
+airo:hasPostmarketMonitoringSystem rdf:type owl:ObjectProperty ;
+                                   rdfs:domain airo:AISystem ;
+                                   rdfs:range airo:Post-marketMonitoringSystem ;
+                                   rdfs:label "has post-market monitoring system"@en .
 
 
 ###  https://w3id.org/AIRO#hasPurpose
@@ -207,6 +221,18 @@ airo:hasStakeholder rdf:type owl:ObjectProperty ;
                     rdfs:range airo:Actor ;
                     rdfs:comment "Indicates stakeholders of an AI system"@en ;
                     rdfs:label "has stakeholder"@en .
+
+
+###  https://w3id.org/AIRO#hasTestLog
+airo:hasTestLog rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf airo:hasDocumentation ;
+                rdfs:label "has test log"@en .
+
+
+###  https://w3id.org/AIRO#hasTestingReport
+airo:hasTestingReport rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf airo:hasDocumentation ;
+                      rdfs:label "has testing report"@en .
 
 
 ###  https://w3id.org/AIRO#hasVersion
@@ -545,6 +571,13 @@ airo:usesAISystem rdf:type owl:ObjectProperty ;
                   rdfs:domain airo:AIUser ;
                   rdfs:range airo:AISystem ;
                   rdfs:label "uses AI system"@en .
+
+
+###  https://w3id.org/AIRO#usesStandard
+airo:usesStandard rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AISystem ;
+                  rdfs:range airo:Standard ;
+                  rdfs:label "uses standard"@en .
 
 
 ###  https://w3id.org/AIRO#usesTechnique
@@ -1939,6 +1972,12 @@ airo:Post rdf:type owl:Class ;
 ###  https://w3id.org/AIRO#Post-market
 airo:Post-market rdf:type owl:Class ;
                  rdfs:subClassOf airo:AILifecyclePhase .
+
+
+###  https://w3id.org/AIRO#Post-marketMonitoringSystem
+airo:Post-marketMonitoringSystem rdf:type owl:Class ;
+                                 rdfs:subClassOf airo:System ;
+                                 rdfs:label "Post-market Monitoring System"@en .
 
 
 ###  https://w3id.org/AIRO#PostmarketMonitoringPlan

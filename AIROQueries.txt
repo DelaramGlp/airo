@@ -99,5 +99,153 @@ SELECT ?datasheet
 
 
 
+#2(e)
+SELECT ?event ?humanoversight 
+	WHERE {
+    		?humanoversight rdfs:subClassOf airo:HumanOversightMeasure ;
+				 airo:modifiesEvent ?event .
+}
+
+#2(g)
+SELECT ?testingdata ?datasheet
+	WHERE { 
+		"Viogen_system" airo:hasComponent ?testingdata .
+		 ?testingdata rdfs:subClassOf airo:TestingData ;
+				airo:hasDocumentation ?datasheet .
+}
+	
+SELECT ?validationdata ?datasheet
+	WHERE { 
+		"Viogen_system" airo:hasComponent ?validationdata .
+		 ?validationdata rdfs:subClassOf airo:ValidationData ;
+				airo:hasDocumentation ?datasheet .
+}
+
+SELECT ?accuracymetric
+	WHERE { 
+		"Viogen_system" airo:hasAIIndicator ?accuracy .
+		?accuracy rdfs:subClassOf airo:AISystemAccuray .
+		?accuracymetric airo:isUsedToMeasure ?accuracy .
+}
+
+
+SELECT ?robustnessmetric
+	WHERE { 
+		"Viogen_system" airo:hasAIIndicator ?robustness .
+		?robustnessrdfs:subClassOf airo:Robustness .
+		?robustnessmetric airo:isUsedToMeasure ?robustness .
+}
+
+
+SELECT ?securitymetric
+	WHERE { 
+		"Viogen_system" airo:hasAIIndicator ?security .
+		?cybersecurity rdfs:subClassOf airo:Security .
+		?securitynessmetric airo:isUsedToMeasure ?security.
+}
+
+
+SELECT ?impact
+	WHERE { 
+		"Viogen_system" airo:hasRisk ?risk .
+		?risk airo:hasConsequence ?consequence .
+		?impact airo:isImpactOf ?consequence .
+		?impact airo:hasImpactOnArea "Non-discrimination".
+}
+
+
+SELECT ?testLog ?testingreport
+	WHERE { "Viogen_system" airo:hasTestLog ?testlog ;
+			       airo:hasTestingReport ?testingreport .
+}
+	
+
+#3 
+
+
+SELECT ?expectedaccuracy
+	WHERE { 
+		"Viogen_system" airo:hasExpectedAccuracy ?expectedaccuracy 
+}
+
+SELECT ?source ?risk  ?consequence ?riskcontrolmeasure
+	WHERE{
+		"Viogen_system" airo:hasRisk ?risk .
+		?risk airo:hasRiskSource ?source ;
+		      airo:hasConsequence ?consequence ;
+		      airo:isModifiedByControl ?riskcontrolmeasure .
+
+}
+
+
+SELECT ?inputdata ?datasheet
+	WHERE { 
+		"Viogen_system" airo:hasComponent ?inputdata .
+		 ?testingdata rdfs:subClassOf airo:InputData ;
+				airo:hasDocumentation ?datasheet .
+}
+
+#4
+SELECT ?source ?sourcelikelihood ?sourcecontrol ?risk ?risklikelihood ?riskcontrol ?consequence ?consequencelikelihood ?consequenceseverity ?consequencecontrol ?impact ?impactlikelihood ?impactseverity ?impactcontrol ?impactedparty ?impactedarea 
+
+WHERE 
+ {	"Viogen_system" airo:hasRisk ?risk .
+	 ?risk airo:hasRiskSource ?source ;
+		airo:hasLikelihood ?risklikelihood;
+		 airo:isModifiedByControl ?riskcontrol;
+  	         airo:hasConsequence ?consequence .
+
+	?source airo:hasLikelihood ?sourcelikelihood;
+		airo:isModifiedByControl ?sourcecontrol.
+	
+	
+	?consequence airo:hasLikelihood ?consequencelikelihood;
+		     airo:hasSeverity ?consequenceseverity ;
+		     airo:isModifiedByControl ?consequencecontrol ;
+		     airo:hasImpact ?imapct .
+
+	?impact 	airo:hasLikelihood ?impactlikelihood;
+		     airo:hasSeverity ?impactseverity ;
+		     airo:isModifiedByControl ?impactcontrol ;
+		     airo:hasImpactOnAISubject ?impactedparty;
+		     airo:hasImpactOnArea	 ?impactedarea .	
+
+
+}
+		     
+
+
+
+#6
+SELECT ?standard
+	WHERE {
+		"Viogen_system" airo:usesStandard ?standard }
+
+SELECT ?standard
+	WHERE {
+		"Viogen_system" airo:usesStandard ?standard.
+		?standard rdfs:subClassOf airo:HarmonisedStandard . }
+SELECT ?techspec
+	WHERE {
+		"Viogen_system" airo:usesTechnicalSpecification ?techspec.
+
+}
+	
+	
+#7
+SELECT ?declarationodconformity
+	WHERE {  
+		"Viogen_system" airo:hasdocumentation ?declarationodconformity.
+		?declarationodconformity rdfs:subClassOf airo: EUDeclarationOfConformity .
+		
+}
+
+#8
+
+SELECT ?postmarket ?description
+	WHERE {  
+		"Viogen_system" airo:hasPost-marketMonitoringSystem ?postmarket .
+		?postmarket dcterm:description ?description .
+}
 
 	
