@@ -69,6 +69,11 @@ airo:hasAIIndicator rdf:type owl:ObjectProperty ;
                     rdfs:label "has AI indicator"@en .
 
 
+###  https://w3id.org/AIRO#hasAIProvider
+airo:hasAIProvider rdf:type owl:ObjectProperty ;
+                   rdfs:label "has AI Provider"@en .
+
+
 ###  https://w3id.org/AIRO#hasAIUser
 airo:hasAIUser rdf:type owl:ObjectProperty ;
                owl:inverseOf airo:usesAISystem ;
@@ -110,6 +115,11 @@ airo:hasDatasheet rdf:type owl:ObjectProperty ;
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       owl:inverseOf airo:isDocumentationFor ;
                       rdfs:label "has documentation"@en .
+
+
+###  https://w3id.org/AIRO#hasExecutionEnvironment
+airo:hasExecutionEnvironment rdf:type owl:ObjectProperty ;
+                             rdfs:label "has execution environment"@en .
 
 
 ###  https://w3id.org/AIRO#hasImpact
@@ -479,7 +489,7 @@ airo:isUsedInEnvironment rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isUsedInFormOf
 airo:isUsedInFormOf rdf:type owl:ObjectProperty ;
-                    rdfs:comment "is used in form of"@en .
+                    rdfs:label "is used in form of"@en .
 
 
 ###  https://w3id.org/AIRO#isUsedInRegerdToSubject
@@ -574,7 +584,8 @@ airo:AIComponent rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AIHardware
 airo:AIHardware rdf:type owl:Class ;
-                rdfs:subClassOf airo:AIComponent .
+                rdfs:subClassOf airo:AIComponent ;
+                rdfs:label "AI Hardware"@en .
 
 
 ###  https://w3id.org/AIRO#AILifecyclePhase
@@ -1033,10 +1044,10 @@ airo:DegradedAccuracy rdf:type owl:Class ;
                       rdfs:label "Degraded Accuracy"@en .
 
 
-###  https://w3id.org/AIRO#DesignSepicification
-airo:DesignSepicification rdf:type owl:Class ;
-                          rdfs:subClassOf airo:Document ;
-                          rdfs:label "Design Sepicification"@en .
+###  https://w3id.org/AIRO#DesignSpecification
+airo:DesignSpecification rdf:type owl:Class ;
+                         rdfs:subClassOf airo:Document ;
+                         rdfs:label "Design Specification"@en .
 
 
 ###  https://w3id.org/AIRO#DetectingNon-AuthenticDocuments
@@ -1728,6 +1739,11 @@ airo:Misuse rdf:type owl:Class ;
             rdfs:label "Misuse"@en .
 
 
+###  https://w3id.org/AIRO#Model
+airo:Model rdf:type owl:Class ;
+           rdfs:subClassOf airo:AIComponent .
+
+
 ###  https://w3id.org/AIRO#ModelEvasion
 airo:ModelEvasion rdf:type owl:Class ;
                   rdfs:subClassOf airo:Attack ;
@@ -1935,6 +1951,12 @@ airo:PostmarketMonitoringPlan rdf:type owl:Class ;
 airo:PostmarketMonitoringSystemDescription rdf:type owl:Class ;
                                            rdfs:subClassOf airo:Document ;
                                            rdfs:label "Post-market Monitoring System Description"@en .
+
+
+###  https://w3id.org/AIRO#Pre-trainedModel
+airo:Pre-trainedModel rdf:type owl:Class ;
+                      rdfs:subClassOf airo:Model ;
+                      rdfs:label "Pre-trianed Model"@en .
 
 
 ###  https://w3id.org/AIRO#PredictingRecidivism
@@ -2281,15 +2303,16 @@ airo:System rdf:type owl:Class ;
             rdfs:label "System"@en .
 
 
+###  https://w3id.org/AIRO#SystemArchitecture
+airo:SystemArchitecture rdf:type owl:Class ;
+                        rdfs:subClassOf airo:Document ;
+                        rdfs:label "System Architecture"@en .
+
+
 ###  https://w3id.org/AIRO#SystemRelatedSource
 airo:SystemRelatedSource rdf:type owl:Class ;
                          rdfs:subClassOf airo:RiskSource ;
                          rdfs:label "System Related Source"@en .
-
-
-###  https://w3id.org/AIRO#SystemVersion
-airo:SystemVersion rdf:type owl:Class ;
-                   rdfs:label "System Version"@en .
 
 
 ###  https://w3id.org/AIRO#TaskAllocation

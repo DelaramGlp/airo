@@ -18,48 +18,86 @@ SELECT ?system ?technique ?purpose ?application ?domain ?user ?subject ?environm
 	}
 
 
-# Annex IV. 1(a). Intended pupose
+# Annex IV. 1(a). Intended purpose, developer, date, version
 
-SELECT ?purpose
-	WHERE { ?purpose airo:isPurposeOf "Viogen_system" . }
-
-
-# Annex IV. 1(a). developer
-SELECT ?developer
-	WHERE {
-	        ?developer airo:producesAISystem "Viogen_system".
-                                 }
-# Annex IV. 1(a). date
-SELECT ?date
-	WHERE {
-	        ?date dcterms:date "Viogen_system".
-                                 }
+SELECT ?purpose, ?developer ?date ?version
+	WHERE { 
+             "Viogen_system" airo:hasPurpose ?purpose  .
+	     "Viogen_system"  airo:hasAIProvider ?developer.
+               ?date dcterms:date "Viogen_system". 
+                "Viogen_system" airo:hasVersion ?version .}
 
 
 
-# Annex IV. 1(a). Version
+                         
 
-SELECT ?version
-	WHERE {
-	        ?version airo:isVersionOf "Viogen_system".
-                                 }
-
-
-#1(b)
-
-SELECT ?
-
-
-#1(c)
-
-SELECT ?system
-	WHERE {
-	      
-                                 }
-
-#1(d)
+#1(d). Forms in which AI system is placed on market or put into service
 
 SELECT ?form
 	WHERE {
-	        ?form airo:isFormOfAISystem "Viogen_system".
+	        "Viogen_system" airo:isUsedInFormOf ?form.
                                  }
+
+
+#1(e). Hardware
+
+
+SELECT ?hardware
+	WHERE {
+	        "Viogen_system" airo:hasExecutionEnvironment ?hardware.
+                                 }
+
+#1(f)
+
+SELECT ?blueprint 
+	WHERE 
+        { 
+          "Viogen_system" airo:isPartOf ?system .
+	  ?system airo:hasDocumentation ?blueprint .
+	  ?blueprint rdfs:subClassOf airo:Blueprint .
+          }
+
+#1(g)
+SELECT ?userinstruction ?installationinstruction
+	WHERE
+	{ 
+	 ?userinstruction rdfs:subClassOf airo:InstructionOfUse .
+	 ?installationinstruction rdfs:subClassOf airo:InstallationInstruction .
+	 "Viogen_system" airo:hasDocumentation  ?userinstruction ;
+			airo:hasDocumentation ?installationinstruction .
+}
+
+# 2(a)
+SELECT ?tool ?model
+	WHERE {
+		?tool rdfs:subClassOf airo:Tool .
+		?model	rdfs:subClassOf airo:Pre-trainedModel .
+		"Viogen_system" airo:hasComponent ?tool ;
+				 airo:hasComponent ?model ;
+}
+#2(b)
+SELECT ?designspec
+	WHERE {
+		?designspec rdfs:subClassOf airo:DesignSpecification .
+		"Viogen_system" airo:hasDocumentation ?designspec .
+}
+
+
+#2(c)
+SELECT ?architecture
+	WHERE {
+		?architecture rdfs:subClassOf AIRO:SystemArchitecture .
+		"Viogen_system" airo:hasDocumentation ?architecture .
+}
+
+#2(d)
+SELECT ?datasheet
+	WHERE {
+		?data airo:isPartOfSystem "Viogen_system";
+		      airo:hasDocumentation ?datasheet .
+}
+
+
+
+
+	
