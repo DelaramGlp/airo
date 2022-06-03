@@ -1,0 +1,16 @@
+@prefix airo: <https://w3id.org/AIRO#> .
+
+airo:Uber a airo:AISystem ;
+  airo:hasPurpose airo:Uber_P1 ;
+  airo:hasDomain airo:Employment ;
+  airo:label "Uber".
+
+airo:VioGen a airo:AISystem ;
+  airo:hasDomain airo:Law_Enforcement ;
+  airo:hasPurpose airo:VioGen_P2 ;
+  airo:label "VioGen".
+
+airo:Uber_P1 a airo:BiometricIdentification .
+airo:Uber_P1 a airo:CategorisationOfPersons .
+
+airo:VioGen_P2 a airo:RiskAssessmentOfCrimeVictims .

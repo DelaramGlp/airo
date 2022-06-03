@@ -1,0 +1,34 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix airo: <https://w3id.org/AIRO#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:AnnexIII-1
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-1"@en ;
+    sh:description "Biometric Identification and Categorisation of Natural Persons"@en ;
+    sh:not [
+        a sh:PropertyShape ;
+        sh:path airo:hasPurpose ;
+        sh:class airo:BiometricIdentification ;
+        sh:class airo:CategorisationOfPersons ; ] .
+
+:AnnexIII-6a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-6a"@en ;
+    sh:description "AI systems intended to be used by law enforcement authorities for making individual risk assessments of natural persons in order to assess the risk of a natural person for offending or reoffending or the risk for potential victims of criminal offences;"@en ;
+    sh:not [ sh:and (
+            sh:property [
+                a sh:PropertyShape ;
+                sh:path airo:hasDomain ;
+                sh:hasValue airo:Law_Enforcement ;
+            ]
+            sh:property [
+                a sh:PropertyShape ;
+                sh:path airo:hasPurpose ;
+                # omitted (sh:or .. airo:RiskAssessmentForCrime) here for brevity
+                sh:class airo:RiskAssessmentOfCrimeVictims ;
+            ] 
+        ) ] .
