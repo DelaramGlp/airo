@@ -61,6 +61,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AIApplication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Refers to the application and usage of the AI system."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AI Application"
@@ -70,7 +74,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents a functional element that constructs an AI system. [Source: ISO 22989]"
+    "@value" : "A functional element that constructs an AI system. [Source: ISO 22989]"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -79,12 +83,24 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AIHardware",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Hardware on which the AI system run."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AI Hardware"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AIComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#AILifecyclePhase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Phase of AI lifecycle which indicates evolution of the system from conception through retirement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AI Lifecycle Phase"
@@ -276,6 +292,14 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Applicant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who has made an application."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Applicant"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Person"
   } ]
@@ -361,6 +385,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingPastCriminalBehaviour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Past Criminal Behaviour"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Assessment"
   } ]
@@ -445,6 +473,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AssessmentOfEmployee",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessment Of Employee"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Assessment"
   } ]
@@ -469,20 +501,24 @@
     "@id" : "https://w3id.org/AIRO#Domain"
   } ]
 }, {
-  "@id" : "https://w3id.org/AIRO#AsylumApplicant",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Asylum Applicant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Applicant"
-  } ]
-}, {
   "@id" : "https://w3id.org/AIRO#AsylumApplicationExamination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#ApplicationExamination"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#AsylumSeeker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who has applied for asylum."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Asylum Seeker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#Applicant"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#Attack",
@@ -596,6 +632,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#BiomerticCategorisation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biometric Categorisation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#MakingDecision"
   } ]
@@ -636,6 +676,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Child",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An individual human being who is below the age of 18 (according to the UN Convention on the Rights of the Child)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Child"
@@ -651,11 +695,15 @@
     "@value" : "Competent Public Authority"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#AIUser"
+    "@id" : "https://w3id.org/AIRO#PublicAuthority"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AISystemForm"
   } ]
@@ -727,6 +775,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Data",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing [Source: ISO/IEC 2382:2015, 2121272]"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Data"
@@ -864,7 +916,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Person who is being accused of criminal offences."
+    "@value" : "A person who is being accused of criminal offences."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -888,11 +940,11 @@
     "@id" : "https://w3id.org/AIRO#PerformaceConsequence"
   } ]
 }, {
-  "@id" : "https://w3id.org/AIRO#DesignSepicification",
+  "@id" : "https://w3id.org/AIRO#DesignSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Design Sepicification"
+    "@value" : "Design Specification"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Document"
@@ -934,6 +986,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#DetermineCreditScore",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Determin Credit Score"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Assessment"
   } ]
@@ -954,6 +1010,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Development",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Development"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AILifecyclePhase"
   } ]
@@ -1333,6 +1393,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#FacialRecognition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Automatic pattern recognition comparing stored images of human faces with the image of an actual face, indicating any matching, if it exists, and any data, if they exist, identifying the person to whom the face belongs [Source: ISO 5127:2017, 3.1.12.09]."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Facial Recognition"
@@ -1343,6 +1407,14 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Firefighter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who works as a firefighter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Firefighter"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AIUser"
   } ]
@@ -1431,7 +1503,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Refers to a group of persons such as citizens, marginsalised groups, etc."
+    "@value" : "A group of persons such as citizens, marginsalised groups, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1558,6 +1630,16 @@
     "@id" : "https://w3id.org/AIRO#Impact"
   } ]
 }, {
+  "@id" : "https://w3id.org/AIRO#Inception",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Inception"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#AILifecyclePhase"
+  } ]
+}, {
   "@id" : "https://w3id.org/AIRO#IncompetenceOfHumanOversightActors",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1645,6 +1727,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#WellbeingImpact"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#InputData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data for which an AI system calculates a predicted output or inference [Source: ISO/IEC FDIS 22989, 3.2.9]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Input Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#Data"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#InputDataRiskSource",
@@ -1758,6 +1854,9 @@
   "@id" : "https://w3id.org/AIRO#JobApplicant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A person who has made an application for employment."
+  }, {
     "@language" : "en",
     "@value" : "Job Applicant"
   } ],
@@ -2087,6 +2186,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#MedicalAid",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who works as a medical aid."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Medical Aid"
@@ -2130,6 +2233,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#RiskSource"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#Model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical, mathematical, or otherwise logical representation of a system, entity, phenomenon, process or data [Source: ISO/IEC FDIS 22989, 3.1.23]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#AIComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#ModelEvasion",
@@ -2306,16 +2423,6 @@
     "@id" : "_:genid7"
   } ]
 }, {
-  "@id" : "https://w3id.org/AIRO#ParticipantsInTestsRequiredForAdmission",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Participants In Tests Required For Admission"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#TestParticipant"
-  } ]
-}, {
   "@id" : "https://w3id.org/AIRO#PatternRecognition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2370,6 +2477,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An individual human being."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Natural Person"
@@ -2378,26 +2489,40 @@
     "@id" : "https://w3id.org/AIRO#AISubject"
   } ]
 }, {
-  "@id" : "https://w3id.org/AIRO#PersonApplyingForAStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Applicant"
-  } ]
-}, {
   "@id" : "https://w3id.org/AIRO#PersonWhoHasEnteredATerritory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who has entered a territory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Person Who Has Entered A Territory"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Person"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#PersonWhoIntendsToEnterATerritory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who intends to enter a territory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Person Who Intends To Enter Territory"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Person"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#PersonalityTraitsAssessment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Personality Traits Assessment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Assessment"
   } ]
@@ -2442,8 +2567,22 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Post-market",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Post-market"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AILifecyclePhase"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#Post-marketMonitoringSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Post-market Monitoring System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#System"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#PostmarketMonitoringPlan",
@@ -2466,6 +2605,16 @@
     "@id" : "https://w3id.org/AIRO#Document"
   } ]
 }, {
+  "@id" : "https://w3id.org/AIRO#Pre-trainedModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pre-trianed Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#Model"
+  } ]
+}, {
   "@id" : "https://w3id.org/AIRO#PredictingRecidivism",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2484,7 +2633,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Represents primary output of an AI system when provided with input data or information. [Source: ISO 22989]"
+    "@value" : "Primary output of an AI system when provided with input data or information. [Source: ISO/IEC FDIS 22989, 3.1.27]"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2661,6 +2810,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#PubliclyAccessableSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publicly Accessable Space"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#EnvironmentOfUse"
   } ]
@@ -2702,6 +2855,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#ReclaimingPublicAssisstanceServices",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reclaiming Public Assisstance Services"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#MakingDecision"
   } ]
@@ -2714,6 +2871,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#ReducingPublicAssisstanceServices",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reducing Public Assisstance Services"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#MakingDecision"
   } ]
@@ -2732,7 +2893,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database"
+    "@value" : "Identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2744,6 +2905,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#RepresentativeOfPublicAuthority",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity who act on behalf of a public authority."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Representative Of Public Authority"
@@ -2754,6 +2919,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#ResidencePermitApplicant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who has applied for a residence permit."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Residence Permit Applicant"
@@ -2798,6 +2967,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#RevokingPublicAssisstanceServices",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Revoking Public Assisstance Services"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#MakingDecision"
   } ]
@@ -2968,7 +3141,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A provider that is a micro or small enterprise within the meaning of Commission Recommendation 2003/361/EC61."
+    "@value" : "A provider that is a micro enterprise (an enterprise which employs fewer than 10 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 2 million) or small enterprise (an enterprise which employs fewer than 50 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 10 million)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3018,6 +3191,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Student",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who is studying at a school or a university."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Student"
@@ -3087,6 +3264,16 @@
     "@value" : "System"
   } ]
 }, {
+  "@id" : "https://w3id.org/AIRO#SystemArchitecture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "System Architecture"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#Document"
+  } ]
+}, {
   "@id" : "https://w3id.org/AIRO#SystemRelatedSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3095,13 +3282,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#RiskSource"
-  } ]
-}, {
-  "@id" : "https://w3id.org/AIRO#SystemVersion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "System Version"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#TaskAllocation",
@@ -3134,6 +3314,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#TechnicalSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Technical Specification"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
@@ -3150,6 +3334,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#TestParticipant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who is participating in a test."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Test Participant"
@@ -3170,6 +3358,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Testing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Testing"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AILifecyclePhase"
   } ]
@@ -3196,6 +3388,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Tool",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tool that has been used in development of an AI system."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Tool"
@@ -3206,12 +3402,20 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Training",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Training"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AILifecyclePhase"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#TrainingData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data used to train a machine learning model [ISO/IEC FDIS 22989, 3.3.16]"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Training Data"
@@ -3303,12 +3507,20 @@
 }, {
   "@id" : "https://w3id.org/AIRO#Validation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Validation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AILifecyclePhase"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#ValidationData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data used to compare the performance of different candidate models [Source: ISO/IEC FDIS 22989, 3.2.5]."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Validation Data"
@@ -3370,6 +3582,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#VisaApplicant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who has applied for a visa."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Visa Applicant"
@@ -3442,6 +3658,20 @@
     "@id" : "https://w3id.org/AIRO#DataSet-RelatedRiskSource"
   } ]
 }, {
+  "@id" : "https://w3id.org/AIRO#citizenshipApplicant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A person who has applied for citizenship."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Citizenship Applicant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/AIRO#Applicant"
+  } ]
+}, {
   "@id" : "https://w3id.org/AIRO#detectsEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3485,6 +3715,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/AIRO#AISystemIndicator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#hasAIProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has AI Provider"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#hasAIUser",
@@ -3568,6 +3805,26 @@
     "@id" : "https://w3id.org/AIRO#isDocumentationFor"
   } ]
 }, {
+  "@id" : "https://w3id.org/AIRO#hasExecutionEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has execution environment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#hasExpectedAccuray",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/AIRO#AISystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has expected accuracy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/AIRO#AISystemAccuracy"
+  } ]
+}, {
   "@id" : "https://w3id.org/AIRO#hasImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3645,6 +3902,19 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/AIRO#isLikelihoodOf"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#hasPostmarketMonitoringSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/AIRO#AISystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has post-market monitoring system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/AIRO#Post-marketMonitoringSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#hasPurpose",
@@ -3729,6 +3999,26 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/AIRO#isStakeholderOfSystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#hasTestLog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has test log"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/AIRO#hasDocumentation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#hasTestingReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has testing report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/AIRO#hasDocumentation"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#hasVersion",
@@ -3995,6 +4285,16 @@
     "@value" : "is likelihood of"
   } ]
 }, {
+  "@id" : "https://w3id.org/AIRO#isModifiedByControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is modified by control"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/AIRO#modifiesEvent"
+  } ]
+}, {
   "@id" : "https://w3id.org/AIRO#isPartOfAISystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4218,7 +4518,7 @@
 }, {
   "@id" : "https://w3id.org/AIRO#isUsedInFormOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is used in form of"
   } ]
@@ -4322,6 +4622,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/AIRO#AISystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#usesStandard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/AIRO#AISystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/AIRO#Standard"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#usesTechnicalSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/AIRO#AISystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses technical specification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/AIRO#TechnicalSpecification"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#usesTechnique",

@@ -166,7 +166,7 @@ airo:hasInstructionOfUse rdf:type owl:ObjectProperty ;
 airo:hasLikelihood rdf:type owl:ObjectProperty ;
                    owl:inverseOf airo:isLikelihoodOf ;
                    rdfs:domain airo:Event ;
-                   rdfs:range airo:LikelihoodRate ;
+                   rdfs:range airo:Likelihood ;
                    rdfs:comment "Indicates the probability of occurrence of an event."@en ;
                    rdfs:label "has likelihood"@en .
 
@@ -1678,11 +1678,11 @@ airo:LegalInterpretation rdf:type owl:Class ;
                          rdfs:label "Legal Interpretation"@en .
 
 
-###  https://w3id.org/AIRO#LikelihoodRate
-airo:LikelihoodRate rdf:type owl:Class ;
-                    rdfs:subClassOf airo:RiskIndicator ;
-                    rdfs:comment "Chance of an event happening. [Source: ISO 31000, 3.7]"@en ;
-                    rdfs:label "Likelihood"@en .
+###  https://w3id.org/AIRO#Likelihood
+airo:Likelihood rdf:type owl:Class ;
+                rdfs:subClassOf airo:RiskIndicator ;
+                rdfs:comment "Chance of an event happening. [Source: ISO 31000, 3.7]"@en ;
+                rdfs:label "Likelihood"@en .
 
 
 ###  https://w3id.org/AIRO#LogicBasedApproach

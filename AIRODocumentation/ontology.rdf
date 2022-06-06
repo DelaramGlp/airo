@@ -113,6 +113,15 @@
     
 
 
+    <!-- https://w3id.org/AIRO#hasAIProvider -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasAIProvider">
+        <rdfs:label xml:lang="en">has AI Provider</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/AIRO#hasAIUser -->
 
 
@@ -176,6 +185,26 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasDocumentation">
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
         <rdfs:label xml:lang="en">has documentation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/AIRO#hasExecutionEnvironment -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasExecutionEnvironment">
+        <rdfs:label xml:lang="en">has execution environment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/AIRO#hasExpectedAccuray -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasExpectedAccuray">
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystemAccuracy"/>
+        <rdfs:label xml:lang="en">has expected accuracy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -246,6 +275,17 @@
     
 
 
+    <!-- https://w3id.org/AIRO#hasPostmarketMonitoringSystem -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasPostmarketMonitoringSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/AIRO#Post-marketMonitoringSystem"/>
+        <rdfs:label xml:lang="en">has post-market monitoring system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/AIRO#hasPurpose -->
 
 
@@ -310,6 +350,26 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Actor"/>
         <rdfs:comment xml:lang="en">Indicates stakeholders of an AI system</rdfs:comment>
         <rdfs:label xml:lang="en">has stakeholder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/AIRO#hasTestLog -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasTestLog">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#hasDocumentation"/>
+        <rdfs:label xml:lang="en">has test log</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/AIRO#hasTestingReport -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasTestingReport">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#hasDocumentation"/>
+        <rdfs:label xml:lang="en">has testing report</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -549,6 +609,16 @@
     
 
 
+    <!-- https://w3id.org/AIRO#isModifiedByControl -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isModifiedByControl">
+        <owl:inverseOf rdf:resource="https://w3id.org/AIRO#modifiesEvent"/>
+        <rdfs:label xml:lang="en">is modified by control</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/AIRO#isPartOfAISystem -->
 
 
@@ -767,7 +837,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isUsedInFormOf">
-        <rdfs:comment xml:lang="en">is used in form of</rdfs:comment>
+        <rdfs:label xml:lang="en">is used in form of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -859,6 +929,28 @@
     
 
 
+    <!-- https://w3id.org/AIRO#usesStandard -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#usesStandard">
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/AIRO#Standard"/>
+        <rdfs:label xml:lang="en">uses standard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/AIRO#usesTechnicalSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#usesTechnicalSpecification">
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#AISystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/AIRO#TechnicalSpecification"/>
+        <rdfs:label xml:lang="en">uses technical specification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/AIRO#usesTechnique -->
 
 
@@ -913,6 +1005,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AIApplication">
+        <rdfs:comment xml:lang="en">Refers to the application and usage of the AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Application</rdfs:label>
     </owl:Class>
     
@@ -922,7 +1015,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AIComponent">
-        <rdfs:comment xml:lang="en">Represents a functional element that constructs an AI system. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:comment xml:lang="en">A functional element that constructs an AI system. [Source: ISO 22989]</rdfs:comment>
         <rdfs:label xml:lang="en">AI Component</rdfs:label>
     </owl:Class>
     
@@ -933,6 +1026,8 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AIHardware">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIComponent"/>
+        <rdfs:comment xml:lang="en">Hardware on which the AI system run.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Hardware</rdfs:label>
     </owl:Class>
     
 
@@ -941,6 +1036,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AILifecyclePhase">
+        <rdfs:comment xml:lang="en">A Phase of AI lifecycle which indicates evolution of the system from conception through retirement.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Lifecycle Phase</rdfs:label>
     </owl:Class>
     
@@ -1109,6 +1205,8 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Applicant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Person"/>
+        <rdfs:comment xml:lang="en">A person who has made an application.</rdfs:comment>
+        <rdfs:label xml:lang="en">Applicant</rdfs:label>
     </owl:Class>
     
 
@@ -1190,6 +1288,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingPastCriminalBehaviour">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
+        <rdfs:label xml:lang="en">Assessing Past Criminal Behaviour</rdfs:label>
     </owl:Class>
     
 
@@ -1286,6 +1385,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessmentOfEmployee">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
+        <rdfs:label xml:lang="en">Assessment Of Employee</rdfs:label>
     </owl:Class>
     
 
@@ -1310,21 +1410,22 @@
     
 
 
-    <!-- https://w3id.org/AIRO#AsylumApplicant -->
-
-
-    <owl:Class rdf:about="https://w3id.org/AIRO#AsylumApplicant">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Applicant"/>
-        <rdfs:label xml:lang="en">Asylum Applicant</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/AIRO#AsylumApplicationExamination -->
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AsylumApplicationExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#AsylumSeeker -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#AsylumSeeker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Applicant"/>
+        <rdfs:comment xml:lang="en">A person who has applied for asylum.</rdfs:comment>
+        <rdfs:label xml:lang="en">Asylum Seeker</rdfs:label>
     </owl:Class>
     
 
@@ -1429,6 +1530,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#BiomerticCategorisation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
+        <rdfs:label xml:lang="en">Biometric Categorisation</rdfs:label>
     </owl:Class>
     
 
@@ -1469,6 +1571,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Child">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Person"/>
+        <rdfs:comment xml:lang="en">An individual human being who is below the age of 18 (according to the UN Convention on the Rights of the Child)</rdfs:comment>
         <rdfs:label xml:lang="en">Child</rdfs:label>
     </owl:Class>
     
@@ -1478,7 +1581,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#CompetentPublicAuthority">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#PublicAuthority"/>
         <rdfs:label xml:lang="en">Competent Public Authority</rdfs:label>
     </owl:Class>
     
@@ -1489,6 +1592,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Component">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISystemForm"/>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
     </owl:Class>
     
 
@@ -1551,6 +1655,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Data">
+        <rdfs:comment xml:lang="en">Reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing [Source: ISO/IEC 2382:2015, 2121272]</rdfs:comment>
         <rdfs:label xml:lang="en">Data</rdfs:label>
     </owl:Class>
     
@@ -1668,7 +1773,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Defendant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Person"/>
-        <rdfs:comment xml:lang="en">Person who is being accused of criminal offences.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A person who is being accused of criminal offences.</rdfs:comment>
         <rdfs:label xml:lang="en">Defendant</rdfs:label>
     </owl:Class>
     
@@ -1685,12 +1790,12 @@
     
 
 
-    <!-- https://w3id.org/AIRO#DesignSepicification -->
+    <!-- https://w3id.org/AIRO#DesignSpecification -->
 
 
-    <owl:Class rdf:about="https://w3id.org/AIRO#DesignSepicification">
+    <owl:Class rdf:about="https://w3id.org/AIRO#DesignSpecification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
-        <rdfs:label xml:lang="en">Design Sepicification</rdfs:label>
+        <rdfs:label xml:lang="en">Design Specification</rdfs:label>
     </owl:Class>
     
 
@@ -1731,6 +1836,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#DetermineCreditScore">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
+        <rdfs:label xml:lang="en">Determin Credit Score</rdfs:label>
     </owl:Class>
     
 
@@ -1751,6 +1857,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Development">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
+        <rdfs:label xml:lang="en">Development</rdfs:label>
     </owl:Class>
     
 
@@ -2100,6 +2207,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#FacialRecognition">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIApplication"/>
+        <rdfs:comment xml:lang="en">Automatic pattern recognition comparing stored images of human faces with the image of an actual face, indicating any matching, if it exists, and any data, if they exist, identifying the person to whom the face belongs [Source: ISO 5127:2017, 3.1.12.09].</rdfs:comment>
         <rdfs:label xml:lang="en">Facial Recognition</rdfs:label>
     </owl:Class>
     
@@ -2110,6 +2218,8 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Firefighter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+        <rdfs:comment xml:lang="en">A person who works as a firefighter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Firefighter</rdfs:label>
     </owl:Class>
     
 
@@ -2184,7 +2294,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Group">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
-        <rdfs:comment xml:lang="en">Refers to a group of persons such as citizens, marginsalised groups, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A group of persons such as citizens, marginsalised groups, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Group</rdfs:label>
     </owl:Class>
     
@@ -2287,6 +2397,16 @@
     
 
 
+    <!-- https://w3id.org/AIRO#Inception -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Inception">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
+        <rdfs:label xml:lang="en">Inception</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/AIRO#IncompetenceOfHumanOversightActors -->
 
 
@@ -2365,6 +2485,17 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#WellbeingImpact"/>
         <rdfs:comment xml:lang="en">Represents physical injuries caused by AI.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Injury</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#InputData -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#InputData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Data"/>
+        <rdfs:comment xml:lang="en">Data for which an AI system calculates a predicted output or inference [Source: ISO/IEC FDIS 22989, 3.2.9].</rdfs:comment>
+        <rdfs:label xml:lang="en">Input Data</rdfs:label>
     </owl:Class>
     
 
@@ -2476,6 +2607,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#JobApplicant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Applicant"/>
+        <rdfs:label xml:lang="en">A person who has made an application for employment.</rdfs:label>
         <rdfs:label xml:lang="en">Job Applicant</rdfs:label>
     </owl:Class>
     
@@ -2776,6 +2908,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#MedicalAid">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+        <rdfs:comment xml:lang="en">A person who works as a medical aid.</rdfs:comment>
         <rdfs:label xml:lang="en">Medical Aid</rdfs:label>
     </owl:Class>
     
@@ -2816,6 +2949,17 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:comment xml:lang="en">The use of an AI system in a way that is not in accordance with its intended purpose.</rdfs:comment>
         <rdfs:label xml:lang="en">Misuse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Model -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Model">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIComponent"/>
+        <rdfs:comment xml:lang="en">Physical, mathematical, or otherwise logical representation of a system, entity, phenomenon, process or data [Source: ISO/IEC FDIS 22989, 3.1.23]</rdfs:comment>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
     </owl:Class>
     
 
@@ -3008,16 +3152,6 @@
     
 
 
-    <!-- https://w3id.org/AIRO#ParticipantsInTestsRequiredForAdmission -->
-
-
-    <owl:Class rdf:about="https://w3id.org/AIRO#ParticipantsInTestsRequiredForAdmission">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TestParticipant"/>
-        <rdfs:label xml:lang="en">Participants In Tests Required For Admission</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/AIRO#PatternRecognition -->
 
 
@@ -3066,16 +3200,8 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Person">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISubject"/>
+        <rdfs:comment xml:lang="en">An individual human being.</rdfs:comment>
         <rdfs:label xml:lang="en">Natural Person</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/AIRO#PersonApplyingForAStatus -->
-
-
-    <owl:Class rdf:about="https://w3id.org/AIRO#PersonApplyingForAStatus">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Applicant"/>
     </owl:Class>
     
 
@@ -3085,6 +3211,8 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#PersonWhoHasEnteredATerritory">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Person"/>
+        <rdfs:comment xml:lang="en">A person who has entered a territory.</rdfs:comment>
+        <rdfs:label xml:lang="en">Person Who Has Entered A Territory</rdfs:label>
     </owl:Class>
     
 
@@ -3094,6 +3222,8 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#PersonWhoIntendsToEnterATerritory">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Person"/>
+        <rdfs:comment xml:lang="en">A person who intends to enter a territory.</rdfs:comment>
+        <rdfs:label xml:lang="en">Person Who Intends To Enter Territory</rdfs:label>
     </owl:Class>
     
 
@@ -3103,6 +3233,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#PersonalityTraitsAssessment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
+        <rdfs:label xml:lang="en">Personality Traits Assessment</rdfs:label>
     </owl:Class>
     
 
@@ -3144,6 +3275,17 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Post-market">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
+        <rdfs:label xml:lang="en">Post-market</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Post-marketMonitoringSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Post-marketMonitoringSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#System"/>
+        <rdfs:label xml:lang="en">Post-market Monitoring System</rdfs:label>
     </owl:Class>
     
 
@@ -3168,6 +3310,16 @@
     
 
 
+    <!-- https://w3id.org/AIRO#Pre-trainedModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Pre-trainedModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Model"/>
+        <rdfs:label xml:lang="en">Pre-trianed Model</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/AIRO#PredictingRecidivism -->
 
 
@@ -3184,7 +3336,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Prediction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Output"/>
-        <rdfs:comment xml:lang="en">Represents primary output of an AI system when provided with input data or information. [Source: ISO 22989]</rdfs:comment>
+        <rdfs:comment xml:lang="en">Primary output of an AI system when provided with input data or information. [Source: ISO/IEC FDIS 22989, 3.1.27]</rdfs:comment>
         <rdfs:label xml:lang="en">Prediction</rdfs:label>
     </owl:Class>
     
@@ -3334,6 +3486,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#PubliclyAccessableSpace">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#EnvironmentOfUse"/>
+        <rdfs:label xml:lang="en">Publicly Accessable Space</rdfs:label>
     </owl:Class>
     
 
@@ -3374,6 +3527,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#ReclaimingPublicAssisstanceServices">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
+        <rdfs:label xml:lang="en">Reclaiming Public Assisstance Services</rdfs:label>
     </owl:Class>
     
 
@@ -3392,6 +3546,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#ReducingPublicAssisstanceServices">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
+        <rdfs:label xml:lang="en">Reducing Public Assisstance Services</rdfs:label>
     </owl:Class>
     
 
@@ -3411,7 +3566,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#RemoteBiometricIdentification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIApplication"/>
-        <rdfs:comment xml:lang="en">the purpose of identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database.</rdfs:comment>
         <rdfs:label xml:lang="en">Remote Biometric Identification</rdfs:label>
     </owl:Class>
     
@@ -3422,6 +3577,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#RepresentativeOfPublicAuthority">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
+        <rdfs:comment xml:lang="en">An entity who act on behalf of a public authority.</rdfs:comment>
         <rdfs:label xml:lang="en">Representative Of Public Authority</rdfs:label>
     </owl:Class>
     
@@ -3432,6 +3588,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#ResidencePermitApplicant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Applicant"/>
+        <rdfs:comment xml:lang="en">A person who has applied for a residence permit.</rdfs:comment>
         <rdfs:label xml:lang="en">Residence Permit Applicant</rdfs:label>
     </owl:Class>
     
@@ -3473,6 +3630,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#RevokingPublicAssisstanceServices">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
+        <rdfs:label xml:lang="en">Revoking Public Assisstance Services</rdfs:label>
     </owl:Class>
     
 
@@ -3620,7 +3778,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#SmallScaleAIProvider">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIProvider"/>
-        <rdfs:comment xml:lang="en">A provider that is a micro or small enterprise within the meaning of Commission Recommendation 2003/361/EC61.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A provider that is a micro enterprise (an enterprise which employs fewer than 10 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 2 million) or small enterprise (an enterprise which employs fewer than 50 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 10 million).</rdfs:comment>
         <rdfs:label xml:lang="en">Small Scale AI Provider</rdfs:label>
     </owl:Class>
     
@@ -3663,6 +3821,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Student">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Person"/>
+        <rdfs:comment xml:lang="en">A person who is studying at a school or a university.</rdfs:comment>
         <rdfs:label xml:lang="en">Student</rdfs:label>
     </owl:Class>
     
@@ -3728,21 +3887,22 @@
     
 
 
+    <!-- https://w3id.org/AIRO#SystemArchitecture -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#SystemArchitecture">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
+        <rdfs:label xml:lang="en">System Architecture</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/AIRO#SystemRelatedSource -->
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#SystemRelatedSource">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:label xml:lang="en">System Related Source</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/AIRO#SystemVersion -->
-
-
-    <owl:Class rdf:about="https://w3id.org/AIRO#SystemVersion">
-        <rdfs:label xml:lang="en">System Version</rdfs:label>
     </owl:Class>
     
 
@@ -3774,6 +3934,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#TechnicalSpecification">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:label xml:lang="en">Technical Specification</rdfs:label>
     </owl:Class>
     
 
@@ -3793,6 +3954,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#TestParticipant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Person"/>
+        <rdfs:comment xml:lang="en">A person who is participating in a test.</rdfs:comment>
         <rdfs:label xml:lang="en">Test Participant</rdfs:label>
     </owl:Class>
     
@@ -3813,6 +3975,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Testing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
+        <rdfs:label xml:lang="en">Testing</rdfs:label>
     </owl:Class>
     
 
@@ -3842,6 +4005,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Tool">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIComponent"/>
+        <rdfs:comment xml:lang="en">A tool that has been used in development of an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">Tool</rdfs:label>
     </owl:Class>
     
@@ -3852,6 +4016,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Training">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
+        <rdfs:label xml:lang="en">Training</rdfs:label>
     </owl:Class>
     
 
@@ -3861,6 +4026,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#TrainingData">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Data"/>
+        <rdfs:comment xml:lang="en">Data used to train a machine learning model [ISO/IEC FDIS 22989, 3.3.16]</rdfs:comment>
         <rdfs:label xml:lang="en">Training Data</rdfs:label>
     </owl:Class>
     
@@ -3951,6 +4117,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#Validation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
+        <rdfs:label xml:lang="en">Validation</rdfs:label>
     </owl:Class>
     
 
@@ -3960,6 +4127,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#ValidationData">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Data"/>
+        <rdfs:comment xml:lang="en">Data used to compare the performance of different candidate models [Source: ISO/IEC FDIS 22989, 3.2.5].</rdfs:comment>
         <rdfs:label xml:lang="en">Validation Data</rdfs:label>
     </owl:Class>
     
@@ -4020,6 +4188,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#VisaApplicant">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Applicant"/>
+        <rdfs:comment xml:lang="en">A person who has applied for a visa.</rdfs:comment>
         <rdfs:label xml:lang="en">Visa Applicant</rdfs:label>
     </owl:Class>
     
@@ -4082,6 +4251,17 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#WrongDataSetDesignChoice">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Wrong Data Set Design Choice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#citizenshipApplicant -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#citizenshipApplicant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Applicant"/>
+        <rdfs:comment xml:lang="en">A person who has applied for citizenship.</rdfs:comment>
+        <rdfs:label xml:lang="en">Citizenship Applicant</rdfs:label>
     </owl:Class>
     
 
