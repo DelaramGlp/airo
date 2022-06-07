@@ -80,6 +80,12 @@ airo:hasAIUser rdf:type owl:ObjectProperty ;
                rdfs:label "has AI user"@en .
 
 
+###  https://w3id.org/AIRO#hasCapability
+airo:hasCapability rdf:type owl:ObjectProperty ;
+                   rdfs:domain airo:AISystem ;
+                   rdfs:label "has capability"@en .
+
+
 ###  https://w3id.org/AIRO#hasComponent
 airo:hasComponent rdf:type owl:ObjectProperty ;
                   owl:inverseOf airo:isPartOfAISystem ;
