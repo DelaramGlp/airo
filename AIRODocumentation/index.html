@@ -1661,12 +1661,25 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
     <div id="overview"><h2 id="overv" class="list">AIRO Usage and Application <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 
-
-
 </span>
  
+ <h3 class="list">Use-case 1: Uber's Real-time ID Check System</h3>
+This use-case describes an instance where Uber used a facial recognition identification system, known as the Real Time ID (RTID), to ensure that the driver's account is not used by anyone other than the registered Uber driver. If the system failed to recognise a person for two consecutive times, the driver's contract would be terminated and their driver and vehicle licenses would be revoked. Multiple incidents where the system failed to verify drivers of BAME (Black, Asian, Minority Ethnic) background proved that the use of the facial recognition system involved risks of inaccuracy which could have lead to unfair dismissal of drivers.
+
  <figure>
    <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-UBER.jpg">
+</figure>
+
+
+ <h3 class="list">Use-case 2: VioGén Domestic Violence System</h3>
+This use-case describes the VioGén Domestic Violence System that was used by the Spanish law enforcement agencies to assess the likelihood of a victim of gender violence to be assaulted by the same perpetrator again, which is used for determining the victim's eligibility for police protection. VioGén system is considered a high-risk AI system as it is employed by law enforcement authorities as means for predicting the risk of gender violence recidivism (Annex III, 6-a) that in turn is used for determining access to public services, i.e. police protection (Annex III, 5-a). 
+
+Its use of statistical models to predict the risk faced by a victim raise questions regarding the accuracy of its predictions since these would be highly dependent on the quality of data fed into the models. The input data was generated based on a questionnaire answered by victims who filed a report. The ambiguity of questions and timing of questionnaire could have lead to inaccurate or biased predictions, and if the score was not modified by police officers - the victim would not required protection. To control this risk, police officers were granted the power to increase the risk score calculated by the system. However,in most cases the officers trusted the system's scoring despite warning signs, which led to ``automation bias'' i.e. over-reliance on the system's outcomes. 
+
+
+<figure>
+   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-Viogen.jpg">
+
 </figure>  
 
 <!--CROSSREF SECTION-->
