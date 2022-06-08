@@ -2,11 +2,25 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>AIRO Documentation </title>
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />
+ <link rel="stylesheet" href="resources/rec.css" media="screen" />
+<link rel="stylesheet" href="resources/extra.css" media="screen" />
+<link rel="stylesheet" href="resources/owl.css" media="screen" />
+
+<style type="text/css">
+.centerImage
+{
+ text-align:center;
+ display:block;
+}
+</style>
+
+
+<title>AIRO: an Ontology for expressing AI Risks</title>
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/AIRO","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/AIRO","name":"https://w3id.org/AIRO", "headline":"The ontology represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series.", "datePublished":"Wed Feb 23 11:07:57 GMT 2022", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Delaram Golpayegani"}], "contributor":[{"@type":"Person","name":"Harshvardhan J. Pandit","url":"https://harshp.com/"},{"@type":"Person","name":"Dave Lewis","url":"https://people.tcd.ie/Profile?Username=delewis"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/AIRO","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/AIRO","name":"https://w3id.org/AIRO", "headline":"The ontology represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series.", "datePublished":"Wed Feb 23 11:07:57 GMT 2022", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Delaram Golpayegani", "url"="https://protect-network.eu/people/delaram-golpayegani-esr-4/"}], "contributor":[{"@type":"Person","name":"Harshvardhan J. Pandit","url":"https://harshp.com/"},{"@type":"Person","name":"Dave Lewis","url":"https://people.tcd.ie/Profile?Username=delewis"}]}</script>
 
 <script src="resources/jquery.js"></script>
 <script src="resources/marked.min.js"></script>
@@ -58,7 +72,7 @@ $(function(){
 
 <dl>
 <dt>Latest version:</dt><dd><a href="https://w3id.org/airo">https://w3id.org/airo</a></dd>
-<dt>Author:</dt><dd>Delaram Golpayegani</dd>
+<dt>Author:</dt><dd><a href="https://protect-network.eu/people/delaram-golpayegani-esr-4/">Delaram Golpayegani</a>, ADAPT Centre, Trinity College Dublin</dd>
 <dt>Contributors:</dt>
    <dd><a href="https://harshp.com/">Harshvardhan J. Pandit</a>, ADAPT Centre, Trinity College Dublin</a></dd><dd><a href="https://people.tcd.ie/Profile?Username=delewis">
       Dave Lewis</a>, ADAPT Centre, Trinity College Dublin</a></dd>
@@ -117,20 +131,16 @@ Use of AI systems is surrounded by uncertainties. Although multiple incidents ha
 <!--OVERVIEW SECTION-->
     <div id="overview"><h2 id="overv" class="list">AIRO: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-The AI Risk Ontology (AIRO) is an ontology for expressing information associated with high-risk AI systems based on the requirements of the proposed AI Act and ISO 31000 series of standards. AIRO’s core concepts and relations are illustrated below. The upper half shows the main concepts required for describing an AI System and the lower half of the figure represents essential concepts for expressing Risk}. The relation isRiskAssociatedWith links these two halves by connecting risk to either a system or a component of the system.
-
-ISO 31000 sees risk as being both an opportunity and a threat. However, in the context of the AI Act the concept of Risk, and therefore its Consequence and Impact refers to the risk of harm. To reflect this, AIRO only refers to risks in the context of harms. AIRO also distinguishes between consequence and impact to indicate consequence as direct outcomes which may or may not involve individuals, which can then lead to an impact (harm) to some subjects. Risks, consequences, and impacts can be addressed using Control that can relate to detection, mitigation and elimination.
-
-To further expand AIRO, the top-level concepts are populated by the instances obtained from the AI Act and ISO/IEC 22989. Then, the instances are classified using a bottom-up approach.
+The AI Risk Ontology (AIRO) is an ontology for expressing information associated with high-risk AI systems based on the requirements of the proposed AI Act and ISO 31000 series of standards.
 </span>
-
-<figure>
-   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-coreconcepts.jpg"  alt="AIRO concepts" width="800" style="vertical-align: middle; usemargin:0px 50px">
+<center>
+   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-coreconcepts.jpg"  alt="AIRO concepts" width="800" >
    <figcaption>AIRO core concepts and relations</figcaption>
-</figure>
+</center>
 
-<h4 id="AI System" class="list">AI System </h4>
-<h5 id="core AI classes" class="list">Core AI Classes</h5>
+<h4 id="AI System" class="list">Core AI Vocabulary </h4>
+The AIRO concepts and relations required for expressing  AI systems and their characteristics as per the AI Act are represeneted in this section.
+<h5 id="core AI classes" class="list">Classes</h5>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#AISystem" title="https://w3id.org/AIRO#AISystem">AI System</a>
@@ -191,7 +201,7 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
       </li>
 </ul>
 
-<h5 class="list">Core AI Object Properties<h5>
+<h5 class="list">Properties<h5>
 
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
   <li>
@@ -253,8 +263,9 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
 </ul>
 
 
-<h4>Risk</h4>
-<h5> Core Risk Classes </h5>
+<h4>Core Risk Vocabulary</h4>
+The main concepts and relations in AIRO for describing risk are identified from ISO 31000 series of standards.
+<h5> Classes </h5>
 
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
 
@@ -283,7 +294,7 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
   </ul>
 
 
-<h5> Risk Object Properties </h5>
+<h5> Object Properties </h5>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
     <li>
      <a href="#isRiskAssociatedWith" title="https://w3id.org/AIRO#isRiskAssociatedWith">is risk associated with</a>
@@ -336,6 +347,11 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
       <a href="#hasSeverity" title="https://w3id.org/AIRO#hasSeverity">has severity</a>
    </li>
 </ul>
+
+
+
+
+
 
 
 
@@ -1310,6 +1326,9 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
       <a href="#InstructionOfUse" title="https://w3id.org/AIRO#InstructionOfUse">Instruction Of Use</a>
    </li>
    <li>
+      <a href="#PostmarketMonitoringPlan" title="https://w3id.org/AIRO#PostmarketMonitoringPlan">Post-market monitoring plan</a>
+   </li>
+   <li>
       <a href="#PostmarketMonitoringSystemDescription"
          title="https://w3id.org/AIRO#PostmarketMonitoringSystemDescription">Post-market Monitoring System Description</a>
    </li>
@@ -1341,6 +1360,26 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
 <h5> Object Properties <h5>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
   <li>
+  <a href="#isDocumentationFor" title="https://w3id.org/AIRO#isDocumentationFor">is documentation for</a>
+  </li>
+     <li>
+        <a href="#isDatasheetFor" title="https://w3id.org/AIRO#isDatasheetFor">is datasheet for</a>
+     </li>
+     <li>
+        <a href="#isDeclarationOfConformiyOf" title="https://w3id.org/AIRO#isDeclarationOfConformiyOf">is declaration of conformity of</a>
+     </li>
+     <li>
+        <a href="#isDesignSepicificationOf" title="https://w3id.org/AIRO#isDesignSepicificationOf">is design specification of</a>
+     </li>
+     <li>
+        <a href="#isTestLogOf" title="https://w3id.org/AIRO#isTestLogOf">is test log of</a>
+     </li>
+     <li>
+        <a href="#isTestReportFor" title="https://w3id.org/AIRO#isTestReportFor">is test report for</a>
+     </li>
+
+  <!--
+  <li>
      <a href="#hasDocumentation" title="https://w3id.org/AIRO#hasDocumentation">has documentation</a>
   </li>
 
@@ -1364,70 +1403,89 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
          <a href="#usesTechnicalSpecification"
             title="https://w3id.org/AIRO#usesTechnicalSpecification">uses technical specification</a>
       </li>
+    -->
 </ul>
 
-  <h4> Other Classes</h4>
+<h4> AI Components</h4>
 
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
 
-
-
 <li>
-      <a href="#AIHardware" title="https://w3id.org/AIRO#AIHardware">AI Hardware</a>
-   </li>
-   <li>
-      <a href="#Model" title="https://w3id.org/AIRO#Model">Model</a>
-   </li>
-   <li>
-      <a href="#Pre-trainedModel" title="https://w3id.org/AIRO#Pre-trainedModel">Pre-trianed Model</a>
-   </li>
-   <li>
-      <a href="#Tool" title="https://w3id.org/AIRO#Tool">Tool</a>
-   </li>
+    <a href="#AIHardware" title="https://w3id.org/AIRO#AIHardware">AI Hardware</a>
+ </li>
+ <li>
+    <a href="#Model" title="https://w3id.org/AIRO#Model">Model</a>
+ </li>
+ <li>
+    <a href="#Pre-trainedModel" title="https://w3id.org/AIRO#Pre-trainedModel">Pre-trianed Model</a>
+ </li>
+ <li>
+    <a href="#Tool" title="https://w3id.org/AIRO#Tool">Tool</a>
+ </li>
+</ul>
 
+<h4> Data</h4>
 
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
 
+ <li>
+    <a href="#Data" title="https://w3id.org/AIRO#Data">Data</a>
+ </li>
+ <li>
+    <a href="#InputData" title="https://w3id.org/AIRO#InputData">Input Data</a>
+ </li>
+ <li>
+    <a href="#TrainingData" title="https://w3id.org/AIRO#TrainingData">Training Data</a>
+ </li>
+    <li>
+       <a href="#ValidationData" title="https://w3id.org/AIRO#ValidationData">Validation Data</a>
+    </li>
+    <li>
+       <a href="#TestingData" title="https://w3id.org/AIRO#TestingData">Testing Data</a>
+    </li>
+<li>
+</ul>
+  <h4> AI Applciations</h4>
 
-   <li>
-      <a href="#Data" title="https://w3id.org/AIRO#Data">Data</a>
-   </li>
-   <li>
-      <a href="#InputData" title="https://w3id.org/AIRO#InputData">Input Data</a>
-   </li>
-   <li>
-      <a href="#TrainingData" title="https://w3id.org/AIRO#TrainingData">Training Data</a>
-   </li>
-      <li>
-         <a href="#ValidationData" title="https://w3id.org/AIRO#ValidationData">Validation Data</a>
-      </li>
-      <li>
-         <a href="#TestingData" title="https://w3id.org/AIRO#TestingData">Testing Data</a>
-      </li>
-
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
 
 
    <li>
       <a href="#FacialRecognition" title="https://w3id.org/AIRO#FacialRecognition">Facial Recognition</a>
    </li>
+   <li>
+      <a href="#RemoteBiometricIdentification"
+         title="https://w3id.org/AIRO#RemoteBiometricIdentification">Remote Biometric Identification</a>
+   </li>
+</ul>
 
+<h4> AI Forms</h4>
+
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+  <li>
+     <a href="#FacialRecognition" title="https://w3id.org/AIRO#FacialRecognition">Facial Recognition</a>
+  </li>
+  <li>
+     <a href="#RemoteBiometricIdentification"
+        title="https://w3id.org/AIRO#RemoteBiometricIdentification">Remote Biometric Identification</a>
+  </li>
+
+</ul>
+  <h4> Other Classes</h4>
+
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+  <li>
+     <a href="#System" title="https://w3id.org/AIRO#System">System</a>
+  </li>
 
    <li>
       <a href="#Metric" title="https://w3id.org/AIRO#Metric">Metric</a>
    </li>
 
-
-   <li>
-      <a href="#Post" title="https://w3id.org/AIRO#Post">Post</a>
-   </li>
-
-   <li>
-      <a href="#PostmarketMonitoringPlan" title="https://w3id.org/AIRO#PostmarketMonitoringPlan">Post-market monitoring plan</a>
-   </li>
    <li>
       <a href="#Post-marketMonitoringSystem"
          title="https://w3id.org/AIRO#Post-marketMonitoringSystem">Post-market Monitoring System</a>
    </li>
-
 
    <li>
       <a href="#PubliclyAccessableSpace" title="https://w3id.org/AIRO#PubliclyAccessableSpace">Publicly Accessable Space</a>
@@ -1436,30 +1494,17 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
    <li>
       <a href="#Real-time" title="https://w3id.org/AIRO#Real-time">Real-time</a>
    </li>
-
-
-
    <li>
-      <a href="#RemoteBiometricIdentification"
-         title="https://w3id.org/AIRO#RemoteBiometricIdentification">Remote Biometric Identification</a>
-   </li>
-
-   <li>
-      <a href="#System" title="https://w3id.org/AIRO#System">System</a>
+      <a href="#Post" title="https://w3id.org/AIRO#Post">Post</a>
    </li>
 
    <li>
       <a href="#UpdateRequirement" title="https://w3id.org/AIRO#UpdateRequirement">Update Requirement</a>
    </li>
 
-
-
-
 </ul>
-
+<!--
 <h4>Other Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-
-
 
 
    <li>
@@ -1467,15 +1512,10 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
    </li>
 
 
-
-
    <li>
       <a href="#hasPostmarketMonitoringSystem"
          title="https://w3id.org/AIRO#hasPostmarketMonitoringSystem">has post-market monitoring system</a>
    </li>
-
-
-
 
    <li>
       <a href="#hasAISubject" title="https://w3id.org/AIRO#hasAISubject">has AI subject</a>
@@ -1495,19 +1535,8 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
    <li>
       <a href="#isConsequenceOf" title="https://w3id.org/AIRO#isConsequenceOf">is consequence of</a>
    </li>
-   <li>
-      <a href="#isDatasheetFor" title="https://w3id.org/AIRO#isDatasheetFor">is datasheet for</a>
-   </li>
-   <li>
-      <a href="#isDeclarationOfConformiyOf" title="https://w3id.org/AIRO#isDeclarationOfConformiyOf">is declaration of conformity of</a>
-   </li>
-   <li>
-      <a href="#isDesignSepicificationOf" title="https://w3id.org/AIRO#isDesignSepicificationOf">is design specification of</a>
-   </li>
-   <li>
-      <a href="#isDocumentationFor" title="https://w3id.org/AIRO#isDocumentationFor">is documentation for</a>
-   </li>
-   <li>
+
+
       <a href="#isDomainOf" title="https://w3id.org/AIRO#isDomainOf">is domain of</a>
    </li>
    <li>
@@ -1588,12 +1617,7 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
    <li>
       <a href="#isTechniqueUsedIn" title="https://w3id.org/AIRO#isTechniqueUsedIn">is technique used in</a>
    </li>
-   <li>
-      <a href="#isTestLogOf" title="https://w3id.org/AIRO#isTestLogOf">is test log of</a>
-   </li>
-   <li>
-      <a href="#isTestReportFor" title="https://w3id.org/AIRO#isTestReportFor">is test report for</a>
-   </li>
+
    <li>
       <a href="#isUsedForTesting" title="https://w3id.org/AIRO#isUsedForTesting">is used for testing</a>
    </li>
@@ -1622,7 +1646,7 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
    <li>
       <a href="#usesStandard" title="https://w3id.org/AIRO#usesStandard">uses standard</a>
    </li>
-
+-->
 
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
@@ -1630,33 +1654,35 @@ To further expand AIRO, the top-level concepts are populated by the instances ob
 
 
 <!--APPLICATIOn SECTION-->
-    <div id="overview"><h2 id="overv" class="list">AIRO Usage and Application <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="application"><h2 id="application" class="list">AIRO Usage and Application <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 
 </span>
 
- <h3 class="list">Use-case 1: Uber's Real-time ID Check System</h3>
+ <h3 id="uber" class="list">Use-case 1: Uber's Real-time ID Check System</h3>
 This use-case describes an instance where Uber used a facial recognition identification system, known as the Real Time ID (RTID), to ensure that the driver's account is not used by anyone other than the registered Uber driver. If the system failed to recognise a person for two consecutive times, the driver's contract would be terminated and their driver and vehicle licenses would be revoked. Multiple incidents where the system failed to verify drivers of BAME (Black, Asian, Minority Ethnic) background proved that the use of the facial recognition system involved risks of inaccuracy which could have lead to unfair dismissal of drivers.
 
  <figure>
-   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-UBER.jpg">
+   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-UBER.jpg" alt="Uber's real-time ID check system" width="900">
+   <figcaption> AIRO-based representation of Uber's real-time ID check system </figcaption>
 </figure>
 
 
- <h3 class="list">Use-case 2: VioGén Domestic Violence System</h3>
+ <h3 id="viogen" class="list">Use-case 2: VioGén Domestic Violence System</h3>
 This use-case describes the VioGén Domestic Violence System that was used by the Spanish law enforcement agencies to assess the likelihood of a victim of gender violence to be assaulted by the same perpetrator again, which is used for determining the victim's eligibility for police protection. VioGén system is considered a high-risk AI system as it is employed by law enforcement authorities as means for predicting the risk of gender violence recidivism (Annex III, 6-a) that in turn is used for determining access to public services, i.e. police protection (Annex III, 5-a).
 
 Its use of statistical models to predict the risk faced by a victim raise questions regarding the accuracy of its predictions since these would be highly dependent on the quality of data fed into the models. The input data was generated based on a questionnaire answered by victims who filed a report. The ambiguity of questions and timing of questionnaire could have lead to inaccurate or biased predictions, and if the score was not modified by police officers - the victim would not required protection. To control this risk, police officers were granted the power to increase the risk score calculated by the system. However,in most cases the officers trusted the system's scoring despite warning signs, which led to ``automation bias'' i.e. over-reliance on the system's outcomes.
 
 
 <figure>
-   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-Viogen.jpg">
-
+   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-Viogen.jpg" alt="viogen domestic violence system" width="900">
+   <figcaption>AIRO-based representation of VioGén domestic violence system </figcaption>
 </figure>
 
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross reference for AI Risk Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by AI Risk Ontology.
+This section provides details for each class and property in AIRO.
+<h3 class="list">Classes</h3>
 
    <div class="entity" id="JobApplicant">
       <h3>Job Applicant<sup class="type-c" title="class">c</sup>
@@ -9879,6 +9905,7 @@ This section provides details for each class and property defined by AI Risk Ont
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497.
+<br>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>
 
