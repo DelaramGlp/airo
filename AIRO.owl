@@ -73,6 +73,11 @@ airo:hasAIIndicator rdf:type owl:ObjectProperty ;
 airo:hasAIProvider rdf:type owl:ObjectProperty ;
                    rdfs:label "has AI Provider"@en .
 
+###  https://w3id.org/AIRO#hasAISubject
+airo:hasAISubject rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AISystem ;
+                  rdfs:range airo:AISubject ;
+               rdfs:label "has AI subject"@en .
 
 ###  https://w3id.org/AIRO#hasAIUser
 airo:hasAIUser rdf:type owl:ObjectProperty ;
@@ -261,6 +266,14 @@ airo:isAISubjectImpactedBy rdf:type owl:ObjectProperty ;
 airo:isApplicationOf rdf:type owl:ObjectProperty ;
                      rdfs:label "is application of" .
 
+
+
+###  https://w3id.org/AIRO#hasApplication
+airo:hasApplication rdf:type owl:ObjectProperty ;
+                    owl:inverseOf airo:isApplicationOf ;
+                    rdfs:domain airo:AISystem ;
+                    rdfs:range airo:AIApplication ;
+                     rdfs:label "has application" .
 
 ###  https://w3id.org/AIRO#isAppliedWithinDomain
 airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
@@ -466,7 +479,7 @@ airo:isStandardAppliedIn rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isSubjectOfAISystem
 airo:isSubjectOfAISystem rdf:type owl:ObjectProperty ;
-                         owl:inverseOf airo:isUsedInRegerdToSubject ;
+                         owl:inverseOf airo:hasAISubject ;
                          rdfs:label "is subject of system"@en .
 
 
@@ -524,9 +537,9 @@ airo:isUsedInFormOf rdf:type owl:ObjectProperty ;
                     rdfs:label "is used in form of"@en .
 
 
-###  https://w3id.org/AIRO#isUsedInRegerdToSubject
-airo:isUsedInRegerdToSubject rdf:type owl:ObjectProperty ;
-                             rdfs:label "has subject"@en .
+###  https://w3id.org/AIRO#hasAISubject
+airo:hasAISubject rdf:type owl:ObjectProperty ;
+                             rdfs:label "has AI subject"@en .
 
 
 ###  https://w3id.org/AIRO#isUsedToMeasure
