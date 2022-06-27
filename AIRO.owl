@@ -10,7 +10,7 @@
 @base <https://w3id.org/airo> .
 
 <https://w3id.org/airo> rdf:type owl:Ontology ;
-                         terms:contributer "Dave Lewis"^^xsd:string ,
+                         terms:Contributor "Dave Lewis"^^xsd:string ,
                                            "Harshvardhan J. Pandit"^^xsd:string ;
                          terms:creator "Delaram Golpayegani"^^xsd:string ;
                          terms:description "The ontology represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series."@en ;
@@ -22,8 +22,8 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/terms/contributer
-terms:contributer rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/Contributor
+terms:Contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
@@ -73,16 +73,27 @@ airo:hasAIIndicator rdf:type owl:ObjectProperty ;
 airo:hasAIProvider rdf:type owl:ObjectProperty ;
                    rdfs:label "has AI Provider"@en .
 
+
 ###  https://w3id.org/AIRO#hasAISubject
 airo:hasAISubject rdf:type owl:ObjectProperty ;
+                  owl:inverseOf airo:isSubjectOfAISystem ;
                   rdfs:domain airo:AISystem ;
                   rdfs:range airo:AISubject ;
-               rdfs:label "has AI subject"@en .
+                  rdfs:label "has AI subject"@en .
+
 
 ###  https://w3id.org/AIRO#hasAIUser
 airo:hasAIUser rdf:type owl:ObjectProperty ;
                owl:inverseOf airo:usesAISystem ;
                rdfs:label "has AI user"@en .
+
+
+###  https://w3id.org/AIRO#hasApplication
+airo:hasApplication rdf:type owl:ObjectProperty ;
+                    owl:inverseOf airo:isApplicationOf ;
+                    rdfs:domain airo:AISystem ;
+                    rdfs:range airo:AIApplication ;
+                    rdfs:label "has application" .
 
 
 ###  https://w3id.org/AIRO#hasCapability
@@ -119,6 +130,8 @@ airo:hasDatasheet rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/AIRO#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       owl:inverseOf airo:isDocumentationFor ;
+                      rdfs:domain airo:AISystem ;
+                      rdfs:range airo:Document ;
                       rdfs:label "has documentation"@en .
 
 
@@ -223,7 +236,7 @@ airo:hasSeverity rdf:type owl:ObjectProperty ;
 airo:hasStakeholder rdf:type owl:ObjectProperty ;
                     owl:inverseOf airo:isStakeholderOfSystem ;
                     rdfs:domain airo:AISystem ;
-                    rdfs:range airo:Actor ;
+                    rdfs:range airo:Stakeholder ;
                     rdfs:comment "Indicates stakeholders of an AI system"@en ;
                     rdfs:label "has stakeholder"@en .
 
@@ -266,14 +279,6 @@ airo:isAISubjectImpactedBy rdf:type owl:ObjectProperty ;
 airo:isApplicationOf rdf:type owl:ObjectProperty ;
                      rdfs:label "is application of" .
 
-
-
-###  https://w3id.org/AIRO#hasApplication
-airo:hasApplication rdf:type owl:ObjectProperty ;
-                    owl:inverseOf airo:isApplicationOf ;
-                    rdfs:domain airo:AISystem ;
-                    rdfs:range airo:AIApplication ;
-                     rdfs:label "has application" .
 
 ###  https://w3id.org/AIRO#isAppliedWithinDomain
 airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
@@ -424,7 +429,7 @@ airo:isPartOfSystem rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isPerformanceOf
 airo:isPerformanceOf rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:Performace ;
+                     rdfs:domain airo:Performance ;
                      rdfs:range airo:AISystem ;
                      rdfs:label "is performance of"@en .
 
@@ -467,7 +472,7 @@ airo:isSeverityOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isStakeholderOfSystem
 airo:isStakeholderOfSystem rdf:type owl:ObjectProperty ;
-                           rdfs:domain airo:Actor ;
+                           rdfs:domain airo:Stakeholder ;
                            rdfs:range airo:AISystem ;
                            rdfs:label "is stakeholder of system"@en .
 
@@ -479,7 +484,6 @@ airo:isStandardAppliedIn rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/AIRO#isSubjectOfAISystem
 airo:isSubjectOfAISystem rdf:type owl:ObjectProperty ;
-                         owl:inverseOf airo:hasAISubject ;
                          rdfs:label "is subject of system"@en .
 
 
@@ -535,11 +539,6 @@ airo:isUsedInEnvironment rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/AIRO#isUsedInFormOf
 airo:isUsedInFormOf rdf:type owl:ObjectProperty ;
                     rdfs:label "is used in form of"@en .
-
-
-###  https://w3id.org/AIRO#hasAISubject
-airo:hasAISubject rdf:type owl:ObjectProperty ;
-                             rdfs:label "has AI subject"@en .
 
 
 ###  https://w3id.org/AIRO#isUsedToMeasure
@@ -657,7 +656,7 @@ airo:AILifecyclePhase rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AIProvider
 airo:AIProvider rdf:type owl:Class ;
-                rdfs:subClassOf airo:Actor ;
+                rdfs:subClassOf airo:Stakeholder ;
                 rdfs:comment ""@en ,
                              "A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed with a view to placing it on the market or putting it into service under its own name or trademark, whether for payment or free of charge. [Source: AI Act]"@en ;
                 rdfs:label "AI Provider"@en .
@@ -665,7 +664,7 @@ airo:AIProvider rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AISubject
 airo:AISubject rdf:type owl:Class ;
-               rdfs:subClassOf airo:Actor ;
+               rdfs:subClassOf airo:Stakeholder ;
                rdfs:comment "An AI subject is an organization or entity that is impacted by an AI system, service or product."@en ;
                rdfs:label "AI Subject"@en .
 
@@ -705,7 +704,7 @@ airo:AITechnique rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AIUser
 airo:AIUser rdf:type owl:Class ;
-            rdfs:subClassOf airo:Actor ;
+            rdfs:subClassOf airo:Stakeholder ;
             rdfs:comment "Any natural or legal person, public authority, agency or other body using an AI system under its authority. [Source: AI Act]"@en ;
             rdfs:label "AI User"@en .
 
@@ -714,12 +713,6 @@ airo:AIUser rdf:type owl:Class ;
 airo:Accuracy rdf:type owl:Class ;
               rdfs:subClassOf airo:AISystemIndicator ;
               rdfs:label "Accuracy"@en .
-
-
-###  https://w3id.org/AIRO#Actor
-airo:Actor rdf:type owl:Class ;
-           rdfs:comment "Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity [Source: ISO/IEC TR 24028, 3.37]"@en ;
-           rdfs:label "Actor"@en .
 
 
 ###  https://w3id.org/AIRO#AdministrationOfDemocraticProcesses
@@ -1030,6 +1023,7 @@ airo:Cyberattack rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#Data
 airo:Data rdf:type owl:Class ;
+          rdfs:subClassOf airo:AIComponent ;
           rdfs:comment "Reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing [Source: ISO/IEC 2382:2015, 2121272]"@en ;
           rdfs:label "Data"@en .
 
@@ -1076,14 +1070,14 @@ airo:Decision rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#DecreasedRobustness
 airo:DecreasedRobustness rdf:type owl:Class ;
-                         rdfs:subClassOf airo:PerformaceConsequence ;
+                         rdfs:subClassOf airo:PerformanceConsequence ;
                          rdfs:comment "Indicates decreased level of system's robustness resulted from materialisation of a risk."@en ;
                          rdfs:label "Decreased Robustness"@en .
 
 
 ###  https://w3id.org/AIRO#DecreasedSecurity
 airo:DecreasedSecurity rdf:type owl:Class ;
-                       rdfs:subClassOf airo:PerformaceConsequence ;
+                       rdfs:subClassOf airo:PerformanceConsequence ;
                        rdfs:comment "Indicates decreased level of security of the AI system resulted from materialisation of a risk."@en ;
                        rdfs:label "Decreased Security"@en .
 
@@ -1110,7 +1104,7 @@ airo:Defendant rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#DegradedAccuracy
 airo:DegradedAccuracy rdf:type owl:Class ;
-                      rdfs:subClassOf airo:PerformaceConsequence ;
+                      rdfs:subClassOf airo:PerformanceConsequence ;
                       rdfs:comment "Indicates decreased level of system's accuracy resulted from materialisation of a risk."@en ;
                       rdfs:label "Degraded Accuracy"@en .
 
@@ -1957,18 +1951,18 @@ airo:PatternRecognition rdf:type owl:Class ;
                         rdfs:label "Pattern Recognition"@en .
 
 
-###  https://w3id.org/AIRO#Performace
-airo:Performace rdf:type owl:Class ;
-                rdfs:subClassOf airo:AISystemIndicator ;
-                rdfs:comment "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"@en ;
-                rdfs:label "Performance"@en .
+###  https://w3id.org/AIRO#Performance
+airo:Performance rdf:type owl:Class ;
+                 rdfs:subClassOf airo:AISystemIndicator ;
+                 rdfs:comment "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"@en ;
+                 rdfs:label "Performance"@en .
 
 
-###  https://w3id.org/AIRO#PerformaceConsequence
-airo:PerformaceConsequence rdf:type owl:Class ;
-                           rdfs:subClassOf airo:Consequence ;
-                           rdfs:comment "Represents consequences related to the performance of the AI System."@en ;
-                           rdfs:label "Performance Consequence"@en .
+###  https://w3id.org/AIRO#PerformanceConsequence
+airo:PerformanceConsequence rdf:type owl:Class ;
+                            rdfs:subClassOf airo:Consequence ;
+                            rdfs:comment "Represents consequences related to the performance of the AI System."@en ;
+                            rdfs:label "Performance Consequence"@en .
 
 
 ###  https://w3id.org/AIRO#PerformanceRelatedRiskSource
@@ -2347,6 +2341,12 @@ airo:StaffTraining rdf:type owl:Class ;
                    rdfs:subClassOf airo:OrganisationalControl ;
                    rdfs:comment "Represents training of staff, users, etc."@en ;
                    rdfs:label "Staff Training"@en .
+
+
+###  https://w3id.org/AIRO#Stakeholder
+airo:Stakeholder rdf:type owl:Class ;
+                 rdfs:comment "Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity [Source: ISO/IEC TR 24028, 3.37]"@en ;
+                 rdfs:label "Stakeholder"@en .
 
 
 ###  https://w3id.org/AIRO#Standard
