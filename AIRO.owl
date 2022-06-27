@@ -10,7 +10,7 @@
 @base <https://w3id.org/airo> .
 
 <https://w3id.org/airo> rdf:type owl:Ontology ;
-                         terms:Contributor "Dave Lewis"^^xsd:string ,
+                         terms:contributor "Dave Lewis"^^xsd:string ,
                                            "Harshvardhan J. Pandit"^^xsd:string ;
                          terms:creator "Delaram Golpayegani"^^xsd:string ;
                          terms:description "The ontology represents AI risk concepts and relations based on the AI Act draft and ISO 31000 standard series."@en ;
@@ -22,8 +22,8 @@
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/terms/Contributor
-terms:Contributor rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
