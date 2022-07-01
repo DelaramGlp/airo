@@ -72,6 +72,7 @@ $(function(){
 
 <dl>
 <dt>Latest version:</dt><dd><a href="https://w3id.org/AIRO">https://w3id.org/AIRO</a></dd>
+<dt>Version: 0.2</dt>
 <dt>Author:</dt><dd><a href="https://protect-network.eu/people/delaram-golpayegani-esr-4/">Delaram Golpayegani</a>, ADAPT Centre, Trinity College Dublin</dd>
 <dt>Contributors:</dt>
    <dd><a href="https://harshp.com/">Harshvardhan J. Pandit</a>, ADAPT Centre, Trinity College Dublin</a></dd><dd><a href="https://people.tcd.ie/Profile?Username=delewis">
@@ -182,15 +183,18 @@ The AIRO concepts and relations required for expressing  AI systems and their ch
    </li>
    <li>
        <li>
-      <a href="#Actor" title="https://w3id.org/AIRO#Actor">Actor</a>
+      <a href="#Stakeholder" title="https://w3id.org/AIRO#Stakeholder">Stakeholder</a>
    </li>
-      <a href="#AIProvider" title="https://w3id.org/AIRO#AIProvider">AI Provider</a>
+      <a href="#AIDeveloper" title="https://w3id.org/AIRO#AIDeveloper">AI Provider</a>
    </li>
    <li>
       <a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a>
    </li>
    <li>
       <a href="#AIUser" title="https://w3id.org/AIRO#AIUser">AI User</a>
+   </li>
+   <li>
+      <a href="#AffectedStakeholder" title="https://w3id.org/AIRO#AffectedStakeholder">AI Subject</a>
    </li>
    <li>
       <a href="#AreaOfImpact" title="https://w3id.org/AIRO#AreaOfImpact">Area Of Impact</a>
@@ -244,7 +248,7 @@ The AIRO concepts and relations required for expressing  AI systems and their ch
 
 
    <li>
-      <a href="#hasAIProvider" title="https://w3id.org/AIRO#hasAIProvider">has AI Provider</a>
+      <a href="#hasAIDeveloper" title="https://w3id.org/AIRO#hasAIDeveloper">has AI Provider</a>
    </li>
    <li>
       <a href="#hasAIUser" title="https://w3id.org/AIRO#hasAIUser">has AI user</a>
@@ -310,7 +314,7 @@ The main concepts and relations in AIRO for describing risk are identified from 
       </li>
 
       <li>
-         <a href="#hasImpactOnAISubject" title="https://w3id.org/AIRO#hasImpactOnAISubject">has impact on AI subject</a>
+         <a href="#hasImpactOnStakeholder" title="https://w3id.org/AIRO#hasImpactOnStakeholder">has impact on AI subject</a>
       </li>
       <li>
          <a href="#hasImpactOnArea" title="https://w3id.org/AIRO#hasImpactOnArea">has impact on area</a>
@@ -837,10 +841,10 @@ The main concepts and relations in AIRO for describing risk are identified from 
    </li>
 
  </ul>
-  <h4> Actors</h4>
+  <h4> Stakeholders</h4>
   <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
      <li>
-      <a href="#SmallScaleAIProvider" title="https://w3id.org/AIRO#SmallScaleAIProvider">Small Scale AI Provider</a>
+      <a href="#SmallScaleAIDeveloper" title="https://w3id.org/AIRO#SmallScaleAIDeveloper">Small Scale AI Provider</a>
    </li>
 
    <li>
@@ -1720,22 +1724,23 @@ This section provides details for each class and property in AIRO.
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Actor">
-      <h3>Actor<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Stakeholder">
+      <h3>Stakeholder<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/AIRO#Actor</p>
+         <strong>IRI:</strong> https://w3id.org/AIRO#Stakeholder</p>
       <div class="comment">
          <span class="markdown">Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity [Source: ISO/IEC TR 24028, 3.37]</span>
       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#AIProvider" title="https://w3id.org/AIRO#AIProvider">AI Provider</a>
+            <a href="#AIDeveloper" title="https://w3id.org/AIRO#AIDeveloper">AI Provider</a>
             <sup class="type-c" title="class">c</sup>, <a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a>
             <sup class="type-c" title="class">c</sup>, <a href="#AIUser" title="https://w3id.org/AIRO#AIUser">AI User</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AffectedStakeholder" title="https://w3id.org/AIRO#AffectedStakeholder"</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -1927,25 +1932,25 @@ This section provides details for each class and property in AIRO.
          </dd>
       </dl>
    </div>
-   <div class="entity" id="AIProvider">
+   <div class="entity" id="AIDeveloper">
       <h3>AI Provider<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/AIRO#AIProvider</p>
+         <strong>IRI:</strong> https://w3id.org/AIRO#AIDeveloper</p>
       <div class="comment">
          <span class="markdown"/>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Actor" title="https://w3id.org/AIRO#Actor">Actor</a>
+            <a href="#Stakeholder" title="https://w3id.org/AIRO#Stakeholder">Stakeholder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#SmallScaleAIProvider" title="https://w3id.org/AIRO#SmallScaleAIProvider">Small Scale AI Provider</a>
+            <a href="#SmallScaleAIDeveloper" title="https://w3id.org/AIRO#SmallScaleAIDeveloper">Small Scale AI Provider</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -1963,12 +1968,12 @@ This section provides details for each class and property in AIRO.
       <p>
          <strong>IRI:</strong> https://w3id.org/AIRO#AISubject</p>
       <div class="comment">
-         <span class="markdown">An AI subject is an organization or entity that is impacted by an AI system, service or product.</span>
+         <span class="markdown">An AI subject is a stakeholder who is the subject of decisions made based on or assisted by an AI system.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Actor" title="https://w3id.org/AIRO#Actor">Actor</a>
+            <a href="#Stakeholder" title="https://w3id.org/AIRO#Stakeholder">Stakeholder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1979,13 +1984,13 @@ This section provides details for each class and property in AIRO.
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#isAISubjectImpactedBy" title="https://w3id.org/AIRO#isAISubjectImpactedBy">is AI subject impacted by</a>
+            <a href="#isStakeholderImpactedBy" title="https://w3id.org/AIRO#isStakeholderImpactedBy">is AI subject impacted by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isImpactByAISystem" title="https://w3id.org/AIRO#isImpactByAISystem">is impacted by AI system</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasImpactOnAISubject" title="https://w3id.org/AIRO#hasImpactOnAISubject">has impact on AI subject</a>
+            <a href="#hasImpactOnStakeholder" title="https://w3id.org/AIRO#hasImpactOnStakeholder">has impact on AI subject</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -2169,7 +2174,7 @@ This section provides details for each class and property in AIRO.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Actor" title="https://w3id.org/AIRO#Actor">Actor</a>
+            <a href="#Stakeholder" title="https://w3id.org/AIRO#Stakeholder">Stakeholder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -4423,7 +4428,7 @@ This section provides details for each class and property in AIRO.
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasImpactOnAISubject" title="https://w3id.org/AIRO#hasImpactOnAISubject">has impact on AI subject</a>
+            <a href="#hasImpactOnStakeholder" title="https://w3id.org/AIRO#hasImpactOnStakeholder">has impact on AI subject</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactOnArea" title="https://w3id.org/AIRO#hasImpactOnArea">has impact on area</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isImpactOf" title="https://w3id.org/AIRO#isImpactOf">is impact of</a>
             <sup class="type-op" title="object property">op</sup>
@@ -4431,7 +4436,7 @@ This section provides details for each class and property in AIRO.
          <dt>is in range of</dt>
          <dd>
             <a href="#hasImpact" title="https://w3id.org/AIRO#hasImpact">has impact</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#isAISubjectImpactedBy" title="https://w3id.org/AIRO#isAISubjectImpactedBy">is AI subject impacted by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isStakeholderImpactedBy" title="https://w3id.org/AIRO#isStakeholderImpactedBy">is AI subject impacted by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -5520,7 +5525,7 @@ This section provides details for each class and property in AIRO.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a>
+            <a href="#AffectedStakeholder" title="https://w3id.org/AIRO#AffectedStakeholder">Affected Stakeholder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -6911,20 +6916,20 @@ This section provides details for each class and property in AIRO.
          </dd>
       </dl>
    </div>
-   <div class="entity" id="SmallScaleAIProvider">
+   <div class="entity" id="SmallScaleAIDeveloper">
       <h3>Small Scale AI Provider<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/AIRO#SmallScaleAIProvider</p>
+         <strong>IRI:</strong> https://w3id.org/AIRO#SmallScaleAIDeveloper</p>
       <div class="comment">
          <span class="markdown">A provider that is a micro enterprise (an enterprise which employs fewer than 10 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 2 million) or small enterprise (an enterprise which employs fewer than 50 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 10 million).</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#AIProvider" title="https://w3id.org/AIRO#AIProvider">AI Provider</a>
+            <a href="#AIDeveloper" title="https://w3id.org/AIRO#AIDeveloper">AI Provider</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -7829,7 +7834,7 @@ This section provides details for each class and property in AIRO.
       </li>
 
       <li>
-         <a href="#hasImpactOnAISubject" title="https://w3id.org/AIRO#hasImpactOnAISubject">has impact on AI subject</a>
+         <a href="#hasImpactOnStakeholder" title="https://w3id.org/AIRO#hasImpactOnStakeholder">has impact on AI subject</a>
       </li>
       <li>
          <a href="#hasImpactOnArea" title="https://w3id.org/AIRO#hasImpactOnArea">has impact on area</a>
@@ -7859,7 +7864,7 @@ This section provides details for each class and property in AIRO.
 
 
       <li>
-         <a href="#hasAIProvider" title="https://w3id.org/AIRO#hasAIProvider">has AI Provider</a>
+         <a href="#hasAIDeveloper" title="https://w3id.org/AIRO#hasAIDeveloper">has AI Provider</a>
       </li>
       <li>
          <a href="#hasAIUser" title="https://w3id.org/AIRO#hasAIUser">has AI user</a>
@@ -7940,7 +7945,7 @@ This section provides details for each class and property in AIRO.
       </li>
 
       <li>
-         <a href="#isAISubjectImpactedBy" title="https://w3id.org/AIRO#isAISubjectImpactedBy">is AI subject impacted by</a>
+         <a href="#isStakeholderImpactedBy" title="https://w3id.org/AIRO#isStakeholderImpactedBy">is stakeholder impacted by</a>
       </li>
       <li>
          <a href="#isApplicationOf" title="https://w3id.org/AIRO#isApplicationOf">is application of</a>
@@ -8173,13 +8178,13 @@ This section provides details for each class and property in AIRO.
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasAIProvider">
+   <div class="entity" id="hasAIDeveloper">
       <h3>has AI Provider<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/AIRO#hasAIProvider</p>
+         <strong>IRI:</strong> https://w3id.org/AIRO#hasAIDeveloper</p>
    </div>
    <div class="entity" id="hasAIUser">
       <h3>has AI user<sup class="type-op" title="object property">op</sup>
@@ -8390,13 +8395,13 @@ This section provides details for each class and property in AIRO.
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasImpactOnAISubject">
+   <div class="entity" id="hasImpactOnStakeholder">
       <h3>has impact on AI subject<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/AIRO#hasImpactOnAISubject</p>
+         <strong>IRI:</strong> https://w3id.org/AIRO#hasImpactOnStakeholder</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -8406,12 +8411,12 @@ This section provides details for each class and property in AIRO.
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a>
+               <a href="#AffectedStakeholder" title="https://w3id.org/AIRO#AffectedStakeholder">Affected Stakeholder</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isAISubjectImpactedBy" title="https://w3id.org/AIRO#isAISubjectImpactedBy">is AI subject impacted by</a>
+               <a href="#isStakeholderImpactedBy" title="https://w3id.org/AIRO#isStakeholderImpactedBy">is AI subject impacted by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -8606,7 +8611,7 @@ This section provides details for each class and property in AIRO.
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Actor" title="https://w3id.org/AIRO#Actor">Actor</a>
+               <a href="#Stakeholder" title="https://w3id.org/AIRO#Stakeholder">Stakeholder</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -8770,18 +8775,18 @@ This section provides details for each class and property in AIRO.
       </div>
    </div>
 
-   <div class="entity" id="isAISubjectImpactedBy">
+   <div class="entity" id="isStakeholderImpactedBy">
       <h3>is AI subject impacted by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/AIRO#isAISubjectImpactedBy</p>
+         <strong>IRI:</strong> https://w3id.org/AIRO#isStakeholderImpactedBy</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a>
+               <a href="#AffectedStakeholder" title="https://w3id.org/AIRO#AffectedStakeholder">Affected Stakeholder</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -8791,7 +8796,7 @@ This section provides details for each class and property in AIRO.
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasImpactOnAISubject" title="https://w3id.org/AIRO#hasImpactOnAISubject">has impact on AI subject</a>
+               <a href="#hasImpactOnStakeholder" title="https://w3id.org/AIRO#hasImpactOnStakeholder">has impact on AI subject</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -9114,12 +9119,12 @@ This section provides details for each class and property in AIRO.
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/AIRO#isImpactByAISystem</p>
+         <strong>IRI:</strong> https://w3id.org/AIRO#isImpactedByAISystem</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a>
+               <a href="#AffectedStakeholder" title="https://w3id.org/AIRO#AffectedStakeholder">Affected Stakeholder</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -9463,7 +9468,7 @@ This section provides details for each class and property in AIRO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Actor" title="https://w3id.org/AIRO#Actor">Actor</a>
+               <a href="#Stakeholder" title="https://w3id.org/AIRO#Stakeholder">Stakeholder</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -9498,7 +9503,7 @@ This section provides details for each class and property in AIRO.
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasAISubject" title="https://w3id.org/AIRO#isUsedInRegerdToSubject">has AI subject</a>
+               <a href="#hasAISubject" title="https://w3id.org/AIRO#hasAISubject">has AI subject</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -9779,7 +9784,7 @@ This section provides details for each class and property in AIRO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#AIProvider" title="https://w3id.org/AIRO#AIProvider">AI Provider</a>
+               <a href="#AIDeveloper" title="https://w3id.org/AIRO#AIDeveloper">AI Provider</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
