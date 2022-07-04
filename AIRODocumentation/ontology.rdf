@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/airo#"
-     xml:base="https://w3id.org/airo"
+<rdf:RDF xmlns="https://w3id.org/AIRO#"
+     xml:base="https://w3id.org/AIRO"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/airo">
+    <owl:Ontology rdf:about="https://w3id.org/AIRO">
         <terms:contributer>Dave Lewis</terms:contributer>
         <terms:contributer>Harshvardhan J. Pandit</terms:contributer>
         <terms:creator>Delaram Golpayegani</terms:creator>
@@ -16,10 +16,10 @@
         <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <rdfs:label xml:lang="en">AI Risk Ontology</rdfs:label>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -28,45 +28,45 @@
      -->
 
 
-    
+
 
 
     <!-- http://purl.org/dc/terms/contributer -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributer"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/description -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/license -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/publisher -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -75,7 +75,7 @@
      -->
 
 
-    
+
 
 
     <!-- https://w3id.org/AIRO#detectsEvent -->
@@ -87,7 +87,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">detects event</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#eliminatesEvent -->
@@ -99,7 +99,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">eliminates event</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasAIIndicator -->
@@ -110,7 +110,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystemIndicator"/>
         <rdfs:label xml:lang="en">has AI indicator</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasAIProvider -->
@@ -119,7 +119,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasAIProvider">
         <rdfs:label xml:lang="en">has AI Provider</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasAIUser -->
@@ -129,7 +129,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#usesAISystem"/>
         <rdfs:label xml:lang="en">has AI user</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasCapability -->
@@ -139,7 +139,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">has capability</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasComponent -->
@@ -152,7 +152,7 @@
         <rdfs:comment xml:lang="en">Indicates components of an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">has component</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasConsequence -->
@@ -165,7 +165,7 @@
         <rdfs:label xml:lang="en">has consequence</rdfs:label>
         <rdfs:label>has consequence</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasDatasheet -->
@@ -176,7 +176,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#isDatasheetFor"/>
         <rdfs:label xml:lang="en">has datasheet</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasDocumentation -->
@@ -186,7 +186,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
         <rdfs:label xml:lang="en">has documentation</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasExecutionEnvironment -->
@@ -195,7 +195,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasExecutionEnvironment">
         <rdfs:label xml:lang="en">has execution environment</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasExpectedAccuray -->
@@ -206,7 +206,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystemAccuracy"/>
         <rdfs:label xml:lang="en">has expected accuracy</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasImpact -->
@@ -218,7 +218,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Impact"/>
         <rdfs:label xml:lang="en">has impact</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasImpactOnAISubject -->
@@ -230,7 +230,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISubject"/>
         <rdfs:label xml:lang="en">has impact on AI subject</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasImpactOnArea -->
@@ -241,7 +241,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AreaOfImpact"/>
         <rdfs:label xml:lang="en">has impact on area</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasInstallationInstruction -->
@@ -250,7 +250,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasInstallationInstruction">
         <rdfs:label xml:lang="en">has installation structure</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasInstructionOfUse -->
@@ -259,7 +259,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#hasInstructionOfUse">
         <rdfs:label xml:lang="en">has instruction of use</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasLikelihood -->
@@ -272,7 +272,7 @@
         <rdfs:comment xml:lang="en">Indicates the probability of occurrence of an event.</rdfs:comment>
         <rdfs:label xml:lang="en">has likelihood</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasPostmarketMonitoringSystem -->
@@ -283,7 +283,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Post-marketMonitoringSystem"/>
         <rdfs:label xml:lang="en">has post-market monitoring system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasPurpose -->
@@ -296,7 +296,7 @@
         <rdfs:label xml:lang="en">Indicates the intended purpose of an AI system.</rdfs:label>
         <rdfs:label xml:lang="en">has purpose</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasRisk -->
@@ -307,7 +307,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Risk"/>
         <rdfs:label xml:lang="en">has risk</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasRiskSource -->
@@ -319,7 +319,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:label xml:lang="en">has risk source</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasSeverity -->
@@ -338,7 +338,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Severity"/>
         <rdfs:label xml:lang="en">has severity</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasStakeholder -->
@@ -351,7 +351,7 @@
         <rdfs:comment xml:lang="en">Indicates stakeholders of an AI system</rdfs:comment>
         <rdfs:label xml:lang="en">has stakeholder</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasTestLog -->
@@ -361,7 +361,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#hasDocumentation"/>
         <rdfs:label xml:lang="en">has test log</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasTestingReport -->
@@ -371,7 +371,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#hasDocumentation"/>
         <rdfs:label xml:lang="en">has testing report</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasVersion -->
@@ -382,7 +382,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Version"/>
         <rdfs:label xml:lang="en">has version</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#hasVulnerability -->
@@ -394,7 +394,7 @@
         <rdfs:comment xml:lang="en">Indicates vulnerabilities of an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">has vulnerability</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isAISubjectImpactedBy -->
@@ -405,7 +405,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Impact"/>
         <rdfs:label xml:lang="en">is AI subject impacted by</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isApplicationOf -->
@@ -414,7 +414,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isApplicationOf">
         <rdfs:label>is application of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isAppliedWithinDomain -->
@@ -427,7 +427,7 @@
         <rdfs:comment xml:lang="en">Indicates the domain (context) the AI system is intended to be used in.</rdfs:comment>
         <rdfs:label xml:lang="en">is applied within domain</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isConsequenceOf -->
@@ -438,7 +438,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Risk"/>
         <rdfs:label xml:lang="en">is consequence of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isDatasheetFor -->
@@ -450,7 +450,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Data"/>
         <rdfs:label xml:lang="en">is datasheet for</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isDeclarationOfConformiyOf -->
@@ -460,7 +460,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
         <rdfs:label xml:lang="en">is declaration of conformity of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isDesignSepicificationOf -->
@@ -470,7 +470,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
         <rdfs:label xml:lang="en">is design specification of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isDocumentationFor -->
@@ -479,7 +479,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isDocumentationFor">
         <rdfs:label xml:lang="en">is documentation for</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isDomainOf -->
@@ -490,7 +490,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is domain of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isEnvironmentOfUseOf -->
@@ -500,7 +500,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#isUsedInEnvironment"/>
         <rdfs:label xml:lang="en">is environment of use of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isExpectedAccurayOf -->
@@ -511,7 +511,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is expected accuracy of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isExtentOfUseOf -->
@@ -522,7 +522,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is extent of use of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isFollowedByControl -->
@@ -533,7 +533,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Measure"/>
         <rdfs:label xml:lang="en">is followed by control</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isImpactByAISystem -->
@@ -544,7 +544,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is impacted by AI system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isImpactOf -->
@@ -555,7 +555,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Consequence"/>
         <rdfs:label xml:lang="en">is impact of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isInVulnerablePosition -->
@@ -573,7 +573,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#VulnerablePosition"/>
         <rdfs:label xml:lang="en">is in vulnerable position</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isInstallationInstructionOf -->
@@ -585,7 +585,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label>is installation Instruction Of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isInstructionOfUseFor -->
@@ -597,7 +597,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is instruction of use for</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isLikelihoodOf -->
@@ -606,7 +606,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isLikelihoodOf">
         <rdfs:label xml:lang="en">is likelihood of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isModifiedByControl -->
@@ -616,7 +616,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#modifiesEvent"/>
         <rdfs:label xml:lang="en">is modified by control</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isPartOfAISystem -->
@@ -628,7 +628,7 @@
         <rdfs:comment xml:lang="en">Indicates that a component is part of an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">is part of AI system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isPartOfControl -->
@@ -639,7 +639,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Measure"/>
         <rdfs:label xml:lang="en">is part of control</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isPartOfSystem -->
@@ -648,7 +648,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isPartOfSystem">
         <rdfs:label xml:lang="en">is part of system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isPerformanceOf -->
@@ -659,7 +659,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is performance of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isPostmarketDescriptionOf -->
@@ -668,7 +668,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isPostmarketDescriptionOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isPostmarketMonitoringPlanFor -->
@@ -678,7 +678,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
         <rdfs:label xml:lang="en">is post-market monitoring plan for</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isPurposeOf -->
@@ -689,7 +689,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is purpose of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isRiskAssociatedWith -->
@@ -699,7 +699,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/AIRO#Risk"/>
         <rdfs:label xml:lang="en">is risk associated with</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isRiskSourceFor -->
@@ -710,7 +710,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Risk"/>
         <rdfs:label xml:lang="en">is risk source for</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isSeverityOf -->
@@ -719,7 +719,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isSeverityOf">
         <rdfs:label xml:lang="en">is severity of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isStakeholderOfSystem -->
@@ -730,7 +730,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is stakeholder of system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isStandardAppliedIn -->
@@ -739,7 +739,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isStandardAppliedIn">
         <rdfs:label xml:lang="en">is standard applied in</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isSubjectOfAISystem -->
@@ -749,7 +749,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#isUsedInRegerdToSubject"/>
         <rdfs:label xml:lang="en">is subject of system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isTechnicalSpecAppliedIn -->
@@ -758,7 +758,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isTechnicalSpecAppliedIn">
         <rdfs:label xml:lang="en">is technical spec applied in</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isTechniqueUsedIn -->
@@ -768,7 +768,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/AIRO#usesTechnique"/>
         <rdfs:label>is technique used in</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isTestLogOf -->
@@ -778,7 +778,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
         <rdfs:label xml:lang="en">is test log of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isTestReportFor -->
@@ -788,7 +788,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#isDocumentationFor"/>
         <rdfs:label xml:lang="en">is test report for</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isUsedForTesting -->
@@ -799,7 +799,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is used for testing</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isUsedForTraining -->
@@ -810,7 +810,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is used for training</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isUsedForValidating -->
@@ -821,7 +821,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">is used for validating</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isUsedInEnvironment -->
@@ -830,7 +830,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isUsedInEnvironment">
         <rdfs:label xml:lang="en">is used in environment</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isUsedInFormOf -->
@@ -839,7 +839,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isUsedInFormOf">
         <rdfs:label xml:lang="en">is used in form of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isUsedInRegerdToSubject -->
@@ -848,7 +848,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isUsedInRegerdToSubject">
         <rdfs:label xml:lang="en">has subject</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isUsedToMeasure -->
@@ -859,7 +859,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Indicator"/>
         <rdfs:label xml:lang="en">is used to measure</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#isVulnerabilityOfUser -->
@@ -870,7 +870,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AIUser"/>
         <rdfs:label xml:lang="en">is vulnerability of</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#mitigatesEvent -->
@@ -882,7 +882,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">mitigates event</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#modifiesEvent -->
@@ -893,7 +893,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">modifies event</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#producesAISystem -->
@@ -904,7 +904,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">produces AI system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#producesOutput -->
@@ -915,7 +915,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Output"/>
         <rdfs:label xml:lang="en">produces output</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#usesAISystem -->
@@ -926,7 +926,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#AISystem"/>
         <rdfs:label xml:lang="en">uses AI system</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#usesStandard -->
@@ -937,7 +937,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Standard"/>
         <rdfs:label xml:lang="en">uses standard</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#usesTechnicalSpecification -->
@@ -948,7 +948,7 @@
         <rdfs:range rdf:resource="https://w3id.org/AIRO#TechnicalSpecification"/>
         <rdfs:label xml:lang="en">uses technical specification</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/AIRO#usesTechnique -->
@@ -960,10 +960,10 @@
         <rdfs:comment xml:lang="en">Indicates the AI techniques used in an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">uses technique</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -972,17 +972,17 @@
      -->
 
 
-    
+
 
 
     <!-- http://purl.org/dc/terms/date -->
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -991,14 +991,14 @@
      -->
 
 
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Entity -->
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AIApplication -->
@@ -1008,7 +1008,7 @@
         <rdfs:comment xml:lang="en">Refers to the application and usage of the AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Application</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AIComponent -->
@@ -1018,7 +1018,7 @@
         <rdfs:comment xml:lang="en">A functional element that constructs an AI system. [Source: ISO 22989]</rdfs:comment>
         <rdfs:label xml:lang="en">AI Component</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AIHardware -->
@@ -1029,7 +1029,7 @@
         <rdfs:comment xml:lang="en">Hardware on which the AI system run.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Hardware</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AILifecyclePhase -->
@@ -1039,7 +1039,7 @@
         <rdfs:comment xml:lang="en">A Phase of AI lifecycle which indicates evolution of the system from conception through retirement.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Lifecycle Phase</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AIProvider -->
@@ -1051,7 +1051,7 @@
         <rdfs:comment xml:lang="en">A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed with a view to placing it on the market or putting it into service under its own name or trademark, whether for payment or free of charge. [Source: AI Act]</rdfs:comment>
         <rdfs:label xml:lang="en">AI Provider</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AISubject -->
@@ -1062,7 +1062,7 @@
         <rdfs:comment xml:lang="en">An AI subject is an organization or entity that is impacted by an AI system, service or product.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Subject</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AISystem -->
@@ -1073,7 +1073,7 @@
         <rdfs:comment xml:lang="en">Represents a software that is developed with one or more of the AI Approaches and can, for a given set of human-defined objectives, generate outputs such as content, predictions, recommendations, or decisions influencing the environments they interact with. [Source: AI Act, Art 3(1)]</rdfs:comment>
         <rdfs:label xml:lang="en">AI System</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AISystemAccuracy -->
@@ -1084,7 +1084,7 @@
         <rdfs:comment xml:lang="en">Indicates the degree to which a product or system provides the correct results with the needed degree of precision. [ISO 22989, 3.4.4]</rdfs:comment>
         <rdfs:label xml:lang="en">AI System Accuracy</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AISystemForm -->
@@ -1094,7 +1094,7 @@
         <rdfs:comment xml:lang="en">refers to the forms in which AI system is placed on the market or put into service.</rdfs:comment>
         <rdfs:label xml:lang="en">AI System Form</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AISystemIndicator -->
@@ -1105,7 +1105,7 @@
         <rdfs:comment xml:lang="en">Represents indicators for expressing properties of AI systems.</rdfs:comment>
         <rdfs:label xml:lang="en">AI System Indicator</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AITechnique -->
@@ -1115,7 +1115,7 @@
         <rdfs:comment xml:lang="en">Represents the main approaches and techniques used for development of AI systems.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Technique</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AIUser -->
@@ -1126,7 +1126,7 @@
         <rdfs:comment xml:lang="en">Any natural or legal person, public authority, agency or other body using an AI system under its authority. [Source: AI Act]</rdfs:comment>
         <rdfs:label xml:lang="en">AI User</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Accuracy -->
@@ -1136,7 +1136,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISystemIndicator"/>
         <rdfs:label xml:lang="en">Accuracy</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Actor -->
@@ -1146,7 +1146,7 @@
         <rdfs:comment xml:lang="en">Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity [Source: ISO/IEC TR 24028, 3.37]</rdfs:comment>
         <rdfs:label xml:lang="en">Actor</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AdministrationOfDemocraticProcesses -->
@@ -1156,7 +1156,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Administration Of Democratic Processes</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AdministrationOfJustice -->
@@ -1166,7 +1166,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Administration Of Justice</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AdmissionTestAssessment -->
@@ -1177,7 +1177,7 @@
         <rdfs:comment xml:lang="en">Refers to the assessment of participants in tests  required for admission to educational institutions.</rdfs:comment>
         <rdfs:label xml:lang="en">Admission Test Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AdversarialAttack -->
@@ -1188,7 +1188,7 @@
         <rdfs:comment xml:lang="en">inputs designed to cause the model to make a mistake</rdfs:comment>
         <rdfs:label xml:lang="en">Adversarial Attack</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AdvertisingVacancies -->
@@ -1197,7 +1197,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AdvertisingVacancies">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForRecuitment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Applicant -->
@@ -1208,7 +1208,7 @@
         <rdfs:comment xml:lang="en">A person who has made an application.</rdfs:comment>
         <rdfs:label xml:lang="en">Applicant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ApplicationExamination -->
@@ -1218,7 +1218,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
         <rdfs:label xml:lang="en">Application Examination</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ApplicationFiltering -->
@@ -1229,7 +1229,7 @@
         <rdfs:comment xml:lang="en">Filtering applications for recruitment or selection of natural persons.</rdfs:comment>
         <rdfs:label xml:lang="en">Application Filtering</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ApplicationScreening -->
@@ -1239,7 +1239,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForRecuitment"/>
         <rdfs:label xml:lang="en">Application Screening</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ApplyingLawToFacts -->
@@ -1250,7 +1250,7 @@
         <rdfs:comment xml:lang="en">Refers to the application of the law to a concrete set of facts.</rdfs:comment>
         <rdfs:label xml:lang="en">Applying The Law to Facts</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Approval -->
@@ -1261,7 +1261,7 @@
         <rdfs:comment xml:lang="en">Represents approval or refusual of a request, excutation of process, etc. to prevent or mitigate a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Approval</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AreaOfImpact -->
@@ -1271,7 +1271,7 @@
         <rdfs:comment xml:lang="en">Represents areas that AI might have impact on.</rdfs:comment>
         <rdfs:label xml:lang="en">Area Of Impact</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingHealthRisk -->
@@ -1280,7 +1280,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingHealthRisk">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingPastCriminalBehaviour -->
@@ -1290,7 +1290,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
         <rdfs:label xml:lang="en">Assessing Past Criminal Behaviour</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingRiskForPotentialVictimsOfCriminalOffences -->
@@ -1299,7 +1299,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskForPotentialVictimsOfCriminalOffences">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingRiskOfIrregularImmigration -->
@@ -1308,7 +1308,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskOfIrregularImmigration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingRiskOfOffending -->
@@ -1317,7 +1317,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskOfOffending">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingRiskOfReoffending -->
@@ -1326,7 +1326,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskOfReoffending">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingSecurityRisk -->
@@ -1335,7 +1335,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingSecurityRisk">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessingTestsRequiredForAdmission -->
@@ -1344,7 +1344,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingTestsRequiredForAdmission">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#StudentAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Assessment -->
@@ -1355,7 +1355,7 @@
         <rdfs:comment xml:lang="en">Refers to the use of AI systems for assessmen and evaluation.</rdfs:comment>
         <rdfs:label xml:lang="en">Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessmentForEducation -->
@@ -1366,7 +1366,7 @@
         <rdfs:comment xml:lang="en">Refers to assessment for education and vocational training purposes.</rdfs:comment>
         <rdfs:label xml:lang="en">Assessment For Education</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessmentForRecuitment -->
@@ -1377,7 +1377,7 @@
         <rdfs:comment xml:lang="en">Refers to assessment related to employment, workers management and access to self-employment.</rdfs:comment>
         <rdfs:label xml:lang="en">Assessment For Recruitment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssessmentOfEmployee -->
@@ -1387,7 +1387,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
         <rdfs:label xml:lang="en">Assessment Of Employee</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AssigningPeopleToEducationalInstitutions -->
@@ -1397,7 +1397,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForEducation"/>
         <rdfs:label xml:lang="en">Assigning People To Educational Institutions</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Asylum -->
@@ -1407,7 +1407,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Asylum</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AsylumApplicationExamination -->
@@ -1416,7 +1416,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#AsylumApplicationExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AsylumSeeker -->
@@ -1427,7 +1427,7 @@
         <rdfs:comment xml:lang="en">A person who has applied for asylum.</rdfs:comment>
         <rdfs:label xml:lang="en">Asylum Seeker</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Attack -->
@@ -1437,7 +1437,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:label xml:lang="en">Attack</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#AutomatedControl -->
@@ -1449,7 +1449,7 @@
         <rdfs:comment xml:lang="en">Represents controls that do not involve human intervention.</rdfs:comment>
         <rdfs:label xml:lang="en">Automated Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BayesianEstimation -->
@@ -1459,7 +1459,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#StatisticalApproach"/>
         <rdfs:label xml:lang="en">Bayesian Estimation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Bias -->
@@ -1470,7 +1470,7 @@
         <rdfs:comment xml:lang="en">Systematic difference in treatment of certain objects, people, or groups in comparison to others [ISO 22989]</rdfs:comment>
         <rdfs:label xml:lang="en">Bias</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BiasConsequence -->
@@ -1481,7 +1481,7 @@
         <rdfs:comment xml:lang="en">Represents consequences related to bias.</rdfs:comment>
         <rdfs:label xml:lang="en">Bias Consequence</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BiasDetection -->
@@ -1492,7 +1492,7 @@
         <rdfs:comment xml:lang="en">Represens controls that are applied to detect bias in datasets, models, algorithms, ect.</rdfs:comment>
         <rdfs:label xml:lang="en">Bias Detection</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BiasedTestingDataSet -->
@@ -1502,7 +1502,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TestingDataRiskSource"/>
         <rdfs:label xml:lang="en">Biased Testing Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BiasedTrainingDataSet -->
@@ -1512,7 +1512,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TrainingDataRiskSource"/>
         <rdfs:label xml:lang="en">Biased Training Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BiasedValidationDataSet -->
@@ -1522,7 +1522,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ValidationDataRelatedSource"/>
         <rdfs:label xml:lang="en">Biased Validation Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BiomerticCategorisation -->
@@ -1532,7 +1532,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
         <rdfs:label xml:lang="en">Biometric Categorisation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BiometricIdnetification -->
@@ -1543,7 +1543,7 @@
         <rdfs:comment xml:lang="en">Identifaction of natural persons using biometric data.</rdfs:comment>
         <rdfs:label xml:lang="en">Biometric Identification</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Blueprint -->
@@ -1553,7 +1553,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Blueprint</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#BorderControlManagement -->
@@ -1563,7 +1563,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Border Control Management</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Child -->
@@ -1574,7 +1574,7 @@
         <rdfs:comment xml:lang="en">An individual human being who is below the age of 18 (according to the UN Convention on the Rights of the Child)</rdfs:comment>
         <rdfs:label xml:lang="en">Child</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#CompetentPublicAuthority -->
@@ -1584,7 +1584,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#PublicAuthority"/>
         <rdfs:label xml:lang="en">Competent Public Authority</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Component -->
@@ -1594,7 +1594,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISystemForm"/>
         <rdfs:label xml:lang="en">Component</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Consequence -->
@@ -1605,7 +1605,7 @@
         <rdfs:comment xml:lang="en">Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]</rdfs:comment>
         <rdfs:label xml:lang="en">Consequence</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Content -->
@@ -1616,7 +1616,7 @@
         <rdfs:comment xml:lang="en">Content generated using an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">Content</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#CreditworthinessAssessment -->
@@ -1627,7 +1627,7 @@
         <rdfs:comment xml:lang="en">Refers to the evaluation the creditworthiness of natural persons or establishing their credit score.</rdfs:comment>
         <rdfs:label xml:lang="en">Creditworthiness Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#CrimeAnalytics -->
@@ -1638,7 +1638,7 @@
         <rdfs:comment xml:lang="en">Refers to crime analytics regarding natural persons, allowing law enforcement authorities to search complex related and unrelated large data sets available in different data sources or in different data formats in order to identify unknown patterns or discover hidden relationships in the data.</rdfs:comment>
         <rdfs:label>Crime Analytics</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Cyberattack -->
@@ -1648,7 +1648,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Attack"/>
         <rdfs:label xml:lang="en">Cyberattack</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Data -->
@@ -1658,7 +1658,7 @@
         <rdfs:comment xml:lang="en">Reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing [Source: ISO/IEC 2382:2015, 2121272]</rdfs:comment>
         <rdfs:label xml:lang="en">Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DataAccuracy -->
@@ -1669,7 +1669,7 @@
         <rdfs:comment xml:lang="en">Indicates the degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use. [ISO 22989, 3.4.3]</rdfs:comment>
         <rdfs:label xml:lang="en">Data Accuracy</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DataPoisoning -->
@@ -1680,7 +1680,7 @@
         <rdfs:comment xml:lang="en">Attack trying to manipulate the training dataset</rdfs:comment>
         <rdfs:label xml:lang="en">Data Poisoning</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DataSet-RelatedRiskSource -->
@@ -1690,7 +1690,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:label xml:lang="en">DataSet-Related Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Datasheet -->
@@ -1700,7 +1700,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Datasheet</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Death -->
@@ -1711,7 +1711,7 @@
         <rdfs:comment xml:lang="en">Represents death of a person caused by AI.</rdfs:comment>
         <rdfs:label xml:lang="en">Death</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Decision -->
@@ -1722,7 +1722,7 @@
         <rdfs:comment xml:lang="en">Decision generated by an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">Decision</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DecreasedRobustness -->
@@ -1733,7 +1733,7 @@
         <rdfs:comment xml:lang="en">Indicates decreased level of system&apos;s robustness resulted from materialisation of a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Decreased Robustness</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DecreasedSecurity -->
@@ -1744,7 +1744,7 @@
         <rdfs:comment xml:lang="en">Indicates decreased level of security of the AI system resulted from materialisation of a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Decreased Security</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DectectionOfCriminalOffences -->
@@ -1754,7 +1754,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#EnvironmentOfUse"/>
         <rdfs:label xml:lang="en">Dectection Of Criminal Offences</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DeepFakeDetection -->
@@ -1765,7 +1765,7 @@
         <rdfs:comment xml:lang="en">Dectection of content that is generated using deep fake.</rdfs:comment>
         <rdfs:label xml:lang="en">Deep Fake Detection</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Defendant -->
@@ -1776,7 +1776,7 @@
         <rdfs:comment xml:lang="en">A person who is being accused of criminal offences.</rdfs:comment>
         <rdfs:label xml:lang="en">Defendant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DegradedAccuracy -->
@@ -1787,7 +1787,7 @@
         <rdfs:comment xml:lang="en">Indicates decreased level of system&apos;s accuracy resulted from materialisation of a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Degraded Accuracy</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DesignSpecification -->
@@ -1797,7 +1797,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Design Specification</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DetectingNon-AuthenticDocuments -->
@@ -1806,7 +1806,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#DetectingNon-AuthenticDocuments">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Detection"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Detection -->
@@ -1817,7 +1817,7 @@
         <rdfs:comment xml:lang="en">Refers to the use of AI systems to detect an entity, pattern, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Detection</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DetectionControl -->
@@ -1828,7 +1828,7 @@
         <rdfs:comment xml:lang="en">Represents controls that are applied to detect an event.</rdfs:comment>
         <rdfs:label xml:lang="en">Detection Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DetermineCreditScore -->
@@ -1838,7 +1838,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
         <rdfs:label xml:lang="en">Determin Credit Score</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DeterminingAccessToEducation -->
@@ -1849,7 +1849,7 @@
         <rdfs:comment xml:lang="en">Refers to the purpose of determining access or assigning natural persons to educational and vocational training institutions.</rdfs:comment>
         <rdfs:label xml:lang="en">Determining Access To Education</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Development -->
@@ -1859,7 +1859,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
         <rdfs:label xml:lang="en">Development</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DiscoverHiddenRelationshipsRelatedToCrime -->
@@ -1868,7 +1868,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#DiscoverHiddenRelationshipsRelatedToCrime">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#CrimeAnalytics"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DispatchingEmergencyService -->
@@ -1879,7 +1879,7 @@
         <rdfs:comment xml:lang="en">Dispatching of emergency first response services, including by firefighters and medical aid.</rdfs:comment>
         <rdfs:label xml:lang="en">Dispacthing Emergency Service</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DisruptionOfOperationOfCriticalInfrastructure -->
@@ -1890,7 +1890,7 @@
         <rdfs:comment xml:lang="en">Represents disruption of management and operation of critical infrastructure.</rdfs:comment>
         <rdfs:label xml:lang="en">Disruption Of Operation Of Critical Infrastructure</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#DistortionInHumanBehaviour -->
@@ -1901,7 +1901,7 @@
         <rdfs:comment xml:lang="en">Represents adverse impacts of AI on human behaviour.</rdfs:comment>
         <rdfs:label xml:lang="en">Distortion In Human Behaviour</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Document -->
@@ -1911,7 +1911,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:label xml:lang="en">Document</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Domain -->
@@ -1921,7 +1921,7 @@
         <rdfs:comment xml:lang="en">Represents the sector/domain the AI system is intended to be used in.</rdfs:comment>
         <rdfs:label xml:lang="en">Domain</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EUDeclarationOfConformity -->
@@ -1931,7 +1931,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">EU Declaration Of Conformity</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Education -->
@@ -1941,7 +1941,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Education</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EliminationControl -->
@@ -1952,7 +1952,7 @@
         <rdfs:comment xml:lang="en">Represents controls that applied to prevent an event from happening.</rdfs:comment>
         <rdfs:label xml:lang="en">Elimination Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EmotionRecognition -->
@@ -1963,7 +1963,7 @@
         <rdfs:comment xml:lang="en">Refers to the detection of the emotional state of a natural person.</rdfs:comment>
         <rdfs:label xml:lang="en">Emotion Recognition</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Employee -->
@@ -1974,7 +1974,7 @@
         <rdfs:comment xml:lang="en">Persons in work-related contractual relationships.</rdfs:comment>
         <rdfs:label xml:lang="en">Employee</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EmployeeBehaviourMonitoring -->
@@ -1984,7 +1984,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#EmployeeMonitoring"/>
         <rdfs:label xml:lang="en">Employee Behaviour Monitoring</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EmployeeEvaluation -->
@@ -1994,7 +1994,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForRecuitment"/>
         <rdfs:label xml:lang="en">Employee Evaluation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EmployeeMonitoring -->
@@ -2005,7 +2005,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of monitoring and evaluating performance and behavior of employees in workplace.</rdfs:comment>
         <rdfs:label xml:lang="en">Employee Monitoring</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EmployeePerformanceMonitoring -->
@@ -2015,7 +2015,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#EmployeeMonitoring"/>
         <rdfs:label xml:lang="en">Employee Performance Monitoring</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Employment -->
@@ -2025,7 +2025,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Employment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EnvironmentOfUse -->
@@ -2034,7 +2034,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#EnvironmentOfUse">
         <rdfs:label xml:lang="en">Environment Of Use</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EnvironmentalDamage -->
@@ -2045,7 +2045,7 @@
         <rdfs:comment xml:lang="en">Represents the deterioration of the environment caused by AI.</rdfs:comment>
         <rdfs:label xml:lang="en">Environmental Damage</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EnvironmentalImpact -->
@@ -2056,7 +2056,7 @@
         <rdfs:comment xml:lang="en">Represent impact on the enviroment.</rdfs:comment>
         <rdfs:label xml:lang="en">Environmental Impact</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ErrorInDataCollection -->
@@ -2066,7 +2066,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Error In Data Collection</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ErrorInDataPrepration -->
@@ -2076,7 +2076,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Error In Data Prepration</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ErrorInInputData -->
@@ -2086,7 +2086,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#InputDataRiskSource"/>
         <rdfs:label xml:lang="en">Error In Input Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ErrorInTestingDataSet -->
@@ -2096,7 +2096,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TestingDataRiskSource"/>
         <rdfs:label xml:lang="en">Error In Testing Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ErrorInTrainingDataSet -->
@@ -2106,7 +2106,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TrainingDataRiskSource"/>
         <rdfs:label xml:lang="en">Error In Training Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ErrorInValidationDataSet -->
@@ -2116,7 +2116,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ValidationDataRelatedSource"/>
         <rdfs:label xml:lang="en">Error In Validation Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EssentialPrivateService -->
@@ -2126,7 +2126,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Essential Private Service</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EvaluatingBehaviourOfEmployee -->
@@ -2136,7 +2136,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentOfEmployee"/>
         <rdfs:label xml:lang="en">Evaluating Behaviour Of Employee</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EvaluatingPerformanceOfEmployee -->
@@ -2146,7 +2146,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentOfEmployee"/>
         <rdfs:label xml:lang="en">Evaluating Performance Of Employee</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#EvaluatingReliabilityOfEvidence -->
@@ -2157,7 +2157,7 @@
         <rdfs:comment xml:lang="en">Refers to the evaluation of the reliability of evidence in the course of investigation or prosecution of criminal offences.</rdfs:comment>
         <rdfs:label xml:lang="en">Evaluating Reliability Of Evidence</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Event -->
@@ -2167,7 +2167,7 @@
         <rdfs:comment xml:lang="en">Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ExecutionEnvironment -->
@@ -2177,7 +2177,7 @@
         <rdfs:comment xml:lang="en">Hardware on which the AI system run</rdfs:comment>
         <rdfs:label xml:lang="en">Execution Environment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ExpectedLifetime -->
@@ -2188,7 +2188,7 @@
         <rdfs:label xml:lang="en">Expected Lifetime</rdfs:label>
         <rdfs:label xml:lang="en">Represents the expected lifetime of a system.</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ExtentOfUse -->
@@ -2199,7 +2199,7 @@
         <rdfs:comment xml:lang="en">Represents the extent to which an AI system has been used or is likely to be used.</rdfs:comment>
         <rdfs:label xml:lang="en">Extent Of Use</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#FacialRecognition -->
@@ -2210,7 +2210,7 @@
         <rdfs:comment xml:lang="en">Automatic pattern recognition comparing stored images of human faces with the image of an actual face, indicating any matching, if it exists, and any data, if they exist, identifying the person to whom the face belongs [Source: ISO 5127:2017, 3.1.12.09].</rdfs:comment>
         <rdfs:label xml:lang="en">Facial Recognition</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Firefighter -->
@@ -2221,7 +2221,7 @@
         <rdfs:comment xml:lang="en">A person who works as a firefighter.</rdfs:comment>
         <rdfs:label xml:lang="en">Firefighter</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#FundamentalRight -->
@@ -2232,7 +2232,7 @@
         <rdfs:comment xml:lang="en">Represents a right, freedom, or principle set out in the EU Charter of Fundamental Rights.</rdfs:comment>
         <rdfs:label xml:lang="en">Fundamental Right</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#GeneratingAudioContent -->
@@ -2243,7 +2243,7 @@
         <rdfs:comment xml:lang="en">Refers to manipulating or generating audio content.</rdfs:comment>
         <rdfs:label xml:lang="en">Generating Audio Content</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#GeneratingContent -->
@@ -2254,7 +2254,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of generating or manipulating content.</rdfs:comment>
         <rdfs:label xml:lang="en">Generating Content</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#GeneratingImageContent -->
@@ -2265,7 +2265,7 @@
         <rdfs:comment xml:lang="en">Refers to manipulating or generating image content.</rdfs:comment>
         <rdfs:label xml:lang="en">Generating Image Content</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#GeneratingVideoContent -->
@@ -2276,7 +2276,7 @@
         <rdfs:comment xml:lang="en">Refers to manipulating or generating video content.</rdfs:comment>
         <rdfs:label xml:lang="en">Generating Video Content</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#GrantingPublicAssistanceServices -->
@@ -2286,7 +2286,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
         <rdfs:label xml:lang="en">Granting Public Assistance Services</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Group -->
@@ -2297,7 +2297,7 @@
         <rdfs:comment xml:lang="en">A group of persons such as citizens, marginsalised groups, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Group</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#HarmonisedStandard -->
@@ -2308,7 +2308,7 @@
         <rdfs:comment>a European standard as defined in Article 2(1)(c) of Regulation (EU) No 1025/2012</rdfs:comment>
         <rdfs:label xml:lang="en">Harmonised Standard</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Health -->
@@ -2319,7 +2319,7 @@
         <rdfs:comment xml:lang="en">Represents health of a person.</rdfs:comment>
         <rdfs:label xml:lang="en">Health</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#HealthAndSafety -->
@@ -2330,7 +2330,7 @@
         <rdfs:comment xml:lang="en">Represents area of health and safety.</rdfs:comment>
         <rdfs:label xml:lang="en">Health And Safety</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#HumanBehaviour -->
@@ -2341,7 +2341,7 @@
         <rdfs:comment xml:lang="en">Represents the way a person acts.</rdfs:comment>
         <rdfs:label xml:lang="en">Human Behaviour</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#HumanOversightMeasure -->
@@ -2352,7 +2352,7 @@
         <rdfs:comment xml:lang="en">Represents measures for overseening the system by natural persons to detect, prevent or minimise risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Human Oversight Measure</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IdentifyUnkownPatternsOfCrime -->
@@ -2361,7 +2361,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#IdentifyUnkownPatternsOfCrime">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#CrimeAnalytics"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ImmigrationEligibilityAssessment -->
@@ -2372,7 +2372,7 @@
         <rdfs:comment xml:lang="en">Examination of applications for asylum, visa and residence permits and associated complaints</rdfs:comment>
         <rdfs:label xml:lang="en">Immigration Eligibility Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Impact -->
@@ -2383,7 +2383,7 @@
         <rdfs:comment xml:lang="en">Represents outcomes of a consequence on persons, groups, facilities, environment, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Impact</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ImpactOnFacility -->
@@ -2394,7 +2394,7 @@
         <rdfs:comment xml:lang="en">Represents impact of AI on facilities and property.</rdfs:comment>
         <rdfs:label xml:lang="en">Impact On Facility</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Inception -->
@@ -2404,7 +2404,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
         <rdfs:label xml:lang="en">Inception</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IncompetenceOfHumanOversightActors -->
@@ -2415,7 +2415,7 @@
         <rdfs:comment xml:lang="en">Refers to incompentece of individuals to whom human oversight is assigned.</rdfs:comment>
         <rdfs:label xml:lang="en">Incompetence Of Human Oversight Actors</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IncompletenessOfTestingDataSet -->
@@ -2425,7 +2425,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TestingDataRiskSource"/>
         <rdfs:label xml:lang="en">Incompleteness Of Testing Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IncompletenessOfTrainingDataSet -->
@@ -2435,7 +2435,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TrainingDataRiskSource"/>
         <rdfs:label xml:lang="en">Incompleteness Of Training Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IncompletenessOfValidationDataSet -->
@@ -2445,7 +2445,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ValidationDataRelatedSource"/>
         <rdfs:label xml:lang="en">Incompleteness Of Validation Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Indicator -->
@@ -2454,7 +2454,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#Indicator">
         <rdfs:label xml:lang="en">Indicator</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IndividualRiskAssessment -->
@@ -2465,7 +2465,7 @@
         <rdfs:comment xml:lang="en">Refers to use of AI systems for making individual risk assessments of natural persons in order to assess the risk of a natural person for offending or reoffending or the risk for potential victims of criminal offences.</rdfs:comment>
         <rdfs:label xml:lang="en">Individual Risk Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#InductiveProgramming -->
@@ -2475,7 +2475,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#KnowledgeBasedApproach"/>
         <rdfs:label xml:lang="en">Inductive Programming</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Injury -->
@@ -2486,7 +2486,7 @@
         <rdfs:comment xml:lang="en">Represents physical injuries caused by AI.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Injury</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#InputData -->
@@ -2497,7 +2497,7 @@
         <rdfs:comment xml:lang="en">Data for which an AI system calculates a predicted output or inference [Source: ISO/IEC FDIS 22989, 3.2.9].</rdfs:comment>
         <rdfs:label xml:lang="en">Input Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#InputDataRiskSource -->
@@ -2507,7 +2507,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Input Data Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#InstallationInstruction -->
@@ -2517,7 +2517,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Installation Instruction</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#InstructionOfUse -->
@@ -2527,7 +2527,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Instruction Of Use</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Interruption -->
@@ -2538,7 +2538,7 @@
         <rdfs:comment xml:lang="en">Represent a contol used to interrupt the system&apos;s operation.</rdfs:comment>
         <rdfs:label xml:lang="en">Interruption</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Intervention -->
@@ -2549,7 +2549,7 @@
         <rdfs:comment xml:lang="en">Intervention of  a system&apos;s operation</rdfs:comment>
         <rdfs:label xml:lang="en">Intervation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#InterviewEvaluation -->
@@ -2559,7 +2559,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForRecuitment"/>
         <rdfs:label xml:lang="en">Interview Evaluation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#InvestigationOfCriminalOffences -->
@@ -2569,7 +2569,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#EnvironmentOfUse"/>
         <rdfs:label xml:lang="en">Investigation Of Criminal Offences</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IrrelevantTestingData -->
@@ -2579,7 +2579,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TestingDataRiskSource"/>
         <rdfs:label xml:lang="en">Irrelevant Testing Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IrrelevantTrainingData -->
@@ -2589,7 +2589,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TrainingDataRiskSource"/>
         <rdfs:label xml:lang="en">Irrelevant Training Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#IrrelevantValidationData -->
@@ -2599,7 +2599,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ValidationDataRelatedSource"/>
         <rdfs:label xml:lang="en">Irrelevant Validation Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#JobApplicant -->
@@ -2610,7 +2610,7 @@
         <rdfs:label xml:lang="en">A person who has made an application for employment.</rdfs:label>
         <rdfs:label xml:lang="en">Job Applicant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#JudicialAuthority -->
@@ -2620,7 +2620,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
         <rdfs:label xml:lang="en">Judicial Authority</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#KnowledgeBasedApproach -->
@@ -2631,7 +2631,7 @@
         <rdfs:comment xml:lang="en">Represents  knowledge-based approaches, including knowledge representation, , knowledge bases and expert systems.</rdfs:comment>
         <rdfs:label xml:lang="en">Knowledge Based Approach</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#KnowledgeReasoning -->
@@ -2642,7 +2642,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of capturing knowledge and acquiring new knowledge.</rdfs:comment>
         <rdfs:label xml:lang="en">Knowledge Reasoning</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#KnowledgeRepresentation -->
@@ -2652,7 +2652,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#KnowledgeBasedApproach"/>
         <rdfs:label xml:lang="en">Knowledge Representation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LackOfAppropriateInstructionForUse -->
@@ -2662,7 +2662,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OrganisationalRiskSource"/>
         <rdfs:label xml:lang="en">Lack Of Appropriate Instruction For Use</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LackOfAppropriateSecurity -->
@@ -2672,7 +2672,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#PerformanceRelatedRiskSource"/>
         <rdfs:label xml:lang="en">Lack Of Appropriate Level Of Security</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LackOfHumanOversightMeasure -->
@@ -2682,7 +2682,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OrganisationalRiskSource"/>
         <rdfs:label xml:lang="en">Lack Of Human Oversight Measure</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LackOfTransparency -->
@@ -2692,7 +2692,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OrganisationalRiskSource"/>
         <rdfs:label xml:lang="en">Lack Of Transparency</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LawEnforcement -->
@@ -2702,7 +2702,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Law Enforcement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LawEnforcementAuthority -->
@@ -2712,7 +2712,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
         <rdfs:label xml:lang="en">Law Enforcement Authority</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LegalInterpretation -->
@@ -2723,7 +2723,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of researching and interpreting facts and the law.</rdfs:comment>
         <rdfs:label xml:lang="en">Legal Interpretation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LikelihoodRate -->
@@ -2734,7 +2734,7 @@
         <rdfs:comment xml:lang="en">Chance of an event happening. [Source: ISO 31000, 3.7]</rdfs:comment>
         <rdfs:label xml:lang="en">Likelihood</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LogicBasedApproach -->
@@ -2745,7 +2745,7 @@
         <rdfs:comment xml:lang="en">Represents Logic-based approaches, including inductive (logic) programming.</rdfs:comment>
         <rdfs:label xml:lang="en">Logic Based Approach</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LowLevelOfAccuracy -->
@@ -2756,7 +2756,7 @@
         <rdfs:comment xml:lang="en">Refers to inacurracy of the predictions, recommondations, or decisions produced by the system.</rdfs:comment>
         <rdfs:label xml:lang="en">Low Level Of Accuracy</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#LowLevelOfRobustness -->
@@ -2766,7 +2766,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#PerformanceRelatedRiskSource"/>
         <rdfs:label xml:lang="en">Low Level Of Robustness</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#MachineLearningApproach -->
@@ -2777,7 +2777,7 @@
         <rdfs:comment xml:lang="en">Represenets machine learning approaches, including supervised, unsupervised and reinforcement learning, using a wide variety of methods including deep learning. [Source: AI Act, Annex I]</rdfs:comment>
         <rdfs:label xml:lang="en">Machine Learning Approach</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#MakingDecision -->
@@ -2788,7 +2788,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of generating decisions.</rdfs:comment>
         <rdfs:label xml:lang="en">Making Decision</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#MakingPrediction -->
@@ -2799,7 +2799,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of predicting something based on the existing information.</rdfs:comment>
         <rdfs:label xml:lang="en">Making Prediction</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#MakingPromotionDecision -->
@@ -2810,7 +2810,7 @@
         <rdfs:comment xml:lang="en">Refers to making decisions on promotion.</rdfs:comment>
         <rdfs:label xml:lang="en">Making Promotion Decision</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#MakingTerminationDecision -->
@@ -2821,7 +2821,7 @@
         <rdfs:comment xml:lang="en">Refers to termination of work-related contractual relationships.</rdfs:comment>
         <rdfs:label xml:lang="en">Making Termination Decision</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ManagementOfCriticalInfrastructure -->
@@ -2831,7 +2831,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Management Of Critical Infrastructure</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ManagementOfRoadTraffic -->
@@ -2841,7 +2841,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ManagementOfCriticalInfrastructure"/>
         <rdfs:label xml:lang="en">Management Of Road Traffic</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ManagementOfTheSupplyOfElectricity -->
@@ -2850,7 +2850,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#ManagementOfTheSupplyOfElectricity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ManagementOfCriticalInfrastructure"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ManagementOfTheSupplyOfGas -->
@@ -2859,7 +2859,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#ManagementOfTheSupplyOfGas">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ManagementOfCriticalInfrastructure"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ManagementOfTheSupplyOfHeating -->
@@ -2868,7 +2868,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#ManagementOfTheSupplyOfHeating">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ManagementOfCriticalInfrastructure"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ManagementOfTheSupplyOfWater -->
@@ -2878,7 +2878,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ManagementOfCriticalInfrastructure"/>
         <rdfs:label xml:lang="en">Management Of The Supply Of Water</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ManualControl -->
@@ -2890,7 +2890,7 @@
         <rdfs:comment xml:lang="en">Represents controls performed by humans without any use of technologies.</rdfs:comment>
         <rdfs:label xml:lang="en">Manual Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Measure -->
@@ -2900,7 +2900,7 @@
         <rdfs:comment xml:lang="en">Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]</rdfs:comment>
         <rdfs:label xml:lang="en">Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#MedicalAid -->
@@ -2911,7 +2911,7 @@
         <rdfs:comment xml:lang="en">A person who works as a medical aid.</rdfs:comment>
         <rdfs:label xml:lang="en">Medical Aid</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Metric -->
@@ -2920,7 +2920,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#Metric">
         <rdfs:label xml:lang="en">Metric</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Migration -->
@@ -2930,7 +2930,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Migration</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#MigrationRelatedComplaintsExamination -->
@@ -2939,7 +2939,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#MigrationRelatedComplaintsExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Misuse -->
@@ -2950,7 +2950,7 @@
         <rdfs:comment xml:lang="en">The use of an AI system in a way that is not in accordance with its intended purpose.</rdfs:comment>
         <rdfs:label xml:lang="en">Misuse</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Model -->
@@ -2961,7 +2961,7 @@
         <rdfs:comment xml:lang="en">Physical, mathematical, or otherwise logical representation of a system, entity, phenomenon, process or data [Source: ISO/IEC FDIS 22989, 3.1.23]</rdfs:comment>
         <rdfs:label xml:lang="en">Model</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ModelEvasion -->
@@ -2971,7 +2971,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Attack"/>
         <rdfs:label xml:lang="en">Model Evasion</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ModelInversion -->
@@ -2981,7 +2981,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Attack"/>
         <rdfs:label xml:lang="en">Model Inversion</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Monitoring -->
@@ -2992,7 +2992,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of observing and keeping track of something.</rdfs:comment>
         <rdfs:label xml:lang="en">Monitoring</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationMode -->
@@ -3001,7 +3001,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#OperationMode">
         <rdfs:label xml:lang="en">Operation Mode</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationOfCriticalInfrastructure -->
@@ -3011,7 +3011,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Operation Of Critical Infrastructure</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationOfRoadTraffic -->
@@ -3021,7 +3021,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OperationOfCriticalInfrastructure"/>
         <rdfs:label xml:lang="en">Operation Of Road Traffic</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationOfTheSupplyOfElectricity -->
@@ -3030,7 +3030,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#OperationOfTheSupplyOfElectricity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OperationOfCriticalInfrastructure"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationOfTheSupplyOfGas -->
@@ -3039,7 +3039,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#OperationOfTheSupplyOfGas">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OperationOfCriticalInfrastructure"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationOfTheSupplyOfHeating -->
@@ -3048,7 +3048,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#OperationOfTheSupplyOfHeating">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OperationOfCriticalInfrastructure"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationOfTheSupplyOfWater -->
@@ -3057,7 +3057,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#OperationOfTheSupplyOfWater">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OperationOfCriticalInfrastructure"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OperationalControl -->
@@ -3067,7 +3067,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
         <rdfs:label xml:lang="en">Operational Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OptimisationMethod -->
@@ -3077,7 +3077,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#StatisticalApproach"/>
         <rdfs:label xml:lang="en">Optimisation Method</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OrganisationalControl -->
@@ -3087,7 +3087,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
         <rdfs:label xml:lang="en">Organisational Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OrganisationalRiskSource -->
@@ -3097,7 +3097,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:label xml:lang="en">Organisational Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Output -->
@@ -3107,7 +3107,7 @@
         <rdfs:comment xml:lang="en">Indicates output of an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">Output</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OverReliance -->
@@ -3118,7 +3118,7 @@
         <rdfs:comment xml:lang="en">Represents tendency of automatically relying or over-relying on the output produced by an AI system</rdfs:comment>
         <rdfs:label xml:lang="en">Over Reliance</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#OverridingTheOutcome -->
@@ -3129,7 +3129,7 @@
         <rdfs:comment xml:lang="en">Represents overriding outcome of a system.</rdfs:comment>
         <rdfs:label xml:lang="en">Overriding The Outcome</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PartialControl -->
@@ -3149,7 +3149,7 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Partial Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PatternRecognition -->
@@ -3160,7 +3160,7 @@
         <rdfs:comment xml:lang="en">Refers to identification of unknown patterns in data.</rdfs:comment>
         <rdfs:label xml:lang="en">Pattern Recognition</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Performace -->
@@ -3171,7 +3171,7 @@
         <rdfs:comment xml:lang="en">the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]</rdfs:comment>
         <rdfs:label xml:lang="en">Performance</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PerformaceConsequence -->
@@ -3182,7 +3182,7 @@
         <rdfs:comment xml:lang="en">Represents consequences related to the performance of the AI System.</rdfs:comment>
         <rdfs:label xml:lang="en">Performance Consequence</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PerformanceRelatedRiskSource -->
@@ -3192,7 +3192,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:label xml:lang="en">Perfomance Related Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Person -->
@@ -3203,7 +3203,7 @@
         <rdfs:comment xml:lang="en">An individual human being.</rdfs:comment>
         <rdfs:label xml:lang="en">Natural Person</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PersonWhoHasEnteredATerritory -->
@@ -3214,7 +3214,7 @@
         <rdfs:comment xml:lang="en">A person who has entered a territory.</rdfs:comment>
         <rdfs:label xml:lang="en">Person Who Has Entered A Territory</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PersonWhoIntendsToEnterATerritory -->
@@ -3225,7 +3225,7 @@
         <rdfs:comment xml:lang="en">A person who intends to enter a territory.</rdfs:comment>
         <rdfs:label xml:lang="en">Person Who Intends To Enter Territory</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PersonalityTraitsAssessment -->
@@ -3235,7 +3235,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
         <rdfs:label xml:lang="en">Personality Traits Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PhysicalHealth -->
@@ -3246,7 +3246,7 @@
         <rdfs:comment xml:lang="en">Represents physical health.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Health</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Planning -->
@@ -3257,7 +3257,7 @@
         <rdfs:comment xml:lang="en">Represents use of AI systems for planning and scheduling.</rdfs:comment>
         <rdfs:label xml:lang="en">Planning</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Post -->
@@ -3267,7 +3267,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OperationMode"/>
         <rdfs:label xml:lang="en">Post</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Post-market -->
@@ -3277,7 +3277,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
         <rdfs:label xml:lang="en">Post-market</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Post-marketMonitoringSystem -->
@@ -3287,7 +3287,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#System"/>
         <rdfs:label xml:lang="en">Post-market Monitoring System</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PostmarketMonitoringPlan -->
@@ -3297,7 +3297,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Post-market monitoring plan</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PostmarketMonitoringSystemDescription -->
@@ -3307,7 +3307,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Post-market Monitoring System Description</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Pre-trainedModel -->
@@ -3317,7 +3317,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Model"/>
         <rdfs:label xml:lang="en">Pre-trianed Model</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PredictingRecidivism -->
@@ -3328,7 +3328,7 @@
         <rdfs:comment xml:lang="en">Referes to predicting the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons or assessing personality traits and characteristics or past criminal behaviour of natural persons or groups.</rdfs:comment>
         <rdfs:label xml:lang="en">Predicting Recidivism</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Prediction -->
@@ -3339,7 +3339,7 @@
         <rdfs:comment xml:lang="en">Primary output of an AI system when provided with input data or information. [Source: ISO/IEC FDIS 22989, 3.1.27]</rdfs:comment>
         <rdfs:label xml:lang="en">Prediction</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PreventionControl -->
@@ -3350,7 +3350,7 @@
         <rdfs:comment xml:lang="en">Control applied to reduce likelihood or severity of the risk, consequence or impact.</rdfs:comment>
         <rdfs:label xml:lang="en">Mitigation Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PrioritisationOfEmergencyService -->
@@ -3361,7 +3361,7 @@
         <rdfs:comment xml:lang="en">Establishing priority in the dispatching of emergency first response services, including by firefighters and medical aid.</rdfs:comment>
         <rdfs:label xml:lang="en">Prioritisation Of Emergency Service</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ProducingRecommendation -->
@@ -3372,7 +3372,7 @@
         <rdfs:comment xml:lang="en">Represents purpose of producing meaningful recommendations to users of the system.</rdfs:comment>
         <rdfs:label xml:lang="en">Producing Recommendation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Product -->
@@ -3382,7 +3382,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISystemForm"/>
         <rdfs:comment>Product</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Profiling -->
@@ -3393,7 +3393,7 @@
         <rdfs:comment xml:lang="en">Refers to profiling of natural persons in the course of detection, investigation or prosecution of criminal offences.</rdfs:comment>
         <rdfs:label xml:lang="en">Profiling</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PropertyDamage -->
@@ -3404,7 +3404,7 @@
         <rdfs:comment xml:lang="en">Represents damage of properties caused by AI.</rdfs:comment>
         <rdfs:label xml:lang="en">Property Damage</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ProsecutionOfCriminalOffences -->
@@ -3414,7 +3414,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#EnvironmentOfUse"/>
         <rdfs:label xml:lang="en">Prosecution Of Criminal Offences</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ProvidingInstructionOfUse -->
@@ -3425,7 +3425,7 @@
         <rdfs:comment xml:lang="en">Represents providing information to inform the user of in particular an AI system’s intended purpose and proper use, inclusive of the specific geographical, behavioural or functional setting within which the  AI system is intended to be used.</rdfs:comment>
         <rdfs:label xml:lang="en">Providing Instruction Of Use</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PsychologicalHarm -->
@@ -3436,7 +3436,7 @@
         <rdfs:comment xml:lang="en">Represents psychological injuries caused by AI.</rdfs:comment>
         <rdfs:label xml:lang="en">Psychological Harm</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PsychologicalHealth -->
@@ -3447,7 +3447,7 @@
         <rdfs:comment xml:lang="en">Represents psychological health.</rdfs:comment>
         <rdfs:label xml:lang="en">Psychological Health</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PublicAssistanceEligibilityAssessment -->
@@ -3458,7 +3458,7 @@
         <rdfs:comment xml:lang="en">Evaluation of the eligibility of natural persons for public assistance benefits and services.</rdfs:comment>
         <rdfs:label xml:lang="en">Public Assistance Eligibility Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PublicAuthority -->
@@ -3468,7 +3468,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AIUser"/>
         <rdfs:label xml:lang="en">Public Authority</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PublicService -->
@@ -3478,7 +3478,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Public Service</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#PubliclyAccessableSpace -->
@@ -3488,7 +3488,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#EnvironmentOfUse"/>
         <rdfs:label xml:lang="en">Publicly Accessable Space</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Purpose -->
@@ -3498,7 +3498,7 @@
         <rdfs:comment xml:lang="en">Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]</rdfs:comment>
         <rdfs:label xml:lang="en">Purpose</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Real-time -->
@@ -3508,7 +3508,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#OperationMode"/>
         <rdfs:label xml:lang="en">Real-time</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ReasonablyForseeableMisue -->
@@ -3519,7 +3519,7 @@
         <rdfs:comment xml:lang="en">Use of an AI system in a way that is not in accordance with its intended purpose, but which may result from reasonably foreseeable human behaviour or interaction with other systems [Source: AI Act, Article 3(13)]</rdfs:comment>
         <rdfs:label xml:lang="en">Reasonably Forseeable Misuse</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ReclaimingPublicAssisstanceServices -->
@@ -3529,7 +3529,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
         <rdfs:label xml:lang="en">Reclaiming Public Assisstance Services</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#RecuritmentTestEvaluation -->
@@ -3538,7 +3538,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#RecuritmentTestEvaluation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForRecuitment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ReducingPublicAssisstanceServices -->
@@ -3548,7 +3548,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
         <rdfs:label xml:lang="en">Reducing Public Assisstance Services</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ReinforcementLearning -->
@@ -3558,7 +3558,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MachineLearningApproach"/>
         <rdfs:label xml:lang="en">Reinforcement Learning</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#RemoteBiometricIdentification -->
@@ -3569,7 +3569,7 @@
         <rdfs:comment xml:lang="en">Identifying natural persons at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database.</rdfs:comment>
         <rdfs:label xml:lang="en">Remote Biometric Identification</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#RepresentativeOfPublicAuthority -->
@@ -3580,7 +3580,7 @@
         <rdfs:comment xml:lang="en">An entity who act on behalf of a public authority.</rdfs:comment>
         <rdfs:label xml:lang="en">Representative Of Public Authority</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ResidencePermitApplicant -->
@@ -3591,7 +3591,7 @@
         <rdfs:comment xml:lang="en">A person who has applied for a residence permit.</rdfs:comment>
         <rdfs:label xml:lang="en">Residence Permit Applicant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ResidencePermitsApplicationExamination -->
@@ -3600,7 +3600,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#ResidencePermitsApplicationExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Reversiblity -->
@@ -3611,7 +3611,7 @@
         <rdfs:comment xml:lang="en">Specifies the extent to which the outcome produced with an AI system is easily reversible.</rdfs:comment>
         <rdfs:label xml:lang="en">Reversibility</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ReversingTheOutcome -->
@@ -3622,7 +3622,7 @@
         <rdfs:comment xml:lang="en">Represents reversing the outcome of a system.</rdfs:comment>
         <rdfs:label xml:lang="en">Reversing The Outcome</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#RevokingPublicAssisstanceServices -->
@@ -3632,7 +3632,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MakingDecision"/>
         <rdfs:label xml:lang="en">Revoking Public Assisstance Services</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Risk -->
@@ -3643,7 +3643,7 @@
         <rdfs:comment xml:lang="en">Indicates a risk (of harm) associated with an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">Risk</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#RiskIndicator -->
@@ -3654,7 +3654,7 @@
         <rdfs:comment xml:lang="en">Represents indicators for expressing risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Risk Indicator</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#RiskSource -->
@@ -3665,7 +3665,7 @@
         <rdfs:comment xml:lang="en">Indicates an element that has the potential give rise to a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Robustness -->
@@ -3676,7 +3676,7 @@
         <rdfs:comment xml:lang="en">Ability of a system to maintain its level of performance under any circumstances. [Source: ISO 22989]</rdfs:comment>
         <rdfs:label xml:lang="en">Robustness</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Safety -->
@@ -3687,7 +3687,7 @@
         <rdfs:comment xml:lang="en">Represents the state of being safe.</rdfs:comment>
         <rdfs:label xml:lang="en">Safety</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SafetyComponent -->
@@ -3698,7 +3698,7 @@
         <rdfs:comment xml:lang="en">a component of a product or of a system which fulfils a safety function for that product or system or the failure or malfunctioning of which endangers the health and safety of persons or property.</rdfs:comment>
         <rdfs:label xml:lang="en">Safety Component</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SearchMethod -->
@@ -3708,7 +3708,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#StatisticalApproach"/>
         <rdfs:label xml:lang="en">Search Method</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Security -->
@@ -3718,7 +3718,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISystemIndicator"/>
         <rdfs:label xml:lang="en">Security</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Self-Employment -->
@@ -3728,7 +3728,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Self-employment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SemiAutomatedControl -->
@@ -3739,7 +3739,7 @@
         <rdfs:comment xml:lang="en">Represnets controls that comprise a combination of automated and manual controls.</rdfs:comment>
         <rdfs:label xml:lang="en">Semi Automated Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SeriousIncident -->
@@ -3750,7 +3750,7 @@
         <rdfs:comment xml:lang="en">Any incident that directly or indirectly leads, might have led or might lead to : (a) the death of a person or serious damage to a person’s health, to property or the environment, (b) a serious and irreversible disruption of the management and operation of critical infrastructure [Source: AI Act, Articl3 3(44)]</rdfs:comment>
         <rdfs:label xml:lang="en">Serious Incident</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Service -->
@@ -3760,7 +3760,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISystemForm"/>
         <rdfs:label xml:lang="en">Service</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Severity -->
@@ -3770,7 +3770,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskIndicator"/>
         <rdfs:label xml:lang="en">Severity</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SmallScaleAIProvider -->
@@ -3781,7 +3781,7 @@
         <rdfs:comment xml:lang="en">A provider that is a micro enterprise (an enterprise which employs fewer than 10 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 2 million) or small enterprise (an enterprise which employs fewer than 50 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 10 million).</rdfs:comment>
         <rdfs:label xml:lang="en">Small Scale AI Provider</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#StaffTraining -->
@@ -3792,7 +3792,7 @@
         <rdfs:comment xml:lang="en">Represents training of staff, users, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Staff Training</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Standard -->
@@ -3802,7 +3802,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:label xml:lang="en">Standard</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#StatisticalApproach -->
@@ -3813,7 +3813,7 @@
         <rdfs:comment xml:lang="en">Represenets statistical approaches, Bayesian estimation, search and optimization methods. [Source: AI Act, Annex I]</rdfs:comment>
         <rdfs:label xml:lang="en">Statistical Approach</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Student -->
@@ -3824,7 +3824,7 @@
         <rdfs:comment xml:lang="en">A person who is studying at a school or a university.</rdfs:comment>
         <rdfs:label xml:lang="en">Student</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#StudentAssessment -->
@@ -3835,7 +3835,7 @@
         <rdfs:comment xml:lang="en">Refers to the purpose of assessing students in educational and vocational training institutions and for assessing participants in tests commonly required for admission to educational institutions.</rdfs:comment>
         <rdfs:label xml:lang="en">Student Assessment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#StudentAssessmentInEducationalInstitutions -->
@@ -3844,7 +3844,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#StudentAssessmentInEducationalInstitutions">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#StudentAssessment"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SubliminalTechnique -->
@@ -3855,7 +3855,7 @@
         <rdfs:comment xml:lang="en">use of subliminal techniques beyond a person’s consciousness in order to materially distort a person’s behaviour in a manner that causes or is likely to cause that person or another person physical or psychological harm</rdfs:comment>
         <rdfs:label xml:lang="en">Subliminal Technique</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SupervisedLearning -->
@@ -3865,7 +3865,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MachineLearningApproach"/>
         <rdfs:label xml:lang="en">Supervised Learning</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SymbolicReasoning -->
@@ -3875,7 +3875,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#KnowledgeBasedApproach"/>
         <rdfs:label xml:lang="en">Symbolic Reasoning</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#System -->
@@ -3884,7 +3884,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#System">
         <rdfs:label xml:lang="en">System</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SystemArchitecture -->
@@ -3894,7 +3894,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">System Architecture</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#SystemRelatedSource -->
@@ -3904,7 +3904,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:label xml:lang="en">System Related Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TaskAllocation -->
@@ -3915,7 +3915,7 @@
         <rdfs:comment xml:lang="en">Refers to the Assignment of tasks to persons.</rdfs:comment>
         <rdfs:label xml:lang="en">Task Allocation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TechnicalControl -->
@@ -3926,7 +3926,7 @@
         <rdfs:comment xml:lang="en">Represents controls that are implemented using a technology.</rdfs:comment>
         <rdfs:label xml:lang="en">Technical Control</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TechnicalSpecification -->
@@ -3936,7 +3936,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:label xml:lang="en">Technical Specification</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TestLog -->
@@ -3946,7 +3946,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Test log</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TestParticipant -->
@@ -3957,7 +3957,7 @@
         <rdfs:comment xml:lang="en">A person who is participating in a test.</rdfs:comment>
         <rdfs:label xml:lang="en">Test Participant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TestReport -->
@@ -3967,7 +3967,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Document"/>
         <rdfs:label xml:lang="en">Test Report</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Testing -->
@@ -3977,7 +3977,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
         <rdfs:label xml:lang="en">Testing</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TestingData -->
@@ -3987,7 +3987,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Data"/>
         <rdfs:label xml:lang="en">Testing Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TestingDataRiskSource -->
@@ -3997,7 +3997,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Testing Data Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Tool -->
@@ -4008,7 +4008,7 @@
         <rdfs:comment xml:lang="en">A tool that has been used in development of an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">Tool</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Training -->
@@ -4018,7 +4018,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
         <rdfs:label xml:lang="en">Training</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TrainingData -->
@@ -4029,7 +4029,7 @@
         <rdfs:comment xml:lang="en">Data used to train a machine learning model [ISO/IEC FDIS 22989, 3.3.16]</rdfs:comment>
         <rdfs:label xml:lang="en">Training Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#TrainingDataRiskSource -->
@@ -4039,7 +4039,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Training Data Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#UnavailabilityOfDataSet -->
@@ -4049,7 +4049,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Unavailability Of Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#UnrepresentativeTestingDataSet -->
@@ -4059,7 +4059,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TestingDataRiskSource"/>
         <rdfs:label xml:lang="en">Unrepresentative Testing Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#UnrepresentativeTrainingDataSet -->
@@ -4069,7 +4069,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#TrainingDataRiskSource"/>
         <rdfs:label xml:lang="en">Unrepresentative Training Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#UnrepresentativeValidationDataSet -->
@@ -4079,7 +4079,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ValidationDataRelatedSource"/>
         <rdfs:label xml:lang="en">Unrepresentative Validation Data Set</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#UnsupervisedLearning -->
@@ -4089,7 +4089,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#MachineLearningApproach"/>
         <rdfs:label xml:lang="en">Unsupevised Learning</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#UpdateRequirement -->
@@ -4098,7 +4098,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#UpdateRequirement">
         <rdfs:label xml:lang="en">Update Requirement</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#UserIndicator -->
@@ -4109,7 +4109,7 @@
         <rdfs:comment xml:lang="en">Represents indicators for expressing attributes of users of AI systems.</rdfs:comment>
         <rdfs:label xml:lang="en">User Indicator</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Validation -->
@@ -4119,7 +4119,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AILifecyclePhase"/>
         <rdfs:label xml:lang="en">Validation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ValidationData -->
@@ -4130,7 +4130,7 @@
         <rdfs:comment xml:lang="en">Data used to compare the performance of different candidate models [Source: ISO/IEC FDIS 22989, 3.2.5].</rdfs:comment>
         <rdfs:label xml:lang="en">Validation Data</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#ValidationDataRelatedSource -->
@@ -4140,7 +4140,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Validation Data Risk Source</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#VerifyingAuthenticity -->
@@ -4151,7 +4151,7 @@
         <rdfs:comment xml:lang="en">Refers to the verification of the authenticity of documents.</rdfs:comment>
         <rdfs:label xml:lang="en">Verifying Authenticity</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#VerifyingAuthenticityOfSupportingDocument -->
@@ -4160,7 +4160,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#VerifyingAuthenticityOfSupportingDocument">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#VerifyingAuthenticity"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#VerifyingAuthenticityOfTravelDocument -->
@@ -4171,7 +4171,7 @@
         <rdfs:comment xml:lang="en">Refers to the verification of the authenticity of travel documents and supporting documentation of natural persons and detection of non-authentic documents by checking their security features.</rdfs:comment>
         <rdfs:label xml:lang="en">Verifying Authenticity Of Travel Document</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#Version -->
@@ -4180,7 +4180,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#Version">
         <rdfs:label xml:lang="en">Version</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#VisaApplicant -->
@@ -4191,7 +4191,7 @@
         <rdfs:comment xml:lang="en">A person who has applied for a visa.</rdfs:comment>
         <rdfs:label xml:lang="en">Visa Applicant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#VisaApplicationExamination -->
@@ -4200,7 +4200,7 @@
     <owl:Class rdf:about="https://w3id.org/AIRO#VisaApplicationExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#VocationalTraining -->
@@ -4210,7 +4210,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Vocational Training</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#VulnerablePosition -->
@@ -4221,7 +4221,7 @@
         <rdfs:comment xml:lang="en">Represents whether potentially harmed or adversely impacted persons are in a vulnerable position due to an imbalance of power, knowledge, economic or social circumstances, or age. [Source: AI Act]</rdfs:comment>
         <rdfs:label xml:lang="en">Vulnerable Position</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#WellbeingImpact -->
@@ -4232,7 +4232,7 @@
         <rdfs:comment xml:lang="en">Represents impact of AI on persons&apos; health and wellbeing.</rdfs:comment>
         <rdfs:label xml:lang="en">Wellbeing Impact</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#WorkersManagement -->
@@ -4242,7 +4242,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Domain"/>
         <rdfs:label xml:lang="en">Workers Management</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#WrongDataSetDesignChoice -->
@@ -4252,7 +4252,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#DataSet-RelatedRiskSource"/>
         <rdfs:label xml:lang="en">Wrong Data Set Design Choice</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#citizenshipApplicant -->
@@ -4263,7 +4263,7 @@
         <rdfs:comment xml:lang="en">A person who has applied for citizenship.</rdfs:comment>
         <rdfs:label xml:lang="en">Citizenship Applicant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/AIRO#vulnerability -->
@@ -4279,5 +4279,3 @@
 
 
 <!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
-
-
