@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix airo: <https://w3id.org/AIRO#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @base <https://w3id.org/AIRO> .
@@ -516,7 +517,8 @@ airo:AdversarialAttack rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AdvertisingVacancies
 airo:AdvertisingVacancies rdf:type owl:Class ;
-                          rdfs:subClassOf airo:AssessmentForRecuitment .
+                          rdfs:subClassOf airo:AssessmentForRecuitment ;
+                          rdfs:label "Advertising Vacancies"@en .
 
 
 ###  https://w3id.org/AIRO#Alogorithm-RelatedRiskSource
@@ -584,32 +586,38 @@ airo:AssessingPastCriminalBehaviour rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AssessingRiskForPotentialVictimsOfCriminalOffences
 airo:AssessingRiskForPotentialVictimsOfCriminalOffences rdf:type owl:Class ;
-                                                        rdfs:subClassOf airo:IndividualRiskAssessment .
+                                                        rdfs:subClassOf airo:IndividualRiskAssessment ;
+                                                        rdfs:label "Assessing Risk For Potential Victims Of Criminal Offences"@en .
 
 
 ###  https://w3id.org/AIRO#AssessingRiskOfIrregularImmigration
 airo:AssessingRiskOfIrregularImmigration rdf:type owl:Class ;
-                                         rdfs:subClassOf airo:IndividualRiskAssessment .
+                                         rdfs:subClassOf airo:IndividualRiskAssessment ;
+                                         rdfs:label "Assessing Risk Of Irregular Immigration"@en .
 
 
 ###  https://w3id.org/AIRO#AssessingRiskOfOffending
 airo:AssessingRiskOfOffending rdf:type owl:Class ;
-                              rdfs:subClassOf airo:IndividualRiskAssessment .
+                              rdfs:subClassOf airo:IndividualRiskAssessment ;
+                              rdfs:label "Assessing Risk Of Offending"@en .
 
 
 ###  https://w3id.org/AIRO#AssessingRiskOfReoffending
 airo:AssessingRiskOfReoffending rdf:type owl:Class ;
-                                rdfs:subClassOf airo:IndividualRiskAssessment .
+                                rdfs:subClassOf airo:IndividualRiskAssessment ;
+                                rdfs:label "Assessing Risk Of Reoffending"@en .
 
 
 ###  https://w3id.org/AIRO#AssessingSecurityRisk
 airo:AssessingSecurityRisk rdf:type owl:Class ;
-                           rdfs:subClassOf airo:IndividualRiskAssessment .
+                           rdfs:subClassOf airo:IndividualRiskAssessment ;
+                           rdfs:label "Assessing Security Risk"@en .
 
 
 ###  https://w3id.org/AIRO#AssessingTestsRequiredForAdmission
 airo:AssessingTestsRequiredForAdmission rdf:type owl:Class ;
-                                        rdfs:subClassOf airo:StudentAssessment .
+                                        rdfs:subClassOf airo:StudentAssessment ;
+                                        rdfs:label "Assessing Tests Required For Admission"@en .
 
 
 ###  https://w3id.org/AIRO#Assessment
@@ -647,7 +655,8 @@ airo:AssigningPeopleToEducationalInstitutions rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#AsylumApplicationExamination
 airo:AsylumApplicationExamination rdf:type owl:Class ;
-                                  rdfs:subClassOf airo:ApplicationExamination .
+                                  rdfs:subClassOf airo:ApplicationExamination ;
+                                  rdfs:label "Asylum Application Examination"@en .
 
 
 ###  https://w3id.org/AIRO#AsylumSeeker
@@ -872,7 +881,8 @@ airo:DesignSpecification rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#DetectingNon-AuthenticDocuments
 airo:DetectingNon-AuthenticDocuments rdf:type owl:Class ;
-                                     rdfs:subClassOf airo:Detection .
+                                     rdfs:subClassOf airo:Detection ;
+                                     rdfs:label "Detecting Non-Authentic Documents"@en .
 
 
 ###  https://w3id.org/AIRO#Detection
@@ -902,9 +912,10 @@ airo:DeterminingAccessToEducation rdf:type owl:Class ;
                                   rdfs:label "Determining Access To Education"@en .
 
 
-###  https://w3id.org/AIRO#DiscoverHiddenRelationshipsRelatedToCrime
-airo:DiscoverHiddenRelationshipsRelatedToCrime rdf:type owl:Class ;
-                                               rdfs:subClassOf airo:CrimeAnalytics .
+###  https://w3id.org/AIRO#DiscoveringHiddenRelationshipsRelatedToCrime
+airo:DiscoveringHiddenRelationshipsRelatedToCrime rdf:type owl:Class ;
+                                                  rdfs:subClassOf airo:CrimeAnalytics ;
+                                                  rdfs:label "Discovering Hidden Relationships Related To Crime"@en .
 
 
 ###  https://w3id.org/AIRO#DispatchingEmergencyService
@@ -1189,9 +1200,10 @@ airo:HumanOversightMeasure rdf:type owl:Class ;
                            rdfs:label "Human Oversight Measure"@en .
 
 
-###  https://w3id.org/AIRO#IdentifyUnkownPatternsOfCrime
-airo:IdentifyUnkownPatternsOfCrime rdf:type owl:Class ;
-                                   rdfs:subClassOf airo:CrimeAnalytics .
+###  https://w3id.org/AIRO#IdentifyingUnkownPatternsOfCrime
+airo:IdentifyingUnkownPatternsOfCrime rdf:type owl:Class ;
+                                      rdfs:subClassOf airo:CrimeAnalytics ;
+                                      rdfs:label "Identifying Unkown Patterns Of Crime"@en .
 
 
 ###  https://w3id.org/AIRO#ImmigrationEligibilityAssessment
@@ -1488,7 +1500,8 @@ airo:Metric rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#MigrationRelatedComplaintsExamination
 airo:MigrationRelatedComplaintsExamination rdf:type owl:Class ;
-                                           rdfs:subClassOf airo:ApplicationExamination .
+                                           rdfs:subClassOf airo:ApplicationExamination ;
+                                           rdfs:label "Migration Related Complaints Examination"@en .
 
 
 ###  https://w3id.org/AIRO#Misuse
@@ -1782,7 +1795,8 @@ airo:ReclaimingPublicAssisstanceServices rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#RecuritmentTestEvaluation
 airo:RecuritmentTestEvaluation rdf:type owl:Class ;
-                               rdfs:subClassOf airo:AssessmentForRecuitment .
+                               rdfs:subClassOf airo:AssessmentForRecuitment ;
+                               rdfs:label "Recuritment Test Evaluation"@en .
 
 
 ###  https://w3id.org/AIRO#ReducingPublicAssisstanceServices
@@ -1820,7 +1834,8 @@ airo:ResidencePermitApplicant rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#ResidencePermitsApplicationExamination
 airo:ResidencePermitsApplicationExamination rdf:type owl:Class ;
-                                            rdfs:subClassOf airo:ApplicationExamination .
+                                            rdfs:subClassOf airo:ApplicationExamination ;
+                                            rdfs:label "Residence Permits Application Examination"@en .
 
 
 ###  https://w3id.org/AIRO#Reversiblity
@@ -1952,7 +1967,8 @@ airo:StudentAssessment rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#StudentAssessmentInEducationalInstitutions
 airo:StudentAssessmentInEducationalInstitutions rdf:type owl:Class ;
-                                                rdfs:subClassOf airo:StudentAssessment .
+                                                rdfs:subClassOf airo:StudentAssessment ;
+                                                rdfs:label "Student Assessment In Educational Institutions"@en .
 
 
 ###  https://w3id.org/AIRO#SubliminalTechnique
@@ -2122,7 +2138,8 @@ airo:VerifyingAuthenticity rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#VerifyingAuthenticityOfSupportingDocument
 airo:VerifyingAuthenticityOfSupportingDocument rdf:type owl:Class ;
-                                               rdfs:subClassOf airo:VerifyingAuthenticity .
+                                               rdfs:subClassOf airo:VerifyingAuthenticity ;
+                                               rdfs:label "Verifying Authenticity Of Supporting Document"@en .
 
 
 ###  https://w3id.org/AIRO#VerifyingAuthenticityOfTravelDocument
@@ -2146,7 +2163,8 @@ airo:VisaApplicant rdf:type owl:Class ;
 
 ###  https://w3id.org/AIRO#VisaApplicationExamination
 airo:VisaApplicationExamination rdf:type owl:Class ;
-                                rdfs:subClassOf airo:ApplicationExamination .
+                                rdfs:subClassOf airo:ApplicationExamination ;
+                                rdfs:label "Visa Application Examination"@en .
 
 
 ###  https://w3id.org/AIRO#VulnerablePosition
