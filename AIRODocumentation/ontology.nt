@@ -268,10 +268,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/AIRO#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Risk> .
 <https://w3id.org/AIRO#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#label> "is risk source for"@en .
 # 
-# https://w3id.org/AIRO#isTechnicalSpecAppliedIn
-<https://w3id.org/AIRO#isTechnicalSpecAppliedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/AIRO#isTechnicalSpecAppliedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is technical spec applied in"@en .
-# 
 # https://w3id.org/AIRO#isUsedBy
 <https://w3id.org/AIRO#isUsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/AIRO#isUsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#AISystem> .
@@ -363,6 +359,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#AISystem> .
 # 
 # 
 # 

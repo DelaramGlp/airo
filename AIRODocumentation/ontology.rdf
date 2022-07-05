@@ -477,15 +477,6 @@
     
 
 
-    <!-- https://w3id.org/AIRO#isTechnicalSpecAppliedIn -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isTechnicalSpecAppliedIn">
-        <rdfs:label xml:lang="en">is technical spec applied in</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/AIRO#isUsedBy -->
 
 
@@ -646,7 +637,9 @@
     <!-- http://purl.org/dc/terms/date -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#AISystem"/>
+    </owl:DatatypeProperty>
     
 
 

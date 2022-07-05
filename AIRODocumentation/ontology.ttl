@@ -299,11 +299,6 @@
                  rdfs:label "is risk source for"@en .
 
 
-###  https://w3id.org/AIRO#isTechnicalSpecAppliedIn
-:isTechnicalSpecAppliedIn rdf:type owl:ObjectProperty ;
-                          rdfs:label "is technical spec applied in"@en .
-
-
 ###  https://w3id.org/AIRO#isUsedBy
 :isUsedBy rdf:type owl:ObjectProperty ;
           rdfs:domain :AISystem ;
@@ -402,7 +397,8 @@
 #################################################################
 
 ###  http://purl.org/dc/terms/date
-<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty .
+<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :AISystem .
 
 
 #################################################################
