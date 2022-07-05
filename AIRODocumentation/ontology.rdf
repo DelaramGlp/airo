@@ -833,6 +833,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AdvertisingVacancies">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForRecuitment"/>
+        <rdfs:label xml:lang="en">Advertising Vacancies</rdfs:label>
     </owl:Class>
     
 
@@ -945,6 +946,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskForPotentialVictimsOfCriminalOffences">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
+        <rdfs:label xml:lang="en">Assessing Risk For Potential Victims Of Criminal Offences</rdfs:label>
     </owl:Class>
     
 
@@ -954,6 +956,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskOfIrregularImmigration">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
+        <rdfs:label xml:lang="en">Assessing Risk Of Irregular Immigration</rdfs:label>
     </owl:Class>
     
 
@@ -963,6 +966,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskOfOffending">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
+        <rdfs:label xml:lang="en">Assessing Risk Of Offending</rdfs:label>
     </owl:Class>
     
 
@@ -972,6 +976,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingRiskOfReoffending">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
+        <rdfs:label xml:lang="en">Assessing Risk Of Reoffending</rdfs:label>
     </owl:Class>
     
 
@@ -981,6 +986,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingSecurityRisk">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
+        <rdfs:label xml:lang="en">Assessing Security Risk</rdfs:label>
     </owl:Class>
     
 
@@ -990,6 +996,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingTestsRequiredForAdmission">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#StudentAssessment"/>
+        <rdfs:label xml:lang="en">Assessing Tests Required For Admission</rdfs:label>
     </owl:Class>
     
 
@@ -1052,6 +1059,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AsylumApplicationExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
+        <rdfs:label xml:lang="en">Asylum Application Examination</rdfs:label>
     </owl:Class>
     
 
@@ -1413,6 +1421,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#DetectingNon-AuthenticDocuments">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Detection"/>
+        <rdfs:label xml:lang="en">Detecting Non-Authentic Documents</rdfs:label>
     </owl:Class>
     
 
@@ -1460,11 +1469,12 @@
     
 
 
-    <!-- https://w3id.org/AIRO#DiscoverHiddenRelationshipsRelatedToCrime -->
+    <!-- https://w3id.org/AIRO#DiscoveringHiddenRelationshipsRelatedToCrime -->
 
 
-    <owl:Class rdf:about="https://w3id.org/AIRO#DiscoverHiddenRelationshipsRelatedToCrime">
+    <owl:Class rdf:about="https://w3id.org/AIRO#DiscoveringHiddenRelationshipsRelatedToCrime">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#CrimeAnalytics"/>
+        <rdfs:label xml:lang="en">Discovering Hidden Relationships Related To Crime</rdfs:label>
     </owl:Class>
     
 
@@ -1923,11 +1933,12 @@
     
 
 
-    <!-- https://w3id.org/AIRO#IdentifyUnkownPatternsOfCrime -->
+    <!-- https://w3id.org/AIRO#IdentifyingUnkownPatternsOfCrime -->
 
 
-    <owl:Class rdf:about="https://w3id.org/AIRO#IdentifyUnkownPatternsOfCrime">
+    <owl:Class rdf:about="https://w3id.org/AIRO#IdentifyingUnkownPatternsOfCrime">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#CrimeAnalytics"/>
+        <rdfs:label xml:lang="en">Identifying Unkown Patterns Of Crime</rdfs:label>
     </owl:Class>
     
 
@@ -2409,6 +2420,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#MigrationRelatedComplaintsExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
+        <rdfs:label xml:lang="en">Migration Related Complaints Examination</rdfs:label>
     </owl:Class>
     
 
@@ -2882,6 +2894,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#RecuritmentTestEvaluation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AssessmentForRecuitment"/>
+        <rdfs:label xml:lang="en">Recuritment Test Evaluation</rdfs:label>
     </owl:Class>
     
 
@@ -2944,6 +2957,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#ResidencePermitsApplicationExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
+        <rdfs:label xml:lang="en">Residence Permits Application Examination</rdfs:label>
     </owl:Class>
     
 
@@ -3156,6 +3170,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#StudentAssessmentInEducationalInstitutions">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#StudentAssessment"/>
+        <rdfs:label xml:lang="en">Student Assessment In Educational Institutions</rdfs:label>
     </owl:Class>
     
 
@@ -3434,6 +3449,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#VerifyingAuthenticityOfSupportingDocument">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#VerifyingAuthenticity"/>
+        <rdfs:label xml:lang="en">Verifying Authenticity Of Supporting Document</rdfs:label>
     </owl:Class>
     
 
@@ -3474,6 +3490,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#VisaApplicationExamination">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#ApplicationExamination"/>
+        <rdfs:label xml:lang="en">Visa Application Examination</rdfs:label>
     </owl:Class>
     
 

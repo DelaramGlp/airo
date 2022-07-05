@@ -301,6 +301,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AdvertisingVacancies",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Advertising Vacancies"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AssessmentForRecuitment"
   } ]
@@ -420,36 +424,60 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingRiskForPotentialVictimsOfCriminalOffences",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Risk For Potential Victims Of Criminal Offences"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#IndividualRiskAssessment"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingRiskOfIrregularImmigration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Risk Of Irregular Immigration"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#IndividualRiskAssessment"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingRiskOfOffending",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Risk Of Offending"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#IndividualRiskAssessment"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingRiskOfReoffending",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Risk Of Reoffending"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#IndividualRiskAssessment"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingSecurityRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Security Risk"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#IndividualRiskAssessment"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingTestsRequiredForAdmission",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Tests Required For Admission"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#StudentAssessment"
   } ]
@@ -518,6 +546,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AsylumApplicationExamination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Asylum Application Examination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#ApplicationExamination"
   } ]
@@ -940,6 +972,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#DetectingNon-AuthenticDocuments",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detecting Non-Authentic Documents"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Detection"
   } ]
@@ -996,8 +1032,12 @@
     "@id" : "https://w3id.org/AIRO#AssessmentForEducation"
   } ]
 }, {
-  "@id" : "https://w3id.org/AIRO#DiscoverHiddenRelationshipsRelatedToCrime",
+  "@id" : "https://w3id.org/AIRO#DiscoveringHiddenRelationshipsRelatedToCrime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Discovering Hidden Relationships Related To Crime"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#CrimeAnalytics"
   } ]
@@ -1530,8 +1570,12 @@
     "@id" : "https://w3id.org/AIRO#SemiAutomatedControl"
   } ]
 }, {
-  "@id" : "https://w3id.org/AIRO#IdentifyUnkownPatternsOfCrime",
+  "@id" : "https://w3id.org/AIRO#IdentifyingUnkownPatternsOfCrime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Identifying Unkown Patterns Of Crime"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#CrimeAnalytics"
   } ]
@@ -2077,6 +2121,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#MigrationRelatedComplaintsExamination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Migration Related Complaints Examination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#ApplicationExamination"
   } ]
@@ -2612,6 +2660,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#RecuritmentTestEvaluation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recuritment Test Evaluation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AssessmentForRecuitment"
   } ]
@@ -2680,6 +2732,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#ResidencePermitsApplicationExamination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Residence Permits Application Examination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#ApplicationExamination"
   } ]
@@ -2929,6 +2985,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#StudentAssessmentInEducationalInstitutions",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Student Assessment In Educational Institutions"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#StudentAssessment"
   } ]
@@ -3231,6 +3291,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#VerifyingAuthenticityOfSupportingDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Verifying Authenticity Of Supporting Document"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#VerifyingAuthenticity"
   } ]
@@ -3272,6 +3336,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#VisaApplicationExamination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Visa Application Examination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#ApplicationExamination"
   } ]

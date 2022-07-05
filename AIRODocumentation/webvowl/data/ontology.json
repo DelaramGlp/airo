@@ -39,16 +39,16 @@
         "value" : "Dave Lewis",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2021-07-01T17:01:00",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "ADAPT Centre, Trinity College Dublin",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2021-07-01T17:01:00",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -57,16 +57,16 @@
         "value" : "0.2",
         "type" : "label"
       } ],
-      "title" : [ {
-        "identifier" : "title",
-        "language" : "undefined",
-        "value" : "AIRO",
-        "type" : "label"
-      } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
         "value" : "2021-01-20T09:00:00",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "AIRO",
         "type" : "label"
       } ]
     }
@@ -113,10 +113,10 @@
     "type" : "owl:Class"
   }, {
     "id" : "79",
-    "type" : "owl:intersectionOf"
-  }, {
-    "id" : "80",
     "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:intersectionOf"
   }, {
     "id" : "82",
     "type" : "owl:Class"
@@ -124,10 +124,10 @@
     "id" : "54",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "128",
     "type" : "owl:Class"
   }, {
-    "id" : "128",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "129",
@@ -139,7 +139,7 @@
     "id" : "131",
     "type" : "owl:Class"
   }, {
-    "id" : "137",
+    "id" : "135",
     "type" : "owl:Class"
   }, {
     "id" : "119",
@@ -152,6 +152,9 @@
     "type" : "owl:Class"
   }, {
     "id" : "183",
+    "type" : "owl:Class"
+  }, {
+    "id" : "140",
     "type" : "owl:Class"
   }, {
     "id" : "184",
@@ -178,10 +181,10 @@
     "id" : "219",
     "type" : "owl:Class"
   }, {
-    "id" : "220",
+    "id" : "74",
     "type" : "owl:Class"
   }, {
-    "id" : "74",
+    "id" : "221",
     "type" : "owl:Class"
   }, {
     "id" : "222",
@@ -247,9 +250,6 @@
     "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "182",
-    "type" : "owl:Class"
-  }, {
     "id" : "306",
     "type" : "owl:Class"
   }, {
@@ -259,7 +259,7 @@
     "id" : "147",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "342",
@@ -322,10 +322,10 @@
     "id" : "42",
     "type" : "owl:Class"
   }, {
-    "id" : "85",
+    "id" : "58",
     "type" : "owl:Class"
   }, {
-    "id" : "58",
+    "id" : "85",
     "type" : "owl:Class"
   }, {
     "id" : "132",
@@ -361,10 +361,10 @@
     "id" : "305",
     "type" : "owl:Class"
   }, {
-    "id" : "420",
+    "id" : "379",
     "type" : "owl:Class"
   }, {
-    "id" : "379",
+    "id" : "420",
     "type" : "owl:Class"
   }, {
     "id" : "283",
@@ -394,9 +394,6 @@
     "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "140",
-    "type" : "owl:Class"
-  }, {
     "id" : "123",
     "type" : "owl:Class"
   }, {
@@ -412,13 +409,13 @@
     "id" : "460",
     "type" : "owl:Class"
   }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "61",
+    "id" : "71",
     "type" : "owl:Class"
   }, {
     "id" : "175",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
     "type" : "owl:Class"
   }, {
     "id" : "56",
@@ -442,16 +439,16 @@
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "203",
-    "type" : "owl:Class"
-  }, {
     "id" : "480",
     "type" : "owl:Class"
   }, {
-    "id" : "381",
+    "id" : "203",
     "type" : "owl:Class"
   }, {
     "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "381",
     "type" : "owl:Class"
   }, {
     "id" : "100",
@@ -478,10 +475,10 @@
     "id" : "346",
     "type" : "owl:Class"
   }, {
-    "id" : "268",
+    "id" : "262",
     "type" : "owl:Class"
   }, {
-    "id" : "262",
+    "id" : "268",
     "type" : "owl:Class"
   }, {
     "id" : "116",
@@ -493,10 +490,10 @@
     "id" : "117",
     "type" : "owl:Class"
   }, {
-    "id" : "399",
+    "id" : "223",
     "type" : "owl:Class"
   }, {
-    "id" : "223",
+    "id" : "399",
     "type" : "owl:Class"
   }, {
     "id" : "317",
@@ -523,10 +520,10 @@
     "id" : "157",
     "type" : "owl:Class"
   }, {
-    "id" : "205",
+    "id" : "160",
     "type" : "owl:Class"
   }, {
-    "id" : "160",
+    "id" : "205",
     "type" : "owl:Class"
   }, {
     "id" : "323",
@@ -550,10 +547,10 @@
     "id" : "229",
     "type" : "owl:Class"
   }, {
-    "id" : "330",
+    "id" : "251",
     "type" : "owl:Class"
   }, {
-    "id" : "251",
+    "id" : "330",
     "type" : "owl:Class"
   }, {
     "id" : "360",
@@ -616,7 +613,7 @@
     "id" : "214",
     "type" : "owl:Class"
   }, {
-    "id" : "138",
+    "id" : "136",
     "type" : "owl:Class"
   }, {
     "id" : "38",
@@ -634,7 +631,7 @@
     "id" : "127",
     "type" : "owl:Class"
   }, {
-    "id" : "221",
+    "id" : "220",
     "type" : "owl:Class"
   }, {
     "id" : "1",
@@ -679,10 +676,10 @@
     "id" : "149",
     "type" : "owl:Class"
   }, {
-    "id" : "259",
+    "id" : "95",
     "type" : "owl:Class"
   }, {
-    "id" : "95",
+    "id" : "259",
     "type" : "owl:Class"
   }, {
     "id" : "428",
@@ -703,7 +700,7 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "80",
     "type" : "owl:Class"
   }, {
     "id" : "353",
@@ -715,13 +712,13 @@
     "id" : "134",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "509",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "509",
     "type" : "owl:Class"
   }, {
     "id" : "208",
@@ -784,10 +781,10 @@
     "id" : "311",
     "type" : "owl:Class"
   }, {
-    "id" : "478",
+    "id" : "146",
     "type" : "owl:Class"
   }, {
-    "id" : "146",
+    "id" : "478",
     "type" : "owl:Class"
   }, {
     "id" : "83",
@@ -820,13 +817,16 @@
     "id" : "288",
     "type" : "owl:Class"
   }, {
-    "id" : "69",
+    "id" : "72",
     "type" : "owl:Class"
   }, {
     "id" : "462",
     "type" : "owl:Class"
   }, {
     "id" : "255",
+    "type" : "owl:Class"
+  }, {
+    "id" : "182",
     "type" : "owl:Class"
   }, {
     "id" : "105",
@@ -850,10 +850,10 @@
     "id" : "550",
     "type" : "owl:unionOf"
   }, {
-    "id" : "71",
+    "id" : "68",
     "type" : "owl:Thing"
   }, {
-    "id" : "72",
+    "id" : "69",
     "type" : "rdfs:Literal"
   }, {
     "id" : "374",
@@ -877,7 +877,7 @@
     "id" : "177",
     "type" : "owl:Class"
   }, {
-    "id" : "136",
+    "id" : "138",
     "type" : "owl:Class"
   }, {
     "id" : "356",
@@ -889,10 +889,10 @@
     "id" : "294",
     "type" : "owl:Class"
   }, {
-    "id" : "133",
+    "id" : "237",
     "type" : "owl:Class"
   }, {
-    "id" : "237",
+    "id" : "133",
     "type" : "owl:Class"
   }, {
     "id" : "270",
@@ -911,6 +911,16 @@
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
+    "iri" : "https://w3id.org/AIRO#IncompletenessOfTestingDataSet",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IncompletenessOfTestingDataSet",
+      "en" : "Incompleteness Of Testing Data Set"
+    },
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
     "iri" : "https://w3id.org/AIRO#ResidencePermitApplicant",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -920,16 +930,6 @@
     },
     "comment" : {
       "en" : "A person who has applied for a residence permit."
-    },
-    "id" : "6",
-    "superClasses" : [ "7" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#IncompletenessOfTestingDataSet",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IncompletenessOfTestingDataSet",
-      "en" : "Incompleteness Of Testing Data Set"
     },
     "id" : "8",
     "superClasses" : [ "9" ]
@@ -979,7 +979,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AssessingTestsRequiredForAdmission"
+      "IRI-based" : "AssessingTestsRequiredForAdmission",
+      "en" : "Assessing Tests Required For Admission"
     },
     "id" : "49",
     "superClasses" : [ "50" ]
@@ -999,7 +1000,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "RecuritmentTestEvaluation"
+      "IRI-based" : "RecuritmentTestEvaluation",
+      "en" : "Recuritment Test Evaluation"
     },
     "id" : "57",
     "superClasses" : [ "58" ]
@@ -1058,17 +1060,6 @@
     "id" : "76",
     "superClasses" : [ "77" ]
   }, {
-    "iri" : "https://w3id.org/AIRO#PartialControl",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PartialControl",
-      "en" : "Partial Control"
-    },
-    "intersection" : [ "60" ],
-    "attributes" : [ "intersection" ],
-    "id" : "79"
-  }, {
     "iri" : "https://w3id.org/AIRO#TestParticipant",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -1079,8 +1070,19 @@
     "comment" : {
       "en" : "A person who is participating in a test."
     },
-    "id" : "80",
-    "superClasses" : [ "81" ]
+    "id" : "79",
+    "superClasses" : [ "80" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#PartialControl",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PartialControl",
+      "en" : "Partial Control"
+    },
+    "intersection" : [ "60" ],
+    "attributes" : [ "intersection" ],
+    "id" : "81"
   }, {
     "iri" : "https://w3id.org/AIRO#PerformanceConsequence",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1094,26 +1096,17 @@
       "en" : "Represents consequences related to the performance of the AI System."
     },
     "id" : "82",
-    "superClasses" : [ "69" ]
+    "superClasses" : [ "72" ]
   }, {
     "iri" : "https://w3id.org/AIRO#AsylumApplicationExamination",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AsylumApplicationExamination"
+      "IRI-based" : "AsylumApplicationExamination",
+      "en" : "Asylum Application Examination"
     },
     "id" : "54",
     "superClasses" : [ "51" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#SupervisedLearning",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "SupervisedLearning",
-      "en" : "Supervised Learning"
-    },
-    "id" : "26",
-    "superClasses" : [ "22" ]
   }, {
     "iri" : "https://w3id.org/AIRO#EmployeeEvaluation",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1124,6 +1117,16 @@
     },
     "id" : "128",
     "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#SupervisedLearning",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupervisedLearning",
+      "en" : "Supervised Learning"
+    },
+    "id" : "26",
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "https://w3id.org/AIRO#ValidationData",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1169,8 +1172,8 @@
       "IRI-based" : "Pre-trainedModel",
       "en" : "Pre-trianed Model"
     },
-    "id" : "137",
-    "superClasses" : [ "138" ]
+    "id" : "135",
+    "superClasses" : [ "136" ]
   }, {
     "iri" : "https://w3id.org/AIRO#IndividualRiskAssessment",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1217,6 +1220,16 @@
     },
     "id" : "183",
     "superClasses" : [ "52" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#DiscoveringHiddenRelationshipsRelatedToCrime",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiscoveringHiddenRelationshipsRelatedToCrime",
+      "en" : "Discovering Hidden Relationships Related To Crime"
+    },
+    "id" : "140",
+    "superClasses" : [ "141" ]
   }, {
     "iri" : "https://w3id.org/AIRO#PatternRecognition",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1273,10 +1286,10 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "JobApplicant",
-      "en" : "A person who has made an application for employment."
+      "en" : "Job Applicant"
     },
     "id" : "193",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "https://w3id.org/AIRO#ExecutionEnvironment",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1298,16 +1311,16 @@
         "IRI-based" : "dectection_of_criminal_offences"
       }
     }, {
-      "iri" : "https://w3id.org/AIRO#publicly_accessible_space",
-      "baseIri" : "https://w3id.org/AIRO",
-      "labels" : {
-        "IRI-based" : "publicly_accessible_space"
-      }
-    }, {
       "iri" : "https://w3id.org/AIRO#prosecution_of_criminal_offences",
       "baseIri" : "https://w3id.org/AIRO",
       "labels" : {
         "IRI-based" : "prosecution_of_criminal_offences"
+      }
+    }, {
+      "iri" : "https://w3id.org/AIRO#publicly_accessible_space",
+      "baseIri" : "https://w3id.org/AIRO",
+      "labels" : {
+        "IRI-based" : "publicly_accessible_space"
       }
     } ],
     "comment" : {
@@ -1341,16 +1354,6 @@
     "id" : "219",
     "superClasses" : [ "60" ]
   }, {
-    "iri" : "https://w3id.org/AIRO#ApplicationScreening",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ApplicationScreening",
-      "en" : "Application Screening"
-    },
-    "id" : "220",
-    "superClasses" : [ "58" ]
-  }, {
     "iri" : "https://w3id.org/AIRO#AssessmentForEducation",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -1358,12 +1361,22 @@
       "IRI-based" : "AssessmentForEducation",
       "en" : "Assessment For Education"
     },
-    "subClasses" : [ "73", "191", "50", "221" ],
+    "subClasses" : [ "73", "191", "50", "220" ],
     "comment" : {
       "en" : "Refers to assessment for education and vocational training purposes."
     },
     "id" : "74",
     "superClasses" : [ "96" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#ApplicationScreening",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ApplicationScreening",
+      "en" : "Application Screening"
+    },
+    "id" : "221",
+    "superClasses" : [ "58" ]
   }, {
     "iri" : "https://w3id.org/AIRO#SymbolicReasoning",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1470,7 +1483,7 @@
       "IRI-based" : "RiskIndicator",
       "en" : "Risk Indicator"
     },
-    "subClasses" : [ "201", "136" ],
+    "subClasses" : [ "201", "138" ],
     "comment" : {
       "en" : "Represents indicators for expressing risk."
     },
@@ -1587,6 +1600,16 @@
     },
     "id" : "29"
   }, {
+    "iri" : "https://w3id.org/AIRO#AdvertisingVacancies",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AdvertisingVacancies",
+      "en" : "Advertising Vacancies"
+    },
+    "id" : "302",
+    "superClasses" : [ "58" ]
+  }, {
     "iri" : "https://w3id.org/AIRO#DistortionInHumanBehaviour",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -1597,17 +1620,8 @@
     "comment" : {
       "en" : "Represents adverse impacts of AI on human behaviour."
     },
-    "id" : "302",
-    "superClasses" : [ "240" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#AdvertisingVacancies",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AdvertisingVacancies"
-    },
     "id" : "303",
-    "superClasses" : [ "58" ]
+    "superClasses" : [ "240" ]
   }, {
     "iri" : "https://w3id.org/AIRO#HealthAndSafety",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1622,15 +1636,6 @@
     },
     "id" : "28",
     "superClasses" : [ "29" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#DiscoverHiddenRelationshipsRelatedToCrime",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DiscoverHiddenRelationshipsRelatedToCrime"
-    },
-    "id" : "182",
-    "superClasses" : [ "141" ]
   }, {
     "iri" : "https://w3id.org/AIRO#UnavailabilityOfDataSet",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1669,12 +1674,12 @@
       "IRI-based" : "Applicant",
       "en" : "Applicant"
     },
-    "subClasses" : [ "323", "6", "324", "325", "193" ],
+    "subClasses" : [ "323", "8", "324", "325", "193" ],
     "comment" : {
       "en" : "A person who has made an application."
     },
-    "id" : "7",
-    "superClasses" : [ "81" ]
+    "id" : "9",
+    "superClasses" : [ "80" ]
   }, {
     "iri" : "https://w3id.org/AIRO#IncompetenceOfHumanOversightActors",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1725,7 +1730,7 @@
       "en" : "Persons in work-related contractual relationships."
     },
     "id" : "274",
-    "superClasses" : [ "81" ]
+    "superClasses" : [ "80" ]
   }, {
     "iri" : "https://w3id.org/AIRO#ValidationDataRelatedSource",
     "baseIri" : "https://w3id.org/AIRO",
@@ -1825,7 +1830,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MigrationRelatedComplaintsExamination"
+      "IRI-based" : "MigrationRelatedComplaintsExamination",
+      "en" : "Migration Related Complaints Examination"
     },
     "id" : "55",
     "superClasses" : [ "51" ]
@@ -1906,6 +1912,20 @@
     "id" : "42",
     "superClasses" : [ "32" ]
   }, {
+    "iri" : "https://w3id.org/AIRO#AssessmentForRecuitment",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssessmentForRecuitment",
+      "en" : "Assessment For Recruitment"
+    },
+    "subClasses" : [ "395", "302", "396", "128", "57", "221" ],
+    "comment" : {
+      "en" : "Refers to assessment related to employment, workers management and access to self-employment."
+    },
+    "id" : "58",
+    "superClasses" : [ "96" ]
+  }, {
     "iri" : "https://w3id.org/AIRO#DegradedAccuracy",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -1918,20 +1938,6 @@
     },
     "id" : "85",
     "superClasses" : [ "82" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#AssessmentForRecuitment",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AssessmentForRecuitment",
-      "en" : "Assessment For Recruitment"
-    },
-    "subClasses" : [ "395", "303", "396", "128", "57", "220" ],
-    "comment" : {
-      "en" : "Refers to assessment related to employment, workers management and access to self-employment."
-    },
-    "id" : "58",
-    "superClasses" : [ "96" ]
   }, {
     "iri" : "https://w3id.org/AIRO#Purpose",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2023,7 +2029,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AssessingRiskOfReoffending"
+      "IRI-based" : "AssessingRiskOfReoffending",
+      "en" : "Assessing Risk Of Reoffending"
     },
     "id" : "142",
     "superClasses" : [ "119" ]
@@ -2039,7 +2046,7 @@
       "en" : "A person who has applied for citizenship."
     },
     "id" : "325",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "https://w3id.org/AIRO#EmployeeBehaviourMonitoring",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2064,16 +2071,6 @@
     "id" : "305",
     "superClasses" : [ "312" ]
   }, {
-    "iri" : "https://w3id.org/AIRO#PostmarketMonitoringPlan",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PostmarketMonitoringPlan",
-      "en" : "Post-market monitoring plan"
-    },
-    "id" : "420",
-    "superClasses" : [ "64" ]
-  }, {
     "iri" : "https://w3id.org/AIRO#EmployeePerformanceMonitoring",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -2083,6 +2080,16 @@
     },
     "id" : "379",
     "superClasses" : [ "369" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#PostmarketMonitoringPlan",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostmarketMonitoringPlan",
+      "en" : "Post-market monitoring plan"
+    },
+    "id" : "420",
+    "superClasses" : [ "64" ]
   }, {
     "iri" : "https://w3id.org/AIRO#ErrorInTrainingDataSet",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2191,15 +2198,6 @@
     "id" : "19",
     "superClasses" : [ "12" ]
   }, {
-    "iri" : "https://w3id.org/AIRO#IdentifyUnkownPatternsOfCrime",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IdentifyUnkownPatternsOfCrime"
-    },
-    "id" : "140",
-    "superClasses" : [ "141" ]
-  }, {
     "iri" : "https://w3id.org/AIRO#Cyberattack",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -2227,7 +2225,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AssessingSecurityRisk"
+      "IRI-based" : "AssessingSecurityRisk",
+      "en" : "Assessing Security Risk"
     },
     "id" : "144",
     "superClasses" : [ "119" ]
@@ -2265,21 +2264,8 @@
     "comment" : {
       "en" : "Indicates a risk (of harm) associated with an AI system."
     },
-    "id" : "68",
+    "id" : "71",
     "superClasses" : [ "61" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#Event",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Event",
-      "en" : "Event"
-    },
-    "subClasses" : [ "69", "111", "68" ],
-    "comment" : {
-      "en" : "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"
-    },
-    "id" : "61"
   }, {
     "iri" : "https://w3id.org/AIRO#EvaluatingPerformanceOfEmployee",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2291,11 +2277,25 @@
     "id" : "175",
     "superClasses" : [ "174" ]
   }, {
+    "iri" : "https://w3id.org/AIRO#Event",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "subClasses" : [ "72", "111", "71" ],
+    "comment" : {
+      "en" : "Represents occurrence or change of a particular set of circumstances. [Source ISO 31000, 3.5]"
+    },
+    "id" : "61"
+  }, {
     "iri" : "https://w3id.org/AIRO#VisaApplicationExamination",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "VisaApplicationExamination"
+      "IRI-based" : "VisaApplicationExamination",
+      "en" : "Visa Application Examination"
     },
     "id" : "56",
     "superClasses" : [ "51" ]
@@ -2367,16 +2367,6 @@
     "subClasses" : [ "15", "32", "93" ],
     "id" : "16"
   }, {
-    "iri" : "https://w3id.org/AIRO#BayesianEstimation",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "BayesianEstimation",
-      "en" : "Bayesian Estimation"
-    },
-    "id" : "203",
-    "superClasses" : [ "66" ]
-  }, {
     "iri" : "https://w3id.org/AIRO#RemoteBiometricIdentification",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -2390,15 +2380,15 @@
     "id" : "480",
     "superClasses" : [ "481" ]
   }, {
-    "iri" : "https://w3id.org/AIRO#KnowledgeRepresentation",
+    "iri" : "https://w3id.org/AIRO#BayesianEstimation",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "KnowledgeRepresentation",
-      "en" : "Knowledge Representation"
+      "IRI-based" : "BayesianEstimation",
+      "en" : "Bayesian Estimation"
     },
-    "id" : "381",
-    "superClasses" : [ "223" ]
+    "id" : "203",
+    "superClasses" : [ "66" ]
   }, {
     "iri" : "https://w3id.org/AIRO#PublicAssistanceEligibilityAssessment",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2412,6 +2402,16 @@
     },
     "id" : "107",
     "superClasses" : [ "96" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#KnowledgeRepresentation",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KnowledgeRepresentation",
+      "en" : "Knowledge Representation"
+    },
+    "id" : "381",
+    "superClasses" : [ "223" ]
   }, {
     "iri" : "https://w3id.org/AIRO#PersonalityTraitsAssessment",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2441,7 +2441,7 @@
       "en" : "Unrepresentative Testing Data Set"
     },
     "id" : "227",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "7" ]
   }, {
     "iri" : "https://w3id.org/AIRO#System",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2499,6 +2499,19 @@
     "id" : "346",
     "superClasses" : [ "32" ]
   }, {
+    "iri" : "https://w3id.org/AIRO#PersonWhoHasEnteredATerritory",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PersonWhoHasEnteredATerritory",
+      "en" : "Person Who Has Entered A Territory"
+    },
+    "comment" : {
+      "en" : "A person who has entered a territory."
+    },
+    "id" : "262",
+    "superClasses" : [ "80" ]
+  }, {
     "iri" : "https://w3id.org/AIRO#Planning",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -2512,19 +2525,6 @@
     },
     "id" : "268",
     "superClasses" : [ "52" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#PersonWhoHasEnteredATerritory",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PersonWhoHasEnteredATerritory",
-      "en" : "Person Who Has Entered A Territory"
-    },
-    "comment" : {
-      "en" : "A person who has entered a territory."
-    },
-    "id" : "262",
-    "superClasses" : [ "81" ]
   }, {
     "iri" : "https://w3id.org/AIRO#AISystem",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2551,7 +2551,7 @@
       "en" : "Represents consequences related to bias."
     },
     "id" : "151",
-    "superClasses" : [ "69" ]
+    "superClasses" : [ "72" ]
   }, {
     "iri" : "https://w3id.org/AIRO#vulnerability",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2566,19 +2566,6 @@
     "id" : "117",
     "superClasses" : [ "121" ]
   }, {
-    "iri" : "https://w3id.org/AIRO#ProducingRecommendation",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ProducingRecommendation",
-      "en" : "Producing Recommendation"
-    },
-    "comment" : {
-      "en" : "Represents purpose of producing meaningful recommendations to users of the system."
-    },
-    "id" : "399",
-    "superClasses" : [ "132" ]
-  }, {
     "iri" : "https://w3id.org/AIRO#KnowledgeBasedApproach",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -2592,6 +2579,19 @@
     },
     "id" : "223",
     "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#ProducingRecommendation",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProducingRecommendation",
+      "en" : "Producing Recommendation"
+    },
+    "comment" : {
+      "en" : "Represents purpose of producing meaningful recommendations to users of the system."
+    },
+    "id" : "399",
+    "superClasses" : [ "132" ]
   }, {
     "iri" : "https://w3id.org/AIRO#SeriousIncident",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2683,19 +2683,11 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "VerifyingAuthenticityOfSupportingDocument"
+      "IRI-based" : "VerifyingAuthenticityOfSupportingDocument",
+      "en" : "Verifying Authenticity Of Supporting Document"
     },
     "id" : "157",
     "superClasses" : [ "158" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#StudentAssessmentInEducationalInstitutions",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "StudentAssessmentInEducationalInstitutions"
-    },
-    "id" : "205",
-    "superClasses" : [ "50" ]
   }, {
     "iri" : "https://w3id.org/AIRO#VerifyingAuthenticityOfTravelDocument",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2710,6 +2702,16 @@
     "id" : "160",
     "superClasses" : [ "158" ]
   }, {
+    "iri" : "https://w3id.org/AIRO#StudentAssessmentInEducationalInstitutions",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StudentAssessmentInEducationalInstitutions",
+      "en" : "Student Assessment In Educational Institutions"
+    },
+    "id" : "205",
+    "superClasses" : [ "50" ]
+  }, {
     "iri" : "https://w3id.org/AIRO#AsylumSeeker",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -2721,7 +2723,7 @@
       "en" : "A person who has applied for asylum."
     },
     "id" : "323",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "https://w3id.org/AIRO#Document",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2788,7 +2790,17 @@
       "en" : "Irrelevant Testing Data"
     },
     "id" : "229",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#IrrelevantValidationData",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IrrelevantValidationData",
+      "en" : "Irrelevant Validation Data"
+    },
+    "id" : "251",
+    "superClasses" : [ "187" ]
   }, {
     "iri" : "https://w3id.org/AIRO#GeneratingVideoContent",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2802,16 +2814,6 @@
     },
     "id" : "330",
     "superClasses" : [ "294" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#IrrelevantValidationData",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IrrelevantValidationData",
-      "en" : "Irrelevant Validation Data"
-    },
-    "id" : "251",
-    "superClasses" : [ "187" ]
   }, {
     "iri" : "https://w3id.org/AIRO#ManualControl",
     "baseIri" : "https://w3id.org/AIRO",
@@ -2915,7 +2917,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AssessingRiskOfIrregularImmigration"
+      "IRI-based" : "AssessingRiskOfIrregularImmigration",
+      "en" : "Assessing Risk Of Irregular Immigration"
     },
     "id" : "143",
     "superClasses" : [ "119" ]
@@ -2937,7 +2940,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "DetectingNon-AuthenticDocuments"
+      "IRI-based" : "DetectingNon-AuthenticDocuments",
+      "en" : "Detecting Non-Authentic Documents"
     },
     "id" : "285",
     "superClasses" : [ "185" ]
@@ -3039,16 +3043,16 @@
         "IRI-based" : "law_enforcement"
       }
     }, {
-      "iri" : "https://w3id.org/AIRO#management_of_the_supply_of_electricity",
-      "baseIri" : "https://w3id.org/AIRO",
-      "labels" : {
-        "IRI-based" : "management_of_the_supply_of_electricity"
-      }
-    }, {
       "iri" : "https://w3id.org/AIRO#operation_of_the_supply_of_heating",
       "baseIri" : "https://w3id.org/AIRO",
       "labels" : {
         "IRI-based" : "operation_of_the_supply_of_heating"
+      }
+    }, {
+      "iri" : "https://w3id.org/AIRO#management_of_the_supply_of_electricity",
+      "baseIri" : "https://w3id.org/AIRO",
+      "labels" : {
+        "IRI-based" : "management_of_the_supply_of_electricity"
       }
     }, {
       "iri" : "https://w3id.org/AIRO#management_of_the_supply_of_water",
@@ -3063,16 +3067,16 @@
         "IRI-based" : "administration_of_justice"
       }
     }, {
-      "iri" : "https://w3id.org/AIRO#essential_private_service",
-      "baseIri" : "https://w3id.org/AIRO",
-      "labels" : {
-        "IRI-based" : "essential_private_service"
-      }
-    }, {
       "iri" : "https://w3id.org/AIRO#workers_management",
       "baseIri" : "https://w3id.org/AIRO",
       "labels" : {
         "IRI-based" : "workers_management"
+      }
+    }, {
+      "iri" : "https://w3id.org/AIRO#essential_private_service",
+      "baseIri" : "https://w3id.org/AIRO",
+      "labels" : {
+        "IRI-based" : "essential_private_service"
       }
     }, {
       "iri" : "https://w3id.org/AIRO#public_service",
@@ -3138,7 +3142,7 @@
       "en" : "Biased Testing Data Set"
     },
     "id" : "231",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "7" ]
   }, {
     "iri" : "https://w3id.org/AIRO#WellbeingImpact",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3147,7 +3151,7 @@
       "IRI-based" : "WellbeingImpact",
       "en" : "Wellbeing Impact"
     },
-    "subClasses" : [ "440", "438", "302", "239", "501" ],
+    "subClasses" : [ "440", "438", "303", "239", "501" ],
     "comment" : {
       "en" : "Represents impact of AI on persons' health and wellbeing."
     },
@@ -3166,7 +3170,7 @@
       "en" : "Represents outcomes of a consequence on persons, groups, facilities, environment, etc."
     },
     "id" : "98",
-    "superClasses" : [ "69" ]
+    "superClasses" : [ "72" ]
   }, {
     "iri" : "https://w3id.org/AIRO#DecreasedSecurity",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3201,11 +3205,11 @@
       "IRI-based" : "Model",
       "en" : "Model"
     },
-    "subClasses" : [ "137" ],
+    "subClasses" : [ "135" ],
     "comment" : {
       "en" : "Physical, mathematical, or otherwise logical representation of a system, entity, phenomenon, process or data [Source: ISO/IEC FDIS 22989, 3.1.23]"
     },
-    "id" : "138",
+    "id" : "136",
     "superClasses" : [ "237" ]
   }, {
     "iri" : "https://w3id.org/AIRO#ExtentOfUse",
@@ -3280,7 +3284,7 @@
     "comment" : {
       "en" : "Refers to the assessment of participants in tests  required for admission to educational institutions."
     },
-    "id" : "221",
+    "id" : "220",
     "superClasses" : [ "74" ]
   }, {
     "iri" : "https://w3id.org/AIRO#ModelInversion",
@@ -3346,7 +3350,7 @@
       "IRI-based" : "DataSet-RelatedRiskSource",
       "en" : "DataSet-Related Risk Source"
     },
-    "subClasses" : [ "486", "76", "187", "306", "478", "9", "242", "371" ],
+    "subClasses" : [ "486", "76", "187", "306", "478", "7", "242", "371" ],
     "id" : "77",
     "superClasses" : [ "111" ]
   }, {
@@ -3391,7 +3395,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ResidencePermitsApplicationExamination"
+      "IRI-based" : "ResidencePermitsApplicationExamination",
+      "en" : "Residence Permits Application Examination"
     },
     "id" : "53",
     "superClasses" : [ "51" ]
@@ -3422,16 +3427,16 @@
         "IRI-based" : "post-market"
       }
     }, {
-      "iri" : "https://w3id.org/AIRO#inception",
-      "baseIri" : "https://w3id.org/AIRO",
-      "labels" : {
-        "IRI-based" : "inception"
-      }
-    }, {
       "iri" : "https://w3id.org/AIRO#training",
       "baseIri" : "https://w3id.org/AIRO",
       "labels" : {
         "IRI-based" : "training"
+      }
+    }, {
+      "iri" : "https://w3id.org/AIRO#inception",
+      "baseIri" : "https://w3id.org/AIRO",
+      "labels" : {
+        "IRI-based" : "inception"
       }
     }, {
       "iri" : "https://w3id.org/AIRO#testing",
@@ -3485,19 +3490,6 @@
     "id" : "149",
     "superClasses" : [ "96" ]
   }, {
-    "iri" : "https://w3id.org/AIRO#Defendant",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Defendant",
-      "en" : "Defendant"
-    },
-    "comment" : {
-      "en" : "A person who is being accused of criminal offences."
-    },
-    "id" : "259",
-    "superClasses" : [ "81" ]
-  }, {
     "iri" : "https://w3id.org/AIRO#EvaluatingReliabilityOfEvidence",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -3510,6 +3502,19 @@
     },
     "id" : "95",
     "superClasses" : [ "96" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#Defendant",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Defendant",
+      "en" : "Defendant"
+    },
+    "comment" : {
+      "en" : "A person who is being accused of criminal offences."
+    },
+    "id" : "259",
+    "superClasses" : [ "80" ]
   }, {
     "iri" : "https://w3id.org/AIRO#TestReport",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3582,11 +3587,11 @@
       "IRI-based" : "Person",
       "en" : "Natural Person"
     },
-    "subClasses" : [ "7", "274", "276", "278", "257", "259", "262", "80" ],
+    "subClasses" : [ "9", "274", "276", "278", "257", "259", "262", "79" ],
     "comment" : {
       "en" : "An individual human being."
     },
-    "id" : "81",
+    "id" : "80",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "https://w3id.org/AIRO#AutomatedControl",
@@ -3613,7 +3618,7 @@
       "en" : "An individual human being who is below the age of 18 (according to the UN Convention on the Rights of the Child)"
     },
     "id" : "257",
-    "superClasses" : [ "81" ]
+    "superClasses" : [ "80" ]
   }, {
     "iri" : "https://w3id.org/AIRO#LegalInterpretation",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3635,19 +3640,9 @@
       "IRI-based" : "TestingDataRiskSource",
       "en" : "Testing Data Risk Source"
     },
-    "subClasses" : [ "8", "255", "227", "229", "231" ],
-    "id" : "9",
+    "subClasses" : [ "6", "255", "227", "229", "231" ],
+    "id" : "7",
     "superClasses" : [ "77" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#DetermineCreditScore",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DetermineCreditScore",
-      "en" : "Determin Credit Score"
-    },
-    "id" : "509",
-    "superClasses" : [ "96" ]
   }, {
     "iri" : "https://w3id.org/AIRO#MakingDecision",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3662,6 +3657,16 @@
     },
     "id" : "52",
     "superClasses" : [ "132" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#DetermineCreditScore",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DetermineCreditScore",
+      "en" : "Determin Credit Score"
+    },
+    "id" : "509",
+    "superClasses" : [ "96" ]
   }, {
     "iri" : "https://w3id.org/AIRO#PublicAuthority",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3780,7 +3785,8 @@
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AssessingRiskForPotentialVictimsOfCriminalOffences"
+      "IRI-based" : "AssessingRiskForPotentialVictimsOfCriminalOffences",
+      "en" : "Assessing Risk For Potential Victims Of Criminal Offences"
     },
     "id" : "145",
     "superClasses" : [ "119" ]
@@ -3806,7 +3812,7 @@
       "en" : "A person who is studying at a school or a university."
     },
     "id" : "276",
-    "superClasses" : [ "81" ]
+    "superClasses" : [ "80" ]
   }, {
     "iri" : "https://w3id.org/AIRO#MakingPrediction",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3829,7 +3835,7 @@
       "IRI-based" : "AISubject",
       "en" : "AI Subject"
     },
-    "subClasses" : [ "505", "81" ],
+    "subClasses" : [ "505", "80" ],
     "comment" : {
       "en" : "An AI subject is an organization or entity that is impacted by an AI system, service or product."
     },
@@ -3914,6 +3920,16 @@
     "id" : "311",
     "superClasses" : [ "308" ]
   }, {
+    "iri" : "https://w3id.org/AIRO#AssessingRiskOfOffending",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AssessingRiskOfOffending",
+      "en" : "Assessing Risk Of Offending"
+    },
+    "id" : "146",
+    "superClasses" : [ "119" ]
+  }, {
     "iri" : "https://w3id.org/AIRO#ErrorInDataCollection",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -3923,15 +3939,6 @@
     },
     "id" : "478",
     "superClasses" : [ "77" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#AssessingRiskOfOffending",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AssessingRiskOfOffending"
-    },
-    "id" : "146",
-    "superClasses" : [ "119" ]
   }, {
     "iri" : "https://w3id.org/AIRO#DecreasedRobustness",
     "baseIri" : "https://w3id.org/AIRO",
@@ -3971,7 +3978,7 @@
       "en" : "A person who intends to enter a territory."
     },
     "id" : "278",
-    "superClasses" : [ "81" ]
+    "superClasses" : [ "80" ]
   }, {
     "iri" : "https://w3id.org/AIRO#Alogorithm-RelatedRiskSource",
     "baseIri" : "https://w3id.org/AIRO",
@@ -4001,16 +4008,16 @@
       "en" : "AI System Form"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/AIRO#product",
-      "baseIri" : "https://w3id.org/AIRO",
-      "labels" : {
-        "IRI-based" : "product"
-      }
-    }, {
       "iri" : "https://w3id.org/AIRO#service",
       "baseIri" : "https://w3id.org/AIRO",
       "labels" : {
         "IRI-based" : "service"
+      }
+    }, {
+      "iri" : "https://w3id.org/AIRO#product",
+      "baseIri" : "https://w3id.org/AIRO",
+      "labels" : {
+        "IRI-based" : "product"
       }
     }, {
       "iri" : "https://w3id.org/AIRO#software",
@@ -4090,7 +4097,7 @@
     "comment" : {
       "en" : "Outcome of an event affecting objectives. [Source: ISO 31000, 3.6]"
     },
-    "id" : "69",
+    "id" : "72",
     "superClasses" : [ "61" ]
   }, {
     "iri" : "https://w3id.org/AIRO#Version",
@@ -4110,7 +4117,17 @@
       "en" : "Error In Testing Data Set"
     },
     "id" : "255",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/AIRO#IdentifyingUnkownPatternsOfCrime",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IdentifyingUnkownPatternsOfCrime",
+      "en" : "Identifying Unkown Patterns Of Crime"
+    },
+    "id" : "182",
+    "superClasses" : [ "141" ]
   }, {
     "iri" : "https://w3id.org/AIRO#Standard",
     "baseIri" : "https://w3id.org/AIRO",
@@ -4176,24 +4193,24 @@
     "superClasses" : [ "185" ]
   }, {
     "instances" : 0,
-    "union" : [ "98", "69" ],
+    "union" : [ "98", "72" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "200"
   }, {
     "instances" : 0,
-    "union" : [ "505", "81" ],
+    "union" : [ "505", "80" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "550"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "71",
+    "id" : "68",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "72",
+    "id" : "69",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -4252,7 +4269,7 @@
       "en" : "A person who has applied for a visa."
     },
     "id" : "324",
-    "superClasses" : [ "7" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "https://w3id.org/AIRO#UnrepresentativeValidationDataSet",
     "baseIri" : "https://w3id.org/AIRO",
@@ -4298,7 +4315,7 @@
     "comment" : {
       "en" : "Chance of an event happening. [Source: ISO 31000, 3.7]"
     },
-    "id" : "136",
+    "id" : "138",
     "superClasses" : [ "93" ]
   }, {
     "iri" : "https://w3id.org/AIRO#TechnicalSpecification",
@@ -4338,6 +4355,19 @@
     "id" : "294",
     "superClasses" : [ "132" ]
   }, {
+    "iri" : "https://w3id.org/AIRO#AIComponent",
+    "baseIri" : "https://w3id.org/AIRO",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AIComponent",
+      "en" : "AI Component"
+    },
+    "subClasses" : [ "333", "336", "130", "136" ],
+    "comment" : {
+      "en" : "A functional element that constructs an AI system. [Source: ISO 22989]"
+    },
+    "id" : "237"
+  }, {
     "iri" : "https://w3id.org/AIRO#ApplyingLawToFacts",
     "baseIri" : "https://w3id.org/AIRO",
     "instances" : 0,
@@ -4350,19 +4380,6 @@
     },
     "id" : "133",
     "superClasses" : [ "131" ]
-  }, {
-    "iri" : "https://w3id.org/AIRO#AIComponent",
-    "baseIri" : "https://w3id.org/AIRO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AIComponent",
-      "en" : "AI Component"
-    },
-    "subClasses" : [ "333", "336", "130", "138" ],
-    "comment" : {
-      "en" : "A functional element that constructs an AI system. [Source: ISO 22989]"
-    },
-    "id" : "237"
   }, {
     "iri" : "https://w3id.org/AIRO#EnvironmentalDamage",
     "baseIri" : "https://w3id.org/AIRO",
@@ -4472,10 +4489,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "67",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "70",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "86",
     "type" : "rdfs:SubClassOf"
@@ -4546,7 +4563,7 @@
     "id" : "126",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "135",
+    "id" : "137",
     "type" : "owl:objectProperty"
   }, {
     "id" : "139",
@@ -5420,26 +5437,26 @@
     "attributes" : [ "object" ],
     "id" : "59"
   }, {
+    "iri" : "http://purl.org/dc/terms/date",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "date"
+    },
+    "domain" : "68",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "67"
+  }, {
     "iri" : "https://w3id.org/AIRO#hasConsequence",
     "baseIri" : "https://w3id.org/AIRO",
-    "range" : "69",
+    "range" : "72",
     "label" : {
       "IRI-based" : "hasConsequence",
       "en" : "has consequence",
       "undefined" : "has consequence"
     },
-    "domain" : "68",
-    "attributes" : [ "object" ],
-    "id" : "67"
-  }, {
-    "iri" : "http://purl.org/dc/terms/date",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "72",
-    "label" : {
-      "IRI-based" : "date"
-    },
     "domain" : "71",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "object" ],
     "id" : "70"
   }, {
     "range" : "16",
@@ -5472,7 +5489,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "94"
   }, {
-    "range" : "69",
+    "range" : "72",
     "domain" : "98",
     "attributes" : [ "anonymous", "object" ],
     "id" : "97"
@@ -5482,7 +5499,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "99"
   }, {
-    "range" : "69",
+    "range" : "72",
     "domain" : "82",
     "attributes" : [ "anonymous", "object" ],
     "id" : "101"
@@ -5503,7 +5520,7 @@
     "id" : "106"
   }, {
     "range" : "61",
-    "domain" : "69",
+    "domain" : "72",
     "attributes" : [ "anonymous", "object" ],
     "id" : "108"
   }, {
@@ -5523,7 +5540,7 @@
     "id" : "112"
   }, {
     "range" : "61",
-    "domain" : "68",
+    "domain" : "71",
     "attributes" : [ "anonymous", "object" ],
     "id" : "114"
   }, {
@@ -5568,7 +5585,7 @@
   }, {
     "iri" : "https://w3id.org/AIRO#hasLikelihood",
     "baseIri" : "https://w3id.org/AIRO",
-    "range" : "136",
+    "range" : "138",
     "label" : {
       "IRI-based" : "hasLikelihood",
       "en" : "has likelihood"
@@ -5578,7 +5595,7 @@
       "en" : "Indicates the probability of occurrence of an event."
     },
     "attributes" : [ "object" ],
-    "id" : "135"
+    "id" : "137"
   }, {
     "range" : "141",
     "domain" : "140",
@@ -5590,7 +5607,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "148"
   }, {
-    "range" : "69",
+    "range" : "72",
     "domain" : "151",
     "attributes" : [ "anonymous", "object" ],
     "id" : "150"
@@ -5728,17 +5745,17 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "217"
   }, {
-    "range" : "9",
+    "range" : "7",
     "domain" : "227",
     "attributes" : [ "anonymous", "object" ],
     "id" : "226"
   }, {
-    "range" : "9",
+    "range" : "7",
     "domain" : "229",
     "attributes" : [ "anonymous", "object" ],
     "id" : "228"
   }, {
-    "range" : "9",
+    "range" : "7",
     "domain" : "231",
     "attributes" : [ "anonymous", "object" ],
     "id" : "230"
@@ -5793,33 +5810,33 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "252"
   }, {
-    "range" : "9",
-    "domain" : "8",
+    "range" : "7",
+    "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
     "id" : "253"
   }, {
-    "range" : "9",
+    "range" : "7",
     "domain" : "255",
     "attributes" : [ "anonymous", "object" ],
     "id" : "254"
   }, {
-    "range" : "81",
+    "range" : "80",
     "domain" : "257",
     "attributes" : [ "anonymous", "object" ],
     "id" : "256"
   }, {
-    "range" : "81",
+    "range" : "80",
     "domain" : "259",
     "attributes" : [ "anonymous", "object" ],
     "id" : "258"
   }, {
-    "range" : "81",
+    "range" : "80",
     "domain" : "262",
     "attributes" : [ "anonymous", "object" ],
     "id" : "261"
   }, {
-    "range" : "81",
-    "domain" : "80",
+    "range" : "80",
+    "domain" : "79",
     "attributes" : [ "anonymous", "object" ],
     "id" : "263"
   }, {
@@ -5838,22 +5855,22 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "269"
   }, {
-    "range" : "81",
-    "domain" : "7",
+    "range" : "80",
+    "domain" : "9",
     "attributes" : [ "anonymous", "object" ],
     "id" : "272"
   }, {
-    "range" : "81",
+    "range" : "80",
     "domain" : "274",
     "attributes" : [ "anonymous", "object" ],
     "id" : "273"
   }, {
-    "range" : "81",
+    "range" : "80",
     "domain" : "276",
     "attributes" : [ "anonymous", "object" ],
     "id" : "275"
   }, {
-    "range" : "81",
+    "range" : "80",
     "domain" : "278",
     "attributes" : [ "anonymous", "object" ],
     "id" : "277"
@@ -5969,8 +5986,8 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "321"
   }, {
-    "range" : "7",
-    "domain" : "6",
+    "range" : "9",
+    "domain" : "8",
     "attributes" : [ "anonymous", "object" ],
     "id" : "326"
   }, {
@@ -5979,7 +5996,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "327"
   }, {
-    "range" : "7",
+    "range" : "9",
     "domain" : "324",
     "attributes" : [ "anonymous", "object" ],
     "id" : "328"
@@ -5989,7 +6006,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "329"
   }, {
-    "range" : "7",
+    "range" : "9",
     "domain" : "325",
     "attributes" : [ "anonymous", "object" ],
     "id" : "331"
@@ -5999,7 +6016,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "332"
   }, {
-    "range" : "7",
+    "range" : "9",
     "domain" : "193",
     "attributes" : [ "anonymous", "object" ],
     "id" : "334"
@@ -6025,7 +6042,7 @@
     "id" : "339"
   }, {
     "range" : "237",
-    "domain" : "138",
+    "domain" : "136",
     "attributes" : [ "anonymous", "object" ],
     "id" : "340"
   }, {
@@ -6059,7 +6076,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "348"
   }, {
-    "range" : "7",
+    "range" : "9",
     "domain" : "323",
     "attributes" : [ "anonymous", "object" ],
     "id" : "349"
@@ -6126,7 +6143,7 @@
   }, {
     "iri" : "https://w3id.org/AIRO#hasRisk",
     "baseIri" : "https://w3id.org/AIRO",
-    "range" : "68",
+    "range" : "71",
     "label" : {
       "IRI-based" : "hasRisk",
       "en" : "has risk"
@@ -6340,7 +6357,7 @@
     "id" : "433"
   }, {
     "range" : "74",
-    "domain" : "221",
+    "domain" : "220",
     "attributes" : [ "anonymous", "object" ],
     "id" : "434"
   }, {
@@ -6522,7 +6539,7 @@
     "id" : "472"
   }, {
     "range" : "77",
-    "domain" : "9",
+    "domain" : "7",
     "attributes" : [ "anonymous", "object" ],
     "id" : "473"
   }, {
@@ -6572,7 +6589,7 @@
     "id" : "485"
   }, {
     "range" : "93",
-    "domain" : "136",
+    "domain" : "138",
     "attributes" : [ "anonymous", "object" ],
     "id" : "487"
   }, {
@@ -6591,14 +6608,14 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "490"
   }, {
-    "range" : "138",
-    "domain" : "137",
+    "range" : "136",
+    "domain" : "135",
     "attributes" : [ "anonymous", "object" ],
     "id" : "491"
   }, {
     "iri" : "https://w3id.org/AIRO#isRiskSourceFor",
     "baseIri" : "https://w3id.org/AIRO",
-    "range" : "68",
+    "range" : "71",
     "label" : {
       "IRI-based" : "isRiskSourceFor",
       "en" : "is risk source for"
@@ -6646,7 +6663,7 @@
     "id" : "497"
   }, {
     "range" : "240",
-    "domain" : "302",
+    "domain" : "303",
     "attributes" : [ "anonymous", "object" ],
     "id" : "498"
   }, {
@@ -6678,7 +6695,7 @@
       "IRI-based" : "hasImpact",
       "en" : "has impact"
     },
-    "domain" : "69",
+    "domain" : "72",
     "attributes" : [ "object" ],
     "id" : "503"
   }, {
@@ -6758,7 +6775,7 @@
     "range" : "132",
     "label" : {
       "IRI-based" : "hasPurpose",
-      "en" : "Indicates the intended purpose of an AI system."
+      "en" : "has purpose"
     },
     "domain" : "116",
     "attributes" : [ "object" ],
@@ -6792,7 +6809,7 @@
     "id" : "522"
   }, {
     "range" : "58",
-    "domain" : "220",
+    "domain" : "221",
     "attributes" : [ "anonymous", "object" ],
     "id" : "523"
   }, {
@@ -6848,7 +6865,7 @@
       "IRI-based" : "isPartOfControl",
       "en" : "is part of control"
     },
-    "domain" : "79",
+    "domain" : "81",
     "attributes" : [ "object" ],
     "id" : "533"
   }, {
@@ -6865,12 +6882,12 @@
   }, {
     "iri" : "https://w3id.org/AIRO#isTechnicalSpecAppliedIn",
     "baseIri" : "https://w3id.org/AIRO",
-    "range" : "71",
+    "range" : "68",
     "label" : {
       "IRI-based" : "isTechnicalSpecAppliedIn",
       "en" : "is technical spec applied in"
     },
-    "domain" : "71",
+    "domain" : "68",
     "attributes" : [ "object" ],
     "id" : "536"
   }, {
@@ -6900,7 +6917,7 @@
     "id" : "542"
   }, {
     "range" : "4",
-    "domain" : "81",
+    "domain" : "80",
     "attributes" : [ "anonymous", "object" ],
     "id" : "543"
   }, {
@@ -6910,7 +6927,7 @@
     "id" : "544"
   }, {
     "range" : "58",
-    "domain" : "303",
+    "domain" : "302",
     "attributes" : [ "anonymous", "object" ],
     "id" : "545"
   }, {
