@@ -119,7 +119,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#detectsEvent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#modifiesEvent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">detects event</rdfs:label>
     </owl:ObjectProperty>
@@ -131,7 +131,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#eliminatesEvent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#modifiesEvent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">eliminates event</rdfs:label>
     </owl:ObjectProperty>
@@ -419,8 +419,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isFollowedByControl">
-        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Measure"/>
-        <rdfs:range rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Control"/>
+        <rdfs:range rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:label xml:lang="en">is followed by control</rdfs:label>
     </owl:ObjectProperty>
     
@@ -449,7 +449,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isPartOfControl">
         <rdfs:domain rdf:resource="https://w3id.org/AIRO#PartialControl"/>
-        <rdfs:range rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:range rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:label xml:lang="en">is part of control</rdfs:label>
     </owl:ObjectProperty>
     
@@ -473,6 +473,15 @@
         <rdfs:domain rdf:resource="https://w3id.org/AIRO#RiskSource"/>
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Risk"/>
         <rdfs:label xml:lang="en">is risk source for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/AIRO#isTechnicalSpecAppliedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#isTechnicalSpecAppliedIn">
+        <rdfs:label xml:lang="en">is technical spec applied in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -559,7 +568,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#mitigatesEvent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/AIRO#modifiesEvent"/>
-        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">mitigates event</rdfs:label>
     </owl:ObjectProperty>
@@ -570,7 +579,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/AIRO#modifiesEvent">
-        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:range rdf:resource="https://w3id.org/AIRO#Event"/>
         <rdfs:label xml:lang="en">modifies event</rdfs:label>
     </owl:ObjectProperty>
@@ -637,9 +646,7 @@
     <!-- http://purl.org/dc/terms/date -->
 
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:domain rdf:resource="https://w3id.org/AIRO#AISystem"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date"/>
     
 
 
@@ -920,6 +927,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AssessingHealthRisk">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#IndividualRiskAssessment"/>
+        <rdfs:label xml:lang="en">Assessing Health Risk</rdfs:label>
     </owl:Class>
     
 
@@ -1082,7 +1090,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#AutomatedControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <owl:disjointWith rdf:resource="https://w3id.org/AIRO#ManualControl"/>
         <rdfs:comment xml:lang="en">Represents controls that do not involve human intervention.</rdfs:comment>
         <rdfs:label xml:lang="en">Automated Control</rdfs:label>
@@ -1233,6 +1241,16 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Output"/>
         <rdfs:comment xml:lang="en">Content generated using an AI system.</rdfs:comment>
         <rdfs:label xml:lang="en">Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/AIRO#Control -->
+
+
+    <owl:Class rdf:about="https://w3id.org/AIRO#Control">
+        <rdfs:comment xml:lang="en">Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]</rdfs:comment>
+        <rdfs:label xml:lang="en">Control</rdfs:label>
     </owl:Class>
     
 
@@ -1434,7 +1452,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#DetectionControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:comment xml:lang="en">Represents controls that are applied to detect an event.</rdfs:comment>
         <rdfs:label xml:lang="en">Detection Control</rdfs:label>
     </owl:Class>
@@ -1446,7 +1464,7 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#DetermineCreditScore">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Assessment"/>
-        <rdfs:label xml:lang="en">Determin Credit Score</rdfs:label>
+        <rdfs:label xml:lang="en">Determine Credit Score</rdfs:label>
     </owl:Class>
     
 
@@ -1539,7 +1557,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#EliminationControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:comment xml:lang="en">Represents controls that applied to prevent an event from happening.</rdfs:comment>
         <rdfs:label xml:lang="en">Elimination Control</rdfs:label>
     </owl:Class>
@@ -1756,8 +1774,8 @@
 
     <owl:Class rdf:about="https://w3id.org/AIRO#ExpectedLifetime">
         <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#AISystemIndicator"/>
+        <rdfs:comment xml:lang="en">Represents the expected lifetime of a system.</rdfs:comment>
         <rdfs:label xml:lang="en">Expected Lifetime</rdfs:label>
-        <rdfs:label xml:lang="en">Represents the expected lifetime of a system.</rdfs:label>
     </owl:Class>
     
 
@@ -2370,20 +2388,10 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#ManualControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <owl:disjointWith rdf:resource="https://w3id.org/AIRO#SemiAutomatedControl"/>
         <rdfs:comment xml:lang="en">Represents controls performed by humans without any use of technologies.</rdfs:comment>
         <rdfs:label xml:lang="en">Manual Control</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/AIRO#Measure -->
-
-
-    <owl:Class rdf:about="https://w3id.org/AIRO#Measure">
-        <rdfs:comment xml:lang="en">Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]</rdfs:comment>
-        <rdfs:label xml:lang="en">Control</rdfs:label>
     </owl:Class>
     
 
@@ -2484,7 +2492,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#OperationalControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:label xml:lang="en">Operational Control</rdfs:label>
     </owl:Class>
     
@@ -2504,7 +2512,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#OrganisationalControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:label xml:lang="en">Organisational Control</rdfs:label>
     </owl:Class>
     
@@ -2559,10 +2567,10 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/AIRO#Measure"/>
+                    <rdf:Description rdf:about="https://w3id.org/AIRO#Control"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://w3id.org/AIRO#isPartOfControl"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/AIRO#Measure"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/AIRO#Control"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2746,7 +2754,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#PreventionControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:comment xml:lang="en">Control applied to reduce likelihood or severity of the risk, consequence or impact.</rdfs:comment>
         <rdfs:label xml:lang="en">Mitigation Control</rdfs:label>
     </owl:Class>
@@ -3066,7 +3074,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#SemiAutomatedControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:comment xml:lang="en">Represnets controls that comprise a combination of automated and manual controls.</rdfs:comment>
         <rdfs:label xml:lang="en">Semi Automated Control</rdfs:label>
     </owl:Class>
@@ -3244,7 +3252,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/AIRO#TechnicalControl">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Measure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/AIRO#Control"/>
         <rdfs:comment xml:lang="en">Represents controls that are implemented using a technology.</rdfs:comment>
         <rdfs:label xml:lang="en">Technical Control</rdfs:label>
     </owl:Class>

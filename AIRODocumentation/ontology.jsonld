@@ -23,7 +23,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/AIRO#Measure"
+      "@id" : "https://w3id.org/AIRO#Control"
     }, {
       "@id" : "_:genid9"
     } ]
@@ -35,7 +35,7 @@
     "@id" : "https://w3id.org/AIRO#isPartOfControl"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/contributor",
@@ -45,10 +45,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/date",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/AIRO#AISystem"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -411,6 +408,10 @@
 }, {
   "@id" : "https://w3id.org/AIRO#AssessingHealthRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assessing Health Risk"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#IndividualRiskAssessment"
   } ]
@@ -592,7 +593,7 @@
     "@value" : "Automated Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/AIRO#ManualControl"
@@ -764,6 +765,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Output"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#Control",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#CreditworthinessAssessment",
@@ -1008,14 +1020,14 @@
     "@value" : "Detection Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#DetermineCreditScore",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Determin Credit Score"
+    "@value" : "Determine Credit Score"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#Assessment"
@@ -1129,7 +1141,7 @@
     "@value" : "Elimination Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#EmotionRecognition",
@@ -1357,12 +1369,13 @@
 }, {
   "@id" : "https://w3id.org/AIRO#ExpectedLifetime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the expected lifetime of a system."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Expected Lifetime"
-  }, {
-    "@language" : "en",
-    "@value" : "Represents the expected lifetime of a system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/AIRO#AISystemIndicator"
@@ -2084,21 +2097,10 @@
     "@value" : "Manual Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/AIRO#SemiAutomatedControl"
-  } ]
-}, {
-  "@id" : "https://w3id.org/AIRO#Measure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#MedicalAid",
@@ -2208,7 +2210,7 @@
     "@value" : "Operational Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#OptimisationMethod",
@@ -2228,7 +2230,7 @@
     "@value" : "Organisational Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#OrganisationalRiskSource",
@@ -2501,7 +2503,7 @@
     "@value" : "Mitigation Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#PrioritisationOfEmergencyService",
@@ -2882,7 +2884,7 @@
     "@value" : "Semi Automated Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#SeriousIncident",
@@ -3085,7 +3087,7 @@
     "@value" : "Technical Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#TechnicalSpecification",
@@ -3430,7 +3432,7 @@
   "@id" : "https://w3id.org/AIRO#detectsEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3452,7 +3454,7 @@
   "@id" : "https://w3id.org/AIRO#eliminatesEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3813,14 +3815,14 @@
   "@id" : "https://w3id.org/AIRO#isFollowedByControl",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is followed by control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#isInVulnerablePosition",
@@ -3846,7 +3848,7 @@
     "@value" : "is part of control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#isPerformanceOf",
@@ -3873,6 +3875,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/AIRO#Risk"
+  } ]
+}, {
+  "@id" : "https://w3id.org/AIRO#isTechnicalSpecAppliedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is technical spec applied in"
   } ]
 }, {
   "@id" : "https://w3id.org/AIRO#isUsedBy",
@@ -3990,7 +3999,7 @@
   "@id" : "https://w3id.org/AIRO#mitigatesEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4006,7 +4015,7 @@
   "@id" : "https://w3id.org/AIRO#modifiesEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/AIRO#Measure"
+    "@id" : "https://w3id.org/AIRO#Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

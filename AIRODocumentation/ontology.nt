@@ -61,14 +61,14 @@
 # https://w3id.org/AIRO#detectsEvent
 <https://w3id.org/AIRO#detectsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/AIRO#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/AIRO#modifiesEvent> .
-<https://w3id.org/AIRO#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Event> .
 <https://w3id.org/AIRO#detectsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "detects event"@en .
 # 
 # https://w3id.org/AIRO#eliminatesEvent
 <https://w3id.org/AIRO#eliminatesEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/AIRO#eliminatesEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/AIRO#modifiesEvent> .
-<https://w3id.org/AIRO#eliminatesEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#eliminatesEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#eliminatesEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Event> .
 <https://w3id.org/AIRO#eliminatesEvent> <http://www.w3.org/2000/01/rdf-schema#label> "eliminates event"@en .
 # 
@@ -232,8 +232,8 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/AIRO#isFollowedByControl
 <https://w3id.org/AIRO#isFollowedByControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/AIRO#isFollowedByControl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Measure> .
-<https://w3id.org/AIRO#isFollowedByControl> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#isFollowedByControl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Control> .
+<https://w3id.org/AIRO#isFollowedByControl> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#isFollowedByControl> <http://www.w3.org/2000/01/rdf-schema#label> "is followed by control"@en .
 # 
 # https://w3id.org/AIRO#isInVulnerablePosition
@@ -253,7 +253,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # https://w3id.org/AIRO#isPartOfControl
 <https://w3id.org/AIRO#isPartOfControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/AIRO#isPartOfControl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#PartialControl> .
-<https://w3id.org/AIRO#isPartOfControl> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#isPartOfControl> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#isPartOfControl> <http://www.w3.org/2000/01/rdf-schema#label> "is part of control"@en .
 # 
 # https://w3id.org/AIRO#isPerformanceOf
@@ -267,6 +267,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/AIRO#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#RiskSource> .
 <https://w3id.org/AIRO#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Risk> .
 <https://w3id.org/AIRO#isRiskSourceFor> <http://www.w3.org/2000/01/rdf-schema#label> "is risk source for"@en .
+# 
+# https://w3id.org/AIRO#isTechnicalSpecAppliedIn
+<https://w3id.org/AIRO#isTechnicalSpecAppliedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/AIRO#isTechnicalSpecAppliedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is technical spec applied in"@en .
 # 
 # https://w3id.org/AIRO#isUsedBy
 <https://w3id.org/AIRO#isUsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -313,13 +317,13 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # https://w3id.org/AIRO#mitigatesEvent
 <https://w3id.org/AIRO#mitigatesEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/AIRO#mitigatesEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/AIRO#modifiesEvent> .
-<https://w3id.org/AIRO#mitigatesEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#mitigatesEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#mitigatesEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Event> .
 <https://w3id.org/AIRO#mitigatesEvent> <http://www.w3.org/2000/01/rdf-schema#label> "mitigates event"@en .
 # 
 # https://w3id.org/AIRO#modifiesEvent
 <https://w3id.org/AIRO#modifiesEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/AIRO#modifiesEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#modifiesEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#modifiesEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/AIRO#Event> .
 <https://w3id.org/AIRO#modifiesEvent> <http://www.w3.org/2000/01/rdf-schema#label> "modifies event"@en .
 # 
@@ -359,7 +363,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/AIRO#AISystem> .
 # 
 # 
 # 
@@ -509,6 +512,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # https://w3id.org/AIRO#AssessingHealthRisk
 <https://w3id.org/AIRO#AssessingHealthRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/AIRO#AssessingHealthRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#IndividualRiskAssessment> .
+<https://w3id.org/AIRO#AssessingHealthRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Assessing Health Risk"@en .
 # 
 # https://w3id.org/AIRO#AssessingPastCriminalBehaviour
 <https://w3id.org/AIRO#AssessingPastCriminalBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -591,7 +595,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/AIRO#AutomatedControl
 <https://w3id.org/AIRO#AutomatedControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#AutomatedControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#AutomatedControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#AutomatedControl> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/AIRO#ManualControl> .
 <https://w3id.org/AIRO#AutomatedControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls that do not involve human intervention."@en .
 <https://w3id.org/AIRO#AutomatedControl> <http://www.w3.org/2000/01/rdf-schema#label> "Automated Control"@en .
@@ -672,6 +676,11 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/AIRO#Content> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Output> .
 <https://w3id.org/AIRO#Content> <http://www.w3.org/2000/01/rdf-schema#comment> "Content generated using an AI system."@en .
 <https://w3id.org/AIRO#Content> <http://www.w3.org/2000/01/rdf-schema#label> "Content"@en .
+# 
+# https://w3id.org/AIRO#Control
+<https://w3id.org/AIRO#Control> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/AIRO#Control> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"@en .
+<https://w3id.org/AIRO#Control> <http://www.w3.org/2000/01/rdf-schema#label> "Control"@en .
 # 
 # https://w3id.org/AIRO#CreditworthinessAssessment
 <https://w3id.org/AIRO#CreditworthinessAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -778,14 +787,14 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/AIRO#DetectionControl
 <https://w3id.org/AIRO#DetectionControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#DetectionControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#DetectionControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#DetectionControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls that are applied to detect an event."@en .
 <https://w3id.org/AIRO#DetectionControl> <http://www.w3.org/2000/01/rdf-schema#label> "Detection Control"@en .
 # 
 # https://w3id.org/AIRO#DetermineCreditScore
 <https://w3id.org/AIRO#DetermineCreditScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/AIRO#DetermineCreditScore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Assessment> .
-<https://w3id.org/AIRO#DetermineCreditScore> <http://www.w3.org/2000/01/rdf-schema#label> "Determin Credit Score"@en .
+<https://w3id.org/AIRO#DetermineCreditScore> <http://www.w3.org/2000/01/rdf-schema#label> "Determine Credit Score"@en .
 # 
 # https://w3id.org/AIRO#DeterminingAccessToEducation
 <https://w3id.org/AIRO#DeterminingAccessToEducation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -833,7 +842,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/AIRO#EliminationControl
 <https://w3id.org/AIRO#EliminationControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#EliminationControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#EliminationControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#EliminationControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls that applied to prevent an event from happening."@en .
 <https://w3id.org/AIRO#EliminationControl> <http://www.w3.org/2000/01/rdf-schema#label> "Elimination Control"@en .
 # 
@@ -945,8 +954,8 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # https://w3id.org/AIRO#ExpectedLifetime
 <https://w3id.org/AIRO#ExpectedLifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/AIRO#ExpectedLifetime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#AISystemIndicator> .
+<https://w3id.org/AIRO#ExpectedLifetime> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the expected lifetime of a system."@en .
 <https://w3id.org/AIRO#ExpectedLifetime> <http://www.w3.org/2000/01/rdf-schema#label> "Expected Lifetime"@en .
-<https://w3id.org/AIRO#ExpectedLifetime> <http://www.w3.org/2000/01/rdf-schema#label> "Represents the expected lifetime of a system."@en .
 # 
 # https://w3id.org/AIRO#ExtentOfUse
 <https://w3id.org/AIRO#ExtentOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1269,15 +1278,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/AIRO#ManualControl
 <https://w3id.org/AIRO#ManualControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#ManualControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#ManualControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#ManualControl> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/AIRO#SemiAutomatedControl> .
 <https://w3id.org/AIRO#ManualControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls performed by humans without any use of technologies."@en .
 <https://w3id.org/AIRO#ManualControl> <http://www.w3.org/2000/01/rdf-schema#label> "Manual Control"@en .
-# 
-# https://w3id.org/AIRO#Measure
-<https://w3id.org/AIRO#Measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#Measure> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"@en .
-<https://w3id.org/AIRO#Measure> <http://www.w3.org/2000/01/rdf-schema#label> "Control"@en .
 # 
 # https://w3id.org/AIRO#MedicalAid
 <https://w3id.org/AIRO#MedicalAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1328,7 +1332,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/AIRO#OperationalControl
 <https://w3id.org/AIRO#OperationalControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#OperationalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#OperationalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#OperationalControl> <http://www.w3.org/2000/01/rdf-schema#label> "Operational Control"@en .
 # 
 # https://w3id.org/AIRO#OptimisationMethod
@@ -1338,7 +1342,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/AIRO#OrganisationalControl
 <https://w3id.org/AIRO#OrganisationalControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#OrganisationalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#OrganisationalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#OrganisationalControl> <http://www.w3.org/2000/01/rdf-schema#label> "Organisational Control"@en .
 # 
 # https://w3id.org/AIRO#OrganisationalRiskSource
@@ -1368,13 +1372,13 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/AIRO#PartialControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid7 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/AIRO#Measure> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/AIRO#Control> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/AIRO#isPartOfControl> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/AIRO#Measure> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/AIRO#Control> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/AIRO#PartialControl> <http://www.w3.org/2000/01/rdf-schema#label> "Partial Control"@en .
@@ -1471,7 +1475,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/AIRO#PreventionControl
 <https://w3id.org/AIRO#PreventionControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#PreventionControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#PreventionControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#PreventionControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Control applied to reduce likelihood or severity of the risk, consequence or impact."@en .
 <https://w3id.org/AIRO#PreventionControl> <http://www.w3.org/2000/01/rdf-schema#label> "Mitigation Control"@en .
 # 
@@ -1641,7 +1645,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/AIRO#SemiAutomatedControl
 <https://w3id.org/AIRO#SemiAutomatedControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#SemiAutomatedControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#SemiAutomatedControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#SemiAutomatedControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represnets controls that comprise a combination of automated and manual controls."@en .
 <https://w3id.org/AIRO#SemiAutomatedControl> <http://www.w3.org/2000/01/rdf-schema#label> "Semi Automated Control"@en .
 # 
@@ -1734,7 +1738,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/AIRO#TechnicalControl
 <https://w3id.org/AIRO#TechnicalControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/AIRO#TechnicalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Measure> .
+<https://w3id.org/AIRO#TechnicalControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/AIRO#Control> .
 <https://w3id.org/AIRO#TechnicalControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents controls that are implemented using a technology."@en .
 <https://w3id.org/AIRO#TechnicalControl> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Control"@en .
 # 
