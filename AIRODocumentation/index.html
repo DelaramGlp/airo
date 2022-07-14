@@ -7,13 +7,7 @@
 <link rel="stylesheet" href="resources/extra.css" media="screen" />
 <link rel="stylesheet" href="resources/owl.css" media="screen" />
 
-<style type="text/css">
-.centerImage
-{
- text-align:center;
- display:block;
-}
-</style>
+
 
 
 <title>AIRO: an Ontology for expressing AI Risks</title>
@@ -86,43 +80,44 @@ $(function(){
 <dt>Publication:</dt>
 <dd><a href="https://zenodo.org/record/6821845"> AIRO: an Ontology for Representing AI Risks based on the Proposed EU AI Act and ISO Risk Management Standards </a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> -->
-
-
-
+<dt>Feedback:</dt><dd> <a href="https://github.com/DelaramGlp/AIRO"> GitHub DelaramGlp/AIRO</a> (<a href="https://github.com/DelaramGlp/AIRO/pulls">pull requests</a>, <a href="https://github.com/DelaramGlp/AIRO/issues/new">new issue</a>, <a href="https://github.com/DelaramGlp/AIRO/issues">open issues</a>) </dd>
 <hr/>
 </div>
 <div class="status">
 <div>
 <span>AIRO Ontology Specification</span>
 </div>
-</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-The growing number of incidents caused by (mis)using Artificial Intelligence (AI) is a matter of concern for governments, organisations, and the public.
+</div>
+
+<div id="abstract"><h2>Abstract</h2>
+  <span>
+<p> The growing number of incidents caused by (mis)using Artificial Intelligence (AI) is a matter of concern for governments, organisations, and the public.
  To control the harmful impacts of AI, multiple efforts are being taken all around the world from guidelines promoting trustworthy development and use,
  to standards for managing risks and regulatory frameworks. Amongst these efforts, the first-ever AI regulation proposed by the European Commission,
-known as the AI Act, is prominent as it takes a risk-oriented approach towards regulating development and use of AI within systems.
-In the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"> proposed AI Act </a>, which is the European Commission's proposal
-for AI regulation published in April 2021, "risk" is a key concept. The risk-based approach taken by the proposed AI Act means it regulates development and
- use of AI systems according to the severity of harmful risk they impose. AI Act lays down obligations on identification, management and documentation of risks.
-Conforming to these obligations requires maintaining and querying information associated with AI risk management.
-<br>
-AIRO (AI Risk Ontology) is an ontology for expressing risk of AI systems based on the requirements of the proposed AI Act and ISO 31000 series of standards.
-AIRO assists stakeholders in determining "high-risk" AI systems, maintaining and documenting risk information, performing impact assessments, and achieving conformity with AI regulations.</span>
+known as the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"> AI Act</a>, is prominent as it takes a risk-oriented approach towards regulating development and use of AI within systems.
+The risk-based approach taken by the proposed AI Act means it regulates development and use of AI systems according to the severity of harmful risk they impose. AI Act lays down obligations on identification, management and documentation of risks.
+Conforming to these obligations requires maintaining and querying information associated with AI risk management.</p>
+
+<p>AIRO (AI Risk Ontology) is an ontology for expressing risk of AI systems based on the requirements of the proposed AI Act and ISO 31000 series of standards.
+AIRO assists stakeholders in determining "high-risk" AI systems, maintaining and documenting risk information, performing impact assessments, and achieving conformity with AI regulations.</p>
+</span>
 </div>
+
 <div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-
+<span>
 <!--Use of AI systems is surrounded by uncertainties. Although multiple incidents have shown the harmful impacts of AI on crucial areas such as health, safety, rights, and freedoms, still the unknown is greater than the known as new forms of AI risks emerge quickly. AI Risk management practices aim to assist organisations in handling uncertainties regarding AI systems and their risks. To guide and in some cases mandate organisations in managing risk of AI systems, multiple efforts are currently underway all around the world. Most prominent among them is the EU's AI Act proposal, which adopts a risk-based approach toward AI regulation. The AI Act obliges providers of AI systems to implement and document risk management systems. It also requires providers to share risk information with authorities to demonstrate conformity with the Act. Documenting, querying, and sharing risk-related information would be challenging for organisations when no standard, machine-readable, and interoperable data formats are used. AIRO is an ontology for representing and documenting risk associated with AI systems.-->
-The AI Act aims to avoid the harmful impacts of AI on critical areas such as health,
+<p> The AI Act aims to avoid the harmful impacts of AI on critical areas such as health,
 safety, and fundamental rights by setting down obligations which are proportionate to
 the type and severity of risk posed by the system. It distinguishes specific areas and the
 application of AI within them that constitutes "high-risk" and has additional obligations
 (Art. 6) that require providers of high-risk AI systems to identify and document risks
 associated with AI systems at all stages of development and deployment (Art. 9).
-<br>
-Existing risk management practises consist of maintaining, querying, and sharing
+</p>
+
+<p>Existing risk management practises consist of maintaining, querying, and sharing
 information associated with risks for compliance checking, demonstrating accountability,
 and building trust. Maintaining information about risks for AI systems is a complex
 task given the rapid pace with which the field progresses, as well as the complexities involved
@@ -131,34 +126,456 @@ and need to share information for risk assessments. In turn, investigations base
 information are difficult to perform which makes their auditing and assessment of compliance
 a challenge for organisations and authorities. To address some of these issues,
 the AI Act relies on creation of standards that alleviate some of the compliance related
-obligations and tasks (Art. 40).
-<br>
-We propose an ontology-based approach regarding the information required to be maintained
+obligations and tasks (Art. 40).</p>
+
+<p>We propose an ontology-based approach regarding the information required to be maintained
 and used for the AI Act’s compliance and conformance by utilising open data
 specifications for documenting risks and performing AI risk assessment activities. Such
 data specifications utilise interoperable machine-readable formats to enable automation
 in information management, querying, and verification for self-assessment and thirdparty
 conformity assessments. Additionally, they enable automated tools for supporting
 AI risk management that can both import and export information meant to be shared with
-stakeholders - such as AI users, providers, and authorities.
-<br>
-<strong>AIRO</strong> is an ontology for expressing risk of harm associated
+stakeholders - such as AI users, providers, and authorities.</p>
+
+<b>AIRO</b> is an ontology for expressing risk of harm associated
 with AI systems based on the proposed EU AI Act and the key standards in the ISO 31000 series including
 <a href="https://www.iso.org/standard/65694.html">31000:2018 Risk management – Guidelines </a> and
-<a href="https://www.iso.org/standard/79637.html">ISO 31073:2022 Risk management — Vocabulary </a>.
+<a href="https://www.iso.org/standard/79637.html">ISO 31073:2022 Risk management — Vocabulary</a>.
 AIRO assists with expressing risk of AI systems as per the requirements of the AI Act,
 in a machine-readable, formal, and interoperable manner through use of semantic web
 technologies.
- </span>
+</div>
+</span>
+<!--REQUIREMENTS SECTION-->
+<div id="requirements"><h2 id="overv" class="list">AIRO Requirements<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+  <p> The purpose of AIRO is to express AI risks to enable organisations
+(i) determine whether their AI systems are "high-risk" as per Annex III of the AI Act and
+(ii) generate the technical documentation required for conformity to the AI Act.</p>
+</span>
+<h3 id="high-risk requirements" class="list">Describing High-Risk AI Systems</h3>
+<span>
+<p>We analysed the requirements of the AI Act, in particular the list of high-risk systems in
+Annex III, and identified the specific concepts whose combinations determine whether
+the AI system is considered high-risk.These are listed in Table 1 in the form of:
+scompetency questions, concepts, and relation with AI system.</p>
+<br><br>
+<div align="center">
+    <table class="gridtable" style="font-size: 14px;">
+    <caption style="font-size: 15px;"> Table 1: Questions necessary to determine whether an AI system is high-risk according to Annex III </caption>
+   <tbody>
+   <tr>
+    <th>ID</th>
+    <th>Competency Question</th>
+    <th>Concept</th>
+    <th>Relation</th>
+  </tr>
+  <tr>
+    <td>CQ1</td>
+    <td> What techniques are utilised in the system?</td>
+    <td><a href="#AITechnique" title="https://w3id.org/AIRO#AITechnique">AI Technique</a></td>
+    <td><a href="#usesTechnique" title="https://w3id.org/AIRO#usesTechnique">uses technique</a></td>
+  </tr>
+  <tr>
+    <td>CQ2</td>
+    <td>What domain is the system intended to be used in? </td>
+    <td><a href="#Domain" title="https://w3id.org/AIRO#Domain">Domain</a></td>
+    <td><a href="#isAppliedWithinDomain" title="https://w3id.org/AIRO#isAppliedWithinDomain">is applied within domain</a></td>
+  </tr>
+  <tr>
+    <td>CQ3</td>
+    <td>What is the intended purpose of the system?</td>
+    <td><a href="#Purpose" title="https://w3id.org/AIRO#Purpose">Purpose</a></td>
+    <td><a href="#hasPurpose" title="https://w3id.org/AIRO#hasPurpose">has purpose</a></td>
+  </tr>
+  <tr>
+    <td>CQ4</td>
+    <td>What is the application of the system? </td>
+    <td><a href="#Application" title="https://w3id.org/AIRO#Application">Application</a></td>
+    <td><a href="#hasApplication" title="https://w3id.org/AIRO#hasApplication">has application</a></td>
+  <tr>
+    <td>CQ5</td>
+    <td>Who is the intended user of the system?</td>
+    <td><a href="#AIUser" title="https://w3id.org/AIRO#AIUser">AI User</a></td>
+    <td><a href="#isUsedBy" title="https://w3id.org/AIRO#isUsedBy">is used by</a></td>
+  </tr>
+  <tr>
+    <td>CQ6</td>
+    <td>Who is the subject of the system?</td>
+    <td><a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a></td>
+    <td><a href="#affects" title="https://w3id.org/AIRO#affects">affects</a></td>
+  </tr>
+  <tr>
+    <td>CQ7</td>
+    <td>In which environment is the system used?</td>
+    <td><a href="#EnvironmentOfUse" title="https://w3id.org/AIRO#EnvironmentOfUse">Environment Of Use</td>
+    <td><a href="#isUsedInEnvironment" title="https://w3id.org/AIRO#isUsedInEnvironment">is used in environment</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</span>
+<h3 id="Technical Documentation" class="list">Technical Documentation</h3>
+<span>
+<p> To conform to the AI Act, high-risk AI systems need to fulfil the requirements laid out
+in Title III, Chapter 2. One of the key obligations is implementing a risk management
+system to continuously identify, evaluate, and mitigate risks throughout the system’s
+entire lifecycle (Art. 9). To demonstrate conformity to authorities, the providers of highrisk
+systems need to create a technical documentation (Art. 11) containing information
+listed in Annex IV.</p>
+
+<p>To assist with this process, we identified the information required to be provided
+as the technical documentation for an AI system as per AI Act Annex IV, with relevant
+concepts and relations as presented in Table 2.</p>
+
+
+  <table class="gridtable">
+  <caption style="font-size: 15px">Table 2: Information needed to be featured in the AI Act technical documentation</caption>
+  <tbody>
+  <tr>
+  <th> Annex IV Clause</th>
+  <th> Required information </th>
+  <th>Domain</th>
+  <th> Relation </th>
+  <th> Range</th>
+  </tr>
+  <tr>
+    <td>1(a)</td>
+    <td>System’s intended purpose </td>
+    <td>AISystem </td>
+    <td>hasPurpose</td>
+    <td>Purpose</td>
+  </tr>
+  <tr>
+    <td>1(a)</td>
+    <td>System’s developers</td>
+    <td> AISystem </td>
+    <td> isDevelopedBy </td>
+    <td> AIDeveloper</td>
+  </tr>
+  <tr>
+    <td>1(a)</td>
+    <td>System's date </td>
+    <td> AISystem </td>
+    <td> dcterms:date </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1(a)</td>
+    <td> System's version </td>
+    <td> AISystem </td>
+    <td> hasVersion </td>
+    <td> Version </td>
+  </tr>
+  <tr>
+    <td> 1(c) </td>
+   <td> Versions of relevant software or firmware </td>
+   <td> System/ Component </td>
+   <td> hasVersion </td>
+   <td> Version </td>
+ </tr>
+ <tr>
+   <td> 1(d)</td>
+   <td>  Forms in which AI system is placed on the market or put into service </td>
+   <td> AISystem </td>
+   <td> isUsedInFormOf </td>
+   <td> AISystemForm </td>
+ </tr>
+ <tr>
+   <td> 1(e) </td>
+  <td> Hardware on which the AI system run </td>
+  <td> AISystem </td>
+  <td> hasExecutionEnvironment </td>
+  <td> AIHardware</td>
+</tr>
+<tr>
+  <td>1(f) </td>
+  <td> Internal layout of the product which the system is part of </td>
+  <td> AISystem </td>
+  <td> hasDocumentation </td>
+  <td> Blueprint </td>
+</tr>
+<tr>
+  <td> 1(g) </td>
+  <td> Instruction of use for the user</td>
+  <td> AISystem </td>
+  <td> hasDocumentation </td>
+  <td> InstructionOfUse  </td>
+</tr>
+<tr>
+    <td> 1(g) </td>
+    <td> Installation instructions </td>
+    <td> AISystem </td>
+    <td> hasDocumentation </td>
+    <td> InstallationInstruction</td>
+  </tr>
+  <tr>
+    <td>2(a)</td>
+    <td> third party tools used  </td>
+    <td> AISystem </td>
+    <td> hasComponent </td>
+    <td> Tool </td>
+  </tr>
+  <tr>
+    <td>2(a)</td>
+    <td> Pre-trained system used </td>
+    <td> AISystem </td>
+    <td> hasComponent </td>
+    <td> Pre-trainedSystem </td>
+  </tr>
+  <tr>
+    <td>2(b)</td>
+    <td> Design specifications of the system </td>
+    <td> AISystem</td>
+    <td>hasDocumentation </td>
+    <td> SystemDesignSpecification </td>
+  </tr>
+  <tr>
+    <td>2(c) </td>
+    <td> The system architecture </td>
+    <td> AISystem  </td>
+    <td> hasDocumenatation </td>
+    <td> SystemArchitecture </td>
+  </tr>
+  <tr>
+    <td>2(d) </td>
+    <td> Data requirements </td>
+    <td> Data </td>
+    <td> hasDocumentation </td>
+    <td> Datasheet </td>
+  </tr>
+  <tr>
+    <td> 2(e)  </td>
+    <td>Human oversight measures </td>
+    <td> HumanOversightMeasure </td>
+    <td> modifiesEvent </td>
+    <td> Event</td>
+  </tr>
+  <tr>
+    <td>2(g)</td>
+    <td>Testing data </td>
+    <td> AISystem </td>
+    <td> hasComponent </td>
+    <td> TestingData</td>
+  </tr>
+  <tr>
+    <td>2(g)</td>
+    <td> Validation data </td>
+    <td> AISystem </td>
+    <td> hasComponent </td>
+    <td> ValidationData </td>
+  </tr>
+  <tr>
+    <td>2(g)</td>
+    <td>Characteristics of data </td>
+    <td> Data </td>
+    <td> hasDocumentation </td>
+    <td> Datasheet</td>
+  </tr>
+  <tr>
+    <td>2(g)</td>
+    <td> Metrics used to measure accuracy/ robustness/ cybersecurity </td>
+    <td> Accuracy/ Robustness/ CybersecurityMertic </td>
+    <td> isUsedToMeasure </td>
+    <td> AISystemAccuracy/ Robustness/ Cybersecurity </td>
+  </tr>
+  <tr>
+    <td>2(g)</td>
+    <td> Discriminatory impacts of the system </td>
+    <td> Consequence </td>
+    <td> hasImpact </td>
+    <td> Impact</td>
+  </tr>
+  <tr>
+    <td>2(g)</td>
+    <td>Test log </td>
+    <td> AISystem </td>
+    <td> hasDocumentation </td>
+    <td> TestLog </td>
+  </tr>
+  <tr>
+    <td>2(g)</td>
+    <td>Test report </td>
+    <td> AISystem </td>
+    <td> hasDocumentation </td>
+    <td>  TestReport</td>
+  </tr>
+  <tr>
+    <td>3 </td>
+    <td> Expected level of accuracy </td>
+    <td> AISystem </td>
+    <td> hasExpectedAccuray </td>
+    <td> AISystemAccuracy</td>
+  </tr>
+  <tr>
+      <td>3 </td>
+      <td>Foreseeable unintended outcomes of the risk </td>
+      <td> Risk </td>
+      <td> hasConsequence </td>
+      <td> Consequence </td>
+    </tr>
+  <tr>
+      <td>3 </td>
+      <td> Sources of the risk </td>
+      <td> RiskSource </td>
+      <td> isRiskSourceFor </td>
+      <td> Risk </td>
+    </tr>
+  <tr>
+      <td>3 </td>
+       <td> Human oversight measures </td>
+       <td> HumanOversightMeasure </td>
+       <td> modifiesEvent </td>
+       <td> Event </td>
+     </tr>
+     <tr>
+       <td>3 </td>
+       <td> Technical measures </td>
+       <td> TechnicalMeasure </td>
+       <td> modifiesEvent </td>
+       <td> Event</td>
+     </tr>
+     <tr>
+         <td>3 </td>
+       <td> Specification of input data </td>
+       <td> InputData</td>
+       <td> hasDocumentation </td>
+       <td> Datasheet </td>
+     </tr>
+     <tr>
+       <td>4 </td>
+         <td> Risks associated with the AI system </td>
+         <td> AISystem </td>
+         <td> hasRisk </td>
+         <td> Risk </td>
+       </tr>
+       <tr>
+         <td>4 </td>
+         <td> Sources of the risk </td>
+         <td> RiskSource </td>
+         <td> isRiskSourceFor </td>
+         <td> Risk </td>
+    </tr>
+    <tr>
+      <td>4 </td>
+      <td> Consequences of the risk </td>
+      <td> Risk </td>
+      <td> hasConsequence </td>
+      <td> Consequence</td>
+    </tr>
+    <tr>
+       <td>4 </td>
+      <td> Harmful impacts of the risk </td>
+      <td> Consequence </td>
+      <td> hasImpact </td>
+      <td> Impact</td>
+    </tr>
+    <tr>
+       <td>4 </td>
+      <td> Probability of risk source/ risk/ consequence /impact </td>
+      <td> RiskSource/ Risk/ Consequence/ Impact</td>
+      <td> hasLikelihood </td>
+      <td> Likelihood </td>
+    </tr>
+    <tr>
+       <td>4 </td>
+       <td> Severity of consequence/ impact </td>
+       <td> Consequence/ Impact </td>
+       <td> hasSeverity </td>
+       <td> Severity </td>
+     </tr>
+     <tr>
+       <td>4 </td>
+       <td> Impacted stakeholders </td>
+       <td> Impact  </td>
+       <td> hasImpactOnAISubject </td>
+       <td> AISubject </td>
+     </tr>
+     <tr>
+      <td>4 </td>
+       <td> Impacted area </td>
+       <td> Impact </td>
+       <td> hasImpactOnArea </td>
+       <td> AreaOfImpact</td>
+     </tr>
+     <tr>
+        <td>4 </td>
+          <td> Risk management measures applied </td>
+          <td> Control </td>
+          <td> modifiesEvent </td>
+          <td> Event </td>
+        </tr>
+      <tr>
+        <td>6 </td>
+        <td> Standard applied </td>
+        <td> AISystem </td>
+        <td> usesStandard </td>
+        <td> Standard </td>
+      </tr>
+      <tr>
+        <td>6 </td>
+        <td> Harmonised standards applied </td>
+        <td> AISystem </td>
+        <td> usesStandard </td>
+        <td> HarmonisedStandard </td>
+      </tr>
+      <tr>
+        <td>6 </td>
+        <td> Technical specifications applied </td>
+        <td> AISystem </td>
+        <td> usesTechnicalSpecification </td>
+        <td> TechnicalSpecification </td>
+      </tr>
+      <tr>
+        <td>7 </td>
+        <td> EU declaration of conformity </td>
+        <td> AISystem </td>
+        <td> hasDocumentation </td>
+        <td> EUDeclarationOfConformity </td>
+      </tr>
+      <tr>
+        <td>  8 </td>
+        <td>  Post-market monitoring system </td>
+        <td> AISystem </td>
+        <td> hasPostmarketMonitoring System </td>
+        <td> PostmarketMonitoringSystem</td>
+      </tr>
+      <tr>
+        <td>  8 </td>
+        <td> Description of the post-market system that evaluates the performance </td>
+        <td> PostmarketMonitoringSystem </td>
+        <td> dcterms:description </td>
+        <td>  </td>
+      </tr>
+    </tbody>
+</table>
 
 
 
+</span>
+</div>
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">AIRO: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span>
+  AIRO’s core concepts and relations are illustrated in Figure 1. The upper half shows the
+  main concepts required for describing an AI System (green boxes), and the lower half
+  represents key concepts for expressing Risk (yellow boxes). The relation <a href="#hasRisk" title="https://w3id.org/AIRO#hasRisk">hasRisk</a> links
+  these two halves by connecting risk to either an AI system or a component of the system.
+<br><br>
+
+
+  <center>
+     <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-coreconcepts.jpg"  alt="AIRO concepts" width="800" >
+     <figcaption style="font-size: 15px;">Figure 1: AIRO core concepts and relations</figcaption>
+  </center>
+
+</span>
 
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
 <table>
-<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<caption> Table 2: Namespaces used in the document </caption>
 <tbody>
 <tr><td><b>airo</b></td><td>&lt;https://w3id.org/AIRO&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
@@ -173,19 +590,9 @@ technologies.
 </table>
 </div>
 </div>
-</div>
 
 
-<!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">AIRO: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-The AI Risk Ontology (AIRO) is an ontology for expressing information associated with high-risk AI systems based on the requirements of the proposed AI Act and ISO 31000 series of standards.
-</span>
-<center>
-   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-coreconcepts.jpg"  alt="AIRO concepts" width="800" >
-   <figcaption>AIRO core concepts and relations</figcaption>
-</center>
-
+<h3 id="Classes and Properties" class="list">Classes and Properties</h3>
 <h4 id="AI System" class="list">Core AI Vocabulary </h4>
 The AIRO concepts and relations required for expressing  AI systems and their characteristics as per the AI Act are represeneted in this section.
 <h5 id="core AI classes" class="list">Classes</h5>
@@ -1522,40 +1929,60 @@ The main concepts and relations in AIRO for describing risk are identified from 
    </li>
 -->
 
+<h3 id="webvowl" class="list">WebVOWL Visualisation</h3>
+<span>
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
+</span>
 </div>
-
 
 
 <!--APPLICATIOn SECTION-->
     <div id="application"><h2 id="application" class="list">AIRO Usage and Application <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
 
-</span>
 
  <h3 id="uber" class="list">Use-case 1: Uber's Real-time ID Check System</h3>
+ <span>
 This use-case describes an instance where Uber used a facial recognition identification system, known as the Real Time ID (RTID), to ensure that the driver's account is not used by anyone other than the registered Uber driver. If the system failed to recognise a person for two consecutive times, the driver's contract would be terminated and their driver and vehicle licenses would be revoked. Multiple incidents where the system failed to verify drivers of BAME (Black, Asian, Minority Ethnic) background proved that the use of the facial recognition system involved risks of inaccuracy which could have lead to unfair dismissal of drivers.
+</span>
+<br>
 
- <figure>
-   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-UBER.jpg" alt="Uber's real-time ID check system" width="900">
-   <figcaption> AIRO-based representation of Uber's real-time ID check system </figcaption>
-</figure>
+   <center>
+   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-UBER.jpg" alt="Uber's real-time ID check system" width="800">
+   <figcaption style="font-size: 15px;"> Figure 2: AIRO-based representation of Uber's real-time ID check use-case </figcaption>
+ </center>
+
 
 
  <h3 id="viogen" class="list">Use-case 2: VioGén Domestic Violence System</h3>
-This use-case describes the VioGén Domestic Violence System that was used by the Spanish law enforcement agencies to assess the likelihood of a victim of gender violence to be assaulted by the same perpetrator again, which is used for determining the victim's eligibility for police protection. VioGén system is considered a high-risk AI system as it is employed by law enforcement authorities as means for predicting the risk of gender violence recidivism (Annex III, 6-a) that in turn is used for determining access to public services, i.e. police protection (Annex III, 5-a).
+<span>
+<p>This use-case describes the VioGén Domestic Violence System that was used by the Spanish law enforcement agencies to assess the likelihood of a victim of gender violence to be assaulted by the same perpetrator again, which is used for determining the victim's eligibility for police protection. VioGén system is considered a high-risk AI system as it is employed by law enforcement authorities as means for predicting the risk of gender violence recidivism (Annex III, 6-a) that in turn is used for determining access to public services, i.e. police protection (Annex III, 5-a).</p>
 
-Its use of statistical models to predict the risk faced by a victim raise questions regarding the accuracy of its predictions since these would be highly dependent on the quality of data fed into the models. The input data was generated based on a questionnaire answered by victims who filed a report. The ambiguity of questions and timing of questionnaire could have lead to inaccurate or biased predictions, and if the score was not modified by police officers - the victim would not required protection. To control this risk, police officers were granted the power to increase the risk score calculated by the system. However,in most cases the officers trusted the system's scoring despite warning signs, which led to ``automation bias'' i.e. over-reliance on the system's outcomes.
+<p>Its use of statistical models to predict the risk faced by a victim raise questions regarding the accuracy of its predictions since these would be highly dependent on the quality of data fed into the models. The input data was generated based on a questionnaire answered by victims who filed a report. The ambiguity of questions and timing of questionnaire could have lead to inaccurate or biased predictions, and if the score was not modified by police officers - the victim would not required protection. To control this risk, police officers were granted the power to increase the risk score calculated by the system. However,in most cases the officers trusted the system's scoring despite warning signs, which led to ``automation bias'' i.e. over-reliance on the system's outcomes.</p>
+</span>
+<br>
+  <center>
+   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-Viogen.jpg" alt="viogen domestic violence system" width="800">
+   <figcaption style="font-size: 15px;">Figure3: AIRO-based representation of VioGén use-case</figcaption>
+ </center>
+
+<h3 id="application for high-risk" class="list">Identification of High-risk AI Systems</h3>
 
 
-<figure>
-   <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-Viogen.jpg" alt="viogen domestic violence system" width="900">
-   <figcaption>AIRO-based representation of VioGén domestic violence system </figcaption>
-</figure>
+<h3 id="application for technical documentation" class="list">Generating Technical Documentation</h3>
+
+
 
 <!--CROSSREF SECTION-->
+<div id="Crossref"><h2 id="intro" class="list">Cross Reference<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span>
+  This section provides details regarding AIRO classes, properties, and individuals.
+</span>
+<!--Classes-->
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+<h3 id="classes" class="list">Classes</h3>
+
 <div class="entity" id="JobApplicant">
-   <h3>A person who has made an application for employment.<sup class="type-c" title="class">c</sup>
+   <h3>Job Applicant<sup class="type-c" title="class">c</sup>
       <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
       </span>
    </h3>
@@ -6999,8 +7426,11 @@ Its use of statistical models to predict the risk faced by a victim raise questi
       </dd>
    </dl>
 </div>
-</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
-<h3 id="properties" class="list">Object Properties</h3>
+</div>
+</div>
+
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+<h3 id="properties" class="list"> Object Properties</h3>
 <ul class="hlist">
    <li>
       <a href="#affects" title="https://w3id.org/AIRO#affects">affects</a>
@@ -8186,7 +8616,9 @@ Its use of statistical models to predict the risk faced by a victim raise questi
       </dl>
    </div>
 </div>
-</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+</div>
+
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
 <h3 id="namedindividuals" class="list">Named Individuals</h3>
 <ul class="hlist">
    <li>
@@ -9006,9 +9438,8 @@ Its use of statistical models to predict the risk faced by a victim raise questi
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
-This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497.
-<br>
-The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497, as part of the ADAPT SFI Centre for Digital Media Technology is funded by Science Foundation Ireland through the SFI Research Centres Programme and is co-funded under the European Regional Development Fund (ERDF) through Grant#13/RC/2106_P2. Harshvardhan J. Pandit has received funding under the Irish Research Council Government of Ireland Postdoctoral Fellowship Grant#GOIPD/2020/790.</p>
+
 </div>
 
 

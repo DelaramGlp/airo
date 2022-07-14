@@ -1,11 +1,11 @@
-/* define a class "noprint" for sections which don't get printed */  
+/* define a class "noprint" for sections which don't get printed */
 .noprint { display: none; }
 
 /* our syntax menu for switching */
 div.syntaxmenu {
   border: 1px dotted black;
   padding:0.5em;
-  margin: 1em; 
+  margin: 1em;
 }
 
 .container {
@@ -61,7 +61,7 @@ div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester
     height: 26em;
     z-index: -1;
     opacity: 0.8;
-    
+
     /** From http://stackoverflow.com/questions/1080792/how-to-draw-vertical-text-with-css-cross-browser */
 
     -webkit-transform: rotate(-90deg);
@@ -82,22 +82,23 @@ div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester
 }
 
 /* The actual status box */
- .status div {   
+ .status div {
     display: block;
-    background: rgb(0, 90, 156);
+    background: #007474;
     color: white;
     width: 24em;
     padding-top: 0.3em;
     padding-left: 0em;
     padding-right: 5em;
     padding-bottom: 0.3em;
-    /* Enable for debugging 
+
+    /* Enable for debugging
     border: red thin solid;
      */
-} 
+}
 
 /* And text inside, don't confuse fonts as it breaks em above */
 .status div span {
-    font-family: "Tauri";
+    font-family: "sans";
     font-size: larger;
 }

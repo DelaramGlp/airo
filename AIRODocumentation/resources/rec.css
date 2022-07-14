@@ -10,7 +10,7 @@
 body {
   padding: 2em 1em 2em 70px;
   margin: 0;
-  font-family: sans-serif;
+  font-family: Arial;
   color: black;
   background: white;
   background-position: top left;
@@ -30,7 +30,7 @@ a img { color: white; }        /* trick to hide the border in Netscape 4 */
 }
 
 th, td { /* ns 4 */
-  font-family: sans-serif;
+  font-family: Arial;
 }
 
 h1, h2, h3, h4, h5, h6 { text-align: left }
@@ -79,10 +79,10 @@ ul.toc, ol.toc {
   list-style: none;
 }
 
-@media aural {  
+@media aural {
   h1, h2, h3 { stress: 20; richness: 90 }
   .hide { speak: none }
   p.copyright { volume: x-soft; speech-rate: x-fast }
   dt { pause-before: 20% }
-  pre { speak-punctuation: code } 
+  pre { speak-punctuation: code }
 }

@@ -1,15 +1,18 @@
 body {
-    text-align: justify;    
+    text-align: justify;
+    max-width: 900px;
+    margin: auto;
 }
 
+
 h1 {
-    line-height: 110%;    
+    line-height: 110%;
 }
 
 .hlist {
     border: 1px solid navy;
     padding:5px;
-    background-color: #F4FFFF; 
+    background-color: #F4FFFF;
 }
 
 .hlist li {
@@ -17,13 +20,13 @@ h1 {
     display: inline-table;
     list-style-type: none;
     padding-right: 20px;
-    
+
 }
 
 .entity {
     border: 1px solid navy;
     margin:5px 0px 5px 0px;
-    padding: 5px;    
+    padding: 5px;
 }
 
 .type-c {
@@ -33,27 +36,27 @@ h1 {
 
 .type-op {
     cursor:help;
-    color:navy;    
+    color:navy;
 }
 
 .type-dp {
     cursor:help;
-    color:green;    
+    color:green;
 }
 
 .type-ap {
     cursor:help;
-    color:maroon;    
+    color:maroon;
 }
 
 .type-ni {
     cursor:help;
-    color:brown;    
+    color:brown;
 }
 
 .logic {
     color:purple;
-    font-weight:bold;    
+    font-weight:bold;
 }
 
 h3 {
@@ -63,7 +66,7 @@ h3 {
 }
 
 h2 {
-    margin-top:40px;    
+    margin-top:40px;
 }
 
 .dotted {
@@ -121,4 +124,37 @@ dt {
 .literal {
     color:green;
     font-style:italic;
+}
+
+.centerImage
+{
+ text-align:center;
+ display:block;
+ margin: auto ;
+}
+
+table.gridtable {
+    font-family: Arial;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+    width: 850px;
+    margin: auto;
+
+}
+table.gridtable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #5f9ea0;
+}
+table.gridtable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
 }
