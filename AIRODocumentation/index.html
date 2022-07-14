@@ -83,6 +83,8 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Publication:</dt>
+<dd><a href="https://zenodo.org/record/6821845"> AIRO: an Ontology for Representing AI Risks based on the Proposed EU AI Act and ISO Risk Management Standards </a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> -->
 
 
@@ -94,14 +96,59 @@ $(function(){
 <span>AIRO Ontology Specification</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-Risk is a key concept in the draft AI Act, which is the European Commission proposal for AI regulation published in April 2021. The risk-based approach taken by the Act means it regulates development and use of AI systems according to the extent of risk and harm they impose. AI Act lays down obligations on identification, management and documentation of risks. Conforming to these obligations requires maintaining and querying information associated with AI risk management. AIRO is an ontology for expressing risk of AI systems based on the requirements of the AI Act and ISO 31000 series of standards. AIRO assists stakeholders in maintaining AI risk information, complying with regulations such as the AI Act, and performing impact assessments.</span>
+The growing number of incidents caused by (mis)using Artificial Intelligence (AI) is a matter of concern for governments, organisations, and the public.
+ To control the harmful impacts of AI, multiple efforts are being taken all around the world from guidelines promoting trustworthy development and use,
+ to standards for managing risks and regulatory frameworks. Amongst these efforts, the first-ever AI regulation proposed by the European Commission,
+known as the AI Act, is prominent as it takes a risk-oriented approach towards regulating development and use of AI within systems.
+In the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"> proposed AI Act </a>, which is the European Commission's proposal
+for AI regulation published in April 2021, "risk" is a key concept. The risk-based approach taken by the proposed AI Act means it regulates development and
+ use of AI systems according to the severity of harmful risk they impose. AI Act lays down obligations on identification, management and documentation of risks.
+Conforming to these obligations requires maintaining and querying information associated with AI risk management.
+<br>
+AIRO (AI Risk Ontology) is an ontology for expressing risk of AI systems based on the requirements of the proposed AI Act and ISO 31000 series of standards.
+AIRO assists stakeholders in determining "high-risk" AI systems, maintaining and documenting risk information, performing impact assessments, and achieving conformity with AI regulations.</span>
 </div>
 <div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-Use of AI systems is surrounded by uncertainties. Although multiple incidents have shown the harmful impacts of AI on crucial areas such as health, safety, rights, and freedoms, still the unknown is greater than the known as new forms of AI risks emerge quickly. AI Risk management practices aim to assist organisations in handling uncertainties regarding AI systems and their risks. To guide and in some cases mandate organisations in managing risk of AI systems, multiple efforts are currently underway all around the world. Most prominent among them is the EU's AI Act proposal, which adopts a risk-based approach toward AI regulation. The AI Act obliges providers of AI systems to implement and document risk management systems. It also requires providers to share risk information with authorities to demonstrate conformity with the Act. Documenting, querying, and sharing risk-related information would be challenging for organisations when no standard, machine-readable, and interoperable data formats are used. AIRO is an ontology for representing and documenting risk associated with AI systems.
+
+<!--Use of AI systems is surrounded by uncertainties. Although multiple incidents have shown the harmful impacts of AI on crucial areas such as health, safety, rights, and freedoms, still the unknown is greater than the known as new forms of AI risks emerge quickly. AI Risk management practices aim to assist organisations in handling uncertainties regarding AI systems and their risks. To guide and in some cases mandate organisations in managing risk of AI systems, multiple efforts are currently underway all around the world. Most prominent among them is the EU's AI Act proposal, which adopts a risk-based approach toward AI regulation. The AI Act obliges providers of AI systems to implement and document risk management systems. It also requires providers to share risk information with authorities to demonstrate conformity with the Act. Documenting, querying, and sharing risk-related information would be challenging for organisations when no standard, machine-readable, and interoperable data formats are used. AIRO is an ontology for representing and documenting risk associated with AI systems.-->
+The AI Act aims to avoid the harmful impacts of AI on critical areas such as health,
+safety, and fundamental rights by setting down obligations which are proportionate to
+the type and severity of risk posed by the system. It distinguishes specific areas and the
+application of AI within them that constitutes "high-risk" and has additional obligations
+(Art. 6) that require providers of high-risk AI systems to identify and document risks
+associated with AI systems at all stages of development and deployment (Art. 9).
+<br>
+Existing risk management practises consist of maintaining, querying, and sharing
+information associated with risks for compliance checking, demonstrating accountability,
+and building trust. Maintaining information about risks for AI systems is a complex
+task given the rapid pace with which the field progresses, as well as the complexities involved
+in its lifecycle and data governance processes where several entities are involved
+and need to share information for risk assessments. In turn, investigations based on this
+information are difficult to perform which makes their auditing and assessment of compliance
+a challenge for organisations and authorities. To address some of these issues,
+the AI Act relies on creation of standards that alleviate some of the compliance related
+obligations and tasks (Art. 40).
+<br>
+We propose an ontology-based approach regarding the information required to be maintained
+and used for the AI Act’s compliance and conformance by utilising open data
+specifications for documenting risks and performing AI risk assessment activities. Such
+data specifications utilise interoperable machine-readable formats to enable automation
+in information management, querying, and verification for self-assessment and thirdparty
+conformity assessments. Additionally, they enable automated tools for supporting
+AI risk management that can both import and export information meant to be shared with
+stakeholders - such as AI users, providers, and authorities.
+<br>
+<strong>AIRO</strong> is an ontology for expressing risk of harm associated
+with AI systems based on the proposed EU AI Act and the key standards in the ISO 31000 series including
+<a href="https://www.iso.org/standard/65694.html">31000:2018 Risk management – Guidelines </a> and
+<a href="https://www.iso.org/standard/79637.html">ISO 31073:2022 Risk management — Vocabulary </a>.
+AIRO assists with expressing risk of AI systems as per the requirements of the AI Act,
+in a machine-readable, formal, and interoperable manner through use of semantic web
+technologies.
  </span>
 
 
