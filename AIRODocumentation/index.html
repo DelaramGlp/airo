@@ -656,7 +656,7 @@ The AIRO concepts and relations required for expressing  AI systems and their ch
       </li>
 </ul>
 
-<h5 class="list">Properties<h5>
+<h5 class="list">Properties</h5>
 
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
   <li>
@@ -1963,10 +1963,15 @@ This use-case describes an instance where Uber used a facial recognition identif
  </center>
 
 <div id="A-HighRisk"><h3 id="A-HighRisk" class="list">Identification of High-risk AI Systems</h3>
+<p>To assist with determination of whether the system would be considered a high-risk AI
+system under the AI Act, the concepts presented in Table 1 need to be retrieved for the
+use-cases and compared against the specific criteria described in Annex III.</p>
 
-
+<p>For demonstration, we first utilise a SPARQL query, depicted below, to list
+the concepts necessary to determine whether the system is high-risk.</p>
+<pre>
 <code>
-PREFIX airo: <https://w3id.org/AIRO#>
+PREFIX airo: &lthttps://w3id.org/AIRO#&gt
 SELECT ?system ?technique ?domain ?purpose ?application ?user ?subject ?environment
 WHERE {
       ?system a airo:AISystem ;
@@ -1979,12 +1984,216 @@ WHERE {
               airo:isUsedInEnvironment ?environment . }
 
 </code>
+</pre>
+<p> Information retrieved from the use-cases to determine whether they are high-risk AI using the SPARQL query is shown in Table 4.</p>
+
+<div align="center">
+  <table class="gridtable" style="font-size: 14px;">
+  <caption style="font-size: 15px;"> Table 4: Information retrieved from the use-cases </caption>
+     <tbody>
+       <tr>
+         <th>AIRO concept</th>
+         <th>Uber's Real-time ID Check</th>
+         <th>VioGén system</th>
+       </tr>
+        <td> AISystem </td>
+        <td> uber's_real_time_id_check </td>
+        <td> viogén_system
+       </tr>
+       <tr>
+         <td> AITechnique </td>
+         <td> machine_learning </td>
+         <td> statistical_model </td>
+       </tr>
+       <tr>
+         <td>Purpose </td>
+         <td> biometric_identification_of_drivers_to_decide_on _contract_termination</td>
+         <td> determining_access_to_police_protection & assessing_risk_of_gender_violence_recidivism</td>
+       </tr>
+       <tr>
+         <td> Domain </td>
+         <td> employment  </td>
+         <td> law_enforcement & public_service </td>
+       </tr>
+      <tr>
+        <td>AIApplication </td>
+        <td> facial_recognition </td>
+        <td> profiling </td>
+      </tr>
+      <tr>
+        <td>AIUser </td>
+        <td> uber_driver </td>
+        <td> the_spanish_ministry_of_the_interior</td>
+    </tr>
+    <tr>
+      <td>AISubject </td>
+      <td> uber_driver_of_bame_background </td>
+      <td> victim_of_gender_violence</td>
+    </tr>
+    <tr>
+      <td>EnvironmentOfUse </td>
+      <td> work_relate_relations </td>
+      <td> investigation_of_criminal_offences</td>
+    </tr>
+    <tr>
+      <td>High-Risk? </td>
+      <td> Yes (Annex III. 1-a & 4-b) </td>
+      <td> Yes (Annex III. 6-a & 5-a)</td>
+    </tr>
+      </tbody>
+</table>
+</div>
+
+<p> To show automation in determination of whether an AI system is high-risk, and to
+show the usefulness of our analysis and AIRO’s concepts, we created SHACL shapes
+representing two of the high-risk conditions defined in Annex III,
+and then applied them over the use-cases.
+we modelled these SHACL shapes to check where AI systems are not high-risk,
+that is - they fail when a condition such as purpose being BiometricIdentification
+is met.</p>
+<pre>
+  <code>
+@prefix dash: &lthttp://datashapes.org/dash#&gt .
+@prefix sh: &lthttp://www.w3.org/ns/shacl#&gt .
+@prefix airo: &lthttps://w3id.org/AIRO#&gt .
+@prefix rdf: &lthttp://www.w3.org/1999/02/22-rdf-syntax-ns#&gt .
+:AnnexIII-1
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-1"@en ;
+    sh:description "Biometric Identification of Natural Persons"@en ;
+    sh:not [
+        a sh:PropertyShape ;
+        sh:path airo:hasPurpose ;
+        sh:class airo:BiometricIdentification; ] .
+:AnnexIII-6a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-6a"@en ;
+    sh:description "AI systems intended to be used by law enforcement..."
+        "... or the risk for potential victims of criminal offences;"@en ;
+    sh:not [ sh:and (
+            sh:property [
+                a sh:PropertyShape ;
+                sh:path airo:isUsedWithinDomain ;
+                sh:hasValue airo:law_enforcement ;
+            ]
+            sh:property [
+                a sh:PropertyShape ;
+                sh:path airo:hasPurpose ;
+                # omitted (sh:or .. airo:AssessingRiskOfReoffending) here for brevity
+                sh:class airo:AssessingRiskOfReoffending ; ] ) ] .
+  </code>
+</pre>
+
 </div>
 
 <div id="A-TechnicalDocumentation">
 <h3 id="A-TechnicalDocumentation" class="list">Generating Technical Documentation</h3>
+<p> To demonstrate how AIRO assists with producing technical documentation as required by Art. 11 and described in Annex IV of the AI Act,
+we utilised SPARQL queries to retrieve the information regarding the two use-cases. </p>
+</div>
+<div align="center">
+  <table class="gridtable" style="font-size: 14px;">
+  <caption style="font-size: 15px;"> Table 5: Information retrieved from AIRO-based representations of use-cases for generating technical documentation </caption>
+     <tbody>
+       <tr>
+         <th>Anx.IV. Required  Information</th>
+         <th>Concept</th>
+         <th>Uber's Real-time ID Check</th>
+         <th> VioGén system </th>
+       </tr>
+       <tr>
+         <td> 1(a). System’s intended purpose </td>
+         <td><code>Purpose</code></th>
+         <td>biometric_identification_of_drivers _to_decide_on_contract_termination </td>
+         <td>assessing_risk_of_gender_violence _recidivism <br> determining_access_to_police _protection </td>
+       </tr>
+       <tr>
+         <td> 1(a). System’s developers </td>
+         <td> <code>AIDeveloper</code> </td>
+         <td> uber </td>
+         <td> the_spanish_secretary_of_state_for _security</td>
+       </tr>
+       <tr>
+         <td>1(d). Forms in which AI system is placed on the market or put into service </td>
+         <td> <code>AISystemForm</code> </td>
+         <td> service </td>
+         <td> software </td>
+       </tr>
+       <tr>
+         <td> 2(e) & 3. Human oversight measures </td>
+         <td> <code>HumanOversightControl</code> </td>
+         <td> manual_review </td>
+         <td> manual_modification_of_risk_score </td>
+       </tr>
+       <tr>
+         <td> 2(g). Discriminatory impacts of the system </td>
+         <td> <code>Impact</code><br><code>ImpactedArea</code> </td>
+         <td> unfair_dismissal_of_bame_drivers <br> non-discrimination </td>
+         <td> lower_risk_scores_assigned_to _women_without_children <br> non-discrimination</td>
+       </tr>
+       <tr>
+         <td> 3. Expected level of accuracy </td>
+         <td> <code>AISystemAccuracy</code> </td>
+         <td> high </td>
+         <td> high </td>
+       </tr>
+       <tr>
+         <td> 3. Foreseeable unintended outcomes of the risk <br>   4. Consequences of the risk</td>
+         <td> <code>Consequence</code>  </td>
+         <td> failed_to_identify_some_bame_ drivers </td>
+         <td> (1) victim_at_risk_remains _unprotected <br>  (2) risk_score_is_not_manually _modified_when_necessary </td>
+       </tr>
+       <tr>
+         <td> 3 & 4. Sources of the risk </td>
+         <td> <code>RiskSource</code> </td>
+         <td> bias_in_algorithm_training </td>
+         <td> (1) poor_quality_of_input_data <br> (2) N/A</td>
+       </tr>
+       <tr>
+         <td> 4. Risks associated with the AI system </td>
+         <td> <code>Risk</code> </td>
+         <td> inaccuracy_in_identifying_bame _drivers </td>
+         <td> (1) inaccurate_predictions <br> (2) automation_bias </td>
+       </tr>
+       <tr>
+         <td> 4. Harmful impacts of the risk </td>
+         <td> <code>Impact</code> </td>
+         <td> unfair_dismissal_of_bame_drivers </td>
+         <td> (1&2) victim_being_assaulted </td>
+       </tr>
+       <tr>
+         <td>4. Severity of impact </td>
+         <td> <code>Severity</code> </td>
+         <td> N/A </td>
+         <td>  critical </td>
+       </tr>
+       <tr>
+         <td>4. Impacted stakeholders </td>
+         <td> <code>AISubject</code> </td>
+         <td> uber_driver_of_bame_background </td>
+         <td> victim_of_gender_violence </td>
+       </tr>
+       <tr>
+         <td>4. Impacted area </td>
+         <td> <code>AreaOfImpact</code> </td>
+         <td> non-discrimination </td>
+         <td> safety_of_victim </td>
+       </tr>
+       <tr>
+         <td>4. Risk management measures applied </td>
+         <td> <code>Control</code> </td>
+         <td> manual_review </td>
+         <td> (1) manual_modification_of_risk _score <br> (2) N/A </td>
+       </tr>
+     </tbody>
+  </table>
 
 </div>
+
+
+
 <!--CROSSREF SECTION-->
 <div id="Crossref"><h2 id="intro" class="list">Cross Reference<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span>
@@ -9446,12 +9655,15 @@ WHERE {
 1. Artificial Intelligence Act: Proposal for a regulation of the European Parliament and the Council laying down harmonised rules on Artificial Intelligence (Artificial Intelli-gence Act) and amending certain Union legislative acts, https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELLAR:e0649735-a372-11eb-9585-01aa75ed71a1, (2021).
 2. ISO 31000 Risk management — Guidelines, (2018).
 3. ISO/IEC DIS 22989(en) Information technology — Artificial intelligence — Artificial intelligence concepts and terminology, https://www.iso.org/obp/ui/#iso:std:iso-iec:22989:dis:ed-1:v1:en, (2022)</span>
-
+4. Garijo D. WIDOCO: a wizard for documenting ontologies. In: International Semantic Web Conference. Springer; 2017. p. 94-102.
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
-This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497, as part of the ADAPT SFI Centre for Digital Media Technology is funded by Science Foundation Ireland through the SFI Research Centres Programme and is co-funded under the European Regional Development Fund (ERDF) through Grant#13/RC/2106_P2. Harshvardhan J. Pandit has received funding under the Irish Research Council Government of Ireland Postdoctoral Fellowship Grant#GOIPD/2020/790.</p>
+This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497,
+as part of the ADAPT SFI Centre for Digital Media Technology is funded by Science Foundation Ireland through the SFI Research Centres Programme and
+is co-funded under the European Regional Development Fund (ERDF) through Grant#13/RC/2106_P2.
+Harshvardhan J. Pandit has received funding under the Irish Research Council Government of Ireland Postdoctoral Fellowship Grant#GOIPD/2020/790.</p>
 
 </div>
 
