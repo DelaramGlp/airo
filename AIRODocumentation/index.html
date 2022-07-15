@@ -153,7 +153,8 @@ technologies.
 (i) determine whether their AI systems are "high-risk" as per Annex III of the AI Act and
 (ii) generate the technical documentation required for conformity to the AI Act.</p>
 </span>
-<h3 id="high-risk requirements" class="list">Describing High-Risk AI Systems</h3>
+
+<h3 id="high-riskrequirements" class="list">Describing High-Risk AI Systems</h3>
 <span>
 <p>We analysed the requirements of the AI Act, in particular the list of high-risk systems in
 Annex III, and identified the specific concepts whose combinations determine whether
@@ -173,49 +174,49 @@ scompetency questions, concepts, and relation with AI system.</p>
   <tr>
     <td>CQ1</td>
     <td> What techniques are utilised in the system?</td>
-    <td><a href="#AITechnique" title="https://w3id.org/AIRO#AITechnique">AI Technique</a></td>
-    <td><a href="#usesTechnique" title="https://w3id.org/AIRO#usesTechnique">uses technique</a></td>
+    <td><a href="#AITechnique" title="https://w3id.org/AIRO#AITechnique"><code>AITechnique</code></a></td>
+    <td><a href="#usesTechnique" title="https://w3id.org/AIRO#usesTechnique"><code>usesTechnique</code></a></td>
   </tr>
   <tr>
     <td>CQ2</td>
     <td>What domain is the system intended to be used in? </td>
-    <td><a href="#Domain" title="https://w3id.org/AIRO#Domain">Domain</a></td>
-    <td><a href="#isAppliedWithinDomain" title="https://w3id.org/AIRO#isAppliedWithinDomain">is applied within domain</a></td>
+    <td><a href="#Domain" title="https://w3id.org/AIRO#Domain"><code>Domain<code></a></td>
+    <td><a href="#isAppliedWithinDomain" title="https://w3id.org/AIRO#isAppliedWithinDomain"><code>isAppliedWithinDomain</code></a></td>
   </tr>
   <tr>
     <td>CQ3</td>
     <td>What is the intended purpose of the system?</td>
-    <td><a href="#Purpose" title="https://w3id.org/AIRO#Purpose">Purpose</a></td>
-    <td><a href="#hasPurpose" title="https://w3id.org/AIRO#hasPurpose">has purpose</a></td>
+    <td><a href="#Purpose" title="https://w3id.org/AIRO#Purpose"><code>Purpose</code></a></td>
+    <td><a href="#hasPurpose" title="https://w3id.org/AIRO#hasPurpose"><code>hasPurpose</code></a></td>
   </tr>
   <tr>
     <td>CQ4</td>
     <td>What is the application of the system? </td>
-    <td><a href="#Application" title="https://w3id.org/AIRO#Application">Application</a></td>
-    <td><a href="#hasApplication" title="https://w3id.org/AIRO#hasApplication">has application</a></td>
+    <td><a href="#Application" title="https://w3id.org/AIRO#Application"><code>Application</code></a></td>
+    <td><a href="#hasApplication" title="https://w3id.org/AIRO#hasApplication"><code>hasApplication</code></a></td>
   <tr>
     <td>CQ5</td>
     <td>Who is the intended user of the system?</td>
-    <td><a href="#AIUser" title="https://w3id.org/AIRO#AIUser">AI User</a></td>
-    <td><a href="#isUsedBy" title="https://w3id.org/AIRO#isUsedBy">is used by</a></td>
+    <td><a href="#AIUser" title="https://w3id.org/AIRO#AIUser"><code>AIUser</code></a></td>
+    <td><a href="#isUsedBy" title="https://w3id.org/AIRO#isUsedBy"><code>isUsedBy</code></a></td>
   </tr>
   <tr>
     <td>CQ6</td>
     <td>Who is the subject of the system?</td>
-    <td><a href="#AISubject" title="https://w3id.org/AIRO#AISubject">AI Subject</a></td>
-    <td><a href="#affects" title="https://w3id.org/AIRO#affects">affects</a></td>
+    <td><a href="#AISubject" title="https://w3id.org/AIRO#AISubject"><code>AISubject</code></a></td>
+    <td><a href="#affects" title="https://w3id.org/AIRO#affects"><code>affects</code></a></td>
   </tr>
   <tr>
     <td>CQ7</td>
     <td>In which environment is the system used?</td>
-    <td><a href="#EnvironmentOfUse" title="https://w3id.org/AIRO#EnvironmentOfUse">Environment Of Use</td>
-    <td><a href="#isUsedInEnvironment" title="https://w3id.org/AIRO#isUsedInEnvironment">is used in environment</td>
+    <td><a href="#EnvironmentOfUse" title="https://w3id.org/AIRO#EnvironmentOfUse"><code>EnvironmentOfUse<</code></td>
+    <td><a href="#isUsedInEnvironment" title="https://w3id.org/AIRO#isUsedInEnvironment"><code>isUsedInEnvironment</code></td>
   </tr>
   </tbody>
 </table>
 </div>
 </span>
-<h3 id="Technical Documentation" class="list">Technical Documentation</h3>
+<h3 id="TechnicalDocumentation" class="list">Technical Documentation</h3>
 <span>
 <p> To conform to the AI Act, high-risk AI systems need to fulfil the requirements laid out
 in Title III, Chapter 2. One of the key obligations is implementing a risk management
@@ -231,327 +232,323 @@ concepts and relations as presented in Table 2.</p>
 
   <table class="gridtable">
   <caption style="font-size: 15px">Table 2: Information needed to be featured in the AI Act technical documentation</caption>
-  <tbody>
-  <tr>
-  <th> Annex IV Clause</th>
-  <th> Required information </th>
-  <th>Domain</th>
-  <th> Relation </th>
-  <th> Range</th>
-  </tr>
-  <tr>
-    <td>1(a)</td>
-    <td>System’s intended purpose </td>
-    <td>AISystem </td>
-    <td>hasPurpose</td>
-    <td>Purpose</td>
-  </tr>
-  <tr>
-    <td>1(a)</td>
-    <td>System’s developers</td>
-    <td> AISystem </td>
-    <td> isDevelopedBy </td>
-    <td> AIDeveloper</td>
-  </tr>
-  <tr>
-    <td>1(a)</td>
-    <td>System's date </td>
-    <td> AISystem </td>
-    <td> dcterms:date </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>1(a)</td>
-    <td> System's version </td>
-    <td> AISystem </td>
-    <td> hasVersion </td>
-    <td> Version </td>
-  </tr>
-  <tr>
-    <td> 1(c) </td>
-   <td> Versions of relevant software or firmware </td>
-   <td> System/ Component </td>
-   <td> hasVersion </td>
-   <td> Version </td>
- </tr>
- <tr>
-   <td> 1(d)</td>
-   <td>  Forms in which AI system is placed on the market or put into service </td>
-   <td> AISystem </td>
-   <td> isUsedInFormOf </td>
-   <td> AISystemForm </td>
- </tr>
- <tr>
-   <td> 1(e) </td>
-  <td> Hardware on which the AI system run </td>
-  <td> AISystem </td>
-  <td> hasExecutionEnvironment </td>
-  <td> AIHardware</td>
-</tr>
-<tr>
-  <td>1(f) </td>
-  <td> Internal layout of the product which the system is part of </td>
-  <td> AISystem </td>
-  <td> hasDocumentation </td>
-  <td> Blueprint </td>
-</tr>
-<tr>
-  <td> 1(g) </td>
-  <td> Instruction of use for the user</td>
-  <td> AISystem </td>
-  <td> hasDocumentation </td>
-  <td> InstructionOfUse  </td>
-</tr>
-<tr>
-    <td> 1(g) </td>
-    <td> Installation instructions </td>
-    <td> AISystem </td>
-    <td> hasDocumentation </td>
-    <td> InstallationInstruction</td>
-  </tr>
-  <tr>
-    <td>2(a)</td>
-    <td> third party tools used  </td>
-    <td> AISystem </td>
-    <td> hasComponent </td>
-    <td> Tool </td>
-  </tr>
-  <tr>
-    <td>2(a)</td>
-    <td> Pre-trained system used </td>
-    <td> AISystem </td>
-    <td> hasComponent </td>
-    <td> Pre-trainedSystem </td>
-  </tr>
-  <tr>
-    <td>2(b)</td>
-    <td> Design specifications of the system </td>
-    <td> AISystem</td>
-    <td>hasDocumentation </td>
-    <td> SystemDesignSpecification </td>
-  </tr>
-  <tr>
-    <td>2(c) </td>
-    <td> The system architecture </td>
-    <td> AISystem  </td>
-    <td> hasDocumenatation </td>
-    <td> SystemArchitecture </td>
-  </tr>
-  <tr>
-    <td>2(d) </td>
-    <td> Data requirements </td>
-    <td> Data </td>
-    <td> hasDocumentation </td>
-    <td> Datasheet </td>
-  </tr>
-  <tr>
-    <td> 2(e)  </td>
-    <td>Human oversight measures </td>
-    <td> HumanOversightMeasure </td>
-    <td> modifiesEvent </td>
-    <td> Event</td>
-  </tr>
-  <tr>
-    <td>2(g)</td>
-    <td>Testing data </td>
-    <td> AISystem </td>
-    <td> hasComponent </td>
-    <td> TestingData</td>
-  </tr>
-  <tr>
-    <td>2(g)</td>
-    <td> Validation data </td>
-    <td> AISystem </td>
-    <td> hasComponent </td>
-    <td> ValidationData </td>
-  </tr>
-  <tr>
-    <td>2(g)</td>
-    <td>Characteristics of data </td>
-    <td> Data </td>
-    <td> hasDocumentation </td>
-    <td> Datasheet</td>
-  </tr>
-  <tr>
-    <td>2(g)</td>
-    <td> Metrics used to measure accuracy/ robustness/ cybersecurity </td>
-    <td> Accuracy/ Robustness/ CybersecurityMertic </td>
-    <td> isUsedToMeasure </td>
-    <td> AISystemAccuracy/ Robustness/ Cybersecurity </td>
-  </tr>
-  <tr>
-    <td>2(g)</td>
-    <td> Discriminatory impacts of the system </td>
-    <td> Consequence </td>
-    <td> hasImpact </td>
-    <td> Impact</td>
-  </tr>
-  <tr>
-    <td>2(g)</td>
-    <td>Test log </td>
-    <td> AISystem </td>
-    <td> hasDocumentation </td>
-    <td> TestLog </td>
-  </tr>
-  <tr>
-    <td>2(g)</td>
-    <td>Test report </td>
-    <td> AISystem </td>
-    <td> hasDocumentation </td>
-    <td>  TestReport</td>
-  </tr>
-  <tr>
-    <td>3 </td>
-    <td> Expected level of accuracy </td>
-    <td> AISystem </td>
-    <td> hasExpectedAccuray </td>
-    <td> AISystemAccuracy</td>
-  </tr>
-  <tr>
-      <td>3 </td>
-      <td>Foreseeable unintended outcomes of the risk </td>
-      <td> Risk </td>
-      <td> hasConsequence </td>
-      <td> Consequence </td>
-    </tr>
-  <tr>
-      <td>3 </td>
-      <td> Sources of the risk </td>
-      <td> RiskSource </td>
-      <td> isRiskSourceFor </td>
-      <td> Risk </td>
-    </tr>
-  <tr>
-      <td>3 </td>
-       <td> Human oversight measures </td>
-       <td> HumanOversightMeasure </td>
-       <td> modifiesEvent </td>
-       <td> Event </td>
-     </tr>
-     <tr>
-       <td>3 </td>
-       <td> Technical measures </td>
-       <td> TechnicalMeasure </td>
-       <td> modifiesEvent </td>
-       <td> Event</td>
-     </tr>
-     <tr>
-         <td>3 </td>
-       <td> Specification of input data </td>
-       <td> InputData</td>
-       <td> hasDocumentation </td>
-       <td> Datasheet </td>
-     </tr>
-     <tr>
-       <td>4 </td>
-         <td> Risks associated with the AI system </td>
-         <td> AISystem </td>
-         <td> hasRisk </td>
-         <td> Risk </td>
-       </tr>
-       <tr>
-         <td>4 </td>
-         <td> Sources of the risk </td>
-         <td> RiskSource </td>
-         <td> isRiskSourceFor </td>
-         <td> Risk </td>
-    </tr>
-    <tr>
-      <td>4 </td>
-      <td> Consequences of the risk </td>
-      <td> Risk </td>
-      <td> hasConsequence </td>
-      <td> Consequence</td>
-    </tr>
-    <tr>
-       <td>4 </td>
-      <td> Harmful impacts of the risk </td>
-      <td> Consequence </td>
-      <td> hasImpact </td>
-      <td> Impact</td>
-    </tr>
-    <tr>
-       <td>4 </td>
-      <td> Probability of risk source/ risk/ consequence /impact </td>
-      <td> RiskSource/ Risk/ Consequence/ Impact</td>
-      <td> hasLikelihood </td>
-      <td> Likelihood </td>
-    </tr>
-    <tr>
-       <td>4 </td>
-       <td> Severity of consequence/ impact </td>
-       <td> Consequence/ Impact </td>
-       <td> hasSeverity </td>
-       <td> Severity </td>
-     </tr>
-     <tr>
-       <td>4 </td>
-       <td> Impacted stakeholders </td>
-       <td> Impact  </td>
-       <td> hasImpactOnAISubject </td>
-       <td> AISubject </td>
-     </tr>
-     <tr>
-      <td>4 </td>
-       <td> Impacted area </td>
-       <td> Impact </td>
-       <td> hasImpactOnArea </td>
-       <td> AreaOfImpact</td>
-     </tr>
-     <tr>
-        <td>4 </td>
-          <td> Risk management measures applied </td>
-          <td> Control </td>
-          <td> modifiesEvent </td>
-          <td> Event </td>
-        </tr>
-      <tr>
-        <td>6 </td>
-        <td> Standard applied </td>
-        <td> AISystem </td>
-        <td> usesStandard </td>
-        <td> Standard </td>
-      </tr>
-      <tr>
-        <td>6 </td>
-        <td> Harmonised standards applied </td>
-        <td> AISystem </td>
-        <td> usesStandard </td>
-        <td> HarmonisedStandard </td>
-      </tr>
-      <tr>
-        <td>6 </td>
-        <td> Technical specifications applied </td>
-        <td> AISystem </td>
-        <td> usesTechnicalSpecification </td>
-        <td> TechnicalSpecification </td>
-      </tr>
-      <tr>
-        <td>7 </td>
-        <td> EU declaration of conformity </td>
-        <td> AISystem </td>
-        <td> hasDocumentation </td>
-        <td> EUDeclarationOfConformity </td>
-      </tr>
-      <tr>
-        <td>  8 </td>
-        <td>  Post-market monitoring system </td>
-        <td> AISystem </td>
-        <td> hasPostmarketMonitoring System </td>
-        <td> PostmarketMonitoringSystem</td>
-      </tr>
-      <tr>
-        <td>  8 </td>
-        <td> Description of the post-market system that evaluates the performance </td>
-        <td> PostmarketMonitoringSystem </td>
-        <td> dcterms:description </td>
-        <td>  </td>
-      </tr>
+    <tbody>
+        <tr>
+            <th>Annex IV Clause</th>
+            <th>Required information </th>
+            <th>Domain</th>
+            <th>Relation </th>
+            <th>Range</th>
+          </tr>
+          <tr>
+            <td>1(a)</td>
+            <td>System’s intended purpose </td>
+            <td><code>AISystem</code> </td>
+            <td><code>hasPurpose</code></td>
+            <td><code>Purpose</code></td>
+          </tr>
+          <tr>
+            <td>1(a)</td>
+            <td>System’s developers</td>
+            <td><code>AISystem</code> </td>
+            <td><code>isDevelopedBy</code> </td>
+            <td><code> AIDeveloper</code></td>
+          </tr>
+          <tr>
+            <td>1(a)</td>
+            <td>System's date </td>
+            <td><code>AISystem</code> </td>
+            <td><code> dcterms:date </code> </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1(a)</td>
+            <td> System's version </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasVersion</code> </td>
+            <td><code> Version</code> </td>
+          </tr>
+          <tr>
+            <td> 1(c) </td>
+            <td> Versions of relevant software or firmware </td>
+            <td> <code>System</code>/ <code>Component</code> </td>
+            <td><code> hasVersion</code> </td>
+            <td><code> Version</code> </td>
+          </tr>
+          <tr>
+            <td> 1(d)</td>
+            <td>Forms in which AI system is placed on the market or put into service </td>
+            <td><code>AISystem</code> </td>
+            <td><code> isUsedInFormOf</code> </td>
+            <td><code> AISystemForm</code> </td>
+          </tr>
+          <tr>
+            <td> 1(e) </td>
+            <td> Hardware on which the AI system run </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasExecutionEnvironment</code> </td>
+            <td><code> AIHardware</code></td>
+          </tr>
+          <tr>
+            <td> 1(f) </td>
+            <td> Internal layout of the product which the system is part of </td>
+            <td><code>AISystem</code> </td>
+            <td><code>hasDocumentation</code></td>
+            <td><code> Blueprint</code> </td>
+          </tr>
+          <tr>
+            <td> 1(g) </td>
+            <td> Instruction of use for the user</td>
+            <td><code>AISystem</code> </td>
+            <td><code>hasDocumentation</code></td>
+            <td><code> InstructionOfUse </code> </td>
+          </tr>
+          <tr>
+            <td> 1(g) </td>
+            <td> Installation instructions </td>
+            <td><code>AISystem</code> </td>
+            <td><code>hasDocumentation</code></td>
+            <td><code>InstallationInstruction</code></td>
+          </tr>
+          <tr>
+            <td>2(a)</td>
+            <td> third party tools used  </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasComponent</code> </td>
+            <td><code> Tool </code></td>
+          </tr>
+          <tr>
+            <td>2(a)</td>
+            <td> Pre-trained system used </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasComponent</code></td>
+            <td><code> Pre-trainedSystem</code> </td>
+          </tr>
+            <td> 2(b)</td>
+            <td> Design specifications of the system </td>
+            <td><code> AISystem</code></td>
+            <td><code>hasDocumentation</code> </td>
+            <td><code> SystemDesignSpecification </code></td>
+          </tr>
+          <tr>
+            <td> 2(c) </td>
+            <td> The system architecture </td>
+            <td><code> AISystem</code></td>
+            <td><code> hasDocumenatation </code></td>
+            <td><code> SystemArchitecture </code></td>
+          </tr>
+          <tr>
+            <td> 2(d) </td>
+            <td> Data requirements </td>
+            <td><code> Data </code></td>
+            <td><code>hasDocumentation</code></td>
+            <td><code>Datasheet </code></td>
+          </tr>
+          <tr>
+            <td> 2(e) </td>
+            <td>Human oversight measures </td>
+            <td><code> HumanOversightMeasure </code> </td>
+            <td> <code> modifiesEvent </code></td>
+            <td><code>Event</code></td>
+          </tr>
+          <tr>
+            <td>2(g)</td>
+            <td>Testing data </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasComponent</code> </td>
+            <td><code> TestingData</code></td>
+          </tr>
+          <tr>
+            <td>2(g)</td>
+            <td> Validation data </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasComponent</code> </td>
+            <td><code> ValidationData</code> </td>
+          </tr>
+          <tr>
+            <td>2(g)</td>
+            <td>Characteristics of data </td>
+            <td><code> Data </code></td>
+            <td><code>hasDocumentation</code></td>
+            <td><code> Datasheet</code></td>
+          </tr>
+          <tr>
+            <td>2(g)</td>
+            <td> Metrics used to measure accuracy/ robustness/ cybersecurity </td>
+            <td><code> Accuracy</code>/ <code>Robustness</code>/ <code>CybersecurityMertic</code></td>
+            <td><code> isUsedToMeasure </code> </td>
+            <td> <code>AISystemAccuracy</code>/ <code>Robustness</code>/ <code>Cybersecurity</code></td>
+          </tr>
+          <tr>
+            <td>2(g)</td>
+            <td> Discriminatory impacts of the system </td>
+            <td><code> Consequence</code> </td>
+            <td><code>hasImpact</code></td>
+            <td><code>Impact</code></td>
+          </tr>
+          <tr>
+            <td>2(g)</td>
+            <td>Test log </td>
+            <td><code>AISystem</code> </td>
+            <td><code>hasDocumentation</code></td>
+            <td><code> TestLog</code> </td>
+          </tr>
+          <tr>
+            <td>2(g)</td>
+            <td>Test report </td>
+            <td><code>AISystem</code> </td>
+            <td><code>hasDocumentation</code></td>
+            <td><code>TestReport</code></td>
+          </tr>
+          <tr>
+            <td>3 </td>
+            <td> Expected level of accuracy </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasExpectedAccuray</code></td>
+            <td><code> AISystemAccuracy</code></td>
+          </tr>
+          <tr>
+            <td>3 </td>
+            <td>Foreseeable unintended outcomes of the risk </td>
+            <td><code>Risk</code></td>
+            <td><code>hasConsequence</code></td>
+            <td><code>Consequence</code></td>
+          </tr>
+          <tr>
+            <td>3 </td>
+            <td> Sources of the risk </td>
+            <td><code>RiskSource</code></td>
+            <td> isRiskSourceFor </td>
+            <td><code>Risk</code></td>
+          </tr>
+          <tr>
+            <td> 3 </td>
+            <td> Human oversight measures </td>
+            <td><code> HumanOversightMeasure </code></td>
+            <td><code>modifiesEvent</code></td>
+            <td><code>Event</code></td>
+          </tr>
+          <tr>
+            <td> 3 </td>
+            <td> Technical measures </td>
+            <td><code> TechnicalMeasure </code></td>
+            <td><code>modifiesEvent</code></td>
+            <td><code>Event</code></td>
+          </tr>
+          <tr>
+            <td> 3 </td>
+            <td> Specification of input data </td>
+            <td><code> InputData</code></td>
+            <td><code>hasDocumentation</code></td>
+            <td><code>Datasheet</code></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Risks associated with the AI system </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasRisk </code></td>
+            <td><code>Risk</code></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Sources of the risk </td>
+            <td><code>RiskSource</code></td>
+            <td><code> isRiskSourceFor</code> </td>
+            <td><code>Risk</code></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Consequences of the risk </td>
+            <td><code>Risk</code></td>
+            <td><code>hasConsequence</code></td>
+            <td><code>Consequence</code></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Harmful impacts of the risk </td>
+            <td><code>Consequence</code></td>
+            <td><code>hasImpact</code></td>
+            <td><code>Impact</code></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Probability of risk source/ risk/ consequence /impact </td>
+            <td><code> RiskSource</code>/ <code>Risk</code>/ <code>Consequence</code>/ <code>Impact</code></td>
+            <td><code> hasLikelihood </code></td>
+            <td><code> Likelihood </code> </td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Severity of consequence/ impact </td>
+            <td><code> Consequence</code>/ <code>Impact</code> </td>
+            <td><code> hasSeverity </code></td>
+            <td><code> Severity </code></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Impacted stakeholders </td>
+            <td><code> Impact </code></td>
+            <td><code> hasImpactOnAISubject </code></td>
+            <td><code> AISubject </code></td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> Impacted area </td>
+            <td><code>Impact</code></td>
+            <td><code> hasImpactOnArea </code></td>
+            <td><code> AreaOfImpact </code></td>
+          </tr>
+          <tr>
+            <td >4 </td>
+            <td> Risk management measures applied </td>
+            <td><code> Control </code></td>
+            <td><code>modifiesEvent</code></td>
+            <td><code>Event</code></td>
+          </tr>
+          <tr>
+            <td> 6 </td>
+            <td> Standard applied </td>
+            <td><code>AISystem</code> </td>
+            <td><code> usesStandard </code></td>
+            <td><code> Standard </code></td>
+          </tr>
+          <tr>
+            <td> 6 </td>
+            <td> Harmonised standards applied </td>
+            <td><code>AISystem</code> </td>
+            <td><code> usesStandard </code></td>
+            <td><code> HarmonisedStandard </code></td>
+          </tr>
+          <tr>
+            <td> 6 </td>
+            <td> Technical specifications applied </td>
+            <td><code>AISystem</code> </td>
+            <td><code> usesTechnicalSpecification </code> </td>
+            <td><code> TechnicalSpecification </code> </td>
+          </tr>
+          <tr>
+            <td> 7 </td>
+            <td> EU declaration of conformity </td>
+            <td><code>AISystem</code> </td>
+            <td><code>hasDocumentation</code></td>
+            <td><code> EUDeclarationOfConformity</code> </td>
+          </tr>
+          <tr>
+            <td>  8 </td>
+            <td> Post-market monitoring system </td>
+            <td><code>AISystem</code> </td>
+            <td><code> hasPostmarketMonitoring System </code> </td>
+            <td><code> PostmarketMonitoringSystem</code></td>
+          </tr>
+          <tr>
+            <td>  8 </td>
+            <td> Description of the post-market system that evaluates the performance </td>
+            <td><code> PostmarketMonitoringSystem </code></td>
+            <td><code> dcterms:description</code></td>
+            <td>  </td>
+          </tr>
     </tbody>
 </table>
-
-
-
 </span>
 </div>
 <!--OVERVIEW SECTION-->
@@ -575,7 +572,7 @@ concepts and relations as presented in Table 2.</p>
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
 <table>
-<caption> Table 2: Namespaces used in the document </caption>
+<caption style="font-size: 15px;"> Table 3: Namespaces used in the document </caption>
 <tbody>
 <tr><td><b>airo</b></td><td>&lt;https://w3id.org/AIRO&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
@@ -592,7 +589,7 @@ concepts and relations as presented in Table 2.</p>
 </div>
 
 
-<h3 id="Classes and Properties" class="list">Classes and Properties</h3>
+<h3 id="ClassesandProperties" class="list">Classes and Properties</h3>
 <h4 id="AI System" class="list">Core AI Vocabulary </h4>
 The AIRO concepts and relations required for expressing  AI systems and their characteristics as per the AI Act are represeneted in this section.
 <h5 id="core AI classes" class="list">Classes</h5>
@@ -1965,13 +1962,29 @@ This use-case describes an instance where Uber used a facial recognition identif
    <figcaption style="font-size: 15px;">Figure3: AIRO-based representation of VioGén use-case</figcaption>
  </center>
 
-<h3 id="application for high-risk" class="list">Identification of High-risk AI Systems</h3>
+<div id="A-HighRisk"><h3 id="A-HighRisk" class="list">Identification of High-risk AI Systems</h3>
 
 
-<h3 id="application for technical documentation" class="list">Generating Technical Documentation</h3>
+<code>
+PREFIX airo: <https://w3id.org/AIRO#>
+SELECT ?system ?technique ?domain ?purpose ?application ?user ?subject ?environment
+WHERE {
+      ?system a airo:AISystem ;
+              airo:usesTechnique ?technique ;
+              airo:isUsedWithinDomain ?domain ;
+              airo:hasPurpose ?purpose ;
+              airo:hasApplication ?application ;
+              airo:isUsedBy ?user ;
+              airo:affects ?subject ;
+              airo:isUsedInEnvironment ?environment . }
 
+</code>
+</div>
 
+<div id="A-TechnicalDocumentation">
+<h3 id="A-TechnicalDocumentation" class="list">Generating Technical Documentation</h3>
 
+</div>
 <!--CROSSREF SECTION-->
 <div id="Crossref"><h2 id="intro" class="list">Cross Reference<span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span>
