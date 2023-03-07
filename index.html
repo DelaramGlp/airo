@@ -745,6 +745,32 @@ concepts and relations as presented in Table 2.</p>
     </section>
         
         <section>
+    <h2 id="AIComponent">
+      <bdi class="secno"> </bdi> AI Component
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#AIComponent"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#AIComponent </code></td>
+        <tr>
+          <td> Term </td>
+          <td>AIComponent </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> AI Component </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Component (element) of an AI system </td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+        
+        <section>
     <h2 id="Output">
       <bdi class="secno"> </bdi> Output
       <a class="self-link" aria-label="§" href="https://w3id.org/airo#Output"></a>
@@ -770,8 +796,7 @@ concepts and relations as presented in Table 2.</p>
     </table>
     </section>
         
- 
-        
+
          <section>
     <h2 id="Event">
       <bdi class="secno"> </bdi> Event
@@ -792,15 +817,150 @@ concepts and relations as presented in Table 2.</p>
         </tr>
         <tr>
           <td> Definition </td>
-          <td> </td>
+          <td> occurrence or change of a particular set of circumstances</td>
         </tr>
         <tr>
           <td>Source</td>
-          <td><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206&from=EN">AI Act proposal</a></td>
+          <td>ISO 31000, 3.5</td>
         </tr>
       </tbody>
     </table>
     </section>
+        <section>
+         <h2 id="RiskSource">
+      <bdi class="secno"> </bdi> Risk Source
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#RiskSource"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#RiskSource </code></td>
+        <tr>
+          <td> Term </td>
+          <td>RiskSource </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> Risk Source </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> An element that has the potential give rise to a risk </td>
+        </tr>
+        <tr>
+            <td>SubClassOf</td>
+            <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
+          
+          </tr>  
+        <tr>
+          <td>Source</td>
+          <td>ISO 31000, 3.4</td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+        
+        <section>
+         <h2 id="Risk">
+      <bdi class="secno"> </bdi> Risk
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#Risk"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#Risk </code></td>
+        <tr>
+          <td> Term </td>
+          <td>Risk </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> Risk </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Risk of harm associated with an AI system </td>
+        </tr>
+        <tr>
+            <td>SubClassOf</td>
+            <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
+          
+          </tr>  
+      </tbody>
+    </table>
+    </section>
+        
+        <section>
+         <h2 id="Consequence">
+      <bdi class="secno"> </bdi> Consequence
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#Consequence"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#Consequence </code></td>
+        <tr>
+          <td> Term </td>
+          <td>Consequence </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> Consequence </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Outcome of an event affecting objectives </td>
+        </tr>
+        <tr>
+            <td>SubClassOf</td>
+            <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
+          
+          </tr> 
+          <tr>
+            <td> Source</td>
+            <td>ISO 31000, 3.6</td>
+          </tr>
+      </tbody>
+    </table>
+    </section>
+        
+        <section>
+        <h2 id="Impact">
+      <bdi class="secno"> </bdi> Impact
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#Impact"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#Impact </code></td>
+        <tr>
+          <td> Term </td>
+          <td>Impact </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> Impact </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Outcome of a consequence on persons, groups, facilities, environment, etc. </td>
+        </tr>
+        <tr>
+            <td>SubClassOf</td>
+            <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a></td>
+          
+          </tr> 
+      </tbody>
+    </table>
+    </section>
+        
+        
+        
+        
         
         </section> <!--- classes-->
         
@@ -981,14 +1141,187 @@ concepts and relations as presented in Table 2.</p>
           
       </tbody>
     </table>
-                </section>          
+                </section> 
+            
+    <section>   
+    <h2 id="hasComponent">
+      <bdi class="secno"> </bdi> has component
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasComponent"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasComponent </code></td>
+        <tr>
+          <td> Term </td>
+          <td> hasComponent </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> has component </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Indicates components of an AI system </td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+        </tr>
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#AIComponent">airo:AIComponent</a></td>
+        </tr>
+          
+      </tbody>
+    </table>
+                </section> 
+            
+           <section> 
+          <h2 id="hasRisk">
+      <bdi class="secno"> </bdi> has risk
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasRisk"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasRisk </code></td>
+        <tr>
+          <td> Term </td>
+          <td> hasRisk </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> has risk </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Indicates risks associated with an AI system, an AI component, etc.</td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td></td>
+        </tr>
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
+        </tr>
+          
+      </tbody>
+    </table>
+                </section>   
+        
+         <section>           
+    <h2 id="isRiskSourceFor">
+      <bdi class="secno"> </bdi> is risk source for
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#isRiskSourceFor"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#isRiskSourceFor </code></td>
+        <tr>
+          <td> Term </td>
+          <td> isRiskSourceFor </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> is risk source for </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Specifies risks caused by materialisation of a risk source </td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td><a href="https://w3id.org/airo#RiskSource">airo:RiskSource</a></td>
+        </tr>
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
+        </tr>
+          
+      </tbody>
+    </table>
+                </section> 
+    
+            <section>           
+    <h2 id="hasConsequence">
+      <bdi class="secno"> </bdi> has consequence
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasConsequence"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasConsequence </code></td>
+        <tr>
+          <td> Term </td>
+          <td> hasConsequence </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> has consequence </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Specifies consequences caused by materialisation of a risk </td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
+        </tr>
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a></td>
+        </tr>
+          
+      </tbody>
+    </table>
+                </section> 
+            
+        <section>           
+    <h2 id="hasImpact">
+      <bdi class="secno"> </bdi> has impact
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpact"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasImpact </code></td>
+        <tr>
+          <td> Term </td>
+          <td> hasImpact </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> has impact </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Specifies impacts caused by materialisation of a consequence </td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a></td>
+        </tr>
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
+        </tr>
+          
+      </tbody>
+    </table>
+                </section> 
+                
         
         
         </section> <!--- Propertise-->
-        
-        
-        
-        
+
         
     </section>
             
