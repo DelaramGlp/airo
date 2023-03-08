@@ -62,12 +62,25 @@ terms:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/airo#affects
-airo:affects rdf:type owl:ObjectProperty ;
-             owl:inverseOf airo:hasImpactOnStakeholder ;
-             rdfs:domain airo:AISystem ;
-             rdfs:range airo:Stakeholder ;
-             rdfs:label "affects"@en .
+###  https://delaramglp.github.io/aidocs/taio#hasAISubject
+<https://delaramglp.github.io/aidocs/taio#hasAISubject> rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "Indicates subject of an AI system"@en ,
+                                                                   "has AI subject"@en .
+
+
+###  https://w3id.org/airo#IsImpactOnStakeholder
+airo:IsImpactOnStakeholder rdf:type owl:ObjectProperty ;
+                           rdfs:domain airo:Impact ;
+                           rdfs:range airo:Stakeholder ;
+                           rdfs:comment "Specifies stakeholders that are affected by an AI impact"@en ;
+                           rdfs:label "is impact on stakeholder"@en .
+
+
+###  https://w3id.org/airo#conformsToStandard
+airo:conformsToStandard rdf:type owl:ObjectProperty ;
+                        rdfs:range airo:Standard ;
+                        rdfs:comment "Indicates conformance of an entity to a standard"@en ;
+                        rdfs:label "conforms to standard"@en .
 
 
 ###  https://w3id.org/airo#detectsEvent
@@ -75,6 +88,7 @@ airo:detectsEvent rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf airo:modifiesEvent ;
                   rdfs:domain airo:Control ;
                   rdfs:range airo:Event ;
+                  rdfs:comment "Indicates the control used for detecting an event"@en ;
                   rdfs:label "detects event"@en .
 
 
@@ -83,6 +97,7 @@ airo:eliminatesEvent rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf airo:modifiesEvent ;
                      rdfs:domain airo:Control ;
                      rdfs:range airo:Event ;
+                     rdfs:comment "Indicates the control used for eliminating an event"@en ;
                      rdfs:label "eliminates event"@en .
 
 
@@ -119,8 +134,8 @@ airo:hasConsequence rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
-                      rdfs:domain airo:AISystem ;
-                      rdfs:range airo:Documentation ;
+                      rdfs:range airo:Document ;
+                      rdfs:comment "Indicates documents related to an entity, e.g. AI system"@en ;
                       rdfs:label "has documentation"@en .
 
 
@@ -137,20 +152,6 @@ airo:hasImpact rdf:type owl:ObjectProperty ;
                rdfs:range airo:Impact ;
                rdfs:comment "Specifies impacts caused by materialisation of a consequence"@en ;
                rdfs:label "has impact"@en .
-
-
-###  https://w3id.org/airo#hasImpactOnArea
-airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:Impact ;
-                     rdfs:range airo:AreaOfImpact ;
-                     rdfs:label "has impact on area"@en .
-
-
-###  https://w3id.org/airo#hasImpactOnStakeholder
-airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
-                            rdfs:domain airo:Impact ;
-                            rdfs:range airo:Stakeholder ;
-                            rdfs:label "has impact on stakeholder"@en .
 
 
 ###  https://w3id.org/airo#hasLifecyclePhase
@@ -203,25 +204,11 @@ airo:hasStakeholder rdf:type owl:ObjectProperty ;
                     rdfs:label "has stakeholder"@en .
 
 
-###  https://w3id.org/airo#hasSystem
-airo:hasSystem rdf:type owl:ObjectProperty ;
-               rdfs:domain airo:AISystem ;
-               rdfs:range airo:Post-marketMonitoringSystem ;
-               rdfs:label "has system"@en .
-
-
 ###  https://w3id.org/airo#hasVersion
 airo:hasVersion rdf:type owl:ObjectProperty ;
                 rdfs:domain airo:AISystem ;
                 rdfs:range airo:Version ;
                 rdfs:label "has version"@en .
-
-
-###  https://w3id.org/airo#hasVulnerability
-airo:hasVulnerability rdf:type owl:ObjectProperty ;
-                      rdfs:domain airo:AISystem ;
-                      rdfs:comment "Indicates vulnerabilities of an AI system."@en ;
-                      rdfs:label "has vulnerability"@en .
 
 
 ###  https://w3id.org/airo#isAppliedWithinDomain
@@ -230,13 +217,6 @@ airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
                            rdfs:range airo:Domain ;
                            rdfs:comment "Specifies the domain an AI system is used within"@en ;
                            rdfs:label "is applied within domain"@en .
-
-
-###  https://w3id.org/airo#isDevelopedBy
-airo:isDevelopedBy rdf:type owl:ObjectProperty ;
-                   rdfs:domain airo:AISystem ;
-                   rdfs:range airo:AIDeveloper ;
-                   rdfs:label "is developed by"@en .
 
 
 ###  https://w3id.org/airo#isExpectedAccurayOf
@@ -257,23 +237,20 @@ airo:isExtentOfUseOf rdf:type owl:ObjectProperty ;
 airo:isFollowedByControl rdf:type owl:ObjectProperty ;
                          rdfs:domain airo:Control ;
                          rdfs:range airo:Control ;
+                         rdfs:comment "Specifies the order of controls"@en ;
                          rdfs:label "is followed by control"@en .
 
 
-###  https://w3id.org/airo#isInVulnerablePosition
-airo:isInVulnerablePosition rdf:type owl:ObjectProperty ;
-                            rdfs:domain [ rdf:type owl:Class ;
-                                          owl:unionOf ( airo:Group
-                                                        airo:Individual
-                                                      )
-                                        ] ;
-                            rdfs:range airo:VulnerablePosition ;
-                            rdfs:label "is in vulnerable position"@en .
+###  https://w3id.org/airo#isImpactOnArea
+airo:isImpactOnArea rdf:type owl:ObjectProperty ;
+                    rdfs:domain airo:Impact ;
+                    rdfs:range airo:AreaOfImpact ;
+                    rdfs:comment "Specifies the area that is affected by an AI impact" ;
+                    rdfs:label "is impact on area"@en .
 
 
 ###  https://w3id.org/airo#isPartOfControl
 airo:isPartOfControl rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:PartialControl ;
                      rdfs:range airo:Control ;
                      rdfs:label "is part of control"@en .
 
@@ -283,6 +260,14 @@ airo:isPerformanceOf rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Performance ;
                      rdfs:range airo:AISystem ;
                      rdfs:label "is performance of"@en .
+
+
+###  https://w3id.org/airo#isProvidedBy
+airo:isProvidedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AISystem ;
+                  rdfs:range airo:Provider ;
+                  rdfs:comment "Indicates provider of an AI system"@en ;
+                  rdfs:label "is provided by"@en .
 
 
 ###  https://w3id.org/airo#isRiskSourceFor
@@ -296,7 +281,8 @@ airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#isUsedBy
 airo:isUsedBy rdf:type owl:ObjectProperty ;
               rdfs:domain airo:AISystem ;
-              rdfs:range airo:AIUser ;
+              rdfs:range airo:User ;
+              rdfs:comment "Indicates user of an AI system"@en ;
               rdfs:label "is used by"@en .
 
 
@@ -330,6 +316,7 @@ airo:mitigatesEvent rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf airo:modifiesEvent ;
                     rdfs:domain airo:Control ;
                     rdfs:range airo:Event ;
+                    rdfs:comment "Indicates the control used for mitigating an event"@en ;
                     rdfs:label "mitigates event"@en .
 
 
@@ -337,6 +324,7 @@ airo:mitigatesEvent rdf:type owl:ObjectProperty ;
 airo:modifiesEvent rdf:type owl:ObjectProperty ;
                    rdfs:domain airo:Control ;
                    rdfs:range airo:Event ;
+                   rdfs:comment "Indicates the control used for modification of an event"@en ;
                    rdfs:label "modifies event"@en .
 
 
@@ -346,13 +334,6 @@ airo:producesOutput rdf:type owl:ObjectProperty ;
                     rdfs:range airo:Output ;
                     rdfs:comment "Specifies an output generated by an AI system"@en ;
                     rdfs:label "produces output"@en .
-
-
-###  https://w3id.org/airo#usesStandard
-airo:usesStandard rdf:type owl:ObjectProperty ;
-                  rdfs:domain airo:AISystem ;
-                  rdfs:range airo:Standard ;
-                  rdfs:label "uses standard"@en .
 
 
 ###  https://w3id.org/airo#usesTechnique
@@ -391,13 +372,6 @@ airo:AIComponent rdf:type owl:Class ;
                  rdfs:label "AI Component"@en .
 
 
-###  https://w3id.org/airo#AIDeveloper
-airo:AIDeveloper rdf:type owl:Class ;
-                 rdfs:subClassOf airo:Stakeholder ;
-                 rdfs:comment "A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed with a view to placing it on the market or putting it into service under its own name or trademark, whether for payment or free of charge. [Source: AI Act]"@en ;
-                 rdfs:label "AI Developer"@en .
-
-
 ###  https://w3id.org/airo#AILifecyclePhase
 airo:AILifecyclePhase rdf:type owl:Class ;
                       rdfs:comment "A Phase of AI lifecycle which indicates evolution of the system from conception through retirement"@en ;
@@ -407,13 +381,13 @@ airo:AILifecyclePhase rdf:type owl:Class ;
 ###  https://w3id.org/airo#AISubject
 airo:AISubject rdf:type owl:Class ;
                rdfs:subClassOf airo:Stakeholder ;
-               rdfs:comment "An AI subject is an organization or entity that is impacted by an AI system, service or product."@en ;
+               rdfs:comment "An entity that is subjected to the use of AI"@en ;
                rdfs:label "AI Subject"@en .
 
 
 ###  https://w3id.org/airo#AISystem
 airo:AISystem rdf:type owl:Class ;
-              rdfs:subClassOf airo:System ;
+              rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
               rdfs:comment "An engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy [NIST]"@en ;
               rdfs:label "AI System"@en .
 
@@ -431,13 +405,6 @@ airo:AITechnique rdf:type owl:Class ;
                  rdfs:label "AI Technique"@en .
 
 
-###  https://w3id.org/airo#AIUser
-airo:AIUser rdf:type owl:Class ;
-            rdfs:subClassOf airo:Stakeholder ;
-            rdfs:comment "Any natural or legal person, public authority, agency or other body using an AI system under its authority. [Source: AI Act]"@en ;
-            rdfs:label "AI User"@en .
-
-
 ###  https://w3id.org/airo#Accuracy
 airo:Accuracy rdf:type owl:Class ;
               rdfs:subClassOf airo:AISystemIndicator ;
@@ -450,14 +417,6 @@ airo:AreaOfImpact rdf:type owl:Class ;
                   rdfs:label "Area Of Impact"@en .
 
 
-###  https://w3id.org/airo#AutomatedControl
-airo:AutomatedControl rdf:type owl:Class ;
-                      rdfs:subClassOf airo:Control ;
-                      owl:disjointWith airo:ManualControl ;
-                      rdfs:comment "Represents controls that do not involve human intervention."@en ;
-                      rdfs:label "Automated Control"@en .
-
-
 ###  https://w3id.org/airo#Consequence
 airo:Consequence rdf:type owl:Class ;
                  rdfs:subClassOf airo:Event ;
@@ -468,7 +427,8 @@ airo:Consequence rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Control
 airo:Control rdf:type owl:Class ;
-             rdfs:comment "Represents the measure that maintains and/or modifies risk. [Source: ISO 31000, 3.8]"@en ;
+             rdfs:comment "A measure that maintains and/or modifies risk"@en ;
+             rdfs:isDefinedBy "Source: ISO 31000, 3.8" ;
              rdfs:label "Control"@en .
 
 
@@ -479,30 +439,17 @@ airo:DataAccuracy rdf:type owl:Class ;
                   rdfs:label "Data Accuracy"@en .
 
 
-###  https://w3id.org/airo#DetectionControl
-airo:DetectionControl rdf:type owl:Class ;
-                      rdfs:subClassOf airo:Control ;
-                      rdfs:comment "Represents controls that are applied to detect an event."@en ;
-                      rdfs:label "Detection Control"@en .
-
-
-###  https://w3id.org/airo#Documentation
-airo:Documentation rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
-                   rdfs:label "Documentation"@en .
+###  https://w3id.org/airo#Document
+airo:Document rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+              rdfs:comment "A piece of written, printed, or electronic matter that provides information or evidence [from Oxford Languages dictionary]"@en ;
+              rdfs:label "Document"@en .
 
 
 ###  https://w3id.org/airo#Domain
 airo:Domain rdf:type owl:Class ;
             rdfs:comment "Refers to domain, sector, or industry"@en ;
             rdfs:label "Domain"@en .
-
-
-###  https://w3id.org/airo#EliminationControl
-airo:EliminationControl rdf:type owl:Class ;
-                        rdfs:subClassOf airo:Control ;
-                        rdfs:comment "Represents controls that applied to prevent an event from happening."@en ;
-                        rdfs:label "Elimination Control"@en .
 
 
 ###  https://w3id.org/airo#Event
@@ -526,13 +473,6 @@ airo:ExtentOfUse rdf:type owl:Class ;
                  rdfs:label "Extent Of Use"@en .
 
 
-###  https://w3id.org/airo#Group
-airo:Group rdf:type owl:Class ;
-           rdfs:subClassOf airo:AISubject ;
-           rdfs:comment "A group of persons such as citizens, marginsalised groups, etc."@en ;
-           rdfs:label "Group"@en .
-
-
 ###  https://w3id.org/airo#Impact
 airo:Impact rdf:type owl:Class ;
             rdfs:subClassOf airo:Consequence ;
@@ -545,13 +485,6 @@ airo:Indicator rdf:type owl:Class ;
                rdfs:label "Indicator"@en .
 
 
-###  https://w3id.org/airo#Individual
-airo:Individual rdf:type owl:Class ;
-                rdfs:subClassOf airo:AISubject ;
-                rdfs:comment "An individual human being."@en ;
-                rdfs:label "Individual"@en .
-
-
 ###  https://w3id.org/airo#Likelihood
 airo:Likelihood rdf:type owl:Class ;
                 rdfs:subClassOf airo:RiskIndicator ;
@@ -559,48 +492,15 @@ airo:Likelihood rdf:type owl:Class ;
                 rdfs:label "Likelihood"@en .
 
 
-###  https://w3id.org/airo#ManualControl
-airo:ManualControl rdf:type owl:Class ;
-                   rdfs:subClassOf airo:Control ;
-                   owl:disjointWith airo:SemiAutomatedControl ;
-                   rdfs:comment "Represents controls performed by humans without any use of technologies."@en ;
-                   rdfs:label "Manual Control"@en .
-
-
 ###  https://w3id.org/airo#Metric
 airo:Metric rdf:type owl:Class ;
             rdfs:label "Metric"@en .
-
-
-###  https://w3id.org/airo#OperationalControl
-airo:OperationalControl rdf:type owl:Class ;
-                        rdfs:subClassOf airo:Control ;
-                        rdfs:label "Operational Control"@en .
-
-
-###  https://w3id.org/airo#OrganisationalControl
-airo:OrganisationalControl rdf:type owl:Class ;
-                           rdfs:subClassOf airo:Control ;
-                           rdfs:label "Organisational Control"@en .
 
 
 ###  https://w3id.org/airo#Output
 airo:Output rdf:type owl:Class ;
             rdfs:comment "Output of an AI system"@en ;
             rdfs:label "Output"@en .
-
-
-###  https://w3id.org/airo#PartialControl
-airo:PartialControl rdf:type owl:Class ;
-                    rdfs:subClassOf [ owl:intersectionOf ( airo:Control
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty airo:isPartOfControl ;
-                                                             owl:someValuesFrom airo:Control
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                    rdfs:label "Partial Control"@en .
 
 
 ###  https://w3id.org/airo#Performance
@@ -610,17 +510,12 @@ airo:Performance rdf:type owl:Class ;
                  rdfs:label "Performance"@en .
 
 
-###  https://w3id.org/airo#Post-marketMonitoringSystem
-airo:Post-marketMonitoringSystem rdf:type owl:Class ;
-                                 rdfs:subClassOf airo:System ;
-                                 rdfs:label "Post-market Monitoring System"@en .
-
-
-###  https://w3id.org/airo#PreventionControl
-airo:PreventionControl rdf:type owl:Class ;
-                       rdfs:subClassOf airo:Control ;
-                       rdfs:comment "Control applied to reduce likelihood or severity of the risk, consequence or impact."@en ;
-                       rdfs:label "Mitigation Control"@en .
+###  https://w3id.org/airo#Provider
+airo:Provider rdf:type owl:Class ;
+              rdfs:subClassOf airo:Stakeholder ;
+              rdfs:comment "A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed and places that system on the market or puts it into service under its own name or trademark, whether for payment or free of charge"@en ;
+              rdfs:isDefinedBy "AI Act, Common position, Art. 3(2)"@en ;
+              rdfs:label "Provider"@en .
 
 
 ###  https://w3id.org/airo#Purpose
@@ -665,13 +560,6 @@ airo:Robustness rdf:type owl:Class ;
                 rdfs:label "Robustness"@en .
 
 
-###  https://w3id.org/airo#SemiAutomatedControl
-airo:SemiAutomatedControl rdf:type owl:Class ;
-                          rdfs:subClassOf airo:Control ;
-                          rdfs:comment "Represnets controls that comprise a combination of automated and manual controls."@en ;
-                          rdfs:label "Semi Automated Control"@en .
-
-
 ###  https://w3id.org/airo#Severity
 airo:Severity rdf:type owl:Class ;
               rdfs:subClassOf airo:RiskIndicator ;
@@ -681,19 +569,16 @@ airo:Severity rdf:type owl:Class ;
 ###  https://w3id.org/airo#Stakeholder
 airo:Stakeholder rdf:type owl:Class ;
                  rdfs:comment "Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity [Source: ISO/IEC TR 24028, 3.37]"@en ;
+                 rdfs:isDefinedBy "ISO/IEC TR 24028, 3.37"@en ;
                  rdfs:label "Stakeholder"@en .
 
 
 ###  https://w3id.org/airo#Standard
 airo:Standard rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+              rdfs:comment "A resource, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context."@en ;
+              rdfs:isDefinedBy "ISO/IEC TR 29110-1:2016(en), 3.59"@en ;
               rdfs:label "Standard"@en .
-
-
-###  https://w3id.org/airo#System
-airo:System rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
-            rdfs:label "System"@en .
 
 
 ###  https://w3id.org/airo#SystemAccuracy
@@ -709,11 +594,12 @@ airo:SystemSecurity rdf:type owl:Class ;
                     rdfs:label "System Security"@en .
 
 
-###  https://w3id.org/airo#TechnicalControl
-airo:TechnicalControl rdf:type owl:Class ;
-                      rdfs:subClassOf airo:Control ;
-                      rdfs:comment "Represents controls that are implemented using a technology."@en ;
-                      rdfs:label "Technical Control"@en .
+###  https://w3id.org/airo#User
+airo:User rdf:type owl:Class ;
+          rdfs:subClassOf airo:Stakeholder ;
+          rdfs:comment "Any natural or legal person under whose authority the system is used."@en ;
+          rdfs:isDefinedBy "AI Act, Common position, Art.3 (4)"@en ;
+          rdfs:label "User"@en .
 
 
 ###  https://w3id.org/airo#UserIndicator
