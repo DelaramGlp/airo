@@ -168,7 +168,7 @@ airo:hasLifecyclePhase rdf:type owl:ObjectProperty ;
 airo:hasLikelihood rdf:type owl:ObjectProperty ;
                    rdfs:domain airo:Event ;
                    rdfs:range airo:Likelihood ;
-                   rdfs:comment "Indicates the probability of occurrence of an event."@en ;
+                   rdfs:comment "Indicates the probability of occurrence of an event"@en ;
                    rdfs:label "has likelihood"@en .
 
 

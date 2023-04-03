@@ -139,13 +139,12 @@ technologies.
 <!--REQUIREMENTS SECTION-->
     <section id="requirements">
         <h2>Requirements</h2>
-            <p> The purpose of AIRO is to express AI risks to enable organisations
-                (i) determine whether their AI systems are "high-risk" as per Annex III of the AI Act and
-                (ii) generate the technical documentation required for conformity to the AI Act.</p>
+            <p> The purpose of AIRO is to express AI risks to enable organisations to represent their AI systems and the associated AI risks and determine whether their AI systems are "high-risk" as per Annex III of the AI Act and
+                </p>
 
 
-        <section id="high-riskrequirements">
-            <h3>Describing High-Risk AI Systems</h3>
+ <!--       <section id="high-riskrequirements">
+            <h3>Describing High-Risk AI Systems</h3> -->
             <p>We analysed the requirements of the AI Act, in particular the list of high-risk systems in Annex III, and identified the specific concepts whose combinations determine whether the AI system is considered high-risk.These are listed in Table 1 in the form of: competency questions, concepts, and relation with AI system.</p>
         
 <br><br>
@@ -196,11 +195,21 @@ technologies.
 </div>
         </section>
         
-        <center>
+<center>
      <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/airo-annexIII-concepts.jpeg"  alt="annex III concepts" width="500" >
      <figcaption style="font-size: 15px;">Figure 1: concepts required for determining high-risk AI applications as per Annex III</figcaption>
   </center>
         
+<br>        
+ To specify the conditions where use of an AI system is classified into the high-risk category, we determine values of the identified concepts by answering the 5 questions for each clause in Annex III. Combinations of values, which can be treated as rules for high-risk uses, for Annex III's high-risk applications are represented in Figure 2. <br>
+        
+ If an AI system meets at least one of the conditions, it is considered as high-risk unless (i) its provider demonstrates that ``the output of the system purely accessory in respect of the relevant action or decision to be taken and is not therefore likely to lead to a significant risk to the health, safety or fundamental rights.'' (Art. 6 (3)), or (ii) it is put into service by a small-scale provider in the public or private sector for their own use to assess creditworthiness, determine credit score, health/life insurance risk assessment, or health/life insurance pricing (Annex III, pt. 5(a) and 5(b)).  
+<center>
+     <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/annexIII-analysis-czversion.jpeg"  alt="annex III combinations" width="700" >
+     <figcaption style="font-size: 15px;">Figure 2: Describing Annex III high-risk conditions using the 5 concepts</figcaption>
+  </center>        
+
+    <!---
 <section id="TechnicalDocumentation"><h3>Technical Documentation</h3>
 
 <p> To conform to the AI Act, high-risk AI systems need to fulfil the requirements laid out
@@ -536,15 +545,15 @@ concepts and relations as presented in Table 2.</p>
     </tbody>
 </table>
         </section>
-    </section>
+    </section>-->
     
-
+    
     
 <!--OVERVIEW SECTION-->
     <section id="overview"><h2> Overview </h2>
         <section id="core"> <h3>Core Concepts and Relations</h3>
 
-  AIRO’s core concepts and relations are illustrated in Figure 2. The upper half shows the
+  AIRO’s core concepts and relations are illustrated in Figure 3. The upper half shows the
   main concepts required for describing an AI System (green boxes), and the lower half
   represents key concepts for expressing Risk (purple boxes). The relation <a href="#hasRisk" title="https://w3id.org/AIRO#hasRisk">hasRisk</a> links
   these two halves by connecting risk to either an AI system or a component of the system.
@@ -553,7 +562,7 @@ concepts and relations as presented in Table 2.</p>
 
   <center>
      <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/airo-concepts-3april.jpeg"  alt="AIRO concepts" width="800" >
-     <figcaption style="font-size: 15px;">Figure 2: AIRO core concepts and relations</figcaption>
+     <figcaption style="font-size: 15px;">Figure 3: AIRO core concepts and relations</figcaption>
   </center>
         </section>
 
@@ -1762,7 +1771,7 @@ concepts and relations as presented in Table 2.</p>
                 </section>         
             
             
-            <section>           
+   <section>           
     <h2 id="modifiesEvent">
       <bdi class="secno"> </bdi> modifies event
       <a class="self-link" aria-label="§" href="https://w3id.org/airo#modifiesEvent"></a>
@@ -1795,7 +1804,7 @@ concepts and relations as presented in Table 2.</p>
           
       </tbody>
     </table>
-                </section> 
+</section> 
             
          <section>   
         <h2 id="detectsEvent">
@@ -2198,7 +2207,44 @@ concepts and relations as presented in Table 2.</p>
         </tr>
       </tbody>
     </table>
-    </section>         
+    </section>
+            
+     <section>           
+    <h2 id="affects">
+      <bdi class="secno"> </bdi> affects
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#affects"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#affects</code></td>
+        <tr>
+          <td> Term </td>
+          <td> affects </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> affects </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Indicates the stakeholders affected by the AI system </td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+        </tr>
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#AffectedStakeholder">airo:AffectedStakeholder</a></td>
+        </tr>
+          
+      </tbody>
+    </table>
+                </section>         
+                    
+            
     
    <section>           
     <h2 id="hasVersion">
@@ -2270,7 +2316,43 @@ concepts and relations as presented in Table 2.</p>
           
       </tbody>
     </table>
-    </section>  
+    </section> 
+    
+     <section>           
+    <h2 id="hasLikelihood">
+      <bdi class="secno"> </bdi> has likelihood
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasLikelihood"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:12%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasLikelihood</code></td>
+        <tr>
+          <td> Term </td>
+          <td> hasLikelihood </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> has likelihood </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Indicates the probability of occurrence of an event </td>
+        </tr>
+        <tr>
+          <td>Domain</td>
+            <td><a href="https://w3id.org/airo#Event">airo:Event</a>
+            </td>
+        </tr>
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#Likelihood">airo:Likelihood</a></td>
+        </tr>
+          
+      </tbody>
+    </table>
+    </section>         
             
     <section>           
     <h2 id="hasLifecyclePhase">
@@ -2325,7 +2407,10 @@ concepts and relations as presented in Table 2.</p>
 
 <!--APPLICATIOn SECTION-->
     <section id="application"><h2>AIRO Usage and Application</h2>
-        <section id="uber" class="list"><h3>Use-case 1: Uber's Real-time ID Check System</h3>
+        <section id="usecases" class="list"><h3>Use-cases</h3>
+         To be published.  
+        </section>
+      <!--  <section id="uber" class="list"><h3>Use-case 1: Uber's Real-time ID Check System</h3>
  <span>
 This use-case describes an instance where Uber used a facial recognition identification system, known as the Real Time ID (RTID), to ensure that the driver's account is not used by anyone other than the registered Uber driver. If the system failed to recognise a person for two consecutive times, the driver's contract would be terminated and their driver and vehicle licenses would be revoked. Multiple incidents where the system failed to verify drivers of BAME (Black, Asian, Minority Ethnic) background proved that the use of the facial recognition system involved risks of inaccuracy which could have lead to unfair dismissal of drivers.
 </span>
@@ -2349,7 +2434,7 @@ This use-case describes an instance where Uber used a facial recognition identif
    <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/AIRO-Viogen.jpg" alt="viogen domestic violence system" width="800">
    <figcaption style="font-size: 15px;">Figure3: AIRO-based representation of VioGén use-case</figcaption>
  </center>
-        </section>
+        </section>-->
         
 <section id="A-HighRisk"><h3 id="A-HighRisk" class="list">Identification of High-risk AI Systems</h3>
 <p>To assist with determination of whether the system would be considered a high-risk AI
@@ -2360,20 +2445,19 @@ use-cases and compared against the specific criteria described in Annex III.</p>
 the concepts necessary to determine whether the system is high-risk.</p>
 <pre>
 <code>
-PREFIX airo: &lthttps://w3id.org/AIRO#&gt
-SELECT ?system ?technique ?domain ?purpose ?application ?user ?subject ?environment
+PREFIX airo: &lthttps://w3id.org/airo#&gt
+SELECT ?system ?domain ?purpose ?capability ?user ?subject 
 WHERE {
       ?system a airo:AISystem ;
-              airo:usesTechnique ?technique ;
-              airo:isUsedWithinDomain ?domain ;
+              airo:isAppliedWithinDomain ?domain ;
               airo:hasPurpose ?purpose ;
-              airo:hasApplication ?application ;
+              airo:hasCapability ?capability ;
               airo:isUsedBy ?user ;
-              airo:affects ?subject ;
-              airo:isUsedInEnvironment ?environment . }
+              airo:affects ?subject . }
 
 </code>
 </pre>
+<!---    
 <p> Information retrieved from the use-cases to determine whether they are high-risk AI using the SPARQL query is shown in Table 4.</p>
 
 <div align="center">
@@ -2476,8 +2560,8 @@ is met.</p>
   </code>
 </pre>
 
-    </section>
-
+    </section>-->
+<!--
 <section id="A-TechnicalDocumentation">
 <h3>Generating Technical Documentation</h3>
 <p> To demonstrate how AIRO assists with producing technical documentation as required by Art. 11 and described in Annex IV of the AI Act,
@@ -2581,7 +2665,7 @@ we utilised SPARQL queries to retrieve the information regarding the two use-cas
   </table>
     </div>
     </section>
-
+-->
 
 
 
@@ -2593,17 +2677,18 @@ we utilised SPARQL queries to retrieve the information regarding the two use-cas
       <h2>References</h2>
 <span class="markdown">
 1. Artificial Intelligence Act: Proposal for a regulation of the European Parliament and the Council laying down harmonised rules on Artificial Intelligence (Artificial Intelli-gence Act) and amending certain Union legislative acts, https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELLAR:e0649735-a372-11eb-9585-01aa75ed71a1, (2021).
+<br>    
 2. ISO 31000 Risk management — Guidelines, (2018).
+<br>    
 3. ISO/IEC DIS 22989(en) Information technology — Artificial intelligence — Artificial intelligence concepts and terminology, https://www.iso.org/obp/ui/#iso:std:iso-iec:22989:dis:ed-1:v1:en, (2022)
-4. Garijo D. WIDOCO: a wizard for documenting ontologies. In: International Semantic Web Conference. Springer; 2017. p. 94-102. </span>
+ </span>
         </section>
 <section id="acknowledgments">
     <h2>Acknowledgments</h2>
 <p>
 This project has received funding from the European Union's Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497,
 as part of the ADAPT SFI Centre for Digital Media Technology is funded by Science Foundation Ireland through the SFI Research Centres Programme and
-is co-funded under the European Regional Development Fund (ERDF) through Grant#13/RC/2106_P2.
-Harshvardhan J. Pandit has received funding under the Irish Research Council Government of Ireland Postdoctoral Fellowship Grant#GOIPD/2020/790.</p>
+is co-funded under the European Regional Development Fund (ERDF) through Grant#13/RC/2106_P2.</p>
         </section>
 
 
