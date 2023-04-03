@@ -62,20 +62,6 @@ terms:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://delaramglp.github.io/aidocs/taio#hasAISubject
-<https://delaramglp.github.io/aidocs/taio#hasAISubject> rdf:type owl:ObjectProperty ;
-                                                        rdfs:label "Indicates subject of an AI system"@en ,
-                                                                   "has AI subject"@en .
-
-
-###  https://w3id.org/airo#IsImpactOnStakeholder
-airo:IsImpactOnStakeholder rdf:type owl:ObjectProperty ;
-                           rdfs:domain airo:Impact ;
-                           rdfs:range airo:Stakeholder ;
-                           rdfs:comment "Specifies stakeholders that are affected by an AI impact"@en ;
-                           rdfs:label "is impact on stakeholder"@en .
-
-
 ###  https://w3id.org/airo#conformsToStandard
 airo:conformsToStandard rdf:type owl:ObjectProperty ;
                         rdfs:range airo:Standard ;
@@ -101,11 +87,10 @@ airo:eliminatesEvent rdf:type owl:ObjectProperty ;
                      rdfs:label "eliminates event"@en .
 
 
-###  https://w3id.org/airo#hasAIIndicator
-airo:hasAIIndicator rdf:type owl:ObjectProperty ;
-                    rdfs:domain airo:AISystem ;
-                    rdfs:range airo:AISystemIndicator ;
-                    rdfs:label "has AI indicator"@en .
+###  https://w3id.org/airo#hasAISubject
+airo:hasAISubject rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Indicates subject of an AI system"@en ;
+                  rdfs:label "has AI subject"@en .
 
 
 ###  https://w3id.org/airo#hasCapability
@@ -139,13 +124,6 @@ airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       rdfs:label "has documentation"@en .
 
 
-###  https://w3id.org/airo#hasExpectedAccuray
-airo:hasExpectedAccuray rdf:type owl:ObjectProperty ;
-                        rdfs:domain airo:AISystem ;
-                        rdfs:range airo:SystemAccuracy ;
-                        rdfs:label "has expected accuracy"@en .
-
-
 ###  https://w3id.org/airo#hasImpact
 airo:hasImpact rdf:type owl:ObjectProperty ;
                rdfs:domain airo:Consequence ;
@@ -154,11 +132,27 @@ airo:hasImpact rdf:type owl:ObjectProperty ;
                rdfs:label "has impact"@en .
 
 
+###  https://w3id.org/airo#hasImpactOnArea
+airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
+                     rdfs:domain airo:Impact ;
+                     rdfs:range airo:AreaOfImpact ;
+                     rdfs:comment "Specifies the area that is affected by an AI impact" ;
+                     rdfs:label "has impact on area"@en .
+
+
+###  https://w3id.org/airo#hasImpactOnStakeholder
+airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
+                            rdfs:domain airo:Impact ;
+                            rdfs:range airo:AffectedStakeholder ;
+                            rdfs:comment "Specifies stakeholders that are affected by an AI impact"@en ;
+                            rdfs:label "has impact on stakeholder"@en .
+
+
 ###  https://w3id.org/airo#hasLifecyclePhase
 airo:hasLifecyclePhase rdf:type owl:ObjectProperty ;
                        rdfs:domain airo:AISystem ;
                        rdfs:range airo:AILifecyclePhase ;
-                       rdfs:comment ""@en ;
+                       rdfs:comment "Indicates the AI system's lifecycle phase"@en ;
                        rdfs:label "has lifecycle phase"@en .
 
 
@@ -193,6 +187,7 @@ airo:hasSeverity rdf:type owl:ObjectProperty ;
                                            )
                              ] ;
                  rdfs:range airo:Severity ;
+                 rdfs:comment "Indicates severity of a consequenve or an impact"@en ;
                  rdfs:label "has severity"@en .
 
 
@@ -208,6 +203,7 @@ airo:hasStakeholder rdf:type owl:ObjectProperty ;
 airo:hasVersion rdf:type owl:ObjectProperty ;
                 rdfs:domain airo:AISystem ;
                 rdfs:range airo:Version ;
+                rdfs:comment "Indicates the version of an AI system"@en ;
                 rdfs:label "has version"@en .
 
 
@@ -219,20 +215,6 @@ airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
                            rdfs:label "is applied within domain"@en .
 
 
-###  https://w3id.org/airo#isExpectedAccurayOf
-airo:isExpectedAccurayOf rdf:type owl:ObjectProperty ;
-                         rdfs:domain airo:SystemAccuracy ;
-                         rdfs:range airo:AISystem ;
-                         rdfs:label "is expected accuracy of"@en .
-
-
-###  https://w3id.org/airo#isExtentOfUseOf
-airo:isExtentOfUseOf rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:ExtentOfUse ;
-                     rdfs:range airo:AISystem ;
-                     rdfs:label "is extent of use of"@en .
-
-
 ###  https://w3id.org/airo#isFollowedByControl
 airo:isFollowedByControl rdf:type owl:ObjectProperty ;
                          rdfs:domain airo:Control ;
@@ -241,25 +223,11 @@ airo:isFollowedByControl rdf:type owl:ObjectProperty ;
                          rdfs:label "is followed by control"@en .
 
 
-###  https://w3id.org/airo#isImpactOnArea
-airo:isImpactOnArea rdf:type owl:ObjectProperty ;
-                    rdfs:domain airo:Impact ;
-                    rdfs:range airo:AreaOfImpact ;
-                    rdfs:comment "Specifies the area that is affected by an AI impact" ;
-                    rdfs:label "is impact on area"@en .
-
-
 ###  https://w3id.org/airo#isPartOfControl
 airo:isPartOfControl rdf:type owl:ObjectProperty ;
                      rdfs:range airo:Control ;
+                     rdfs:comment "Specifies composition of controls"@en ;
                      rdfs:label "is part of control"@en .
-
-
-###  https://w3id.org/airo#isPerformanceOf
-airo:isPerformanceOf rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:Performance ;
-                     rdfs:range airo:AISystem ;
-                     rdfs:label "is performance of"@en .
 
 
 ###  https://w3id.org/airo#isProvidedBy
@@ -284,31 +252,6 @@ airo:isUsedBy rdf:type owl:ObjectProperty ;
               rdfs:range airo:User ;
               rdfs:comment "Indicates user of an AI system"@en ;
               rdfs:label "is used by"@en .
-
-
-###  https://w3id.org/airo#isUsedForTesting
-airo:isUsedForTesting rdf:type owl:ObjectProperty ;
-                      rdfs:range airo:AISystem ;
-                      rdfs:label "is used for testing"@en .
-
-
-###  https://w3id.org/airo#isUsedForTraining
-airo:isUsedForTraining rdf:type owl:ObjectProperty ;
-                       rdfs:range airo:AISystem ;
-                       rdfs:label "is used for training"@en .
-
-
-###  https://w3id.org/airo#isUsedForValidating
-airo:isUsedForValidating rdf:type owl:ObjectProperty ;
-                         rdfs:range airo:AISystem ;
-                         rdfs:label "is used for validating"@en .
-
-
-###  https://w3id.org/airo#isUsedToMeasure
-airo:isUsedToMeasure rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:Metric ;
-                     rdfs:range airo:Indicator ;
-                     rdfs:label "is used to measure"@en .
 
 
 ###  https://w3id.org/airo#mitigatesEvent
@@ -392,23 +335,17 @@ airo:AISystem rdf:type owl:Class ;
               rdfs:label "AI System"@en .
 
 
-###  https://w3id.org/airo#AISystemIndicator
-airo:AISystemIndicator rdf:type owl:Class ;
-                       rdfs:subClassOf airo:Indicator ;
-                       rdfs:comment "Represents indicators for expressing properties of AI systems."@en ;
-                       rdfs:label "AI System Indicator"@en .
-
-
 ###  https://w3id.org/airo#AITechnique
 airo:AITechnique rdf:type owl:Class ;
                  rdfs:comment "Approach or technique used in development of an AI system"@en ;
                  rdfs:label "AI Technique"@en .
 
 
-###  https://w3id.org/airo#Accuracy
-airo:Accuracy rdf:type owl:Class ;
-              rdfs:subClassOf airo:AISystemIndicator ;
-              rdfs:label "Accuracy"@en .
+###  https://w3id.org/airo#AffectedStakeholder
+airo:AffectedStakeholder rdf:type owl:Class ;
+                         rdfs:subClassOf airo:Stakeholder ;
+                         rdfs:comment "An entity that is affected by AI"@en ;
+                         rdfs:label "Affected Stakeholder"@en .
 
 
 ###  https://w3id.org/airo#AreaOfImpact
@@ -432,13 +369,6 @@ airo:Control rdf:type owl:Class ;
              rdfs:label "Control"@en .
 
 
-###  https://w3id.org/airo#DataAccuracy
-airo:DataAccuracy rdf:type owl:Class ;
-                  rdfs:subClassOf airo:Accuracy ;
-                  rdfs:comment "Indicates the degree to which data has attributes that correctly represent the true value of the intended attribute of a concept or event in a specific context of use. [ISO 22989, 3.4.3]"@en ;
-                  rdfs:label "Data Accuracy"@en .
-
-
 ###  https://w3id.org/airo#Document
 airo:Document rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
@@ -459,20 +389,6 @@ airo:Event rdf:type owl:Class ;
            rdfs:label "Event"@en .
 
 
-###  https://w3id.org/airo#ExpectedLifetime
-airo:ExpectedLifetime rdf:type owl:Class ;
-                      rdfs:subClassOf airo:AISystemIndicator ;
-                      rdfs:comment "Represents the expected lifetime of a system."@en ;
-                      rdfs:label "Expected Lifetime"@en .
-
-
-###  https://w3id.org/airo#ExtentOfUse
-airo:ExtentOfUse rdf:type owl:Class ;
-                 rdfs:subClassOf airo:AISystemIndicator ;
-                 rdfs:comment "Represents the extent to which an AI system has been used or is likely to be used."@en ;
-                 rdfs:label "Extent Of Use"@en .
-
-
 ###  https://w3id.org/airo#Impact
 airo:Impact rdf:type owl:Class ;
             rdfs:subClassOf airo:Consequence ;
@@ -480,34 +396,16 @@ airo:Impact rdf:type owl:Class ;
             rdfs:label "Impact"@en .
 
 
-###  https://w3id.org/airo#Indicator
-airo:Indicator rdf:type owl:Class ;
-               rdfs:label "Indicator"@en .
-
-
 ###  https://w3id.org/airo#Likelihood
 airo:Likelihood rdf:type owl:Class ;
-                rdfs:subClassOf airo:RiskIndicator ;
-                rdfs:comment "Chance of an event happening. [Source: ISO 31000, 3.7]"@en ;
+                rdfs:comment "Chance of an event happening"@en ;
                 rdfs:label "Likelihood"@en .
-
-
-###  https://w3id.org/airo#Metric
-airo:Metric rdf:type owl:Class ;
-            rdfs:label "Metric"@en .
 
 
 ###  https://w3id.org/airo#Output
 airo:Output rdf:type owl:Class ;
             rdfs:comment "Output of an AI system"@en ;
             rdfs:label "Output"@en .
-
-
-###  https://w3id.org/airo#Performance
-airo:Performance rdf:type owl:Class ;
-                 rdfs:subClassOf airo:AISystemIndicator ;
-                 rdfs:comment "the ability of an AI system to achieve its intended purpose [Source: AI Act, Article 3(18)]"@en ;
-                 rdfs:label "Performance"@en .
 
 
 ###  https://w3id.org/airo#Provider
@@ -524,25 +422,11 @@ airo:Purpose rdf:type owl:Class ;
              rdfs:label "Purpose"@en .
 
 
-###  https://w3id.org/airo#Reversiblity
-airo:Reversiblity rdf:type owl:Class ;
-                  rdfs:subClassOf airo:AISystemIndicator ;
-                  rdfs:comment "Specifies the extent to which the outcome produced with an AI system is easily reversible."@en ;
-                  rdfs:label "Reversibility"@en .
-
-
 ###  https://w3id.org/airo#Risk
 airo:Risk rdf:type owl:Class ;
           rdfs:subClassOf airo:Event ;
           rdfs:comment "Risk of harm associated with an AI system"@en ;
           rdfs:label "Risk"@en .
-
-
-###  https://w3id.org/airo#RiskIndicator
-airo:RiskIndicator rdf:type owl:Class ;
-                   rdfs:subClassOf airo:Indicator ;
-                   rdfs:comment "Represents indicators for expressing risk."@en ;
-                   rdfs:label "Risk Indicator"@en .
 
 
 ###  https://w3id.org/airo#RiskSource
@@ -553,16 +437,9 @@ airo:RiskSource rdf:type owl:Class ;
                 rdfs:label "Risk Source"@en .
 
 
-###  https://w3id.org/airo#Robustness
-airo:Robustness rdf:type owl:Class ;
-                rdfs:subClassOf airo:AISystemIndicator ;
-                rdfs:comment "Ability of a system to maintain its level of performance under any circumstances. [Source: ISO 22989]"@en ;
-                rdfs:label "Robustness"@en .
-
-
 ###  https://w3id.org/airo#Severity
 airo:Severity rdf:type owl:Class ;
-              rdfs:subClassOf airo:RiskIndicator ;
+              rdfs:comment "Indicates level of severity of an event that reflects level of potential harm"@en ;
               rdfs:label "Severity"@en .
 
 
@@ -581,19 +458,6 @@ airo:Standard rdf:type owl:Class ;
               rdfs:label "Standard"@en .
 
 
-###  https://w3id.org/airo#SystemAccuracy
-airo:SystemAccuracy rdf:type owl:Class ;
-                    rdfs:subClassOf airo:Accuracy ;
-                    rdfs:comment "Indicates the degree to which a product or system provides the correct results with the needed degree of precision. [ISO 22989, 3.4.4]"@en ;
-                    rdfs:label "System Accuracy"@en .
-
-
-###  https://w3id.org/airo#SystemSecurity
-airo:SystemSecurity rdf:type owl:Class ;
-                    rdfs:subClassOf airo:AISystemIndicator ;
-                    rdfs:label "System Security"@en .
-
-
 ###  https://w3id.org/airo#User
 airo:User rdf:type owl:Class ;
           rdfs:subClassOf airo:Stakeholder ;
@@ -602,23 +466,10 @@ airo:User rdf:type owl:Class ;
           rdfs:label "User"@en .
 
 
-###  https://w3id.org/airo#UserIndicator
-airo:UserIndicator rdf:type owl:Class ;
-                   rdfs:subClassOf airo:Indicator ;
-                   rdfs:comment "Represents indicators for expressing attributes of users of AI systems."@en ;
-                   rdfs:label "User Indicator"@en .
-
-
 ###  https://w3id.org/airo#Version
 airo:Version rdf:type owl:Class ;
+             rdfs:comment "A unique number or name that is assigned to a unique state of an AI system"@en ;
              rdfs:label "Version"@en .
-
-
-###  https://w3id.org/airo#VulnerablePosition
-airo:VulnerablePosition rdf:type owl:Class ;
-                        rdfs:subClassOf airo:UserIndicator ;
-                        rdfs:comment "Represents whether potentially harmed or adversely impacted persons are in a vulnerable position due to an imbalance of power, knowledge, economic or social circumstances, or age. [Source: AI Act]"@en ;
-                        rdfs:label "Vulnerable Position"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
