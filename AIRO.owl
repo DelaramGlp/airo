@@ -62,6 +62,14 @@ terms:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/airo#affects
+airo:affects rdf:type owl:ObjectProperty ;
+             rdfs:domain airo:AISystem ;
+             rdfs:range airo:AffectedStakeholder ;
+             rdfs:comment "Indicates the stakeholders affected by the AI system"@en ;
+             rdfs:label "affects"@en .
+
+
 ###  https://w3id.org/airo#conformsToStandard
 airo:conformsToStandard rdf:type owl:ObjectProperty ;
                         rdfs:range airo:Standard ;
