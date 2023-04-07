@@ -19,6 +19,10 @@
 airo:hasAISubject rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/airo#hasCapability
+airo:hasCapability rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/airo#hasPurpose
 airo:hasPurpose rdf:type owl:ObjectProperty .
 
@@ -34,6 +38,10 @@ airo:isUsedBy rdf:type owl:ObjectProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  https://w3id.org/airo#AICapabiliy
+airo:AICapabiliy rdf:type owl:Class .
+
 
 ###  https://w3id.org/airo#AISubject
 airo:AISubject rdf:type owl:Class .
@@ -74,20 +82,26 @@ ex:predicting_risk_of_gender_violance rdf:type owl:NamedIndividual ,
                                                airo:Purpose .
 
 
+###  https://delaramglp.github.io/airo/example#profiling
+ex:profiling rdf:type owl:NamedIndividual ,
+                      airo:AICapabiliy .
+
+
 ###  https://delaramglp.github.io/airo/example#spanish_ministry_of_interior
 ex:spanish_ministry_of_interior rdf:type owl:NamedIndividual ,
                                          airo:User .
 
 
-###  https://delaramglp.github.io/airo/example#victiom_of_gender_violance
-ex:victiom_of_gender_violance rdf:type owl:NamedIndividual ,
-                                       airo:AISubject .
+###  https://delaramglp.github.io/airo/example#victim_of_gender_violance
+ex:victim_of_gender_violance rdf:type owl:NamedIndividual ,
+                                      airo:AISubject .
 
 
 ###  https://delaramglp.github.io/airo/example#viogen
 ex:viogen rdf:type owl:NamedIndividual ,
                    airo:AISystem ;
-          airo:hasAISubject ex:victiom_of_gender_violance ;
+          airo:hasAISubject ex:victim_of_gender_violance ;
+          airo:hasCapability ex:profiling ;
           airo:hasPurpose ex:predicting_risk_of_gender_violance ;
           airo:isAppliedWithinDomain ex:law_enforcement ;
           airo:isUsedBy ex:spanish_ministry_of_interior .
