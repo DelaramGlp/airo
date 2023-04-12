@@ -176,7 +176,7 @@ technologies.
   <tr>
     <td>3</td>
       <td>What is the <b>capability</b> of the AI system? </td>
-    <td><a href="#Capability" title="https://w3id.org/airo#Capability"><code>Capability</code></a></td>
+    <td><a href="#Capability" title="https://w3id.org/airo#AICapability"><code>AICapability</code></a></td>
     <td><a href="#hasApplication" title="https://w3id.org/airo#hasCapability"><code>hasCapability</code></a></td>
   <tr>
     <td>4</td>
@@ -188,7 +188,7 @@ technologies.
     <td>5</td>
       <td>Who is the <b>AI subject</b>?</td>
     <td><a href="#AISubject" title="https://w3id.org/airo#AISubject"><code>AISubject</code></a></td>
-    <td><a href="#affects" title="https://w3id.org/airo#affects"><code>affects</code></a></td>
+    <td><a href="#hasAISubject" title="https://w3id.org/airo#hasAISubject"><code>hasAISubject</code></a></td>
   </tr>
   </tbody>
 </table>
@@ -2453,7 +2453,7 @@ WHERE {
               airo:hasPurpose ?purpose ;
               airo:hasCapability ?capability ;
               airo:isUsedBy ?user ;
-              airo:affects ?subject . }
+              airo:hasAISubject ?subject . }
 
 </code>
 </pre>
