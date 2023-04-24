@@ -241,7 +241,7 @@ airo:isPartOfControl rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#isProvidedBy
 airo:isProvidedBy rdf:type owl:ObjectProperty ;
                   rdfs:domain airo:AISystem ;
-                  rdfs:range airo:Provider ;
+                  rdfs:range airo:AIProvider ;
                   rdfs:comment "Indicates provider of an AI system"@en ;
                   rdfs:label "is provided by"@en .
 
@@ -257,7 +257,7 @@ airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#isUsedBy
 airo:isUsedBy rdf:type owl:ObjectProperty ;
               rdfs:domain airo:AISystem ;
-              rdfs:range airo:User ;
+              rdfs:range airo:AIUser ;
               rdfs:comment "Indicates user of an AI system"@en ;
               rdfs:label "is used by"@en .
 
@@ -329,6 +329,14 @@ airo:AILifecyclePhase rdf:type owl:Class ;
                       rdfs:label "AI Lifecycle Phase"@en .
 
 
+###  https://w3id.org/airo#AIProvider
+airo:AIProvider rdf:type owl:Class ;
+                rdfs:subClassOf airo:Stakeholder ;
+                rdfs:comment "A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed and places that system on the market or puts it into service under its own name or trademark, whether for payment or free of charge"@en ;
+                rdfs:isDefinedBy "AI Act, Common position, Art. 3(2)"@en ;
+                rdfs:label "AI Provider"@en .
+
+
 ###  https://w3id.org/airo#AISubject
 airo:AISubject rdf:type owl:Class ;
                rdfs:subClassOf airo:Stakeholder ;
@@ -347,6 +355,14 @@ airo:AISystem rdf:type owl:Class ;
 airo:AITechnique rdf:type owl:Class ;
                  rdfs:comment "Approach or technique used in development of an AI system"@en ;
                  rdfs:label "AI Technique"@en .
+
+
+###  https://w3id.org/airo#AIUser
+airo:AIUser rdf:type owl:Class ;
+            rdfs:subClassOf airo:Stakeholder ;
+            rdfs:comment "Any natural or legal person under whose authority the system is used."@en ;
+            rdfs:isDefinedBy "AI Act, Common position, Art.3 (4)"@en ;
+            rdfs:label "AI User"@en .
 
 
 ###  https://w3id.org/airo#AffectedStakeholder
@@ -416,14 +432,6 @@ airo:Output rdf:type owl:Class ;
             rdfs:label "Output"@en .
 
 
-###  https://w3id.org/airo#Provider
-airo:Provider rdf:type owl:Class ;
-              rdfs:subClassOf airo:Stakeholder ;
-              rdfs:comment "A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed and places that system on the market or puts it into service under its own name or trademark, whether for payment or free of charge"@en ;
-              rdfs:isDefinedBy "AI Act, Common position, Art. 3(2)"@en ;
-              rdfs:label "Provider"@en .
-
-
 ###  https://w3id.org/airo#Purpose
 airo:Purpose rdf:type owl:Class ;
              rdfs:comment "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"@en ;
@@ -464,14 +472,6 @@ airo:Standard rdf:type owl:Class ;
               rdfs:comment "A resource, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context."@en ;
               rdfs:isDefinedBy "ISO/IEC TR 29110-1:2016(en), 3.59"@en ;
               rdfs:label "Standard"@en .
-
-
-###  https://w3id.org/airo#User
-airo:User rdf:type owl:Class ;
-          rdfs:subClassOf airo:Stakeholder ;
-          rdfs:comment "Any natural or legal person under whose authority the system is used."@en ;
-          rdfs:isDefinedBy "AI Act, Common position, Art.3 (4)"@en ;
-          rdfs:label "User"@en .
 
 
 ###  https://w3id.org/airo#Version
