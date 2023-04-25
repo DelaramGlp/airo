@@ -329,9 +329,16 @@ airo:AILifecyclePhase rdf:type owl:Class ;
                       rdfs:label "AI Lifecycle Phase"@en .
 
 
+###  https://w3id.org/airo#AIOperator
+airo:AIOperator rdf:type owl:Class ;
+                rdfs:subClassOf airo:Stakeholder ;
+                rdfs:comment "the provider, the product manufacturer, the user, the authorised representative, the importer or the distributor"@en ;
+                rdfs:label "AI Operator"@en .
+
+
 ###  https://w3id.org/airo#AIProvider
 airo:AIProvider rdf:type owl:Class ;
-                rdfs:subClassOf airo:Stakeholder ;
+                rdfs:subClassOf airo:AIOperator ;
                 rdfs:comment "A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed and places that system on the market or puts it into service under its own name or trademark, whether for payment or free of charge"@en ;
                 rdfs:isDefinedBy "AI Act, Common position, Art. 3(2)"@en ;
                 rdfs:label "AI Provider"@en .
@@ -359,7 +366,7 @@ airo:AITechnique rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AIUser
 airo:AIUser rdf:type owl:Class ;
-            rdfs:subClassOf airo:Stakeholder ;
+            rdfs:subClassOf airo:AIOperator ;
             rdfs:comment "Any natural or legal person under whose authority the system is used."@en ;
             rdfs:isDefinedBy "AI Act, Common position, Art.3 (4)"@en ;
             rdfs:label "AI User"@en .
@@ -376,6 +383,11 @@ airo:AffectedStakeholder rdf:type owl:Class ;
 airo:AreaOfImpact rdf:type owl:Class ;
                   rdfs:comment "Areas that can be affected by an AI system"@en ;
                   rdfs:label "Area Of Impact"@en .
+
+
+###  https://w3id.org/airo#Characteristic
+airo:Characteristic rdf:type owl:Class ;
+                    rdfs:label "Characteristic"@en .
 
 
 ###  https://w3id.org/airo#Consequence

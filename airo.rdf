@@ -344,7 +344,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isProvidedBy">
         <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#Provider"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AIProvider"/>
         <rdfs:comment xml:lang="en">Indicates provider of an AI system</rdfs:comment>
         <rdfs:label xml:lang="en">is provided by</rdfs:label>
     </owl:ObjectProperty>
@@ -366,7 +366,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#isUsedBy">
         <rdfs:domain rdf:resource="https://w3id.org/airo#AISystem"/>
-        <rdfs:range rdf:resource="https://w3id.org/airo#User"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#AIUser"/>
         <rdfs:comment xml:lang="en">Indicates user of an AI system</rdfs:comment>
         <rdfs:label xml:lang="en">is used by</rdfs:label>
     </owl:ObjectProperty>
@@ -497,7 +497,12 @@
         <rdfs:label xml:lang="en">AI System</rdfs:label>
     </owl:Class>
     
+     <!-- https://w3id.org/airo#Characteristic -->
 
+    <owl:Class rdf:about="https://w3id.org/airo#Characteristic">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Characteristic</rdfs:label>
+    </owl:Class>
 
     <!-- https://w3id.org/airo#AITechnique -->
 
@@ -604,11 +609,19 @@
     </owl:Class>
     
 
+<!-- https://w3id.org/airo#AIOperator -->
 
+    <owl:Class rdf:about="https://w3id.org/airo#AIOperator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+        <rdfs:comment xml:lang="en">the provider, the product manufacturer, the user, the authorised representative, the importer or the distributor</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">AI Act, Common position, Art. 3(8)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">AI Operator</rdfs:label>
+    </owl:Class>
+    
     <!-- https://w3id.org/airo#Provider -->
 
-    <owl:Class rdf:about="https://w3id.org/airo#Provider">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+    <owl:Class rdf:about="https://w3id.org/airo#AIProvider">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIOperator"/>
         <rdfs:comment xml:lang="en">A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed and places that system on the market or puts it into service under its own name or trademark, whether for payment or free of charge</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">AI Act, Common position, Art. 3(2)</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Provider</rdfs:label>
@@ -676,13 +689,13 @@
     
 
 
-    <!-- https://w3id.org/airo#User -->
+    <!-- https://w3id.org/airo#AIUser -->
 
-    <owl:Class rdf:about="https://w3id.org/airo#User">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#Stakeholder"/>
+    <owl:Class rdf:about="https://w3id.org/airo#AIUser">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/airo#AIOperator"/>
         <rdfs:comment xml:lang="en">Any natural or legal person under whose authority the system is used.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">AI Act, Common position, Art.3 (4)</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">User</rdfs:label>
+        <rdfs:label xml:lang="en">AI User</rdfs:label>
     </owl:Class>
     
 
