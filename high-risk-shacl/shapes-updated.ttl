@@ -1,7 +1,7 @@
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix airo: <https://w3id.org/airo#> .
-@prefix vair: https://w3id.org/vair#> .
+@prefix vair: <https://w3id.org/vair#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ex:AnnexIII-1
