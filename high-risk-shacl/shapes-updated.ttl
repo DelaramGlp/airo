@@ -1,15 +1,32 @@
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix airo: <https://w3id.org/airo#> .
-@prefix vair: <https://w3id.org/vair#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix airo: <http://w3id.org/airo#> .
+@prefix vair: <http://w3id.org/vair#> .
+@prefix ex: <http://example.com/ns#> .
 
-ex:AnnexIII-1
+ex:AnnexIII-1a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
     sh:message "High-Risk AI System as per AI Act Annex III-1"@en ;
-    sh:description "Biometric Identification and Categorisation of Natural Persons"@en ;
-    sh:not [
-        a sh:PropertyShape ;
-        sh:path airo:hasPurpose ;
-        sh:class vair:BiometricIdentification ;] .
+    sh:description "Remote biometric identification systems"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:RemoteIdentificationOfPeople ;
+                
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:BiometricIdentification ;
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] . 
