@@ -1,3 +1,5 @@
+#SHACL shapes for high-risk AI as per Annex III of AI Act, Council's common position
+
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -8,7 +10,7 @@
 ex:AnnexIII-1a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
-    sh:message "High-Risk AI System as per AI Act Annex III-1"@en ;
+    sh:message "High-Risk AI System as per AI Act Annex III-1: Biometrics, remote biometric identification systems."@en ;
     sh:description "Remote biometric identification systems"@en ;
     sh:not [sh:and (
                 sh:property [
@@ -29,4 +31,999 @@ ex:AnnexIII-1a
                     sh:class vair:NaturalPerson ;
                 ]
 
+                )] .
+ex:AnnexIII-2a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-2a: Critical Infrastructure, AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic and the supply of water, gas, heating and electricity"@en ;
+    sh:description "AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic and the supply of water, gas, heating and electricity"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:CriticalInfrastructure ;
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:ManagementAndOperationOfSafety ;
+                ]
+                )] .   
+
+ ex:AnnexIII-3a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-3a: Education and vocational training, AI systems intended to be used to determine access, admission or to assign natural persons to educational and vocational training institutions or programmes at all levels"@en ;
+    sh:description "AI systems intended to be used to determine access, admission or to assign natural persons to educational and vocational training institutions or programmes at all levels"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Education ;
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or(
+                    [ 
+                        sh:class vair:AssigningPeopleToEducationalInstitutions ; 
+                    ]
+                    [ 
+                        sh:class vair:DeterminingAccessToEducation ; 
+                    ]
+                    [
+                    
+                        sh:class vair:DeterminingAdmissionToEducationalInstitutions ;
+                    ]
+
+                    )
+                   
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:CourseApplicant ;
+                ]
+                
                 )] . 
+
+ex:AnnexIII-3b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-3b: AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions or programmes at all levels."@en ;
+    sh:description "AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions or programmes at all levels."@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Education ;
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:EvaluatingLearningOutcomes ;
+                   
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:CourseAttendee ;
+                ]
+                
+                )] .   
+
+ex:AnnexIII-4a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-3b:  Employment, workers management and access to self-employment, AI systems intended to be used for recruitment or selection of natural persons, notably to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates;"@en ;
+    sh:description "AI systems intended to be used for recruitment or selection of natural persons, notably to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates;"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Employment ;
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:Recruiting ;
+                    ]
+                    [
+                        sh:class vair:AdvertisingVacancies ;
+                    ]
+                    [
+                        sh:class vair:JobApplicationAnalysis ;
+                    ]
+                    [
+                        sh:class vair:JobApplicationFiltering;
+                    ]
+                    [
+                        sh:class vair:EvaluatingJobCandidates ;
+                    ]
+
+                    )
+  
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                    [
+                        sh:class vair:JobApplicant ;
+                    ]
+                    [
+                        sh:class vair:PotentialJobApplicant ;
+                    ]
+                    
+                    )
+                ]
+                
+                )] .   
+
+
+ex:AnnexIII-4b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-4b."@en ;
+    sh:description "AI intended to be used to make decisions on promotion and termination of work- related contractual relationships, to allocate tasks based on individual behavior or personal traits or characteristics and to monitor and evaluate performance and behavior of persons in such relationships."@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Employment ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:Employee ;
+                ]
+
+                sh:or (
+                [
+                    sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:MakingPromotionDecision ;
+                    ]
+                    [
+                        sh:class vair:MakingTerminationDecision ;
+                    ]
+                    [
+                        sh:class vair:MonitoringEmployeeBehaviour ;
+                    ]
+                    [
+                        sh:class vair:MonitoringEmployeePerformance ;
+                    ]
+                    [
+                        sh:class vair:EvaluatingEmployeeBehaviour ;
+                    ]
+                    [
+                        sh:class vair:EvaluatingEmployeePerformance ;
+                    ]
+                    
+                    )
+                    ] 
+        
+                ]
+
+
+                [
+                sh:and (
+                    
+                    sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:AllocatingTasks ;
+                        ]
+                    
+
+                    [
+                    sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:or (
+                    [
+                        sh:class vair:BehaviourAnalysis ;
+                    ]
+                    [
+                        sh:class vair:PersonalityTraitsAnalysis ;
+                    ]
+                    
+                    )   
+                 
+                    ]
+
+                 ]  )
+                 ]
+
+                     )
+                
+                )] . 
+
+
+ex:AnnexIII-5a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-5a"@en ;
+    sh:description " "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:PublicService ;
+                    
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:EvaluatingEligibilityToAccessPublicAssistanceServices ;
+                    ]
+                    [
+                        sh:class vair:GrantingPublicAssistanceService ;
+                    ]
+                    [ 
+                        sh:class vair:RevokingPublicAssisstanceServices;
+                    ]
+                    [
+                        sh:class vair:ReclaimingPublicAssisstanceServices ;
+                    ]
+                    [
+                        sh:class vair:GrantingPublicAssistanceServices;
+
+                    ]
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicAuthority ; 
+                    ]
+                    [
+                        sh:class vair:PublicAuthorityRepresentative ;
+                        ]
+                    )
+
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:PublicServicesApplicant ;
+                ]
+
+                )] .                
+
+
+
+ex:AnnexIII-5b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-5b"@en ;
+    sh:description "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicService ;
+                    ]
+                    [
+                        sh:class vair:PrivateService ;
+                    ]
+                    
+                    )
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:AssessingCreditworthiness ;
+                    ]
+                    [
+                        sh:class vair:DeterminingCreditScore ;
+                    ]
+
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .
+
+
+ex:AnnexIII-5c
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-5c"@en ;
+    sh:description "AI systems intended to be used to dispatch, or to establish priority in the dispatching of emergency first response services, including by firefighters "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicService ;
+                    ]
+                    [
+                        sh:class vair:PrivateService ;
+                    ]
+                    
+                    )
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:DispacthingEmergencyService ;
+                    ]
+                    [
+                        sh:class vair:PrioritisationOfEmergencyService ;
+                    ]
+
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:EmergencyService ;
+                    ]
+                    [
+                        sh:class vair:FirstResponder;
+                    ]
+                   
+                    )
+                ]
+
+                )] .
+ ex:AnnexIII-5d
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-5d"@en ;
+    sh:description "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicService ;
+                    ]
+                    [
+                        sh:class vair:PrivateService ;
+                    ]
+                    
+                    )
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:HealthInsuranceRiskAssessment ;
+                    ]
+                    [
+                        sh:class vair:HealthInsurancePricing ;
+                    ]
+                    [
+                        sh:class vair:LifeInsuranceRiskAssessment ;
+                    ]
+                    [
+                        sh:class vair:LifeInsurancePricing ;
+                    ]
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .               
+
+ex:AnnexIII-6a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-6a"@en ;
+    sh:description "AI systems intended to be used by law enforcement authorities or on their behalf to assess the risk of a natural person for offending or reoffending or the risk for a natural person to become a potential victim of criminal offences"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:AssessingRiskOfOffending ;
+                    ]
+                    [
+                        sh:class vair:AssessingRiskOfReOffending;
+                    ]
+                    [
+                        sh:class vair:AssessingRiskForPotentialVictimsOfCriminalOffences ;
+                    ]
+
+                    )
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityRepresentative;
+                    ]
+                    )
+
+
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                    [
+                        sh:class vair:Perpetrator ;
+                    ]
+
+                    [
+                        sh:class vair:Suspect ;
+                    ]
+
+                    [
+                        sh:class vair:Victim ; 
+                    ]
+
+                    )
+                ]
+
+                )] .  
+
+ex:AnnexIII-6b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-6b"@en ;
+    sh:description "AI systems intended to be used by law enforcement authorities or on their behalf as polygraphs and similar tools or to detect the emotional state of a natural person"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:or (
+                    [
+                        sh:class vair:EmotionRecognition ;
+                    ]
+                    [
+                        sh:class vair:LieDetection;
+                    ]
+
+                    )
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .                                 
+
+ex:AnnexIII-6d
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-6d"@en ;
+    sh:description "AI systems intended to be used by law enforcement authorities or on their behalf to evaluate the reliability of evidence in the course of investigation or prosecution of criminal offences"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:InvestigatingCriminalOffences ;
+                    ]
+                    [
+                        sh:class vair:ProsecutingCriminalOffences;
+                    ]
+                    [
+                        sh:class vair:EvaluatingReliabilityOfEvidence;
+                    ]
+
+                    )
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                )] .     
+ex:AnnexIII-6e
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-6e"@en ;
+    sh:description "A AI systems intended to be used by law enforcement authorities or on their behalf to predict the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups;"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+               
+                 sh:or (
+                    [ 
+                        sh:and (
+                            sh:property [
+                            a sh:PropertyShape ;
+                            sh:path airo:hasPurpose ;
+                            sh:or (
+                                [
+                                 sh:class vair:PredictingOccurrenceOfCriminalOffence ;
+                                ]
+                                [
+                                    sh:class vair:PredictingReOccurrenceOfCriminalOffence;
+                                ]
+                                ) ]
+                        sh:property [
+                            a sh:ProportyShape ;
+                            sh:path airo:hasCapability ;
+                            sh:class vair:Profiling ; ] 
+                            )
+                    ]
+                
+                    [
+                    sh:and (
+                        sh:property [
+                            a sh:PropertyShape ;
+                            sh:path airo:hasPurpose ;
+                            sh:or (
+                                [
+                                sh:class vair:AssessingPersonalityTraits ;
+                                ]
+                                [ 
+                                 sh:class vair:AssessingPastCriminalBehaviour;
+                                ] )
+                        ]
+
+                        sh:proporty [
+                            a sh:PropertyShape ;
+                            sh:path airo:hasCapabilty ;
+                            sh:or (
+                                [
+                                 sh:class vair:BehaviourAnalysis ;
+                                ]
+                                [
+                                    sh:class vair:PersonalityTraitsAnalysis ;
+                                 ]
+
+                            )
+                        ]
+                    )
+                ]
+                )
+                
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .   
+ex:AnnexIII-6f
+ a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-6f"@en ;
+    sh:description "AI systems intended to be used by law enforcement authorities or on their behalf to profile natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of detection, investigation or prosecution of criminal offences"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:DetectingCriminalOffences ;
+                    ]
+                    [
+                        sh:class vair:InvestigatingCriminalOffences;
+                    ]
+                    [
+                        sh:class vair:ProsecutingCriminalOffences;
+                    ]
+
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:Profiling ;
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] . 
+
+ex:AnnexIII-7a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-7a"@en ;
+    sh:description "AI systems intended to be used by competent public authorities or on their behalf as polygraphs and similar tools or to detect the emotional state of a natural person"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:Migration ;
+                        ]
+                        [
+                            sh:class vair:Asylum ;
+                        ]    
+                        [
+                            sh:class vair:BorderControl ;
+
+                        ]
+                    )
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:PerformingBackgroundCheck ;
+                    ]
+                    [
+                        sh:class vair:VerificationOfMigrationSeekerClaims ;
+                    ]
+                    [
+                        sh:class vair:VerificationOfAsylumSeekerClaims ;
+                    ]
+                    [
+                        sh:class vair:BorderControlSecurityCheck ;
+                    ]
+
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:or (
+                    [
+                        sh:class vair:EmotionRecognition ;
+                    ]
+                    [
+                        sh:class vair:LieDetection;
+                    ]
+                    )
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:CompetentPublicAuthority  ;
+                    ]
+                    [
+                        sh:class vair:CompetentPublicAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .  
+
+ex:AnnexIII-7b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-7b"@en ;
+    sh:description "AI systems intended to be used by competent public authorities or on their behalf to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or has entered into the territory of a Member State;"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:Migration ;
+                        ]
+                        [
+                            sh:class vair:Asylum ;
+                        ]    
+                        [
+                            sh:class vair:BorderControl ;
+
+                        ]
+                    )
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:AssessingPeopleRelatedRisk ;
+                    ]
+                    [
+                        sh:class vair:AssessingRiskOfIrregularImmigration ;
+                    ]
+                    [
+                        sh:class vair:AssessingSecurityRisk ;
+                    ]
+                    [
+                        sh:class vair:AssessingHealthRisk ;
+                    ]
+
+                    )
+                ]
+
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:CompetentPublicAuthority  ;
+                    ]
+                    [
+                        sh:class vair:CompetentPublicAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                        [
+                            sh:class vair:Passenger ;
+                        ]
+                        [
+                            sh:class vair:AsylumSeeker ;
+                        ]
+                        [
+                            sh:class vair:VisaApplicant ;
+                        ]
+                        [
+                            sh:class vair:ResidencePermitApplicant ;
+                        ]
+                        )]
+
+
+                )] . 
+
+ex:AnnexIII-7d
+  a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-7d"@en ;
+    sh:description "AI systems intended to be used by competent public authorities or on their behalf to examine applications for asylum, visa and residence permits and associated complaints with regard to the eligibility of the natural persons applying for a status"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:Migration ;
+                        ]
+                        [
+                            sh:class vair:Asylum ;
+                        ]    
+                        [
+                            sh:class vair:BorderControl ;
+
+                        ]
+                    )
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:ExaminingAsylumApplication ;
+                    ]
+                    [
+                        sh:class vair:ExaminingVisaApplication ;
+                    ]
+                    [
+                        sh:class vair:ExaminingResidencePermitsApplication ;
+                    ]
+                    [
+                        sh:class vair:ExaminingMigrationRelatedComplaints ;
+                    ]
+
+                    )
+                ]
+
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:CompetentPublicAuthority  ;
+                    ]
+                    [
+                        sh:class vair:CompetentPublicAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                        
+                        [
+                            sh:class vair:AsylumSeeker ;
+                        ]
+                        [
+                            sh:class vair:VisaApplicant ;
+                        ]
+                        [
+                            sh:class vair:ResidencePermitApplicant ;
+                        ]
+                        )]
+
+
+                )] . 
+
+ex:AnnexIII-8a
+  a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk AI System as per AI Act Annex III-8a"@en ;
+    sh:description "AI systems intended to be used by a judicial authority or on their behalf to interpret facts or the law and to apply the law to a concrete set of facts."@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:AdministrationOfJustice ;
+                        ]
+                        [
+                            sh:class vair:AdministrationOfDemocraticProcesses ;
+                        ]    
+                    )
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:ApplyingTheLawToFacts ;
+                    ]
+                    [
+                        sh:class vair:InterpretingFacts ;
+                    ]
+                    [
+                        sh:class vair:InterpretingLaw ;
+                    ]
+                    
+
+                    )
+                ]
+
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:JudicialAuthority  ;
+                    ]
+                    [
+                        sh:class vair:JudicialAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+
+                )] .  
