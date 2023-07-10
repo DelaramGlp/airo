@@ -3,9 +3,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix airo: <http://w3id.org/airo#> .
-@prefix vair: <http://w3id.org/vair#> .
-@prefix ex: <http://example.com/ns#> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix ex: <https://example.com/ns#> .
 
 ex:AnnexIII-1a
     a sh:NodeShape ;
