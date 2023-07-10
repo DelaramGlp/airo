@@ -607,7 +607,7 @@ ex:AnnexIII-6d
                 ]
 
                 )] .     
-ex:AnnexIII-6e
+ex:AnnexIII-6e-1
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
     sh:message "High-Risk as per AI Act Annex III-6e: Law enforcement, AI systems intended to be used by law enforcement authorities or on their behalf to predict the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups. "@en ;
@@ -618,59 +618,25 @@ ex:AnnexIII-6e
                     sh:path airo:isAppliedWithinDomain ;
                     sh:class vair:LawEnforcement ;
                 ]
-               
-                 sh:or (
-                    [ 
-                        sh:and (
-                            sh:property [
-                            a sh:PropertyShape ;
-                            sh:path airo:hasPurpose ;
-                            sh:or (
-                                [
-                                 sh:class vair:PredictingOccurrenceOfCriminalOffence ;
-                                ]
-                                [
-                                    sh:class vair:PredictingReOccurrenceOfCriminalOffence;
-                                ]
-                                ) ]
-                        sh:property [
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or(
+                        [ 
+                            sh:class vair:PredictingOccurrenceOfCriminalOffence ;
+                        ]
+                        [
+                            sh:class vair:PredictingReOccurrenceOfCriminalOffence;
+                        ]
+                    )
+
+                ]
+
+                sh:property [
                             a sh:ProportyShape ;
                             sh:path airo:hasCapability ;
                             sh:class vair:Profiling ; ] 
-                            )
-                    ]
-                
-                    [
-                    sh:and (
-                        sh:property [
-                            a sh:PropertyShape ;
-                            sh:path airo:hasPurpose ;
-                            sh:or (
-                                [
-                                sh:class vair:AssessingPersonalityTraits ;
-                                ]
-                                [ 
-                                 sh:class vair:AssessingPastCriminalBehaviour;
-                                ] )
-                        ]
-
-                        sh:proporty [
-                            a sh:PropertyShape ;
-                            sh:path airo:hasCapabilty ;
-                            sh:or (
-                                [
-                                 sh:class vair:BehaviourAnalysis ;
-                                ]
-                                [
-                                    sh:class vair:PersonalityTraitsAnalysis ;
-                                 ]
-
-                            )
-                        ]
-                    )
-                ]
-                )
-                
 
                 sh:property [
                     a sh:PropertyShape ;
@@ -689,9 +655,71 @@ ex:AnnexIII-6e
                     a sh:PropertyShape ;
                     sh:path airo:hasAISubject ;
                     sh:class vair:NaturalPerson ;
+                ] 
+    )].            
+
+
+ex:AnnexIII-6e-2
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-6e: Law enforcement, AI systems intended to be used by law enforcement authorities or on their behalf to predict the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups. "@en ;
+    sh:description "A AI systems intended to be used by law enforcement authorities or on their behalf to predict the occurrence or reoccurrence of an actual or potential criminal offence based on profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups;"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
                 ]
 
-                )] .   
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or(
+                        [ 
+                           sh:class vair:AssessingPersonalityTraits ;
+                        ]
+                        [
+                             sh:class vair:AssessingPastCriminalBehaviour;
+                        ]
+                    )
+
+                ]
+
+                sh:property [
+                            a sh:ProportyShape ;
+                            sh:path airo:hasCapability ;
+                            sh:or(
+                                [
+                                    sh:class vair:BehaviourAnalysis ;
+                                ]
+                                [
+                                    sh:class vair:PersonalityTraitsAnalysis;
+                                ]
+                                
+                            )
+                             ] 
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityRepresentative;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ] 
+    )].            
+
+                  
 ex:AnnexIII-6f
  a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
