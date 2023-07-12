@@ -84,7 +84,14 @@ ex:AnnexIII-2a
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasAISubject ;
-                    sh:class vair:CourseApplicant ;
+                    sh:or(
+                    [
+                        sh:class vair:CourseApplicant ;
+                    ]
+                    [
+                        sh:class vair:NaturalPerson ; 
+                    ]
+                    )
                 ]
                 
                 )] . 
@@ -110,7 +117,14 @@ ex:AnnexIII-3b
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasAISubject ;
-                    sh:class vair:CourseAttendee ;
+                    sh:or (
+                    [ 
+                        sh:class vair:CourseAttendee ; 
+                    ]
+                    [ 
+                        sh:class vair:NaturalPerson ;
+                    ]
+                    )
                 ]
                 
                 )] .   
@@ -160,6 +174,9 @@ ex:AnnexIII-4a
                     [
                         sh:class vair:PotentialJobApplicant ;
                     ]
+                    [
+                        sh:class vair:NaturalPerson ;
+                    ]
                     
                     )
                 ]
@@ -181,7 +198,17 @@ ex:AnnexIII-4b
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasAISubject ;
-                    sh:class vair:Employee ;
+                    sh:or(
+                        [
+                            sh:class vair:Employee ;
+                        ]
+                        [
+                            sh:class vair:NaturalPerson ;
+
+                        ]
+
+                    )
+                    
                 ]
 
                 sh:or (
@@ -303,7 +330,14 @@ ex:AnnexIII-5a
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasAISubject ;
-                    sh:class vair:PublicServicesApplicant ;
+                    sh:or (
+                        [
+                             sh:class vair:PublicServicesApplicant ;
+                        ]
+                        [ 
+                            sh:class vair:NaturalPerson ;
+                        ]
+                    )
                 ]
 
                 )] .                
@@ -512,6 +546,10 @@ ex:AnnexIII-6a
 
                     [
                         sh:class vair:Victim ; 
+                    ]
+                    [
+
+                        sh:class vair:NaturalPerson ;
                     ]
 
                     )
@@ -923,6 +961,9 @@ ex:AnnexIII-7b
                         [
                             sh:class vair:ResidencePermitApplicant ;
                         ]
+                        [
+                            sh:class vair:NaturalPerson ;
+                        ]
                         )]
 
 
@@ -997,6 +1038,9 @@ ex:AnnexIII-7d
                         ]
                         [
                             sh:class vair:ResidencePermitApplicant ;
+                        ]
+                        [
+                            sh:class vair:NaturalPerson ;
                         ]
                         )]
 
