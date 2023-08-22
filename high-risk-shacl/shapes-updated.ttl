@@ -296,16 +296,16 @@ ex:AnnexIII-5a
                         sh:class vair:EvaluatingEligibilityToAccessPublicAssistanceServices ;
                     ]
                     [
-                        sh:class vair:GrantingPublicAssistanceService ;
+                        sh:class vair:GrantingPublicAssistanceServices ;
                     ]
                     [ 
-                        sh:class vair:RevokingPublicAssisstanceServices;
+                        sh:class vair:RevokingPublicAssistanceServices;
                     ]
                     [
-                        sh:class vair:ReclaimingPublicAssisstanceServices ;
+                        sh:class vair:ReclaimingPublicAssistanceServices ;
                     ]
                     [
-                        sh:class vair:GrantingPublicAssistanceServices;
+                        sh:class vair:ReducingPublicAssistanceServices;
 
                     ]
 
@@ -414,7 +414,7 @@ ex:AnnexIII-5c
                     sh:path airo:hasPurpose ;
                     sh:or (
                     [
-                        sh:class vair:DispacthingEmergencyService ;
+                        sh:class vair:DispatchingEmergencyService ;
                     ]
                     [
                         sh:class vair:PrioritisationOfEmergencyService ;
@@ -508,7 +508,7 @@ ex:AnnexIII-6a
                         sh:class vair:AssessingRiskOfOffending ;
                     ]
                     [
-                        sh:class vair:AssessingRiskOfReOffending;
+                        sh:class vair:AssessingRiskOfReoffending;
                     ]
                     [
                         sh:class vair:AssessingRiskForPotentialVictimsOfCriminalOffences ;
@@ -665,7 +665,7 @@ ex:AnnexIII-6e-1
                             sh:class vair:PredictingOccurrenceOfCriminalOffence ;
                         ]
                         [
-                            sh:class vair:PredictingReOccurrenceOfCriminalOffence;
+                            sh:class vair:PredictingReoccurrenceOfCriminalOffence;
                         ]
                     )
 
