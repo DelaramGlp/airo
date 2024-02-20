@@ -65,7 +65,7 @@ terms:title rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/airo#affects
 airo:affects rdf:type owl:ObjectProperty ;
              rdfs:domain airo:AISystem ;
-             rdfs:range airo:AffectedStakeholder ;
+             rdfs:range airo:AffectedEntity ;
              rdfs:comment "Indicates the stakeholders affected by the AI system"@en ;
              rdfs:label "affects"@en .
 
@@ -159,7 +159,7 @@ airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasImpactOnStakeholder
 airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
                             rdfs:domain airo:Impact ;
-                            rdfs:range airo:AffectedStakeholder ;
+                            rdfs:range airo:AffectedEntity ;
                             rdfs:comment "Specifies stakeholders that are affected by an AI impact"@en ;
                             rdfs:label "has impact on stakeholder"@en .
 
@@ -388,11 +388,11 @@ airo:AIUser rdf:type owl:Class ;
             rdfs:label "AI User"@en .
 
 
-###  https://w3id.org/airo#AffectedStakeholder
-airo:AffectedStakeholder rdf:type owl:Class ;
-                         rdfs:subClassOf airo:Stakeholder ;
-                         rdfs:comment "An entity that is affected by AI"@en ;
-                         rdfs:label "Affected Stakeholder"@en .
+###  https://w3id.org/airo#AffectedEntity
+airo:AffectedEntity rdf:type owl:Class ;
+                    rdfs:subClassOf airo:Stakeholder ;
+                    rdfs:comment "An entity that is affected by AI"@en ;
+                    rdfs:label "Affected Entity"@en .
 
 
 ###  https://w3id.org/airo#AreaOfImpact
