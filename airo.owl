@@ -369,7 +369,7 @@ airo:AISubject rdf:type owl:Class ;
 ###  https://w3id.org/airo#AISystem
 airo:AISystem rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
-              rdfs:comment "An engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommendations, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy [NIST]"@en ;
+              rdfs:comment "A machine-based system designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments [AI Act, Art. 3(1)]"@en ;
               rdfs:label "AI System"@en .
 
 
