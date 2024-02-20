@@ -469,6 +469,12 @@ airo:Impact rdf:type owl:Class ;
             rdfs:label "Impact"@en .
 
 
+###  https://w3id.org/airo#Input
+airo:Input rdf:type owl:Class ;
+           rdfs:comment "Something put into a system to produce output"@en ;
+           rdfs:label "Input"@en .
+
+
 ###  https://w3id.org/airo#Likelihood
 airo:Likelihood rdf:type owl:Class ;
                 rdfs:comment "Chance of an event happening"@en ;
@@ -483,7 +489,7 @@ airo:Modality rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Output
 airo:Output rdf:type owl:Class ;
-            rdfs:comment "Output of an AI system"@en ;
+            rdfs:comment "Output of an entity"@en ;
             rdfs:label "Output"@en .
 
 
