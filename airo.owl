@@ -166,6 +166,8 @@ airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasInput
 airo:hasInput rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://w3id.org/airo#Entity> ;
+              rdfs:range airo:Input ;
               rdfs:comment "Indicates the input an entity needs to process and/or generate output"@en ;
               rdfs:label "has input"@en .
 
