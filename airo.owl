@@ -327,7 +327,7 @@ terms:date rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/airo#AICapability
 airo:AICapability rdf:type owl:Class ;
-                  rdfs:comment "The capability of an AI system that enables realisation of the system's purposes."@en ;
+                  rdfs:comment "The capability of an AI system that enables realisation of the system's purposes"@en ;
                   rdfs:label "AI Capability"@en .
 
 
@@ -429,8 +429,14 @@ airo:Document rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Domain
 airo:Domain rdf:type owl:Class ;
-            rdfs:comment "Refers to domain, sector, or industry"@en ;
+            rdfs:comment "Domain, sector, or industry"@en ;
             rdfs:label "Domain"@en .
+
+
+###  https://w3id.org/airo#EnvironmentOfUse
+airo:EnvironmentOfUse rdf:type owl:Class ;
+                      rdfs:comment "The environment, e.g. facility or institution, in which an entity is used"@en ;
+                      rdfs:label "Environment Of Use"@en .
 
 
 ###  https://w3id.org/airo#Event
