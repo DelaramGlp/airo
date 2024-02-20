@@ -370,6 +370,7 @@ airo:AISubject rdf:type owl:Class ;
 airo:AISystem rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
               rdfs:comment "A machine-based system designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments [AI Act, Art. 3(1)]"@en ;
+              rdfs:isDefinedBy "AI Act, Art. 3(1)"@en ;
               rdfs:label "AI System"@en .
 
 
