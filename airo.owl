@@ -164,6 +164,12 @@ airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
                             rdfs:label "has impact on stakeholder"@en .
 
 
+###  https://w3id.org/airo#hasInput
+airo:hasInput rdf:type owl:ObjectProperty ;
+              rdfs:comment "Indicates the input an entity needs to process and/or generate output"@en ;
+              rdfs:label "has input"@en .
+
+
 ###  https://w3id.org/airo#hasLifecyclePhase
 airo:hasLifecyclePhase rdf:type owl:ObjectProperty ;
                        rdfs:domain airo:AISystem ;
