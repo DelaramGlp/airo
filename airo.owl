@@ -276,6 +276,14 @@ airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
                      rdfs:label "is risk source for"@en .
 
 
+###  https://w3id.org/airo#isUsedWithinEnvironment
+airo:isUsedWithinEnvironment rdf:type owl:ObjectProperty ;
+                             rdfs:domain <http://w3id.org/airo#Entity> ;
+                             rdfs:range airo:EnvironmentOfUse ;
+                             rdfs:comment "indicates the enviroment of use"@en ;
+                             rdfs:label "is used within environment"@en .
+
+
 ###  https://w3id.org/airo#mitigatesEvent
 airo:mitigatesEvent rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf airo:modifiesEvent ;
