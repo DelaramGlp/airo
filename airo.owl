@@ -182,9 +182,8 @@ airo:hasLikelihood rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasPurpose
 airo:hasPurpose rdf:type owl:ObjectProperty ;
-                rdfs:domain airo:AISystem ;
                 rdfs:range airo:Purpose ;
-                rdfs:label "Indicates the intended purpose of an AI system."@en ,
+                rdfs:label "Indicates the purpose of an AI system"@en ,
                            "has purpose"@en .
 
 
@@ -322,8 +321,8 @@ terms:date rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-###  http://www.w3.org/ns/prov#Entity
-<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+###  http://w3id.org/airo#Entity
+<http://w3id.org/airo#Entity> rdf:type owl:Class .
 
 
 ###  https://w3id.org/airo#AICapability
@@ -368,7 +367,7 @@ airo:AISubject rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AISystem
 airo:AISystem rdf:type owl:Class ;
-              rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+              rdfs:subClassOf <http://w3id.org/airo#Entity> ;
               rdfs:comment "A machine-based system designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments [AI Act, Art. 3(1)]"@en ;
               rdfs:isDefinedBy "AI Act, Art. 3(1)"@en ;
               rdfs:label "AI System"@en .
@@ -423,7 +422,7 @@ airo:Control rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Document
 airo:Document rdf:type owl:Class ;
-              rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+              rdfs:subClassOf <http://w3id.org/airo#Entity> ;
               rdfs:comment "A piece of written, printed, or electronic matter that provides information or evidence [from Oxford Languages dictionary]"@en ;
               rdfs:label "Document"@en .
 
@@ -462,7 +461,7 @@ airo:Output rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Purpose
 airo:Purpose rdf:type owl:Class ;
-             rdfs:comment "Refers to the use for which an AI system is intended by the provider, including the specific context and conditions of use, as specified in the information supplied by the provider in the instructions for use, promotional or sales materials and statements, as well as in the technical documentation. [Source: AI Act, Art 3(12)]"@en ;
+             rdfs:comment "The end goal for which an entity is used or an action is taken"@en ;
              rdfs:label "Purpose"@en .
 
 
@@ -496,7 +495,7 @@ airo:Stakeholder rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Standard
 airo:Standard rdf:type owl:Class ;
-              rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+              rdfs:subClassOf <http://w3id.org/airo#Entity> ;
               rdfs:comment "A resource, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context."@en ;
               rdfs:isDefinedBy "ISO/IEC TR 29110-1:2016(en), 3.59"@en ;
               rdfs:label "Standard"@en .
