@@ -271,7 +271,7 @@ airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#isUsedBy
 airo:isUsedBy rdf:type owl:ObjectProperty ;
               rdfs:domain airo:AISystem ;
-              rdfs:range airo:AIUser ;
+              rdfs:range airo:AIDeployer ;
               rdfs:comment "Indicates user of an AI system"@en ;
               rdfs:label "is used by"@en .
 
@@ -337,6 +337,14 @@ airo:AIComponent rdf:type owl:Class ;
                  rdfs:label "AI Component"@en .
 
 
+###  https://w3id.org/airo#AIDeployer
+airo:AIDeployer rdf:type owl:Class ;
+                rdfs:subClassOf airo:AIOperator ;
+                rdfs:comment "Any natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity"@en ;
+                rdfs:isDefinedBy "AI Act, Art. 3(4)"@en ;
+                rdfs:label "AI Deployer"@en .
+
+
 ###  https://w3id.org/airo#AILifecyclePhase
 airo:AILifecyclePhase rdf:type owl:Class ;
                       rdfs:comment "A Phase of AI lifecycle which indicates evolution of the system from conception through retirement"@en ;
@@ -377,14 +385,6 @@ airo:AISystem rdf:type owl:Class ;
 airo:AITechnique rdf:type owl:Class ;
                  rdfs:comment "Approach or technique used in development of an AI system"@en ;
                  rdfs:label "AI Technique"@en .
-
-
-###  https://w3id.org/airo#AIUser
-airo:AIUser rdf:type owl:Class ;
-            rdfs:subClassOf airo:AIOperator ;
-            rdfs:comment "Any natural or legal person under whose authority the system is used."@en ;
-            rdfs:isDefinedBy "AI Act, Common position, Art.3 (4)"@en ;
-            rdfs:label "AI User"@en .
 
 
 ###  https://w3id.org/airo#AffectedEntity
