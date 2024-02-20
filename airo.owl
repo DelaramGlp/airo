@@ -180,6 +180,14 @@ airo:hasLikelihood rdf:type owl:ObjectProperty ;
                    rdfs:label "has likelihood"@en .
 
 
+###  https://w3id.org/airo#hasModality
+airo:hasModality rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://w3id.org/airo#Entity> ;
+                 rdfs:range airo:Modality ;
+                 rdfs:label "Indicates the modality in which an entity exists"@en ,
+                            "has modality"@en .
+
+
 ###  https://w3id.org/airo#hasPurpose
 airo:hasPurpose rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Purpose ;
@@ -465,6 +473,12 @@ airo:Impact rdf:type owl:Class ;
 airo:Likelihood rdf:type owl:Class ;
                 rdfs:comment "Chance of an event happening"@en ;
                 rdfs:label "Likelihood"@en .
+
+
+###  https://w3id.org/airo#Modality
+airo:Modality rdf:type owl:Class ;
+              rdfs:comment "The way or type in which an entity exists or is represented"@en ;
+              rdfs:label "Modality"@en .
 
 
 ###  https://w3id.org/airo#Output
