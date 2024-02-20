@@ -216,9 +216,9 @@ airo:hasStakeholder rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasVersion
 airo:hasVersion rdf:type owl:ObjectProperty ;
-                rdfs:domain airo:AISystem ;
+                rdfs:domain <http://w3id.org/airo#Entity> ;
                 rdfs:range airo:Version ;
-                rdfs:comment "Indicates the version of an AI system"@en ;
+                rdfs:comment "Indicates the version of an entity"@en ;
                 rdfs:label "has version"@en .
 
 
