@@ -502,6 +502,12 @@ airo:Modality rdf:type owl:Class ;
               rdfs:label "Modality"@en .
 
 
+###  https://w3id.org/airo#Model
+airo:Model rdf:type owl:Class ;
+           rdfs:subClassOf airo:AIComponent ;
+           rdfs:label "Model"@en .
+
+
 ###  https://w3id.org/airo#Output
 airo:Output rdf:type owl:Class ;
             rdfs:comment "Output of an entity"@en ;
