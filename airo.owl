@@ -140,6 +140,14 @@ airo:hasControl rdf:type owl:ObjectProperty ;
                 rdfs:label "has Control"@en .
 
 
+###  https://w3id.org/airo#hasDeployer
+airo:hasDeployer rdf:type owl:ObjectProperty ;
+                 rdfs:domain airo:AISystem ;
+                 rdfs:range airo:AIDeployer ;
+                 rdfs:comment "Indicates the deployer of an AI system"@en ;
+                 rdfs:label "has deployer"@en .
+
+
 ###  https://w3id.org/airo#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       rdfs:range airo:Document ;
@@ -258,14 +266,6 @@ airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
                            rdfs:range airo:Domain ;
                            rdfs:comment "Specifies the domain an AI system is used within"@en ;
                            rdfs:label "is applied within domain"@en .
-
-
-###  https://w3id.org/airo#isDeployedBy
-airo:isDeployedBy rdf:type owl:ObjectProperty ;
-                  rdfs:domain airo:AISystem ;
-                  rdfs:range airo:AIDeployer ;
-                  rdfs:comment "Indicates the deployer of an AI system"@en ;
-                  rdfs:label "is deployed by"@en .
 
 
 ###  https://w3id.org/airo#isFollowedByControl
