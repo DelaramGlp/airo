@@ -211,6 +211,14 @@ airo:hasModality rdf:type owl:ObjectProperty ;
                             "has modality"@en .
 
 
+###  https://w3id.org/airo#hasProvider
+airo:hasProvider rdf:type owl:ObjectProperty ;
+                 rdfs:domain airo:AISystem ;
+                 rdfs:range airo:AIProvider ;
+                 rdfs:comment "Indicates provider of an AI system"@en ;
+                 rdfs:label "has provider"@en .
+
+
 ###  https://w3id.org/airo#hasPurpose
 airo:hasPurpose rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Purpose ;
@@ -281,14 +289,6 @@ airo:isPartOfControl rdf:type owl:ObjectProperty ;
                      rdfs:range airo:Control ;
                      rdfs:comment "Specifies composition of controls"@en ;
                      rdfs:label "is part of control"@en .
-
-
-###  https://w3id.org/airo#isProvidedBy
-airo:isProvidedBy rdf:type owl:ObjectProperty ;
-                  rdfs:domain airo:AISystem ;
-                  rdfs:range airo:AIProvider ;
-                  rdfs:comment "Indicates provider of an AI system"@en ;
-                  rdfs:label "is provided by"@en .
 
 
 ###  https://w3id.org/airo#isRiskSourceFor
