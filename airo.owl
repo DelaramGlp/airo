@@ -20,7 +20,7 @@
                          terms:publisher "ADAPT Centre, Trinity College Dublin"^^xsd:string ;
                          terms:title "AIRO"^^xsd:string ;
                          rdfs:label "AI Risk Ontology"@en ;
-                         owl:versionInfo 0.5 .
+                         owl:versionInfo 1 .
 
 #################################################################
 #    Annotation properties
@@ -131,6 +131,13 @@ airo:hasConsequence rdf:type owl:ObjectProperty ;
                     rdfs:range airo:Consequence ;
                     rdfs:comment "Specifies consequences caused by materialisation of a risk"@en ;
                     rdfs:label "has consequence" .
+
+
+###  https://w3id.org/airo#hasControl
+airo:hasControl rdf:type owl:ObjectProperty ;
+                rdfs:range airo:Control ;
+                rdfs:comment "Indicates the controls associated with a system or component"@en ;
+                rdfs:label "has Control"@en .
 
 
 ###  https://w3id.org/airo#hasDocumentation
