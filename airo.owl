@@ -146,10 +146,19 @@ airo:hasControl rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasDeployer
 airo:hasDeployer rdf:type owl:ObjectProperty ;
-                 rdfs:domain airo:AISystem ;
+                 rdfs:domain airo:AIComponent ,
+                             airo:AISystem ;
                  rdfs:range airo:AIDeployer ;
                  rdfs:comment "Indicates the deployer of an AI system"@en ;
                  rdfs:label "has deployer"@en .
+
+
+###  https://w3id.org/airo#hasDeveloper
+airo:hasDeveloper rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AIComponent ,
+                              airo:AISystem ;
+                  rdfs:range airo:AIDeveloper ;
+                  rdfs:label "has developer"@en .
 
 
 ###  https://w3id.org/airo#hasDocumentation
@@ -217,7 +226,8 @@ airo:hasModality rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasProvider
 airo:hasProvider rdf:type owl:ObjectProperty ;
-                 rdfs:domain airo:AISystem ;
+                 rdfs:domain airo:AIComponent ,
+                             airo:AISystem ;
                  rdfs:range airo:AIProvider ;
                  rdfs:comment "Indicates provider of an AI system"@en ;
                  rdfs:label "has provider"@en .
