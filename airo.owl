@@ -483,6 +483,14 @@ airo:Event rdf:type owl:Class ;
            rdfs:label "Event"@en .
 
 
+###  https://w3id.org/airo#GPAIModel
+airo:GPAIModel rdf:type owl:Class ;
+               rdfs:subClassOf airo:AIComponent ;
+               terms:source "EU AI Act, Article 3(63)"@en ;
+               rdfs:comment "An AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, except AI models that are used for research, development or prototyping activities before they are placed on the market."@en ;
+               rdfs:label "General Purpose AI Model"@en .
+
+
 ###  https://w3id.org/airo#Impact
 airo:Impact rdf:type owl:Class ;
             rdfs:subClassOf airo:Consequence ;
