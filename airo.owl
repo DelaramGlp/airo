@@ -69,16 +69,22 @@ terms:title rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/airo#affects
 airo:affects rdf:type owl:ObjectProperty ;
              rdfs:domain airo:AISystem ;
-             rdfs:range airo:AffectedEntity ;
              rdfs:comment "Indicates the stakeholders affected by the AI system"@en ;
              rdfs:label "affects"@en .
+
+
+###  https://w3id.org/airo#compliesWithRegulation
+airo:compliesWithRegulation rdf:type owl:ObjectProperty ;
+                            rdfs:label "Indicates compliance with a specific regulation."@en ,
+                                       "complies with regulation"@en .
 
 
 ###  https://w3id.org/airo#conformsToStandard
 airo:conformsToStandard rdf:type owl:ObjectProperty ;
                         rdfs:range airo:Standard ;
                         rdfs:comment "Indicates conformance of an entity to a standard"@en ;
-                        rdfs:label "conforms to standard"@en .
+                        rdfs:label "Indicates frequency of an event."@en ,
+                                   "conforms to standard"@en .
 
 
 ###  https://w3id.org/airo#detectsEvent
@@ -86,7 +92,7 @@ airo:detectsEvent rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf airo:modifiesEvent ;
                   rdfs:domain airo:Control ;
                   rdfs:range airo:Event ;
-                  rdfs:comment "Indicates the control used for detecting an event"@en ;
+                  rdfs:comment "Indicates the control used for detecting an event."@en ;
                   rdfs:label "detects event"@en .
 
 
@@ -95,7 +101,7 @@ airo:eliminatesEvent rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf airo:modifiesEvent ;
                      rdfs:domain airo:Control ;
                      rdfs:range airo:Event ;
-                     rdfs:comment "Indicates the control used for eliminating an event"@en ;
+                     rdfs:comment "Indicates the control used for eliminating an event."@en ;
                      rdfs:label "eliminates event"@en .
 
 
@@ -103,7 +109,7 @@ airo:eliminatesEvent rdf:type owl:ObjectProperty ;
 airo:exploitsVulnerability rdf:type owl:ObjectProperty ;
                            rdfs:domain airo:RiskSource ;
                            rdfs:range airo:Vulnerability ;
-                           rdfs:comment "indicates vulnerabilities exploited by a risk source"@en ;
+                           rdfs:comment "Indicates vulnerabilities exploited by a risk source."@en ;
                            rdfs:label "exploits vulnerability"@en .
 
 
@@ -115,10 +121,11 @@ airo:hasAISubject rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasCapability
 airo:hasCapability rdf:type owl:ObjectProperty ;
-                   rdfs:domain airo:AISystem ;
+                   rdfs:domain airo:AIComponent ,
+                               airo:AISystem ;
                    rdfs:range airo:AICapability ;
-                   rdfs:comment "Specifies capabilities implemented within an AI system to materialise its purposes"@en ;
-                   rdfs:label "has capability" .
+                   rdfs:comment "Specifies capabilities implemented within an AI system to materialise its purposes."@en ;
+                   rdfs:label "has capability"@en .
 
 
 ###  https://w3id.org/airo#hasComponent
@@ -140,7 +147,7 @@ airo:hasConsequence rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasControl
 airo:hasControl rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Control ;
-                rdfs:comment "Indicates the controls associated with a system or component"@en ;
+                rdfs:comment "Indicates the controls associated with a system or component."@en ;
                 rdfs:label "has control"@en .
 
 
@@ -168,10 +175,18 @@ airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       rdfs:label "has documentation"@en .
 
 
+###  https://w3id.org/airo#hasExposure
+airo:hasExposure rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Indicates exposure an entity to an event, e.g. exposure an affected entity to a specific impact."@en ;
+                 rdfs:label "has exposure"@en .
+
+
 ###  https://w3id.org/airo#hasFrequency
 airo:hasFrequency rdf:type owl:ObjectProperty ;
                   rdfs:domain airo:Event ;
-                  rdfs:range airo:Frequency .
+                  rdfs:range airo:Frequency ;
+                  rdfs:comment "Indicates frequency of an event."@en ;
+                  rdfs:label "has frequency"@en .
 
 
 ###  https://w3id.org/airo#hasImpact
@@ -186,16 +201,15 @@ airo:hasImpact rdf:type owl:ObjectProperty ;
 airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Impact ;
                      rdfs:range airo:AreaOfImpact ;
-                     rdfs:comment "Specifies the area that is affected by an AI impact" ;
+                     rdfs:comment "Specifies the area (e.g. physical health) that is negatively impacted by an  AI system or component." ;
                      rdfs:label "has impact on area"@en .
 
 
-###  https://w3id.org/airo#hasImpactOnStakeholder
-airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
-                            rdfs:domain airo:Impact ;
-                            rdfs:range airo:AffectedEntity ;
-                            rdfs:comment "Specifies stakeholders that are affected by an AI impact"@en ;
-                            rdfs:label "has impact on stakeholder"@en .
+###  https://w3id.org/airo#hasImpactOnEntity
+airo:hasImpactOnEntity rdf:type owl:ObjectProperty ;
+                       rdfs:domain airo:Impact ;
+                       rdfs:comment "Specifies entities or stakeholders that are negatively impacted by an AI system or component."@en ;
+                       rdfs:label "has impact on entity"@en .
 
 
 ###  https://w3id.org/airo#hasInput
@@ -208,9 +222,10 @@ airo:hasInput rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasLifecyclePhase
 airo:hasLifecyclePhase rdf:type owl:ObjectProperty ;
-                       rdfs:domain airo:AISystem ;
+                       rdfs:domain airo:AIComponent ,
+                                   airo:AISystem ;
                        rdfs:range airo:AILifecyclePhase ;
-                       rdfs:comment "Indicates the AI system's lifecycle phase"@en ;
+                       rdfs:comment "Indicates the lifecycle phase of the AI system or component."@en ;
                        rdfs:label "has lifecycle phase"@en .
 
 
@@ -243,6 +258,15 @@ airo:hasPurpose rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Purpose ;
                 rdfs:label "Indicates the purpose of an AI system"@en ,
                            "has purpose"@en .
+
+
+###  https://w3id.org/airo#hasQuality
+airo:hasQuality rdf:type owl:ObjectProperty ;
+                rdfs:domain airo:AIComponent ,
+                            airo:AISystem ;
+                rdfs:range airo:AIQuality ;
+                rdfs:comment "Indicates a quality of an AI system or component."@en ;
+                rdfs:label "has quality"@en .
 
 
 ###  https://w3id.org/airo#hasRisk
@@ -283,7 +307,7 @@ airo:hasVersion rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasVulnerability
 airo:hasVulnerability rdf:type owl:ObjectProperty ;
                       rdfs:range airo:Vulnerability ;
-                      rdfs:comment "indicates vulnerabilities associated with an entity, e.g. AI system and its components"@en ;
+                      rdfs:comment "Indicates vulnerabilities associated with an entity, e.g. AI system and its components."@en ;
                       rdfs:label "has vulnerability"@en .
 
 
@@ -291,7 +315,7 @@ airo:hasVulnerability rdf:type owl:ObjectProperty ;
 airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
                            rdfs:domain airo:AISystem ;
                            rdfs:range airo:Domain ;
-                           rdfs:comment "Specifies the domain an AI system is used within"@en ;
+                           rdfs:comment "Specifies the domain an AI system is used within."@en ;
                            rdfs:label "is applied within domain"@en .
 
 
@@ -331,7 +355,7 @@ airo:mitigatesEvent rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf airo:modifiesEvent ;
                     rdfs:domain airo:Control ;
                     rdfs:range airo:Event ;
-                    rdfs:comment "Indicates the control used for mitigating an event"@en ;
+                    rdfs:comment "Indicates the control used for mitigating an event."@en ;
                     rdfs:label "mitigates event"@en .
 
 
@@ -339,7 +363,7 @@ airo:mitigatesEvent rdf:type owl:ObjectProperty ;
 airo:modifiesEvent rdf:type owl:ObjectProperty ;
                    rdfs:domain airo:Control ;
                    rdfs:range airo:Event ;
-                   rdfs:comment "Indicates the control used for modification of an event"@en ;
+                   rdfs:comment "Indicates the control employed to modify an event."@en ;
                    rdfs:label "modifies event"@en .
 
 
@@ -355,7 +379,7 @@ airo:producesOutput rdf:type owl:ObjectProperty ;
 airo:usesTechnique rdf:type owl:ObjectProperty ;
                    rdfs:domain airo:AISystem ;
                    rdfs:range airo:AITechnique ;
-                   rdfs:comment "Indicates the AI techniques used in an AI system"@en ;
+                   rdfs:comment "Indicates the AI techniques used in an AI system or component."@en ;
                    rdfs:label "uses technique"@en .
 
 
@@ -468,13 +492,6 @@ airo:AIUser rdf:type owl:Class ;
             terms:source "ISO/IEC TR 24028, 3.37"@en ;
             rdfs:comment "Individual or group that interacts with a system."@en ;
             rdfs:label "AI User"@en .
-
-
-###  https://w3id.org/airo#AffectedEntity
-airo:AffectedEntity rdf:type owl:Class ;
-                    rdfs:subClassOf <http://w3id.org/airo#Entity> ;
-                    rdfs:comment "An entity that is affected by AI"@en ;
-                    rdfs:label "Affected Entity"@en .
 
 
 ###  https://w3id.org/airo#AreaOfImpact
