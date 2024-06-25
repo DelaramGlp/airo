@@ -141,7 +141,7 @@ airo:hasConsequence rdf:type owl:ObjectProperty ;
 airo:hasControl rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Control ;
                 rdfs:comment "Indicates the controls associated with a system or component"@en ;
-                rdfs:label "has Control"@en .
+                rdfs:label "has control"@en .
 
 
 ###  https://w3id.org/airo#hasDeployer
@@ -163,7 +163,7 @@ airo:hasDeveloper rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
-                      rdfs:range airo:Document ;
+                      rdfs:range airo:Documention ;
                       rdfs:comment "Indicates documents related to an entity, e.g. AI system"@en ;
                       rdfs:label "has documentation"@en .
 
@@ -218,7 +218,6 @@ airo:hasLikelihood rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasModality
 airo:hasModality rdf:type owl:ObjectProperty ;
-                 rdfs:domain <http://w3id.org/airo#Entity> ;
                  rdfs:range airo:Modality ;
                  rdfs:label "Indicates the modality in which an entity exists"@en ,
                             "has modality"@en .
@@ -410,7 +409,7 @@ airo:AIDeveloper rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AILifecyclePhase
 airo:AILifecyclePhase rdf:type owl:Class ;
-                      rdfs:comment "A Phase of AI lifecycle which indicates evolution of the system from conception through retirement"@en ;
+                      rdfs:comment "A Phase of AI lifecycle which indicates evolution of the system from conception through retirement."@en ;
                       rdfs:label "AI Lifecycle Phase"@en .
 
 
@@ -432,6 +431,7 @@ airo:AIProvider rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AIQuality
 airo:AIQuality rdf:type owl:Class ;
+               rdfs:comment "Refers to quality of an AI system or component."@en ;
                rdfs:label "AI Quality"@en .
 
 
@@ -456,6 +456,14 @@ airo:AITechnique rdf:type owl:Class ;
                  rdfs:label "AI Technique"@en .
 
 
+###  https://w3id.org/airo#AIUser
+airo:AIUser rdf:type owl:Class ;
+            rdfs:subClassOf airo:Stakeholder ;
+            terms:source "ISO/IEC TR 24028, 3.37"@en ;
+            rdfs:comment "Individual or group that interacts with a system."@en ;
+            rdfs:label "AI User"@en .
+
+
 ###  https://w3id.org/airo#AffectedEntity
 airo:AffectedEntity rdf:type owl:Class ;
                     rdfs:subClassOf <http://w3id.org/airo#Entity> ;
@@ -467,6 +475,12 @@ airo:AffectedEntity rdf:type owl:Class ;
 airo:AreaOfImpact rdf:type owl:Class ;
                   rdfs:comment "Areas that can be affected by an AI system"@en ;
                   rdfs:label "Area Of Impact"@en .
+
+
+###  https://w3id.org/airo#CodeOfConduct
+airo:CodeOfConduct rdf:type owl:Class ;
+                   rdfs:subClassOf <http://w3id.org/airo#Entity> ;
+                   rdfs:label "Code Of Conduct"@en .
 
 
 ###  https://w3id.org/airo#Consequence
@@ -493,11 +507,12 @@ airo:Dataset rdf:type owl:Class ;
              rdfs:label "Dataset"@en .
 
 
-###  https://w3id.org/airo#Document
-airo:Document rdf:type owl:Class ;
-              rdfs:subClassOf <http://w3id.org/airo#Entity> ;
-              rdfs:comment "A piece of written, printed, or electronic matter that provides information or evidence [from Oxford Languages dictionary]"@en ;
-              rdfs:label "Document"@en .
+###  https://w3id.org/airo#Documention
+airo:Documention rdf:type owl:Class ;
+                 rdfs:subClassOf <http://w3id.org/airo#Entity> ;
+                 terms:source "ISO/IEC 29110-1-2:2024, 3.36"@en ;
+                 rdfs:comment "A set of documents, i.e.  information and the medium on which it is contained."@en ;
+                 rdfs:label "Documentation"@en .
 
 
 ###  https://w3id.org/airo#Domain
@@ -580,6 +595,11 @@ airo:Purpose rdf:type owl:Class ;
              rdfs:label "Purpose"@en .
 
 
+###  https://w3id.org/airo#Regulation
+airo:Regulation rdf:type owl:Class ;
+                rdfs:subClassOf <http://w3id.org/airo#Entity> .
+
+
 ###  https://w3id.org/airo#Risk
 airo:Risk rdf:type owl:Class ;
           rdfs:subClassOf airo:Event ;
@@ -611,8 +631,8 @@ airo:Stakeholder rdf:type owl:Class ;
 ###  https://w3id.org/airo#Standard
 airo:Standard rdf:type owl:Class ;
               rdfs:subClassOf <http://w3id.org/airo#Entity> ;
+              terms:source "ISO/IEC TR 29110-1:2016(en), 3.59"@en ;
               rdfs:comment "A resource, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context."@en ;
-              rdfs:isDefinedBy "ISO/IEC TR 29110-1:2016(en), 3.59"@en ;
               rdfs:label "Standard"@en .
 
 
