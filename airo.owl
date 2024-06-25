@@ -357,7 +357,10 @@ terms:date rdf:type owl:DatatypeProperty .
 #################################################################
 
 ###  http://w3id.org/airo#Entity
-<http://w3id.org/airo#Entity> rdf:type owl:Class .
+<http://w3id.org/airo#Entity> rdf:type owl:Class ;
+                              terms:source "ISO/IEC TR 24028, 3.16"@en ;
+                              rdfs:comment "Any concrete or abstract thing of interest."@en ;
+                              rdfs:label "Entity"@en .
 
 
 ###  https://w3id.org/airo#AICapability
@@ -406,7 +409,7 @@ airo:AIProvider rdf:type owl:Class ;
 ###  https://w3id.org/airo#AISubject
 airo:AISubject rdf:type owl:Class ;
                rdfs:subClassOf airo:Stakeholder ;
-               rdfs:comment "An entity that is subject to the use of AI"@en ;
+               rdfs:comment "An entity that is subject to or impacted by the use of AI."@en ;
                rdfs:label "AI Subject"@en .
 
 
@@ -475,13 +478,13 @@ airo:Document rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Domain
 airo:Domain rdf:type owl:Class ;
-            rdfs:comment "Domain, sector, or industry"@en ;
+            rdfs:comment "An area, sector, or industry that is associated with economic activities."@en ;
             rdfs:label "Domain"@en .
 
 
 ###  https://w3id.org/airo#EnvironmentOfUse
 airo:EnvironmentOfUse rdf:type owl:Class ;
-                      rdfs:comment "The environment, e.g. facility or institution, in which an entity is used"@en ;
+                      rdfs:comment "The environment, e.g. facility or institution, in which an entity is used."@en ;
                       rdfs:label "Environment Of Use"@en .
 
 
@@ -494,7 +497,7 @@ airo:Event rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#GPAIModel
 airo:GPAIModel rdf:type owl:Class ;
-               rdfs:subClassOf airo:AIComponent ;
+               rdfs:subClassOf airo:MLModel ;
                terms:source "EU AI Act, Article 3(63)"@en ;
                rdfs:comment "An AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, except AI models that are used for research, development or prototyping activities before they are placed on the market."@en ;
                rdfs:label "General Purpose AI Model"@en .
@@ -541,7 +544,7 @@ airo:Output rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Purpose
 airo:Purpose rdf:type owl:Class ;
-             rdfs:comment "The end goal for which an entity is used or an action is taken"@en ;
+             rdfs:comment "The end goal for which an entity is used or an action is taken."@en ;
              rdfs:label "Purpose"@en .
 
 
