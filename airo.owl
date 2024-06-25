@@ -147,7 +147,7 @@ airo:hasControl rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasDeployer
 airo:hasDeployer rdf:type owl:ObjectProperty ;
                  rdfs:domain airo:AISystem ;
-                 rdfs:range airo:AIDeployer ;
+                 rdfs:range airo:Deployer ;
                  rdfs:comment "Indicates the deployer of an AI system"@en ;
                  rdfs:label "has deployer"@en .
 
@@ -218,7 +218,7 @@ airo:hasModality rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasProvider
 airo:hasProvider rdf:type owl:ObjectProperty ;
                  rdfs:domain airo:AISystem ;
-                 rdfs:range airo:AIProvider ;
+                 rdfs:range airo:Provider ;
                  rdfs:comment "Indicates provider of an AI system"@en ;
                  rdfs:label "has provider"@en .
 
@@ -377,33 +377,10 @@ airo:AIComponent rdf:type owl:Class ;
                  rdfs:label "AI Component"@en .
 
 
-###  https://w3id.org/airo#AIDeployer
-airo:AIDeployer rdf:type owl:Class ;
-                rdfs:subClassOf airo:AIOperator ;
-                rdfs:comment "Any natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity"@en ;
-                rdfs:isDefinedBy "AI Act, Art. 3(4)"@en ;
-                rdfs:label "AI Deployer"@en .
-
-
 ###  https://w3id.org/airo#AILifecyclePhase
 airo:AILifecyclePhase rdf:type owl:Class ;
                       rdfs:comment "A Phase of AI lifecycle which indicates evolution of the system from conception through retirement"@en ;
                       rdfs:label "AI Lifecycle Phase"@en .
-
-
-###  https://w3id.org/airo#AIOperator
-airo:AIOperator rdf:type owl:Class ;
-                rdfs:subClassOf airo:Stakeholder ;
-                rdfs:comment "the provider, the product manufacturer, the user, the authorised representative, the importer or the distributor"@en ;
-                rdfs:label "AI Operator"@en .
-
-
-###  https://w3id.org/airo#AIProvider
-airo:AIProvider rdf:type owl:Class ;
-                rdfs:subClassOf airo:AIOperator ;
-                rdfs:comment "A natural or legal person, public authority, agency or other body that develops an AI system or that has an AI system developed and places that system on the market or puts it into service under its own name or trademark, whether for payment or free of charge"@en ;
-                rdfs:isDefinedBy "AI Act, Common position, Art. 3(2)"@en ;
-                rdfs:label "AI Provider"@en .
 
 
 ###  https://w3id.org/airo#AISubject
@@ -423,13 +400,12 @@ airo:AISystem rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AITechnique
 airo:AITechnique rdf:type owl:Class ;
-                 rdfs:comment "Approach or technique used in development of an AI system"@en ;
+                 rdfs:comment "Computer science approaches and techniques used in development of a system."@en ;
                  rdfs:label "AI Technique"@en .
 
 
 ###  https://w3id.org/airo#AffectedEntity
 airo:AffectedEntity rdf:type owl:Class ;
-                    rdfs:subClassOf airo:Stakeholder ;
                     rdfs:comment "An entity that is affected by AI"@en ;
                     rdfs:label "Affected Entity"@en .
 
@@ -467,6 +443,14 @@ airo:Dataset rdf:type owl:Class ;
              terms:source "ISO/IEC 22989, 3.2.5"@en ;
              rdfs:comment "Collection of data with a shared format."@en ;
              rdfs:label "Dataset"@en .
+
+
+###  https://w3id.org/airo#Deployer
+airo:Deployer rdf:type owl:Class ;
+              rdfs:subClassOf airo:Operator ;
+              terms:source "EU AI Act, Article 3(4)"@en ;
+              rdfs:comment "Any natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity."@en ;
+              rdfs:label "Deployer"@en .
 
 
 ###  https://w3id.org/airo#Document
@@ -536,10 +520,26 @@ airo:Modality rdf:type owl:Class ;
               rdfs:label "Modality"@en .
 
 
+###  https://w3id.org/airo#Operator
+airo:Operator rdf:type owl:Class ;
+              rdfs:subClassOf airo:Stakeholder ;
+              terms:source "EU AI Act, Article 3(8)"@en ;
+              rdfs:comment "Refers to a provider, product manufacturer, deployer, authorised representative, importer or distributor."@en ;
+              rdfs:label "Operator"@en .
+
+
 ###  https://w3id.org/airo#Output
 airo:Output rdf:type owl:Class ;
             rdfs:comment "Output of an entity"@en ;
             rdfs:label "Output"@en .
+
+
+###  https://w3id.org/airo#Provider
+airo:Provider rdf:type owl:Class ;
+              rdfs:subClassOf airo:Operator ;
+              terms:source "EU AI Act, Article 3(3)"@en ;
+              rdfs:comment "A natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model or that has an AI system or a general-purpose AI model developed and places it on the market or puts the AI system into service under its own name or trademark, whether for payment or free of charge."@en ;
+              rdfs:label "Provider"@en .
 
 
 ###  https://w3id.org/airo#Purpose
@@ -586,7 +586,7 @@ airo:Standard rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Version
 airo:Version rdf:type owl:Class ;
-             rdfs:comment "A unique number or name that is assigned to a unique state of an AI system"@en ;
+             rdfs:comment "A unique number or name that is assigned to a unique state of an AI system."@en ;
              rdfs:label "Version"@en .
 
 
