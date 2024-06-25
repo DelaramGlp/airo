@@ -13,14 +13,14 @@
                          terms:contributor "Dave Lewis"^^xsd:string ,
                                            "Harshvardhan J. Pandit"^^xsd:string ;
                          terms:creator "Delaram Golpayegani"^^xsd:string ;
-                         terms:description "AIRO represents AI risk concepts and relations based on the EU AI Act proposal and ISO 31000 standard series."@en ;
+                         terms:description "AIRO represents AI risk concepts and relations based on the EU AI Act and ISO/IEC standards."@en ;
                          terms:issued "2023-01-01T09:00:00"^^xsd:dateTime ;
                          terms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                         terms:modified "2021-07-01T17:01:00"^^xsd:dateTime ;
+                         terms:modified "2024-05-25T17:13:00"^^xsd:dateTime ;
                          terms:publisher "ADAPT Centre, Trinity College Dublin"^^xsd:string ;
                          terms:title "AIRO"^^xsd:string ;
                          rdfs:label "AI Risk Ontology"@en ;
-                         owl:versionInfo 1 .
+                         owl:versionInfo "2.0"@en .
 
 #################################################################
 #    Annotation properties
