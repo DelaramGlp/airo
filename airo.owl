@@ -168,6 +168,12 @@ airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       rdfs:label "has documentation"@en .
 
 
+###  https://w3id.org/airo#hasFrequency
+airo:hasFrequency rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:Event ;
+                  rdfs:range airo:Frequency .
+
+
 ###  https://w3id.org/airo#hasImpact
 airo:hasImpact rdf:type owl:ObjectProperty ;
                rdfs:domain airo:Consequence ;
@@ -477,24 +483,33 @@ airo:AreaOfImpact rdf:type owl:Class ;
                   rdfs:label "Area Of Impact"@en .
 
 
+###  https://w3id.org/airo#Change
+airo:Change rdf:type owl:Class ;
+            rdfs:subClassOf airo:Event ;
+            rdfs:label "Change"@en .
+
+
 ###  https://w3id.org/airo#CodeOfConduct
 airo:CodeOfConduct rdf:type owl:Class ;
                    rdfs:subClassOf <http://w3id.org/airo#Entity> ;
+                   rdfs:comment "A non-binding set of norms and resposibilities."@en ;
                    rdfs:label "Code Of Conduct"@en .
 
 
 ###  https://w3id.org/airo#Consequence
 airo:Consequence rdf:type owl:Class ;
                  rdfs:subClassOf airo:Event ;
-                 rdfs:comment "Outcome of an event affecting objectives"@en ;
-                 rdfs:isDefinedBy "ISO 31000, 3.6"@en ;
+                 terms:source "ISO 31000, 3.6"@en ,
+                              "ISO 31073:2022, 3.3.18"@en ;
+                 rdfs:comment "Outcome of an event affecting objectives."@en ;
                  rdfs:label "Consequence"@en .
 
 
 ###  https://w3id.org/airo#Control
 airo:Control rdf:type owl:Class ;
-             rdfs:comment "A measure that maintains and/or modifies risk"@en ;
-             rdfs:isDefinedBy "Source: ISO 31000, 3.8" ;
+             terms:source "ISO 31073:2022, 3.3.33, with modifications"@en ,
+                          "Source: ISO 31000, 3.8" ;
+             rdfs:comment "A measure that maintains and/or modifies an event"@en ;
              rdfs:label "Control"@en .
 
 
@@ -529,9 +544,23 @@ airo:EnvironmentOfUse rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Event
 airo:Event rdf:type owl:Class ;
+           terms:source "ISO 31073:2022, 3.3.11"@en ;
            rdfs:comment "Occurrence or change of a particular set of circumstances."@en ;
-           rdfs:isDefinedBy "ISO 31000, 3.5"@en ;
            rdfs:label "Event"@en .
+
+
+###  https://w3id.org/airo#Exposure
+airo:Exposure rdf:type owl:Class ;
+              terms:source "ISO 31073:2022, 3.3.17"@en ;
+              rdfs:comment "Extent to which an organisation and/or stakeholder is subject to an event."@en ;
+              rdfs:label "Exposure"@en .
+
+
+###  https://w3id.org/airo#Frequency
+airo:Frequency rdf:type owl:Class ;
+               terms:source "SO 31073:2022, 3.3.20"@en ;
+               rdfs:comment "Number of events or outcomes per defined unit of time."@en ;
+               rdfs:label "Frequency"@en .
 
 
 ###  https://w3id.org/airo#GPAIModel
@@ -542,10 +571,18 @@ airo:GPAIModel rdf:type owl:Class ;
                rdfs:label "General Purpose AI Model"@en .
 
 
+###  https://w3id.org/airo#Hazard
+airo:Hazard rdf:type owl:Class ;
+            rdfs:subClassOf airo:RiskSource ;
+            terms:source "ISO 31073:2022, 3.3.12"@en ;
+            rdfs:comment "Source of potential harm."@en ;
+            rdfs:label "Hazard"@en .
+
+
 ###  https://w3id.org/airo#Impact
 airo:Impact rdf:type owl:Class ;
             rdfs:subClassOf airo:Consequence ;
-            rdfs:comment "Outcome of a consequence on persons, groups, facilities, environment, etc."@en ;
+            rdfs:comment "Tangible adverse effect that a consequence has on individuals, groups, society, environment, etc."@en ;
             rdfs:label "Impact"@en .
 
 
@@ -564,7 +601,8 @@ airo:License rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Likelihood
 airo:Likelihood rdf:type owl:Class ;
-                rdfs:comment "Chance of an event happening"@en ;
+                terms:source "ISO 31073:2022, 3.3.16"@en ;
+                rdfs:comment "Chance of something happening."@en ;
                 rdfs:label "Likelihood"@en .
 
 
@@ -597,27 +635,29 @@ airo:Purpose rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Regulation
 airo:Regulation rdf:type owl:Class ;
-                rdfs:subClassOf <http://w3id.org/airo#Entity> .
+                rdfs:subClassOf <http://w3id.org/airo#Entity> ;
+                rdfs:comment "A binding legislative act."@en ;
+                rdfs:label "Regulation"@en .
 
 
 ###  https://w3id.org/airo#Risk
 airo:Risk rdf:type owl:Class ;
           rdfs:subClassOf airo:Event ;
-          rdfs:comment "Risk of harm associated with an AI system"@en ;
+          rdfs:comment "An uncertain event, associated with an AI system, that has the potential to lead to harm to key areas of concerns including health, safety, and fundamental rights."@en ;
           rdfs:label "Risk"@en .
 
 
 ###  https://w3id.org/airo#RiskSource
 airo:RiskSource rdf:type owl:Class ;
                 rdfs:subClassOf airo:Event ;
-                rdfs:comment "An element that has the potential give rise to a risk"@en ;
-                rdfs:isDefinedBy "ISO 31000, 3.4"@en ;
+                terms:source "ISO 31073:2022, 3.3.10"@en ;
+                rdfs:comment "Element which alone or in combination has the potential to give rise to risk."@en ;
                 rdfs:label "Risk Source"@en .
 
 
 ###  https://w3id.org/airo#Severity
 airo:Severity rdf:type owl:Class ;
-              rdfs:comment "Indicates level of severity of an event that reflects level of potential harm"@en ;
+              rdfs:comment "Level of severity of an event."@en ;
               rdfs:label "Severity"@en .
 
 
@@ -636,6 +676,14 @@ airo:Standard rdf:type owl:Class ;
               rdfs:label "Standard"@en .
 
 
+###  https://w3id.org/airo#Threat
+airo:Threat rdf:type owl:Class ;
+            rdfs:subClassOf airo:RiskSource ;
+            terms:source "ISO 31073:2022, 3.3.13"@en ;
+            rdfs:comment "Potential source of danger, harm, or other undesirable outcome."@en ;
+            rdfs:label "Threat"@en .
+
+
 ###  https://w3id.org/airo#Version
 airo:Version rdf:type owl:Class ;
              rdfs:comment "A unique number or name that is assigned to a unique state of an AI system."@en ;
@@ -644,7 +692,8 @@ airo:Version rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Vulnerability
 airo:Vulnerability rdf:type owl:Class ;
-                   rdfs:comment "Intrinsic properties of something resulting in susceptibility to a risk source that can lead to an event with a consequence [ISO 31073]"@en ;
+                   terms:source "ISO 31073:2022, 3.3.21"@en ;
+                   rdfs:comment "Intrinsic properties of something resulting in susceptibility to a risk source that can lead to an event with a consequence."@en ;
                    rdfs:label "Vulnerability"@en .
 
 
