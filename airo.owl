@@ -54,6 +54,10 @@ terms:modified rdf:type owl:AnnotationProperty .
 terms:publisher rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/source
+terms:source rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/title
 terms:title rdf:type owl:AnnotationProperty .
 
@@ -358,13 +362,15 @@ terms:date rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/airo#AICapability
 airo:AICapability rdf:type owl:Class ;
-                  rdfs:comment "The capability of an AI system that enables realisation of the system's purposes"@en ;
+                  rdfs:comment "The capability of an AI system that enables realisation of the system's purposes."@en ;
                   rdfs:label "AI Capability"@en .
 
 
 ###  https://w3id.org/airo#AIComponent
 airo:AIComponent rdf:type owl:Class ;
-                 rdfs:comment "Component (element) of an AI system"@en ;
+                 rdfs:subClassOf <http://w3id.org/airo#Entity> ;
+                 terms:source "ISO/IEC 22989, 3.1.2"@en ;
+                 rdfs:comment "Functional element that constructs an AI system."@en ;
                  rdfs:label "AI Component"@en .
 
 
@@ -400,15 +406,15 @@ airo:AIProvider rdf:type owl:Class ;
 ###  https://w3id.org/airo#AISubject
 airo:AISubject rdf:type owl:Class ;
                rdfs:subClassOf airo:Stakeholder ;
-               rdfs:comment "An entity that is subjected to the use of AI"@en ;
+               rdfs:comment "An entity that is subject to the use of AI"@en ;
                rdfs:label "AI Subject"@en .
 
 
 ###  https://w3id.org/airo#AISystem
 airo:AISystem rdf:type owl:Class ;
               rdfs:subClassOf <http://w3id.org/airo#Entity> ;
-              rdfs:comment "A machine-based system designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments [AI Act, Art. 3(1)]"@en ;
-              rdfs:isDefinedBy "AI Act, Art. 3(1)"@en ;
+              terms:source "EU AI Act, Article 3(1)"@en ;
+              rdfs:comment "A machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments. [EU AI Act, Art. 3(1)]"@en ;
               rdfs:label "AI System"@en .
 
 
@@ -496,16 +502,18 @@ airo:Likelihood rdf:type owl:Class ;
                 rdfs:label "Likelihood"@en .
 
 
+###  https://w3id.org/airo#MLModel
+airo:MLModel rdf:type owl:Class ;
+             rdfs:subClassOf airo:AIComponent ;
+             terms:source "ISO/IEC TR 24028, 3.24"@en ;
+             rdfs:comment "Mathematical construct that generates an inference or prediction, based on input data."@en ;
+             rdfs:label "Machine Learning Model"@en .
+
+
 ###  https://w3id.org/airo#Modality
 airo:Modality rdf:type owl:Class ;
               rdfs:comment "The way or type in which an entity exists or is represented"@en ;
               rdfs:label "Modality"@en .
-
-
-###  https://w3id.org/airo#Model
-airo:Model rdf:type owl:Class ;
-           rdfs:subClassOf airo:AIComponent ;
-           rdfs:label "Model"@en .
 
 
 ###  https://w3id.org/airo#Output
