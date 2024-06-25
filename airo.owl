@@ -479,7 +479,7 @@ airo:AffectedEntity rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AreaOfImpact
 airo:AreaOfImpact rdf:type owl:Class ;
-                  rdfs:comment "Areas that can be affected by an AI system"@en ;
+                  rdfs:comment "Areas impacted by an AI system, e.g. physical health, right to privacy."@en ;
                   rdfs:label "Area Of Impact"@en .
 
 
@@ -612,6 +612,13 @@ airo:MLModel rdf:type owl:Class ;
              terms:source "ISO/IEC TR 24028, 3.24"@en ;
              rdfs:comment "Mathematical construct that generates an inference or prediction, based on input data."@en ;
              rdfs:label "Machine Learning Model"@en .
+
+
+###  https://w3id.org/airo#Misuse
+airo:Misuse rdf:type owl:Class ;
+            rdfs:subClassOf airo:Risk ;
+            rdfs:comment "The use of an AI system or component  in a way that is not in accordance with its intended purpose."@en ;
+            rdfs:label "Misuse"@en .
 
 
 ###  https://w3id.org/airo#Modality
