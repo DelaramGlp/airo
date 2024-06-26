@@ -66,25 +66,17 @@ terms:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/airo#affects
-airo:affects rdf:type owl:ObjectProperty ;
-             rdfs:domain airo:AISystem ;
-             rdfs:comment "Indicates the stakeholders affected by the AI system"@en ;
-             rdfs:label "affects"@en .
-
-
 ###  https://w3id.org/airo#compliesWithRegulation
 airo:compliesWithRegulation rdf:type owl:ObjectProperty ;
-                            rdfs:label "Indicates compliance with a specific regulation."@en ,
-                                       "complies with regulation"@en .
+                            rdfs:comment "Indicates compliance with a specific regulation."@en ;
+                            rdfs:label "complies with regulation"@en .
 
 
 ###  https://w3id.org/airo#conformsToStandard
 airo:conformsToStandard rdf:type owl:ObjectProperty ;
                         rdfs:range airo:Standard ;
-                        rdfs:comment "Indicates conformance of an entity to a standard"@en ;
-                        rdfs:label "Indicates frequency of an event."@en ,
-                                   "conforms to standard"@en .
+                        rdfs:comment "Indicates conformance of an entity to a standard."@en ;
+                        rdfs:label "conforms to standard"@en .
 
 
 ###  https://w3id.org/airo#detectsEvent
@@ -113,10 +105,26 @@ airo:exploitsVulnerability rdf:type owl:ObjectProperty ;
                            rdfs:label "exploits vulnerability"@en .
 
 
+###  https://w3id.org/airo#followsCodeOfConduct
+airo:followsCodeOfConduct rdf:type owl:ObjectProperty ;
+                          rdfs:comment "Indicates the code of conducts followed."@en ;
+                          rdfs:label "follows code of conduct"@en .
+
+
 ###  https://w3id.org/airo#hasAISubject
 airo:hasAISubject rdf:type owl:ObjectProperty ;
-                  rdfs:comment "Indicates subject of an AI system"@en ;
+                  rdfs:domain airo:AISystem ;
+                  rdfs:range airo:AISubject ;
+                  rdfs:comment "Indicates the AI subject of an AI system."@en ;
                   rdfs:label "has AI subject"@en .
+
+
+###  https://w3id.org/airo#hasAIUser
+airo:hasAIUser rdf:type owl:ObjectProperty ;
+               rdfs:domain airo:AISystem ;
+               rdfs:range airo:AIUser ;
+               rdfs:comment "Indicate the end-user of an AI system."@en ;
+               rdfs:label "has AI user"@en .
 
 
 ###  https://w3id.org/airo#hasCapability
@@ -130,9 +138,8 @@ airo:hasCapability rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasComponent
 airo:hasComponent rdf:type owl:ObjectProperty ;
-                  rdfs:domain airo:AISystem ;
                   rdfs:range airo:AIComponent ;
-                  rdfs:comment "Indicates components of an AI system"@en ;
+                  rdfs:comment "Indicates a component incorporating an AI system or anthor component."@en ;
                   rdfs:label "has component"@en .
 
 
@@ -140,7 +147,7 @@ airo:hasComponent rdf:type owl:ObjectProperty ;
 airo:hasConsequence rdf:type owl:ObjectProperty ;
                     rdfs:domain airo:Risk ;
                     rdfs:range airo:Consequence ;
-                    rdfs:comment "Specifies consequences caused by materialisation of a risk"@en ;
+                    rdfs:comment "Specifies consequences caused by materialisation of a risk."@en ;
                     rdfs:label "has consequence" .
 
 
@@ -151,27 +158,10 @@ airo:hasControl rdf:type owl:ObjectProperty ;
                 rdfs:label "has control"@en .
 
 
-###  https://w3id.org/airo#hasDeployer
-airo:hasDeployer rdf:type owl:ObjectProperty ;
-                 rdfs:domain airo:AIComponent ,
-                             airo:AISystem ;
-                 rdfs:range airo:AIDeployer ;
-                 rdfs:comment "Indicates the deployer of an AI system"@en ;
-                 rdfs:label "has deployer"@en .
-
-
-###  https://w3id.org/airo#hasDeveloper
-airo:hasDeveloper rdf:type owl:ObjectProperty ;
-                  rdfs:domain airo:AIComponent ,
-                              airo:AISystem ;
-                  rdfs:range airo:AIDeveloper ;
-                  rdfs:label "has developer"@en .
-
-
 ###  https://w3id.org/airo#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       rdfs:range airo:Documention ;
-                      rdfs:comment "Indicates documents related to an entity, e.g. AI system"@en ;
+                      rdfs:comment "Indicates documentation associated with an entity."@en ;
                       rdfs:label "has documentation"@en .
 
 
@@ -193,7 +183,7 @@ airo:hasFrequency rdf:type owl:ObjectProperty ;
 airo:hasImpact rdf:type owl:ObjectProperty ;
                rdfs:domain airo:Consequence ;
                rdfs:range airo:Impact ;
-               rdfs:comment "Specifies impacts caused by materialisation of a consequence"@en ;
+               rdfs:comment "Specifies the impact caused by materialisation of a consequence."@en ;
                rdfs:label "has impact"@en .
 
 
@@ -208,7 +198,8 @@ airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasImpactOnEntity
 airo:hasImpactOnEntity rdf:type owl:ObjectProperty ;
                        rdfs:domain airo:Impact ;
-                       rdfs:comment "Specifies entities or stakeholders that are negatively impacted by an AI system or component."@en ;
+                       rdfs:range airo:Stakeholder ;
+                       rdfs:comment "Indicates those that are negatively impacted by an AI system or component."@en ;
                        rdfs:label "has impact on entity"@en .
 
 
@@ -216,8 +207,15 @@ airo:hasImpactOnEntity rdf:type owl:ObjectProperty ;
 airo:hasInput rdf:type owl:ObjectProperty ;
               rdfs:domain <http://w3id.org/airo#Entity> ;
               rdfs:range airo:Input ;
-              rdfs:comment "Indicates the input an entity needs to process and/or generate output"@en ;
+              rdfs:comment "Indicates the input an entity needs to process and/or generate output."@en ;
               rdfs:label "has input"@en .
+
+
+###  https://w3id.org/airo#hasLicense
+airo:hasLicense rdf:type owl:ObjectProperty ;
+                rdfs:range airo:License ;
+                rdfs:comment "Indicates licenses associated with a resource."@en ;
+                rdfs:label "has license"@en .
 
 
 ###  https://w3id.org/airo#hasLifecyclePhase
@@ -233,30 +231,28 @@ airo:hasLifecyclePhase rdf:type owl:ObjectProperty ;
 airo:hasLikelihood rdf:type owl:ObjectProperty ;
                    rdfs:domain airo:Event ;
                    rdfs:range airo:Likelihood ;
-                   rdfs:comment "Indicates the probability of occurrence of an event"@en ;
+                   rdfs:comment "Indicates the probability of occurrence of an event."@en ;
                    rdfs:label "has likelihood"@en .
 
 
 ###  https://w3id.org/airo#hasModality
 airo:hasModality rdf:type owl:ObjectProperty ;
                  rdfs:range airo:Modality ;
-                 rdfs:label "Indicates the modality in which an entity exists"@en ,
+                 rdfs:label "Indicates the modality in which an entity exists."@en ,
                             "has modality"@en .
 
 
-###  https://w3id.org/airo#hasProvider
-airo:hasProvider rdf:type owl:ObjectProperty ;
-                 rdfs:domain airo:AIComponent ,
-                             airo:AISystem ;
-                 rdfs:range airo:AIProvider ;
-                 rdfs:comment "Indicates provider of an AI system"@en ;
-                 rdfs:label "has provider"@en .
+###  https://w3id.org/airo#hasPreDeterminedChange
+airo:hasPreDeterminedChange rdf:type owl:ObjectProperty ;
+                            rdfs:range airo:Change ;
+                            rdfs:comment "Indicates the changes that are planned to be applied to the system."@en ;
+                            rdfs:label "has pre-determined change"@en .
 
 
 ###  https://w3id.org/airo#hasPurpose
 airo:hasPurpose rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Purpose ;
-                rdfs:label "Indicates the purpose of an AI system"@en ,
+                rdfs:label "Indicates the purpose of an entity."@en ,
                            "has purpose"@en .
 
 
@@ -284,7 +280,7 @@ airo:hasSeverity rdf:type owl:ObjectProperty ;
                                            )
                              ] ;
                  rdfs:range airo:Severity ;
-                 rdfs:comment "Indicates severity of a consequenve or an impact"@en ;
+                 rdfs:comment "Indicates severity of a consequenve or an impact."@en ;
                  rdfs:label "has severity"@en .
 
 
@@ -298,9 +294,8 @@ airo:hasStakeholder rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasVersion
 airo:hasVersion rdf:type owl:ObjectProperty ;
-                rdfs:domain <http://w3id.org/airo#Entity> ;
                 rdfs:range airo:Version ;
-                rdfs:comment "Indicates the version of an entity"@en ;
+                rdfs:comment "Indicates the version of an entity."@en ;
                 rdfs:label "has version"@en .
 
 
@@ -319,11 +314,29 @@ airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
                            rdfs:label "is applied within domain"@en .
 
 
+###  https://w3id.org/airo#isDeployedBy
+airo:isDeployedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AIComponent ,
+                              airo:AISystem ;
+                  rdfs:range airo:AIDeployer ;
+                  rdfs:comment "Indicates the deployer of an AI system or component."@en ;
+                  rdfs:label "is deployed by"@en .
+
+
+###  https://w3id.org/airo#isDevelopedBy
+airo:isDevelopedBy rdf:type owl:ObjectProperty ;
+                   rdfs:domain airo:AIComponent ,
+                               airo:AISystem ;
+                   rdfs:range airo:AIDeveloper ;
+                   rdfs:comment "Indicates the developer of a system or component."@en ;
+                   rdfs:label "is developed by"@en .
+
+
 ###  https://w3id.org/airo#isFollowedByControl
 airo:isFollowedByControl rdf:type owl:ObjectProperty ;
                          rdfs:domain airo:Control ;
                          rdfs:range airo:Control ;
-                         rdfs:comment "Specifies the order of controls"@en ;
+                         rdfs:comment "Specifies the order of controls."@en ;
                          rdfs:label "is followed by control"@en .
 
 
@@ -334,19 +347,27 @@ airo:isPartOfControl rdf:type owl:ObjectProperty ;
                      rdfs:label "is part of control"@en .
 
 
+###  https://w3id.org/airo#isProvidedBy
+airo:isProvidedBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain airo:AIComponent ,
+                              airo:AISystem ;
+                  rdfs:range airo:AIProvider ;
+                  rdfs:comment "Indicates the provider of an AI system or component."@en ;
+                  rdfs:label "is provided by"@en .
+
+
 ###  https://w3id.org/airo#isRiskSourceFor
 airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:RiskSource ;
                      rdfs:range airo:Risk ;
-                     rdfs:comment "Specifies risks caused by materialisation of a risk source"@en ;
+                     rdfs:comment "Specifies risks caused by materialisation of a risk source."@en ;
                      rdfs:label "is risk source for"@en .
 
 
 ###  https://w3id.org/airo#isUsedWithinEnvironment
 airo:isUsedWithinEnvironment rdf:type owl:ObjectProperty ;
-                             rdfs:domain <http://w3id.org/airo#Entity> ;
                              rdfs:range airo:EnvironmentOfUse ;
-                             rdfs:comment "indicates the enviroment of use"@en ;
+                             rdfs:comment "Indicates the enviroment of use."@en ;
                              rdfs:label "is used within environment"@en .
 
 
@@ -371,8 +392,14 @@ airo:modifiesEvent rdf:type owl:ObjectProperty ;
 airo:producesOutput rdf:type owl:ObjectProperty ;
                     rdfs:domain <http://w3id.org/airo#Entity> ;
                     rdfs:range airo:Output ;
-                    rdfs:comment "Indicate the output generated by an entity"@en ;
+                    rdfs:comment "Indicate the output generated by an entity."@en ;
                     rdfs:label "produces output"@en .
+
+
+###  https://w3id.org/airo#providesInput
+airo:providesInput rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Indicates an entity that provides inputs to another entity."@en ;
+                   rdfs:label "provides input"@en .
 
 
 ###  https://w3id.org/airo#usesTechnique
