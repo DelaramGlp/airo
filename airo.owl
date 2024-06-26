@@ -129,11 +129,8 @@ airo:hasAIUser rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasCapability
 airo:hasCapability rdf:type owl:ObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( airo:AIComponent
-                                               airo:AISystem
-                                             )
-                               ] ;
+                   rdfs:domain airo:AIComponent ,
+                               airo:AISystem ;
                    rdfs:range airo:AICapability ;
                    rdfs:comment "Specifies capabilities implemented within an AI system to materialise its purposes."@en ;
                    rdfs:label "has capability"@en .
@@ -241,8 +238,8 @@ airo:hasLikelihood rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasModality
 airo:hasModality rdf:type owl:ObjectProperty ;
                  rdfs:range airo:Modality ;
-                 rdfs:comment "Indicates the modality in which an entity exists."@en ;
-                 rdfs:label "has modality"@en .
+                 rdfs:label "Indicates the modality in which an entity exists."@en ,
+                            "has modality"@en .
 
 
 ###  https://w3id.org/airo#hasPreDeterminedChange
@@ -255,17 +252,14 @@ airo:hasPreDeterminedChange rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasPurpose
 airo:hasPurpose rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Purpose ;
-                rdfs:comment "Indicates the purpose of an entity."@en ;
-                rdfs:label "has purpose"@en .
+                rdfs:label "Indicates the purpose of an entity."@en ,
+                           "has purpose"@en .
 
 
 ###  https://w3id.org/airo#hasQuality
 airo:hasQuality rdf:type owl:ObjectProperty ;
-                rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( airo:AIComponent
-                                            airo:AISystem
-                                          )
-                            ] ;
+                rdfs:domain airo:AIComponent ,
+                            airo:AISystem ;
                 rdfs:range airo:AIQuality ;
                 rdfs:comment "Indicates a quality of an AI system or component."@en ;
                 rdfs:label "has quality"@en .
@@ -322,11 +316,8 @@ airo:isAppliedWithinDomain rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#isDeployedBy
 airo:isDeployedBy rdf:type owl:ObjectProperty ;
-                  rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( airo:AIComponent
-                                              airo:AISystem
-                                            )
-                              ] ;
+                  rdfs:domain airo:AIComponent ,
+                              airo:AISystem ;
                   rdfs:range airo:AIDeployer ;
                   rdfs:comment "Indicates the deployer of an AI system or component."@en ;
                   rdfs:label "is deployed by"@en .
@@ -334,11 +325,8 @@ airo:isDeployedBy rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#isDevelopedBy
 airo:isDevelopedBy rdf:type owl:ObjectProperty ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( airo:AIComponent
-                                               airo:AISystem
-                                             )
-                               ] ;
+                   rdfs:domain airo:AIComponent ,
+                               airo:AISystem ;
                    rdfs:range airo:AIDeveloper ;
                    rdfs:comment "Indicates the developer of a system or component."@en ;
                    rdfs:label "is developed by"@en .
@@ -354,19 +342,15 @@ airo:isFollowedByControl rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#isPartOfControl
 airo:isPartOfControl rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:Control ;
                      rdfs:range airo:Control ;
-                     rdfs:comment "Specifies composition of controls."@en ;
+                     rdfs:comment "Specifies composition of controls"@en ;
                      rdfs:label "is part of control"@en .
 
 
 ###  https://w3id.org/airo#isProvidedBy
 airo:isProvidedBy rdf:type owl:ObjectProperty ;
-                  rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( airo:AIComponent
-                                              airo:AISystem
-                                            )
-                              ] ;
+                  rdfs:domain airo:AIComponent ,
+                              airo:AISystem ;
                   rdfs:range airo:AIProvider ;
                   rdfs:comment "Indicates the provider of an AI system or component."@en ;
                   rdfs:label "is provided by"@en .
@@ -382,7 +366,6 @@ airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#isUsedWithinEnvironment
 airo:isUsedWithinEnvironment rdf:type owl:ObjectProperty ;
-                             rdfs:domain airo:AISystem ;
                              rdfs:range airo:EnvironmentOfUse ;
                              rdfs:comment "Indicates the enviroment of use."@en ;
                              rdfs:label "is used within environment"@en .
@@ -547,7 +530,6 @@ airo:AreaOfImpact rdf:type owl:Class ;
 ###  https://w3id.org/airo#Change
 airo:Change rdf:type owl:Class ;
             rdfs:subClassOf airo:Event ;
-            rdfs:comment "An alternation in an entity." ;
             rdfs:label "Change"@en .
 
 
@@ -657,7 +639,7 @@ airo:Input rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#License
 airo:License rdf:type owl:Class ;
-             rdfs:comment "Represents a copyright license."@en ;
+             terms:source "Represents a copyright license."@en ;
              rdfs:label "License"@en .
 
 
