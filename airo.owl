@@ -238,8 +238,8 @@ airo:hasLikelihood rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasModality
 airo:hasModality rdf:type owl:ObjectProperty ;
                  rdfs:range airo:Modality ;
-                 rdfs:label "Indicates the modality in which an entity exists."@en ,
-                            "has modality"@en .
+                 rdfs:comment "Indicates the modality in which an entity exists."@en ;
+                 rdfs:label "has modality"@en .
 
 
 ###  https://w3id.org/airo#hasPreDeterminedChange
@@ -252,8 +252,8 @@ airo:hasPreDeterminedChange rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasPurpose
 airo:hasPurpose rdf:type owl:ObjectProperty ;
                 rdfs:range airo:Purpose ;
-                rdfs:label "Indicates the purpose of an entity."@en ,
-                           "has purpose"@en .
+                rdfs:comment "Indicates the purpose of an entity."@en ;
+                rdfs:label "has purpose"@en .
 
 
 ###  https://w3id.org/airo#hasQuality
@@ -530,6 +530,7 @@ airo:AreaOfImpact rdf:type owl:Class ;
 ###  https://w3id.org/airo#Change
 airo:Change rdf:type owl:Class ;
             rdfs:subClassOf airo:Event ;
+            rdfs:comment "An alternation in an entity."@en ;
             rdfs:label "Change"@en .
 
 
@@ -639,7 +640,7 @@ airo:Input rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#License
 airo:License rdf:type owl:Class ;
-             terms:source "Represents a copyright license."@en ;
+             rdfs:comment "Represents a copyright license."@en ;
              rdfs:label "License"@en .
 
 
