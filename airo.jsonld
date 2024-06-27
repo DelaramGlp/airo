@@ -198,11 +198,11 @@
     "@value" : "AI Risk Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/airo/2.0"
+    "@id" : "https://w3id.org/airo/1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "2.0"
+    "@value" : "1.0"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#AICapability",
