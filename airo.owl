@@ -25,6 +25,7 @@
                                       "ISO 31000 series"@en ;
                          terms:title "AIRO"^^xsd:string ;
                          <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.10894750"@en ;
+                         <http://purl.org/ontology/bibo/status> "http://purl.org/ontology/bibo/status/published" ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "airo" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/airo#"^^xsd:string ;
                          rdfs:label "AI Risk Ontology"@en ;
