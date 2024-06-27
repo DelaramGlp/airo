@@ -8,29 +8,32 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:airo="https://w3id.org/airo#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/airo">
         <owl:versionIRI rdf:resource="https://w3id.org/airo/1.0"/>
-        <terms:bibliographicCitation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delaram Golpayegani, Harshvardhan J. Pandit, and Dave Lewis. AIRO: An ontology for representing AI risks based on the proposed EU AI Act and ISO risk management standards. Towards a Knowledge-Aware AI. IOS Press, 2022. 51-65.</terms:bibliographicCitation>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dave Lewis</terms:contributor>
-        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harshvardhan J. Pandit</terms:contributor>
-        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delaram Golpayegani</terms:creator>
+        <terms:bibliographicCitation>Delaram Golpayegani, Harshvardhan J. Pandit, and Dave Lewis. AIRO: An ontology for representing AI risks based on the proposed EU AI Act and ISO risk management standards. Towards a Knowledge-Aware AI. IOS Press, 2022. 51-65.</terms:bibliographicCitation>
+        <terms:contributor>Dave Lewis</terms:contributor>
+        <terms:contributor>Harshvardhan J. Pandit</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-09-01</terms:created>
+        <terms:creator>Delaram Golpayegani</terms:creator>
         <terms:description xml:lang="en">AIRO represents AI risk concepts and relations based on the EU AI Act and ISO/IEC standards.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T09:00:00</terms:issued>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-01T09:00:00</terms:created>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-01-01</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-25T17:13:00</terms:modified>
-        <terms:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADAPT Centre, Trinity College Dublin</terms:publisher>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-25</terms:modified>
+        <terms:publisher>ADAPT Centre, Trinity College Dublin</terms:publisher>
         <terms:source xml:lang="en">EU AI Act</terms:source>
         <terms:source xml:lang="en">ISO 31000 series</terms:source>
-        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AIRO</terms:title>
+        <terms:title>AIRO</terms:title>
         <bibo:doi xml:lang="en">10.5281/zenodo.10894750</bibo:doi>
+        <bibo:status>http://purl.org/ontology/bibo/status/published</bibo:status>
         <vann:preferredNamespacePrefix>airo</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/airo#</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri>https://w3id.org/airo#</vann:preferredNamespaceUri>
         <rdfs:label xml:lang="en">AI Risk Ontology</rdfs:label>
         <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <foaf:logo rdf:resource="https://github.com/DelaramGlp/airo/blob/main/figures/airo-logo.png?raw=true"/>
     </owl:Ontology>
     
 
@@ -55,6 +58,12 @@
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
     
 
 
@@ -112,6 +121,12 @@
     
 
 
+    <!-- http://purl.org/ontology/bibo/status -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
@@ -121,6 +136,29 @@
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -1162,5 +1200,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
