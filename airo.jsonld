@@ -85,6 +85,9 @@
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -115,6 +118,9 @@
   "@id" : "http://purl.org/ontology/bibo/doi",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -142,6 +148,12 @@
     "@value" : "Entity"
   } ]
 }, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/logo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/airo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
@@ -152,6 +164,10 @@
   }, {
     "@value" : "Harshvardhan J. Pandit"
   } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2021-09-01"
+  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Delaram Golpayegani"
   } ],
@@ -160,15 +176,15 @@
     "@value" : "AIRO represents AI risk concepts and relations based on the EU AI Act and ISO/IEC standards."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-01-01T09:00:00"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-01-01"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-25T17:13:00"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-25"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "ADAPT Centre, Trinity College Dublin"
@@ -187,6 +203,9 @@
     "@language" : "en",
     "@value" : "10.5281/zenodo.10894750"
   } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@value" : "http://purl.org/ontology/bibo/status/published"
+  } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "airo"
   } ],
@@ -203,6 +222,9 @@
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
     "@value" : "1.0"
+  } ],
+  "http://xmlns.com/foaf/0.1/logo" : [ {
+    "@id" : "https://github.com/DelaramGlp/airo/blob/main/figures/airo-logo.png?raw=true"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#AICapability",
