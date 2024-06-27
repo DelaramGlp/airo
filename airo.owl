@@ -10,7 +10,7 @@
 @base <https://w3id.org/airo> .
 
 <https://w3id.org/airo> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/airo/2.0> ;
+                         #owl:versionIRI <https://w3id.org/airo/> ;
                          terms:bibliographicCitation "Delaram Golpayegani, Harshvardhan J. Pandit, and Dave Lewis. AIRO: An ontology for representing AI risks based on the proposed EU AI Act and ISO risk management standards. Towards a Knowledge-Aware AI. IOS Press, 2022. 51-65."^^xsd:string ;
                          terms:contributor "Dave Lewis"^^xsd:string ,
                                            "Harshvardhan J. Pandit"^^xsd:string ;
@@ -27,7 +27,7 @@
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "airo" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/airo#"^^xsd:string ;
                          rdfs:label "AI Risk Ontology"@en ;
-                         owl:versionInfo "2.0"@en .
+                         owl:versionInfo "1.0"@en .
 
 #################################################################
 #    Annotation properties
