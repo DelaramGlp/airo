@@ -29,7 +29,8 @@
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "airo" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/airo#"^^xsd:string ;
                          rdfs:label "AI Risk Ontology"@en ;
-                         owl:versionInfo "1.0"@en .
+                         owl:versionInfo "1.0"@en;
+                         foaf:logo <https://github.com/DelaramGlp/airo/blob/main/figures/airo-logo.png?raw=true> .
 
 #################################################################
 #    Annotation properties
