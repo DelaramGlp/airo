@@ -7,30 +7,30 @@
 @prefix airo: <https://w3id.org/airo#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/airo> .
+@base <https://w3id.org/airo#> .
 
 <https://w3id.org/airo> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/airo/1.0> ;
-                         terms:bibliographicCitation "Delaram Golpayegani, Harshvardhan J. Pandit, and Dave Lewis. AIRO: An ontology for representing AI risks based on the proposed EU AI Act and ISO risk management standards. Towards a Knowledge-Aware AI. IOS Press, 2022. 51-65."^^xsd:string ;
-                         terms:contributor "Dave Lewis"^^xsd:string ,
-                                           "Harshvardhan J. Pandit"^^xsd:string ;
-                         terms:creator "Delaram Golpayegani"^^xsd:string ;
+                         terms:bibliographicCitation "Delaram Golpayegani, Harshvardhan J. Pandit, and Dave Lewis. AIRO: An ontology for representing AI risks based on the proposed EU AI Act and ISO risk management standards. Towards a Knowledge-Aware AI. IOS Press, 2022. 51-65." ;
+                         terms:contributor "Dave Lewis" ,
+                                           "Harshvardhan J. Pandit" ;
+                         terms:created "2021-09-01"^^xsd:date ;
+                         terms:creator "Delaram Golpayegani" ;
                          terms:description "AIRO represents AI risk concepts and relations based on the EU AI Act and ISO/IEC standards."@en ;
-                         dcterms:created "2021-09-01"^^xsd:date;
                          terms:issued "2023-01-01"^^xsd:date ;
                          terms:license <https://creativecommons.org/licenses/by/4.0/> ;
                          terms:modified "2024-05-25"^^xsd:date ;
-                         terms:publisher "ADAPT Centre, Trinity College Dublin"^^xsd:string ;
+                         terms:publisher "ADAPT Centre, Trinity College Dublin" ;
                          terms:source "EU AI Act"@en ,
                                       "ISO 31000 series"@en ;
-                         terms:title "AIRO"^^xsd:string ;
+                         terms:title "AIRO" ;
                          <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.10894750"@en ;
                          <http://purl.org/ontology/bibo/status> "http://purl.org/ontology/bibo/status/published" ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "airo" ;
-                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/airo#"^^xsd:string ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/airo#" ;
                          rdfs:label "AI Risk Ontology"@en ;
-                         owl:versionInfo "1.0"@en;
-                         foaf:logo <https://github.com/DelaramGlp/airo/blob/main/figures/airo-logo.png?raw=true> .
+                         owl:versionInfo "1.0"@en ;
+                         <http://xmlns.com/foaf/0.1/logo> <https://github.com/DelaramGlp/airo/blob/main/figures/airo-logo.png?raw=true> .
 
 #################################################################
 #    Annotation properties
@@ -42,6 +42,10 @@ terms:bibliographicCitation rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/contributor
 terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
@@ -80,12 +84,28 @@ terms:title rdf:type owl:AnnotationProperty .
 <http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/logo
+<http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -192,13 +212,6 @@ airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       rdfs:range airo:Documention ;
                       rdfs:comment "Indicates documentation associated with an entity."@en ;
                       rdfs:label "has documentation"@en .
-
-
-###  https://w3id.org/airo#hasExposure
-airo:hasExposure rdf:type owl:ObjectProperty ;
-                 rdfs:range airo:Exposure ;
-                 rdfs:comment "Indicates exposure an entity to an event, e.g. exposure an affected entity to a specific impact."@en ;
-                 rdfs:label "has exposure"@en .
 
 
 ###  https://w3id.org/airo#hasFrequency
@@ -395,6 +408,7 @@ airo:isProvidedBy rdf:type owl:ObjectProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
                                 owl:unionOf ( airo:AIComponent
                                               airo:AISystem
+                                              airo:Input
                                             )
                               ] ;
                   rdfs:range airo:AIProvider ;
@@ -445,12 +459,6 @@ airo:producesOutput rdf:type owl:ObjectProperty ;
                     rdfs:range airo:Output ;
                     rdfs:comment "Indicate the output generated by an entity."@en ;
                     rdfs:label "produces output"@en .
-
-
-###  https://w3id.org/airo#providesInput
-airo:providesInput rdf:type owl:ObjectProperty ;
-                   rdfs:comment "Indicates an entity that provides inputs to another entity."@en ;
-                   rdfs:label "provides input"@en .
 
 
 ###  https://w3id.org/airo#usesTechnique
@@ -645,13 +653,6 @@ airo:Event rdf:type owl:Class ;
            rdfs:label "Event"@en .
 
 
-###  https://w3id.org/airo#Exposure
-airo:Exposure rdf:type owl:Class ;
-              terms:source "ISO 31073:2022, 3.3.17"@en ;
-              rdfs:comment "Extent to which an organisation and/or stakeholder is subject to an event."@en ;
-              rdfs:label "Exposure"@en .
-
-
 ###  https://w3id.org/airo#Frequency
 airo:Frequency rdf:type owl:Class ;
                terms:source "SO 31073:2022, 3.3.20"@en ;
@@ -805,4 +806,4 @@ airo:Vulnerability rdf:type owl:Class ;
                                              rdfs:subClassOf airo:AIComponent .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
