@@ -19,6 +19,7 @@
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delaram Golpayegani</terms:creator>
         <terms:description xml:lang="en">AIRO represents AI risk concepts and relations based on the EU AI Act and ISO/IEC standards.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T09:00:00</terms:issued>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-01T09:00:00</terms:created>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-25T17:13:00</terms:modified>
         <terms:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADAPT Centre, Trinity College Dublin</terms:publisher>
