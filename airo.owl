@@ -209,7 +209,7 @@ airo:hasControl rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
-                      rdfs:range airo:Documention ;
+                      rdfs:range airo:Documentation ;
                       rdfs:comment "Indicates documentation associated with an entity."@en ;
                       rdfs:label "has documentation"@en .
 
@@ -625,8 +625,8 @@ airo:Dataset rdf:type owl:Class ;
              rdfs:label "Dataset"@en .
 
 
-###  https://w3id.org/airo#Documention
-airo:Documention rdf:type owl:Class ;
+###  https://w3id.org/airo#Documentation
+airo:Documentation rdf:type owl:Class ;
                  rdfs:subClassOf <http://w3id.org/airo#Entity> ;
                  terms:source "ISO/IEC 29110-1-2:2024, 3.36"@en ;
                  rdfs:comment "A set of documents, i.e.  information and the medium on which it is contained."@en ;
