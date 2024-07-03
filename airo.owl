@@ -481,11 +481,6 @@ terms:date rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-###  http://spdx.org/rdf/terms#License
-<http://spdx.org/rdf/terms#License> rdf:type owl:Class ;
-                                    owl:equivalentClass airo:License .
-
-
 ###  http://w3id.org/airo#Entity
 <http://w3id.org/airo#Entity> rdf:type owl:Class ;
                               terms:source "ISO/IEC TR 24028:2022, 3.16"@en ;
@@ -628,8 +623,7 @@ airo:Dataset rdf:type owl:Class ;
 ###  https://w3id.org/airo#Documention
 airo:Documention rdf:type owl:Class ;
                  rdfs:subClassOf <http://w3id.org/airo#Entity> ;
-                 terms:source "ISO/IEC 29110-1-2:2024, 3.36"@en ;
-                 rdfs:comment "A set of documents, i.e.  information and the medium on which it is contained."@en ;
+                 rdfs:comment "Refers to documeneted information."@en ;
                  rdfs:label "Documentation"@en .
 
 
@@ -774,8 +768,8 @@ airo:Stakeholder rdf:type owl:Class ;
 ###  https://w3id.org/airo#Standard
 airo:Standard rdf:type owl:Class ;
               rdfs:subClassOf <http://w3id.org/airo#Entity> ;
-              terms:source "ISO/IEC Guide 59:2019, 3.8" ;
-              rdfs:comment "A resource, established by consensus and approved by a recognized body, that provides, for common and repeated use, rules, guidelines or characteristics for activities or their results, aimed at the achievement of the optimum degree of order in a given context."@en ;
+              terms:source "Regulation (EU) No 1025/2012 on European standardisation" ;
+              rdfs:comment "A technical specification, adopted by a recognised standardisation body, for repeated or continuous application, with which compliance is not compulsory."@en ;
               rdfs:label "Standard"@en .
 
 
