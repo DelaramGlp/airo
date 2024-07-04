@@ -112,6 +112,18 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://www.w3.org/ns/dqv#hasQualityMeasurement
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dqv#inDimension
+<http://www.w3.org/ns/dqv#inDimension> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dqv#isMeasurementOf
+<http://www.w3.org/ns/dqv#isMeasurementOf> rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/airo#compliesWithRegulation
 airo:compliesWithRegulation rdf:type owl:ObjectProperty ;
                             rdfs:comment "Indicates compliance with a specific regulation."@en ;
@@ -171,6 +183,12 @@ airo:hasAIUser rdf:type owl:ObjectProperty ;
                rdfs:range airo:AIUser ;
                rdfs:comment "Indicate the end-user of an AI system."@en ;
                rdfs:label "has AI user"@en .
+
+
+###  https://w3id.org/airo#hasAutomationLevel
+airo:hasAutomationLevel rdf:type owl:ObjectProperty ;
+                        rdfs:comment "Indicates the system's level of automation."@en ;
+                        rdfs:label "has automation level"@en .
 
 
 ###  https://w3id.org/airo#hasCapability
@@ -469,12 +487,32 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
                    rdfs:label "uses technique"@en .
 
 
+###  https://w3id.org/dpv#hasDataSubject
+<https://w3id.org/dpv#hasDataSubject> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/dpv#hasHumanInvolvement
+<https://w3id.org/dpv#hasHumanInvolvement> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/dpv#hasPersonalData
+<https://w3id.org/dpv#hasPersonalData> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/dpv#hasProcess
+<https://w3id.org/dpv#hasProcess> rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
 ###  http://purl.org/dc/terms/date
 terms:date rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/dpv#value
+<https://w3id.org/dpv#value> rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -486,6 +524,18 @@ terms:date rdf:type owl:DatatypeProperty .
                               terms:source "ISO/IEC TR 24028:2022, 3.16"@en ;
                               rdfs:comment "Any concrete or abstract thing of interest."@en ;
                               rdfs:label "Entity"@en .
+
+
+###  http://www.w3.org/ns/dqv#Dimension
+<http://www.w3.org/ns/dqv#Dimension> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dqv#Metric
+<http://www.w3.org/ns/dqv#Metric> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dqv#QualityMeasurement
+<http://www.w3.org/ns/dqv#QualityMeasurement> rdf:type owl:Class .
 
 
 ###  https://w3id.org/airo#AICapability
@@ -579,6 +629,12 @@ airo:AIUser rdf:type owl:Class ;
 airo:AreaOfImpact rdf:type owl:Class ;
                   rdfs:comment "Areas impacted by an AI system, e.g. physical health, right to privacy."@en ;
                   rdfs:label "Area Of Impact"@en .
+
+
+###  https://w3id.org/airo#AutomationLevel
+airo:AutomationLevel rdf:type owl:Class ;
+                     rdfs:comment "Refers to the degree of automation under which an AI system operates."@en ;
+                     rdfs:label "Automation Level"@en .
 
 
 ###  https://w3id.org/airo#Change
@@ -792,6 +848,22 @@ airo:Vulnerability rdf:type owl:Class ;
                    terms:source "ISO 31073:2022, 3.3.21"@en ;
                    rdfs:comment "Intrinsic properties of something resulting in susceptibility to a risk source that can lead to an event with a consequence."@en ;
                    rdfs:label "Vulnerability"@en .
+
+
+###  https://w3id.org/dpv#DataSubject
+<https://w3id.org/dpv#DataSubject> rdf:type owl:Class .
+
+
+###  https://w3id.org/dpv#HumanInvolvement
+<https://w3id.org/dpv#HumanInvolvement> rdf:type owl:Class .
+
+
+###  https://w3id.org/dpv#PersonalData
+<https://w3id.org/dpv#PersonalData> rdf:type owl:Class .
+
+
+###  https://w3id.org/dpv#Process
+<https://w3id.org/dpv#Process> rdf:type owl:Class .
 
 
 ###  https://www.w3.org/TR/vocab-dcat-3/Dataset
