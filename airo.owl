@@ -654,16 +654,15 @@ airo:CodeOfConduct rdf:type owl:Class ;
 ###  https://w3id.org/airo#Consequence
 airo:Consequence rdf:type owl:Class ;
                  rdfs:subClassOf airo:Event ;
-                 terms:source "ISO 31000, 3.6"@en ,
-                              "ISO 31073:2022, 3.3.18"@en ;
-                 rdfs:comment "Outcome of an event affecting objectives."@en ;
+                 terms:source "ISO 31000, 3.6 [with modifications]"@en ,
+                              "ISO 31073:2022, 3.3.18 [with modifications]"@en ;
+                 rdfs:comment "Direct outcome of risk affecting objectives."@en ;
                  rdfs:label "Consequence"@en .
 
 
 ###  https://w3id.org/airo#Control
 airo:Control rdf:type owl:Class ;
-             terms:source "ISO 31073:2022, 3.3.33, with modifications"@en ;
-             rdfs:comment "A measure that maintains and/or modifies an event"@en ;
+             rdfs:comment "A measure that detects, mitigates, or eliminates an event."@en ;
              rdfs:label "Control"@en .
 
 
@@ -728,7 +727,7 @@ airo:Hazard rdf:type owl:Class ;
 ###  https://w3id.org/airo#Impact
 airo:Impact rdf:type owl:Class ;
             rdfs:subClassOf airo:Consequence ;
-            rdfs:comment "Tangible adverse effect that a consequence has on individuals, groups, society, environment, etc."@en ;
+            rdfs:comment "The outcome of a consequence on individuals, groups, society, environment, etc."@en ;
             rdfs:label "Impact"@en .
 
 
@@ -803,8 +802,7 @@ airo:Risk rdf:type owl:Class ;
 ###  https://w3id.org/airo#RiskSource
 airo:RiskSource rdf:type owl:Class ;
                 rdfs:subClassOf airo:Event ;
-                terms:source "ISO 31073:2022, 3.3.10"@en ;
-                rdfs:comment "Element which alone or in combination has the potential to give rise to risk."@en ;
+                rdfs:comment "An event that has the potential to give rise to risk."@en ;
                 rdfs:label "Risk Source"@en .
 
 
@@ -845,8 +843,8 @@ airo:Version rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Vulnerability
 airo:Vulnerability rdf:type owl:Class ;
-                   terms:source "ISO 31073:2022, 3.3.21"@en ;
-                   rdfs:comment "Intrinsic properties of something resulting in susceptibility to a risk source that can lead to an event with a consequence."@en ;
+                   terms:source "ISO 31073:2022, 3.3.21 with modifications"@en ;
+                   rdfs:comment "Refers to  properties of an entity, e.g. AI system or AI component, resulting in susceptibility to a risk source"@en ;
                    rdfs:label "Vulnerability"@en .
 
 
