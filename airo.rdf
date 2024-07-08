@@ -280,7 +280,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasComponent">
         <rdfs:range rdf:resource="https://w3id.org/airo#AIComponent"/>
-        <rdfs:comment xml:lang="en">Indicates a component incorporating an AI system or anthor component.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a component incorporating an AI system or another component.</rdfs:comment>
         <rdfs:label xml:lang="en">has component</rdfs:label>
     </owl:ObjectProperty>
     
@@ -310,7 +310,7 @@
     <!-- https://w3id.org/airo#hasDocumentation -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/airo#hasDocumentation">
-        <rdfs:range rdf:resource="https://w3id.org/airo#Documention"/>
+        <rdfs:range rdf:resource="https://w3id.org/airo#Documentation"/>
         <rdfs:comment xml:lang="en">Indicates documentation associated with an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">has documentation</rdfs:label>
     </owl:ObjectProperty>
@@ -491,7 +491,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/airo#Severity"/>
-        <rdfs:comment xml:lang="en">Indicates severity of a consequenve or an impact.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates severity of a consequence or an impact.</rdfs:comment>
         <rdfs:label xml:lang="en">has severity</rdfs:label>
     </owl:ObjectProperty>
     
@@ -638,7 +638,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/airo#EnvironmentOfUse"/>
-        <rdfs:comment xml:lang="en">Indicates the enviroment of use.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the environment of use.</rdfs:comment>
         <rdfs:label xml:lang="en">is used within environment</rdfs:label>
     </owl:ObjectProperty>
     
@@ -890,7 +890,7 @@
 
     <owl:Class rdf:about="https://w3id.org/airo#CodeOfConduct">
         <rdfs:subClassOf rdf:resource="http://w3id.org/airo#Entity"/>
-        <rdfs:comment xml:lang="en">A non-binding set of norms and resposibilities.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A non-binding set of norms and responsibilities.</rdfs:comment>
         <rdfs:label xml:lang="en">Code Of Conduct</rdfs:label>
     </owl:Class>
     
@@ -931,9 +931,9 @@
     
 
 
-    <!-- https://w3id.org/airo#Documention -->
+    <!-- https://w3id.org/airo#Documentation -->
 
-    <owl:Class rdf:about="https://w3id.org/airo#Documention">
+    <owl:Class rdf:about="https://w3id.org/airo#Documentation">
         <rdfs:subClassOf rdf:resource="http://w3id.org/airo#Entity"/>
         <terms:source xml:lang="en">ISO/IEC 29110-1-2:2024, 3.36</terms:source>
         <rdfs:comment xml:lang="en">A set of documents, i.e.  information and the medium on which it is contained.</rdfs:comment>

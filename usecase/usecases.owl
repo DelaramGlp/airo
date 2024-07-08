@@ -1185,7 +1185,7 @@ airo:EnvironmentalDamage rdf:type owl:Class ;
 ###  https://w3id.org/AIRO#EnvironmentalImpact
 airo:EnvironmentalImpact rdf:type owl:Class ;
                          rdfs:subClassOf airo:Impact ;
-                         rdfs:comment "Represent impact on the enviroment."@en ;
+                         rdfs:comment "Represent impact on the environment."@en ;
                          rdfs:label "Environmental Impact"@en .
 
 
