@@ -440,7 +440,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A non-binding set of norms and resposibilities."
+    "@value" : "A non-binding set of norms and responsibilities."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -509,7 +509,7 @@
     "@id" : "https://www.w3.org/TR/vocab-dcat-3/Dataset"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#Documention",
+  "@id" : "https://w3id.org/airo#Documentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@language" : "en",
@@ -1034,7 +1034,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates a component incorporating an AI system or anthor component."
+    "@value" : "Indicates a component incorporating an AI system or another component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1085,7 +1085,7 @@
     "@value" : "has documentation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Documention"
+    "@id" : "https://w3id.org/airo#Documentation"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasExposure",
@@ -1311,7 +1311,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates severity of a consequenve or an impact."
+    "@value" : "Indicates severity of a consequence or an impact."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid10"
@@ -1492,7 +1492,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the enviroment of use."
+    "@value" : "Indicates the environment of use."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid22"

@@ -206,7 +206,7 @@ airo:hasCapability rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasComponent
 airo:hasComponent rdf:type owl:ObjectProperty ;
                   rdfs:range airo:AIComponent ;
-                  rdfs:comment "Indicates a component incorporating an AI system or anthor component."@en ;
+                  rdfs:comment "Indicates a component incorporating an AI system or another component."@en ;
                   rdfs:label "has component"@en .
 
 
@@ -227,7 +227,7 @@ airo:hasControl rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
-                      rdfs:range airo:Documention ;
+                      rdfs:range airo:Documentation ;
                       rdfs:comment "Indicates documentation associated with an entity."@en ;
                       rdfs:label "has documentation"@en .
 
@@ -347,7 +347,7 @@ airo:hasSeverity rdf:type owl:ObjectProperty ;
                                            )
                              ] ;
                  rdfs:range airo:Severity ;
-                 rdfs:comment "Indicates severity of a consequenve or an impact."@en ;
+                 rdfs:comment "Indicates severity of a consequence or an impact."@en ;
                  rdfs:label "has severity"@en .
 
 
@@ -450,7 +450,7 @@ airo:isUsedWithinEnvironment rdf:type owl:ObjectProperty ;
                                                        )
                                          ] ;
                              rdfs:range airo:EnvironmentOfUse ;
-                             rdfs:comment "Indicates the enviroment of use."@en ;
+                             rdfs:comment "Indicates the environment of use."@en ;
                              rdfs:label "is used within environment"@en .
 
 
@@ -647,7 +647,7 @@ airo:Change rdf:type owl:Class ;
 ###  https://w3id.org/airo#CodeOfConduct
 airo:CodeOfConduct rdf:type owl:Class ;
                    rdfs:subClassOf <http://w3id.org/airo#Entity> ;
-                   rdfs:comment "A non-binding set of norms and resposibilities."@en ;
+                   rdfs:comment "A non-binding set of norms and responsibilities."@en ;
                    rdfs:label "Code Of Conduct"@en .
 
 
@@ -675,8 +675,8 @@ airo:Dataset rdf:type owl:Class ;
              rdfs:label "Dataset"@en .
 
 
-###  https://w3id.org/airo#Documention
-airo:Documention rdf:type owl:Class ;
+###  https://w3id.org/airo#Documentation
+airo:Documentation rdf:type owl:Class ;
                  rdfs:subClassOf <http://w3id.org/airo#Entity> ;
                  rdfs:comment "Refers to documeneted information."@en ;
                  rdfs:label "Documentation"@en .
