@@ -442,16 +442,16 @@ airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
                      rdfs:label "is risk source for"@en .
 
 
-###  https://w3id.org/airo#isUsedWithinEnvironment
-airo:isUsedWithinEnvironment rdf:type owl:ObjectProperty ;
-                             rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( airo:AIComponent
-                                                         airo:AISystem
-                                                       )
-                                         ] ;
-                             rdfs:range airo:LocalityOfUse ;
-                             rdfs:comment "Indicates the environment of use."@en ;
-                             rdfs:label "is used within environment"@en .
+###  https://w3id.org/airo#isUsedWithinLocality
+airo:isUsedWithinLocality rdf:type owl:ObjectProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( airo:AIComponent
+                                                      airo:AISystem
+                                                    )
+                                      ] ;
+                          rdfs:range airo:LocalityOfUse ;
+                          rdfs:comment "Indicates the locality of use."@en ;
+                          rdfs:label "is used within locality"@en .
 
 
 ###  https://w3id.org/airo#mitigatesEvent
@@ -755,7 +755,7 @@ airo:Likelihood rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#LocalityOfUse
 airo:LocalityOfUse rdf:type owl:Class ;
-                   rdfs:comment "The environment, e.g. facility or institution, in which an entity is used."@en ;
+                   rdfs:comment "The area, e.g. facility or institution, in which an entity is used."@en ;
                    rdfs:label "Locality Of Use"@en .
 
 
@@ -862,6 +862,7 @@ airo:Vulnerability rdf:type owl:Class ;
 
 ###  https://w3id.org/dpv#HardwarePlatform
 <https://w3id.org/dpv#HardwarePlatform> rdf:type owl:Class ;
+                                        rdfs:subClassOf airo:Entity ;
                                         rdfs:comment "The hardware on which the system is run." ;
                                         rdfs:label "Hardware Platform" .
 
