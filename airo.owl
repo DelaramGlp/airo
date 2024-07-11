@@ -449,7 +449,7 @@ airo:isUsedWithinEnvironment rdf:type owl:ObjectProperty ;
                                                          airo:AISystem
                                                        )
                                          ] ;
-                             rdfs:range airo:EnvironmentOfUse ;
+                             rdfs:range airo:LocalityOfUse ;
                              rdfs:comment "Indicates the environment of use."@en ;
                              rdfs:label "is used within environment"@en .
 
@@ -688,12 +688,6 @@ airo:Entity rdf:type owl:Class ;
             rdfs:label "Entity"@en .
 
 
-###  https://w3id.org/airo#EnvironmentOfUse
-airo:EnvironmentOfUse rdf:type owl:Class ;
-                      rdfs:comment "The environment, e.g. facility or institution, in which an entity is used."@en ;
-                      rdfs:label "Environment Of Use"@en .
-
-
 ###  https://w3id.org/airo#Event
 airo:Event rdf:type owl:Class ;
            terms:source "ISO 31073:2022, 3.3.11"@en ;
@@ -749,6 +743,12 @@ airo:Likelihood rdf:type owl:Class ;
                 terms:source "ISO 31073:2022, 3.3.16"@en ;
                 rdfs:comment "Chance of something happening."@en ;
                 rdfs:label "Likelihood"@en .
+
+
+###  https://w3id.org/airo#LocalityOfUse
+airo:LocalityOfUse rdf:type owl:Class ;
+                   rdfs:comment "The environment, e.g. facility or institution, in which an entity is used."@en ;
+                   rdfs:label "Locality Of Use"@en .
 
 
 ###  https://w3id.org/airo#MLModel
