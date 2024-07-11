@@ -503,6 +503,12 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 <https://w3id.org/dpv#hasProcess> rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/dpv#isRunOnHardware
+<https://w3id.org/dpv#isRunOnHardware> rdf:type owl:ObjectProperty ;
+                                       rdfs:comment "Indicates the hardware on which the system is run." ;
+                                       rdfs:label "is run on hardware" .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -850,6 +856,12 @@ airo:Vulnerability rdf:type owl:Class ;
 
 ###  https://w3id.org/dpv#DataSubject
 <https://w3id.org/dpv#DataSubject> rdf:type owl:Class .
+
+
+###  https://w3id.org/dpv#HardwarePlatform
+<https://w3id.org/dpv#HardwarePlatform> rdf:type owl:Class ;
+                                        rdfs:comment "The hardware on which the system is run." ;
+                                        rdfs:label "Hardware Platform" .
 
 
 ###  https://w3id.org/dpv#HumanInvolvement
