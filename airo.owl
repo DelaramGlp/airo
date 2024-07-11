@@ -505,6 +505,8 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/dpv#isRunOnHardware
 <https://w3id.org/dpv#isRunOnHardware> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain airo:AISystem ;
+                                       rdfs:range <https://w3id.org/dpv#HardwarePlatform> ;
                                        rdfs:comment "Indicates the hardware on which the system is run." ;
                                        rdfs:label "is run on hardware" .
 
