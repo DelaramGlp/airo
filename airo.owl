@@ -807,7 +807,7 @@ airo:Severity rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#SphereOfImpact
 airo:SphereOfImpact rdf:type owl:Class ;
-                    rdfs:comment "Areas impacted by an AI system, e.g. physical health, right to privacy."@en ;
+                    rdfs:comment "Areas or aspects impacted by an AI system, e.g. physical health, right to privacy."@en ;
                     rdfs:label "Sphere Of Impact"@en .
 
 
