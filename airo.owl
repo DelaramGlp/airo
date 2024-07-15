@@ -251,7 +251,7 @@ airo:hasImpact rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasImpactOnArea
 airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Impact ;
-                     rdfs:range airo:AreaOfImpact ;
+                     rdfs:range airo:SphereOfImpact ;
                      rdfs:comment "Specifies the area (e.g. physical health) that is negatively impacted by an  AI system or component." ;
                      rdfs:label "has impact on area"@en .
 
@@ -626,12 +626,6 @@ airo:AIUser rdf:type owl:Class ;
             rdfs:label "AI User"@en .
 
 
-###  https://w3id.org/airo#AreaOfImpact
-airo:AreaOfImpact rdf:type owl:Class ;
-                  rdfs:comment "Areas impacted by an AI system, e.g. physical health, right to privacy."@en ;
-                  rdfs:label "Area Of Impact"@en .
-
-
 ###  https://w3id.org/airo#AutomationLevel
 airo:AutomationLevel rdf:type owl:Class ;
                      rdfs:comment "Refers to the degree of automation under which an AI system operates."@en ;
@@ -665,15 +659,6 @@ airo:Consequence rdf:type owl:Class ;
 airo:Control rdf:type owl:Class ;
              rdfs:comment "A measure that detects, mitigates, or eliminates an event."@en ;
              rdfs:label "Control"@en .
-
-
-###  https://w3id.org/airo#Dataset
-airo:Dataset rdf:type owl:Class ;
-             owl:equivalentClass <https://www.w3.org/TR/vocab-dcat-3/Dataset> ;
-             rdfs:subClassOf airo:AIComponent ;
-             terms:source "ISO/IEC 22989, 3.2.5"@en ;
-             rdfs:comment "Collection of data with a shared format."@en ;
-             rdfs:label "Dataset"@en .
 
 
 ###  https://w3id.org/airo#Documentation
@@ -818,6 +803,12 @@ airo:RiskSource rdf:type owl:Class ;
 airo:Severity rdf:type owl:Class ;
               rdfs:comment "Level of severity of an event."@en ;
               rdfs:label "Severity"@en .
+
+
+###  https://w3id.org/airo#SphereOfImpact
+airo:SphereOfImpact rdf:type owl:Class ;
+                    rdfs:comment "Areas impacted by an AI system, e.g. physical health, right to privacy."@en ;
+                    rdfs:label "Sphere Of Impact"@en .
 
 
 ###  https://w3id.org/airo#Stakeholder
