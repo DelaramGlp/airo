@@ -38,7 +38,7 @@ ex:AnnexIII-1b
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
     sh:message "High-Risk as per AI Act Annex III-1b: Biometrics, AI systems intended to be used for biometric categorisation, according to sensitive or protected attributes or characteristics based on the inference of those attributes or characteristics."@en ;
-    sh:description "Remote biometric identification systems"@en ;
+    sh:description "Biometric categorisation systems"@en ;
     sh:not [sh:and (
                 sh:property [
                     a sh:PropertyShape ;
@@ -56,9 +56,6 @@ ex:AnnexIII-1b
                          [
                             sh:class vair:SensitiveAttributeInference ;
                         ]
-                        [
-                            sh:class vair:BiometricDataProcessing ;
-                        ]
 
                     )    
 
@@ -71,4 +68,117 @@ ex:AnnexIII-1b
                 ]
 
                 )] .
-  
+
+ ex:AnnexIII-1c
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-1c: Biometrics, AI systems intended to be used for emotion recognition."@en ;
+    sh:description "Emotion recognition systems"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                        [
+                            sh:class vair:RecognisingEmotions ; 
+                        ]
+                        [
+                            sh:class vair:DetectingEmotionalState ;
+                        ]
+
+                    )
+                
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:or (
+                        [
+                            sh:class vair:EmotionSensing ;
+                        ]
+                         [
+                            sh:class vair:BiometricsBasedEmotionSensing ;
+                        ]
+
+                    )    
+
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] . 
+
+ex:AnnexIII-2
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per Annex III-2: Critical infrastructure: AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity."@en ;
+    sh:description "safety components in the management and operation of critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:CriticalInfrastructure ;
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                        [
+                            sh:class vair:ServingSafetyFunctionInOperationOfCriticalDigitalInfrastructure ;
+ 
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInManagementOfCriticalDigitalInfrastructure ;
+ 
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInOperationOfRoadTraffic ;
+
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInManagementOfRoadTraffic ;
+
+                        ]
+                        [
+                            sh:class  vair:ServingSafetyFunctionInOperationOfTheSupplyOfWater ;
+
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInManagementOfTheSupplyOfWater ;
+
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInOperationOfTheSupplyOfGas ;
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInManagementOfTheSupplyOfGas ;
+
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInOperationOfTheSupplyOfHeating ;
+
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInManagementOfTheSupplyOfHeating ;
+
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInOperationOfTheSupplyOfElectricity ;
+ 
+                        ]
+                        [
+                            sh:class vair:ServingSafetyFunctionInManagementOfTheSupplyOfElectricity ;
+                        ]
+   
+
+                    )
+                
+                ]               
+
+
+                )] . 
