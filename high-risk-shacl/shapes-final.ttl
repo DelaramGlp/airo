@@ -1,4 +1,4 @@
-#SHACL shapes for high-risk AI as per Annex III of AI Act, Council's common position
+#SHACL shapes for high-risk AI as per Annex III of AI Act, Final version https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:52021PC0206
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -33,22 +33,35 @@ ex:AnnexIII-1a
 
                 )] .
  
-ex:AnnexIII-1a-exception
+
+ex:AnnexIII-1b
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
-    sh:message "Not-High-Risk according to the AI Act Annex III-1a: AI systems intended to be used for biometric verification the sole purpose of which is to confirm that a specific natural person is the person he or she claims to be"@en ;
-    sh:description "Biometric verification systems"@en ;
+    sh:message "High-Risk as per AI Act Annex III-1b: Biometrics, AI systems intended to be used for biometric categorisation, according to sensitive or protected attributes or characteristics based on the inference of those attributes or characteristics."@en ;
+    sh:description "Remote biometric identification systems"@en ;
     sh:not [sh:and (
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasPurpose ;
-                    sh:class vair:VerifyIdentity ;
+                    sh:class vair:Categorisation ;
                 
                 ]
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasCapability ;
-                    sh:class vair:BiometricVerification ;
+                    sh:or (
+                        [
+                            sh:class vair:BiometricCategorisation ;
+                        ]
+                         [
+                            sh:class vair:SensitiveAttributeInference ;
+                        ]
+                        [
+                            sh:class vair:BiometricDataProcessing ;
+                        ]
+
+                    )    
+
                 ]
 
                 sh:property [
@@ -57,5 +70,5 @@ ex:AnnexIII-1a-exception
                     sh:class vair:NaturalPerson ;
                 ]
 
-                ) ].
+                )] .
   
