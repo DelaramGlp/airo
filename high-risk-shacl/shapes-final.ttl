@@ -182,3 +182,55 @@ ex:AnnexIII-2
 
 
                 )] . 
+
+ex:AnnexIII-3a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per Annex III-3a: Education and vocational training, AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions at all levels."@en ;
+    sh:description "Determining access or admission or to assign natural persons to educational and vocational training institutions at all levels"@en ;
+     sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Education ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or  (
+                        [
+                            sh:class vair:DeterminingAccessToEducationalInstitutions ;
+
+                        ]
+                        [
+                            sh:class vair:DeterminingAccessToVocationalTrainingInstitutions ;
+
+                        ]
+                        [
+                            sh:class vair:DeterminingAdmissionToEducationalInstitutions ;
+
+                        ]
+                        [
+                            sh:class vair:DeterminingAdmissionToVocationalTrainingInstitutions ;
+
+                        ]
+                        [
+                            sh:class vair:AssigningPersonsToEducationalInstitutions ;
+                        ]
+                        [
+                            sh:class vair:AssigningPersonsToVocationalTrainingInstitutions ;
+
+                        ]
+                    )
+
+                ]
+            sh:property [
+                a sh:PropertyShape ;
+                sh:path airo:hasAISubject ;
+                sh:class vair:NaturalPerson ;
+                ]    
+
+     )
+     ].
+
+     
