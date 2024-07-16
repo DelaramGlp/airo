@@ -1,0 +1,61 @@
+#SHACL shapes for high-risk AI as per Annex III of AI Act, Council's common position
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix ex: <https://example.com/ns#> .
+
+ex:AnnexIII-1a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-1a: Biometrics, remote biometric identification systems."@en ;
+    sh:description "Remote biometric identification systems"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:RemoteIdentification ;
+                
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:BiometricIdentification ;
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .
+ 
+ex:AnnexIII-1a-exception
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "Not-High-Risk according to the AI Act Annex III-1a: AI systems intended to be used for biometric verification the sole purpose of which is to confirm that a specific natural person is the person he or she claims to be"@en ;
+    sh:description "Biometric verification systems"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:VerifyIdentity ;
+                
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:BiometricVerification ;
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                ) ].
+  
