@@ -477,7 +477,7 @@ ex:AnnexIII-4b
                         sh:class vair:MakingPromotionDecision ;
                     ]
                     [
-                        sh:class vair:MakingTerminationDecision ; 
+                        sh:class vair:MakingContractTerminationDecision ; 
                     ]
                     [
                         sh:class vair:MonitoringEmployeeBehaviour ;
@@ -530,3 +530,83 @@ ex:AnnexIII-4b
                      )
                 
                 )] . 
+
+ex:AnnexIII-5a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-5a: Access to and enjoyment of essential private services and essential public services and benefits, AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services. "@en ;
+    sh:description "AI systems for public services"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:PublicService ;
+                    
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:EvaluatingEligibilityForPublicAssistanceServices ;
+                    ]
+                   
+                    [
+                        sh:class vair:GrantingPublicAssistanceServices ;
+                    ]
+                    [ 
+                        sh:class vair:RevokingPublicAssistanceServices ;
+                    ]
+                    [
+                        sh:class vair:ReclaimingPublicAssistanceServices ;
+                    ]
+                    [
+                        sh:class vair:ReducingPublicAssistanceServices ;
+
+                    ]
+
+                    [
+                        sh:class vair:EvaluatingEligibilityforHealthCareServices ;
+                    ]
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicAuthority ; 
+                    ]
+                    [
+                        sh:class vair:PublicAuthorityAgent ;
+                        ]
+                    )
+
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                        [
+                             sh:class vair:PublicServicesApplicant ;
+                        ]
+                        [ 
+                            sh:class vair:NaturalPerson ;
+                        ]
+                        [
+                            sh:class vair:Family  ; 
+                        ]
+                        [
+                            sh:class vair:PotentialPublicServicesApplicant ; 
+                        ]
+                        [
+                            sh:class vair:PublicServicesRecipient ;
+                        ]
+                    )
+                ]
+
+                )] .                   
