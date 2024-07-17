@@ -1550,4 +1550,66 @@ ex:AnnexIII-7d
                         
 
 
-                )] .                                 
+                )] .   
+ex:AnnexIII-8a
+  a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-8a: Administration of justice and democratic processes, AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution."@en ;
+    sh:description "AI systems for  in researching and interpreting facts and the law and in applying the law to a concrete set of facts or in alternative dispute resolution"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:AdministrationOfJustice ;
+                        ]
+                        [
+                            sh:class vair:AdministrationOfDemocraticProcesses ;
+                        ]    
+                    )
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:ResearchingFacts ;
+                    ]    
+                    [
+                        sh:class vair:ApplyingTheLawToFacts ;
+                    ]
+                    [
+                        sh:class vair:ResearchingLaw ;
+                    ]
+                    [
+                        sh:class vair:InterpretingFacts ;
+                    ]
+                    [
+                        sh:class vair:InterpretingLaw ;
+                    ]
+                    [
+                        sh:class vair:SettlingDispute ;
+                    ]
+                    
+                  
+
+                    )
+                ]
+
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:JudicialAuthority  ;
+                    ]
+                    [
+                        sh:class vair:JudicialAuthorityAgent;
+                    ]
+                    )
+                ]
+
+
+                )] .                                               
