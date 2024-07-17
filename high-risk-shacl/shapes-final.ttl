@@ -1364,8 +1364,6 @@ ex:AnnexIII-7b
                 ]
 
                 
-                
-
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasAISubject ;
