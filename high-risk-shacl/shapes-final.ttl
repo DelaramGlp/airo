@@ -834,7 +834,7 @@ ex:AnnexIII-6a
                 
                 sh:property [
                     a sh:PropertyShape ;
-                    sh:path airo:isUsedBy ;
+                    sh:path airo:isDeployedBy ;
                     sh:or (
                     [
                         sh:class vair:LawEnforcementAuthority ;
@@ -866,4 +866,109 @@ ex:AnnexIII-6a
                    
                 ]
 
-                )] .                                               
+                )] .  
+ex:AnnexIII-6b-a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-6b: Law enforcement, AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools. "@en ;
+    sh:description "AI systems for lie detection"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:LieDetection;
+                    
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                   [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .  
+ex:AnnexIII-6b-b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-6b: Law enforcement, AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools. "@en ;
+    sh:description "AI systems for lie detection"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:DetectingLies ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:EmotionRecognition;
+   
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                   [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .                                                                               
