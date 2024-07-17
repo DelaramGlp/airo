@@ -1383,3 +1383,95 @@ ex:AnnexIII-7b
 
 
                 )] . 
+ex:AnnexIII-7c
+  a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-7c: Migration, asylum and border control management, AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status, including related assessments of the reliability of evidence."@en ;
+    sh:description "AI systems for examine migration-related applications"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:MigrationManagement ;
+                        ]
+                        [
+                            sh:class vair:AsylumManagement ;
+                        ]    
+                        [
+                            sh:class vair:BorderControlManagement ;
+
+                        ]
+                    )
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:ExaminingAsylumApplication ;
+                    ]
+                    [
+                        sh:class vair:ExaminingVisaApplication ;
+                    ]
+                    [
+                        sh:class vair:ExaminingResidencePermitsApplication ;
+                    ]
+                    [
+                        sh:class vair:ExaminingMigrationRelatedComplaints ;
+                    ]
+                    [
+                        sh:class vair:EvaluatingReliabilityOfEvidenceInMigarationRelatedApplications ;
+                    ]
+
+                    )
+                ]
+
+                
+               sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicAuthority  ;
+                    ]
+                    [
+                        sh:class vair:PublicAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                        
+                        [
+                            sh:class vair:AsylumSeeker ;
+                        ]
+                        [
+                            sh:class vair:VisaApplicant ;
+                        ]
+                        [
+                            sh:class vair:ResidencePermitApplicant ;
+                        ]
+                        [
+                            sh:class vair:NaturalPerson ;
+                        ]
+                        )]
+
+
+                )] .                 
