@@ -575,7 +575,7 @@ ex:AnnexIII-5a
 
                 sh:property [
                     a sh:PropertyShape ;
-                    sh:path airo:isUsedBy ;
+                    sh:path airo:isDeployedBy ;
                     sh:or (
                     [
                         sh:class vair:PublicAuthority ; 
@@ -609,4 +609,47 @@ ex:AnnexIII-5a
                     )
                 ]
 
-                )] .                   
+                )] . 
+ex:AnnexIII-5b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-5b: Access to and enjoyment of essential private services and essential public services and benefits, AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud."@en ;
+    sh:description "AI systems for evaluateing the creditworthiness of natural persons or establishing their credit score."@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicService ;
+                    ]
+                    [
+                        sh:class vair:PrivateService ;
+                    ]
+                    
+                    )
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:AssessingCreditworthiness ;
+                    ]
+                    [
+                        sh:class vair:DeterminingCreditScore ;
+                    ]
+
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .                                  
