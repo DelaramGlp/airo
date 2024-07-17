@@ -812,4 +812,58 @@ ex:AnnexIII-5d-b
 
                
 
-                )] .                                     
+                )] .    
+
+ex:AnnexIII-6a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-5a: Law enforcement, AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences. "@en ;
+    sh:description "AI systems for assessing risk of  becoming the victim of criminal offences"@en ;     
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:AssessingRiskOfBecomingVictimOfCrime ;
+  
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isUsedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+
+
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                   
+                ]
+
+                )] .                                               
