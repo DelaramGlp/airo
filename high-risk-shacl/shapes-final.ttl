@@ -437,3 +437,96 @@ ex:AnnexIII-4a
                 ]
                 
                 )] .
+
+ex:AnnexIII-4b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-4b: AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships."@en ;
+    sh:description ""@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Employment ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or(
+                        [
+                            sh:class vair:Employee ;
+                        ]
+                        [
+                            sh:class vair:NaturalPerson ;
+
+                        ]
+
+                    )
+                    
+                ]
+                sh:or (
+                [
+                    sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:MakingDecisionOnTermsofWorkRelatedRelations ;
+                    ]    
+                    [
+                        sh:class vair:MakingPromotionDecision ;
+                    ]
+                    [
+                        sh:class vair:MakingTerminationDecision ; 
+                    ]
+                    [
+                        sh:class vair:MonitoringEmployeeBehaviour ;
+                    ]
+                    [
+                        sh:class vair:MonitoringEmployeePerformance ;
+                    ]
+                    [
+                        sh:class vair:EvaluatingEmployeeBehaviour ;
+                    ]
+                    [
+                        sh:class vair:EvaluatingEmployeePerformance ;
+                    ]
+                    
+                    )
+                    ] 
+        
+                ]
+
+
+                [
+                sh:and (
+                    
+                    sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:AllocatingTasks ;
+                        ]
+                    
+
+                    [
+                    sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:or (
+                    [
+                        sh:class vair:BehaviourAnalysis ;
+                    ]
+                    [
+                        sh:class vair:PersonalityTraitsAnalysis ;
+                    ]
+                    
+                    )   
+                 
+                    ]
+
+                 ]  )
+                 ]
+
+                     )
+                
+                )] . 
