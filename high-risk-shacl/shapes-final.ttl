@@ -1023,4 +1023,76 @@ ex:AnnexIII-6c
                     )
                 ]
 
-                )] .                                                                                              
+                )] .  
+ex:AnnexIII-6d
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-6d: Law enforcement, AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680, or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups."@en ;
+    sh:description "AI systems for assessing risk of a person for offending or reoffending."@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:LawEnforcement ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:AssessingRiskOfOffending ;
+                    ]
+                    [
+                        sh:class vair:AssessingRiskOfReoffending;
+                    ]
+                    [
+                        sh:class vair:AssessingPersonalityTraits ; 
+                    ]
+                    [
+                        sh:class vair:AssessingPastCriminalBehaviour ;
+                    ]
+
+                    )
+                ]
+                
+              sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                   [
+                        sh:class vair:LawEnforcementAuthority ;
+                    ]
+                    [
+                        sh:class vair:LawEnforcementAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                    [
+
+                        sh:class vair:NaturalPerson ;
+                    ]
+                    [
+                        sh:class vair:Group ;
+                    ]
+
+                    )
+                ]
+
+                )] .                                                                                                             
