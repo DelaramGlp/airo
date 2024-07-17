@@ -1555,7 +1555,7 @@ ex:AnnexIII-8a
   a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
     sh:message "High-Risk as per AI Act Annex III-8a: Administration of justice and democratic processes, AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution."@en ;
-    sh:description "AI systems for  in researching and interpreting facts and the law and in applying the law to a concrete set of facts or in alternative dispute resolution"@en ;
+    sh:description "AI systems for researching and interpreting facts and the law and in applying the law to a concrete set of facts or in alternative dispute resolution"@en ;
     sh:not [sh:and (
                 sh:property [
                     a sh:PropertyShape ;
@@ -1612,4 +1612,63 @@ ex:AnnexIII-8a
                 ]
 
 
-                )] .                                               
+                )] . 
+ex:AnnexIII-8b
+  a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-8b: Administration of justice and democratic processes, AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda. This does not include AI systems to the output of which natural persons are not directly exposed, such as tools used to organise, optimise or structure political campaigns from an administrative or logistical point of view."@en ;
+    sh:description "AI systems for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda. "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:AdministrationOfJustice ;
+                        ]
+                        [
+                            sh:class vair:AdministrationOfDemocraticProcesses ;
+                        ]    
+                    )
+                ]
+                sh:or (
+                    [
+                        sh:property [
+                            a sh:PropertyShape ;
+                            sh:path airo:hasPurpose ;
+                            sh:or ([
+                                sh:class vair:InfluencingElectionOutcome ;
+                                ]
+                                 [
+                                     sh:class vair:InfluencingReferendumOutcome ; 
+                                      ] )
+                                      ]
+                    ]
+
+                    [
+                        sh:and(
+
+                                sh:property [
+                                    a sh:PropertyShape ;
+                                    sh:path airo:hasPurpose ;
+                                    sh:class vair:InfluencingVotingBehaviour ;
+                                ]
+                                sh:property [
+                                    a sh:PropertyShape ;
+                                    sh:path airo:hasAISubject ;
+                                    sh:class vair:NaturalPerson ;
+
+                                ]
+                            
+                        )
+
+
+                    ]
+
+
+
+                )
+                
+
+                    )
+                ] .                                                               
