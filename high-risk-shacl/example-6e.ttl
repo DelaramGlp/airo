@@ -1,0 +1,17 @@
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix ex: <https://example.com/myexample#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:criminal_detector a airo:AISystem ;
+	airo:isAppliedWithinDomain ex:criminal_detector_domain ;
+	airo:hasPurpose ex:criminal_detector_purpose ;
+	airo:hasCapability ex:criminal_detector_capability ;
+	airo:hasAISubject ex:criminal_detector_subject ;
+	airo:isDeployedBy ex:criminal_detector_deployer .
+
+ex:criminal_detector_domain a vair:LawEnforcement .
+ex:criminal_detector_capability  a vair:Profiling .
+ex:criminal_detector_purpose  a vair:DetectingCriminalOffences .
+ex:criminal_detector_deployer a vair:LawEnforcementAuthority .
+ex:criminal_detector_subject a vair:NaturalPerson .
