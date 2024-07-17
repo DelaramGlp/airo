@@ -187,7 +187,7 @@ ex:AnnexIII-3a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
     sh:message "High-Risk as per Annex III-3a: Education and vocational training, AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions at all levels."@en ;
-    sh:description "Determining access or admission or to assign natural persons to educational and vocational training institutions at all levels"@en ;
+    sh:description "AI Systems fot determining access or admission or to assign natural persons to educational and vocational training institutions"@en ;
      sh:not [sh:and (
                 sh:property [
                     a sh:PropertyShape ;
@@ -232,5 +232,50 @@ ex:AnnexIII-3a
 
      )
      ].
+ex:AnnexIII-3b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-3b: Education and vocational training, AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions at all levels."@en ;
+    sh:description "AI systems for evaluate learning outcomes"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Education ;
+                ]
 
-     
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:EvaluatingLearningOutcomes ;
+                   
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                        [
+                            sh:class vair:EducationalInstitution ; 
+                        ]
+                        [
+                            sh:class vair:VocationalTrainingInstitution ; 
+                        ]
+                    )
+
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                    [ 
+                        sh:class vair:CourseAttendee ; 
+                    ]
+                    [ 
+                        sh:class vair:NaturalPerson ;
+                    ]
+                    )
+                ]
+                
+                )] .   
+
