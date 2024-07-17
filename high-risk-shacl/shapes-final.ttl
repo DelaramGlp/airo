@@ -1295,4 +1295,93 @@ ex:AnnexIII-7a-b
                 ]
 
                 )] .
-                                  
+
+ex:AnnexIII-7b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-7b: Migration, asylum and border control management, AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State."@en ;
+    sh:description "AI systems for assessing a risk, including a security risk, a risk of irregular migration, or a health risk of a person"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:MigrationManagement ;
+                        ]
+                        [
+                            sh:class vair:AsylumManagement ;
+                        ]    
+                        [
+                            sh:class vair:BorderControlManagement ;
+
+                        ]
+                    )
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:AssessingPeopleRelatedRisk ;
+                    ]
+                    [
+                        sh:class vair:AssessingRiskOfIrregularImmigration ;
+                    ]
+                    [
+                        sh:class vair:AssessingSecurityRisk ;
+                    ]
+                    [
+                        sh:class vair:AssessingHealthRisk ;
+                    ]
+
+                    )
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicAuthority  ;
+                    ]
+                    [
+                        sh:class vair:PublicAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+                ]
+
+                
+                
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                        
+                        [
+                            sh:class vair:NaturalPerson ;
+                        ]
+                        [
+                            sh:class vair:IndividualIntendsToEnterState ;
+                            
+                        ]
+                        [
+                            sh:class vair:IndividualEnteredState;
+                        ]
+                        )]
+
+
+                )] . 
