@@ -535,7 +535,7 @@ ex:AnnexIII-5a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
     sh:message "High-Risk as per AI Act Annex III-5a: Access to and enjoyment of essential private services and essential public services and benefits, AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services. "@en ;
-    sh:description "AI systems for public services"@en ;
+    sh:description "AI systems for granting, reducing, revoking, or reclaiming public services"@en ;
     sh:not [sh:and (
                 sh:property [
                     a sh:PropertyShape ;
@@ -652,4 +652,164 @@ ex:AnnexIII-5b
                     sh:class vair:NaturalPerson ;
                 ]
 
-                )] .                                  
+                )] .     
+ex:AnnexIII-5c
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-5c: Access to and enjoyment of essential private services and essential public services and benefits, AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance. "@en ;
+    sh:description "AI systems for risk assessment and insurance pricing "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicService ;
+                    ]
+                    [
+                        sh:class vair:PrivateService ;
+                    ]
+                    
+                    )
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:HealthInsuranceRiskAssessment ;
+                    ]
+                    [
+                        sh:class vair:HealthInsurancePricing ;
+                    ]
+                    [
+                        sh:class vair:LifeInsuranceRiskAssessment ;
+                    ]
+                    [
+                        sh:class vair:LifeInsurancePricing ;
+                    ]
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .
+
+ex:AnnexIII-5d-a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-5d: Access to and enjoyment of essential private services and essential public services and benefits, AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems. "@en ;
+    sh:description "AI systems  for emergency services "@en ; 
+     sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicService ;
+                    ]
+                    [
+                        sh:class vair:PrivateService ;
+                    ]
+                    
+                    )
+
+                ]
+               
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:DispatchingEmergencyService ;
+                    ]
+                    [
+                        sh:class vair:PrioritisationOfEmergencyService ;
+                    ]
+                    [
+                        sh:class vair:EmergancyTriage ;
+                    ]
+
+
+                    )
+                
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:EmergencyServiceProvider ;
+                    ]
+            
+                    [
+                        sh:class vair:EmergencyHealthCareProvider ;
+                    ]
+                    [
+                        sh:class vair:Police ;
+                    ]
+                    [
+                        sh:class vair:Firefighters ;
+                    ]
+                    [
+                        sh:class vair:MedicalAid ;
+                    ]
+                   
+                    )
+                ]
+
+                )] .   
+
+ex:AnnexIII-5d-b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-5d: Access to and enjoyment of essential private services and essential public services and benefits, AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems. "@en ;
+    sh:description "AI systems  for emergency calls "@en ; 
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicService ;
+                    ]
+                    [
+                        sh:class vair:PrivateService ;
+                    ]
+                    
+                    )
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:EvaluatingEmergencyCall ;
+                    ]
+                    [
+                        sh:class vair:ClassifyingEmergencyCall ;
+                    ]
+
+
+                    )
+                
+                ]
+
+               sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+               ] 
+
+               
+
+                )] .                                     
