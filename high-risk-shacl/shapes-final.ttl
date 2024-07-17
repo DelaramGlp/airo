@@ -371,3 +371,69 @@ ex:AnnexIII-3d
                 ]
                 
                 )] . 
+
+ex:AnnexIII-4a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-4a: Employment, workers’ management and access to self-employment: AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates."@en ;
+    sh:description "AI systems for recruitment or selection of natural persons, to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates;"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Employment ;
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                    [
+                        sh:class vair:Recruiting ;
+                    ]
+                    [
+                        sh:class vair:SelectingPeople ;
+                    ]
+                    [
+                        sh:class  vair:PlacingTargetedJobAdvert ;
+                    ]
+                    
+                    [
+                        sh:class vair:JobApplicationAnalysis ;
+                    ]
+                    [
+                        sh:class vair:JobApplicationScreening ;
+                    ]
+                    [
+                        sh:class vair:JobApplicationFiltering;
+                    ]
+                    [
+                        sh:class vair:EvaluatingJobInterview ;
+                    ]
+                    [
+                        sh:class vair:EvaluatingJobCandidates ;
+                    ]
+
+                    )
+  
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                    [
+                        sh:class vair:JobApplicant ;
+                    ]
+                    [
+                        sh:class vair:PotentialJobApplicant ;
+                    ]
+                    [
+                        sh:class vair:JobCandidate ;
+                    ]
+                    [
+                        sh:class vair:NaturalPerson ;
+                    ]
+                    
+                    )
+                ]
+                
+                )] .
