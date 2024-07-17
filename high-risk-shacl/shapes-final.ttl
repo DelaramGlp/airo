@@ -282,7 +282,7 @@ ex:AnnexIII-3b
 ex:AnnexIII-3c
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
-    sh:message "High-Risk as per AI Act Annex III-3c: AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access, in the context of or within educational and vocational training institutions at all levels."@en ;
+    sh:message "High-Risk as per AI Act Annex III-3c: Education and vocational training, AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access, in the context of or within educational and vocational training institutions at all levels."@en ;
     sh:description "AI systems for assessing the appropriate level of education"@en ;
     sh:not [sh:and (
                 sh:property [
@@ -325,4 +325,49 @@ ex:AnnexIII-3c
                 ]
                 
                 )] . 
+ex:AnnexIII-3d
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-3d: Education and vocational training, AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions at all levels."@en ;
+    sh:description "AI systems for monitoring and detecting prohibited behaviour of students"@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:class vair:Education ;
+                ]
 
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:or (
+                        [
+                            sh:class vair:MonitoringProhibitedBehaviourDuringTest  ;  
+                        ]
+                        [
+                            sh:class vair:DetectingProhibitedBehaviourDuringTest ;
+                        ]
+                    )
+                   
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                        [
+                            sh:class vair:EducationalInstitution ; 
+                        ]
+                        [
+                            sh:class vair:VocationalTrainingInstitution ; 
+                        ]
+                    )
+
+
+                ]
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:Student ;   
+                ]
+                
+                )] . 
