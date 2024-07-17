@@ -1162,3 +1162,137 @@ ex:AnnexIII-6e
                 ]
 
                 )] . 
+ex:AnnexIII-7a-a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-7a: Migration, asylum and border control management, AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies as polygraphs or similar tools "@en ;
+    sh:description "AI systems for lie detection "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:MigrationManagement ;
+                        ]
+                        [
+                            sh:class vair:AsylumManagement ;
+                        ]    
+                        [
+                            sh:class vair:BorderControlManagement ;
+
+                        ]
+                    )
+                ]
+                
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:LieDetection;
+                    
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicAuthority  ;
+                    ]
+                    [
+                        sh:class vair:PublicAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .
+
+ex:AnnexIII-7a-b
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "High-Risk as per AI Act Annex III-7a: Migration, asylum and border control management, AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies as polygraphs or similar tools "@en ;
+    sh:description "AI systems for lie detection "@en ;
+    sh:not [sh:and (
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isAppliedWithinDomain ;
+                    sh:or (
+                        [
+                            sh:class vair:MigrationManagement ;
+                        ]
+                        [
+                            sh:class vair:AsylumManagement ;
+                        ]    
+                        [
+                            sh:class vair:BorderControlManagement ;
+
+                        ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasPurpose ;
+                    sh:class vair:DetectingLies ;
+                ]
+                
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:EmotionRecognition;
+                    
+                ]
+                
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:isDeployedBy ;
+                    sh:or (
+                    [
+                        sh:class vair:PublicAuthority  ;
+                    ]
+                    [
+                        sh:class vair:PublicAuthorityAgent;
+                    ]
+                    [
+                        sh:class vair:EUInstitution ; 
+                    ]
+                    [
+                        sh:class vair:EUAgency ;
+                    ]
+                    [
+                        sh:class vair:EUOffice ;
+                    ]
+                    [
+                        sh:class vair:EUBody ;
+                    ]
+                    )
+                ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:class vair:NaturalPerson ;
+                ]
+
+                )] .
+                                  
