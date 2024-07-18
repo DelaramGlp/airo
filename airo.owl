@@ -306,6 +306,14 @@ airo:hasModality rdf:type owl:ObjectProperty ;
                  rdfs:label "has modality"@en .
 
 
+###  https://w3id.org/airo#hasModel
+airo:hasModel rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf airo:hasComponent ;
+              rdfs:range airo:MLModel ;
+              rdfs:comment "Indicates machine learning model used."@en ;
+              rdfs:label "has model"@en .
+
+
 ###  https://w3id.org/airo#hasPreDeterminedChange
 airo:hasPreDeterminedChange rdf:type owl:ObjectProperty ;
                             rdfs:range airo:Change ;
@@ -357,6 +365,30 @@ airo:hasStakeholder rdf:type owl:ObjectProperty ;
                     rdfs:range airo:Stakeholder ;
                     rdfs:comment "Indicates stakeholders of an AI system"@en ;
                     rdfs:label "has stakeholder"@en .
+
+
+###  https://w3id.org/airo#hasTestingData
+airo:hasTestingData rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf airo:hasComponent ;
+                    rdfs:range <https://www.w3.org/TR/vocab-dcat-3/Dataset> ;
+                    rdfs:comment "Indicates datasets used for testing."@en ;
+                    rdfs:label "has testing data"@en .
+
+
+###  https://w3id.org/airo#hasTrainingData
+airo:hasTrainingData rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf airo:hasComponent ;
+                     rdfs:range <https://www.w3.org/TR/vocab-dcat-3/Dataset> ;
+                     rdfs:comment "Indicates datasets used in training."@en ;
+                     rdfs:label "has training data"@en .
+
+
+###  https://w3id.org/airo#hasValidationData
+airo:hasValidationData rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf airo:hasComponent ;
+                       rdfs:range <https://www.w3.org/TR/vocab-dcat-3/Dataset> ;
+                       rdfs:comment "Indicates datasets used for validation."@en ;
+                       rdfs:label "has validation data"@en .
 
 
 ###  https://w3id.org/airo#hasVersion
