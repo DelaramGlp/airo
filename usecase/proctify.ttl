@@ -15,7 +15,7 @@ ex:proctify
     airo:hasVersion ex:v_1.0.2 ;
     dcterms:date "2023-09-11"^^xsd:date ;
     airo:hasModality vair:Software ;
-    airo:usesTechnique ex:deep_learning ;
+    airo:usesTechnique vair:DeepLearning ;
     airo:hasInput ex:facial_video ;
     airo:producesOutput ex:suspicious_behaviour_alarm ;
     airo:isProvidedBy ex:AIEduX ;
