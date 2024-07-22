@@ -57,16 +57,14 @@ ex:facial_analysis_toolkit
     airo:hasDocumentation <http://tinyurl.com/3wnyxyun> .
 
 ex:susbehaved_model
-    a airo:AIComponent,
-      airo:AIModel ;
+    a airo:AIModel ;
     airo:hasVersion ex:v_1.1.2 ;
     airo:hasPurpose ex:detecting_suspicious_behaviour,
                     ex:raising_alarm ;
     airo:hasDocumentation <http://tinyurl.com/3wnyxyun> .
 
 ex:susbehaved_dataset
-    a airo:AIComponent,
-      dcat:Dataset ;
+    a dcat:Dataset ;
     airo:hasVersion ex:v_2.0.1 ;
     airo:hasPurpose ex:train_model ;
     airo:hasDocumentation <http://tinyurl.com/db4whuw9> .
