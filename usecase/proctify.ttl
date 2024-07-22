@@ -28,7 +28,7 @@ ex:proctify
                     ex:facial_behaviour_analysis,
                     ex:video_analysis ;
     airo:hasCapability ex:facial_recognition ;
-    airo:isDeplouedBy ex:university ;
+    airo:isDeployedBy ex:university ;
     airo:hasAISubject ex:student ;
     airo:hasUseInstruction <http://tinyurl.com/462b9jyv> ;
     airo:hasDeploymentInstruction <http://tinyurl.com/4s67jfss> ;
