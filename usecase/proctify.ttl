@@ -36,7 +36,7 @@ ex:proctify
                       ex:other_occupant ;
     airo:hasEndUser ex:instructor ;
     airo:hasRisk ex:inaccuracy_risk_for_darker_skin ;
-    dqv:hasQualityMeasurement :accuracy_measurement ;
+    dqv:hasQualityMeasurement ex:accuracy_measurement ;
     airo:hasPreDeterminedChange ex:change_of_model ;
     airo:compliesToRegulation <http://data.europa.eu/eli/reg/2016/679/oj> ,
                                   ex:EU_AI_Act ,
@@ -86,8 +86,8 @@ ex:other_occupant
     airo:hasLevelOfControlOverOutput ex:cannot_opt-out .
 
 ex:instructor
-    a airoext:AIEndUser ;
-    vair:NaturalPerson,
+    a airo:AIEndUser ,
+    vair:NaturalPerson ,
     airo:IntendedEndUser,
     airo:ActiveEndUser,
     airo:InformedEndUser ;
