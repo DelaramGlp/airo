@@ -23,11 +23,12 @@ ex:proctify
     airo:hasComponent ex:facial_analysis_toolkit,
                       ex:susbehaved_model,
                       ex:susbehaved_dataset ;
-    airo:isAppliedWithinDomain ex:education ;
+    airo:isAppliedWithinDomain vair:Education ;
     airo:hasPurpose ex:detecting_suspicious_behaviour_during_online_exam,
                     ex:facial_behaviour_analysis,
                     ex:video_analysis ;
-    airo:isUsedBy ex:university ;
+    airo:hasCapability ex:facial_recognition ;
+    airo:isDeplouedBy ex:university ;
     airo:hasAISubject ex:student ;
     airo:hasUseInstruction <http://tinyurl.com/462b9jyv> ;
     airo:hasDeploymentInstruction <http://tinyurl.com/4s67jfss> ;
