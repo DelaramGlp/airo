@@ -21,8 +21,8 @@ ex:proctify
     airo:isProvidedBy ex:AIEduX ;
     airo:isDevelopedBy ex:AIEduX ;
     airo:hasComponent ex:facial_analysis_toolkit,
-                      ex:susbehaved_model,
                       ex:susbehaved_dataset ;
+    airo:hasModel     ex:susbehaved_model ;             
     airo:isAppliedWithinDomain vair:Education ;
     airo:hasPurpose ex:detecting_suspicious_behaviour_during_online_exam,
                     ex:facial_behaviour_analysis,
