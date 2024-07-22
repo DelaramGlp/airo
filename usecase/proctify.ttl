@@ -7,6 +7,7 @@
 @prefix vair: <https://w3id.org/vair#> .
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix dcat: <https://www.w3.org/TR/vocab-dcat-3/> .
 @prefix ex: <https://example.com/proctify#> .
 @base <https://example.com/proctify#> .
 
@@ -21,6 +22,7 @@ ex:proctify
     airo:isProvidedBy ex:AIEduX ;
     airo:isDevelopedBy ex:AIEduX ;
     airo:hasComponent ex:facial_analysis_toolkit,
+                      ex:susbehaved_model ,
                       ex:susbehaved_dataset ;
     airo:hasModel     ex:susbehaved_model ;             
     airo:isAppliedWithinDomain vair:Education ;
@@ -57,7 +59,7 @@ ex:facial_analysis_toolkit
 
 ex:susbehaved_model
     a airo:AIComponent,
-      vair:Model ;
+      airo:AIModel ;
     airo:hasVersion ex:v_1.1.2 ;
     airo:hasPurpose ex:detecting_suspicious_behaviour,
                     ex:raising_alarm ;
@@ -65,7 +67,7 @@ ex:susbehaved_model
 
 ex:susbehaved_dataset
     a airo:AIComponent,
-      vair:Dataset ;
+      dcat:Dataset ;
     airo:hasVersion ex:v_2.0.1 ;
     airo:hasPurpose ex:train_model ;
     airo:hasDocumentation <http://tinyurl.com/db4whuw9> .
