@@ -39,6 +39,7 @@ ex:proctify
                       ex:other_occupant ;
     airo:hasEndUser ex:instructor ;
     airo:hasRisk ex:inaccuracy_risk_for_darker_skin ;
+    airo:hasControl ex:bias_testing ;
     dqv:hasQualityMeasurement ex:accuracy_measurement ;
     airo:hasPreDeterminedChange ex:change_of_model ;
     airo:compliesToRegulation <http://data.europa.eu/eli/reg/2016/679/oj> ,
@@ -124,10 +125,15 @@ ex:raise_of_false_alarms_for_darker_skin
 
 ex:bias_against_students_with_darker_skin
     a airo:Impact ;
-    airo:hasImpactOnArea ex:right_to_nondiscrimination ;
+    airo:hasImpactOnArea vair:RightToNondiscrimination ;
     airo:hasImpactOnEntity ex:student ;
     airo:hasLikelihood "Low" ;
     airo:hasSeverity "Very_High" .
+
+ex:bias_testing
+    a airo:Control , vair:TestingMeasure ;
+    airo:modifiesEvent ex:bias_against_students_with_darker_skin .
+
 
 ex:accuracy_measurement
     a dqv:QualityMeasurement ;
