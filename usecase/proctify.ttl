@@ -132,7 +132,7 @@ ex:bias_against_students_with_darker_skin
 
 ex:bias_testing
     a airo:Control , vair:TestingMeasure ;
-    airo:modifiesEvent ex:bias_against_students_with_darker_skin .
+    airo:eliminatesEvent ex:bias_against_students_with_darker_skin .
 
 
 ex:accuracy_measurement
