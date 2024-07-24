@@ -42,8 +42,7 @@ ex:proctify
     airo:hasControl ex:bias_testing ;
     dqv:hasQualityMeasurement ex:accuracy_measurement ;
     airo:hasPreDeterminedChange ex:change_of_model ;
-    airo:compliesWithRegulation <http://data.europa.eu/eli/reg/2016/679/oj> ,
-                                  ex:EU_AI_Act ,
+    airo:compliesWithRegulation  ex:EU_GDPR ,
                                   ex:Irish_Data_Protection_Act ;
     airo:conformsToStandard vair:ISOIEC42001-2023 ,
                             vair:ISOIEC27001-2022 .
