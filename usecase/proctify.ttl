@@ -152,6 +152,6 @@ ex:alarm_accuracy
 
 ex:change_of_model
     a airo:Change ;
-    airo:hasSubjectOfChange ex:susbehaved_model ;
+    airo:hasChangedEntity ex:susbehaved_model ;
     airo:hasPurpose ex:enhance_fairness ;
     airo:hasFrequency freq:bimonthly .
