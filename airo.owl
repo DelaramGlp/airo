@@ -203,6 +203,13 @@ airo:hasCapability rdf:type owl:ObjectProperty ;
                    rdfs:label "has capability"@en .
 
 
+###  https://w3id.org/airo#hasChangedEntity
+airo:hasChangedEntity rdf:type owl:ObjectProperty ;
+                      rdfs:domain airo:Change ;
+                      rdfs:comment "Indicates the entity being changed."@en ;
+                      rdfs:label "has changed entity"@en .
+
+
 ###  https://w3id.org/airo#hasComponent
 airo:hasComponent rdf:type owl:ObjectProperty ;
                   rdfs:range airo:AIComponent ;
@@ -309,7 +316,7 @@ airo:hasModality rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasModel
 airo:hasModel rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf airo:hasComponent ;
-              rdfs:range airo:MLModel ;
+              rdfs:range airo:AIModel ;
               rdfs:comment "Indicates machine learning model used."@en ;
               rdfs:label "has model"@en .
 
@@ -571,6 +578,10 @@ terms:date rdf:type owl:DatatypeProperty .
 <http://www.w3.org/ns/dqv#QualityMeasurement> rdf:type owl:Class .
 
 
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
 ###  https://w3id.org/airo#AICapability
 airo:AICapability rdf:type owl:Class ;
                   rdfs:comment "The capability of an AI system that enables realisation of the system's purposes."@en ;
@@ -605,6 +616,14 @@ airo:AIDeveloper rdf:type owl:Class ;
 airo:AILifecyclePhase rdf:type owl:Class ;
                       rdfs:comment "A Phase of AI lifecycle which indicates evolution of the system from conception through retirement."@en ;
                       rdfs:label "AI Lifecycle Phase"@en .
+
+
+###  https://w3id.org/airo#AIModel
+airo:AIModel rdf:type owl:Class ;
+             rdfs:subClassOf airo:AIComponent ;
+             terms:source "ISO/IEC TR 24028, 3.24"@en ;
+             rdfs:comment "Mathematical construct that generates an inference or prediction, based on input data."@en ;
+             rdfs:label "AI Model"@en .
 
 
 ###  https://w3id.org/airo#AIOperator
@@ -729,9 +748,9 @@ airo:Frequency rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#GPAIModel
 airo:GPAIModel rdf:type owl:Class ;
-               rdfs:subClassOf airo:MLModel ;
+               rdfs:subClassOf airo:AIModel ;
                terms:source "EU AI Act, Article 3(63)"@en ;
-               rdfs:comment "An AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, except AI models that are used for research, development or prototyping activities before they are placed on the market."@en ;
+               rdfs:comment "An AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications."@en ;
                rdfs:label "General Purpose AI Model"@en .
 
 
@@ -774,14 +793,6 @@ airo:Likelihood rdf:type owl:Class ;
 airo:LocalityOfUse rdf:type owl:Class ;
                    rdfs:comment "The area, e.g. facility or institution, in which an entity is used."@en ;
                    rdfs:label "Locality Of Use"@en .
-
-
-###  https://w3id.org/airo#MLModel
-airo:MLModel rdf:type owl:Class ;
-             rdfs:subClassOf airo:AIComponent ;
-             terms:source "ISO/IEC TR 24028, 3.24"@en ;
-             rdfs:comment "Mathematical construct that generates an inference or prediction, based on input data."@en ;
-             rdfs:label "Machine Learning Model"@en .
 
 
 ###  https://w3id.org/airo#Misuse
@@ -845,6 +856,7 @@ airo:SphereOfImpact rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Stakeholder
 airo:Stakeholder rdf:type owl:Class ;
+                 rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
                  rdfs:comment "Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity."@en ;
                  rdfs:isDefinedBy "ISO/IEC 22989, 3.5.13"@en ;
                  rdfs:label "Stakeholder"@en .
