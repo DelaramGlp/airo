@@ -45,7 +45,8 @@ ex:proctify
     airo:compliesWithRegulation  ex:EU_GDPR ,
                                   ex:Irish_Data_Protection_Act ;
     airo:conformsToStandard vair:ISOIEC42001-2023 ,
-                            vair:ISOIEC27001-2022 .
+                            vair:ISOIEC27001-2022 ;
+    airo:followsCodeOfConduct ex:use_of_AI_and_data_in_teaching_and_learning   .                        
 
 ex:facial_analysis_toolkit
     a airo:AIComponent ;
