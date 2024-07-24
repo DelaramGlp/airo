@@ -48,6 +48,9 @@ ex:proctify
                             vair:ISOIEC27001-2022 ;
     airo:followsCodeOfConduct ex:use_of_AI_and_data_in_teaching_and_learning   .                        
 
+ex:EU_GDPR dpv:hasJurisdiction ex:EU .
+ex:Irish_Data_Protection_Act  dpv:hasJurisdiction ex:Ireland .
+
 ex:facial_analysis_toolkit
     a airo:AIComponent ;
     airo:hasVersion ex:v_3.3.2 ;
