@@ -25,7 +25,7 @@ ex:proctify
                       ex:susbehaved_dataset ;
     airo:hasModel     ex:susbehaved_model ;             
     airo:isAppliedWithinDomain vair:Education ;
-    airo:hasPurpose ex:detecting_suspicious_behaviour_during_online_exam,
+    airo:hasPurpose vair:DetectingProhibitedBehaviourDuringTest,
                     ex:facial_behaviour_analysis,
                     ex:video_analysis ;
     airo:hasCapability ex:facial_recognition ;
@@ -42,7 +42,7 @@ ex:proctify
     airo:hasControl ex:bias_testing ;
     dqv:hasQualityMeasurement ex:accuracy_measurement ;
     airo:hasPreDeterminedChange ex:change_of_model ;
-    airo:compliesToRegulation <http://data.europa.eu/eli/reg/2016/679/oj> ,
+    airo:compliesWithRegulation <http://data.europa.eu/eli/reg/2016/679/oj> ,
                                   ex:EU_AI_Act ,
                                   ex:Irish_Data_Protection_Act ;
     airo:conformsToStandard vair:ISOIEC42001-2023 ,
