@@ -259,7 +259,7 @@ airo:hasImpact rdf:type owl:ObjectProperty ;
 airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Impact ;
                      rdfs:range airo:SphereOfImpact ;
-                     rdfs:comment "Specifies the area (e.g. physical health) that is negatively impacted by an  AI system or component." ;
+                     rdfs:comment "Specifies the area (e.g. physical health) that is impacted by an  AI system or component." ;
                      rdfs:label "has impact on area"@en .
 
 
@@ -537,9 +537,11 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/dpv#hasPersonalData
 <https://w3id.org/dpv#hasPersonalData> rdf:type owl:ObjectProperty .
 
+###  https://w3id.org/dpv#hasData
+<https://w3id.org/dpv#hasData> rdf:type owl:ObjectProperty .
 
-###  https://w3id.org/dpv#hasProcess
-<https://w3id.org/dpv#hasProcess> rdf:type owl:ObjectProperty .
+###  https://w3id.org/dpv#hasProcessing
+<https://w3id.org/dpv#hasProcessing> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/dpv#isRunOnHardware
@@ -909,6 +911,8 @@ airo:Vulnerability rdf:type owl:Class ;
 ###  https://w3id.org/dpv#PersonalData
 <https://w3id.org/dpv#PersonalData> rdf:type owl:Class .
 
+###  https://w3id.org/dpv#Data
+<https://w3id.org/dpv#Data> rdf:type owl:Class .
 
 ###  https://w3id.org/dpv#Process
 <https://w3id.org/dpv#Process> rdf:type owl:Class .
