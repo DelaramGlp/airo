@@ -232,6 +232,14 @@ airo:hasControl rdf:type owl:ObjectProperty ;
                 rdfs:label "has control"@en .
 
 
+###  https://w3id.org/airo#hasControlOverAIOutput
+airo:hasControlOverAIOutput rdf:type owl:ObjectProperty ;
+                            rdfs:domain airo:Stakeholder ;
+                            rdfs:range airo:ModeOfOutputControllability ;
+                            rdfs:comment "Indicates the level of control over outputs produced by an AI system."@en ;
+                            rdfs:label "has control over AI output"@en .
+
+
 ###  https://w3id.org/airo#hasDocumentation
 airo:hasDocumentation rdf:type owl:ObjectProperty ;
                       rdfs:range airo:Documentation ;
@@ -818,6 +826,12 @@ airo:Misuse rdf:type owl:Class ;
 airo:Modality rdf:type owl:Class ;
               rdfs:comment "The form in which the system exists or is represented."@en ;
               rdfs:label "Modality"@en .
+
+
+###  https://w3id.org/airo#ModeOfOutputControllability
+airo:ModeOfOutputControllability rdf:type owl:Class ;
+                                 rdfs:label "Mode Of Output Controllability"@en ,
+                                            "The level of control over AI outputs exercised by humans."@en .
 
 
 ###  https://w3id.org/airo#Output
