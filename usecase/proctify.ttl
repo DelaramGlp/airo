@@ -34,7 +34,6 @@ ex:proctify
     airo:hasUseInstruction <http://tinyurl.com/462b9jyv> ;
     airo:hasDeploymentInstruction <http://tinyurl.com/4s67jfss> ;
     airo:hasAutomationLevel vair:PartialAutomation ;
-    dpv:hasHumanInvolvement ex:human_decision ;
     airo:hasAISubject ex:student,
                       ex:other_occupant ;
     airo:hasEndUser ex:instructor ;
@@ -76,19 +75,15 @@ ex:susbehaved_dataset
 ex:student
     a airo:AISubject,
       vair:NaturalPerson,
-      dpv:DataSubject,
-      airo:IntendedAISubject,
-      airo:ActiveAISubject,
-      airo:InformedAISubject ;
+      dpv:DataSubject ;
+    airo:hasHumanInvolvement   vair:IntendedInvolvement, vair:ActiveInvolvement , vair:InformedInvolvement  ; 
     airo:hasLevelOfControlOverOutput ex:ex-post_challenge .
 
 ex:other_occupant
     a airo:AISubject,
-      vair:NaturalPerson,
-      airo:UnintendedAISubject,
-      airo:PassiveAISubject,
-      airo:UninformedAISubject ;
-    airo:hasLevelOfControlOverOutput ex:cannot_opt-out .
+      vair:NaturalPerson ;
+    airo:hasHumanInvolvement vair:UnintendedInvolvement, vair:PassiveInvolvement, vair:UninformedInvolvement ;
+    airo:hasLevelOfControlOverOutput ex:cannot_opt_out .
 
 ex:instructor
     a airo:AIEndUser ,
@@ -96,7 +91,7 @@ ex:instructor
     airo:IntendedEndUser,
     airo:ActiveEndUser,
     airo:InformedEndUser ;
-    airo:hasLevelOfControlOverOutput ex:real-time_corrective .
+    airo:hasLevelOfControlOverOutput ex:real_time_corrective .
 
 ex:pdh_1
     a dpv:PersonalDataHandling ;
