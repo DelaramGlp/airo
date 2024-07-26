@@ -530,8 +530,8 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 <https://w3id.org/dpv#hasDataSubject> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/dpv#hasHumanInvolvement
-<https://w3id.org/dpv#hasHumanInvolvement> rdf:type owl:ObjectProperty .
+###  https://w3id.org/dpv#hasEntityInvolvement
+<https://w3id.org/dpv#hasEntityInvolvement> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/dpv#hasPersonalData
@@ -904,8 +904,8 @@ airo:Vulnerability rdf:type owl:Class ;
                                         rdfs:label "Hardware Platform" .
 
 
-###  https://w3id.org/dpv#HumanInvolvement
-<https://w3id.org/dpv#HumanInvolvement> rdf:type owl:Class .
+###  https://w3id.org/dpv#EntityInvolvement
+<https://w3id.org/dpv#EntityInvolvement> rdf:type owl:Class .
 
 
 ###  https://w3id.org/dpv#PersonalData
