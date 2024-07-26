@@ -142,7 +142,7 @@ ex:alarm_precision_measurement
     a dqv:QualityMeasurement ;
     dqv:computedOn ex:proctify ;
     dqv:isMeasurementOf ex:alarm_precision ;
-    dqv:value "0.98"^^xsd:double .
+    dqv:value "98"^^xsd:double .
 
 ex:alarm_precision
     a dqv:Metric ;
@@ -154,7 +154,7 @@ ex:alarm_recall_measurement
     a dqv:QualityMeasurement ;
     dqv:computedOn ex:proctify ;
     dqv:isMeasurementOf ex:alarm_recall ;
-    dqv:value "0.90"^^xsd:double .
+    dqv:value "90"^^xsd:double .
 
 ex:alarm_reccall
     a dqv:Metric ;
@@ -167,7 +167,7 @@ ex:alarm_f_score_measurement
     a dqv:QualityMeasurement ;
     dqv:computedOn ex:proctify ;
     dqv:isMeasurementOf ex:alarm_f_score ;
-    dqv:value "0.93"^^xsd:double .
+    dqv:value "93"^^xsd:double .
 
 ex:alarm_f_score
     a dqv:Metric ;
