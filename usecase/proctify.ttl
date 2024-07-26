@@ -87,11 +87,9 @@ ex:other_occupant
 
 ex:instructor
     a airo:AIEndUser ,
-    vair:NaturalPerson ,
-    airo:IntendedEndUser,
-    airo:ActiveEndUser,
-    airo:InformedEndUser ;
-    airo:hasLevelOfControlOverOutput ex:real_time_corrective .
+    vair:NaturalPerson ;
+    airo:hasHumanInvolvement vair:IntendedInvolvement, vair:ActiveInvolvement , vair:InformedInvolvement  ; 
+    airo:hasControlOverAIOutput vair:CorrectOutput .
 
 ex:pdh_1
     a dpv:PersonalDataHandling ;
