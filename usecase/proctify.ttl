@@ -45,7 +45,7 @@ ex:proctify
     airo:conformsToStandard vair:ISOIEC42001-2023 ,
                             vair:ISOIEC27001-2022 ;
     airo:followsCodeOfConduct ex:use_of_AI_and_data_in_teaching_and_learning   ;
-    airo:hasProcessing ex:processing_1 .                        
+    dpv:hasProcessing ex:processing_1 .                        
 
 ex:EU_GDPR dpv:hasJurisdiction ex:EU .
 ex:Irish_Data_Protection_Act  dpv:hasJurisdiction ex:Ireland .
