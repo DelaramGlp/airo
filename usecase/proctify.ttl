@@ -142,7 +142,7 @@ ex:accuracy_measurement
     a dqv:QualityMeasurement ;
     dqv:computedOn ex:proctify ;
     dqv:isMeasurementOf ex:alarm_accuracy ;
-    dqv:value "98.9"^^xsd:double .
+    dqv:value "0.9"^^xsd:double .
 
 ex:alarm_accuracy
     a dqv:Metric ;
