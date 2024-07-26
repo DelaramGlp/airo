@@ -548,8 +548,8 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 <https://w3id.org/dpv#hasDataSubject> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/dpv#hasPersonalData
-<https://w3id.org/dpv#hasPersonalData> rdf:type owl:ObjectProperty .
+###  https://w3id.org/dpv#hasLegalBasis
+<https://w3id.org/dpv#hasLegalBasis> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/dpv#hasProcessing
@@ -932,12 +932,15 @@ airo:Vulnerability rdf:type owl:Class ;
                                         rdfs:label "Hardware Platform" .
 
 
-###  https://w3id.org/dpv#PersonalData
-<https://w3id.org/dpv#PersonalData> rdf:type owl:Class .
+###  https://w3id.org/dpv#SensitiveData
+<https://w3id.org/dpv#SensitiveData> rdf:type owl:Class .
 
 
-###  https://w3id.org/dpv#Process
-<https://w3id.org/dpv#Process> rdf:type owl:Class .
+###  https://w3id.org/dpv#LegalBasis
+<https://w3id.org/dpv#LegalBAsis> rdf:type owl:Class .
+
+###  https://w3id.org/dpv#Processing
+<https://w3id.org/dpv#Processing> rdf:type owl:Class .
 
 
 ###  https://www.w3.org/TR/vocab-dcat-3/Dataset
