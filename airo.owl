@@ -543,6 +543,8 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/dpv#hasData
 <https://w3id.org/dpv#hasData> rdf:type owl:ObjectProperty .
 
+###  https://w3id.org/dpv#hasDataSource
+<https://w3id.org/dpv#hasDataSource> rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/dpv#hasDataSubject
 <https://w3id.org/dpv#hasDataSubject> rdf:type owl:ObjectProperty .
@@ -935,6 +937,8 @@ airo:Vulnerability rdf:type owl:Class ;
 ###  https://w3id.org/dpv#SensitiveData
 <https://w3id.org/dpv#SensitiveData> rdf:type owl:Class .
 
+###  https://w3id.org/dpv#DataSource
+<https://w3id.org/dpv#DataSource> rdf:type owl:Class .
 
 ###  https://w3id.org/dpv#LegalBasis
 <https://w3id.org/dpv#LegalBAsis> rdf:type owl:Class .
