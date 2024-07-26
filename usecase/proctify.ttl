@@ -35,7 +35,7 @@ ex:proctify
     airo:hasAutomationLevel vair:PartialAutomation ;
     airo:hasAISubject ex:student,
                       ex:other_occupant ;
-    airo:hasEndUser ex:instructor ;
+    airo:hasAIUser ex:instructor ;
     airo:hasRisk ex:inaccuracy_risk_for_darker_skin ;
     airo:hasControl ex:bias_testing ;
     dqv:hasQualityMeasurement ex:alarm_precision_measurement, ex:alarm_recall_measurement, ex:alarm_f_score_measurement   ;
@@ -85,7 +85,7 @@ ex:other_occupant
     airo:hasControlOverAIOutput vair:CannotOptOutOfOutput .
 
 ex:instructor
-    a airo:AIEndUser ,
+    a airo:AIUser ,
     vair:NaturalPerson ;
     airo:hasHumanInvolvement vair:IntendedInvolvement, vair:ActiveInvolvement , vair:InformedInvolvement  ; 
     airo:hasControlOverAIOutput vair:CorrectOutput .
