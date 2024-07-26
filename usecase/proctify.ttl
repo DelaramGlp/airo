@@ -40,7 +40,7 @@ ex:proctify
     airo:hasEndUser ex:instructor ;
     airo:hasRisk ex:inaccuracy_risk_for_darker_skin ;
     airo:hasControl ex:bias_testing ;
-    dqv:hasQualityMeasurement ex:accuracy_measurement ;
+    dqv:hasQualityMeasurement ex:alarm_precision_measurement, ex:alarm_recall_measurement, ex:alarm_f_score_measurement   ;
     airo:hasPreDeterminedChange ex:change_of_model ;
     airo:compliesWithRegulation  ex:EU_GDPR ,
                                   ex:Irish_Data_Protection_Act ;
@@ -138,17 +138,43 @@ ex:bias_testing
     airo:eliminatesEvent ex:bias_against_students_with_darker_skin .
 
 
-ex:accuracy_measurement
+ex:alarm_precision_measurement
     a dqv:QualityMeasurement ;
     dqv:computedOn ex:proctify ;
-    dqv:isMeasurementOf ex:alarm_accuracy ;
-    dqv:value "0.9"^^xsd:double .
+    dqv:isMeasurementOf ex:alarm_precision ;
+    dqv:value "0.98"^^xsd:double .
 
-ex:alarm_accuracy
+ex:alarm_precision
     a dqv:Metric ;
     dqv:expectedDataType xsd:double ;
     dqv:inDimension ex:accuracy ;
     airo:hasDocumentation <http://tinyurl.com/mryhr52m> .
+
+ex:alarm_recall_measurement
+    a dqv:QualityMeasurement ;
+    dqv:computedOn ex:proctify ;
+    dqv:isMeasurementOf ex:alarm_recall ;
+    dqv:value "0.90"^^xsd:double .
+
+ex:alarm_reccall
+    a dqv:Metric ;
+    dqv:expectedDataType xsd:double ;
+    dqv:inDimension ex:accuracy ;
+    airo:hasDocumentation <http://tinyurl.com/mryhr52m> .
+
+ 
+ex:alarm_f_score_measurement 
+    a dqv:QualityMeasurement ;
+    dqv:computedOn ex:proctify ;
+    dqv:isMeasurementOf ex:alarm_f_score ;
+    dqv:value "0.93"^^xsd:double .
+
+ex:alarm_f_score
+    a dqv:Metric ;
+    dqv:expectedDataType xsd:double ;
+    dqv:inDimension ex:accuracy ;
+    airo:hasDocumentation <http://tinyurl.com/mryhr52m> .
+
 
 ex:change_of_model
     a airo:Change ;
