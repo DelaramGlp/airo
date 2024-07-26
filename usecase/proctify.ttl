@@ -30,7 +30,6 @@ ex:proctify
                     ex:video_analysis ;
     airo:hasCapability ex:facial_recognition ;
     airo:isDeployedBy ex:university ;
-    airo:hasAISubject ex:student ;
     airo:hasUseInstruction <http://tinyurl.com/462b9jyv> ;
     airo:hasDeploymentInstruction <http://tinyurl.com/4s67jfss> ;
     airo:hasAutomationLevel vair:PartialAutomation ;
@@ -77,13 +76,13 @@ ex:student
       vair:NaturalPerson,
       dpv:DataSubject ;
     airo:hasHumanInvolvement   vair:IntendedInvolvement, vair:ActiveInvolvement , vair:InformedInvolvement  ; 
-    airo:hasLevelOfControlOverOutput ex:ex-post_challenge .
+    airo:hasControlOverAIOutput vair:ChallengeOutput .
 
 ex:other_occupant
     a airo:AISubject,
       vair:NaturalPerson ;
     airo:hasHumanInvolvement vair:UnintendedInvolvement, vair:PassiveInvolvement, vair:UninformedInvolvement ;
-    airo:hasLevelOfControlOverOutput ex:cannot_opt_out .
+    airo:hasControlOverAIOutput vair:CannotOptOutOfOutput .
 
 ex:instructor
     a airo:AIEndUser ,
