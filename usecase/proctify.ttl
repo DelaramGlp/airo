@@ -33,7 +33,7 @@ ex:proctify
     airo:hasAISubject ex:student ;
     airo:hasUseInstruction <http://tinyurl.com/462b9jyv> ;
     airo:hasDeploymentInstruction <http://tinyurl.com/4s67jfss> ;
-    airo:hasLevelOfAutomation ex:partial_automation ;
+    airo:hasAutomationLevel vair:PartialAutomation ;
     dpv:hasHumanInvolvement ex:human_decision ;
     airo:hasAISubject ex:student,
                       ex:other_occupant ;
