@@ -44,7 +44,8 @@ ex:proctify
                                   ex:Irish_Data_Protection_Act ;
     airo:conformsToStandard vair:ISOIEC42001-2023 ,
                             vair:ISOIEC27001-2022 ;
-    airo:followsCodeOfConduct ex:use_of_AI_and_data_in_teaching_and_learning   .                        
+    airo:followsCodeOfConduct ex:use_of_AI_and_data_in_teaching_and_learning   ;
+    airo:hasProcessing ex:processing_1 .                        
 
 ex:EU_GDPR dpv:hasJurisdiction ex:EU .
 ex:Irish_Data_Protection_Act  dpv:hasJurisdiction ex:Ireland .
@@ -90,13 +91,14 @@ ex:instructor
     airo:hasHumanInvolvement vair:IntendedInvolvement, vair:ActiveInvolvement , vair:InformedInvolvement  ; 
     airo:hasControlOverAIOutput vair:CorrectOutput .
 
-ex:pdh_1
-    a dpv:PersonalDataHandling ;
-    dpv:hasPurpose ex:facial_analysis ;
-    dpv:hasPersonalData ex:facial_data ;
+ex:processing_1
+    a dpv:Processing ;
+    dpv:hasData ex:facial_data ;
+    dpv:hasLegalBasis dpv:InformedConsent ;
     dpv:hasDataSubject ex:student .
 
-ex:facial_data a dpv:SensitivePersonalData .
+ex:facial_data a dpv:SensitivePersonalData ;
+        dpv:hasDataSource ex:user_input .
 
 ex:inaccuracy_risk_for_darker_skin
     a airo:Risk ;
