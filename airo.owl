@@ -112,10 +112,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/ns/dqv#computedOn
-<http://www.w3.org/ns/dqv#computedOn> rdf:type owl:ObjectProperty .
-
-
 ###  http://www.w3.org/ns/dqv#expectedDataType
 <http://www.w3.org/ns/dqv#expectedDataType> rdf:type owl:ObjectProperty .
 
@@ -134,6 +130,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/airo#compliesWithRegulation
 airo:compliesWithRegulation rdf:type owl:ObjectProperty ;
+                            rdfs:range airo:Regulation ;
                             rdfs:comment "Indicates compliance with a specific regulation."@en ;
                             rdfs:label "complies with regulation"@en .
 
@@ -173,6 +170,7 @@ airo:exploitsVulnerability rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#followsCodeOfConduct
 airo:followsCodeOfConduct rdf:type owl:ObjectProperty ;
+                          rdfs:range airo:CodeOfConduct ;
                           rdfs:comment "Indicates the code of conducts followed."@en ;
                           rdfs:label "follows code of conduct"@en .
 
@@ -265,6 +263,8 @@ airo:hasFrequency rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasHumanInvolvement
 airo:hasHumanInvolvement rdf:type owl:ObjectProperty ;
+                         rdfs:domain airo:Stakeholder ;
+                         rdfs:range airo:HumanInvolvement ;
                          rdfs:comment "Indicates the type involvement of a human."@en ;
                          rdfs:label "has human involvement"@en .
 
