@@ -272,17 +272,17 @@ airo:hasImpact rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/airo#hasImpactOnArea
 airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
                      rdfs:domain airo:Impact ;
-                     rdfs:range airo:SphereOfImpact ;
+                     rdfs:range airo:AreaOfImpact ;
                      rdfs:comment "Specifies the area (e.g. physical health) that is impacted by an  AI system or component." ;
                      rdfs:label "has impact on area"@en .
 
 
-###  https://w3id.org/airo#hasImpactOnEntity
-airo:hasImpactOnEntity rdf:type owl:ObjectProperty ;
-                       rdfs:domain airo:Impact ;
-                       rdfs:range airo:Stakeholder ;
-                       rdfs:comment "Indicates those that are negatively impacted by an AI system or component."@en ;
-                       rdfs:label "has impact on entity"@en .
+###  https://w3id.org/airo#hasImpactOnStakeholder
+airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
+                            rdfs:domain airo:Impact ;
+                            rdfs:range airo:Stakeholder ;
+                            rdfs:comment "Indicates the people that are negatively impacted by an AI system or component."@en ;
+                            rdfs:label "has impact on stakeholder"@en .
 
 
 ###  https://w3id.org/airo#hasInput
@@ -695,6 +695,12 @@ airo:AIUser rdf:type owl:Class ;
             rdfs:label "AI User"@en .
 
 
+###  https://w3id.org/airo#AreaOfImpact
+airo:AreaOfImpact rdf:type owl:Class ;
+                  rdfs:comment "Areas or aspects impacted by an AI system, e.g. physical health, right to privacy."@en ;
+                  rdfs:label "Area Of Impact"@en .
+
+
 ###  https://w3id.org/airo#AutomationLevel
 airo:AutomationLevel rdf:type owl:Class ;
                      rdfs:comment "Refers to the degree of automation under which an AI system operates."@en ;
@@ -834,8 +840,8 @@ airo:Modality rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#ModeOfOutputControllability
 airo:ModeOfOutputControllability rdf:type owl:Class ;
-                                 rdfs:label "Mode Of Output Controllability"@en ,
-                                            "The level of control over AI outputs exercised by humans."@en .
+                                 rdfs:comment "The level of control over AI outputs exercised by humans."@en ;
+                                 rdfs:label "Mode Of Output Controllability"@en .
 
 
 ###  https://w3id.org/airo#Output
@@ -876,12 +882,6 @@ airo:RiskSource rdf:type owl:Class ;
 airo:Severity rdf:type owl:Class ;
               rdfs:comment "Level of severity of an event."@en ;
               rdfs:label "Severity"@en .
-
-
-###  https://w3id.org/airo#SphereOfImpact
-airo:SphereOfImpact rdf:type owl:Class ;
-                    rdfs:comment "Areas or aspects impacted by an AI system, e.g. physical health, right to privacy."@en ;
-                    rdfs:label "Sphere Of Impact"@en .
 
 
 ###  https://w3id.org/airo#Stakeholder
