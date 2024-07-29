@@ -112,6 +112,14 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://www.w3.org/ns/dqv#computedOn
+<http://www.w3.org/ns/dqv#computedOn> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dqv#expectedDataType
+<http://www.w3.org/ns/dqv#expectedDataType> rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/ns/dqv#hasQualityMeasurement
 <http://www.w3.org/ns/dqv#hasQualityMeasurement> rdf:type owl:ObjectProperty .
 
@@ -495,6 +503,14 @@ airo:isRiskSourceFor rdf:type owl:ObjectProperty ;
                      rdfs:label "is risk source for"@en .
 
 
+###  https://w3id.org/airo#isRunOnHardware
+airo:isRunOnHardware rdf:type owl:ObjectProperty ;
+                     rdfs:domain airo:AISystem ;
+                     rdfs:range airo:HardwarePlatform ;
+                     rdfs:comment "Indicates the hardware on which the system is run." ;
+                     rdfs:label "is run on hardware" .
+
+
 ###  https://w3id.org/airo#isUsedWithinLocality
 airo:isUsedWithinLocality rdf:type owl:ObjectProperty ;
                           rdfs:domain [ rdf:type owl:Class ;
@@ -558,14 +574,6 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/dpv#hasProcessing
 <https://w3id.org/dpv#hasProcessing> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/dpv#isRunOnHardware
-<https://w3id.org/dpv#isRunOnHardware> rdf:type owl:ObjectProperty ;
-                                       rdfs:domain airo:AISystem ;
-                                       rdfs:range <https://w3id.org/dpv#HardwarePlatform> ;
-                                       rdfs:comment "Indicates the hardware on which the system is run." ;
-                                       rdfs:label "is run on hardware" .
 
 
 #################################################################
@@ -778,6 +786,13 @@ airo:GPAIModel rdf:type owl:Class ;
                rdfs:label "General Purpose AI Model"@en .
 
 
+###  https://w3id.org/airo#HardwarePlatform
+airo:HardwarePlatform rdf:type owl:Class ;
+                      rdfs:subClassOf airo:Entity ;
+                      rdfs:comment "The hardware on which the system is run." ;
+                      rdfs:label "Hardware Platform" .
+
+
 ###  https://w3id.org/airo#Hazard
 airo:Hazard rdf:type owl:Class ;
             rdfs:subClassOf airo:RiskSource ;
@@ -931,13 +946,6 @@ airo:Vulnerability rdf:type owl:Class ;
 
 ###  https://w3id.org/dpv#DataSubject
 <https://w3id.org/dpv#DataSubject> rdf:type owl:Class .
-
-
-###  https://w3id.org/dpv#HardwarePlatform
-<https://w3id.org/dpv#HardwarePlatform> rdf:type owl:Class ;
-                                        rdfs:subClassOf airo:Entity ;
-                                        rdfs:comment "The hardware on which the system is run." ;
-                                        rdfs:label "Hardware Platform" .
 
 
 ###  https://w3id.org/dpv#LegalBasis
