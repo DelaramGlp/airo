@@ -4,7 +4,6 @@
 @prefix freq: <http://purl.org/cld/freq/> .
 @prefix airo: <https://w3id.org/airo#> .
 @prefix vair: <https://w3id.org/vair#> .
-@prefix vair: <https://w3id.org/vair#> .
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix dcat: <https://www.w3.org/TR/vocab-dcat-3/> .

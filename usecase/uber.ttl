@@ -1,4 +1,3 @@
-
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -6,48 +5,48 @@
 @prefix airo: <https://w3id.org/AIRO#> .
 @prefix vair: <https://w3id.org/vair#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ex: <https://example.com/uber#> .
+@prefix ex_uber: <https://example.com/uber#> .
 @base <https://example.com/uber#> .
 
-ex:rtid_system a airo:AISystem ;
-    airo:isDeployedBy ex:Uber ;
-    airo:isProvidedBy ex:Uber ;
-    airo:isDevelopedBy ex:Uber ;
+ex_uber:rtid_system a airo:AISystem ;
+    airo:isDeployedBy ex_uber:Uber ;
+    airo:isProvidedBy ex_uber:Uber ;
+    airo:isDevelopedBy ex_uber:Uber ;
     airo:isAppliedWithinDomain vair:Employment ;
     airo:hasCapability vair:BiometricIdentification ;
     airo:usesTechnique vair:MachineLearning ;
-    airo:producesOutput ex:decision_about_drivers_access_to_work ;
-    airo:hasAISubject ex:uber_driver ;
-    airo:hasAIUser ex:uber_driver ;
-    airo:hasComponent ex:Microsoft_face_api ;
-    airo:hasPurpose ex:decide_on_contract_termination, ex:driver_account_verification ;
-    airo:hasRisk ex:inaccuracy_in_identifying_minorities .
+    airo:producesOutput ex_uber:decision_about_drivers_access_to_work ;
+    airo:hasAISubject ex_uber:uber_driver ;
+    airo:hasAIUser ex_uber:uber_driver ;
+    airo:hasComponent ex_uber:Microsoft_face_api ;
+    airo:hasPurpose ex_uber:decide_on_contract_termination, ex_uber:driver_account_verification ;
+    airo:hasRisk ex_uber:inaccuracy_in_identifying_minorities .
 
 
-ex:uber_driver a airo:Stakeholder .
+ex_uber:uber_driver a airo:Stakeholder .
 
-ex:Microsoft_face_api a airo:AIComponent , vair:API .
+ex_uber:Microsoft_face_api a airo:AIComponent , vair:API .
 
-ex:decide_on_contract_termination a vair:MakingContractTerminationDecision .
+ex_uber:decide_on_contract_termination a vair:MakingContractTerminationDecision .
 
-ex:driver_account_verification  a vair:Assessment .
+ex_uber:driver_account_verification  a vair:Assessment .
 
-ex:inaccuracy_in_identifying_minorities  a airo:Risk ;
-                                         airo:hasConsequence ex:failure_in_identifaction_of_drivers .
+ex_uber:inaccuracy_in_identifying_minorities  a airo:Risk ;
+                                         airo:hasConsequence ex_uber:failure_in_identifaction_of_drivers .
 
-ex:failure_in_identifaction a airo:Consequence ;
-                            airo:hasImpact ex:unfair_dismissal_of_drivers .
+ex_uber:failure_in_identifaction a airo:Consequence ;
+                            airo:hasImpact ex_uber:unfair_dismissal_of_drivers .
 
-ex:unfair_dismissal_of_drivers a airo:Impact ;
-                                airo:hasImpactOnArea ex:RightToNondiscrimination ;
-                                airo:hasImpactOnStakeholder ex:drivers_of_vulnerable_groups, ex:drivers_of_minorities .                            
+ex_uber:unfair_dismissal_of_drivers a airo:Impact ;
+                                airo:hasImpactOnArea ex_uber:RightToNondiscrimination ;
+                                airo:hasImpactOnStakeholder ex_uber:drivers_of_vulnerable_groups, ex_uber:drivers_of_minorities .                            
 
-ex:bias_in_training a airo:RiskSource ;
-                 airo:isRiskSourceFor  ex:inaccuracy_in_identifying_minorities .                                      
+ex_uber:bias_in_training a airo:RiskSource ;
+                 airo:isRiskSourceFor  ex_uber:inaccuracy_in_identifying_minorities .                                      
 
 
-ex:manual_human_review airo:mitigatesEvent ex:unfair_dismissal_of_drivers .
+ex_uber:manual_human_review airo:mitigatesEvent ex_uber:unfair_dismissal_of_drivers .
 
-ex:drivers_of_vulnerable_groups a ex:uber_driver .
+ex_uber:drivers_of_vulnerable_groups a ex_uber:uber_driver .
 
-ex:drivers_of_minorities a  ex:uber_driver .
+ex_uber:drivers_of_minorities a  ex_uber:uber_driver .
