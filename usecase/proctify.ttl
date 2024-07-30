@@ -30,8 +30,8 @@ ex:proctify
                     ex:video_analysis ;
     airo:hasCapability ex:facial_recognition ;
     airo:isDeployedBy ex:university ;
-    airo:hasUseInstruction <http://tinyurl.com/462b9jyv> ;
-    airo:hasDeploymentInstruction <http://tinyurl.com/4s67jfss> ;
+    #airo:hasUseInstruction <http://tinyurl.com/462b9jyv> ;
+    #airo:hasDeploymentInstruction <http://tinyurl.com/4s67jfss> ;
     airo:hasAutomationLevel vair:PartialAutomation ;
     airo:hasAISubject ex:student,
                       ex:other_occupant ;
