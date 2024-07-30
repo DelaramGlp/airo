@@ -9,16 +9,16 @@
 @base <https://example.com/uber#> .
 
 ex_uber:rtid_system a airo:AISystem ;
-    airo:isDeployedBy ex_uber:Uber ;
-    airo:isProvidedBy ex_uber:Uber ;
-    airo:isDevelopedBy ex_uber:Uber ;
+    airo:isDeployedBy ex_uber:uber ;
+    airo:isProvidedBy ex_uber:uber ;
+    airo:isDevelopedBy ex_uber:uber ;
     airo:isAppliedWithinDomain vair:Employment ;
     airo:hasCapability vair:BiometricIdentification ;
     airo:usesTechnique vair:MachineLearning ;
     airo:producesOutput ex_uber:decision_about_drivers_access_to_work ;
     airo:hasAISubject ex_uber:uber_driver ;
     airo:hasAIUser ex_uber:uber_driver ;
-    airo:hasComponent ex_uber:Microsoft_face_api ;
+    airo:hasComponent ex_uber:microsoft_face_api ;
     airo:hasPurpose ex_uber:decide_on_contract_termination, ex_uber:driver_account_verification ;
     airo:hasRisk ex_uber:inaccuracy_in_identifying_minorities .
 
@@ -41,7 +41,7 @@ ex_uber:unfair_dismissal_of_drivers a airo:Impact ;
                                 airo:hasImpactOnArea ex_uber:RightToNondiscrimination ;
                                 airo:hasImpactOnStakeholder ex_uber:drivers_of_vulnerable_groups, ex_uber:drivers_of_minorities .                            
 
-ex_uber:bias_in_training a airo:RiskSource ;
+ex_uber:bias_in_training_data a airo:RiskSource ;
                  airo:isRiskSourceFor  ex_uber:inaccuracy_in_identifying_minorities .                                      
 
 
@@ -50,3 +50,5 @@ ex_uber:manual_human_review airo:mitigatesEvent ex_uber:unfair_dismissal_of_driv
 ex_uber:drivers_of_vulnerable_groups a ex_uber:uber_driver .
 
 ex_uber:drivers_of_minorities a  ex_uber:uber_driver .
+
+ex_uber:decision_about_drivers_access_to_work a vair:Decision .
