@@ -38,8 +38,8 @@ ex_uber:failure_in_identifaction a airo:Consequence ;
                             airo:hasImpact ex_uber:unfair_dismissal_of_drivers .
 
 ex_uber:unfair_dismissal_of_drivers a airo:Impact ;
-                                airo:hasImpactOnArea ex_uber:RightToNondiscrimination ;
-                                airo:hasImpactOnStakeholder ex_uber:drivers_of_vulnerable_groups, ex_uber:drivers_of_minorities .                            
+                                airo:hasImpactOnArea vair:RightToNondiscrimination ;
+                                airo:hasImpactOnStakeholder ex_uber:uber_driver .                            
 
 ex_uber:bias_in_training_data a airo:RiskSource ;
                  airo:isRiskSourceFor  ex_uber:inaccuracy_in_identifying_minorities .                                      
@@ -47,8 +47,5 @@ ex_uber:bias_in_training_data a airo:RiskSource ;
 
 ex_uber:manual_human_review airo:mitigatesEvent ex_uber:unfair_dismissal_of_drivers .
 
-ex_uber:drivers_of_vulnerable_groups a ex_uber:uber_driver .
-
-ex_uber:drivers_of_minorities a  ex_uber:uber_driver .
 
 ex_uber:decision_about_drivers_access_to_work a vair:Decision .

@@ -19,6 +19,8 @@ ex_viogen:viogen a airo:AISystem ;
     airo:hasAISubject ex_viogen:victim_of_gender_violance ;
     airo:hasAIUser ex_viogen:officer ;
     airo:hasPurpose ex_viogen:assessing_risk_of_gender_violence_recidivism, ex_viogen:determining_access_to_police_protection ;
+    airo:isUsedWithinLocality ex_viogen:spain ;
+    airo:hasModality vair:Software ;
     airo:hasRisk ex_viogen:inaccurate_predication, ex_viogen:automation_bias .
 
 
@@ -30,7 +32,7 @@ ex_viogen:assessing_risk_of_gender_violence_recidivism a vair:IndividualRiskAsse
 
 ex_viogen:inaccurate_predication a airo:Risk ;
                                 airo:hasConsequence ex_viogen:person_at_risk_remain_unprotected ;
-                                airo:mitigatesEvent ex_viogen:manual_modificatio_of_risk_score .
+                                airo:mitigatesEvent ex_viogen:manual_modification_of_risk_score .
 
 ex_viogen:poor_quality_of_input_data   a airo:RiskSource ;
                                         airo:isRiskSourceFor  ex_viogen:inaccurate_predication ;
