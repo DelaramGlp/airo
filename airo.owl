@@ -285,8 +285,15 @@ airo:hasImpactOnArea rdf:type owl:ObjectProperty ;
                      rdfs:label "has impact on area"@en .
 
 
+###  https://w3id.org/airo#hasImpactOnEntity
+airo:hasImpactOnEntity rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Indicates entities, e.g. environment, impacted by AI systems."@en ;
+                       rdfs:label "has impact on entity"@en .
+
+
 ###  https://w3id.org/airo#hasImpactOnStakeholder
 airo:hasImpactOnStakeholder rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf airo:hasImpactOnEntity ;
                             rdfs:domain airo:Impact ;
                             rdfs:range airo:Stakeholder ;
                             rdfs:comment "Indicates the people that are negatively impacted by an AI system or component."@en ;
