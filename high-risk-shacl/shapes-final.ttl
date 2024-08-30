@@ -760,7 +760,7 @@ ex:AnnexIII-5d-a
                         sh:class vair:FireBrigade ;
                     ]
                     [
-                        sh:class vair:MedicalAid ;
+                        sh:class vair:MedicalAidProvider ;
                     ]
                    
                     )
