@@ -94,10 +94,10 @@ ex:AnnexIII-1b
                     sh:path airo:hasCapability ;
                     sh:or (
                         [
-                            sh:class vair:EmotionSensing ;
+                            sh:class vair:EmotionRecognition ;
                         ]
                          [
-                            sh:class vair:BiometricsBasedEmotionSensing ;
+                            sh:class vair:BiometricsBasedEmotionRecognition ;
                         ]
 
                     )    
