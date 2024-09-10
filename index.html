@@ -115,7 +115,7 @@
 
 <body>   
     <section id="abstract">    
-        <p>AIRO (AI Risk Ontology) is an ontology for expressing risk of AI systems based on the requirements of the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206"> proposed AI Act </a> and ISO 31000 series of standards.
+        <p>AIRO (AI Risk Ontology) is an ontology for expressing risk of AI systems based on the requirements of the <a href="http://data.europa.eu/eli/reg/2024/1689/oj"> AI Act</a>, ISO/IEC 23894 on AI risk management and and ISO 31000 series of standards.
             AIRO assists stakeholders in determining "high-risk" AI systems, maintaining and documenting risk information, performing impact assessments, and achieving conformity with AI regulations.</p>
     </section>
 
@@ -151,7 +151,7 @@ AI risk management that can both import and export information meant to be share
 stakeholders - such as AI users, providers, and authorities.</p>
 
         <b>AIRO</b> is an ontology for expressing risk of harm associated
-with AI systems based on the proposed EU AI Act and the key standards in the ISO 31000 series including
+with AI systems based on the EU AI Act and the key standards in the ISO 31000 series including
 <a href="https://www.iso.org/standard/65694.html">31000:2018 Risk management – Guidelines </a> and
 <a href="https://www.iso.org/standard/79637.html">ISO 31073:2022 Risk management — Vocabulary</a>.
 AIRO assists with expressing risk of AI systems as per the requirements of the AI Act,
@@ -228,8 +228,8 @@ technologies.
         
  If an AI system meets at least one of the conditions, it is considered as high-risk unless (i) its provider demonstrates that ``the output of the system purely accessory in respect of the relevant action or decision to be taken and is not therefore likely to lead to a significant risk to the health, safety or fundamental rights.'' (Art. 6 (3)), or (ii) it is put into service by a small-scale provider in the public or private sector for their own use to assess creditworthiness, determine credit score, health/life insurance risk assessment, or health/life insurance pricing (Annex III, pt. 5(a) and 5(b)).  
 <center>
-     <img src="https://raw.githubusercontent.com/DelaramGlp/airo/main/figures/annexIII-czversion-updated-24april.png"  alt="annex III combinations" width="700" >
-     <figcaption style="font-size: 15px;">Figure 2: Describing Annex III high-risk conditions using the 5 concepts</figcaption>
+     <img src="https://github.com/DelaramGlp/airo/blob/main/figures/annexIII_final.jpg?raw=true"  alt="annex III combinations" width="700" >
+     <figcaption style="font-size: 15px;">Figure 2: Describing Annex III high-risk conditions using the 5 concepts as per the final version of the AI Act</figcaption>
   </center>        
 
     <!---
@@ -584,7 +584,7 @@ concepts and relations as presented in Table 2.</p>
 
 
   <center>
-     <img src="https://raw.githubusercontent.com/DelaramGlp/AIRO/main/figures/airo-concepts-3april.jpeg"  alt="AIRO concepts" width="800" >
+     <img src="https://github.com/DelaramGlp/airo/blob/main/figures/airo_v1.png?raw=true"  alt="AIRO concepts" width="800" >
      <figcaption style="font-size: 15px;">Figure 3: AIRO core concepts and relations</figcaption>
   </center>
         </section>
@@ -667,7 +667,7 @@ concepts and relations as presented in Table 2.</p>
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Refers to domain, sector, or industry</td>
+          <td> An area, sector, or industry that is associated with economic activities.</td>
         </tr>
       </tbody>
     </table>
@@ -749,7 +749,7 @@ concepts and relations as presented in Table 2.</p>
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Approach or technique used in development of an AI system </td>
+          <td> Approaches or techniques used in development of a system. </td>
         </tr>
       </tbody>
     </table>
@@ -782,6 +782,36 @@ concepts and relations as presented in Table 2.</p>
     </section>
         
         <section>
+
+    <h2 id="Entity">
+            <bdi class="secno"> </bdi> Entity
+            <a class="self-link" aria-label="§" href="https://w3id.org/airo#Entity"></a>
+          </h2>
+          <table>
+            <tbody>
+              <tr>
+                <td style="width:12%"> IRI </td>
+                <td><code> https://w3id.org/airo#Entity </code></td>
+              <tr>
+                <td> Term </td>
+                <td>Entity </td>
+              </tr>
+              <tr>
+                <td> Label </td>
+                <td> Entity </td>
+              </tr>
+              <tr>
+                <td> Definition </td>
+                <td> Any concrete or abstract thing of interest.</td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td>ISO/IEC TR 24028:2022, 3.16</td>
+              </tr>
+            </tbody>
+          </table>
+      </section>       
+
     <h2 id="AIComponent">
       <bdi class="secno"> </bdi> AI Component
       <a class="self-link" aria-label="§" href="https://w3id.org/airo#AIComponent"></a>
@@ -832,9 +862,39 @@ concepts and relations as presented in Table 2.</p>
       </tbody>
     </table>
     </section>
+
+    <section>
+      <h2 id="AIQuality">
+        <bdi class="secno"> </bdi> AI Quality
+        <a class="self-link" aria-label="§" href="https://w3id.org/airo#AIQuality"></a>
+      </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td style="width:12%"> IRI </td>
+            <td><code> https://w3id.org/airo#AIQuality </code></td>
+          <tr>
+            <td> Term </td>
+            <td>AIQuality </td>
+          </tr>
+          <tr>
+            <td> Label </td>
+            <td> AI Quality</td>
+          </tr>
+          <tr>
+            <td> Definition </td>
+            <td> Refers to quality of an AI system or component. </td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
         
 
-         <section>
+      <section>
+
+               
+
+
     <h2 id="Event">
       <bdi class="secno"> </bdi> Event
       <a class="self-link" aria-label="§" href="https://w3id.org/airo#Event"></a>
@@ -1015,7 +1075,7 @@ concepts and relations as presented in Table 2.</p>
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Areas that can be affected by an AI system </td>
+          <td> Areas or aspects impacted by an AI system, e.g. physical health, right to privacy.</td>
         </tr>
       </tbody>
     </table>
@@ -1042,12 +1102,9 @@ concepts and relations as presented in Table 2.</p>
         </tr>
         <tr>
           <td> Definition </td>
-          <td> A measure that maintains and/or modifies risk </td>
+          <td> A measure that detects, mitigates, or eliminates an event. </td>
         </tr>
-        <tr>
-            <td>Source</td>
-            <td> ISO 31000, 3.8</td>
-        </tr>
+
       </tbody>
     </table>
     </section>
@@ -1413,7 +1470,35 @@ concepts and relations as presented in Table 2.</p>
 
       </tbody>
     </table>
-    </section>     
+    </section>  
+    
+    
+    <section>
+      <h2 id="AutomationLevel">
+    <bdi class="secno"> </bdi> Automation Level
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#AutomationLevel"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:12%"> IRI </td>
+        <td><code> https://w3id.org/airo#AutomationLevel</code></td>
+      <tr>
+        <td> Term </td>
+        <td> AutomationLevel </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td> AutomationLevel </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Refers to the degree of automation under which an AI system operates.</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </section>
            
          
         </section> <!--- classes-->
