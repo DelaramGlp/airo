@@ -58,6 +58,8 @@ ex:facial_analysis_toolkit
                     ex:extracting_head_pose ;
     airo:hasDocumentation <http://tinyurl.com/3wnyxyun> .
 
+ex:AIEdux  a airo:AIProvider .
+
 ex:susbehaved_model
     a airo:AIModel ;
     airo:hasVersion ex:v_1.1.2 ;
