@@ -36,7 +36,7 @@ ex:proctify
                       ex:other_occupant ;
     airo:hasAIUser ex:instructor ;
     airo:hasRisk ex:inaccuracy_risk_for_darker_skin ;
-    airo:hasControl ex:bias_testing ;
+    airo:hasRiskControl ex:bias_testing ;
     dqv:hasQualityMeasurement ex:alarm_precision_measurement, ex:alarm_recall_measurement, ex:alarm_f_score_measurement   ;
     airo:hasPreDeterminedChange ex:change_of_model ;
     airo:compliesWithRegulation  ex:EU_GDPR ,
@@ -110,8 +110,8 @@ ex:unrepresentative_dataset
     airo:hasLikelihood "Medium" .
 
 ex:testing_dataset_for_representativeness
-    a airo:Control ;
-    airo:modifiesEvent ex:unrepresentative_dataset .
+    a airo:RiskControl ;
+    airo:modifiesRiskConcept ex:unrepresentative_dataset .
 
 ex:raise_of_false_alarms_for_darker_skin
     a airo:Consequence ;
@@ -127,8 +127,8 @@ ex:bias_against_students_with_darker_skin
     airo:hasSeverity "Very_High" .
 
 ex:bias_testing
-    a airo:Control , vair:TestingMeasure ;
-    airo:eliminatesEvent ex:bias_against_students_with_darker_skin .
+    a airo:RiskControl , vair:TestingMeasure ;
+    airo:eliminatesRiskConcept ex:bias_against_students_with_darker_skin .
 
 
 ex:alarm_precision_measurement
