@@ -142,22 +142,30 @@ airo:conformsToStandard rdf:type owl:ObjectProperty ;
                         rdfs:label "conforms to standard"@en .
 
 
-###  https://w3id.org/airo#detectsEvent
-airo:detectsEvent rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf airo:modifiesEvent ;
-                  rdfs:domain airo:Control ;
-                  rdfs:range airo:Event ;
-                  rdfs:comment "Indicates the control used for detecting an event."@en ;
-                  rdfs:label "detects event"@en .
+###  https://w3id.org/airo#containsData
+airo:containsData rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://www.w3.org/TR/vocab-dcat-3/Dataset> ;
+                  rdfs:range <https://w3id.org/dpv#Data> ;
+                  rdfs:comment "Indicates the data included in a dataset"@en ;
+                  rdfs:label "contains data"@en .
 
 
-###  https://w3id.org/airo#eliminatesEvent
-airo:eliminatesEvent rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf airo:modifiesEvent ;
-                     rdfs:domain airo:Control ;
-                     rdfs:range airo:Event ;
-                     rdfs:comment "Indicates the control used for eliminating an event."@en ;
-                     rdfs:label "eliminates event"@en .
+###  https://w3id.org/airo#detectsRiskConcept
+airo:detectsRiskConcept rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf airo:modifiesRiskConcept ;
+                        rdfs:domain airo:RiskControl ;
+                        rdfs:range airo:RiskConcept ;
+                        rdfs:comment "Indicates the control used for detecting risks, risk sources, consequences, and impacts.."@en ;
+                        rdfs:label "detects risk concept"@en .
+
+
+###  https://w3id.org/airo#eliminatesRiskConcept
+airo:eliminatesRiskConcept rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf airo:modifiesRiskConcept ;
+                           rdfs:domain airo:RiskControl ;
+                           rdfs:range airo:RiskConcept ;
+                           rdfs:comment "Indicates the control used for eliminating  risks, risk sources, consequences, and impacts.."@en ;
+                           rdfs:label "eliminates risk concept"@en .
 
 
 ###  https://w3id.org/airo#exploitsVulnerability
@@ -231,13 +239,6 @@ airo:hasConsequence rdf:type owl:ObjectProperty ;
                     rdfs:label "has consequence" .
 
 
-###  https://w3id.org/airo#hasControl
-airo:hasControl rdf:type owl:ObjectProperty ;
-                rdfs:range airo:Control ;
-                rdfs:comment "Indicates the controls associated with a system or component."@en ;
-                rdfs:label "has control"@en .
-
-
 ###  https://w3id.org/airo#hasControlOverAIOutput
 airo:hasControlOverAIOutput rdf:type owl:ObjectProperty ;
                             rdfs:domain airo:Stakeholder ;
@@ -255,7 +256,7 @@ airo:hasDocumentation rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasFrequency
 airo:hasFrequency rdf:type owl:ObjectProperty ;
-                  rdfs:domain airo:Event ;
+                  rdfs:domain airo:RiskConcept ;
                   rdfs:range airo:Frequency ;
                   rdfs:comment "Indicates frequency of an event."@en ;
                   rdfs:label "has frequency"@en .
@@ -329,7 +330,7 @@ airo:hasLifecyclePhase rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#hasLikelihood
 airo:hasLikelihood rdf:type owl:ObjectProperty ;
-                   rdfs:domain airo:Event ;
+                   rdfs:domain airo:RiskConcept ;
                    rdfs:range airo:Likelihood ;
                    rdfs:comment "Indicates the probability of occurrence of an event."@en ;
                    rdfs:label "has likelihood"@en .
@@ -376,11 +377,26 @@ airo:hasQuality rdf:type owl:ObjectProperty ;
                 rdfs:label "has quality"@en .
 
 
+###  https://w3id.org/airo#hasResidualRisk
+airo:hasResidualRisk rdf:type owl:ObjectProperty ;
+                     rdfs:domain airo:Risk ;
+                     rdfs:range airo:Risk ;
+                     rdfs:comment "Indicates the residual risk"@en ,
+                                  "has residual risk"@en .
+
+
 ###  https://w3id.org/airo#hasRisk
 airo:hasRisk rdf:type owl:ObjectProperty ;
              rdfs:range airo:Risk ;
              rdfs:comment "Indicates risks associated with an AI system, an AI component, etc."@en ;
              rdfs:label "has risk"@en .
+
+
+###  https://w3id.org/airo#hasRiskControl
+airo:hasRiskControl rdf:type owl:ObjectProperty ;
+                    rdfs:range airo:RiskControl ;
+                    rdfs:comment "Indicates the control measures associated with a system or component to modify risks."@en ;
+                    rdfs:label "has risk control"@en .
 
 
 ###  https://w3id.org/airo#hasSeverity
@@ -475,16 +491,16 @@ airo:isDevelopedBy rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/airo#isFollowedByControl
 airo:isFollowedByControl rdf:type owl:ObjectProperty ;
-                         rdfs:domain airo:Control ;
-                         rdfs:range airo:Control ;
+                         rdfs:domain airo:RiskControl ;
+                         rdfs:range airo:RiskControl ;
                          rdfs:comment "Specifies the order of controls."@en ;
                          rdfs:label "is followed by control"@en .
 
 
 ###  https://w3id.org/airo#isPartOfControl
 airo:isPartOfControl rdf:type owl:ObjectProperty ;
-                     rdfs:domain airo:Control ;
-                     rdfs:range airo:Control ;
+                     rdfs:domain airo:RiskControl ;
+                     rdfs:range airo:RiskControl ;
                      rdfs:comment "Specifies composition of controls"@en ;
                      rdfs:label "is part of control"@en .
 
@@ -530,21 +546,21 @@ airo:isUsedWithinLocality rdf:type owl:ObjectProperty ;
                           rdfs:label "is used within locality"@en .
 
 
-###  https://w3id.org/airo#mitigatesEvent
-airo:mitigatesEvent rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf airo:modifiesEvent ;
-                    rdfs:domain airo:Control ;
-                    rdfs:range airo:Event ;
-                    rdfs:comment "Indicates the control used for mitigating an event."@en ;
-                    rdfs:label "mitigates event"@en .
+###  https://w3id.org/airo#mitigatesRiskConcept
+airo:mitigatesRiskConcept rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf airo:modifiesRiskConcept ;
+                          rdfs:domain airo:RiskControl ;
+                          rdfs:range airo:RiskConcept ;
+                          rdfs:comment "Indicates the control used for mitigating  risks, risk sources, consequences, and impacts.."@en ;
+                          rdfs:label "mitigates risk concept"@en .
 
 
-###  https://w3id.org/airo#modifiesEvent
-airo:modifiesEvent rdf:type owl:ObjectProperty ;
-                   rdfs:domain airo:Control ;
-                   rdfs:range airo:Event ;
-                   rdfs:comment "Indicates the control employed to modify an event."@en ;
-                   rdfs:label "modifies event"@en .
+###  https://w3id.org/airo#modifiesRiskConcept
+airo:modifiesRiskConcept rdf:type owl:ObjectProperty ;
+                         rdfs:domain airo:RiskControl ;
+                         rdfs:range airo:RiskConcept ;
+                         rdfs:comment "Indicates the control employed to modify risks, risk sources, consequences, and impacts."@en ;
+                         rdfs:label "modifies risk concept"@en .
 
 
 ###  https://w3id.org/airo#producesOutput
@@ -698,7 +714,7 @@ airo:AISystem rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#AITechnique
 airo:AITechnique rdf:type owl:Class ;
-                 rdfs:comment "Computer science approaches and techniques used in development of a system."@en ;
+                 rdfs:comment "Approaches or techniques used in development of a system."@en ;
                  rdfs:label "AI Technique"@en .
 
 
@@ -724,7 +740,6 @@ airo:AutomationLevel rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Change
 airo:Change rdf:type owl:Class ;
-            rdfs:subClassOf airo:Event ;
             rdfs:comment "An alternation in an entity."@en ;
             rdfs:label "Change"@en .
 
@@ -738,17 +753,11 @@ airo:CodeOfConduct rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Consequence
 airo:Consequence rdf:type owl:Class ;
-                 rdfs:subClassOf airo:Event ;
+                 rdfs:subClassOf airo:RiskConcept ;
                  terms:source "ISO 31000, 3.6 [with modifications]"@en ,
                               "ISO 31073:2022, 3.3.18 [with modifications]"@en ;
                  rdfs:comment "Direct outcome of risk affecting objectives."@en ;
                  rdfs:label "Consequence"@en .
-
-
-###  https://w3id.org/airo#Control
-airo:Control rdf:type owl:Class ;
-             rdfs:comment "A measure that detects, mitigates, or eliminates an event."@en ;
-             rdfs:label "Control"@en .
 
 
 ###  https://w3id.org/airo#Documentation
@@ -769,13 +778,6 @@ airo:Entity rdf:type owl:Class ;
             terms:source "ISO/IEC TR 24028:2022, 3.16"@en ;
             rdfs:comment "Any concrete or abstract thing of interest."@en ;
             rdfs:label "Entity"@en .
-
-
-###  https://w3id.org/airo#Event
-airo:Event rdf:type owl:Class ;
-           terms:source "ISO 31073:2022, 3.3.11"@en ;
-           rdfs:comment "Occurrence or change of a particular set of circumstances."@en ;
-           rdfs:label "Event"@en .
 
 
 ###  https://w3id.org/airo#Frequency
@@ -888,14 +890,27 @@ airo:Regulation rdf:type owl:Class ;
 
 ###  https://w3id.org/airo#Risk
 airo:Risk rdf:type owl:Class ;
-          rdfs:subClassOf airo:Event ;
+          rdfs:subClassOf airo:RiskConcept ;
           rdfs:comment "An uncertain event, associated with an AI system, that has the potential to lead to harm to key areas of concerns including health, safety, and fundamental rights."@en ;
           rdfs:label "Risk"@en .
 
 
+###  https://w3id.org/airo#RiskConcept
+airo:RiskConcept rdf:type owl:Class ;
+                 rdfs:comment "An umbrella term for refering to risk, risk source, consequence and impact."@en ;
+                 rdfs:label "Risk Concept"@en .
+
+
+###  https://w3id.org/airo#RiskControl
+airo:RiskControl rdf:type owl:Class ;
+                 terms:source "ISO/IEC 31073, 3.3.33 (with expansion of scope)" ;
+                 rdfs:comment "A measure that maintains and/or modifies risk (and risk concepts)."@en ;
+                 rdfs:label "Risk Control"@en .
+
+
 ###  https://w3id.org/airo#RiskSource
 airo:RiskSource rdf:type owl:Class ;
-                rdfs:subClassOf airo:Event ;
+                rdfs:subClassOf airo:RiskConcept ;
                 rdfs:comment "An event that has the potential to give rise to risk."@en ;
                 rdfs:label "Risk Source"@en .
 
@@ -964,7 +979,8 @@ airo:Vulnerability rdf:type owl:Class ;
 
 
 ###  https://w3id.org/dpv#SensitiveData
-<https://w3id.org/dpv#SensitiveData> rdf:type owl:Class .
+<https://w3id.org/dpv#SensitiveData> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/dpv#Data> .
 
 
 ###  https://www.w3.org/TR/vocab-dcat-3/Dataset
