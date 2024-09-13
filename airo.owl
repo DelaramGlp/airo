@@ -642,7 +642,7 @@ airo:AIDeployer rdf:type owl:Class ;
 airo:AIDeveloper rdf:type owl:Class ;
                  rdfs:subClassOf airo:Stakeholder ;
                  terms:source "ISO/IEC 22989, 5.19.3.2"@en ;
-                 rdfs:comment "An organization or entity that is concerned with the development of AI services and products."@en ;
+                 rdfs:comment "An organisation or entity that is concerned with the development of AI services and products."@en ;
                  rdfs:label "AI Developer"@en .
 
 
