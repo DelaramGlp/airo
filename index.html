@@ -1893,7 +1893,7 @@ technologies.
   <!-- ********************** Properties **********************  -->  
       
         
-        <section id="properties"><h3>Properties</h3>
+  <section id="properties"><h3>Properties</h3>
             
     <section>   
     <h2 id="isAppliedWithinDomain">
@@ -1919,7 +1919,7 @@ technologies.
         </tr>
         <tr>
           <td>Domain</td>
-          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a>, <a href="https://w3id.org/airo#AIComponent">airo:AIComponent</a></td>
         </tr>
          <tr>
           <td>Range</td>
@@ -1942,6 +1942,7 @@ technologies.
         <tr>
           <td style="width:20%"> IRI </td>
           <td><code> https://w3id.org/airo#hasPurpose </code></td>
+          </tr>
         <tr>
           <td> Term </td>
           <td>hasPurpose </td>
@@ -1952,12 +1953,9 @@ technologies.
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Indicates the intended purpose of an AI system</td>
+          <td> Indicates the purpose of an entity, e.g. AI system, components.</td>
         </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
-        </tr>
+
          <tr>
           <td>Range</td>
           <td><a href="https://w3id.org/airo#Purpose">airo:Purpose</a></td>
@@ -1966,6 +1964,41 @@ technologies.
       </tbody>
     </table>
                 </section>
+
+    <section>
+                  <h2 id="hasAISubject">
+                <bdi class="secno"> </bdi> has AI subject
+                <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasAISubject"></a>
+              </h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <td style="width:20%"> IRI </td>
+                    <td><code> https://w3id.org/airo#hasAISubject</code></td>
+                  <tr>
+                    <td> Term </td>
+                    <td> hasAISubject </td>
+                  </tr>
+                  <tr>
+                    <td> Label </td>
+                    <td> has AI subject</td>
+                  </tr>
+                  <tr>
+                    <td> Definition </td>
+                    <td> Indicates the subjects of an AI system </td>
+                  </tr>
+                  <tr>
+                   <tr>
+                       <td>Domain</td>
+                       <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+                   </tr> 
+                   <tr>
+                    <td>Range</td>
+                    <td><a href="https://w3id.org/airo#AISubject">airo:AISubject</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              </section>            
             
     <section>   
     <h2 id="hasCapability">
@@ -1977,6 +2010,7 @@ technologies.
         <tr>
           <td style="width:20%"> IRI </td>
           <td><code> https://w3id.org/airo#hasCapability </code></td>
+        </tr>  
         <tr>
           <td> Term </td>
           <td>hasCapability </td>
@@ -1987,20 +2021,21 @@ technologies.
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Specifies capabilities implemented within an AI system to materialise its purposes </td>
+          <td> Specifies capabilities implemented within an AI system to materialise its purposes. </td>
         </tr>
         <tr>
           <td>Domain</td>
-          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a>, <a href="https://w3id.org/airo#AIComponent">airo:AIComponent</a> </td>
         </tr>
          <tr>
           <td>Range</td>
-          <td><a href="https://w3id.org/airo#Capability">airo:Capabiliy</a></td>
+          <td><a href="https://w3id.org/airo#AICapability">airo:AICapabiliy</a></td>
         </tr>
           
       </tbody>
     </table>
-                </section>   
+                </section>  
+
             
     <section>   
     <h2 id="usesTechnique">
@@ -2081,6 +2116,7 @@ technologies.
         <tr>
           <td style="width:20%"> IRI </td>
           <td><code> https://w3id.org/airo#hasComponent </code></td>
+        </tr>  
         <tr>
           <td> Term </td>
           <td> hasComponent </td>
@@ -2091,12 +2127,9 @@ technologies.
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Indicates components of an AI system </td>
+          <td> Indicates a component incorporating an AI system or another component. </td>
         </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
-        </tr>
+        
          <tr>
           <td>Range</td>
           <td><a href="https://w3id.org/airo#AIComponent">airo:AIComponent</a></td>
@@ -2104,514 +2137,192 @@ technologies.
           
       </tbody>
     </table>
-                </section> 
-            
-           <section> 
-          <h2 id="hasRisk">
-      <bdi class="secno"> </bdi> has risk
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasRisk"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasRisk </code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasRisk </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has risk </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates risks associated with an AI system, an AI component, etc.</td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
-        </tr>
+     </section> 
+
+     <section>   
+      <h2 id="hasModel">
+        <bdi class="secno"> </bdi> has model
+        <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasModel"></a>
+      </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td style="width:20%"> IRI </td>
+            <td><code> https://w3id.org/airo#hasModel </code></td>
+          </tr>  
+          <tr>
+            <td> Term </td>
+            <td> hasModel </td>
+          </tr>
+          <tr>
+            <td> Label </td>
+            <td> has model </td>
+          </tr>
+          <tr>
+            <td> Definition </td>
+            <td> Indicates machine learning models used with a system or component. </td>
+          </tr>
           
-      </tbody>
-    </table>
-                </section>   
-        
-         <section>           
-    <h2 id="isRiskSourceFor">
-      <bdi class="secno"> </bdi> is risk source for
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#isRiskSourceFor"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#isRiskSourceFor </code></td>
-        <tr>
-          <td> Term </td>
-          <td> isRiskSourceFor </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> is risk source for </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Specifies risks caused by materialisation of a risk source </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#RiskSource">airo:RiskSource</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
-        </tr>
+           <tr>
+            <td>Range</td>
+            <td><a href="https://w3id.org/airo#AIModel">airo:AIModel</a></td>
+          </tr>
           
-      </tbody>
-    </table>
-                </section> 
-    
-            <section>           
-    <h2 id="hasConsequence">
-      <bdi class="secno"> </bdi> has consequence
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasConsequence"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasConsequence </code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasConsequence </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has consequence </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Specifies consequences caused by materialisation of a risk </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-                </section> 
+          <tr></tr>
+            <td>SubPropertyOf</td>
+            <td><a href="https://w3id.org/airo#hasAIComponent">airo:hasAIComponent</a></td>
+          </tr>
+        </tbody>
+      </table>
+       </section> 
+
+       <section>   
+        <h2 id="hasTrainingData">
+          <bdi class="secno"> </bdi> has training data
+          <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasTrainingData"></a>
+        </h2>
+        <table>
+          <tbody>
+            <tr>
+              <td style="width:20%"> IRI </td>
+              <td><code> https://w3id.org/airo#hasTrainingData </code></td>
+            </tr>  
+            <tr>
+              <td> Term </td>
+              <td> hasTrainingData </td>
+            </tr>
+            <tr>
+              <td> Label </td>
+              <td> has training data </td>
+            </tr>
+            <tr>
+              <td> Definition </td>
+              <td> Indicates datasets used in training. </td>
+            </tr>
             
-        <section>           
-    <h2 id="hasImpact">
-      <bdi class="secno"> </bdi> has impact
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpact"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasImpact </code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasImpact </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has impact </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Specifies impacts caused by materialisation of a consequence </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-                </section> 
+             <tr>
+              <td>Range</td>
+              <td><a href="https://w3id.org/airo#Data">airo:Data</a></td>
+            </tr>
             
-            
-            <section>           
-    <h2 id="hasImpactOnArea">
-      <bdi class="secno"> </bdi> has impact on area
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpactOnArea"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasImpactOnArea</code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasImpactOnArea </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has impact on area </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Specifies the area that is affected by an AI impact </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#AreaOfImpact">airo:AreaOfImpact</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-                </section>
-    
-     <section>           
-    <h2 id="hasImpactOnStakeholder">
-      <bdi class="secno"> </bdi> has impact on stakeholder
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpactOnStakeholder"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasImpactOnStakeholder</code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasImpactOnStakeholder </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has impact on stakeholder </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Specifies stakeholders that are affected by an AI impact </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#AffectedStakeholder">airo:AffectedStakeholder</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-                </section>         
-            
-            
-   <section>           
-    <h2 id="modifiesEvent">
-      <bdi class="secno"> </bdi> modifies event
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#modifiesEvent"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#modifiesEvent</code></td>
-        <tr>
-          <td> Term </td>
-          <td> modifiesEvent </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> modifies event </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates the control used for modification of an event </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-</section> 
-            
+            <tr></tr>
+              <td>SubPropertyOf</td>
+              <td><a href="https://w3id.org/airo#hasAIComponent">airo:hasAIComponent</a></td>
+            </tr>
+          </tbody>
+        </table>
+         </section> 
+         
          <section>   
-        <h2 id="detectsEvent">
-      <bdi class="secno"> </bdi> detects event
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#detectsEvent"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#detectsEvent</code></td>
-        <tr>
-          <td> Term </td>
-          <td> detectsEvent </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> detects event </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates the control used for detecting an event </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
-        </tr>
-        <tr>
-            <td>SubPropertyOf</td>
-            <td><a href="https://w3id.org/airo#modifiesEvent">modifiesEvent</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-                </section> 
-        
-        
-        <section>
-        <h2 id="eliminatesEvent">
-      <bdi class="secno"> </bdi> eliminates event
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#eliminatesEvent"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#eliminatesEvent</code></td>
-        <tr>
-          <td> Term </td>
-          <td> eliminatesEvent </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> eliminates event </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates the control used for eliminating an event </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
-        </tr>
-        <tr>
-            <td>SubPropertyOf</td>
-            <td><a href="https://w3id.org/airo#modifiesEvent">modifiesEvent</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-                </section>  
+          <h2 id="hasTestingData">
+            <bdi class="secno"> </bdi> has testing data
+            <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasTestingData"></a>
+          </h2>
+          <table>
+            <tbody>
+              <tr>
+                <td style="width:20%"> IRI </td>
+                <td><code> https://w3id.org/airo#hasTestingData </code></td>
+              </tr>  
+              <tr>
+                <td> Term </td>
+                <td> hasTestingData </td>
+              </tr>
+              <tr>
+                <td> Label </td>
+                <td> has testing data </td>
+              </tr>
+              <tr>
+                <td> Definition </td>
+                <td> Indicates datasets used for testing. </td>
+              </tr>
+              
+               <tr>
+                <td>Range</td>
+                <td><a href="https://w3id.org/airo#Data">airo:Data</a></td>
+              </tr>
+              
+              <tr></tr>
+                <td>SubPropertyOf</td>
+                <td><a href="https://w3id.org/airo#hasAIComponent">airo:hasAIComponent</a></td>
+              </tr>
+            </tbody>
+          </table>
+           </section>
+
+     <section>   
+            <h2 id="hasValidationData">
+              <bdi class="secno"> </bdi> has validation data
+              <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasValidationData"></a>
+            </h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td style="width:20%"> IRI </td>
+                  <td><code> https://w3id.org/airo#hasValidationData </code></td>
+                </tr>  
+                <tr>
+                  <td> Term </td>
+                  <td> hasValidationData </td>
+                </tr>
+                <tr>
+                  <td> Label </td>
+                  <td> has validation data </td>
+                </tr>
+                <tr>
+                  <td> Definition </td>
+                  <td> Indicates datasets used for validation. </td>
+                </tr>
+                
+                 <tr>
+                  <td>Range</td>
+                  <td><a href="https://w3id.org/airo#Data">airo:Data</a></td>
+                </tr>
+                
+                <tr></tr>
+                  <td>SubPropertyOf</td>
+                  <td><a href="https://w3id.org/airo#hasAIComponent">airo:hasAIComponent</a></td>
+                </tr>
+              </tbody>
+            </table>
+             </section> 
+       
             
-            
-    <section>
-        <h2 id="mitigatesEvent">
-      <bdi class="secno"> </bdi> mitigates event
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#mitigatesEvent"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#mitigatesEvent</code></td>
-        <tr>
-          <td> Term </td>
-          <td> mitigatesEvent </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> mitigates event </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates the control used for mitigating an event </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
-        </tr>
-        <tr>
-            <td>SubPropertyOf</td>
-            <td><a href="https://w3id.org/airo#modifiesEvent">modifiesEvent</a></td>
-        </tr>  
-          
-      </tbody>
-    </table>
-    </section>  
-    
-     <section>
-        <h2 id="isFollowedByControl">
-      <bdi class="secno"> </bdi> is followed by control
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#isFollowedByControl"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#isFollowedByControl</code></td>
-        <tr>
-          <td> Term </td>
-          <td> isFollowedByControl </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td>is followed by control</td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Specifies the order of controls </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         
-          
-      </tbody>
-    </table>
-    </section> 
-    
-    <section>
-        <h2 id="isPartOfControl">
-      <bdi class="secno"> </bdi> is part of control
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#isPartOfControl"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#isPartOfControl</code></td>
-        <tr>
-          <td> Term </td>
-          <td> isPartOfControl </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td>is part of control</td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Specifies composition of controls</td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
-        </tr>
-         
-          
-      </tbody>
-    </table>
-    </section>         
-            
-            
-            
-     <section>
-        <h2 id="hasDocumentation">
-      <bdi class="secno"> </bdi> has documentation
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasDocumentation"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasDocumentation</code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasDocumentation </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has documentation </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates documents related to an entity, e.g. AI system</td>
-        </tr>
-        <tr>
-          
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Documentation">airo:Documentation</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-    </section> 
-            
-    <section>
-        <h2 id="conformsToStandard">
-      <bdi class="secno"> </bdi> conforms to standard
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#conformsToStandard"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#conformsToStandard</code></td>
-        <tr>
-          <td> Term </td>
-          <td> conformsToStandard </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> conforms to standard </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> </td>
-        </tr>
-        <tr>
-          
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Standard">airo:Standard</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-                </section>         
-            
+            <section>   
+              <h2 id="hasInput">
+                <bdi class="secno"> </bdi>has input
+                <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasInput"></a>
+              </h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <td style="width:20%"> IRI </td>
+                    <td><code> https://w3id.org/airo#hasInput</code></td>
+                  </tr> 
+                  <tr>
+                    <td> Term </td>
+                    <td> hasInput</td>
+                  </tr>
+                  <tr>
+                    <td> Label </td>
+                    <td>has input </td>
+                  </tr>
+                  <tr>
+                    <td> Definition </td>
+                    <td> Indicates the input an entity needs to process to generate output.</td>
+                  </tr>
+                  
+                   
+                  <tr>
+                    <td>Range</td>
+                    <td><a href="https://w3id.org/airo#Input">airo:Input</a></td>
+                  
+                   </tr>  
+                    
+                </tbody>
+              </table>
+          </section>        
+      
     <section>
         <h2 id="hasStakeholder">
       <bdi class="secno"> </bdi> has stakeholder
@@ -2622,6 +2333,7 @@ technologies.
         <tr>
           <td style="width:20%"> IRI </td>
           <td><code> https://w3id.org/airo#hasStakeholder</code></td>
+        </tr>  
         <tr>
           <td> Term </td>
           <td> hasStakeholder </td>
@@ -2632,12 +2344,12 @@ technologies.
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Indicates stakeholders of an AI system </td>
+          <td> Indicates stakeholders of an AI system or component.</td>
         </tr>
         <tr>
          <tr>
              <td>Domain</td>
-             <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+             <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a>, <a href="https://w3id.org/airo#AIComponent">airo:AIComponent</a> </td>
          </tr> 
          <tr>
           <td>Range</td>
@@ -2683,6 +2395,42 @@ technologies.
       </tbody>
     </table>
     </section> 
+    <section>   
+      <h2 id="isDeployedBy">
+        <bdi class="secno"> </bdi>is deployed by
+        <a class="self-link" aria-label="§" href="https://w3id.org/airo#isDeployedBy"></a>
+      </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td style="width:20%"> IRI </td>
+            <td><code> https://w3id.org/airo#isDeployedBy</code></td>
+          </tr> 
+          <tr>
+            <td> Term </td>
+            <td> isDeployedBy</td>
+          </tr>
+          <tr>
+            <td> Label </td>
+            <td>is deployed by</td>
+          </tr>
+          <tr>
+            <td> Definition </td>
+            <td>Indicates the deployer of an AI system or component.</td>
+          </tr>
+          <tr>
+            <td>Domain</td>
+            <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a>, <a href="https://w3id.org/airo#AIComponent">airo:AIComponent</a></td>
+          </tr>
+          <tr>
+            <td>Range</td>
+            <td><a href="https://w3id.org/airo#AIDeployer">airo:AIDeployer</a></td>
+          
+           </tr>  
+            
+        </tbody>
+      </table>
+  </section>
             
      <section>
         <h2 id="isUsedBy">
@@ -2718,80 +2466,75 @@ technologies.
 
       </tbody>
     </table>
-    </section>  
-            
-            
-     <section>
-        <h2 id="hasAISubject">
-      <bdi class="secno"> </bdi> has AI subject
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasAISubject"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasAISubject</code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasAISubject </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has AI subject</td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates subject of an AI system </td>
-        </tr>
-        <tr>
-         <tr>
-             <td>Domain</td>
-             <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
-         </tr> 
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#AISubject">airo:AISubject</a></td>
-        </tr>
-      </tbody>
-    </table>
-    </section>
-            
-     <section>           
-    <h2 id="affects">
-      <bdi class="secno"> </bdi> affects
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#affects"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#affects</code></td>
-        <tr>
-          <td> Term </td>
-          <td> affects </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> affects </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates the stakeholders affected by the AI system </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#AffectedStakeholder">airo:AffectedStakeholder</a></td>
-        </tr>
+    </section> 
+    
+    <section>   
+      <h2 id="hasModality">
+        <bdi class="secno"> </bdi>has modality
+        <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasModality"></a>
+      </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td style="width:20%"> IRI </td>
+            <td><code> https://w3id.org/airo#hasModality</code></td>
+          </tr> 
+          <tr>
+            <td> Term </td>
+            <td> hasModality</td>
+          </tr>
+          <tr>
+            <td> Label </td>
+            <td>has modality </td>
+          </tr>
+          <tr>
+            <td> Definition </td>
+            <td>Indicates the modality in which an entity exists.</td>
+          </tr>
+  
+          <tr>
+            <td>Range</td>
+            <td><a href="https://w3id.org/airo#Modality">airo:Modality</a></td>
           
-      </tbody>
-    </table>
-                </section>         
-                    
+           </tr>  
             
+        </tbody>
+      </table>
+  </section> 
+
+    <section>   
+      <h2 id="hasLicense">
+        <bdi class="secno"> </bdi>has license
+        <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasLicense"></a>
+      </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td style="width:20%"> IRI </td>
+            <td><code> https://w3id.org/airo#hasLicense</code></td>
+          </tr> 
+          <tr>
+            <td> Term </td>
+            <td> hasLicense</td>
+          </tr>
+          <tr>
+            <td> Label </td>
+            <td>has license </td>
+          </tr>
+          <tr>
+            <td> Definition </td>
+            <td> Indicates licenses associated with a resource.</td>
+          </tr>
+          <tr>
+            <td>Range</td>
+            <td><a href="https://w3id.org/airo#License">airo:License</a></td>
+          
+           </tr>  
+            
+        </tbody>
+      </table>
+  </section>  
+
     
    <section>           
     <h2 id="hasVersion">
@@ -2803,6 +2546,7 @@ technologies.
         <tr>
           <td style="width:20%"> IRI </td>
           <td><code> https://w3id.org/airo#hasVersion</code></td>
+        </tr>  
         <tr>
           <td> Term </td>
           <td> hasVersion </td>
@@ -2813,12 +2557,9 @@ technologies.
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Indicates the version of an AI system </td>
+          <td> Indicates the version of an entity, e.g. AI system. </td>
         </tr>
-        <tr>
-          <td>Domain</td>
-            <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
-        </tr>
+        
          <tr>
           <td>Range</td>
           <td><a href="https://w3id.org/airo#Version">airo:Version</a></td>
@@ -2838,6 +2579,7 @@ technologies.
         <tr>
           <td style="width:20%"> IRI </td>
           <td><code> https://w3id.org/airo#hasSeverity</code></td>
+        </tr>  
         <tr>
           <td> Term </td>
           <td> hasSeverity </td>
@@ -2848,11 +2590,11 @@ technologies.
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Indicates severity of a consequence or an impact </td>
+          <td> Indicates severity of a consequence or an impact. </td>
         </tr>
         <tr>
           <td>Domain</td>
-            <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a> or
+            <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a>,
                 <a href="https://w3id.org/airo#Impact">airo:Impact</a>
             </td>
         </tr>
@@ -2865,41 +2607,7 @@ technologies.
     </table>
     </section> 
     
-     <section>           
-    <h2 id="hasLikelihood">
-      <bdi class="secno"> </bdi> has likelihood
-      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasLikelihood"></a>
-    </h2>
-    <table>
-      <tbody>
-        <tr>
-          <td style="width:20%"> IRI </td>
-          <td><code> https://w3id.org/airo#hasLikelihood</code></td>
-        <tr>
-          <td> Term </td>
-          <td> hasLikelihood </td>
-        </tr>
-        <tr>
-          <td> Label </td>
-          <td> has likelihood </td>
-        </tr>
-        <tr>
-          <td> Definition </td>
-          <td> Indicates the probability of occurrence of an event </td>
-        </tr>
-        <tr>
-          <td>Domain</td>
-            <td><a href="https://w3id.org/airo#Event">airo:Event</a>
-            </td>
-        </tr>
-         <tr>
-          <td>Range</td>
-          <td><a href="https://w3id.org/airo#Likelihood">airo:Likelihood</a></td>
-        </tr>
-          
-      </tbody>
-    </table>
-    </section>         
+           
             
     <section>           
     <h2 id="hasLifecyclePhase">
@@ -2911,6 +2619,7 @@ technologies.
         <tr>
           <td style="width:20%"> IRI </td>
           <td><code> https://w3id.org/airo#hasLifecyclePhase</code></td>
+        </tr>
         <tr>
           <td> Term </td>
           <td> hasLifecyclePhase </td>
@@ -2921,27 +2630,1037 @@ technologies.
         </tr>
         <tr>
           <td> Definition </td>
-          <td> Indicates the AI system's lifecycle phase </td>
+          <td> Indicates the lifecycle phase of the AI system or component.</td>
         </tr>
-        <tr>
-          <td>Domain</td>
-            <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a>
-            </td>
+        <tr></tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a>, <a href="https://w3id.org/airo#AIComponent">airo:AIComponent</a></td>
         </tr>
+
          <tr>
           <td>Range</td>
-          <td><a href="https://w3id.org/airo#LifecyclePhase">airo:LifecyclePhase</a></td>
+          <td><a href="https://w3id.org/airo#AILifecyclePhase">airo:AILifecyclePhase</a></td>
         </tr>
           
       </tbody>
     </table>
-                </section>         
-            
-            
-                    
+     </section> 
+     
+     
+
+     <section>
+      <h2 id="hasDocumentation">
+    <bdi class="secno"> </bdi> has documentation
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasDocumentation"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasDocumentation</code></td>
+      <tr>
+        <td> Term </td>
+        <td> hasDocumentation </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td> has documentation </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates documentation associated with an entity, e.g. AI model, AI system.</td>
+      </tr>
+      <tr>
+        
+       <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#Documentation">airo:Documentation</a></td>
+      </tr>
+        
+    </tbody>
+  </table>
+  </section>     
+
+<!-- ************************AI Use-related Properties******************************-->    
+ 
+<section>   
+  <h2 id="hasAutomationLevel">
+    <bdi class="secno"> </bdi> has automation level
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasAutomationLevel"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasAutomationLevel </code></td>
+      </tr> 
+      <tr>
+        <td> Term </td>
+        <td> hasAutomationLevel </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td> has automation level </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates the system's level of automation.</td>
+      </tr>
+      
+       <tr>
+        <td>Domain</td>
+        <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+
+
+       </tr>
+       <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#AutomationLevel">airo:AutomationLevel</a></td>
+      </tr>   
+        
+    </tbody>
+  </table>
+</section>
+
+<section>   
+  <h2 id="hasControlOverAIOutput">
+    <bdi class="secno"> </bdi>has control over AI output
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasControlOverAIOutput"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasControlOverAIOutput </code></td>
+      </tr> 
+      <tr>
+        <td> Term </td>
+        <td> hasControlOverAIOutput </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td>has control over AI output </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates the level of control a stakeholder has over outputs produced by an AI system.</td>
+      </tr>
+    
+       <tr>
+        <td>Domain</td>
+        <td><a href="https://w3id.org/airo#Stakeholder">airo:Stakeholder</a></td>
+      </tr> 
+      <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#ModeOfOutputControllability">airo:ModeOfOutputControllability</a></td>
+      
+       </tr>  
+        
+    </tbody>
+  </table>
+</section> 
+
+<section>   
+  <h2 id="hasHumanInvolvement">
+    <bdi class="secno"> </bdi>has human involvement
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasHumanInvolvement"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasHumanInvolvement</code></td>
+      </tr> 
+      <tr>
+        <td> Term </td>
+        <td> hasHumanInvolvement</td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td>has human involvement </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates the type involvement of a human.</td>
+      </tr>
+
+      <tr>
+        <td>Domain</td>
+        <td><a href="https://w3id.org/airo#Stakeholder">airo:Stakeholder</a></td>
+      </tr> 
+      
        
+      <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#HumanInvolvement">airo:HumanInvolvement</a></td>
+      
+       </tr>  
+        
+    </tbody>
+  </table>
+</section> 
+<!-- ************************Risk-related Properties******************************-->  
+ <section>
+<h2 id="hasRisk">
+  <bdi class="secno"> </bdi> has risk
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasRisk"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#hasRisk </code></td>
+      </tr>
+    <tr>
+      <td> Term </td>
+      <td> hasRisk </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> has risk </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Indicates risks associated with an AI system, an AI component, etc.</td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+            </section>   
+    
+     <section>           
+<h2 id="isRiskSourceFor">
+  <bdi class="secno"> </bdi> is risk source for
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#isRiskSourceFor"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#isRiskSourceFor </code></td>
+    <tr>
+      <td> Term </td>
+      <td> isRiskSourceFor </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> is risk source for </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Specifies risks caused by materialisation of a risk source </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#RiskSource">airo:RiskSource</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+            </section> 
+
+        <section>    
+
+<h2 id="hasConsequence">
+  <bdi class="secno"> </bdi> has consequence
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasConsequence"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#hasConsequence </code></td>
+      </tr>
+    <tr>
+      <td> Term </td>
+      <td> hasConsequence </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> has consequence </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Specifies consequences caused by materialisation of a risk. </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Risk">airo:Risk</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+            </section> 
+        
+    <section>    
+             
+<h2 id="hasImpact">
+  <bdi class="secno"> </bdi> has impact
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpact"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#hasImpact </code></td>
+    <tr>
+      <td> Term </td>
+      <td> hasImpact </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> has impact </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Specifies the impact caused by materialisation of a consequence.</td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Consequence">airo:Consequence</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+            </section> 
         
         
+        <section>           
+<h2 id="hasImpactOnArea">
+  <bdi class="secno"> </bdi> has impact on area
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpactOnArea"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#hasImpactOnArea</code></td>
+    </tr>  
+    <tr>
+      <td> Term </td>
+      <td> hasImpactOnArea </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> has impact on area </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Specifies the area (e.g. physical health) that is impacted by an  AI system or component. </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#AreaOfImpact">airo:AreaOfImpact</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+</section>
+
+<section>   
+          
+  <h2 id="hasImpactOnEntity">
+    <bdi class="secno"> </bdi> has impact on entity
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpactOnEntity"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasImpactOnEntity</code></td>
+      <tr>
+        <td> Term </td>
+        <td> hasImpactOnEntity </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td> has impact on entity </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates entities, e.g. environment, impacted by AI systems.</td>
+      </tr>
+      <tr>
+        <td>Domain</td>
+        <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
+      </tr>
+        
+    </tbody>
+  </table>
+ </section>  
+
+ <section>   
+
+<h2 id="hasImpactOnStakeholder">
+  <bdi class="secno"> </bdi> has impact on stakeholder
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasImpactOnStakeholder"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#hasImpactOnStakeholder</code></td>
+    </tr>  
+    <tr>
+      <td> Term </td>
+      <td> hasImpactOnStakeholder </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> has impact on stakeholder </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Indicates the people that are (negatively) impacted by an AI system or component. </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Impact">airo:Impact</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Stakeholder">airo:takeholder</a></td>
+    </tr>
+    <tr>
+      <td>Subproperty of</td>
+      <td><a href="https://w3id.org/airo#hasImpactOnEntity"></a>hasImpactOnEntity</td>
+    </tr>
+
+      
+  </tbody>
+</table>
+ </section> 
+ 
+ <section>           
+  <h2 id="hasLikelihood">
+    <bdi class="secno"> </bdi> has likelihood
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasLikelihood"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasLikelihood</code></td>
+        </tr>
+      <tr>
+        <td> Term </td>
+        <td> hasLikelihood </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td> has likelihood </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates the probability of occurrence of risks, risk sources, consequences, or impacts.</td>
+      </tr>
+      <tr>
+        <td>Domain</td>
+          <td><a href="https://w3id.org/airo#RiskConcept">airo:RiskConcept</a>
+          </td>
+      </tr>
+       <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#Likelihood">airo:Likelihood</a></td>
+      </tr>
+        
+    </tbody>
+  </table>
+  </section>   
+  <section>   
+    <h2 id="hasRiskControl">
+      <bdi class="secno"> </bdi>has risk control
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasRiskControl"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:20%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasRiskControl</code></td>
+        </tr> 
+        <tr>
+          <td> Term </td>
+          <td> hasRiskControl</td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td>has risk control</td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td>Indicates the control measures associated with a system or component to modify risks.</td>
+        </tr>
+
+        <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#RiskControl">airo:RiskControl</a></td>
+        
+         </tr>  
+          
+      </tbody>
+    </table>
+</section>        
+        
+<section>           
+<h2 id="modifiesEvent">
+  <bdi class="secno"> </bdi> modifies event
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#modifiesEvent"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#modifiesEvent</code></td>
+    <tr>
+      <td> Term </td>
+      <td> modifiesEvent </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> modifies event </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Indicates the control used for modification of an event </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+</section> 
+        
+     <section>   
+    <h2 id="detectsEvent">
+  <bdi class="secno"> </bdi> detects event
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#detectsEvent"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#detectsEvent</code></td>
+    <tr>
+      <td> Term </td>
+      <td> detectsEvent </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> detects event </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Indicates the control used for detecting an event </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
+    </tr>
+    <tr>
+        <td>SubPropertyOf</td>
+        <td><a href="https://w3id.org/airo#modifiesEvent">modifiesEvent</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+            </section> 
+    
+    
+    <section>
+    <h2 id="eliminatesEvent">
+  <bdi class="secno"> </bdi> eliminates event
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#eliminatesEvent"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#eliminatesEvent</code></td>
+    <tr>
+      <td> Term </td>
+      <td> eliminatesEvent </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> eliminates event </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Indicates the control used for eliminating an event </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
+    </tr>
+    <tr>
+        <td>SubPropertyOf</td>
+        <td><a href="https://w3id.org/airo#modifiesEvent">modifiesEvent</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+            </section>  
+        
+        
+<section>
+    <h2 id="mitigatesEvent">
+  <bdi class="secno"> </bdi> mitigates event
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#mitigatesEvent"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#mitigatesEvent</code></td>
+    <tr>
+      <td> Term </td>
+      <td> mitigatesEvent </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td> mitigates event </td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Indicates the control used for mitigating an event </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Event">airo:Event</a></td>
+    </tr>
+    <tr>
+        <td>SubPropertyOf</td>
+        <td><a href="https://w3id.org/airo#modifiesEvent">modifiesEvent</a></td>
+    </tr>  
+      
+  </tbody>
+</table>
+</section>  
+
+ <section>
+    <h2 id="isFollowedByControl">
+  <bdi class="secno"> </bdi> is followed by control
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#isFollowedByControl"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#isFollowedByControl</code></td>
+    <tr>
+      <td> Term </td>
+      <td> isFollowedByControl </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td>is followed by control</td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Specifies the order of controls </td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     
+      
+  </tbody>
+</table>
+</section> 
+
+<section>
+    <h2 id="isPartOfControl">
+  <bdi class="secno"> </bdi> is part of control
+  <a class="self-link" aria-label="§" href="https://w3id.org/airo#isPartOfControl"></a>
+</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="width:20%"> IRI </td>
+      <td><code> https://w3id.org/airo#isPartOfControl</code></td>
+    <tr>
+      <td> Term </td>
+      <td> isPartOfControl </td>
+    </tr>
+    <tr>
+      <td> Label </td>
+      <td>is part of control</td>
+    </tr>
+    <tr>
+      <td> Definition </td>
+      <td> Specifies composition of controls</td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     <tr>
+      <td>Range</td>
+      <td><a href="https://w3id.org/airo#Control">airo:Control</a></td>
+    </tr>
+     
+      
+  </tbody>
+</table>
+</section> 
+<section>   
+  <h2 id="hasVulnerability">
+    <bdi class="secno"> </bdi>has vulnerability
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasVulnerability"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasVulnerability</code></td>
+      </tr> 
+      <tr>
+        <td> Term </td>
+        <td> hasVulnerability</td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td>has vulnerability</td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td>Indicates vulnerabilities associated with an entity, e.g. AI system and its components.</td>
+      </tr>
+
+      <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#Vulnerability">airo:Vulnerability</a></td>
+      
+       </tr>  
+        
+    </tbody>
+  </table>
+</section>        
+<section>   
+  <h2 id="exploitsVulnerability">
+    <bdi class="secno"> </bdi> exploits vulnerability
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#exploitsVulnerability"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#exploitsVulnerability </code></td>
+      </tr> 
+      <tr>
+        <td> Term </td>
+        <td> exploitsVulnerability </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td> exploits vulnerability </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates vulnerabilities exploited by a risk source.</td>
+      </tr>
+      
+       <tr>
+        <td>Domain</td>
+        <td><a href="https://w3id.org/airo#RiskSource">airo:RiskSource</a></td>
+
+
+       </tr>
+       <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#Vulnerability">airo:Vulnerability</a></td>
+      </tr>   
+        
+    </tbody>
+  </table>
+</section>   
+
+
+<!-- ************************Stakeholder-Related Properties******************************-->
+<section>
+        <h2 id="hasAIUser">
+      <bdi class="secno"> </bdi> has AI user
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasAIUser"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:20%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasAIUser</code></td>
+        </tr>  
+        <tr>
+          <td> Term </td>
+          <td> hasAIUser </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> has AI user</td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Indicate the end-user of an AI system.</td>
+        </tr>
+        <tr>
+         <tr>
+             <td>Domain</td>
+             <td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+         </tr> 
+         <tr>
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#AIUser">airo:AIUser</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+
+
+<!-- ************************Other Properties******************************-->
+
+     <section>   
+      <h2 id="compliesWithRegulation">
+        <bdi class="secno"> </bdi> complies with regulation
+        <a class="self-link" aria-label="§" href="https://w3id.org/airo#compliesWithRegulation"></a>
+      </h2>
+      <table>
+        <tbody>
+          <tr>
+            <td style="width:20%"> IRI </td>
+            <td><code> https://w3id.org/airo#compliesWithRegulation </code></td>
+          </tr>  
+          <tr>
+            <td> Term </td>
+            <td> compliesWithRegulation </td>
+          </tr>
+          <tr>
+            <td> Label </td>
+            <td> complies with regulation </td>
+          </tr>
+          <tr>
+            <td> Definition </td>
+            <td> Indicates compliance with a specific regulation.</td>
+          </tr>
+          
+            <td>Range</td>
+            <td><a href="https://w3id.org/airo#Regulation">airo:Regulation</a></td>
+          </tr>
+            
+            
+        </tbody>
+      </table>
+    </section> 
+
+    <section>
+      <h2 id="conformsToStandard">
+    <bdi class="secno"> </bdi> conforms to standard
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#conformsToStandard"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#conformsToStandard</code></td>
+      </tr>  
+      <tr>
+        <td> Term </td>
+        <td> conformsToStandard </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td> conforms to standard </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates conformance of an entity to a standard.</td>
+      </tr>
+      <tr>
+        
+       <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#Standard">airo:Standard</a></td>
+      </tr>
+        
+    </tbody>
+  </table>
+  </section> 
+
+  <section>   
+    <h2 id="followsCodeOfConduct">
+      <bdi class="secno"> </bdi> follows code of conduct
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#followsCodeOfConduct"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:20%"> IRI </td>
+          <td><code> https://w3id.org/airo#followsCodeOfConduct </code></td>
+        </tr>  
+        <tr>
+          <td> Term </td>
+          <td> followsCodeOfConduct </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> follows code of conduct</td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Indicates the code of conduct followed.</td>
+        </tr>
+        
+          <td>Range</td>
+          <td><a href="https://w3id.org/airo#CodeOfConduct">airo:CodeOfConduct</a></td>
+        </tr>
+          
+          
+      </tbody>
+    </table>
+  </section> 
+
+  <section>   
+    <h2 id="hasChangedEntity">
+      <bdi class="secno"> </bdi> has changed entity
+      <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasChangedEntity"></a>
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:20%"> IRI </td>
+          <td><code> https://w3id.org/airo#hasChangedEntity </code></td>
+        </tr> 
+        <tr>
+          <td> Term </td>
+          <td> hasChangedEntity </td>
+        </tr>
+        <tr>
+          <td> Label </td>
+          <td> has changed entity </td>
+        </tr>
+        <tr>
+          <td> Definition </td>
+          <td> Indicates the entity that is being changed.</td>
+        </tr>
+      
+         <tr>
+          <td>Domain</td>
+          <td><a href="https://w3id.org/airo#Change">airo:Change</a></td>
+        </tr>   
+          
+      </tbody>
+    </table>
+</section> 
+
+<section>   
+  <h2 id="hasPreDeterminedChange">
+    <bdi class="secno"> </bdi>has pre-determined change
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasPreDeterminedChange"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasPreDeterminedChange</code></td>
+      </tr> 
+      <tr>
+        <td> Term </td>
+        <td> hasPreDeterminedChange</td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td>has pre-determined change </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td>Indicates the changes that are planned to be applied to the system, components, or context of use.</td>
+      </tr>
+
+      <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#Change">airo:Change</a></td>
+      
+       </tr>  
+        
+    </tbody>
+  </table>
+</section> 
+
+<section>   
+  <h2 id="hasFrequency">
+    <bdi class="secno"> </bdi>has frequency
+    <a class="self-link" aria-label="§" href="https://w3id.org/airo#hasFrequency"></a>
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <td style="width:20%"> IRI </td>
+        <td><code> https://w3id.org/airo#hasFrequency </code></td>
+      </tr> 
+      <tr>
+        <td> Term </td>
+        <td> hasFrequency </td>
+      </tr>
+      <tr>
+        <td> Label </td>
+        <td>has frequency </td>
+      </tr>
+      <tr>
+        <td> Definition </td>
+        <td> Indicates frequency of an event, e.g. change.</td>
+      </tr>
+    
+       
+      <tr>
+        <td>Range</td>
+        <td><a href="https://w3id.org/airo#Frequency">airo:Frequency</a></td>
+      
+       </tr>  
+        
+    </tbody>
+  </table>
+</section>             
+              
         </section> <!--- Propertise-->
 
         
