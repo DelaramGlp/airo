@@ -391,7 +391,7 @@ ex:AnnexIII-4a
                         sh:class vair:Recruiting ;
                     ]
                     [
-                        sh:class vair:SelectingPeople ;
+                        sh:class vair:JobCandidateSelection  ;
                     ]
                     [
                         sh:class  vair:PlacingTargetedJobAdvert ;

@@ -46,12 +46,52 @@
       "@id" : "https://w3id.org/airo#AIComponent"
     }, {
       "@id" : "https://w3id.org/airo#AISystem"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/airo#AIComponent"
+    }, {
+      "@id" : "https://w3id.org/airo#AISystem"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/airo#AIComponent"
+    }, {
+      "@id" : "https://w3id.org/airo#AISystem"
     }, {
       "@id" : "https://w3id.org/airo#Input"
     } ]
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/airo#AIComponent"
+    }, {
+      "@id" : "https://w3id.org/airo#AISystem"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/airo#AIComponent"
+    }, {
+      "@id" : "https://w3id.org/airo#AISystem"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -141,6 +181,9 @@
   "@id" : "http://www.w3.org/ns/dqv#QualityMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://www.w3.org/ns/dqv#expectedDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://www.w3.org/ns/dqv#hasQualityMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
@@ -149,6 +192,9 @@
 }, {
   "@id" : "http://www.w3.org/ns/dqv#isMeasurementOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dqv#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/logo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -250,9 +296,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AI Component"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#AIDeployer",
@@ -281,7 +324,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An organization or entity that is concerned with the development of AI services and products."
+    "@value" : "An organisation or entity that is concerned with the development of AI services and products."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -300,6 +343,24 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AI Lifecycle Phase"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#AIModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "ISO/IEC TR 24028, 3.24"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Mathematical construct that generates an inference or prediction, based on input data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AI Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#AIComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#AIOperator",
@@ -338,17 +399,6 @@
     "@id" : "https://w3id.org/airo#AIOperator"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#AIQuality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Refers to quality of an AI system or component."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "AI Quality"
-  } ]
-}, {
   "@id" : "https://w3id.org/airo#AISubject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -376,16 +426,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AI System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#AITechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Computer science approaches and techniques used in development of a system."
+    "@value" : "Approaches or techniques used in development of a system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -410,6 +457,17 @@
     "@id" : "https://w3id.org/airo#Stakeholder"
   } ]
 }, {
+  "@id" : "https://w3id.org/airo#AreaOfImpact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Areas or aspects impacted by an AI system, e.g. physical health, right to privacy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Area Of Impact"
+  } ]
+}, {
   "@id" : "https://w3id.org/airo#AutomationLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -430,9 +488,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Change"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Event"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#CodeOfConduct",
@@ -444,9 +499,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Code Of Conduct"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Consequence",
@@ -467,18 +519,25 @@
     "@value" : "Consequence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#Control",
+  "@id" : "https://w3id.org/airo#Data",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A measure that detects, mitigates, or eliminates an event."
+    "@value" : "Refers to dataset and the broad concept of data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Control"
+    "@value" : "Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/airo#AIComponent"
+  }, {
+    "@id" : "https://w3id.org/dpv#Data"
+  }, {
+    "@id" : "https://www.w3.org/TR/vocab-dcat-3/Dataset"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Documentation",
@@ -490,9 +549,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Documentation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Domain",
@@ -504,36 +560,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Domain"
-  } ]
-}, {
-  "@id" : "https://w3id.org/airo#Entity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@language" : "en",
-    "@value" : "ISO/IEC TR 24028:2022, 3.16"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Any concrete or abstract thing of interest."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Entity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/airo#Event",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@language" : "en",
-    "@value" : "ISO 31073:2022, 3.3.11"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Occurrence or change of a particular set of circumstances."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Event"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Frequency",
@@ -559,14 +585,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications, except AI models that are used for research, development or prototyping activities before they are placed on the market."
+    "@value" : "An AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market and that can be integrated into a variety of downstream systems or applications."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "General Purpose AI Model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#MLModel"
+    "@id" : "https://w3id.org/airo#AIModel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#HardwarePlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The hardware on which the system is run."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hardware Platform"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Hazard",
@@ -587,6 +622,17 @@
     "@id" : "https://w3id.org/airo#RiskSource"
   } ]
 }, {
+  "@id" : "https://w3id.org/airo#HumanInvolvement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates involvement of humans."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Human Involvement"
+  } ]
+}, {
   "@id" : "https://w3id.org/airo#Impact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -605,14 +651,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Input for which the system generates output."
+    "@value" : "Input for which the system or component generates output."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Input"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#License",
@@ -652,24 +695,6 @@
     "@value" : "Locality Of Use"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#MLModel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@language" : "en",
-    "@value" : "ISO/IEC TR 24028, 3.24"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Mathematical construct that generates an inference or prediction, based on input data."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Machine Learning Model"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#AIComponent"
-  } ]
-}, {
   "@id" : "https://w3id.org/airo#Misuse",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -695,6 +720,17 @@
     "@value" : "Modality"
   } ]
 }, {
+  "@id" : "https://w3id.org/airo#ModeOfOutputControllability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The level of control over AI outputs exercised by humans."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mode Of Output Controllability"
+  } ]
+}, {
   "@id" : "https://w3id.org/airo#Output",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -704,9 +740,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Output"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Purpose",
@@ -729,59 +762,73 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Regulation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An uncertain event, associated with an AI system, that has the potential to lead to harm to key areas of concerns including health, safety, and fundamental rights."
+    "@value" : "the state of uncertainty associated with an AI system, that has the potential to cause harms and is expressed in terms of risk sources, consequences, impacts, likelihood, and severity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#RiskConcept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An umbrella term for refering to risk, risk source, consequence and impact."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Concept"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#RiskControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "ISO/IEC 31073, 3.3.33 (with expansion of scope)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A measure that maintains and/or modifies risk (and risk concepts)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Control"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#RiskSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "ISO 31073:2022, 3.3.10"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An event that has the potential to give rise to risk."
+    "@value" : "An element which alone or in combination has the potential to give rise to risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Risk Source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Severity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Level of severity of an event."
+    "@value" : "Indicates the level of severity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Severity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/airo#SphereOfImpact",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Areas or aspects impacted by an AI system, e.g. physical health, right to privacy."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Sphere Of Impact"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Stakeholder",
@@ -811,9 +858,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Standard"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#Threat",
@@ -869,6 +913,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "complies with regulation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#Regulation"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#conformsToStandard",
@@ -885,44 +932,44 @@
     "@id" : "https://w3id.org/airo#Standard"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#detectsEvent",
+  "@id" : "https://w3id.org/airo#detectsRiskConcept",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the control used for detecting an event."
+    "@value" : "Indicates the control used for detecting risks, risk sources, consequences, and impacts."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "detects event"
+    "@value" : "detects risk concept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/airo#modifiesEvent"
+    "@id" : "https://w3id.org/airo#modifiesRiskConcept"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#eliminatesEvent",
+  "@id" : "https://w3id.org/airo#eliminatesRiskConcept",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the control used for eliminating an event."
+    "@value" : "Indicates the control used for eliminating  risks, risk sources, consequences, and impacts."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "eliminates event"
+    "@value" : "eliminates risk concept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/airo#modifiesEvent"
+    "@id" : "https://w3id.org/airo#modifiesRiskConcept"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#exploitsVulnerability",
@@ -946,11 +993,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the code of conducts followed."
+    "@value" : "Indicates the code of conduct followed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "follows code of conduct"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#CodeOfConduct"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasAISubject",
@@ -993,9 +1043,15 @@
     "@language" : "en",
     "@value" : "Indicates the system's level of automation."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#AISystem"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has automation level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#AutomationLevel"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasCapability",
@@ -1013,6 +1069,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/airo#AICapability"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasChangedEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the entity that is being changed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#Change"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has changed entity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasComponent",
@@ -1045,25 +1115,28 @@
     "@id" : "https://w3id.org/airo#Consequence"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#hasControl",
+  "@id" : "https://w3id.org/airo#hasControlOverAIOutput",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the controls associated with a system or component."
+    "@value" : "Indicates the level of control a stakeholder has over outputs produced by an AI system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#Stakeholder"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has control"
+    "@value" : "has control over AI output"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#ModeOfOutputControllability"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasDocumentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates documentation associated with an entity."
+    "@value" : "Indicates documentation associated with an entity, e.g. AI model, AI system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1077,10 +1150,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates frequency of an event."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@value" : "Indicates frequency of an event, e.g. change."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1088,6 +1158,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/airo#Frequency"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasHumanInvolvement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the type involvement of a human."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#Stakeholder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has human involvement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#HumanInvolvement"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasImpact",
@@ -1110,7 +1197,7 @@
   "@id" : "https://w3id.org/airo#hasImpactOnArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Specifies the area (e.g. physical health) that is negatively impacted by an  AI system or component."
+    "@value" : "Specifies the area (e.g. physical health) that is impacted by an  AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/airo#Impact"
@@ -1120,34 +1207,48 @@
     "@value" : "has impact on area"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#SphereOfImpact"
+    "@id" : "https://w3id.org/airo#AreaOfImpact"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasImpactOnEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates those that are negatively impacted by an AI system or component."
+    "@value" : "Indicates entities, e.g. environment, impacted by AI systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has impact on entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasImpactOnStakeholder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the people that are (negatively) impacted by an AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/airo#Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has impact on entity"
+    "@value" : "has impact on stakeholder"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/airo#Stakeholder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/airo#hasImpactOnEntity"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasInput",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the input an entity needs to process and/or generate output."
+    "@value" : "Indicates the input an AI system or componet need to process to generate output."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
+    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1178,7 +1279,7 @@
     "@value" : "Indicates the lifecycle phase of the AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1192,10 +1293,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the probability of occurrence of an event."
+    "@value" : "Indicates the probability of occurrence of risks, risk sources, consequences, or impacts."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1223,14 +1324,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates machine learning model used."
+    "@value" : "Indicates machine learning models used with a system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#MLModel"
+    "@id" : "https://w3id.org/airo#AIModel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/airo#hasComponent"
@@ -1240,7 +1341,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the changes that are planned to be applied to the system."
+    "@value" : "Indicates the changes that are planned to be applied to the system, components, or context of use."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1254,7 +1355,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the purpose of an entity."
+    "@value" : "Indicates the purpose of an entity, e.g. AI system, components."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1264,21 +1365,20 @@
     "@id" : "https://w3id.org/airo#Purpose"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#hasQuality",
+  "@id" : "https://w3id.org/airo#hasResidualRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates a quality of an AI system or component."
+    "@value" : "Indicates the residual risk"
+  }, {
+    "@language" : "en",
+    "@value" : "has residual risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid7"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has quality"
+    "@id" : "https://w3id.org/airo#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#AIQuality"
+    "@id" : "https://w3id.org/airo#Risk"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasRisk",
@@ -1293,6 +1393,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/airo#Risk"
+  } ]
+}, {
+  "@id" : "https://w3id.org/airo#hasRiskControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the control measures associated with a system or component to modify risks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has risk control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#hasSeverity",
@@ -1316,10 +1430,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates stakeholders of an AI system"
+    "@value" : "Indicates stakeholders of an AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#AISystem"
+    "@id" : "_:genid13"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1340,7 +1454,7 @@
     "@value" : "has testing data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.w3.org/TR/vocab-dcat-3/Dataset"
+    "@id" : "https://w3id.org/airo#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/airo#hasComponent"
@@ -1357,7 +1471,7 @@
     "@value" : "has training data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.w3.org/TR/vocab-dcat-3/Dataset"
+    "@id" : "https://w3id.org/airo#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/airo#hasComponent"
@@ -1374,7 +1488,7 @@
     "@value" : "has validation data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.w3.org/TR/vocab-dcat-3/Dataset"
+    "@id" : "https://w3id.org/airo#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/airo#hasComponent"
@@ -1412,10 +1526,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Specifies the domain an AI system is used within."
+    "@value" : "Specifies the domain an AI system or component is used within."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#AISystem"
+    "@id" : "_:genid16"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1432,7 +1546,7 @@
     "@value" : "Indicates the deployer of an AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid19"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1449,7 +1563,7 @@
     "@value" : "Indicates the developer of a system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid16"
+    "@id" : "_:genid22"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1466,14 +1580,14 @@
     "@value" : "Specifies the order of controls."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is followed by control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#isPartOfControl",
@@ -1483,14 +1597,14 @@
     "@value" : "Specifies composition of controls"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is part of control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#isProvidedBy",
@@ -1500,7 +1614,7 @@
     "@value" : "Indicates the provider of an AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid25"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1534,7 +1648,7 @@
     "@value" : "Indicates the locality of use."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid23"
+    "@id" : "_:genid29"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1544,51 +1658,51 @@
     "@id" : "https://w3id.org/airo#LocalityOfUse"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#mitigatesEvent",
+  "@id" : "https://w3id.org/airo#mitigatesRiskConcept",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the control used for mitigating an event."
+    "@value" : "Indicates the control used for mitigating  risks, risk sources, consequences, and impacts."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "mitigates event"
+    "@value" : "mitigates risk concept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/airo#modifiesEvent"
+    "@id" : "https://w3id.org/airo#modifiesRiskConcept"
   } ]
 }, {
-  "@id" : "https://w3id.org/airo#modifiesEvent",
+  "@id" : "https://w3id.org/airo#modifiesRiskConcept",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the control employed to modify an event."
+    "@value" : "Indicates the control employed to modify risks, risk sources, consequences, and impacts."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Control"
+    "@id" : "https://w3id.org/airo#RiskControl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "modifies event"
+    "@value" : "modifies risk concept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/airo#Event"
+    "@id" : "https://w3id.org/airo#RiskConcept"
   } ]
 }, {
   "@id" : "https://w3id.org/airo#producesOutput",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicate the output generated by an entity."
+    "@value" : "Specifies an output generated by an AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
+    "@id" : "_:genid32"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1598,6 +1712,23 @@
     "@id" : "https://w3id.org/airo#Output"
   } ]
 }, {
+  "@id" : "https://w3id.org/airo#runsOnHardware",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the hardware on which the system runs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/airo#AISystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "runs on hardware"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/airo#HardwarePlatform"
+  } ]
+}, {
   "@id" : "https://w3id.org/airo#usesTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1605,7 +1736,7 @@
     "@value" : "Indicates the AI techniques used in an AI system or component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#AISystem"
+    "@id" : "_:genid35"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1615,63 +1746,42 @@
     "@id" : "https://w3id.org/airo#AITechnique"
   } ]
 }, {
+  "@id" : "https://w3id.org/dpv#Data",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/dpv#DataSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://w3id.org/dpv#DataSubject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/dpv#HardwarePlatform",
+  "@id" : "https://w3id.org/dpv#LegalBasis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/dpv#Processing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/dpv#SensitiveData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The hardware on which the system is run."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Hardware Platform"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#Entity"
+    "@id" : "https://w3id.org/dpv#Data"
   } ]
 }, {
-  "@id" : "https://w3id.org/dpv#HumanInvolvement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "https://w3id.org/dpv#hasData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://w3id.org/dpv#PersonalData",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/dpv#Process",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "https://w3id.org/dpv#hasDataSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://w3id.org/dpv#hasDataSubject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://w3id.org/dpv#hasHumanInvolvement",
+  "@id" : "https://w3id.org/dpv#hasLegalBasis",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://w3id.org/dpv#hasPersonalData",
+  "@id" : "https://w3id.org/dpv#hasProcessing",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/dpv#hasProcess",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "https://w3id.org/dpv#isRunOnHardware",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicates the hardware on which the system is run."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/airo#AISystem"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "is run on hardware"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/dpv#HardwarePlatform"
-  } ]
-}, {
-  "@id" : "https://w3id.org/dpv#value",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "https://www.w3.org/TR/vocab-dcat-3/Dataset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/airo#AIComponent"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

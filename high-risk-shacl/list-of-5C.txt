@@ -1,0 +1,158 @@
+ -------domains-------
+
+ CriticalInfrastructure
+ Education
+ Employment
+ PublicService
+ PrivateService
+ LawEnforcement
+ MigrationManagement
+ AsylumManagement
+ BorderControlManagement
+ AdministrationOfJustice
+ AdministrationOfDemocraticProcesses
+
+ -------purposes-------
+ RemoteIdentification
+ Categorisation 
+ RecognisingEmotions
+ DetectingEmotionalState
+ ServingSafetyFunctionInOperationOfCriticalDigitalInfrastructure  
+ ServingSafetyFunctionInManagementOfCriticalDigitalInfrastructure  
+ ServingSafetyFunctionInOperationOfRoadTraffic  
+ ServingSafetyFunctionInManagementOfRoadTraffic  
+ ServingSafetyFunctionInOperationOfTheSupplyOfWater         
+ ServingSafetyFunctionInManagementOfTheSupplyOfWater         
+ ServingSafetyFunctionInOperationOfTheSupplyOfGas       
+ ServingSafetyFunctionInManagementOfTheSupplyOfGas  
+ ServingSafetyFunctionInOperationOfTheSupplyOfHeating      
+ ServingSafetyFunctionInManagementOfTheSupplyOfHeating         
+ ServingSafetyFunctionInOperationOfTheSupplyOfElectricity         
+ ServingSafetyFunctionInManagementOfTheSupplyOfElectricity 
+ DeterminingAccessToEducationalInstitutions  
+ DeterminingAccessToVocationalTrainingInstitutions  
+ DeterminingAdmissionToEducationalInstitutions  
+ DeterminingAdmissionToVocationalTrainingInstitutions  
+ AssigningPersonsToEducationalInstitutions       
+ AssigningPersonsToVocationalTrainingInstitutions  
+ EvaluatingLearningOutcomes  
+ AssessingLevelOfEducation   
+ AssessingAccessibleLevelOfEducation       
+ MonitoringProhibitedBehaviourDuringTest    
+ DetectingProhibitedBehaviourDuringTest    
+ Recruiting  
+ JobCandidateSelection   
+ PlacingTargetedJobAdvert      
+ JobApplicationAnalysis     
+ JobApplicationScreening  
+ JobApplicationFiltering 
+ EvaluatingJobInterview  
+ EvaluatingJobCandidates  
+ MakingDecisionOnTermsofWorkRelatedRelations       
+ MakingPromotionDecision 
+ MakingContractTerminationDecision 
+ MonitoringEmployeeBehaviour    
+ MonitoringEmployeePerformance   
+ EvaluatingEmployeeBehaviour    
+ EvaluatingEmployeePerformance 
+ AllocatingTasks    
+ EvaluatingEligibilityForPublicAssistanceServices
+ GrantingPublicAssistanceServices     
+ RevokingPublicAssistanceServices    
+ ReclaimingPublicAssistanceServices   
+ ReducingPublicAssistanceServices     
+ EvaluatingEligibilityforHealthCareServices 
+ AssessingCreditworthiness  
+ DeterminingCreditScore    
+ HealthInsuranceRiskAssessment  
+ HealthInsurancePricing  
+ LifeInsuranceRiskAssessment  
+ LifeInsurancePricing 
+ DispatchingEmergencyService 
+ PrioritisationOfEmergencyService 
+ EmergancyTriage 
+ EvaluatingEmergencyCall 
+ ClassifyingEmergencyCall 
+ AssessingRiskOfBecomingVictimOfCrime
+ DetectingLies 
+ EvaluatingReliabilityOfEvidenceInInvestigationOfCriminalOffences
+ EvaluatingReliabilityOfEvidenceInProsecutionOfCriminalOffences 
+ AssessingRiskOfOffending 
+ AssessingRiskOfReoffending 
+ AssessingPersonalityTraits 
+ AssessingPastCriminalBehaviour
+ DetectingCriminalOffences 
+ InvestigatingCriminalOffences
+ ProsecutingCriminalOffences 
+ AssessingPeopleRelatedRisk  
+ AssessingRiskOfIrregularImmigration  
+ AssessingSecurityRisk  
+ AssessingHealthRisk  
+ ExaminingAsylumApplication  
+ ExaminingVisaApplication  
+ ExaminingResidencePermitsApplication     
+ ExaminingMigrationRelatedComplaints     
+ EvaluatingReliabilityOfEvidenceInMigarationRelatedApplications  
+ IdentiftyingIndividuals   
+ RecognisingIndividuals  
+ DetectingIndividuals     
+ ResearchingFacts       
+ ApplyingTheLawToFacts  
+ ResearchingLaw  
+ InterpretingFacts  
+ InterpretingLaw  
+ SettlingDispute  
+ InfluencingElectionOutcome  
+ InfluencingReferendumOutcome   
+ InfluencingVotingBehaviour     
+ 
+ -------capabilities-------  
+ BiometricIdentification
+ BiometricCategorisation
+ SensitiveAttributeInference
+ EmotionRecognition
+ BiometricsBasedEmotionRecognition
+ BehaviourAnalysis
+ PersonalityTraitsAnalysis
+ LieDetection
+ EmotionRecognition
+ Profiling
+ 
+
+-------deployers-------  
+EducationalInstitution
+VocationalTrainingInstitution
+PublicAuthority
+PublicAuthorityAgent
+EmergencyServiceProvider
+EmergencyHealthCareProvider
+Police
+FireBrigade
+MedicalAidProvider
+LawEnforcementAuthority
+LawEnforcementAuthorityAgent
+EUInstitution
+EUAgency
+EUOffice
+EUBody
+JudicialAuthority
+JudicialAuthorityAgent
+
+-------AI subjects-------
+NaturalPerson
+CourseAttendee
+Student
+JobApplicant
+PotentialJobApplicant
+JobCandidate
+Employee
+PublicServicesApplicant
+Family
+PotentialPublicServicesApplicant
+PublicServicesRecipient
+Group
+IndividualIntendsToEnterState
+IndividualEnteredState
+AsylumSeeker
+VisaApplicant
+ResidencePermitApplicant

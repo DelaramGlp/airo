@@ -45,7 +45,8 @@ ex_uber:bias_in_training_data a airo:RiskSource ;
                  airo:isRiskSourceFor  ex_uber:inaccuracy_in_identifying_minorities .                                      
 
 
-ex_uber:manual_human_review airo:mitigatesRiskConcept ex_uber:unfair_dismissal_of_drivers .
+ex_uber:manual_human_review a airo:RiskControl;
+            airo:mitigatesRiskConcept ex_uber:unfair_dismissal_of_drivers .
 
 
 ex_uber:decision_about_drivers_access_to_work a vair:Decision .
