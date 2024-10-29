@@ -108,6 +108,7 @@ terms:title rdf:type owl:AnnotationProperty .
 xsd:date rdf:type rdfs:Datatype .
 
 
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -607,6 +608,7 @@ airo:usesTechnique rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/terms/date
 terms:date rdf:type owl:DatatypeProperty .
 
+terms:title rdfs:type owl:DatatypeProperty .
 
 ###  http://www.w3.org/ns/dqv#value
 <http://www.w3.org/ns/dqv#value> rdf:type owl:DatatypeProperty .
