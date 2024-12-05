@@ -10,6 +10,17 @@
 
 
 
+<https://example.com/ns#>
+    terms:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    terms:conformsTo <https://www.w3.org/TR/shacl> ;
+    terms:description "SHACL shapes for detemining high-risk AI systems as per Annex III of the EU AI Act. " ;
+    terms:license <https://creativecommons.org/licenses/by/4.0>;
+    terms:creator "Delaram Golpayegani" ;
+    terms:contributor "Dave Lewis" ,"Harshvardhan J. Pandit" ;
+    terms:modified "2024-07-15"^^xsd:date ;
+    terms:publisher "ADAPT Centre, Trinity College Dublin"  ;
+    terms:source "EU AI Act - Final version"@en .
+    
 ex:AnnexIII-1a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
