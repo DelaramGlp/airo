@@ -19,8 +19,8 @@
     terms:contributor "Dave Lewis" ,"Harshvardhan J. Pandit" ;
     terms:modified "2024-07-15"^^xsd:date ;
     terms:publisher "ADAPT Centre, Trinity College Dublin"  ;
-    terms:source <http://data.europa.eu/eli/reg/2024/1689/oj> .
-
+    terms:source "EU AI Act - Final version"@en .
+    
 ex:AnnexIII-1a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
