@@ -3,6 +3,7 @@
 @prefix vair: <https://w3id.org/vair#> .
 @prefix dpv: <https://w3id.org/dpv#> .
 @prefix ex: <https://example.com/> .
+@prefix risk: <https://w3id.org/dpv/risk/#>.
 
 ex:ai_chatbot a airo:AISystem ;
     airo:hasPurpose ex:engage_in_human_like_conversation ;
@@ -29,7 +30,7 @@ ex:victim_tricked_into_transfering_money a airo:Consequence, vair:ImpairedDecisi
     airo:hasImpact ex:financial_loss .
 
 ex:financial_loss a airo:Impact, vair:Harm ;
-    airo:hasSeverity vair:Severe ;
+    airo:hasSeverity risk:ExtremelyHighSeverity ;
     airo:hasImpactedStakeholder ex:chatbot_user .
     
 ex:impersonation a vair:Deception .
