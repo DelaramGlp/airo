@@ -14,7 +14,7 @@
    ?consequence airo:hasImpact ?impact .
    ?impact a vair:Harm .
    ?impact airo:hasSeverity risk:ExtremelyHighSeverity .
-   ?impact airo:hasImpactedStakeholder ?stakeholder .
+   ?impact airo:hasImpactOnStakeholder ?stakeholder .
    ?stakeholder a vair:NaturalPerson .
     
 } => { ?system a ex:prohibited-5-1a . } .
