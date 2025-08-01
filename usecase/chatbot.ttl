@@ -25,7 +25,7 @@ ex:voice a dpv:PersonalData .
 ex:risk_of_fraud a airo:Risk ;
     airo:hasConsequence ex:victim_tricked_into_transfering_money .
 
-ex:victim_tricks_into_transfering_money  a airo:Consequence, vair:ImpairedDecisionMaking ;
+ex:victim_tricked_into_transfering_money a airo:Consequence, vair:ImpairedDecisionMaking ;
     airo:hasImpact ex:financial_loss .
 
 ex:financial_loss a airo:Impact ;
