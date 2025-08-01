@@ -1,0 +1,20 @@
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix risk: <https://w3id.org/dpv/risk#>.
+@prefix ex: <https://example.com/ns#> .
+
+{
+   ?system airo:hasCapability ?capability .
+   ?capability a vair:DeceptiveTechnique.
+   ?system airo:hasAISubject ?subject .
+   ?subject a  vair:NaturalPerson .
+   ?system airo:hasRisk ?risk .
+   ?risk airo:hasConsequence ?consequence .
+   ?consequence a vair:ImpairedDecisionMaking .
+   ?consequence airo:hasImpact ?impact .
+   ?impact a vair:Harm .
+   ?impact airo:hasSeverity risk:ExtremelyHighSeverity .
+   ?impact airo:hasImpactedStakeholder ?stakeholder .
+   ?stakeholder a vair:NaturalPerson .
+    
+} => { ?system a ex:prohibited-5-1a . } .
