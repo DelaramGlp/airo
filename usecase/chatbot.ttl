@@ -33,4 +33,3 @@ ex:financial_loss a airo:Impact, vair:Harm ;
     airo:hasSeverity risk:ExtremelyHighSeverity ;
     airo:hasImpactedStakeholder ex:chatbot_user .
     
-ex:impersonation a vair:Deception .
