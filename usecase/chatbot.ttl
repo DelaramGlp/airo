@@ -28,7 +28,7 @@ ex:risk_of_fraud a airo:Risk ;
 ex:victim_tricked_into_transfering_money a airo:Consequence, vair:ImpairedDecisionMaking ;
     airo:hasImpact ex:financial_loss .
 
-ex:financial_loss a airo:Impact ;
+ex:financial_loss a airo:Impact, vair:Harm ;
     airo:hasSeverity vair:Severe ;
     airo:hasImpactedStakeholder ex:chatbot_user .
     
