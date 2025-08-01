@@ -1,3 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix airo: <https://w3id.org/airo#> .
+@prefix vair: <https://w3id.org/vair#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.com/ns#> .
+
 ex:Art5-1-a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
