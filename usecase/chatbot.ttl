@@ -31,5 +31,5 @@ ex:victim_tricked_into_transfering_money a airo:Consequence, vair:ImpairedDecisi
 
 ex:financial_loss a airo:Impact, vair:Harm ;
     airo:hasSeverity risk:ExtremelyHighSeverity ;
-    airo:hasImpactedStakeholder ex:chatbot_user .
+    airo:hasImpactOnStakeholder ex:chatbot_user .
     
