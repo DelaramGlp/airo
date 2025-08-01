@@ -1,0 +1,37 @@
+ex:Art5-1-a
+    a sh:NodeShape ;
+    sh:targetClass airo:AISystem ;
+    sh:message "Prohibited as per AI Act, Art. 5(1a): AI system that deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques, with the objective, or the effect of materially distorting the behaviour of a person or a group of persons by appreciably impairing their ability to make an informed decision, thereby causing them to take a decision that they would not have otherwise taken in a manner that causes or is reasonably likely to cause that person, another person or group of persons significant harm"@en ;
+    sh:description "AI systems that AI system that deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques"@en ;
+    sh:not [sh:and (    
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasCapability ;
+                    sh:class vair:Deception ; ]
+
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasAISubject ;
+                    sh:or (
+                        [ sh:class vair:NaturalPerson ; ]
+                        [ sh:class vair:Group; ] )
+                    ]
+                #harmful risk requirement    
+                sh:property [
+                    a sh:PropertyShape ;
+                    sh:path airo:hasRisk ;
+                    sh:node [
+                        sh:property [
+                            sh:path airo:hasConsequence ;
+                            sh:node [
+                                sh:class vair:ImpairedDecisionMaking ;
+                                sh:property [
+                                    sh:path airo:hasImpact ;
+                                    sh:node [
+                                        sh:class vair:Harm ;
+                                        sh:property [
+                                            sh:path airo:hasSeverity ;
+                                            sh:class vair:Severe ; ]
+                                        sh:property [
+                                            sh:path airo:hasImpactOnStakeholder ;
+                                            sh:class vair:NaturalPerson ; ] ] ] ] ]  ) ] . 
