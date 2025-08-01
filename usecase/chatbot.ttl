@@ -15,7 +15,7 @@ ex:engage_human_like_conversation a airo:Purpose .
 
 ex:impersonation a airo:Capability , vair:DeceptiveTechnique .
 
-ex:chatbot_user a airo:AISubject, dpv:DataSubject .
+ex:chatbot_user a airo:AISubject, dpv:DataSubject, vair:NaturalPerson .
 
 ex:processing_conversation a dpv:Processing ;
     dpv:hasData ex:voice .
