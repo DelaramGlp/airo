@@ -5,17 +5,19 @@
 @prefix vair: <https://w3id.org/vair#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix ex: <https://example.com/ns#> .
+@prefix risk: <https://w3id.org/dpv/risk#>.
 
 ex:Art5-1-a
     a sh:NodeShape ;
     sh:targetClass airo:AISystem ;
     sh:message "Prohibited as per AI Act, Art. 5(1a): AI system that deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques, with the objective, or the effect of materially distorting the behaviour of a person or a group of persons by appreciably impairing their ability to make an informed decision, thereby causing them to take a decision that they would not have otherwise taken in a manner that causes or is reasonably likely to cause that person, another person or group of persons significant harm"@en ;
     sh:description "AI systems that AI system that deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques"@en ;
-    sh:not [sh:and (    
+    sh:not [
+        sh:and (    
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasCapability ;
-                    sh:class vair:Deception ; ]
+                    sh:class vair:DeceptiveTechnique ; ]
 
                 sh:property [
                     a sh:PropertyShape ;
@@ -24,22 +26,36 @@ ex:Art5-1-a
                         [ sh:class vair:NaturalPerson ; ]
                         [ sh:class vair:Group; ] )
                     ]
-                #harmful risk requirement    
+
                 sh:property [
                     a sh:PropertyShape ;
                     sh:path airo:hasRisk ;
                     sh:node [
+                        a sh:NodeShape ;
+                        sh:targetClass airo:Risk ;
                         sh:property [
-                            sh:path airo:hasConsequence ;
+                            sh:path  airo:hasConsequence ;
+                            sh:class vair:ImpairedDecisionMaking ;
                             sh:node [
-                                sh:class vair:ImpairedDecisionMaking ;
+                                a sh:NodeShape ; 
+                                sh:targetClass airo:Consequence ;
                                 sh:property [
                                     sh:path airo:hasImpact ;
+                                    sh:class vair:Harm ;
                                     sh:node [
-                                        sh:class vair:Harm ;
+                                        a sh:NodeShape ;
+                                        sh:targetClass airo:Impact ;
                                         sh:property [
-                                            sh:path airo:hasSeverity ;
-                                            sh:class vair:Severe ; ]
+                                            sh:path  airo:hasSeverity ;
+                                            sh:hasValue  risk:ExtremelyHighSeverity ;]  ;
                                         sh:property [
                                             sh:path airo:hasImpactOnStakeholder ;
-                                            sh:class vair:NaturalPerson ; ] ] ] ] ]  ) ] . 
+                                            sh:class vair:NaturalPerson ;
+                                        ]  
+                                    ]
+                                ]
+
+                            ]
+                            
+                            ]]]         
+    )].
